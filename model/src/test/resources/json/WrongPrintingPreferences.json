@@ -1,0 +1,39 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "PrintingPreferences": {
+            "ECV": [
+                {
+                    "name": ["LearnerInfo.Identification.PersonName"],
+                    "show": true,
+                    "order": "FirstName Surname"
+                },
+                {
+                    "name": ["LearnerInfo.Education[0].Period"],
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.Documentation",
+                    "show": false
+                },
+                "",
+                {
+                    "name": "",
+                    "show": true
+                },
+                {
+                    "show": true
+                }
+            ]
+        },
+        "LearnerInfo": {
+            "Identification": {
+                "PersonName": {
+                    "FirstName": "Αλέξια",
+                    "Surname": "Αντωνίου"
+                }
+            }
+        }
+    }
+}

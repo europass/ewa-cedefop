@@ -1,0 +1,79 @@
+{{=[[ ]]=}}
+{{#EducationList.nonEmpty}}
+<text:p text:style-name="_5f_ECV_5f_Text"/>
+<table:table table:name="EuropassCV_Education&amp;TrainingTitle" table:style-name="EuropassCV_5f_Education_26_TrainingTitle">
+<table:table-column table:style-name="EuropassCV_5f_Education_26_TrainingTitle.A"/>
+<table:table-column table:style-name="EuropassCV_5f_Education_26_TrainingTitle.B"/>
+<table:table-row table:style-name="EuropassCV_5f_Education_26_TrainingTitle.1">
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_TrainingTitle.A1" office:value-type="string">
+<text:p text:style-name="P8">[[#resources]][[& LearnerInfo:Education]][[/resources]]</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_TrainingTitle.B1" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_BlueBox">
+<draw:frame draw:style-name="fr8" draw:name="graphics10" text:anchor-type="as-char" svg:width="13.3cm" svg:height="0.25cm" draw:z-index="14">
+<draw:image xlink:href="Pictures/100002010000062000000021F9DDC83D.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+<svg:title>[[#resources]][[& Accessibility:Line:Separator]][[/resources]]</svg:title>
+</draw:frame>
+</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+{{#EducationListWithIndex}}
+{{#nonEmpty}}
+{{#breakPageBeforeEducation}}
+    <text:p text:style-name="PB_MANUAL"></text:p>
+{{/breakPageBeforeEducation}}
+<text:p text:style-name="_5f_ECV_5f_Text">[[> bookmarkToAttachments]]</text:p>
+<table:table table:name="EuropassCV_Education&amp;Training_1" table:style-name="EuropassCV_5f_Education_26_Training_5f_1">
+<table:table-column table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A"/>
+<table:table-column table:style-name="EuropassCV_5f_Education_26_Training_5f_1.B"/>
+<table:table-column table:style-name="EuropassCV_5f_Education_26_Training_5f_1.C"/>
+<table:table-row table:style-name="EuropassCV_5f_Education_26_Training_5f_1.1">
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A1" table:number-rows-spanned="4" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_Date">{{{period.odt}}}</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A1" office:value-type="string">
+{{#Title}}
+<text:p text:style-name="_5f_ECV_5f_SubSectionHeading">{{title}}</text:p>
+{{/Title}}
+</table:table-cell>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A1" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_RightHeading">{{#level}}{{#show}}{{label}}{{/show}}{{/level}}</text:p>
+</table:table-cell>
+</table:table-row>
+{{#Organisation.nonEmpty}}
+<table:table-row table:style-name="EuropassCV_5f_Education_26_Training_5f_1.1">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A1" table:number-columns-spanned="2" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_OrganisationDetails"
+>{{#Organisation}}
+{{name}}{{#nameAndAddress}}{{#nameAndShortAddress}}{{^hasOnlyCountry}}, {{/hasOnlyCountry}}{{#hasOnlyCountry}} {{/hasOnlyCountry}}{{/nameAndShortAddress}}{{^nameAndShortAddress}}<text:line-break/>{{/nameAndShortAddress}}{{/nameAndAddress}}{{#ContactInfo}}{{#Address}}{{#nonEmpty}}{{{contact.odt}}}{{/nonEmpty}}{{/Address}}
+{{#Website}}{{#nonEmpty}}<text:line-break/>{{{formatWebsite}}}{{/nonEmpty}}{{/Website}}
+{{/ContactInfo}}
+{{/Organisation}}</text:p>
+</table:table-cell>
+<table:covered-table-cell/>
+</table:table-row>
+{{/Organisation.nonEmpty}}
+{{#activities}}
+<table:table-row table:style-name="EuropassCV_5f_Education_26_Training_5f_1.1">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.A1" table:number-columns-spanned="2" office:value-type="string">
+{{{activitiesOdt}}}
+</table:table-cell>
+<table:covered-table-cell/>
+</table:table-row>
+{{/activities}}
+{{#attachmentsInfo.showable}}
+{{#ReferenceToList.nonEmpty}}
+<table:table-row table:style-name="EuropassCV_5f_Education_26_Training_5f_1.4">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_Education_26_Training_5f_1.B4" table:number-columns-spanned="2" office:value-type="string">
+<text:p text:style-name="P6">[[#resources]][[& LearnerInfo:Education:ReferenceTo]][[/resources]] [[> refToAttachments]]</text:p></table:table-cell>
+</table:table-row>
+{{/ReferenceToList.nonEmpty}}
+{{/attachmentsInfo.showable}}
+</table:table>
+{{/nonEmpty}}
+{{/EducationListWithIndex}}
+{{/EducationList.nonEmpty}}

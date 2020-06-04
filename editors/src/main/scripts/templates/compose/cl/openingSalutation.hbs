@@ -1,0 +1,25 @@
+<dt class="label"></dt>
+{{#if SkillsPassport.CoverLetter.Letter.OpeningSalutation}}
+	{{#call_partial . path="OpeningSalutation" view ="CL:" section="CoverLetter.Letter."}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/if}}
+<dd {{#if Preferences.CoverLetter.Justification.justify}}style="text-align: justify !important;"{{/if}}>
+
+	{{#unless SkillsPassport.CoverLetter.Letter.OpeningSalutation}}
+	<span id="CoverLetter.Letter.OpeningSalutation" class="default-value">{{get_text "CoverLetter.Letter.OpeningSalutation"}}</span>
+	<div class="empty add">
+		<span class="empty add">{{get_text "Buttons.Add.ECL.OpeningSalutation.Content" group="GuiLabel"}}</span>
+	</div>
+	{{else}}
+	<div class="value opening-salutation">
+		{{#obj_concatenate 
+			SkillsPassport.CoverLetter.Letter.OpeningSalutation.Salutation.Label 
+			SkillsPassport.CoverLetter.Letter.OpeningSalutation.PersonName.Surname
+			separator=" " match="…"}}
+			<span>{{.}}{{get_text "CL.Opening.Salutation.Suffix" group="DocumentCustomizations" }}</span>
+		{{/obj_concatenate}}
+	</div>
+	{{/unless}}
+
+</dd>	

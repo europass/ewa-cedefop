@@ -1,0 +1,12 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "DocumentInfo": {
+            "CreationDate": "2012-06-06T00:00:00.000+03:00",
+            "LastUpdateDate": "2012-06-06T00:00:00.000+03:00",
+            "XSDVersion": "V3.0",
+            "Generator": "EWA",
+            "Comment": "Europass CV"
+        }
+    }
+}

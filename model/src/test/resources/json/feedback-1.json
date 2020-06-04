@@ -1,0 +1,651 @@
+{
+    "SkillsPassport":
+            {
+                "Locale": "pt",
+                "PrintingPreferences": {
+                    "ECV": [
+                        {
+                            "name": "LearnerInfo",
+                            "show": true,
+                            "order": "Identification Headline WorkExperience Education Skills Achievement ReferenceTo"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.PersonName",
+                            "show": true,
+                            "order": "FirstName Surname"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Email",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Telephone",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Website",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.Website[0]",
+                            "show": false,
+                            "format": "text/short"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.Demographics.Birthdate",
+                            "show": true,
+                            "format": "numeric/long"
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.Demographics.Gender",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.Demographics.Nationality",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Identification.Photo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Headline",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Period",
+                            "show": true,
+                            "format": "text/long"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Position",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Activities",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Employer",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[0].Employer.Sector",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Period",
+                            "show": true,
+                            "format": "text/long"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Position",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Activities",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Employer",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Website",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[1].Employer.Sector",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Period",
+                            "show": false,
+                            "format": "text/long"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Position",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Activities",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Employer",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Address",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Website",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[2].Employer.Sector",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Education",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Period",
+                            "show": true,
+                            "format": "text/long"
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Title",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Activities",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Organisation",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+                            "show": true,
+                            "format": "s, z m (c)"
+                        },
+                        {
+                            "name": "LearnerInfo.Education[0].Level",
+                            "show": false
+                        }, {
+                            "name": "LearnerInfo.Education[0].Field",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.MotherTongue",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1]",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Communication",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Communication.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Communication.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Organisational",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Organisational.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Organisational.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.JobRelated",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.JobRelated.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.JobRelated.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Computer",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Computer.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Computer.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Driving",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Driving.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Driving.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Other",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Other.ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Skills.Other.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Achievement",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Achievement[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Achievement[0].ReferenceTo",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.Achievement[0].ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.ReferenceTo",
+                            "show": true
+                        },
+                        {
+                            "name": "LearnerInfo.ReferenceTo[0]",
+                            "show": false
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[3].Period",
+                            "show": true,
+                            "format": "text/long"
+                        },
+                        {
+                            "name": "LearnerInfo.WorkExperience[4].Period",
+                            "show": true,
+                            "format": "text/long"
+                        }
+                    ]
+                },
+                "DocumentInfo": {
+                    "DocumentType": "ECV",
+                    "CreationDate": "2012-12-20T21:20:53.914Z",
+                    "LastUpdateDate": "2013-01-24T18:50:21.963-00:00",
+                    "XSDVersion": "V3.0",
+                    "Generator": "EWA",
+                    "Comment": "Europass CV"
+                },
+                "LearnerInfo": {
+                    "Identification": {
+                        "PersonName": {
+                            "FirstName": "Susana Isabel",
+                            "Surname": "Silva Marques"
+                        },
+                        "ContactInfo": {
+                            "Address": {
+                                "Contact": {
+                                    "AddressLine": "Praceta Gomes Teixeira, nº26, 2ºEsq.",
+                                    "PostalCode": "2830-145",
+                                    "Municipality": "Barreiro",
+                                    "Country": {
+                                        "Label": "Portugal",
+                                        "Code": "PT"
+                                    }
+                                }
+                            },
+                            "Telephone": [{
+                                    "Use": {
+                                        "Code": "mobile",
+                                        "Label": "Telemóvel"
+                                    },
+                                    "Contact": "965168834",
+                                    "index": 0
+                                }],
+                            "Email": {
+                                "Contact": "Susana_smarques@hotmail.com"
+                            }
+                        },
+                        "Demographics": {
+                            "Gender": {
+                                "Code": "F",
+                                "Label": "Feminino"
+                            },
+                            "Birthdate": {
+                                "Day": 19,
+                                "Month": 6,
+                                "Year": 1985
+                            }
+                        }
+                    },
+                    "Headline": {
+                        "Type": {
+                            "Code": "job_applied_for",
+                            "Label": "POSTO DE TRABALHO A QUE SE CANDIDATA"
+                        },
+                        "Description": {
+                            "Label": "Técnica de Farmácia"
+                        }
+                    },
+                    "WorkExperience": [
+                        {
+                            "Period": {
+                                "From": {
+                                    "Day": 3,
+                                    "Month": 11,
+                                    "Year": 2011
+                                },
+                                "Current": true
+                            },
+                            "Position": {
+                                "Label": "Técnica de Farmácia"
+                            },
+                            "Employer": {
+                                "Name": "Hospital São Bernardo",
+                                "ContactInfo": {
+                                    "Address": {
+                                        "Contact": {
+                                            "Municipality": "Setúbal",
+                                            "Country": {
+                                                "Label": "Portugal",
+                                                "Code": "PT"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "Activities": "<br/>Distribuição de medicamentos e outros produtos de saúde:<br/>   - Distribuição por Dose Unitária (com/sem Kardex), Distribuição Tradicional e Distribuição por Reposição de Nível (com/sem sistema Ekanban).<br/><br/>Preparações estéreis:<br/>  - Manipulação de fármacos citotóxicos, em Câmara de Fluxo de Ar Laminar Vertical;<br/>  - Preparação de medicamentos como colírios, Alteplase, Albumina Humana, etc, em Câmara de Fluxo de Ar Laminar Horizontal.<br/><br/>Preparações não-estéreis:<br/>  - Xaropes, papéis medicamentosos, entre outras.<br/>",
+                            "index": 0,
+                            "path": "LearnerInfo.WorkExperience"
+                        },
+                        {
+                            "Period": {
+                                "From": {
+                                    "Year": 2009
+                                },
+                                "To": {
+                                    "Year": 2010
+                                }
+                            },
+                            "Position": {
+                                "Label": "Técnica de Farmácia"
+                            },
+                            "Employer": {
+                                "Name": "Farmácia Nobre Guerreiro, Lda",
+                                "ContactInfo": {
+                                    "Address": {
+                                        "Contact": {
+                                            "Municipality": "Amora, Seixal.",
+                                            "Country": {
+                                                "Label": "Portugal",
+                                                "Code": "PT"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "Activities": "<br/>Atendimento ao balcão:<br/>  - Aconselhamento ao utente;<br/>  - Dispensa de medicamentos e outros produtos de saúde;<br/>  - Avaliação de parâmetros bioquímicos (tensão arterial, colesterol, triglicéridos, glicémia).<br/><br/>Receituário:<br/>  - Conferência das Prescrições Médicas;<br/>  - Separação por Organismos e, posteriormente, por lotes;<br/>  - Emissão dos Documentos de Facturação.<br/><br/>Recepção e devolução de encomendas;<br/>Manutenção dos stocks de medicamentos e outros produtos de saúde, sempre tendo em conta a validade dos produtos, (Produtos com prazo de validade mais curto à frente e vice versa).<br/>Manutenção/Limpeza dos lineares.",
+                            "index": 1,
+                            "path": "LearnerInfo.WorkExperience"
+                        },
+                        ""
+                    ],
+                    "Education": [
+                        {
+                            "Period": {
+                                "To": {
+                                    "Year": 2010
+                                }
+                            },
+                            "Title": "Técnica de Diagnóstico e Terapêutica na área da Farmácia",
+                            "Organisation": {
+                                "Name": "Escola Superior de Tecnologia da Saúde de Lisboa",
+                                "ContactInfo": {
+                                    "Address": {
+                                        "Contact": {
+                                            "Municipality": "Lisboa",
+                                            "Country": {
+                                                "Label": "Portugal",
+                                                "Code": "PT"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "Activities": "Competências para intervir nas diferentes fases do circuito do medicamento, isto é, aquisição, recepção, armazenamento e dispensa do medicamento, concretamente:<br/><br/> - Análises e ensaios farmacológicos;<br/> - Interpretação da prescrição terapêutica e de fórmulas farmacêuticas;<br/> - Preparação, identificação e distribuição de fármacos;<br/> - Controlo da conservação, distribuição e stocks de medicamentos e outros produtos de saúde;<br/> - Informação e aconselhamento sobre o uso racional do medicamento.<br/>",
+                            "index": 0,
+                            "path": "LearnerInfo.Education"
+                        }
+                    ],
+                    "Skills": {
+                        "Linguistic": {
+                            "MotherTongue": [{
+                                    "Description": {
+                                        "Code": "pt",
+                                        "Label": "Português"
+                                    },
+                                    "index": 0
+                                }],
+                            "ForeignLanguage": [
+                                {
+                                    "Description": {
+                                        "Code": "en",
+                                        "Label": "Inglês"
+                                    },
+                                    "ProficiencyLevel":
+                                            {
+                                                "Listening": "B2",
+                                                "Reading": "B2",
+                                                "SpokenInteraction": "B1",
+                                                "SpokenProduction": "B1",
+                                                "Writing": "B1"
+                                            },
+                                    "index": 0,
+                                    "path": "LearnerInfo.Skills.Linguistic.ForeignLanguage"
+                                },
+                                {
+                                    "Description": {
+                                        "Code": "fr",
+                                        "Label": "Francês"
+                                    },
+                                    "ProficiencyLevel":
+                                            {
+                                                "Listening": "A2",
+                                                "Reading": "A2",
+                                                "SpokenInteraction": "A1",
+                                                "SpokenProduction": "A1",
+                                                "Writing": "A1"
+                                            },
+                                    "index": 1,
+                                    "path": "LearnerInfo.Skills.Linguistic.ForeignLanguage"
+                                }
+                            ]
+                        },
+                        "Communication": {
+                            "Description": "Boa capacidade de comunição.<br/>",
+                            "path": "LearnerInfo.Skills.Communication",
+                            "subsection": "Communication"
+                        },
+                        "Computer": {
+                            "Description": "Experiência com o programa informático CPC, bem como com o programa de distribuição e logística Ekanban.",
+                            "path": "LearnerInfo.Skills.Computer",
+                            "subsection": "Computer"
+                        },
+                        "JobRelated": {
+                            "Description": "Apresento ainda competências para:<br/><br/>- Planear, recolher, seleccionar, preparar e aplicar os elementos necessários ao normal desenvolvimento da minha actividade profissional;<br/>- Assegurar a qualidade e o rigor;<br/>- Assegurar a gestão, aprovisionamento e manutenção dos materiais e equipamentos com que trabalho, podendo participar nas respectivas comissões de análise e escolha;<br/>- Articular a minha actuação com outros profissionais de saúde, para uma prossecução eficaz dos cuidados de saúde;<br/>- Zelar pela formação contínua, pela gestão técnico-científica e pedagógica dos processos de aprendizagem e aperfeiçoamento profissional, bem como pela conduta deontológica, tendo em vista a qualidade da prestação dos cuidados de saúde;<br/>- Desenvolver e ou participar em projectos multidisciplinares de pesquisa e investigação.",
+                            "path": "LearnerInfo.Skills.JobRelated",
+                            "subsection": "JobRelated"
+                        }
+                    }
+                },
+                "undefined": "Operador de Caixa"
+            }
+}

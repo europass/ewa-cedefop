@@ -1,0 +1,47 @@
+{{=[[ ]]=}}
+<dt class="label"></dt>
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.Localisation 1=SkillsPassport.CoverLetter.Letter.SubjectLine}}
+{{else}}
+	{{#call_partial . path="" section="CoverLetter.Letter.SubjectLine SkillsPassport.CoverLetter.Letter.Localisation"  view="CL:SubjectLineLocalisation" name="CL:SubjectLineLocalisation" form="SubjectLineLocalisation" }}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/emptyObjects}}
+<dd>
+[[#preferences]][[#CoverLetter]]
+[[^isLocalisationImmediatelyBeforeClosingSalutation]]
+	[[#isLocalisationBeforeSubjectLine]]
+		[[!-- #Localisation before SubjectLine --]]
+			[[> hbs/partials/compose/cl/localisationAndsubject/localisation]]
+			
+			[[> hbs/partials/compose/cl/localisationAndsubject/subjectLine]]
+			
+		[[!-- /Localisation before SubjectLine  --]]
+	[[/isLocalisationBeforeSubjectLine]]
+	
+	[[^isLocalisationBeforeSubjectLine]]
+		[[!-- #Localisation after SubjectLine  --]]
+		
+			[[> hbs/partials/compose/cl/localisationAndsubject/subjectLine]]
+			
+			[[> hbs/partials/compose/cl/localisationAndsubject/localisation]]
+			
+		[[!-- /Localisation after SubjectLine --]]
+	[[/isLocalisationBeforeSubjectLine]]
+[[/isLocalisationImmediatelyBeforeClosingSalutation]]
+[[#isLocalisationImmediatelyBeforeClosingSalutation]]
+	[[!-- #Localisation immediatly before ClosingSalutation  --]]
+			
+		[[> hbs/partials/compose/cl/localisationAndsubject/subjectLine]]
+			
+	[[!-- #Localisation immediatly before ClosingSalutation  --]]	
+[[/isLocalisationImmediatelyBeforeClosingSalutation]]
+[[/CoverLetter]][[/preferences]]
+
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.Localisation 1=SkillsPassport.CoverLetter.Letter.SubjectLine}}
+<div class="empty add">
+	<span class="empty add">
+		[[#resources]][[& GuiLabel_Buttons:Add:ECL:SubjectLineLocalisation:Content]][[/resources]]
+	</span>
+</div>
+{{/emptyObjects}}
+</dd>	

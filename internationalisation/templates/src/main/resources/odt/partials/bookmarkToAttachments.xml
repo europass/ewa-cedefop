@@ -1,0 +1,11 @@
+{{=[[ ]]=}}
+
+{{#referenceToListWithIndex.nonEmpty}}
+<text:span>
+{{#referenceToList}}
+	{{#nonEmpty}}
+	<text:bookmark text:name="{{refKey}}"/>
+	{{/nonEmpty}}
+{{/referenceToList}}
+</text:span
+>{{/referenceToListWithIndex.nonEmpty}}

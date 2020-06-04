@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>REMOTE UPLOAD TEST</title>
+    </head>
+    <body>
+
+        <form action="http://europassdev4.instore.gr/editors/remote-upload" method="POST" accept-charset="utf-8" target="_blank">
+            <!-- ATTENTION! FOR TESTING THE UPLOAD FUNCTIONALITY, THE XML CONTENT IN THE TEXTAREA MUST BE IN A SINGLE LINE -->
+            <textarea name="europass-xml"><?xml version='1.0' encoding='UTF-8'?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.2.0/EuropassSchema.xsd" locale="en">
+	<DocumentInfo>
+		<DocumentType>ECV</DocumentType>
+		<Bundle>
+			<Document>ECL</Document>
+			<Document>ELP</Document>
+		</Bundle>
+		<CreationDate>2012-01-25T00:00:00.000Z</CreationDate>
+		<LastUpdateDate>2015-02-26T09:57:11.211Z</LastUpdateDate>
+		<XSDVersion>V3.2</XSDVersion>
+		<Generator>EWA</Generator>
+		<Comment>Automatically generated Europass CV</Comment>
+	</DocumentInfo>
+	<PrintingPreferences>
+		<Document type="ECV">
+			<Field name="LearnerInfo.Identification.PersonName" show="true" order="FirstName Surname"/>
+			<Field name="LearnerInfo.Identification.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.Identification.Demographics.Birthdate" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[0].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[1].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[2].Employer.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[2].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[3].Employer.ContactInfo.Address" show="false" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[3].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[4].Employer.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[4].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.WorkExperience[5].Employer.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.WorkExperience[5].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Education[0].Organisation.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.Education[0].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Education[1].Organisation.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.Education[1].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Education[2].Organisation.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.Education[2].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Education[3].Organisation.ContactInfo.Address" show="true" format="s p-z m (c)"/>
+			<Field name="LearnerInfo.Education[3].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[1].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[2].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[1].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[3].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[3].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[4].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[4].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.CEFLanguageLevelsGrid" show="false"/>
+			<Field name="LearnerInfo" show="true" order="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"/>
+		</Document>
+		<Document type="ELP">
+			<Field name="LearnerInfo.Identification.PersonName" show="true" order="FirstName Surname"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[1].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[2].Date" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[1].Period" show="true" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[3].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[3].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[4].Certificate[0].Date" show="false" format="text/short"/>
+			<Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[4].Experience[0].Period" show="false" format="text/short"/>
+			<Field name="LearnerInfo.CEFLanguageLevelsGrid" show="true"/>
+			<Field name="LearnerInfo" show="true" order="Identification Skills ReferenceTo"/>
+		</Document>
+		<Document type="ECL">
+			<Field name="LearnerInfo.Identification.PersonName" show="true" order="FirstName Surname"/>
+			<Field name="LearnerInfo.Identification.ContactInfo.Address" show="true" format="s, m, z c"/>
+			<Field name="CoverLetter.Addressee.PersonName" show="true" order="Title FirstName Surname"/>
+			<Field name="CoverLetter.Letter.Localisation.Date" show="true" format="text/short"/>
+			<Field name="CoverLetter.Letter.Localisation" show="true" order="Place Date"/>
+			<Field name="CoverLetter" show="true" order="Addressee Letter.Localisation Letter.SubjectLine Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+		</Document>
+	</PrintingPreferences>
+	<LearnerInfo>
+		<Identification>
+			<PersonName>
+				<FirstName>Bart Michiel</FirstName>
+				<Surname>Woelders</Surname>
+			</PersonName>
+			<ContactInfo>
+				<Address>
+					<Contact>
+						<AddressLine>Flanorpad 7A</AddressLine>
+						<PostalCode>2333 AS</PostalCode>
+						<Municipality>Leiden</Municipality>
+						<Country>
+							<Code>NL</Code>
+							<Label>Netherlands</Label>
+						</Country>
+					</Contact>
+				</Address>
+				<Email>
+					<Contact><![CDATA[bartwoelders@live.nl]]></Contact>
+				</Email>
+				<TelephoneList>
+					<Telephone>
+						<Contact><![CDATA[0031-6-14780404]]></Contact>
+						<Use>
+							<Code>mobile</Code>
+							<Label>Mobile</Label>
+						</Use>
+					</Telephone>
+				</TelephoneList>
+			</ContactInfo>
+			<Demographics>
+				<Birthdate year="1987" month="--07" day="---19"/>
+				<Gender>
+					<Code>M</Code>
+					<Label>Male</Label>
+				</Gender>
+				<NationalityList>
+					<Nationality>
+						<Code>NL</Code>
+						<Label>Dutch</Label>
+					</Nationality>
+				</NationalityList>
+			</Demographics>
+		</Identification>
+		<Headline>
+			<Type>
+				<Code>preferred_job</Code>
+				<Label>PREFERRED JOB</Label>
+			</Type>
+			<Description>
+				<Label><![CDATA[International and human security, human rights and development]]></Label>
+			</Description>
+		</Headline>
+		<WorkExperienceList>
+			<WorkExperience>
+				<Period>
+					<From year="2012" month="--07" day="---04"/>
+					<Current>true</Current>
+				</Period>
+				<Position>
+					<Label>Researcher</Label>
+				</Position>
+				<Activities><![CDATA[&lt;ul>&lt;li>I perform research on economic diplomacy, private&lt;br />                    sector development policy, fair trade, multilateral development cooperation and&lt;br />                    human rights and gender issues. &lt;/li>&lt;li>I provide administrative&lt;br />                    support to Senior Inspectors and the Director, including the organisation of&lt;br />                    meetings, writing and editing reports,drafting terms of reference, contracts and&lt;br />                    memorandums and data analysis.&lt;/li>&lt;li>I participate in the&lt;br />                    internal learning programme which addresses subjects such as theory of change,&lt;br />                    results frameworks and various qualitative and quantitative research&lt;br />                    methods.&lt;/li>&lt;/ul>]]></Activities>
+<Employer>
+	<Name>Ministry of Foreign Affairs, Evaluation Department</Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>The Hague</Municipality>
+				<Country>
+					<Code>NL</Code>
+					<Label>Netherlands</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Employer>
+</WorkExperience>
+<WorkExperience>
+	<Period>
+		<From year="2012" month="--03" day="---26"/>
+		<To year="2012" month="--07" day="---02"/>
+		<Current>false</Current>
+	</Period>
+	<Position>
+		<Label>Trainee</Label>
+	</Position>
+	<Activities><![CDATA[&lt;ul>&lt;li>I performed research on EU Life-long Learning&lt;br />                    Policy (for CEDEFOP) and the European Social Fund (for DG&lt;br />                    Employment).&lt;/li>&lt;li>I prepared two successful tender&lt;br />                    proposals.&lt;/li>&lt;/ul>]]></Activities>
+<Employer>
+	<Name><![CDATA[Panteia, European Policy Division]]></Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>Zoetermeer</Municipality>
+				<Country>
+					<Code>NL</Code>
+					<Label>Netherlands</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Employer>
+</WorkExperience>
+<WorkExperience>
+	<Period>
+		<From year="2011" month="--01" day="---03"/>
+		<To year="2011" month="--04" day="---01"/>
+		<Current>false</Current>
+	</Period>
+	<Position>
+		<Label>Intern</Label>
+	</Position>
+	<Activities><![CDATA[&lt;ul>&lt;li>I performed research on China-Afghanistan&lt;br />                    relations and on China-Central Asia relations, with a focus on political and&lt;br />                    economic affairs and minority rights.&lt;/li>&lt;li>I was responsible&lt;br />                    for the development and funding of NL Human Rights Fund projects including one&lt;br />                    on LGBT rights and one on civil society activism on the&lt;br />                    environment.&lt;/li>&lt;li>I participated in a conference on SALWs and&lt;br />                    the Arms Trade Treaty.&lt;/li>&lt;/ul>]]></Activities>
+<Employer>
+	<Name><![CDATA[Ministry of Foreign Affairs, Netherlands Embassy in Beijing, Political Affairs Division]]></Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>Beijing</Municipality>
+				<Country>
+					<Code>CN</Code>
+					<Label>China</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Employer>
+</WorkExperience>
+<WorkExperience>
+	<Period>
+		<From year="2012" month="--09" day="---01"/>
+		<To year="2013" month="--09" day="---01"/>
+		<Current>false</Current>
+	</Period>
+	<Position>
+		<Label><![CDATA[Member, Working Group on International Security and Defence, Democrats '66]]></Label>
+	</Position>
+</WorkExperience>
+<WorkExperience>
+	<Period>
+		<From year="2012" month="--05" day="---01"/>
+		<To year="2013" month="--08" day="---01"/>
+		<Current>false</Current>
+	</Period>
+	<Position>
+		<Label><![CDATA[Member Campaign Team Democrats 66]]></Label>
+	</Position>
+	<Employer>
+		<Name>D66</Name>
+		<ContactInfo>
+			<Address>
+				<Contact>
+					<Municipality>Leiden</Municipality>
+					<Country>
+						<Code>NL</Code>
+						<Label>Netherlands</Label>
+					</Country>
+				</Contact>
+			</Address>
+		</ContactInfo>
+	</Employer>
+</WorkExperience>
+<WorkExperience>
+	<Period>
+		<From year="2008" month="--09" day="---01"/>
+		<To year="2009" month="--09" day="---01"/>
+		<Current>false</Current>
+	</Period>
+	<Position>
+		<Label>Member of the Board</Label>
+	</Position>
+	<Employer>
+		<Name><![CDATA[Students' Association Augustinus]]></Name>
+		<ContactInfo>
+			<Address>
+				<Contact>
+					<Municipality>Leiden</Municipality>
+					<Country>
+						<Code>NL</Code>
+						<Label>Netherlands</Label>
+					</Country>
+				</Contact>
+			</Address>
+		</ContactInfo>
+	</Employer>
+</WorkExperience>
+</WorkExperienceList>
+<EducationList>
+	<Education>
+		<Period>
+			<From year="2013" month="--09" day="---01"/>
+			<To year="2015" month="--05" day="---01"/>
+			<Current>false</Current>
+		</Period>
+		<Title><![CDATA[Master of Laws (LL.M), European Law, part-time]]></Title>
+		<Activities><![CDATA[&lt;ul>&lt;li>Completed: Institutional Law, EU International&lt;br />                    Relations Law, Moot Court and Human Rights Law (30 ECTS). I have completed all&lt;br />                    courses for which attendance is compulsory.&lt;/li>&lt;/ul>]]></Activities>
+<Organisation>
+	<Name>Leiden University</Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>Leiden</Municipality>
+				<Country>
+					<Code>NL</Code>
+					<Label>Netherlands</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Organisation>
+</Education>
+<Education>
+	<Period>
+		<From year="2009" month="--09" day="---01"/>
+		<To year="2011" month="--07" day="---29"/>
+		<Current>false</Current>
+	</Period>
+	<Title><![CDATA[Master of Science (MSc.), International Relations and Diplomacy, cum laude]]></Title>
+	<Activities><![CDATA[&lt;ul>&lt;li>Two-year selective master&amp;#39;s programme&lt;br />                    aimed at international students (120 ECTS).&lt;/li>&lt;li>Courses on&lt;br />                    conflict resolution, international law, negotiation, international trade and EU&lt;br />                    security and defence policy, IR theory, and research design and&lt;br />                    methods.&lt;/li>&lt;li>I have written my thesis on the conditions for&lt;br />                    success of peace agreements in civil wars. I argue that successful peace&lt;br />                    agreements and sustainable peace require both enforcement mechanisms, and the&lt;br />                    accommodation of all parties with a significant stake in the conflict in the new&lt;br />                    status quo. This should be done through political power-sharing and reform of&lt;br />                    the security sector, including integration of combatants from all sides into a&lt;br />                    unified army. I tested my hypotheses on 21 peace agreements, combining&lt;br />                    Qualitative Comparative Analysis with three in-depth case studies. Result:&lt;br />                    8.5/10&lt;/li>&lt;/ul>]]></Activities>
+<Organisation>
+	<Name>Leiden University</Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>Leiden</Municipality>
+				<Country>
+					<Code>NL</Code>
+					<Label>Netherlands</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Organisation>
+</Education>
+<Education>
+	<Period>
+		<From year="2013" month="--08" day="---04"/>
+		<To year="2014" month="--08" day="---13"/>
+		<Current>false</Current>
+	</Period>
+	<Title>Certificate Modern Standard Arabic</Title>
+	<Activities><![CDATA[&lt;ul>&lt;li>Private (one-to-one) course in Modern Standard&lt;br />                    Arabic: 72 hours of tuition. Level: 5/9 (intermediate). Result: Excellent&lt;br />                    (89%).&lt;/li>&lt;li>Private (one-to-one) course in Modern Standard&lt;br />                    Arabic: 53 hours of tuition. Level: 6/9 (upper-intermediate). Result: Very Good&lt;br />                    (83%).&lt;/li>&lt;/ul>]]></Activities>
+<Organisation>
+	<Name><![CDATA[Ahlan Jordan (2013) and Ahlan Morocco (2014)]]></Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality><![CDATA[Amman / Rabat]]></Municipality>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Organisation>
+</Education>
+<Education>
+	<Period>
+		<From year="2005" month="--09" day="---01"/>
+		<To year="2008" month="--06" day="---30"/>
+		<Current>false</Current>
+	</Period>
+	<Title><![CDATA[Bachelor of Arts (BA) Political Science]]></Title>
+	<Activities><![CDATA[&lt;ul>&lt;li>Courses on national, international and comparative&lt;br />                    politics. Selected courses on Islam and Democracy, UN Peacekeeping, Arms Control&lt;br />                    Policy, and the First World War.&lt;/li>&lt;li>I have written my thesis&lt;br />                    on the development, promotion and enforcement of norms by transnational advocacy&lt;br />                    networks such as the International Campaign to Ban Landmines and the Coalition&lt;br />                    for an International Criminal Court. Result:&lt;br />                    7.5/10.&lt;/li>&lt;/ul>]]></Activities>
+<Organisation>
+	<Name>Leiden University</Name>
+	<ContactInfo>
+		<Address>
+			<Contact>
+				<Municipality>Leiden</Municipality>
+				<Country>
+					<Code>NL</Code>
+					<Label>Netherlands</Label>
+				</Country>
+			</Contact>
+		</Address>
+	</ContactInfo>
+</Organisation>
+</Education>
+</EducationList>
+<Skills>
+	<Linguistic>
+		<MotherTongueList>
+			<MotherTongue>
+				<Description>
+					<Code>nl</Code>
+					<Label>Dutch</Label>
+				</Description>
+			</MotherTongue>
+		</MotherTongueList>
+		<ForeignLanguageList>
+			<ForeignLanguage>
+				<Description>
+					<Code>en</Code>
+					<Label>English</Label>
+				</Description>
+				<ProficiencyLevel>
+					<Listening>C2</Listening>
+					<Reading>C2</Reading>
+					<SpokenInteraction>C2</SpokenInteraction>
+					<SpokenProduction>C2</SpokenProduction>
+					<Writing>C2</Writing>
+				</ProficiencyLevel>
+				<AcquiredDuring>
+					<Experience>
+						<Period>
+							<From year="2009" month="--01"/>
+							<Current>true</Current>
+						</Period>
+						<Description><![CDATA[&lt;p>work...&lt;/p>]]></Description>
+				<Area>
+					<Code><![CDATA[work_language]]></Code>
+					<Label>Using languages at work</Label>
+				</Area>
+			</Experience>
+			<Experience>
+				<Period>
+					<From year="2009" month="--01"/>
+					<To year="2011" month="--12"/>
+					<Current>false</Current>
+				</Period>
+				<Description><![CDATA[&lt;p>work 2...&lt;/p>]]></Description>
+		<Area>
+			<Code><![CDATA[work_language]]></Code>
+			<Label>Using languages at work</Label>
+		</Area>
+	</Experience>
+</AcquiredDuring>
+<VerifiedBy>
+	<Certificate>
+		<Title>diploma a</Title>
+		<AwardingBody>organization a</AwardingBody>
+		<Date year="2007" month="--01" day="---01"/>
+		<Level>A1</Level>
+	</Certificate>
+	<Certificate>
+		<Title>diploma b</Title>
+		<AwardingBody>organization b</AwardingBody>
+		<Date year="2009" month="--01" day="---01"/>
+		<Level>B1</Level>
+	</Certificate>
+	<Certificate>
+		<Title>diploma c</Title>
+		<AwardingBody>organization c</AwardingBody>
+		<Date year="2010" month="--01" day="---01"/>
+		<Level>B1</Level>
+	</Certificate>
+</VerifiedBy>
+</ForeignLanguage>
+<ForeignLanguage>
+	<Description>
+		<Code>fr</Code>
+		<Label>French</Label>
+	</Description>
+	<ProficiencyLevel>
+		<Listening>B2</Listening>
+		<Reading>C1</Reading>
+		<SpokenInteraction>B2</SpokenInteraction>
+		<SpokenProduction>B2</SpokenProduction>
+		<Writing>B2</Writing>
+	</ProficiencyLevel>
+</ForeignLanguage>
+<ForeignLanguage>
+	<Description>
+		<Code>es</Code>
+		<Label>Spanish</Label>
+	</Description>
+	<ProficiencyLevel>
+		<Listening>B1</Listening>
+		<Reading>B2</Reading>
+		<SpokenInteraction>B1</SpokenInteraction>
+		<SpokenProduction>B1</SpokenProduction>
+		<Writing>B1</Writing>
+	</ProficiencyLevel>
+</ForeignLanguage>
+<ForeignLanguage>
+	<Description>
+		<Code>ar</Code>
+		<Label>Arabic</Label>
+	</Description>
+	<ProficiencyLevel>
+		<Listening>B1</Listening>
+		<Reading>B1</Reading>
+		<SpokenInteraction>B1</SpokenInteraction>
+		<SpokenProduction>B1</SpokenProduction>
+		<Writing>B1</Writing>
+	</ProficiencyLevel>
+	<VerifiedBy>
+		<Certificate>
+			<Title><![CDATA[Certificate Modern Standard Arabic (level 6/9: upper-intermediate)]]></Title>
+		</Certificate>
+	</VerifiedBy>
+</ForeignLanguage>
+<ForeignLanguage>
+	<Description>
+		<Code>de</Code>
+		<Label>German</Label>
+	</Description>
+	<ProficiencyLevel>
+		<Listening>B2</Listening>
+		<Reading>B2</Reading>
+		<SpokenInteraction>B2</SpokenInteraction>
+		<SpokenProduction>B2</SpokenProduction>
+		<Writing>B2</Writing>
+	</ProficiencyLevel>
+</ForeignLanguage>
+</ForeignLanguageList>
+</Linguistic>
+</Skills>
+<AchievementList>
+	<Achievement>
+		<Title>
+			<Code>presentations</Code>
+			<Label>Presentations</Label>
+		</Title>
+	</Achievement>
+	<Achievement>
+		<Description><![CDATA[&lt;p>description, to category&lt;/p>]]></Description>
+</Achievement>
+</AchievementList>
+<Documentation/>
+</LearnerInfo>
+<AttachmentList/>
+<CoverLetter>
+	<Addressee>
+		<PersonName>
+			<Title>
+				<Code>ms</Code>
+				<Label>Ms.</Label>
+			</Title>
+			<FirstName>lkjhlj</FirstName>
+			<Surname>jkhljk</Surname>
+		</PersonName>
+		<Organisation>
+			<Name>kj hlkjh</Name>
+			<ContactInfo>
+				<Address>
+					<Contact>
+						<AddressLine>jkh lkj</AddressLine>
+						<AddressLine2>kj hlkjh</AddressLine2>
+						<PostalCode>kjh lkj</PostalCode>
+						<Municipality>ljh ljkh</Municipality>
+						<Country>
+							<Code>AG</Code>
+							<Label>Antigua and Barbuda</Label>
+						</Country>
+					</Contact>
+				</Address>
+			</ContactInfo>
+		</Organisation>
+	</Addressee>
+	<Letter>
+		<Localisation>
+			<Date year="2015" month="--02" day="---11"/>
+			<Place>
+				<Municipality>lkj hljkh ljkh</Municipality>
+			</Place>
+		</Localisation>
+		<SubjectLine><![CDATA[Subject:lk jhljk h]]></SubjectLine>
+		<OpeningSalutation>
+			<Salutation>
+				<Code><![CDATA[opening-salut-1]]></Code>
+				<Label>Dear</Label>
+			</Salutation>
+			<PersonName>
+				<Surname>kjh ljkh</Surname>
+			</PersonName>
+		</OpeningSalutation>
+		<Body>
+			<Opening><![CDATA[&lt;p>kjh lkjh lkjh lkjh lkjh ljkh lkajfgh lkjgh lejkrgh lejkrhg lerjhg lkejrhg lkejrg lkerhg lkerjhg lerjhg lkejrgh lkjth lkjhnl ksfjhnl ksdfbn lskbhlsksfjkhn ljk hljkh jklhjklh lkjhl jkh ljkh ljkh lkjh lkjh ljh&lt;/p>]]></Opening>
+	<MainBody><![CDATA[&lt;p>kjh lkjh lkjh lkjh lkjh ljkh lkajfgh lkjgh lejkrgh lejkrhg lerjhg lkejrhg lkejrg lkerhg lkerjhg lerjhg lkejrgh lkjth lkjhnl ksfjhnl ksdfbn lskbhlsksfjkhn ljk hljkh jklhjklh lkjhl jkh ljkh ljkh lkjh lkjh ljh&lt;/p>]]></MainBody>
+<Closing><![CDATA[&lt;p>kjh lkjh lkjh lkjh lkjh ljkh lkajfgh lkjgh lejkrgh.&lt;/p>&lt;p>lejkrhg lerjhg lkejrhg lkejrg lkerhg lkerjhg lerjhg lkejrgh lkjth lkjhnl ksfjhnl ksdfbn lskbhlsksfjkhn ljk hljkh jklhjklh lkjhl jkh ljkh ljkh lkjh lkjh ljh&lt;/p>]]></Closing>
+</Body>
+</Letter>
+<Documentation>
+	<Heading>
+		<Label><![CDATA[Enclosed:kjh ljkh lkjh]]></Label>
+	</Heading>
+</Documentation>
+</CoverLetter>
+</SkillsPassport></textarea>
+            <br /><button type="submit">Upload</button>
+        </form>
+    </body>
+</html>

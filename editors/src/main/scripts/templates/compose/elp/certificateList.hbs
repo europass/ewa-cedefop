@@ -1,0 +1,158 @@
+
+{{#with_list_item SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage Idx}}
+
+<table
+	id="List:SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Certificate"
+	summary="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title"  group="DocumentLabel"}}"
+	class="linguistic-certificates list-actions"
+	data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Certificate"
+	data-bind-document="ECV ELP"
+	summary="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title"  group="DocumentLabel"}}">
+	<caption>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title"  group="DocumentLabel"}}</caption>
+	<thead>
+		<tr>
+		    <th class="label certf-placeholder-label"></th>
+			<th class="label title">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title"  group="DocumentLabel"}}</th>
+			<th class="label awardingBody">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody"  group="DocumentLabel"}}</th>
+			<th class="label date">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.IssueDate"  group="DocumentLabel"}}</th>
+			<th class="label level">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level"  group="DocumentLabel"}}</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#unless Certificate}}
+	<tr></tr>
+	{{/unless}}
+	
+	{{#each_with_index Certificate}}
+	
+	<tr id="certificate-{{../list_index}}-{{index}}" 
+		class="menu-placeholder compose-list section item list-item opens-modal-form"
+		data-rel-doc="elp"
+		data-rel-clazz="ElpLanguageCertificateFormView"
+		data-rel-form="Form:LinguisticCertificate[{{../list_index}}][{{index}}]"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{index}}]"
+		data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate"
+		data-rel-item-index="{{index}}"
+		data-validation-field="date"
+		data-rel-index="{{../list_index}}">
+		
+		<td class="menu-placeholder certf-placeholder">
+		{{#if_gt ../Certificate.length compare="1"}}
+		<div class="dnd">
+			<span class="sortable_placeholder list-item-sortable tip spot tip-addLeft" data-tip.position="top-left">
+		  	 <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span>	
+		  +</span>
+		</div>
+		{{/if_gt}}
+		</td>
+		<td class="menu-placeholder value title">
+		
+		{{#unless Title}}
+			<span class="default-value">
+				{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title.Insert.Prompt"  group="GuiLabel"}}
+			</span>
+		{{/unless}}
+		{{^unless Title}}
+			{{Title}}
+		{{/unless}}
+
+		</td>
+		<td class="value awardingBody">
+			{{#unless AwardingBody}}
+				<span class="default-value">
+					{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody.Insert.Prompt"  group="GuiLabel"}}
+				</span>
+			{{/unless}}
+			{{^unless AwardingBody}}
+				{{AwardingBody}}
+			{{/unless}}
+		</td>
+		<td class="value date">
+			<span class="date {{#unless Date}}default-value{{/unless}}">
+			{{#format_date Date current_pref_item.Date false DocumentType="ELP"}}
+				{{{.}}}
+			{{/format_date}}
+			</span>
+		</td>
+		<td class="menu-placeholder value level">
+		
+		{{#unless Level}}
+			<span class="default-value">
+				{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level.Select.Prompt"  group="GuiLabel"}}
+			</span>
+		{{/unless}}
+		{{^unless Level}}
+			{{Level}}
+		{{/unless}}
+			<menu class="section manage">
+				<button class="opens-modal-form edit extra tip spot nested-tip tip-addRight"
+                        data-tip.position="top-right">
+                    <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+				</button>			
+				<button type="button"
+			        name="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{index}}]_delete_btn"
+			        class="elp delete tip spot nested-tip tip-addRight"
+			        data-tip.position="top-right"
+			        data-rel-form="Form:LinguisticCertificate[{{../list_index}}][{{index}}]"
+			        data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{index}}]"
+			        data-rel-view="Compose:ElpForeignLanguagesList"
+			        data-rel-index="{{index}}">
+			    <span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+			    </button>
+			</menu>
+		</td>
+	</tr>	
+	
+	{{/each_with_index}}
+
+	</tbody>
+	<tfoot>
+	<tr>
+	    <td class="empty-add-left"></td>
+		<td colspan="4" class="empty">
+			{{#isEmptyObject Certificate}}
+			
+ 			<button type="button" 
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[0]_add_btn" 
+					class="compose-list opens-modal-form add empty" 
+					data-rel-doc="elp"
+					data-rel-clazz="ElpLanguageCertificateFormView"
+					data-rel-form="Form:LinguisticCertificate[{{../list_index}}][0]"
+					data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[0]"
+					data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate"
+					data-validation-field="date"
+					data-rel-index="{{../list_index}}">
+					<span class="img-placeholder">&nbsp;</span>
+					<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+			</button>
+					
+			{{else}}
+
+ 				<button type="button" 
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{Certificate.length}}]_add_btn" 
+					class="compose-list add opens-modal-form" 
+					data-rel-doc="elp"
+					data-rel-clazz="ElpLanguageCertificateFormView"
+					data-rel-form="Form:LinguisticCertificate[{{../list_index}}][{{Certificate.length}}]"
+					data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{Certificate.length}}]"
+					data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate"
+					data-validation-field="date"
+					data-rel-index="{{../list_index}}">
+					<span class="img-placeholder">&nbsp;</span>
+					
+					{{#if_lt Certificate.length compare="1"}}
+						<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+					{{/if_lt}}
+					{{#if_gteq Certificate.length compare="1"}}
+						<span>{{get_text "Buttons.Add.Content.Not.Empty.Language.Certificate" group="GuiLabel"}}</span>
+					{{/if_gteq}}
+					
+				</button>
+ 			{{/isEmptyObject}}
+			</td>
+	</tr>
+	
+	</tfoot>
+</table>
+
+{{/with_list_item}}

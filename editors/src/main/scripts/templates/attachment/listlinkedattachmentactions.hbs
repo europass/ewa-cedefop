@@ -1,0 +1,52 @@
+{{#with SkillsPassport}}	
+{{#if Attachment}}
+<fieldset class="Attachment Link Upload existing-files">
+	<ul class="existing-attachment">
+		{{#each Attachment}}
+		<li class="attachment-info">
+
+			<div class="attachment">
+				<span class="icon"/>
+				{{> templates/attachment/justuploaded}}
+			</div>
+				<div class="menu-prompt"><span class="edit-icon">
+	           </span>
+	           </div>
+			<div class="menu-options">
+				<div class="arrow">
+					<div class="inner">
+						<a  data-rel="{{Id}}"
+							class="option attach link">
+							{{get_text "Attachment.Section.Link" group="EditorHelp"}}</a>
+						<a  data-rel="{{Id}}"
+							class="option attach unlink">
+							{{get_text "Attachment.Section.Unlink" group="EditorHelp"}}</a>
+						<a class="option rename toggle-expansion more"
+							data-expansion-effect="fade"
+							data-rel-subform="{{../../../subsection}}:SubForm:Attachment.{{Id}}.Rename">
+							{{get_text "Rename.Attachment" group="EditorHelp"}}</a>
+						<a class="option delete toggle-expansion"
+							data-expansion-effect="fade"
+							data-rel-subform="{{../../../subsection}}:SubForm:Attachment.{{Id}}.DeleteConfirm">
+							{{get_text "Delete.Attachment" group="EditorHelp"}}</a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="{{../../../subsection}}:SubForm:Attachment.{{Id}}.Rename" 
+				 class="attachment-action attachment-rename" 
+				 data-rel-id="{{Id}}" 
+				 data-rel-index="{{index}}" 
+				 style="display:none"></div>
+			
+			<div id="{{../../../subsection}}:SubForm:Attachment.{{Id}}.DeleteConfirm" 
+				 class="attachment-action attachment-delete" 
+				 data-rel-id="{{Id}}" 
+				 data-rel-index="{{index}}" 
+				 style="display:none"></div>
+		</li>
+		{{/each}}
+	</ul>
+</fieldset>
+{{/if}}
+{{/with}}

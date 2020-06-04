@@ -1,0 +1,92 @@
+  "languages": {
+    "_total": 3,
+    "values": [
+      {
+    	"language": "Greek"
+      },
+      {
+        "language": "English"
+      },
+      {
+        "language": "French"
+      }
+    ]
+  },
+
+  "courses" : {
+    "_total": 2,
+    "values": [
+    	{
+    	  	"name": "Artificial Intelligence basic Aspects",
+    	  	"number": "512"
+    	},
+    	{
+    	  	"name": "Introduction to Web Programming",
+    	  	"number": "325"
+    	}
+    ]
+  },
+  "patents" : {
+    "_total": 2,
+    "values": [
+    	{
+    	  	"title": "Java Patent #12345",
+    	  	"date": {
+    	  	  	"day": 10,
+    	  	  	"month": 11,
+    	  	  	"year": 1998
+    	  	  }
+    	},
+    	{
+    	  	"title": "Apache Patent #56789",
+    	  	"date": {
+    	  	  	"day": 24,
+    	  	  	"month": 7,
+    	  	  	"year": 2003
+    	  	  }
+    	}
+    ]
+  },
+  "publications" : {
+    "_total": 3,
+    "values": [
+    	{
+    	  	"title": "Publication #1",
+    	  	"date": {
+    	  	  	"day": 23,
+    	  	  	"month": 9,
+    	  	  	"year": 1999
+    	  	  }
+    	},
+    	{
+    	  	"title": "Publication #2",
+    	  	"date": {
+    	  	  	"day": 7,
+    	  	  	"month": 9,
+    	  	  	"year": 2001
+    	  	  }
+    	},
+    	{
+    	  	"title": "Publication #3",
+    	  	"date": {
+    	  	  	"day": 6,
+    	  	  	"month": 3,
+    	  	  	"year": 2002
+    	  	  }
+    	}
+    ]
+  },
+  "volunteer": {
+      "_total": 2,
+      "values": [
+    	{
+    	  	"organization": "Greenpeace",
+    	  	"role": "Assistant"
+    	},
+    	{
+    	  	"organization": "WWF",
+    	  	"role": "General Services"
+    	}
+    ]
+  }
+  

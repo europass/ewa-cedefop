@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>europass-webapps</artifactId>
+        <groupId>eu.europa.cedefop.europass.webapps</groupId>
+        <version>5.0.84</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>europass-webapps-conversion</artifactId>
+    <name>Europass Document Conversion Library</name>
+	
+    <dependencies>
+        <!-- europass Conversion Utils -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-conversion-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--  europass Model -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--  europass model dependency to tests -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-model</artifactId>
+            <version>${project.version}</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

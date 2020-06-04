@@ -1,0 +1,77 @@
+<dt style="display:none;">{{get_text "LearnerInfo.Identification" group="DocumentLabel"}}</dt>	
+<!-- {{#emptyObjects "3" 0=SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue 1=SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage 2=SkillsPassport.LearnerInfo.Identification.PersonName}}
+{{else}}
+	<dd class="edit-indicator"><span>{{get_text "Buttons.Edit.Content"}}</span></dd>
+{{/emptyObjects}}	
+ -->
+ <dd class="personal-details">
+	<div class="person-name with-switch">
+		{{! --- PersonName Displayed always, so we dont need to call print preferences --- }}
+		<div class="name value person-name">
+			{{> templates/compose/personname}}
+			<button type="button" 
+				name="switchPersonNamesOrderElp"
+				class="names switch tip spot nested-tip tip-adj tip-addTop-15pixels">
+				<span style="display:none;" class="data-title">{{get_text "LearnerInfo.Identification.PersonName.Switch" group="EditorHelp"}}</span>
+				switch
+			</button>			
+		</div>
+	</div>
+</dd>
+
+<dt style="display:none;">{{get_text "LearnerInfo.Skills.Linguistic" group="DocumentLabel"}}</dt>	
+<dd class="linguistic-skills">
+
+	<dl class="mother-tongues">
+		<dt class="label">
+			{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="DocumentLabel"}}
+		</dt>
+		<dd class="value">
+			{{#if SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue}}
+			
+				{{#commalist SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue ../Preferences.LearnerInfo.Skills.Linguistic.MotherTongue.array}}
+				<span class="mother-tongue">{{.}}</span>
+				{{else}}
+				<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue.Placeholder" group="EditorPlaceholder"}}</span>
+				{{/commalist}}
+				
+			{{else}}
+			<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue.Placeholder" group="EditorPlaceholder"}}</span>
+				
+			{{/if}}	
+		</dd>
+	</dl>
+	
+	<dl class="middle-border">&nbsp</dl>
+	
+	<dl class="foreign-languages">
+		<dt class="label">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="DocumentLabel"}}
+		</dt>
+		<dd class="value">
+			{{#if SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+				
+				{{#commalist SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage ../Preferences.LearnerInfo.Skills.Linguistic.ForeignLanguage.array}}
+				<span class="foreign-language">{{.}}</span>
+				{{else}}
+				<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}</span>
+				{{/commalist}}
+				
+			{{else}}
+			<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Placeholder" group="EditorPlaceholder"}}</span>
+			{{/if}}	
+		</dd>
+	</dl>
+</dd>
+
+{{#call_partial . path="LearnerInfo.Skills.Linguistic" noDelete=true}}
+	{{> templates/menu/itemmenu }}
+{{/call_partial}}
+
+{{#emptyObjects "3" 0=SkillsPassport.LearnerInfo.Identification.PersonName 1=SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue 2=SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+<dd class="value">
+	<div class="empty add summary">
+		<span>{{get_text "Buttons.Add.Elp.Summary.Content" group="GuiLabel"}}</span>
+	</div>
+</dd>
+ {{/emptyObjects}}

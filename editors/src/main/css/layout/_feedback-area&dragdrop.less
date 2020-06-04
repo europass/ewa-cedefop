@@ -1,0 +1,779 @@
+
+/******************************
+NOTIFICATIONS
+******************************/
+
+
+#share-for-review .feedback-area,
+#SendFeedbackForm .feedback-area {
+  padding-top: 0;
+}
+
+.modal .feedback-area {
+  section.success {
+    position: relative;
+    left: 0px;
+    padding: 2% 6% 2% 8%;
+    width: 85%;
+    border-top-width: 1px;
+    border-top-radius: 4px;
+    border-right-radius: 4px;
+  }
+}
+
+fieldset.Attachment.upload-area,
+fieldset.Photo.upload-area,
+fieldset.Signature.upload-area {
+  .feedback-area {
+    padding-bottom: 2rem;
+    section.notification {
+      margin-top: 1.5rem;
+      &.error {
+        .error-notifcation-within-drawers;
+      }
+    }
+  }
+}
+
+
+#SendFeedbackForm {
+  section.notification {
+    margin-top: 3rem !important;
+  }
+}
+
+
+#ExportWizardForm,
+#ImportWizardForm,
+#SendFeedbackForm,
+#share-for-review {
+  .feedback-area {
+    section.notification:last-child {
+      bottom: 0;
+    }
+    section.notification {
+      margin-top: 1.5rem;
+      &.error {
+        .error-notifcation-within-drawers;
+      }
+      &.success {
+        .success-notifcation-within-drawers;
+      }
+    }
+  }
+}
+
+
+.error-notifcation-within-drawers {
+  .message-area {
+    color: @grey-dark-text-two;
+    * {
+      color: @grey-dark-text-two;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.notification {
+  color: @grey-dark-text-two;
+}
+
+.success-notifcation-within-drawers {
+  background-color: @white;
+  border: none;
+  /*  background-image: url("@{img-base-url}notifications/msg-success-indicator-large.png@{img-suffix-url}${project.version}");
+    background-position: 50% 0;*/
+  width: 100%;
+  padding: 0;
+  button.close {
+    display: none;
+  }
+  .message-area {
+    padding-top: 150px;
+    text-align: center;
+    color: @very-dark-grey;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4em;
+    * {
+      color: @very-dark-grey;
+    }
+  }
+}
+
+
+#dragdrop-feedback {
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
+.notification-msg-section {
+  padding-top: 30px;
+  section {
+    margin-top: 30px;
+  }
+}
+
+.notifications-html {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  * {
+    font-size: 0.9rem;
+  }
+  h1,
+  h2,
+  h3 {
+    color: @dark-blue;
+    margin-bottom: 10px;
+  }
+  p {}
+  a,
+  a:visited,
+  a:hover {
+    color: @light-blue;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .trace-code {
+    padding-left: 10px;
+    &:before {
+      content: @parenthesis-left;
+    }
+    &:after {
+      content: @parenthesis-right;
+    }
+  }
+}
+
+
+.notification-msg-section {
+  padding-top: 30px;
+  section {
+    margin-top: 30px;
+  }
+}
+
+
+
+.success-status{
+  .feedback-area{
+    .message-area{
+      color: #9d9d9d!important;
+      font-size: 1rem!important;
+      text-align: center!important;
+    }
+  }
+}
+
+#ExportWizardForm .feedback-area section.notification.success .message-area {
+  font-weight:400;
+}
+
+/***************************
+WARNING
+****************************/
+legend.notification.warning.warning,#notifications-area #document-storing-warning,
+#notifications-area #document-storing-warning section.warning,
+.notification.warning.notification.warning.notification.warning,.drawer.drawer.drawer .notification.warning,
+.notification.warning:not(button){
+  background-image:none;
+  position:relative;
+  &:before{
+    font-family:"europass-application";
+    content:"\e92f";
+    font-size:28px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    color:@bright-orange;
+    transform:translatey(-50%);
+    text-align: center;
+    @media screen and(max-width:@phone-width-limit){
+      left:3px;
+    }
+  }
+}
+
+
+/**************************************
+INFO
+**************************************/
+
+#notifications-area #cookie-law-consent-section section.info,
+#notifications-area #document-storing-warning section.info, #dragdrop-feedback #document-storing-warning section.info,
+#notifications-area #missing-documents-info section.info,
+#notifications-area #new-europass-portal-info section.info,
+.feedback-area .notification.confirm.notification.confirm.notification.confirm,#cloudManageDocumentsRadioForm .share-explanatory-text{
+  background-image:none;
+  position:relative;
+  &:before {
+    content:"i";
+    width:24px;
+    height:24px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translatey(-50%);
+    border-radius:50%;
+    background:#EC6F2B;
+    line-height:24px;
+    text-align: center;
+    color:white;
+    @media screen and(max-width:@phone-width-limit){
+      left:3px;
+    }
+  }
+}
+
+#notifications-area #missing-documents-info section button,
+#notifications-area #new-europass-portal-info section button{
+  background-image: url("../images/sprites/close_small.png?version=${project.version}");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-indent: 0;
+  opacity: 0.2;
+}
+
+
+#notifications-area #cookie-law-consent-section section.info,
+#notifications-area #document-storing-warning section.info, #dragdrop-feedback #document-storing-warning section.info,
+#notifications-area #missing-documents-info section.info,
+#notifications-area #new-europass-portal-info section.info,
+.feedback-area .notification.confirm.notification.confirm.notification.confirm{
+  &:before{
+    background-color:#7895B6;
+  }
+}
+
+/***************
+END OF INFO
+***************/
+
+.notification.warning:not(button){
+  padding: 15px 70px;
+  background-color: @msg-warning-bg;
+  color: @grey-dark-text-two;
+  em p,
+  p,
+  p b {
+    font-size: 0.9rem;
+  }
+}
+
+
+.modal form.modalform .notification.warning:not(button){
+  width: 80%;
+  border-radius: 4px;
+}
+
+
+
+.feedback-area.dismissed:before{
+  display:none;
+}
+
+
+
+/*********************************
+import wizard form feedback area
+*********************************/
+
+#ImportWizardForm {
+  .feedback-area{
+    .file-names{
+      margin: 1rem 0;
+
+      .file-name{
+        color: @bright-blue !important;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+
+/*********************************
+modal feedback area
+***********************************/
+.modal {
+  &.local {
+    #ImportWizardForm,
+    #ExportWizardForm {
+      .feedback-area {
+        section.notification:last-child {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &.googledrive,
+  &.dropbox,
+  &.onedrive,
+  &.linkedin {
+    #ImportWizardForm {
+      .feedback-area {
+        section.notification:first-child {
+          margin-top: -4rem;
+        }
+        section.notification:last-child {
+          bottom: 0;
+        }
+        section.notification:only-child {
+          /*					bottom: 5.5rem;*/
+          margin-top: 1.5rem;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+          /* Safari only override */
+          ::i-block-chrome, section.notification:first-child {
+            margin-top: -1.5rem;
+          }
+
+          ::i-block-chrome, section.notification:only-child {
+            bottom: 1.5rem;
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.feedback-area .notification.confirm.notification.confirm.notification.confirm{
+  text-align:left;
+  padding-top:1rem;
+}
+
+.feedback-area .notification.confirm.notification.confirm.notification.confirm{
+  padding-left:60px;
+}
+
+.modal{
+  &.success-status{
+    &.local,&.email,&.googledrive,&.onedrive,&.dropbox,&.linkedin,&.partners,&.eures{
+      .feedback-area{
+        section.notification.success{
+          background-image: none !important;
+          .message-area{
+            padding-top: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********************************
+tablet import
+***********************************/
+
+@media only screen and (max-width: @tablet-width-limit) {
+  .modal {
+    &.local {
+      #ImportWizardForm {
+        .feedback-area{
+          section.notification.error:only-child{
+            bottom: 27rem;
+            margin-top: 1.5rem!important;
+          }
+        }
+      }
+      #ExportWizardForm {
+        .feedback-area{
+          section.notification.error {
+            bottom: 28rem;
+          }
+        }
+      }
+    }
+    &.googledrive,
+    &.dropbox,
+    &.onedrive,
+    &.linkedin{
+      #ImportWizardForm {
+        .feedback-area{
+          section.notification.error:only-child {
+            bottom: 30rem;
+            margin-top: 1.5rem!important;
+          }
+          section.notification.error:first-child{
+            margin-top: -28rem;
+          }
+        }
+      }
+
+      #ExportWizardForm {
+        .feedback-area {
+          section.notification.error{
+            bottom: 27rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @tablet-width-limit) and (-webkit-min-device-pixel-ratio:0){
+  #ImportWizardForm {
+    .feedback-area{
+      ::i-block-chrome, section.notification.error:first-child {
+        margin-top: -19rem!important;
+      }
+      ::i-block-chrome, section.notification.error:only-child {
+        bottom: 19rem!important;;
+        margin-top: 1.5rem!important;
+      }
+    }
+  }
+}
+
+
+
+
+
+/*********** DELETE CONFIRMATION MODALS ***************/
+
+
+
+
+/*********** Close error notifications button (removed) ***************/
+
+.confirmation .feedback-area section button,
+.modal .feedback-area section button,
+#SendFeedbackForm .feedback-area section button {
+  display: none;
+}
+
+.notification.error:not(.close){
+  position: relative;
+  background-image: none!important;
+  &:before{
+    font-family: "europass-application"!important;
+    content: "\e92f";
+    color: @warning-msg-text-clr;;
+    position:absolute;
+    left: 20px;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 28px;
+  }
+}
+
+.warning .icon{
+  position:relative;
+  background-image:none!important;
+  &:before{
+    font-family:"europass-application"!important;
+    content:"\e92f";
+    color: @bright-orange;
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translatey(-50%);
+    font-size:30px;
+  }
+}
+
+.warning .icon:before{
+  left:0;
+}
+
+
+
+#missing-documents-info, #new-europass-portal-info {
+  > .notification.info {
+    background-color: #e2ecf5;
+    background-image: url("@{img-base-url}notifications/msg-normal-indicator.png@{img-suffix-url}${project.version}");
+    background-position: 2% center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    padding: 15px 70px;
+    position: relative;
+    margin-top: 30px;
+    .message-area {
+      font-size: 0.9rem;
+      color: @grey-dark-text-two;
+      line-height: 1.2;
+    }
+  }
+  .notification.message.close.info{
+    background-image: url("@{img-base-url}sprites/close_small.png@{img-suffix-url}${project.version}");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-indent: 0;
+    opacity: 0.2;
+    color: #737373;
+    pointer:cursor;
+  }
+}
+
+.notification.warning li {
+  color: @grey-dark-text-two;
+  font-size: 0.9em;
+}
+
+.feedback-area .notification.error {
+  background-color: @msg-error-bg;
+  border-radius: 4px;
+  background-position: 2% center;
+  background-repeat: no-repeat;
+  padding: 15px 70px;
+  position: relative;
+  margin-top: 30px;
+  color: @grey-dark-text-two;
+  font-size: 0.9rem;
+  text-align: left;
+  .message-area,
+  .message-area em,
+  ul li {
+    font-size: 0.9rem;
+  }
+}
+/****************
+fix on emails senders your opinion
+****************/
+#sendfeedback-notification-area{
+  .notification.success{
+    height:250px!important;
+    margin-top:0!important;
+    &:before {
+      color: #155d00;
+      content: "\e928";
+      font-family: "europass-application" !important;
+      position: absolute;
+      font-size: 80px;
+      left: 50%;
+      top: 50px;
+      transform: translate(-50%,-50%);
+      background:transparent;
+    }
+  }
+}
+
+#notifications-area #cookie-law-consent-section section button.cookie-consent-agree-button{
+  top:50%!important;
+  transform:translatey(-50%);
+  background-color: #2C6B95;
+  color:white;
+  width:auto;
+  border-radius:5px;
+  padding:10px;
+  opacity:1;
+  height:auto;
+  background-image:none;
+  &:before{
+    display:none!important;
+  }
+}
+
+#europass-cookie-notification {
+  p {
+    white-space: normal !important;
+  }
+  .message-area{
+    height:auto!important;
+    margin-right:80px;
+    &:after{
+      display:none!important;
+    }
+  }
+  /******************************************************************
+  RESPONSIVE
+  ******************************************************************/
+
+  @media screen and(max-width:@phone-width-limit) {
+    .notification{
+      box-sizing: border-box;
+      &.warning:not(button),&.error {
+        padding-left: 40px!important;
+      }
+    }
+    .notification.error:not(.close):before{
+      left:8px;
+    }
+    #notifications-area #cookie-law-consent-section section, #dragdrop-feedback #cookie-law-consent-section section,#missing-documents-info .notification.info,
+    #new-europass-portal-info .notification.info{
+      padding-left:40px!important;
+    }
+    #notifications-area{
+      .feedback-area.notification-section{
+        overflow:hidden;
+        .message-area{
+          height:19px;
+          line-height:1.2rem;
+          position:relative;
+          &:after{
+            position:absolute;
+            content:"";
+            height:7px;
+            width:7px;
+            left:auto;
+            right:30px;
+            bottom:40%;
+            display:inline-block;
+            border-right:1px solid #a8a8a8;
+            border-bottom:1px solid #A8A8A8;
+            transform:rotate(45deg);
+          }
+          p{
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 200px;
+            overflow: hidden;
+
+            ~ p{
+              display:none;
+            }
+          }
+        }
+        &.expanded{
+          .message-area{
+            height:auto;
+            &:after{
+              display:none;
+            }
+            p{
+              white-space: normal;
+              max-width:none;
+              &:after{
+                display:none;
+              }
+              ~ p{
+                display:block!important;
+              }
+            }
+          }
+        }
+      }
+    }
+    #notifications-area{
+      margin-left:10px;
+    }
+    #notifications-area #document-storing-warning section button, #dragdrop-feedback #document-storing-warning section button, #notifications-area #missing-documents-info section button,#notifications-area #cookie-law-consent-section section button, #dragdrop-feedback #cookie-law-consent-section section button{
+      top:10px!important;
+    }
+    #missing-documents-info .notification.info, #new-europass-portal-info .notification.info{
+      margin-top:0;
+    }
+    #notifications-area section.notification .message-area,#cookie-law-consent-section .info .message-area{
+      max-width:90%;
+    }
+    .effective-content-area #notifications-area #document-storing-warning section.warning,#cookie-law-consent-section .info{
+      border-bottom:none;
+    }
+    #notifications-area #cookie-law-consent-section section.info:before, #notifications-area #document-storing-warning section.info:before, #dragdrop-feedback #document-storing-warning section.info:before, #notifications-area #missing-documents-info section.info:before, #notifications-area #new-europass-portal-info section.info:before, .feedback-area .notification.confirm.notification.confirm.notification.confirm:before{
+      left:5px;
+    }
+    #notifications-area #document-storing-warning section button, #dragdrop-feedback #document-storing-warning section button,#notifications-area #cookie-law-consent-section section button, #dragdrop-feedback #cookie-law-consent-section section button,#notifications-area #missing-documents-info section button, #notifications-area #new-europass-portal-info section button{
+      margin: 0;
+      background-image: none!important;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      width: 15px;
+      height: 15px;
+      text-indent: 0;
+      opacity: 1!important;
+      line-height: 32px;
+      display: inline-block;
+      padding: 18px;
+      font-size: 0;
+      right:10px!important;
+      top:0!important;
+      &:before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "×";
+        font-size: 30px;
+        color: #1292cb;
+        line-height: 0.7;
+        transform:translate(-50%,-50%);
+      }
+    }
+    #SendFeedbackForm .ui-sendfeedback-area,#BasicCvPrinciplesForm .ui-cv-principles-area,#AppSettingsForm .ui-settings-area{
+      padding-left:40px!important;
+    }
+    #SendFeedbackForm .sendfeedback-info.sendfeedback-info button.close.contact,#BasicCvPrinciplesForm .basic-principles-content.basic-principles-content button.close,#PrepareYourInterviewForm .prepare-your-interview-content.prepare-your-interview-content button.close,#AppSettingsForm .appsettings-info.appsettings-info button.close{
+      position: fixed;
+      left: 7px;
+      top: 13px;
+      margin: 0;
+      background-image: none;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      width: 15px;
+      height: 15px;
+      text-indent: 0;
+      opacity: 1;
+      line-height: 32px;
+      display: inline-block!important;
+      padding: 18px;
+      font-size: 0;
+      &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "×";
+        font-size: 40px;
+        color: #1292CB;
+        line-height: 0.7;
+      }
+    }
+    #main-content-area #notifications-area #app-notifications section{
+      margin-top:0!important;
+    }
+  }
+}
+
+
+/*global-warning
+*****************************************/
+
+
+#notifications-area #app-notifications .global-warning.global-warning.global-warning {
+  position: fixed !important;
+  z-index:100;
+  top: 0;
+  left: 50%;
+  padding: 20px 60px !important;
+  transform: translatex(-50%);
+  margin-top: 0 !important;
+  box-shadow: 0 4px 4px -2px @medium-grey;
+}
+
+
+
+//For EPAS-2018 issue
+#notifications-area #new-europass-portal-info section .message-area,
+#dragdrop-feedback #new-europass-portal-info section .message-area {
+  strong {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,24 @@
+<div id="LanguagesGrid" class="overlay">
+	<div class="available-languages" style="display:none">
+		<button class="close" style="display:none">Close</button>
+		<div class="ui-languages-area drawer" style="display:none">
+			<span class="heading">{{get_text "gui.select.ui.language" group="GuiLabel"}}</span>
+			<ul>
+				{{#each locales}}
+					<li class="option {{position}} {{#Active}} selected{{/Active}}">
+						{{^empty}}
+						<a class="locale" data-locale-code="{{Code}}">
+							<span class="label">{{Label}}</span>
+							<span class="code"> {{Code}} </span>
+						</a>
+						{{/empty}}
+					</li>
+				{{/each}}
+			</ul>
+			<menu label="Manage" class="buttons">
+		    	<button type="button" class="cancel button" form="FormSendFeedBack"><span>{{get_text "Buttons.Cancel" group="GuiLabel"}}</span></button>
+			</menu>
+		</div>
+	</div>
+</div>
+

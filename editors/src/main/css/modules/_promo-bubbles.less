@@ -1,0 +1,219 @@
+
+.image-deleting {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE0cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDE0IDE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNCAxNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgaWQ9IkxheWVyXzEiPjxnIGlkPSJOZXdfU3ltYm9sXzEwIj48L2c+PC9nPjxnIGlkPSJlZGl0Ij48L2c+PGcgaWQ9InBvcC1jbG91ZCI+PC9nPjxnIGlkPSJwb3AtbmV3RmVhdHVyZSI+PGc+PHBvbHlnb24gZmlsbD0iI0YzQzcwMCIgcG9pbnRzPSIxNCwxMS44NDEgOS4xNiw3LjAwMSAxNCwyLjE2IDExLjg0MSwwIDcsNC44NCAyLjE2LDAgMCwyLjE2IDQuODQsNyAwLDExLjg0MSAyLjE2LDE0IDcsOS4xNiAxMS44NDEsMTQgIi8+PC9nPjwvZz48ZyBpZD0iZmlsZXMtcG9wIj48ZyBpZD0ibW9kYWxfY29udGVudCI+PC9nPjxnIGlkPSJzZXJ2aWNlc19saXN0Ij48L2c+PC9nPjwvc3ZnPg==);
+}
+
+
+/************************************
+UPPER BUBBLE
+*************************************/
+#cloud-login-feature-tooltip {
+  background-color: @orange-dark;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top:-14px;
+  left:95%;
+  z-index: 10;
+  padding: 25px;
+  color: #FFF;
+  border-radius: 6px;
+  &:before{
+    content:"";
+    position:absolute;
+    top:40px;
+    left:0;
+    width:20px;
+    height:20px;
+    background-color: @orange-dark;
+    border-radius:6px;
+    transform:rotate(45deg) translate(-50%);
+  }
+}
+
+#cloud-login-feature-tooltip
+.cookie-tooltip{
+  .image-deleting;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 24px;
+  right: 15px;
+  text-indent: 0;
+  cursor: pointer;
+}
+
+
+#cloud-login-feature-tooltip .message-area .cloud-tooltip-new-feature {
+  margin-bottom:30px;
+  display:block;
+  font-size: 12px;
+}
+
+#cloud-login-feature-tooltip .message-area .cloud-tooltip-sign-in {
+  font-size:21px;
+  display:block;
+  margin-bottom: 25px;
+}
+
+#cloud-login-feature-tooltip .message-area .cloud-tooltip-sign-in b {
+  font-weight:bold;
+}
+
+#cloud-login-feature-tooltip .message-area .cloud-tooltip-main {
+  display: block;
+  margin-bottom: 25px;
+  font-size:13px;
+}
+
+#cloud-login-feature-tooltip .message-area .tooltip-sign-in {
+  display:block;
+  cursor:pointer;
+  color:@gold;
+  font-size:13px;
+  font-weight:bold;
+}
+
+
+
+/**************************************
+*LOWER BUBBLE
+*************************************/
+
+
+/**** PROVIDERS TOOLTIP ****/
+#publish-providers-tooltip {
+  background-color: @orange-dark;
+  width: 200px;
+  height: 9em;
+  position: absolute;
+  top:-192px;
+  left:-77%;
+  z-index: 1;
+  padding: 25px;
+  color: #FFF;
+  border-radius: 6px;
+  &:before{
+    content:"";
+    position:absolute;
+    top:162px;
+    left:245px;
+    width:20px;
+    height:20px;
+    background-color: @orange-dark;
+    border-radius:6px;
+    transform:rotate(45deg) translate(-50%);
+
+  }
+}
+
+#publish-providers-tooltip
+#publish-providers-tooltip-close {
+  .image-deleting;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  text-indent: 0;
+  cursor: pointer;
+}
+
+#publish-providers-tooltip .message-area .providers-tooltip-apply-btn {
+  display:block;
+  cursor:pointer;
+  color:@gold;
+  font-size:13px;
+  font-weight:bold;
+}
+
+#publish-providers-tooltip
+.providers-tooltip-services-icons {
+}
+
+
+
+#publish-providers-tooltip {
+  right:100%;
+  top:-192px;
+  height:auto;
+  left:auto;
+  &:before{
+    top:164px;
+  }
+  .providers-tooltip-title {
+    font-size: 21px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .providers-tooltip-options{
+    display: block;
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+  .providers-tooltip-apply-btn{
+    margin-top:20px;
+  }
+}
+
+
+@media screen and(max-width:1124px){
+  #publish-providers-tooltip{
+    display:block;
+    position:fixed;
+    left:50%;
+    transform:translatex(-50%);
+    bottom:120px;
+    top:auto;
+    &:before{
+    display:none;
+    }
+  }
+}
+
+
+.providers-tooltip-services-icons{
+  margin-top:15px;
+  display:flex;
+  > .icon{
+    flex:1;
+    margin-right:5px;
+    text-align:center;
+    img{
+      width:36px;
+      height:36px!important;
+    }
+/*    &:first-child{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:36px;
+!*      img{
+        height:18px!important;
+      }*!
+    }*/
+  }
+}
+
+
+#cloud-login-feature-tooltip{
+  z-index: 10;
+}
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  #cloud-login-feature-tooltip,#publish-providers-tooltip{
+    display:none;
+  }
+}

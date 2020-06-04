@@ -1,0 +1,165 @@
+#ShareReviewForm {
+
+  color: #FFFFFF;
+  font-size: 16px;
+  z-index:1002;
+
+  .shareReview-info {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1002;
+    font-size: 1rem;
+    text-align: left;
+    width: 70%;
+    @media only screen and (min-width: @desktop-width-limit){
+      width: 50%;
+    }
+    h2{
+      color: #9d9d9d;
+      font-size: 2rem;
+      font-weight: 300;
+      small{
+        display: inline-block;
+        padding: 0.5rem 0 0.5rem 1.7rem;
+        margin: 0 0 0 1rem;
+        font-size: 0.8rem;
+        font-weight: normal;
+        vertical-align: middle;
+        background-position: left;
+        background-size: auto 1.1rem;
+        background-repeat: no-repeat;
+      }
+      [id*=-disconnect]{
+        cursor: pointer;
+        color: @upload-button-blue-gradient-end;
+      }
+    }
+    button.share-review-finish.close {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      left: -30px;
+    }
+    .ui-settings-area {
+      .box-sizing;
+      color: #aaa;
+      overflow-y: visible;
+      overflow-x: hidden;
+      height: 100%;
+      width: 100%;
+      padding: 30px 2rem;
+    }
+  }
+}
+
+@media screen and(max-width:@phone-width-limit) {
+  #ShareReviewForm .shareReview-info{
+    width:100%;
+    .close{
+      display:block!important;
+    }
+    h2{
+      font-size:1.5rem;
+    }
+    .ui-settings-area{
+      padding:10px;
+    }
+  }
+
+  #ShareReviewForm .shareReview-info .ui-settings-area{
+    padding-left:40px;
+  }
+  #ShareReviewForm .shareReview-info button.close {
+    position: fixed;
+    left: 7px;
+    top: 13px;
+    margin: 0;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    text-indent: 0;
+    opacity: 1;
+    line-height: 32px;
+    display: inline-block;
+    padding: 18px;
+    font-size: 0;
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "×";
+      font-size: 40px;
+      color: #1292CB;
+      line-height: 0.7;
+    }
+  }
+}
+
+.shareReview-info {
+  .heading {
+    text-align: left;
+    color: #9d9d9d;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+  .btn-share-post-back{
+    float:right;
+    margin-right:30%;
+  }
+  #FormSendReviewBack{
+    margin-top:5vw;
+    > fieldset{
+      margin:10px 20px 10px 0;
+      > div{
+        display:flex;
+        align-items: center;
+        span{
+          width:60px;
+        }
+        input{
+          margin-left:20px;
+          max-width:60%;
+        }
+      }
+      textarea{
+        width:70%;
+        height:250px;
+        resize:none;
+      }
+    }
+  }
+}
+
+#MyFilesListForm #cloudManageDocumentsRadioForm .post-share-action .message-inner{
+  padding-left:10%;
+}
+
+#MyFilesListForm #cloudManageDocumentsRadioForm .post-share-action .message-inner .stop-sharing-document.button{
+  margin-top: 15px!important;
+  display: block;
+  margin-left: 0;
+}
+
+@media screen and (max-width:@phone-width-limit){
+  .shareReview-info{
+    .heading{
+      font-size: 1.5rem;
+    }
+    #FormSendReviewBack {
+      > fieldset {
+        > div {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

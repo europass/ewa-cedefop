@@ -1,0 +1,22 @@
+{{#with Preferences}}
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.CEFLanguageLevelsGrid.Form.Title" group="GuiLabel"}}</legend>
+	</header>
+	
+	<fieldset class="cefr-note">
+		<note>{{get_text "LearnerInfo.CEFLanguageLevelsGrid.Form.Description" group="GuiLabel"}}</note>
+	</fieldset>
+	<fieldset class="CEFLanguageLevelsGrid">
+	{{#with ELP.LearnerInfo.CEFLanguageLevelsGrid}}
+		<div class="toggle-grid include button {{#show}}blue-pressed{{/show}}"><span class="icon"></span><span class="cefr-text">{{get_text "LearnerInfo.CEFLanguageLevelsGrid.Form.Button.Include" group="GuiLabel"}}</span></div>
+		<div class="toggle-grid button {{^show}}blue-pressed{{/show}} last-child"><span class="icon"></span><span class="cefr-text">{{get_text "LearnerInfo.CEFLanguageLevelsGrid.Form.Button.Not.Include" group="GuiLabel"}}</span></div>
+	{{/with}}
+	</fieldset>
+	<fieldset class="cefr-warning">
+		<legend class="notification warning">
+			<em>{{get_text "LearnerInfo.CEFLanguageLevelsGrid.Info" group="EditorHelp"}}<span class="icon"></span></em>
+		</legend>
+	</fieldset>
+</fieldset>
+{{/with}}

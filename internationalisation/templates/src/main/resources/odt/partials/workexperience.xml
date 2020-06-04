@@ -1,0 +1,87 @@
+{{=[[ ]]=}}
+{{#WorkExperienceList.nonEmpty}}
+<text:p text:style-name="_5f_ECV_5f_Text"/>
+<table:table table:name="EuropassCV_WorkExperienceTitle" table:style-name="EuropassCV_5f_WorkExperienceTitle">
+<table:table-column table:style-name="EuropassCV_5f_WorkExperienceTitle.A"/>
+<table:table-column table:style-name="EuropassCV_5f_WorkExperienceTitle.B"/>
+<table:table-row table:style-name="EuropassCV_5f_WorkExperienceTitle.1">
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperienceTitle.A1" office:value-type="string">
+<text:p text:style-name="P8">[[#resources]][[& LearnerInfo:WorkExperience]][[/resources]]</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperienceTitle.B1" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_BlueBox">
+<draw:frame draw:style-name="fr7" draw:name="graphics2" text:anchor-type="as-char" svg:width="13.3cm" svg:height="0.25cm" draw:z-index="13">
+<draw:image xlink:href="Pictures/100002010000062000000021F9DDC83D.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+<svg:title>[[#resources]][[& Accessibility:Line:Separator]][[/resources]]</svg:title>
+</draw:frame>
+</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+{{#WorkExperienceListWithIndex}}
+{{#nonEmpty}}
+{{#breakPageBeforeWorkExperience}}
+    <text:p text:style-name="PB_MANUAL"></text:p>
+{{/breakPageBeforeWorkExperience}}
+<text:p text:style-name="_5f_ECV_5f_Text">[[> bookmarkToAttachments]]</text:p>
+<table:table table:name="EuropassCV_WorkExperience_1" table:style-name="EuropassCV_5f_WorkExperience_5f_1">
+<table:table-column table:style-name="EuropassCV_5f_WorkExperience_5f_1.A"/>
+<table:table-column table:style-name="EuropassCV_5f_WorkExperience_5f_1.B"/>
+<table:table-row table:style-name="EuropassCV_5f_WorkExperience_5f_1.1">
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.A1" table:number-rows-spanned="5" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_Date">{{{period.odt}}}</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.A1" office:value-type="string">
+{{#position.nonEmpty}}
+<text:p text:style-name="_5f_ECV_5f_SubSectionHeading">{{position.label}}</text:p>
+{{/position.nonEmpty}}
+</table:table-cell>
+</table:table-row>
+{{#Employer.nonEmpty}}
+<table:table-row table:style-name="EuropassCV_5f_WorkExperience_5f_1.1">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.A1" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_OrganisationDetails"
+>{{#Employer}}
+{{name}}{{#nameAndAddress}}{{#nameAndShortAddress}}{{^hasOnlyCountry}}, {{/hasOnlyCountry}}{{#hasOnlyCountry}} {{/hasOnlyCountry}}{{/nameAndShortAddress}}{{^nameAndShortAddress}}<text:line-break/>{{/nameAndShortAddress}}{{/nameAndAddress}}{{#ContactInfo}}{{#Address}}{{#nonEmpty}}{{{contact.odt}}}{{/nonEmpty}}{{/Address}}
+{{#Website}}{{#nonEmpty}}<text:line-break/>{{{formatWebsite}}}{{/nonEmpty}}{{/Website}}
+{{/ContactInfo}}
+{{/Employer}}
+</text:p>
+</table:table-cell>
+</table:table-row>
+{{/Employer.nonEmpty}}
+{{#activities}}
+<table:table-row table:style-name="EuropassCV_5f_WorkExperience_5f_1.1">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.A1" office:value-type="string">
+{{{activitiesOdt}}}
+</table:table-cell>
+</table:table-row>
+{{/activities}}
+{{#Employer.sector}}
+{{#nonEmpty}}
+<table:table-row table:style-name="EuropassCV_5f_WorkExperience_5f_1.4">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.B4" office:value-type="string">
+<text:p text:style-name="_5f_ECV_5f_BusinessSectorRow">
+<text:span text:style-name="_5f_ECV_5f_HeadingBusinessSector">[[#resources]][[& LearnerInfo:WorkExperience:Employer:Sector]][[/resources]]</text:span>
+<text:span text:style-name="_5f_ECV_5f_ContactDetails">{{label}}</text:span>
+</text:p>
+</table:table-cell>
+</table:table-row>
+{{/nonEmpty}}
+{{/Employer.sector}}
+{{#attachmentsInfo.showable}}
+{{#ReferenceToList.nonEmpty}}
+<table:table-row table:style-name="EuropassCV_5f_WorkExperience_5f_1.4">
+<table:covered-table-cell/>
+<table:table-cell table:style-name="EuropassCV_5f_WorkExperience_5f_1.B4" office:value-type="string">
+<text:p text:style-name="P5">[[#resources]][[& LearnerInfo:WorkExperience:ReferenceTo]][[/resources]] [[> refToAttachments]]</text:p></table:table-cell>
+</table:table-row>
+{{/ReferenceToList.nonEmpty}}
+{{/attachmentsInfo.showable}}
+</table:table>
+{{/nonEmpty}}
+{{/WorkExperienceListWithIndex}}
+{{/WorkExperienceList.nonEmpty}}

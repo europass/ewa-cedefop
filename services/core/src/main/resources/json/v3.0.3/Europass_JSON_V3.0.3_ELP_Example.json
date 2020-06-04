@@ -1,0 +1,376 @@
+{
+  "SkillsPassport" : {
+    "Locale" : "en",
+    "DocumentInfo" : {
+      "DocumentType" : "ELP",
+      "CreationDate" : "2013-11-25T09:30:42.716Z",
+      "LastUpdateDate" : "2013-11-25T09:30:42.716Z",
+      "XSDVersion" : "V3.0",
+      "Generator" : "REST_WS",
+      "Comment" : "Europass LP"
+    },
+    "PrintingPreferences" : {
+      "ELP" : [ {
+        "name" : "LearnerInfo",
+        "show" : true,
+        "order" : "Identification Skills ReferenceTo"
+      }, {
+        "name" : "LearnerInfo.Identification",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Identification.PersonName",
+        "show" : true,
+        "order" : "FirstName Surname"
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Address",
+        "show" : true,
+        "format" : "s p-z m (c)"
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Email",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Telephone",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Website",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.Website[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.Demographics.Birthdate",
+        "show" : false,
+        "format" : "text/short"
+      }, {
+        "name" : "LearnerInfo.Identification.Demographics.Gender",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.Demographics.Nationality",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.Demographics.Nationality[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Identification.Photo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Headline",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Period",
+        "show" : false,
+        "format" : "text/short"
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Position",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Activities",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Employer",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+        "show" : false,
+        "format" : "s p-z m (c)"
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.WorkExperience[0].Employer.Sector",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Period",
+        "show" : false,
+        "format" : "text/short"
+      }, {
+        "name" : "LearnerInfo.Education[0].ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Title",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Activities",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Organisation",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+        "show" : false,
+        "format" : "s p-z m (c)"
+      }, {
+        "name" : "LearnerInfo.Education[0].Organisation.ContactInfo.Website",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Level",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Education[0].Field",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.MotherTongue",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.MotherTongue[1]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate",
+        "show" : true,
+        "format" : "text/long"
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date",
+        "show" : true,
+        "format" : "text/long"
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period",
+        "show" : true,
+        "format" : "text/long"
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0].Date",
+        "show" : true,
+        "format" : "text/long"
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Experience",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Experience[0]",
+        "show" : true
+      }, {
+        "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Experience[0].Period",
+        "show" : true,
+        "format" : "text/long"
+      }, {
+        "name" : "LearnerInfo.Skills.Communication",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Communication.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Communication.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Organisational",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Organisational.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Organisational.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.JobRelated",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.JobRelated.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.JobRelated.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Computer",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Computer.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Computer.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Driving",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Driving.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Driving.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Other",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Other.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Skills.Other.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Achievement",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Achievement[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Achievement[0].ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.Achievement[0].ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.ReferenceTo",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.ReferenceTo[0]",
+        "show" : false
+      }, {
+        "name" : "LearnerInfo.CEFLanguageLevelsGrid",
+        "show" : true
+      } ]
+    },
+    "LearnerInfo" : {
+      "Identification" : {
+        "PersonName" : {
+          "FirstName" : "John",
+          "Surname" : "Doe"
+        }
+      },
+      "Skills" : {
+        "Linguistic" : {
+          "MotherTongue" : [ {
+            "Description" : {
+              "Code" : "en",
+              "Label" : "English"
+            }
+          }, {
+            "Description" : {
+              "Code" : "fr",
+              "Label" : "French"
+            }
+          } ],
+          "ForeignLanguage" : [ {
+            "Description" : {
+              "Code" : "es",
+              "Label" : "Spanish"
+            },
+            "ProficiencyLevel" : {
+              "Listening" : "C1",
+              "Reading" : "C1",
+              "SpokenInteraction" : "C2",
+              "SpokenProduction" : "C2",
+              "Writing" : "C1"
+            },
+            "Experience" : [ {
+              "Period" : {
+                "From" : {
+                  "Year" : 2006,
+                  "Month" : 7
+                },
+                "To" : {
+                  "Year" : 2006,
+                  "Month" : 9
+                },
+                "Current" : false
+              },
+              "Description" : "<p>Summer school in Barcelona</p>",
+              "Area" : {
+                "Code" : "living_traveling_language"
+              }
+            } ],
+            "Certificate" : [ {
+              "Title" : "Diploma of Spanish Language",
+              "AwardingBody" : "Cervantes Institute",
+              "Date" : {
+                "Year" : 2008,
+                "Month" : 6,
+                "Day" : 7
+              }
+            } ]
+          }, {
+            "Description" : {
+              "Code" : "zh",
+              "Label" : "Chinese"
+            },
+            "ProficiencyLevel" : {
+              "Listening" : "B1",
+              "Reading" : "B1",
+              "SpokenInteraction" : "B1",
+              "SpokenProduction" : "B1",
+              "Writing" : "B2"
+            },
+            "Experience" : [ {
+              "Period" : {
+                "From" : {
+                  "Year" : 2010
+                },
+                "Current" : true
+              },
+              "Description" : "<p>Used daily for the purposes of my work.</p>"
+            } ]
+          } ]
+        }
+      }
+    }
+  }
+}

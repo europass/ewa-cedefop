@@ -1,0 +1,34 @@
+{{=[[ ]]=}}
+<dt class="label"></dt>
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.ClosingSalutation 1=SkillsPassport.LearnerInfo.Identification.Signature}}
+{{else}}
+	{{#call_partial . path="" view="CL:ClosingSalutation" section="CoverLetter.Letter.ClosingSalutation SkillsPassport.LearnerInfo.Identification.Signature" name="CL:ClosingSalutation" form="CL:ClosingSalutation"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}{{/emptyObjects}}
+<dd {{#if Preferences.CoverLetter.Justification.justify}}style="text-align: justify !important;"{{/if}}>
+[[#preferences]]
+[[#CoverLetter:Letter:ClosingSalutation]]
+[[#show]]
+	<div class="value ClosingSalutation">
+	{{#if SkillsPassport.CoverLetter.Letter.ClosingSalutation}}
+		<span>{{SkillsPassport.CoverLetter.Letter.ClosingSalutation.Label}}[[#resources]][[& DocumentCustomizations_CL:Closing:Salutation:Suffix]][[/resources]]</span>
+	{{else}}
+		<span class="default-value">[[#resources]][[& GuiLabel_CoverLetter:Letter:ClosingSalutation]][[/resources]]</span>
+	{{/if}}
+	</div>
+[[/show]]
+[[/CoverLetter:Letter:ClosingSalutation]]
+[[/preferences]]
+
+	{{> templates/compose/cl/signature}}
+
+    {{#if Preferences.CoverLetter.SignatureName.enableName}}
+    {{> templates/compose/personname}}
+    {{/if}}
+
+	{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.ClosingSalutation 1=SkillsPassport.LearnerInfo.Identification.Signature}}
+	<div class="empty add">
+		<span class="empty add">[[#resources]][[& GuiLabel_Buttons:Add:ECL:ClosingSalutation:Content]][[/resources]]</span>
+	</div>
+	{{/emptyObjects}}
+</dd>

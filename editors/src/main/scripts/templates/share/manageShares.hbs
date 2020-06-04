@@ -1,0 +1,25 @@
+{{#each_with_index links}}
+	<div class="manage-share-tile">
+	
+		<div class="manage-share-link"{{#id}} file-id="{{.}}"{{/id}}><span id="icon-{{../provider}}" class="icon"></span><span class="txt">{{name}}</span><br/><span class="txt">{{size}} bytes | {{date}}</span>
+		</div>
+		{{#canRevoke}}<button id="revoke-btn" class = "manage-share-revoke" type="button">{{get_text "share.document.button.link.revoke" group="GuiLabel"}}</button>{{/canRevoke}}
+		<div id="manage-share-menu" 
+		 class="manage-action link-delete" 
+		 style="display:none">
+		<div class="arrow">
+			<div class="message-inner">
+					{{get_text "share.document.revoke.link.confirm" group="GuiLabel"}}
+					<menu label="Manage">
+						<button type="button" 
+								class="reject-revoke-action">
+								{{get_text "texts.action.reject" group="GuiLabel"}}</button>
+						<button type="button" 
+								class="confirm-revoke-action">
+								{{get_text "texts.action.delete" group="GuiLabel"}}</button>
+				    </menu>
+				</div>
+			</div>
+		</div>
+	</div>
+{{/each_with_index}}

@@ -1,0 +1,19 @@
+	{{=[[ ]]=}}
+	
+	<style:header>
+					{{#DocumentInfo.EuropassLogo}}
+					<text:p text:style-name="_LP_MP1">
+					<draw:frame draw:style-name="_LP_Mfr1" draw:name="_LP_graphics22"
+						text:anchor-type="paragraph" svg:x="0mm" svg:y="0.09mm" svg:width="45mm"
+						svg:height="11.99mm" draw:z-index="5">
+						<draw:image xlink:href="Pictures/elp_header_europass_logo.png"
+							xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+					<svg:title>[[& Accessibility:Europass:Logo]]</svg:title>
+					</draw:frame>
+					<text:tab/>[[#resources]][[& Document:Header:ELP]][[/resources]]</text:p>
+					{{/DocumentInfo.EuropassLogo}}
+					{{^DocumentInfo.EuropassLogo}}
+					<text:p text:style-name="_LP_MP1_NO_LOGO">
+						<text:tab/>[[#resources]][[& Document:Header:ELP]][[/resources]]</text:p>
+					{{/DocumentInfo.EuropassLogo}}
+	</style:header>

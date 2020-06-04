@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:driving="http://europass.cedefop.europa.eu/EUDriving"
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+        /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    
+    <xsd:import namespace="http://europass.cedefop.europa.eu/EUDriving" 
+        schemaLocation="http://europass.cedefop.europa.eu/xml/imported/EUDrivingLicence_V1.1.0.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The EUDriving namespace defines a list of driving licence codes, which are used to describe the information of a driving licence.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:import>
+    
+    <xsd:include schemaLocation="./CommonTypes.xsd"/>
+    <xsd:include schemaLocation="./Skill.xsd"/>
+    
+    <xsd:complexType name="DrivingSkillType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a skill, the description of which is a driving category.
+                Note that a reference to an attachment may also be added.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="SkillType">
+                <xsd:sequence>
+                    <xsd:element name="Description" minOccurs="0" >
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="Licence" type="driving:drivinglicence" minOccurs="0" maxOccurs="unbounded"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+
+</xsd:schema>

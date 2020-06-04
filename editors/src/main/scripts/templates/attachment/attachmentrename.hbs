@@ -1,0 +1,22 @@
+<fieldset>
+	<input type="text"  
+			class="new-name formfield"
+			title="Attachment[{{att_index}}].Description"
+			name="Attachment[{{att_index}}].Description"
+			data-help-key="Help.Rename.Attachment"
+			data-prev-value="{{Attachment.Description}}"
+			value="{{Attachment.Description}}">
+
+	<menu label="Manage">
+		<button type="button" 
+				class="confirm"
+				data-rel-section="SkillsPassport.Attachment[{{att_index}}].Description"
+				data-rel-subform="{{subsection}}:SubForm:Attachment.{{Attachment.Id}}.Rename">
+			<span class="icon"></span>
+		</button>
+		<button type="button" 
+				class="reject"
+				style="display:none"
+				data-rel-subform="{{subsection}}:SubForm:Attachment.{{Attachment.Id}}.Rename">NO</button>
+	</menu>
+</fieldset>

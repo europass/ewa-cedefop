@@ -1,0 +1,32 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "Attachment": [
+            {
+                "Id": "ATT_1",
+                "Name": "My Scanned Diploma.pdf",
+                "TempURI": "http://europass.instore.gr/ewars/photo/WR3452ER/UTT7534"
+            },
+            {
+                "Id": "ATT_2",
+                "Name": "My Scanned Msc Degree.pdf",
+                "TempURI": "http://europass.instore.gr/ewars/photo/WR3882OO/UPE7434"
+            },
+            {
+                "Id": "ATT_3",
+                "Name": "Volunteeting Experience.pdf",
+                "TempURI": "http://europass.instore.gr/ewars/photo/WT4322OO/UCD2434"
+            },
+            {
+                "Id": "ATT_4",
+                "Name": "Participation to WorldWide Conference.pdf",
+                "TempURI": "http://europass.instore.gr/ewars/photo/WT4322OO/OPD2569"
+            },
+            {
+                "Id": "ATT_5",
+                "Name": "Participation to Hellenic Conference.pdf",
+                "TempURI": "http://europass.instore.gr/ewars/photo/WT4322OO/DFD2852"
+            }
+        ]
+    }
+}

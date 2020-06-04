@@ -1,0 +1,48 @@
+{{=[[ ]]=}}
+<div class="value Localisation
+[[#preferences]]
+	[[#CoverLetter:Letter:Localisation]]
+	[[#hasPosition]]
+		[[#isLeftAligned]]left-align[[/isLeftAligned]]
+		[[#isRightAligned]]right-align[[/isRightAligned]]
+		[[#isMiddleAligned]]middle-align[[/isMiddleAligned]]
+	[[/hasPosition]]
+">
+<span {{#unless SkillsPassport.CoverLetter.Letter.Localisation}}class="default-value"{{/unless}}>
+[[#isLocalisationDateFirst]]
+	{{#unless SkillsPassport.CoverLetter.Letter.Localisation}}
+		[[#resources]][[& GuiLabel_CoverLetter:Letter:Localisation:Date]], [[& GuiLabel_CoverLetter:Letter:Localisation:Place]][[/resources]]
+	{{else}}
+		{{#if SkillsPassport.CoverLetter.Letter.Localisation.Date
+			}}{{#format_date SkillsPassport.CoverLetter.Letter.Localisation.Date ../Preferences.CoverLetter.Letter.Localisation.Date DocumentType="ECL"
+				}}{{.}}{{/format_date
+			}}{{#if SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality
+			}}, {{SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality}}
+			{{/if}}
+		{{else}}
+			{{#if SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality}}
+				{{SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality}}
+			{{/if}}
+		{{/if}}
+	{{/unless}}
+[[/isLocalisationDateFirst]]
+
+[[^isLocalisationDateFirst]]
+	{{#unless SkillsPassport.CoverLetter.Letter.Localisation}}
+		[[#resources]][[& GuiLabel_CoverLetter:Letter:Localisation:Place]], [[& GuiLabel_CoverLetter:Letter:Localisation:Date]][[/resources]]
+	{{else}}
+		{{#if SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality
+			}}{{SkillsPassport.CoverLetter.Letter.Localisation.Place.Municipality
+			}}{{#if SkillsPassport.CoverLetter.Letter.Localisation.Date
+				}}{{#format_date SkillsPassport.CoverLetter.Letter.Localisation.Date ../Preferences.CoverLetter.Letter.Localisation.Date DocumentType="ECL"
+				}}[[#resources]][[& CLExtraPreferences_CoverLetter:Letter:Localisation:Delimiter]][[/resources]] {{.}}{{/format_date}}
+			{{/if}}
+		{{else}}
+			{{#format_date SkillsPassport.CoverLetter.Letter.Localisation.Date ../Preferences.CoverLetter.Letter.Localisation.Date DocumentType="ECL"
+				}}{{.}}{{/format_date}}
+		{{/if}}
+	{{/unless}}
+[[/isLocalisationDateFirst]]
+</span>
+[[/CoverLetter:Letter:Localisation]][[/preferences]]
+</div>

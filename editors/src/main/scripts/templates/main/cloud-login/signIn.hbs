@@ -1,0 +1,30 @@
+<div id="CloudSignInForm" class="overlay">
+    <div class="cloudSignIn-info job-portals-info" style="display:none">
+        <button class="close" style="display:none">Close</button>
+
+        <!--ui-settings-area is configured during showCloudOptions-->
+        <div class="ui-settings-area drawer" style="display:none">
+            <div class="cloud-title-top-section">
+                <p>{{get_text "cloudLogin.drawer.signIn.heading" group="GuiLabel"}}</p>
+            </div>
+            <div class="settings-modal-divider"></div>
+            <div class="cloud-title-middle-section">
+                <p>{{get_text "cloudLogin.drawer.signIn.heading.description" group="EditorHelp"}}</p>
+            </div>
+            <div class="settings-modal-divider"></div>
+
+            <div class="ui-cloud-area drawer" id="share-cloud">
+                <button id="btn-cloud-sign-googledrive" class="button btn-share-cloud" data-rel-view="btn-cloud-sign-googledrive">
+                    <span class="title">{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}</span>
+                </button>
+                <span class="describe-title">{{get_text "cloudLogin.drawer.signIn.googledrive.description" group="EditorHelp"}}</span>
+                &nbsp;
+                <button id="btn-cloud-sign-onedrive" class="button btn-share-cloud" data-rel-view="btn-cloud-sign-onedrive">
+                    <span class="title">{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}</span>
+                </button>
+                <span class="describe-title">{{get_text "cloudLogin.drawer.signIn.onedrive.description" group="EditorHelp"}}</span>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</div>

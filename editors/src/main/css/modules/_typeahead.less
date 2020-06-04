@@ -1,0 +1,157 @@
+.tt-hint{
+	color: #BDBDBD !important;
+	padding-right: 5.5rem !important;
+}
+
+.tt-input{
+
+	background: url("@{img-base-url}sprites/dropdown_arrow.png@{img-suffix-url}${project.version}") no-repeat 97% center transparent !important;
+	
+	padding: .75rem 4.2rem .75rem 1.25rem !important;
+	text-overflow: ellipsis;
+	&.empty{
+		color: #BDBDBD;
+	}
+	
+	&::-ms-clear {
+    	display: none;
+	}
+	
+	-webkit-appearance: none;
+}
+
+input.tt-input::-webkit-input-placeholder {
+   color: #BDBDBD;
+}
+
+input.tt-input:-moz-placeholder { 
+   color: #BDBDBD;  
+}
+
+input.tt-input::-moz-placeholder { 
+   color: #BDBDBD;  
+}
+
+input.tt-input:-ms-input-placeholder {  
+   color: #BDBDBD;  
+}	
+ 
+ .tt-input[disabled="disabled"]{
+ 	opacity: 0.5;
+ }
+ 
+.tt-dropdown-over-input{
+	
+	.tt-dropdown{
+
+		border-radius: 0.4rem 0.4rem 0 0;		
+		border-top: 1px solid #b7c1c7;
+		border-bottom: none;
+	}
+}  
+
+.composite .twitter-typeahead{
+	width: 100%;
+}
+
+span.typeahead.clear{
+	
+    right: 3.8rem;
+	top: 1.7rem;	
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	margin-top:-7px;
+	opacity:0.3;
+	background: url("@{img-base-url}sprites/close_small.png@{img-suffix-url}${project.version}") no-repeat scroll 0 0;
+	cursor: pointer;
+	
+	&:hover{
+		background: url("@{img-base-url}sprites/close_small.png@{img-suffix-url}${project.version}");
+		opacity:0.5;
+	}
+	
+	&.hidden{
+		display:none;
+	}
+}
+
+.tt-menu {
+
+	width: 100%;
+	text-align: left;
+	max-height: 200px;
+	overflow-x: hidden;
+
+	border-radius: 0 0 0.4rem 0.4rem;
+	border: 1px solid #b7c1c7;
+	border-top:none;
+
+	> div{
+		overflow-x: hidden;
+	}
+  	
+ 	z-index: 1020 !important;
+  	
+	.tt-dataset{
+		padding: 1rem 0;
+		margin: 0;
+		top:3.3rem;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		box-shadow: none;
+		overflow-x: hidden;
+		overflow-y: auto;
+				
+		/* width: auto; */
+		left: 0px;
+		right: 0px;
+		
+	    background-image: -moz-linear-gradient(top, #e1ebf1 0%, #d9e3e9 100%);
+		background-image: -webkit-linear-gradient(top, #e1ebf1 0%, #d9e3e9 100%);
+		background-image: linear-gradient(to bottom, #e1ebf1 0%, #d9e3e9 100%);
+		background-image:-o-linear-gradient(top, #e1ebf1 0%, #d9e3e9 100%); 
+	    background-image:-ms-linear-gradient(top, #e1ebf1 0%, #d9e3e9 100%);
+	    background-image:-webkit-gradient(linear, left top, left bottom, from(#e1ebf1), to(#d9e3e9));
+			
+		z-index: 1020 !important;
+		
+		.tt-suggestion {
+			background-image: none;
+			width: 100%;
+			padding: 3px 20px;
+			font-size: 18px;
+			line-height: 24px;
+			padding: 0.5rem 1.3rem;
+			margin: 0;
+			cursor: pointer;
+			min-height: 1em;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			color: #494848;
+			z-index: 1030 !important;
+			&:hover{
+				color:@orange-dark;
+			}
+			.tt-highlight{
+				color: @grey-dark-text;
+				font-size: 18px;
+			}
+			
+ 			&:hover {
+				-webkit-appearance:textfield;
+				.tt-highlight{
+					color: @orange-dark !important;
+				}
+			}		
+		}
+	}  
+}
+/* Specific rules for a misplaced clear icon (x) at addresse - person name */
+div[name="CoverLetter.Addressee.PersonName.Title.Label"] {
+	span.typeahead.clear {
+       right: 2.2rem!important;
+    }
+}

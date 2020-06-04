@@ -1,0 +1,514 @@
+/****************************************
+ ****************************************
+          ADD / EDIT ATTACHMENTS
+ ****************************************
+ ****************************************/
+
+@attachment-min-height: 3.425rem;
+
+/*********      MIXINS    ***************/
+
+//Add attachment button with uploading 
+.blue-upload-button-browse-uploading{
+	.button.upload.blue{
+		>span.title{
+			background: transparent;
+			padding: 1rem;
+
+			>span{
+				.button-with-span-image-bg(url("@{img-base-url}sprites/round_plus_icons.png@{img-suffix-url}${project.version}"), 0px, -42px);
+				padding-left: 30px;
+				display: inline-block;
+				line-height: 22px;
+			}
+		}
+		>.text-uploading{
+			background: transparent;
+			padding: 0px 0px 0px 30%;
+		}
+	}
+}
+//Tablet button blue upload and attachment note
+@media only screen and (max-width: @tablet-width-limit ) {
+	.browse-file-area {
+		margin-top: 1rem;
+		> menu.choose-file .button.upload.blue {
+			margin-top: 7rem;
+		}
+	}
+	fieldset.Attachment .note {
+		margin-top: 9rem;
+	}
+}
+
+fieldset.Attachment .note {
+	background: transparent !important;
+	position: relative;
+}
+//Existing files
+.add-new .existing-files{
+	.attachment-info >menu >.options{
+		top: -340%;
+	}
+}
+.edit-existing .existing-files{
+	.attachment-info >menu >.options{
+		top: -235%;
+	}
+}
+
+.edit-existing {
+	legend {
+		padding-bottom: 1rem;
+	}
+}
+/** Attachment options menu options and delete action confirmation***/
+.attachment-actions-tooltip{
+	display: none;
+
+	position: absolute;
+	@media only screen and (max-width: @tablet-width-limit ) {right: 3%;}
+	@media only screen and ( min-width: @desktop-width-limit ) {right: 1%;}
+
+	z-index: 2;
+
+	.arrow {
+
+		background: @very-light-grey;
+		position: relative;
+		padding: 0rem;
+
+		border-radius: 4px;
+		margin-right: -6px;
+		border: 1px solid @very-light-grey;
+
+		.inner {
+			&:before {
+				border-color: transparent;
+				border-style: solid;
+				content: ' ';
+				height: 0;
+				width: 0;
+				position: absolute;
+			}
+		}
+	}
+	* {
+		font-size: 0.85rem;
+		font-weight: normal;
+		text-shadow: none;
+		color: @very-dark-grey;
+	}
+}
+.attachment-actions-tooltip-top{
+	.attachment-actions-tooltip;
+	bottom: 120%;
+	.arrow {
+		.inner {
+			&:before {
+				border-top: 5px solid @very-light-grey;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-width: 10px;
+				top: 101%;
+			}
+		}
+	}
+}
+.attachment-actions-tooltip-bottom{
+	.attachment-actions-tooltip;
+	top: 120%;
+	.arrow {
+		.inner {
+			&:before {
+				border-bottom: 5px solid @very-light-grey;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-width: 10px;
+				left: 9px;
+				top: -21px;
+			}
+		}
+	}
+}
+
+.attachment-actions-tooltip-linked-sections-bottom{
+	.attachment-actions-tooltip;
+	top: 120%;
+	width: 100%;
+	.arrow {
+		.inner {
+			&:before {
+				border-bottom: 5px solid @very-light-grey;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-width: 10px;
+				left: 9px;
+				top: -21px;
+			}
+		}
+	}
+}
+
+.existing-files{
+	>ul{   margin-top: 1rem;
+		margin-bottom: 2rem; }
+
+	@media only screen and (max-width: @tablet-width-limit ) {
+		>ul{  margin-top: 9rem;
+			margin-bottom: -8rem; }
+	}
+
+	.attachment-info{
+		margin: 1rem 0;
+		position: relative;
+		&:hover,&.tap-hover {
+			background-color: @wysiwyg-bg-elp;
+
+		}
+
+		>.icon, >.attachment, >menu{
+			display: inline-block;
+			vertical-align: bottom;
+		}
+
+		>.attachment {
+			width: 92%;
+
+			min-height: @attachment-min-height;
+			padding: 10px 0 0 0;
+
+			>a{
+				color: @very-dark-grey;
+
+				.a-link-mixin( @very-dark-grey, @bright-blue );
+
+				>.file-name{
+					font-size: 1.5rem;
+					vertical-align: bottom;
+				}
+			}
+			>.icon{
+				display: inline-block;
+				vertical-align: baseline;
+				width: 20px;
+				height: 24px;
+				margin-left: 8px;
+				background: url("@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}") no-repeat 0px -77px transparent;
+			}
+		}
+		//Unlinked attachments are greyed out!
+		&.unlinked:hover,&.unlinked.tap-hover, &.unlinked{
+			>.attachment{
+				>a{
+					color: @medium-grey;
+
+				}
+			}
+		}
+		&.linked:hover,&.linked.tap-hover, &.linked{
+			>.attachment{
+				>a{
+					color: @very-dark-grey;
+				}
+			}
+		}
+		>.attachment-action{
+			.arrow {
+				.inner {
+					padding: 0.8rem;
+					&:before {
+						right: 3%;
+					}
+					menu{
+						text-align: right;
+						button{
+							.button;
+							width: initial;
+							padding: 0.5rem 1rem;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		>.attachment-action.attachment-linked{
+			.attachment-actions-tooltip-linked-sections-bottom;/*.attachment-actions-tooltip-top;*/
+		}
+		>.attachment-action.attachment-delete{
+			.attachment-actions-tooltip-top;
+		}
+		>.attachment-action.attachment-rename{
+			fieldset{
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: white;
+				>input, >menu{
+					display: inline-block;
+					vertical-align: top;
+				}
+				>input{
+					width: 92%;
+					padding-left: 30px;
+					background: url("@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}") no-repeat 7px -64px @input-field-bg-color;
+				}
+				>menu{
+					width: 7%;
+					//height is equal to the input's height!
+					height: 3.425rem;
+
+					.confirm{
+						.button;
+
+						margin: 0;
+						padding: 0.5rem;
+						width: 100%;
+						height: 100%;
+
+						>span.icon{
+							color:transparent;
+							background: url("@{img-base-url}sprites/white_check.png@{img-suffix-url}${project.version}") no-repeat 0px 6px transparent;
+							height: 30px;
+							width: 30px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		>.menu-prompt{
+			display: none;
+			height: 2.5rem;
+			width: 23px;
+			padding: 6px 10px;
+			position: relative;
+			/*.blue-pressed-bg-after-before-hover;*/
+			border-radius: 2px;
+			margin-top: 0px;
+
+			>.edit-icon{
+				display: block;
+				width:100%;
+				height:100%;
+				background: url("@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}") no-repeat 5px -36px transparent;
+			}
+			&.in-action{
+				display: inline-block;
+			}
+		}
+		>.menu-options{
+			.attachment-actions-tooltip-top;
+
+			.arrow {
+				.inner {
+					&:before {
+						right: 5%;
+					}
+				}
+			}
+			a.option {
+				.a-link-mixin( @very-dark-grey, @white );
+
+				display: block;
+				padding: 0.5rem 0.8rem;
+
+				&:hover{
+					background-color: #1198d1;
+				}
+				&:first-child{
+					border-radius: 4px 4px 0px 0px;
+				}
+				&:last-child{
+					border-radius: 0px 0px 4px 4px;
+				}
+			}
+
+		}
+		&:hover,&.tap-hover{
+			cursor: pointer;
+
+			.attachment >a{ color: @bright-blue; }
+
+			>.menu-prompt{  display: inline-block; }
+		}
+
+		//On li hover
+		&.linked:hover,&.linked.tap-hover{
+			cursor: pointer;
+
+
+			.attachment >a{ color: @bright-blue; }
+
+
+
+			>.menu-prompt{  display: inline-block; }
+		}
+		&.unlinked:hover, &.unlinked.tap-hover {
+			cursor: pointer;
+			.attachment >a{ color: @very-dark-grey; }
+
+
+
+			>.menu-prompt{  display: inline-block; }
+
+		}
+	}
+
+}
+//Notification texts for uploading files
+.uploaded-file-notes-area{
+	.note {
+		background-image: url("@{img-base-url}notifications/msg-normal-indicator.png@{img-suffix-url}${project.version}");
+		background-position: 1rem 0;
+		background-repeat:no-repeat;
+		background-color: transparent;
+
+		color: @grey-dark-text-two;
+		font-size: 0.85rem;
+
+		* { font-size: 0.85rem; }
+
+		.html-text;
+	}
+}
+/*********      COMMON    ***************/
+.browse-file-area{
+	>menu.choose-file, >.note{
+		display: inline-block;
+		vertical-align: top;
+	}
+	>menu.choose-file{
+		width: 35%;
+		margin-top: 2rem;
+		.button.upload.blue{
+			width: 100%;
+		}
+	}
+	>.note{
+		width: 55%;
+		padding-left: 9%;
+		margin-top: 2rem;
+	}
+}
+menu.choose-file.Attachment{
+	.blue-upload-button-browse-uploading
+}
+fieldset.Attachment{
+	.uploaded-file-notes-area;
+}
+/*********      ADD    ***************/
+
+
+/*********      EDIT    ***************/
+.attachment-edit.attachment-info.existing-file-details{
+
+	>.menu-options{
+		top: -145%;
+	}
+
+}
+
+/*********      LINKED    ***************/
+.linked-attachments {
+	header legend { margin-bottom: -15px; }
+}
+
+
+fieldset.Attachment .note p, fieldset.Attachment .note em{
+	line-height:16px;
+}
+
+.upload-area menu.choose-file .button.upload.blue>.progress-bar{
+	display:none;
+}
+
+.upload-area menu.choose-file .button.upload.blue>.title{
+	display:flex;
+	justify-content: center;
+}
+
+.upload-area menu.choose-file .button.upload.blue.uploading > .progress-bar{
+	display:none;
+}
+
+.menu-prompt{
+	background:@orange-dark;
+}
+
+.existing-files .attachment-info > .menu-options .arrow{
+	border:1px solid @orange-dark;
+	a{
+		color:#333;
+		&:hover{
+			color:black;
+		}
+	}
+}
+
+.existing-files.existing-files > ul{
+	margin-top:3rem;
+}
+
+
+.attachment-action.attachment-rename menu .confirm{
+	background-color:@orange-dark;
+}
+
+@media screen and(max-width:@phone-width-limit) {
+	fieldset.Attachment .note{
+		margin-top:10px;
+	}
+	.browse-file-area > .note{
+		width:80%;
+	}
+
+	menu.choose-file.Attachment .button.upload.blue {
+		min-height:0;
+		> span.title {
+			padding: 0.4rem;
+		}
+	}
+	.upload-area menu.choose-file .button.upload.blue{
+		min-height:0;
+		> .title{
+			padding:0.5rem;
+		}
+	}
+	.existing-files>ul{
+		margin-bottom:0;
+	}
+
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+	.existing-files .attachment-info > .menu-prompt {
+		display: inline-block;
+	}
+	.existing-files .attachment-info > .attachment{
+		width:60%;
+	}
+	.existing-files .attachment-info>.attachment-action.attachment-rename fieldset>menu {
+		width: auto;
+		height: auto;
+		/* float: right; */
+		margin-top: 10px;
+	}
+	.existing-files.existing-files>ul{
+		margin-top:0;
+	}
+	.existing-files .attachment-info>.attachment>a>.file-name{
+		font-size:1rem;
+	}
+}
+
+.browse-file-area .text-uploading{
+	padding:0!important;
+	width:300px!important;
+}

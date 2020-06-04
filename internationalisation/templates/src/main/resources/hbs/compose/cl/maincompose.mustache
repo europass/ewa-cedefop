@@ -1,0 +1,100 @@
+{{=[[ ]]=}}
+<h2 style="display:none;"><abbr title="Europass Cover Letter">CL</abbr></h2>
+
+<div class="cl compose">
+	
+	<dl id="Compose:CL:HolderDetails"  
+			class="section item opens-modal-form personal"
+			data-rel-doc="cl"
+			data-rel-clazz="HolderDetailsFormView"
+			data-rel-form="Form:HolderDetails"
+			data-rel-section="SkillsPassport.LearnerInfo.Identification"
+			data-rel-help-section="Help.CL.SkillsPassport.LearnerInfo.Identification"
+            data-validation-field="email"
+			data-rel-index="">
+	</dl>
+[[#preferences]][[#CoverLetter]]
+[[!-- #Addressee vs Localisation vs SubjectLine --]]
+	[[#isAddresseeFirst]]
+	[[!-- #Addressee First --]]
+	
+		[[> hbs/partials/compose/cl/main/addressee]]
+		
+		[[> hbs/partials/compose/cl/main/localisationAndsubject]]
+	
+	[[!-- /Addressee First --]]
+	[[/isAddresseeFirst]]
+	
+	[[^isAddresseeFirst]]
+	[[!-- #Addressee NOT First --]]
+	
+		[[> hbs/partials/compose/cl/main/localisationAndsubject]]
+		
+		[[> hbs/partials/compose/cl/main/addressee]]
+		
+	[[!-- #Addressee NOT First --]]
+	[[/isAddresseeFirst]]
+	
+[[!-- /Addressee vs Localisation vs SubjectLine --]]
+[[/CoverLetter]][[/preferences]]
+
+	<dl id="Compose:CL:OpeningSalutation" 
+			class="section item opens-modal-form"
+			data-rel-doc="cl"
+			data-rel-clazz="OpeningSalutationFormView"
+			data-rel-form="Form:CL:OpeningSalutation"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.OpeningSalutation"
+			data-rel-help-section="Help.CL.SkillsPassport.CoverLetter.Letter.OpeningSalutation"
+			data-rel-index=""
+			rel="tooltip">
+	</dl>
+	
+	<dl id="Compose:CL:MainBody" 
+			class="section item opens-modal-form mainbody"
+			data-rel-doc="cl"
+			data-rel-clazz="MainbodyFormView"
+			data-rel-form="Form:CL:MainBody"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.Body"
+			data-rel-help-section="Help.CL.SkillsPassport.CoverLetter.Letter.MainBody"
+			data-rel-index="">
+	</dl>
+	
+[[#preferences]][[#CoverLetter]]
+	[[#isLocalisationImmediatelyBeforeClosingSalutation]]
+	<dl id="Compose:CL:Localisation" 
+			class="section subject"
+			data-rel-doc="cl"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.Localisation"
+			data-rel-help-section="Help.CL.SkillsPassport.CoverLetter.Letter.Localisation"
+			data-validation-field="date"
+			data-rel-index="">
+			[[!-- > hbs/partials/compose/cl/localisationAndsubject/localisation --]]
+	</dl>
+	[[/isLocalisationImmediatelyBeforeClosingSalutation]]
+[[/CoverLetter]][[/preferences]]
+
+	<dl id="Compose:CL:ClosingSalutation" 
+			class="section item opens-modal-form"
+			data-rel-clazz="ClosingSalutationFormView"
+			data-rel-doc="cl"
+			data-rel-form="Form:CL:ClosingSalutation"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.ClosingSalutation"
+			data-rel-help-section="Help.CL.SkillsPassport.CoverLetter.Letter.ClosingSalutation"
+			data-rel-index=""
+			data-onDelete-ignoreTip="true">
+	</dl>
+
+	<dl id="Compose:CL:Enclosed" 
+			class="section item opens-modal-form enclosed"
+			data-rel-doc="cl"
+			data-rel-clazz="EnclosedFormView"
+			data-rel-form="Form:CL:Enclosed"
+			data-rel-section="SkillsPassport.CoverLetter.Documentation"
+			data-rel-help-section="Help.CL.SkillsPassport.CoverLetter.Documentation"
+			data-rel-index="">
+	</dl>
+
+	{{> templates/compose/footer}}
+	
+</div>
+

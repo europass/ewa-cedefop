@@ -1,0 +1,9 @@
+<a  class="{{MimeType}} attachment" 
+	href="{{TempURI}}" 
+	target="_blank" 
+	name="{{Name}}" 
+	data-rel-attachment="{{Id}}">
+	<span class="file-name">
+	{{#crop_text Description length="50" crop="23" }} {{.}} {{/crop_text}}
+	{{#if Size}}<span class="file-size">{{Size}}</span>{{/if}} </span>
+</a>

@@ -1,0 +1,34 @@
+
+	<fieldset class="reset-modal important-confirmation">
+	
+		<fieldset class="feedback-area">	
+			<section class="notification {{state}}">
+				{{get_text "confirmationDialog.reset.message" group="EditorHelp"}}
+			</section>
+
+            <input type="checkbox"
+                   id="select-all-erase-input"
+                   class="css-checkbox formfield help enabled"
+                   name="select-all-erase"/>
+            <label for="select-all-erase-input"
+                   class="css-label checkbox-label formfield-label enabled">{{get_text "confirmationDialog.reset.select.all.label" group="EditorHelp"}}</label>
+
+		</fieldset>
+
+        {{#each docs}}
+            <fieldset class="reset-confirmation-doc-select intend_{{intend}}">
+                <input type="checkbox"
+                       id="Erase_Option_Doc_Confirm_{{name}}"
+                       class="css-checkbox formfield help enabled"
+                       name="{{name}}"/>
+                <label for="Erase_Option_Doc_Confirm_{{name}}"
+                       class="css-label checkbox-label formfield-label enabled"> {{title}} </label>
+            </fieldset>
+        {{/each}}
+
+		<menu class="confirm-dialog delete-model">
+			<button type="button" class="confirm-cancel delete-model button">{{get_text "Buttons.Cancel" group="GuiLabel"}}</button>
+			<button type="button" class="confirm-submit delete-model green button">{{get_text "SkillsPassport.CV.Reset" group="GuiLabel"}}</button>
+		</menu>
+			
+	</fieldset>

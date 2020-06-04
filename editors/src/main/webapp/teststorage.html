@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Test EWA Cloud Storage</title>
+        <style type="text/css">
+            .TEST ol {
+                list-style-type: none;
+            }
+            .TEST li {
+                margin: 2px 5px;
+                position: relative;
+            }
+            .TEST legend { display: inline-block; color:#0010b0; font-weight: bold;}
+
+            .TEST label { display: inline-block; width: 200px; vertical-align: top; color:#009040; font-weight: bold;}
+
+            .TEST span.root { vertical-align: top; margin-left: 5px; }
+
+            .TEST textarea {
+                width: 100%;
+                height: 10em;
+            }
+
+        </style>
+
+        <script src="/editors/static/ewa/scripts/libs/jquery/jquery-1.8.2.js"></script>
+
+        <script type="text/javascript">
+            function genType(frm) {
+                return frm.genType.options[frm.genType.selectedIndex].value;
+            }
+
+            function service(frm) {
+                return frm.service.options[frm.service.selectedIndex].value;
+            }
+
+
+            function sendData(frm) {
+                var G = genType(frm);
+                var S = service(frm);
+
+                var jsession = "";
+                if (frm.jsession.value != '') {
+                    jsession = ";jsessionid=" + frm.jsession.value;
+                }
+
+                var data = $('#EWATestForm').serialize()
+
+                var myURL = '/api/cloud/storage/' + S + '/' + G + jsession;
+                // fire off the request to /form.php
+                request = $.ajax({
+                    url: myURL,
+                    type: "POST",
+                    data: data
+                });
+
+                // callback handler that will be called on success
+                request.done(function (response, textStatus, jqXHR) {
+                    window.location.href = response; // redirect to whom is necessary
+                });
+
+                // callback handler that will be called on failure
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+                    alert("Failed");
+                });
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="EWATestForm" class="TEST" onsubmit="sendData(this, 'popup');
+                return false;">
+            <fieldset>
+                <legend>Cloud Storage Test</legend>
+                <ol>
+                    <li><label>Services:</label>
+                        <select title="service" name="service">
+                            <option value="googledrive" selected="selected">googledrive</option>
+                            <option value="skydrive" >skydrive</option>
+                            <option value="dropbox" >dropbox</option>
+                        </select>
+                    </li>
+                    <li><label>Generation Type:</label>
+                        <select title="Generation Type" name="genType">
+                            <option value="xml" selected="selected">xml</option>
+                            <option value="xml-cv" >xml-cv</option>
+                            <option value="xml-esp">xml-esp</option>
+                            <option value="opendoc">opendoc</option>
+                            <option value="word">word</option>
+                            <option value="pdf">pdf</option>
+                            <option value="pdf-cv">pdf-cv</option>
+                            <option value="pdf-esp">pdf-esp</option>
+                        </select>
+                    </li>
+                    <li><label>SESSION ID</label>
+                        <input type="text" name="jsession" />
+                    </li>
+                    <li><label>Data</label>
+                        <textarea title="json" name="json"></textarea>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset class="buttons">
+                <button type="button" onclick="sendData(this.form)" name="send">Send</button>
+            </fieldset>
+        </form>
+
+    </body>
+</html>

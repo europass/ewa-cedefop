@@ -1,0 +1,1715 @@
+.wizardform{
+
+	.step {
+		legend {
+			/*padding-top: 2rem; removed for consistency reasons*/
+			color: @quite-dark-grey;
+			font-size: 2rem;
+			font-weight: 300;
+
+			&.on-error, &.on-success{
+				display: none;
+			}
+		}
+
+		fieldset.file-format {
+			margin-bottom: 1rem!important;
+			input[type=checkbox].css-checkbox:checked + label.css-label,
+			input[type=radio].css-checkbox:checked + label.css-label, {
+				border: none;
+			}
+		}
+
+		label {
+			color: @very-dark-grey;
+
+			display: block;
+			width: 90%;
+
+			&.disabled, &.incompatible{
+				color: @light-grey;
+			}
+
+		}
+	}
+
+	.button.complete{
+		position: relative;
+		left: 25%;
+		width: 50%;
+		margin-top: 0;
+		margin-bottom: 3rem;
+	}
+
+	.button-like-options-step{
+		fieldset + fieldset {
+			margin-top: 1.5rem;
+		}
+		fieldset{
+			padding: 0;
+			border-bottom: none;
+			label {
+				position: relative;
+				width: 96%;
+				padding: 1rem 4% 1rem 0px;
+				margin: 0px;
+				text-align: left;
+				.icon {
+					/*					background-repeat: no-repeat;
+                                        background-image: url("@{img-base-url}sprites/locations_fileformats_upload.png@{img-suffix-url}${project.version}");
+                                        background-color: transparent;
+                                        height: 100%;
+                                        width: 38px;
+                                        display: inline-block;*/
+				}
+				.non-uploadable{
+					background-repeat: no-repeat;
+					background-image: url("@{img-base-url}sprites/exclamation_mark.png@{img-suffix-url}${project.version}");
+					background-position: 0px -19px;
+					width: 19px;
+					height: 19px;
+					display: inline-block;
+					position: absolute;
+					top: 1.5rem;
+					right: 4%;
+					display:none;
+				}
+				.title{
+					position: relative;
+					top: -1rem;
+				}
+			}
+
+			input[type=checkbox].css-checkbox + label.css-label,
+			input[type=radio].css-checkbox + label.css-label{
+				//Not checked: Light blue with grey image and texts
+
+				//TODO HERE PUT EVERYTHING
+				.title{
+					color: @very-dark-grey;
+				}
+			}
+			input[type=checkbox].css-checkbox:checked + label.css-label,
+			input[type=radio].css-checkbox:checked + label.css-label{
+				//Checked: Blue with white image and texts
+				//See in _variables.less for definition of the blue-pressed mixin
+
+				.title{
+					color: @white;
+				}
+				.non-uploadable{
+					background-position: 0px -60px;
+					background-color: @white;
+					border: 2px solid @white;
+					border-radius: 12px;
+				}
+			}
+			/* Display below the file export option a warning message only for non-uploadable file formats */
+			input[type=checkbox].css-checkbox:checked + label + .non-uploadable-wrapper,
+			input[type=radio].css-checkbox:checked + label + .non-uploadable-wrapper{
+
+				display: inline-block;
+
+			}
+
+			/* Bugfix for sibling selector in webkit browsers */
+			@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
+
+			.non-uploadable-wrapper {
+				background-color: @white;
+				border: none;
+				box-shadow: none;
+				display: none;
+				.non-uploadable-msg {
+
+					background-repeat: no-repeat;
+					background-image: url("@{img-base-url}sprites/exclamation_mark.png@{img-suffix-url}${project.version}");
+					background-position: 0px -60px;
+					padding: 0 2px 3px 2rem;
+					color: @warning-msg-text-clr;
+					font-size: 0.90rem;
+					margin-top: 0.50rem;
+				}
+			}
+		}
+
+	}
+
+	.provider-options-btns{
+		fieldset{
+			&.local {
+				.icon{ background-position: 0px -55px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px 5px; }
+				}
+			}
+			&.googledrive {
+				.icon{ background-position: 0px -175px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -115px; }
+				}
+			}
+			&.dropbox {
+				.icon{ background-position: 0px -295px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -235px; }
+				}
+			}
+			&.onedrive {
+				.icon{ background-position: 0px -415px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -355px; }
+				}
+			}
+			&.email {
+				.icon{ background-position: 0px -650px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -590px; }
+				}
+			}
+			&.cloud {
+				.icon{ background-position: 0px -1407px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -1467px; }
+				}
+			}
+			&.linkedin{
+				.icon{ background-position: 0px -535px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -475px; }
+				}
+			}
+			&.partners {
+				.icon{ background-position: 0px -1264px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -1334px; }
+				}
+			}
+			//TODO REMOVE THIS
+			&.eures {
+				.icon{ background-position: 0px -1264px; }
+				input[type=checkbox].css-checkbox:checked + label.css-label,
+				input[type=radio].css-checkbox:checked + label.css-label{
+					.icon{ background-position: 0px -1334px; }
+				}
+			}
+		}
+	}
+
+	.provider-notes-step{
+		.note {
+			.text {
+				color: @quite-dark-grey;
+
+				.html-text;
+
+				padding: 2rem 1.5rem 2rem 1.5rem;
+			}
+			.icon {
+				background-repeat: no-repeat;
+				background-color: transparent;
+				background-image: url("@{img-base-url}sprites/cloud_social_providers.png@{img-suffix-url}${project.version}");
+				display: block;
+				height: 175px;
+				width: 160px;
+				position: relative;
+				left: 50%;
+				margin-left: -80px;
+				margin-top: 3rem;
+			}
+
+			&.local .icon{
+				background-position: 0px -720px;
+			}
+			&.email .icon{
+				background-position: 0px -905px;
+			}
+			&.dropbox .icon{
+				background-position: 0px 0px;
+			}
+			&.googledrive .icon{
+				background-position: 0px -180px;
+			}
+			&.onedrive .icon{
+				background-position: 0px -370px;
+			}
+			&.linkedin .icon{
+				background-position: 0px -545px;
+			}
+			&.partners .icon{
+				background-position: 0px -1100px;
+			}
+			&.eures .icon{
+				background-position: 0px -370px;
+			}
+			//Warning note, such as that previous data will be lost in case of Upload
+			.warning{
+				padding-left: 1.5rem;
+				position: relative;
+				margin-bottom: 50px;
+				background-color:@msg-warning-bg;
+				.icon{
+					background-repeat: no-repeat;
+					background-color: transparent;
+					background-image: url("@{img-base-url}sprites/exclamation_mark.png@{img-suffix-url}${project.version}");
+					background-position: 0px -38px;
+					display: block;
+					height: 19px;
+					width: 19px;
+					position: absolute;
+					top: -1.3rem;
+					left: 6.5rem;
+				}
+				.text{
+					display: block;
+					margin-top: 40px;
+					padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+					color: @very-dark-grey;
+					font-weight: 600;
+					font-size:0.9rem;
+					.warning {
+						color: @very-dark-grey;
+
+						padding-left: 0px;
+						margin-right: 6px;
+
+						&:after{
+							content: ":";
+							color:  @very-dark-grey;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#ImportWizardForm {
+	.wizardform;
+
+	.process{
+		.step1{
+			.button-like-options-step;
+
+			.provider-options-btns;
+
+			legend {
+				padding-bottom: 3rem;
+			}
+
+		}
+
+		.step2 {
+			.provider-notes-step;
+
+			.import.choose-file{
+				left: 35%;
+			}
+		}
+	}
+
+
+
+	/*Rules for upload area - import wizard - local*/
+	fieldset#local-import-area.step-info {
+
+		.upload-area {
+			margin-top: 3rem;
+		}
+	}
+
+	/*Rule for fixing the display only for Firefox - Modal - Import Wizard */
+	@-moz-document url-prefix() {
+		form#ImportWizardForm, form#ExportWizardForm {
+			& fieldset {
+				display: inherit;
+			}
+		}
+	}
+}
+
+/* Specific rule for the .note class (not local) at error status only EWA-1608 */
+.modal.error-status {
+	#ImportWizardForm {
+		.step-info {
+			.note:not(.local){
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+}
+
+.modal.email #ExportWizardForm .fixed-btn-bg .button.connect span {
+	padding-left: 0;
+}
+
+#ExportWizardForm {
+	.wizardform;
+
+	.process {
+		@wizard-steps-graphic-clr: #2C85BF;
+
+		.wizard-line-transition-mixin{
+			transition        : width 500ms  ease;
+			-ms-transition    : width 500ms  ease;
+			-moz-transition   : width 500ms  ease;
+			-webkit-transition: width 500ms  ease;
+			-o-transition     : width 500ms  ease;
+		}
+		.preview {
+			width: 100%;
+			padding-bottom: 2rem;
+			position: relative;
+			color: @wizard-steps-graphic-clr;
+			font-weight: 500;
+			text-align: center;
+
+			.graphic-step {
+				position: relative;
+				display: inline-block;
+				width: 30%;
+				padding: 0 1%;
+
+				.icon {
+					position: relative;
+					display: block;
+					height: 64px;
+					width: 64px;
+					margin-left: 33%;
+					margin-bottom: 0;
+					margin-top: 3rem;
+					background-repeat: no-repeat;
+					background:#d0d0d0;;
+					border-radius:50%;
+					z-index:10;
+					&:before{
+						content:"\e921";
+						font-family:"europass-application"!important;
+						background:transparent!important;
+						color:white;
+						font-size:35px;
+						line-height:64px;
+						text-align: center;
+					}
+				}
+
+				.note.local > .icon {
+					padding-bottom: 15px;
+				}
+
+				.title{
+					display: block;
+					position: absolute;
+					padding-left: 5%;
+					width: 80%;
+				}
+
+				&:before{
+					display:none;
+				}
+				&.step1 .wrapper:after,
+				&.step2 .wrapper:after{
+					display: block;
+					background: @light-grey;
+					width: 100%;
+					height: 3px;
+					position: absolute;
+					left: 50%;
+					top: 71%;
+					content: '-';
+					color: transparent;
+				}
+				&.step1:after,
+				&.step2:after{
+					display: block;
+					background: @wizard-steps-graphic-clr;
+					width: 0%;
+					height: 3px;
+					position: absolute;
+					left: 50%;
+					top: 71%;
+					content: '-';
+					color: transparent;
+				}
+			}
+		}
+		&[data-active-step="1"] .preview{
+			.graphic-step.step1 {
+				.icon {
+					background-color:@blue-regular;
+				}
+			}
+		}
+		&[data-active-step="2"] .preview{
+			.graphic-step.step1,.graphic-step.step2 {
+				.icon {
+					background-color:@blue-regular;
+				}
+			}
+		}
+		&[data-active-step="3"] .preview{
+			.graphic-step {
+				.icon {
+					background-color:@blue-regular;
+				}
+			}
+		}
+		&[data-active-step="1"] .preview, &[data-active-step="2"] .preview, &[data-active-step="3"] .preview{
+			.graphic-step {
+				.icon {
+					top: 0;
+				}
+				&.step1 {
+					.icon {  }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step2 {
+					.icon {
+						&:before{
+							content:"\e923";
+						}}
+					.title { color: @light-grey; }
+					&:before { background: @light-grey; }
+				}
+				&.step3 {
+					.icon {
+						&:before{
+							content:"\e922";
+							font-size:28px;
+						}}
+					.title { color: @light-grey; }
+					&:before { background: @light-grey; }
+				}
+
+				&.step1:after{
+					width: 0%;
+					.wizard-line-transition-mixin;
+				}
+			}
+		}
+		&[data-active-step="2"] .preview{
+			.graphic-step {
+				&.step1 {
+					.icon { background-position:   0px -52px; }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step2 {
+					.icon { background-position: -80px -52px; }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step3 {
+					.icon { background-position: -150px 0px; }
+					.title { color: @light-grey; }
+					&:before { background: @light-grey; }
+				}
+
+				&.step1:after{
+					width: 100%;
+					.wizard-line-transition-mixin;
+				}
+				&.step2:after{
+					width: 0%;
+					.wizard-line-transition-mixin;
+				}
+			}
+		}
+		&[data-active-step="3"] .preview{
+			.graphic-step {
+				&.step1 {
+					.icon { background-position:   0px -52px; }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step2 {
+					.icon { background-position: -80px -52px; }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step3 {
+					.icon { background-position: -150px -52px; }
+					.title { color: @wizard-steps-graphic-clr; }
+					&:before { background: @wizard-steps-graphic-clr; }
+				}
+				&.step1:after{
+					width: 100%;
+				}
+				&.step2:after{
+					width: 100%;
+					.wizard-line-transition-mixin;
+				}
+			}
+		}
+
+	}
+
+	#PostToJobPortals {
+
+		// padding-top: 3rem;
+
+		p {
+			color: @quite-dark-grey;
+			font-size: 1rem;
+			text-align: center;
+			margin-bottom: 0.5rem;
+		}
+
+		strong{
+			font-weight: bold;
+		}
+
+		legend {
+			color: @very-dark-grey;
+			font-size: 1.3rem;
+			text-align: center;
+		}
+		ul{
+			margin: 3rem 0 3rem 3rem;
+			margin: 3rem 0;
+		}
+		li {
+			list-style: none;
+			color: @quite-dark-grey;
+			font-size: 1.4rem;
+		}
+		.icon{
+			display: inline-block;
+			vertical-align: middle;
+			// height: 100px;
+			margin-right: 1rem;
+			img{
+				width: 80px;
+			}
+		}
+		.button{
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			img{
+				// width: 90px;
+				display: inline-block;
+				vertical-align: middle;
+				margin:0 1rem 0 0;
+				mix-blend-mode: multiply;
+				&[src*="eures"]{
+					height: 40px;
+				}
+				&[src*="xing"]{
+					height: 30px;
+				}
+				&[src*="onster"]{
+					height: 20px;
+				}
+			}
+		}
+		.text{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.text, a {
+			font-size: 90%;
+		}
+		#download-ui-monster-terms {
+			margin: 2rem 0;
+			line-height: 1.2rem;
+			font-size: 0.8em;
+			.text{
+				margin-bottom: 2rem;
+			}
+			p{
+				margin-bottom: 1rem;
+				text-align: center;
+			}
+			p.monster-warning{
+				font-style: italic;
+			}
+			p.monster-warning span{
+				color: orange;
+			}
+			input[type=checkbox].css-checkbox + label.css-label,
+			input[type=radio].css-checkbox + label.css-label{
+				width: auto;
+				line-height: 1;
+				font-size: inherit;
+				margin-bottom: 0;
+				margin-left: 20%;
+			}
+			label {
+				display: inline;
+			}
+			.select {
+				border:1px solid #e3e3e3;
+				border-radius:3px;
+				overflow: hidden;
+				width: 200px;
+				height: 40px;
+				position: relative;
+				display: block;
+				margin-bottom: 40px;
+			}
+			select{
+				width: 100%;
+				height: 100%;
+				padding: 0.65rem 1.05rem;
+				background:#eaf1f4 url("@{img-base-url}sprites/dropdown_arrow.png@{img-suffix-url}${project.version}") no-repeat 95% center;
+				color: #737373;
+				border: none;
+				outline: none;
+				font-size: 0.8rem;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+			.select:after {
+				padding: 12px 8px;
+				position: absolute; right: 10px; top: 0;
+				z-index: 1;
+				text-align: center;
+				width: 10%;
+				height: 100%;
+				pointer-events: none;
+				box-sizing: border-box;
+			}
+		}
+		button.submit {
+			background:none!important;
+			border:none;
+			padding:0!important;
+			font: inherit;
+			cursor: pointer;
+			color: blue;
+			font-size: 0.8rem;
+			float: left;
+		}
+		#job-portal-success .text,
+		#job-portal-error .text {
+			color: #666;
+			font-size: 1.5rem;
+			font-weight: 300;
+			line-height: 1.4em;
+			text-align: center;
+			width: 100%;
+			p.monster-success-info {
+				font-size: 0.9rem;
+				font-style: italic;
+				font-weight: 100;
+				margin-top: 50px;
+			}
+		}
+	}
+	.step{
+		padding:0 30px;
+	}
+
+	.step1 {
+		legend {
+			padding-bottom: 1.5rem;
+			padding-top: 2rem;
+			text-align:left;
+		}
+
+	}
+
+
+	.step2,
+	.step3 {
+		legend {
+			padding-bottom: 3rem;
+			padding-top: 2rem;
+			text-align: left;
+		}
+	}
+
+
+	.step1{
+		color: @very-dark-grey;
+
+		.provider-notes-step;
+
+		.esp-heading {
+			padding-top: 0.5rem;
+			padding-bottom: 0.8rem;
+			padding-left: 0;
+		}
+		fieldset {
+			position: relative;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+			&.part-of-esp{
+				padding-left: 0;
+				label { width: 100%; }
+			}
+		}
+		.note {
+			margin-bottom: 1rem;
+		}
+	}
+	.step.step2, .step.step3{
+		.button-like-options-step;
+		.css-label{
+			background-color: rgba(43, 72, 104, 0.1)
+		}
+		input[type=radio].css-checkbox:checked + label.css-label{
+			background-color:#2b4868!important;
+			.icon{
+				border-color:white!important;
+				&:before {
+					color: white !important;
+				}
+			}
+		}
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 30px;
+			transform: translatey(-50%);
+			border: 3px solid #BF1901;
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			text-align: center;
+			&:before {
+				font-family: "europass-application" !important;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+		.css-label{
+			&:after{
+				position:absolute;
+				top:50%;
+				right:20px;
+				transform:translatey(-50%);
+				left:auto;
+				font-size:24px;
+				color:white;
+			}
+		}
+		.title{
+			line-height:71px;
+			margin-left:90px;
+			display:inline-block;
+		}
+		fieldset{
+			&.pdf {
+				.icon{
+					border:3px solid #BF1901;
+					&:before{
+						content:"\e923";
+						color:#BF1901;
+					}
+				}
+			}
+			&.word {
+				.icon{
+					border:3px solid #2f60a5;
+					&:before{
+						content:"\e927";
+						color:#2f60a5;
+					}
+				}
+			}
+			&.odt {
+				.icon{
+					border:3px solid #0e85cd;
+					&:before{
+
+						content:"\e925";
+
+						color:#0e85cd;
+					}
+				}
+			}
+			&.xml {
+				.icon{
+					border:3px solid #6fab18;
+					&:before{
+						content:"\e926";
+						color:#6fab18;
+					}
+				}
+			}
+		}
+
+		fieldset.non-uploadable-file  {
+			height: 4.5rem;
+			-webkit-animation: bugfix infinite 1s; /* Bugfix for sibling selector in webkit browsers */
+		}
+	}
+	.step3.step3.step3{
+		.button-like-options-step;
+
+		.provider-options-btns;
+		.icon{
+			border:none;
+		}
+		.local{
+			.icon{
+				&:before{
+					content:"\e922";
+					color:#1093CB;
+					font-size:24px;
+				}
+			}
+		}
+		.email{
+			.icon{
+				&:before{
+					content:"\e90c";
+					color:#1093CB;
+					font-size:24px;
+				}
+			}
+		}
+		.cloud{
+			.icon{
+				&:before{
+					content:"\e929";
+					color:#1093CB;
+					font-size:35px;
+				}
+			}
+		}
+	}
+
+	.step4 {
+		.provider-notes-step;
+		.step-info .note.local{
+			/*	display:flex;*/
+			.icon {
+				position: static;
+				margin:0;
+				float: left;
+				background-image: url("../images/macbook.png");
+				margin-right:40px;
+				background-position:0 0;
+				width:170px;
+			}
+			.text{
+				margin-top:100px;
+			}
+		}
+		.normal{
+			text-align: left;
+		}
+
+		.email-note{
+			border-color:  @quite-dark-grey;
+			border-style: solid;
+			border-width: 1px 0px 1px 0px;
+
+			color: @quite-dark-grey;
+
+			.html-text;
+
+			padding-top: 0.5rem;
+
+			* { color: @quite-dark-grey; }
+
+			ul { padding: 0.5rem 0;  }
+
+			li + li {
+				margin-top: 1rem;
+			}
+			li {
+				padding-left: 1rem!important;
+			}
+			li:before{
+				color: transparent;
+				background: url("@{img-base-url}notifications/msg-warning-indicator.png@{img-suffix-url}${project.version}") no-repeat 0px 0px transparent;
+				width: 24px;
+				height: 23px;
+				top: -2px;
+			}
+		}
+		fieldset.Email {
+			label { color: @quite-dark-grey; }
+			.validation-feedback {
+				display: block;
+				padding: 1.2rem 1rem 1.2rem 3.5rem;
+				margin: 2rem 0 0 0;
+				font-size: 0.96rem;
+				background-repeat: no-repeat;
+				background-position: 1rem 1rem;
+				background-color: @very-light-grey;
+
+				&.invalid{
+					text-aling: center;
+
+					display: block;
+					padding: 1.2rem 1rem 1.2rem 3.5rem;
+					margin: 2rem 0;
+
+					background-image: url("@{img-base-url}notifications/msg-error-indicator.png@{img-suffix-url}${project.version}");
+
+					color: @warning-msg-text-clr;
+					font-size: 0.96rem;
+				}
+				&.valid{
+
+					background-image: url("@{img-base-url}notifications/msg-success-indicator.png@{img-suffix-url}${project.version}");
+
+					color: @very-dark-grey;
+				}
+			}
+		}
+
+	}
+}
+
+.modal.success-status.local .note .icon{
+	float:none!important;
+	position:relative!important;
+	margin-left: -80px!important;
+	margin-top: 3rem!important;
+}
+.modal.success-status #shareDocBtn{
+	&:before{
+		content: "\e902";
+		font-family: "europass-application" !important;
+		position: relative;
+		left: -20px;
+		font-size: 22px;
+		margin: -5px;
+	}
+}
+
+.modal.success-status #wizardDownloadOkBtn{
+	background-color:@blue-regular;
+	margin-top:0.5rem;
+	&:before{
+		margin-left: -15px;
+		position: relative;
+		left: -10px;
+		vertical-align: middle;
+		width: 10px;
+		height: 10px;
+		content: "";
+		border-left: 5px solid white;
+		border-bottom: 5px solid white;
+		transform: rotate(45deg);
+		display: inline-block;
+	}
+}
+
+
+/*******import wizard
+******************************************/
+
+#ImportWizardForm{
+	.process .step.step1{
+		.css-label{
+			background-color: rgba(43, 72, 104, 0.1)
+		}
+		input[type=radio].css-checkbox:checked + label.css-label{
+			background-color:#2b4868!important;
+			.icon{
+				border-color:white!important;
+				&:before{
+					color:white!important;
+				}
+			}
+		}
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 30px;
+			transform: translatey(-50%);
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			text-align: center;
+			&:before {
+				font-family: "europass-application" !important;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+		.css-label{
+			&:after{
+				position:absolute;
+				top:50%;
+				right:20px;
+				transform:translatey(-50%);
+				left:auto;
+				font-size:24px;
+				color:white;
+			}
+		}
+		.title{
+			line-height:71px;
+			margin-left:90px;
+			display:inline-block;
+		}
+		fieldset{
+			&.local{
+				.icon{
+					&:before{
+						content:"\e922";
+						color:#1093CB;
+						font-size:24px;
+					}
+				}
+			}
+			&.cloud{
+				.icon{
+					&:before{
+						content:"\e929";
+						color:#1093CB;
+						font-size:35px;
+					}
+				}
+			}
+		}
+
+		fieldset.non-uploadable-file  {
+			height: 4.5rem;
+			-webkit-animation: bugfix infinite 1s; /* Bugfix for sibling selector in webkit browsers */
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ExportWizardForm .step label{
+	width:100%;
+	border-radius:7px;
+}
+
+#ExportWizardForm .step label.disabled, #ImportWizardForm .step label.disabled{
+	width:100%;
+	pointer-events: none;
+}
+
+.modal {
+	&.email{
+		margin-bottom: 0 !important;
+		.button.connect{
+			width: 40%;
+			span {
+				background: url("@{img-base-url}sprites/locations_fileformats_upload.png@{img-suffix-url}${project.version}") no-repeat 0px -597px transparent;
+				padding-left: 3rem;
+				display: inline-block;
+				/* 				line-height: 2.3rem; */
+			}
+		}
+	}
+}
+.modal:not(.success-status) {
+	/* Implementation of a fixed bottom area in specific import-export steps so that the connect green button would be sticky */
+	&.googledrive,
+	&.dropbox,
+	&.onedrive,
+	&.linkedin,
+	&.email {
+		.fixed-btn-bg {
+			position: fixed !important;
+			bottom: 0;
+			height: 115px;
+			background-color: @white;
+			width: 770px;
+			right: 280px;
+			z-index: 700;
+			.button.connect {
+				position: relative;
+				left: 25%;
+				width: 50%;
+				margin-top: 47px;
+			}
+		}
+	}
+}
+
+/* Added more margin in wizard steps so that the last buttons and tooltips appear properly (landscape mode) */
+@media only screen and (max-height : 751px) and (max-width: @tablet-width-limit) and (orientation: landscape) {
+	.modal:not(.success-status) {
+		#ImportWizardForm,
+		#ExportWizardForm {
+			fieldset.process{
+				margin-bottom: 20rem;
+			}
+		}
+	}
+}
+
+/* Tablet specific rules */
+@media only screen and (max-width: @tablet-width-limit) {
+	#ImportWizardForm,
+	#ExportWizardForm {
+		.process {
+			legend {
+				margin-bottom: 20px;
+			}
+			&.top-help {
+				margin-top: 140px!important;
+				/* Not in the last step of ExportWizard, because there is no help in this section*/
+				&[data-active-step="4"]  {
+					margin-top: 0px!important
+				}
+			}
+		}
+	}
+
+	.modal:not(.success-status) {
+		/* Added more margin in wizard steps so that the last buttons and tooltips appear properly */
+		#ImportWizardForm,
+		#ExportWizardForm {
+			fieldset.process{
+				margin-bottom: 20rem;
+			}
+		}
+
+		&.googledrive,
+		&.dropbox,
+		&.onedrive,
+		&.linkedin,
+		&.email {
+			/* Tablet adaptation for the sticky green connect button within a fixed white bottom area */
+			.fixed-btn-bg{
+				-webkit-backface-visibility: hidden;
+				-webkit-transform: translate3d(0, 0, 0);
+				-webkit-perspective: 1000;
+				position: fixed !important;
+				box-shadow: -2px -2px 0 0 @light-grey;
+				bottom: 0 !important;
+				left: 0;
+				height: 12rem;
+				width: 100%;
+				background-color: @white;
+
+				/* Fix for a bug on Safari concerning an unwanted black top border */
+				-webkit-border-radius: 1px;
+				-webkit-border-color: @white;
+
+				.button.green.connect {
+					bottom: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@media only screen and (max-device-width : @tablet-width-limit) and (orientation : landscape) {
+	#ImportWizardForm,
+	#ExportWizardForm {
+		.button.green.connect {
+			margin-top: 2rem;
+		}
+	}
+}
+/** Removed for EWA-1325 **/
+@media only screen and (min-width : @desktop-width-limit) {
+	#ExportWizardForm + .side{
+		button#btn-export-wizard-step-1 {
+			&.btn-next-bot {
+				margin-bottom: 67px!important;
+			}
+		}
+	}
+}
+
+
+#ImportWizardForm + .side, #ExportWizardForm + .side{
+	@media only screen and (max-width: @tablet-width-limit) {
+		//Cancel button to appear in Tablet version
+		/*Buttons in tablets should appear according to a specific pattern (ordering from right: Next/Finish - Previous - Cancel )*/
+		.button.cancel{
+			display: inline-block !important;
+			float: left;
+		}
+		.button.next {
+			float: right;
+			margin-left: 2rem;
+		}
+
+		.button.previous {
+			float:right;
+			margin-left: 2rem;
+		}
+		.button.finish {
+			float:right;
+			margin-left: 2rem;
+		}
+
+	}
+	@media only screen and ( min-width: @desktop-width-limit ) {
+		//Cancel button to appear in Tablet version
+		.button.cancel{
+			display: none !important;
+		}
+	}
+}
+
+.file-format.dropbox{
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translatey(-50%);
+		border:none;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		text-align: center;
+		&:before{
+			font-family: "europass-application" !important;
+			line-height: 30px;
+			content: "\e92c";
+			color: #1093CB;
+			font-size: 24px!important;
+		}
+	}
+}
+
+.file-format.googledrive{
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translatey(-50%);
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		text-align: center;
+		&:before{
+			font-family: "europass-application" !important;
+			line-height: 30px;
+			content: "\e92a";
+			color: #1093CB;
+			font-size: 24px!important;
+		}
+	}
+}
+
+.file-format.onedrive{
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translatey(-50%);
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		text-align: center;
+		&:before{
+			font-family: "europass-application" !important;
+			line-height: 30px;
+			content: "\e92b";
+			color: #1093CB;
+			font-size: 24px!important;
+		}
+	}
+}
+
+
+/* Error and Success Statuses on ending steps,
+  like LinkedIn Import, Dropbox/GoogleDrive/OneDrive import,
+  Send document by email, Export to Dropbox/GoogleDrive/OneDrive */
+
+
+
+
+.modal{
+	&.success-status{
+		@wizard-effect-duration: 1000ms;
+		/*
+         On a successful outcome we need to:
+         1. Remove the side area and adjust the width of the main form
+         2. Hide anything other than the header;
+         3. Display the success or error header
+         4. Change the icon of the social/cloud provider to that of a successful connect
+         5. The success notification does not need the large green tick when the cloud/social provider icon is changed
+         */
+		width: 780px;
+		transition        : width @wizard-effect-duration ease;
+		-ms-transition    : width @wizard-effect-duration ease;
+		-moz-transition   : width @wizard-effect-duration ease;
+		-webkit-transition: width @wizard-effect-duration ease;
+		-o-transition     : width @wizard-effect-duration ease;
+
+
+		.side {
+			/*display:none; */
+			visibility: hidden;
+			opacity: 0;
+			transition        : visibility @wizard-effect-duration ease, opacity @wizard-effect-duration ease;
+			-ms-transition    : visibility @wizard-effect-duration ease, opacity @wizard-effect-duration ease;
+			-moz-transition   : visibility @wizard-effect-duration ease, opacity @wizard-effect-duration ease;
+			-webkit-transition: visibility @wizard-effect-duration ease, opacity @wizard-effect-duration ease;
+			-o-transition     : visibility @wizard-effect-duration ease, opacity @wizard-effect-duration ease;
+		}
+		//2
+		.step-info{
+			.note .text, .email-note, #document-recipient-email-form{
+				display: none;
+			}
+		}
+		//3
+		.process{
+			.step {
+				legend{
+					&.normal{ display: none; }
+					&.on-success{ display: block !important; }
+				}
+			}
+		}
+		//4
+
+		&.local{
+			.note .icon{
+				background-position: -160px -720px !important;
+			}
+		}
+		&.email{
+			.note .icon{
+				background-position: -160px -905px !important;
+			}
+		}
+
+		&.googledrive{
+			.note .icon{
+				background-position: -160px -180px !important;
+			}
+		}
+		&.onedrive{
+			.note .icon{
+				background-position: -160px -370px !important;
+			}
+		}
+		&.dropbox{
+			.note .icon{
+				background-position: -160px 0px !important;
+			}
+		}
+		&.linkedin{
+			.note .icon{
+				background-position: -160px -545px !important;
+				width: 165px !important;
+			}
+		}
+		&.partners{
+			.note .icon{
+				background-position: -160px -1100px !important;
+			}
+		}
+		&.eures{
+			.note .icon{
+				background-position: -160px -370px !important;
+			}
+		}
+	}
+	/*
+      On Error
+      1. Hide the text from ending steps
+      2. Enable the on-error header for the step
+      3. Use a different icon for social/cloud providers
+     */
+	&.error-status{
+		.step-info{
+			.note .text{
+				display: none;
+			}
+		}
+		.process{
+			.step {
+				legend{
+					&.normal{ display: none; }
+					&.on-error{ display: block !important; }
+				}
+			}
+		}
+		.note .icon{
+			width: 165px;
+		}
+		&.local{
+			.note .icon{
+				background-position: -320px -720px !important;
+			}
+		}
+		&.email{
+			.note .icon{
+				background-position: -320px -905px !important;
+			}
+		}
+
+		&.dropbox{
+			.note .icon{
+				background-position: -320px 0px !important;
+			}
+		}
+		&.googledrive{
+			.note .icon{
+				background-position: -320px -180px !important;
+			}
+		}
+		&.onedrive{
+			.note .icon{
+				background-position: -320px -370px !important;
+				width: 160px;
+			}
+		}
+		&.linkedin{
+			.note .icon{
+				background-position: -322px -545px !important;
+			}
+		}
+		&.partners{
+			.note .icon{
+				background-position: -320px -1100px !important;
+				width: 160px;
+			}
+		}
+		&.eures{
+			.note .icon{
+				background-position: -320px -370px !important;
+				width: 160px;
+			}
+		}
+	}
+}
+
+#ExportWizardForm#ExportWizardForm .step4 .email-note ul li{
+	background-image:none;
+	position:relative;
+	&:before{
+		background-image:none;
+		content:"i";
+		width:24px;
+		height:24px;
+		position:absolute;
+		left:-1em;
+		transform:translatey(-50%);
+		border-radius:50%;
+		background:#EC6F2B;
+		line-height:24px;
+		text-align: center;
+		color:white;
+		top:12px!important;
+	}
+}
+
+
+.step.step4{
+	.email.note{
+		.icon{
+			background-image:none!important;
+			.email.success-status &{
+				height:100px!important;
+			}
+			&:before{
+				font-family:"europass-application"!important;
+				content:"\e90c";
+				font-size:130px;
+				color:#1093CB;
+				.email.success-status & {
+					color: @green-darker;
+					content: "\e928";
+					font-family: "europass-application" !important;
+					position: absolute;
+					font-size:80px;
+					left: 32px;
+					top: 50%;
+					transform: translatey(-50%);
+				}
+			}
+		}
+	}
+}
+
+
+.modal.success-status.local  #export-wizard-step-4 .note .icon{
+	display:block;
+	text-align: center;
+	height:auto;
+	&:before{
+		font-family:"europass-application"!important;
+		content:"\e928";
+		color:green;
+		font-size:65px;
+		display:inline-block;
+	}
+}
+
+
+
+.modal.email .step.step4 .email.note .icon{
+	display:block;
+	text-align: center;
+}
+
+
+
+.modal.local.success-status #import-wizard-step-2 .note.local > .icon{
+	height:auto;
+	&:before{
+		font-family:"europass-application"!important;
+		content:"\e928";
+		color:green;
+		font-size:65px;
+		display:inline-block;
+	}
+}
+
+.modal.local.success-status #import-wizard-step-2 .note.local .import.warning{
+	.icon{
+		display:none;
+	}
+	.text:before{
+		left: 10px;
+		font-family: "europass-application" !important;
+		content: "\e92f";
+		color: #F0905C;
+		position: absolute;
+		top: 50%;
+		transform: translatey(-50%);
+		font-size: 30px;
+	}
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+	/*****COMMON IMPORT EXPORT******/
+	#ExportWizardForm .step legend,#ImportWizardForm .step legend{
+		font-size:1.5rem;
+		padding:0;
+	}
+	/****EXPORT WIZARD****/
+	#ExportWizardForm{
+		.process .preview .graphic-step .icon{
+			margin-left:15%;
+			margin-top:0;
+		}
+		.step1{
+			.note .warning{
+				margin-bottom:5px;
+				.text{
+					margin-top:5px;
+				}
+			}
+		}
+		+ .side .button.finish{
+			&:before{
+				left:-7px;
+				font-size:13px;
+			}
+		}
+		.step{
+			padding:0;
+		}
+		.step.step2 fieldset.non-uploadable-file, #ExportWizardForm .step.step3 fieldset.non-uploadable-file{
+			height:auto;
+		}
+		.step.step2 .title, #ExportWizardForm .step.step3 .title{
+			line-height:1;
+		}
+	}
+	#ExportWizardForm{
+		.step.step2 fieldset label .title, .step.step3 fieldset label .title{
+			top:0;
+			margin-right:30px;
+			pointer-events: none;
+		}
+		.step.step2 fieldset .non-uploadable-wrapper .non-uploadable-msg, .step.step3 fieldset .non-uploadable-wrapper .non-uploadable-msg{
+			display:inline-block;
+		}
+		.step4 .step-info .note.local {
+			.text{
+				margin-top: 10px;
+			}
+			.icon {
+				float: none;
+			}
+		}
+	}
+	/****IMPORT WIZARD****/
+	#ImportWizardForm + .side .button.next, #ExportWizardForm + .side .button.next,#ImportWizardForm + .side .button.previous, #ExportWizardForm + .side .button.previous,#ExportWizardForm + .side .button.finish{
+		margin-top: 10px;
+	}
+	#ImportWizardForm .process .step2 .note{
+		.text{
+			padding:0.5rem;
+		}
+		.warning {
+			margin-bottom:10px;
+			.text {
+				margin-top: 10px;
+			}
+		}
+		.local .icon{
+			margin-top:1rem;
+		}
+		fieldset#local-import-area.step-info .upload-area{
+			margin-top:0.5rem;
+		}
+	}
+}
+
+
+@media screen and(max-width:@phone-width-limit) {
+	#ExportWizardForm .process .preview .graphic-step.step1 .wrapper:after, #ExportWizardForm .process .preview .graphic-step.step2 .wrapper:after{
+		top:55%;
+	}
+	#ExportWizardForm .process .preview .graphic-step.step1:after, #ExportWizardForm .process .preview .graphic-step.step2:after{
+		top:55%;
+	}
+	#ExportWizardForm .step4 .step-info .note.local .icon{
+		margin:0 auto;
+	}
+	#ImportWizardForm .process .step1 fieldset input[type=checkbox].css-checkbox+label.css-label .title, #ImportWizardForm .process .step1 fieldset input[type=radio].css-checkbox+label.css-label .title{
+		pointer-events: none;
+	}
+	.modal:not(.success-status) {
+		/* Implementation of a fixed bottom area in specific import-export steps so that the connect green button would be sticky */
+		&.googledrive,
+		&.dropbox,
+		&.onedrive,
+		&.linkedin,
+		&.email {
+			.fixed-btn-bg {
+				height:9rem;
+				background-color:transparent;
+				box-shadow:none;
+			}
+		}
+	}
+	#ExportWizardForm .step1 .note .warning .text .warning{
+		padding:0!important;
+	}
+	.document .tooltip,#contact-us .tooltip{
+		display:none!important;
+	}
+}

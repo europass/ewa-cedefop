@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JAX-RS Tests</title>
+        <style type="text/css">
+            .REST ol {
+                list-style-type: none;
+            }
+            .REST li {
+                margin: 2px 5px;
+                position: relative;
+            }
+
+            .REST label { display: inline-block; width: 200px; vertical-align: top; }
+
+            .REST span.root { vertical-align: top; margin-left: 5px; }
+
+            .REST input[name=path] { width: 400px; }
+
+            .REST input[name=status] { width: 3em; } 
+
+            .REST textarea[name=entity] {
+                width: 100%;
+                height: 10em;
+            }
+
+        </style>
+        <script type="text/javascript">
+            function method(frm) {
+                return frm.method.options[frm.method.selectedIndex].value;
+            }
+
+            function acceptType(frm) {
+                return frm.acceptType.options[frm.acceptType.selectedIndex].value;
+            }
+
+            function contentType(frm) {
+                return frm.contentType.options[frm.contentType.selectedIndex].value;
+            }
+
+            function sendRest(frm, respId) {
+                var Rfrm = document.getElementById(respId);
+                Rfrm.reset();
+
+                var request = new XMLHttpRequest();
+                var M = method(frm);
+                var A = acceptType(frm);
+                var C = contentType(frm);
+                request.open(M, frm.servicesBase.value + frm.path.value);
+                request.setRequestHeader('Accept', A);
+                request.setRequestHeader('Content-Type', C);
+                request.onreadystatechange = function () {
+                    if (this.readyState == 4 /*DONE*/) {
+                        var entity = request.responseText;
+                        if (A == 'application/xml' && entity) {
+                            console.log(entity);
+                        } else if (A == 'application/json' && entity) {
+                            console.log(eval("(" + entity + ");"));
+                        }
+                        showResponse(Rfrm, request.status, request.responseText);
+                    }
+                };
+
+                if (M == 'POST' || M == 'PUT') {
+                    request.send(frm.entity.value);
+                } else {
+                    request.send('');
+                }
+            }
+
+            function showResponse(frm, status, entity) {
+                frm.status.value = status;
+                frm.entity.value = entity;
+            }
+        </script>
+    </head>
+    <body>
+        <form id="Request" class="REST" onsubmit="sendRest(this, 'Response');
+                return false;">
+            <fieldset>
+                <legend>REST Request</legend>
+                <ol>
+                    <li><label>Method</label>
+                        <select name="method">
+                            <option>HEAD</option>
+                            <option selected="selected">GET</option>
+                            <option>POST</option>
+                            <option>PUT</option>
+                            <option>DELETE</option>
+                            <option>OPTIONS</option>
+                        </select>
+                    </li>
+                    <li><label>Services:</label>
+                        <select name="servicesBase">
+                            <option value="rs">ewa-services-api</option>
+                        </select>
+                    </li>
+                    <li><label>Path:</label><span class="root">/rs</span><input type="text" name="path" class="NodePath" value="/" /></li>
+                    <li><label>Content Type:</label>
+                        <select name="contentType">
+                            <option value="application/json" selected="selected">application/json</option>
+                            <option value="application/xml">application/xml</option>
+                            <option value="text/plain">text/plain</option>
+                        </select>
+                    </li>
+                    <li><label>Accept Type:</label>
+                        <select name="acceptType">
+                            <option value="application/json" selected="selected">application/json</option>
+                            <option value="application/xml">application/xml</option>
+                            <option value="text/plain">text/plain</option>
+                        </select>
+                    </li>
+                    <li><label>Entity</label>
+                        <textarea name="entity"></textarea>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset class="buttons">
+                <button type="button" onclick="sendRest(this.form, 'Response')" name="send">Send</button>
+            </fieldset>
+        </form>
+
+        <form id="Response" class="REST">
+            <fieldset>
+                <legend>REST Response</legend>
+                <ol>
+                    <li><label>Status</label><input type="text" readonly="readonly" name="status"/></li>
+                    <li><label>Entity</label>
+                        <textarea name="entity">
+                        </textarea>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+
+        <form id="File" action="/ewaservices/files/file/upload" method=post enctype="multipart/form-data">
+            <input type="file" name="file" >
+            <input type="submit" value="Αποστολή" >
+        </form>
+    </body>
+</html>

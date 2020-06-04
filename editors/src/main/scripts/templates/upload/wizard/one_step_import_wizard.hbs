@@ -1,0 +1,41 @@
+<header class="main-modal-title">
+	<legend>{{get_text "import.wizard.step.local.desc" group="GuiLabel"}}</legend>
+</header>
+
+<fieldset class="import-info">
+	<div class="note local">
+		<span class="icon"></span>
+		<div class="text">{{get_text "import.wizard.step.local.details" group="GuiLabel"}}</div>
+	</div>
+</fieldset>
+
+<div id="import-wizard-step-1" class="wizard-step-1"></div>
+<div id="import-wizard-step-2" class="wizard-step-2"></div>
+<div id="import-wizard-step-3" class="wizard-step-3"></div>
+
+
+<div class="import-form-controls wizard-controls">
+	<fieldset id="data-exists">
+		<div class="note local">
+			{{> templates/upload/dataexistswarning}}			
+		</div>
+	</fieldset>
+	
+	{{#permissionToKeepNotImportedCv}}
+	    <fieldset class="step-permision checkbox-field">
+		    <div id="permision-text">{{get_text "export.wizard.permission.text" group="GuiLabel"}}</div>
+		    <input type="checkbox"
+			class="formfield css-checkbox isBinary"
+			id="keep-not-imported-cv-permission"
+			name="keep-not-imported-cv-permission">
+		    <label for="keep-not-imported-cv-permission" id="permision-label" class="css-label css-label-long checkbox-label">{{get_text "export.wizard.permission.checkbox" group="GuiLabel"}}</label>
+	    </fieldset> 
+	{{/permissionToKeepNotImportedCv}}
+	
+	<div id="import-local-file"></div>
+	<button type="button" id="import-connect-button" class="button green connect " form="{{formName}}"
+		style="display:none">
+		<span>{{get_text "buttons.wizard.connect" group="GuiLabel"}}</span>
+	</button>
+	
+</div>

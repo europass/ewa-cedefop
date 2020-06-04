@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript">
+            (function () {
+                var accessToken;
+                try {
+                    var authResponse = window.location.hash.substring(1);
+                    var authInfo = JSON.parse(
+                            '{' + authResponse.replace(/([^=]+)=([^&]+)&?/g, '"$1":"$2",').slice(0, -1) + '}',
+                            function (key, value) {
+                                return key === "" ? value : decodeURIComponent(value);
+                            });
+
+                    accessToken = authInfo.access_token;
+                } catch (error) {
+                    accessToken = '';
+                }
+                if (window.opener != null) {
+                    window.opener.document.cookie = "dropbox-access-token=" + accessToken + ';path=/editors/';
+                } else {
+                    window.parent.document.cookie = "dropbox-access-token=" + accessToken + ';path=/editors/';
+                }
+            })();
+        </script>
+        <script>
+            (function () {
+                window.close();
+            })();
+        </script>
+    </head>
+    <body>
+        <h1>Dropbox sign-in successful</h1>
+
+        <p>Please close this window.</p>
+    </body>
+</html>

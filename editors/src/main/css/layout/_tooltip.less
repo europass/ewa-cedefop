@@ -1,0 +1,347 @@
+
+aside.left, aside.right{
+  .tooltip-inner{
+    color: @very-dark-grey;
+  }
+}
+
+
+
+
+
+/***************************************************
+ ***************************************************
+ *****                TOOLTIPS                 *****
+ ***************************************************
+ ***************************************************/
+@tooltip-avg-width: 15rem;
+
+@tooltip-font-size: 0.8rem;
+@tooltip-padding  : 0.4rem;
+@fixed-tooltip-font-size: 16px;
+@fixed-tooltip-font-color: #4E4E4E;
+
+
+.tooltip-mixin{
+  position: absolute;
+  z-index: 49;
+  display: block;
+  text-indent: 0px;/*apply to all tooltips*/
+
+  .tooltip-arrow {
+    color: @grey-dark-text;
+    font-size: @tooltip-font-size;
+    text-align: center;
+    text-decoration: none;
+
+    width: @tooltip-avg-width;
+    background: @white;
+    position: relative;
+    padding: @tooltip-padding;
+
+    border-radius: 4px;
+    border: 1px solid @medium-grey;
+
+    .tooltip-inner {
+      padding: 0.4rem 0.65rem;
+
+      &:after,  &:before {
+        border-color: transparent;
+        border-style: solid;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+      }
+    }
+  }
+  &.top {
+    .tooltip-arrow{
+      .tooltip-inner{
+        text-align: center;
+
+        &:after{
+          border-top: 5px solid @white;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 12px;
+
+          left: 46%;
+          top: 100%;
+        }
+        &:before{
+          border-top: 5px solid @medium-grey;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 14px;
+
+          left: 45%;
+          top: 100%;
+        }
+      }
+    }
+  }
+  &.bottom {
+    .tooltip-arrow{
+      .tooltip-inner{
+        text-align: center;
+
+        &:after{
+          border-bottom: 5px solid @white;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 12px;
+
+          left: 46%;
+          top: -24px;
+        }
+        &:before{
+          border-bottom: 5px solid @medium-grey;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 14px;
+
+          left: 45%;
+          top: -28px;
+        }
+      }
+    }
+  }
+  &.right {
+    .tooltip-arrow{
+      border-color: @bright-blue;
+
+      .tooltip-inner{
+        text-align: right;
+
+        &:after{
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid @white;
+          border-top: 5px solid transparent;
+          border-width: 12px;
+
+          right: -24px;
+          top: 39%;
+        }
+        &:before{
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid @medium-grey;
+          border-top: 5px solid transparent;
+          border-width: 14px;
+
+          right: -28px;
+          top: 35%;
+        }
+      }
+    }
+  }
+  &.left {
+    .tooltip-arrow{
+      .tooltip-inner{
+        text-align: left;
+
+        &:after{
+          border-bottom: 5px solid transparent;
+          border-right: 5px solid @white;
+          border-top: 5px solid transparent;
+          border-width: 12px;
+
+          left: -24px;
+          top: 39%;
+        }
+        &:before{
+          border-bottom: 5px solid transparent;
+          border-right: 5px solid @medium-grey;
+          border-top: 5px solid transparent;
+          border-width: 14px;
+
+          left: -28px;
+          top: 35%;
+        }
+      }
+    }
+  }
+  &.top-left {
+    .tooltip-arrow{
+      .tooltip-inner{
+        text-align: center;
+
+        &:after{
+          border-top: 5px solid @white;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 12px;
+
+          left: 7%;
+          top: 100%;
+        }
+        &:before{
+          border-top: 5px solid @medium-grey;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 14px;
+
+          left: 6%;
+          top: 100%;
+        }
+      }
+    }
+  }
+  &.top-right {
+    .tooltip-arrow{
+      .tooltip-inner{
+        text-align: center;
+
+        &:after{
+          border-top: 5px solid @white;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 12px;
+
+          left: 85%;
+          top: 100%;
+        }
+        &:before{
+          border-top: 5px solid @medium-grey;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-width: 14px;
+          left: 85%;
+          top: 100%;
+        }
+      }
+    }
+  }
+}
+.tooltip{
+  .tooltip-mixin;
+}
+.form-tooltip{
+  .tooltip-mixin;
+}
+
+
+
+
+
+.fixed-tooltip-mixin{
+  position: fixed;
+  .webkit-acceleration;
+  z-index: 700;
+  display: block;
+  text-indent: 0px;/*apply to all tooltips*/
+  left: 0;
+  top: 0;
+  /*     margin-left: -8%; */
+  margin-right:0;
+  width: 100%;
+  button.fixed-tooltip-close {
+    background: url("@{img-base-url}close_tooltip.png@{img-suffix-url}${project.version}") no-repeat;
+    background-position: center;
+    width: 80px!important;
+    height: 80px;
+    border: none;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 9000;
+    padding: 2%;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+  .fixed-tooltip-wrapper{
+    box-shadow: 0 4px 4px -2px @medium-grey;
+    border-radius: 2px;
+    text-decoration: none;
+    background: @white;
+    position: fixed;
+    .webkit-acceleration;
+    /*padding: @tooltip-padding;*/
+    top:0;
+    width: 100%;
+    height: 140px;
+
+    z-index: 700;
+    .fixed-tooltip-inner {
+      color: @fixed-tooltip-font-color;
+      font-size: @fixed-tooltip-font-size;
+      line-height: 1.4rem;
+      text-align: left;
+      padding: 1.5rem 8rem 0 2.5rem;
+      vertical-align: middle;
+
+      &.tltp-hidden {
+        height: 90px !important;
+        overflow: hidden;
+        padding-bottom: 1.5rem;
+      }
+      &.tltp-visible {
+        height: 100% !important;
+        padding-bottom: 2.5rem;
+        overflow: visible;
+      }
+      .btn-toggle-wrapper {
+        height: 40px;
+        left: 0;
+        position: fixed;
+        top: 100px;
+        visibility: hidden;
+        width: 100%;
+        z-index: 100;
+        .toggle-txt-gradient-bg(@light-grey, rgba(255,255,255,0));
+        button.btn-toggle-txt {
+          .toggle-txt-gradient-bg( @medium-grey, @very-light-grey );
+          cursor: pointer;
+          height: 30px;
+          border-radius: 16px;
+          left: 45.5%;
+          position: absolute;
+          top: 6px;
+          width: 5rem;
+          z-index: 9999;
+          border: medium none;
+          border-top: 1px solid @light-grey;
+          border-left: 1px solid @light-grey;
+          box-shadow: 3px 3px 2px 2px @medium-grey;
+          span{
+            color: @very-dark-grey;
+            text-shadow: 1px 1px @medium-light-grey;
+            font-size: @fixed-tooltip-font-size;
+            font-weight: bold;
+            text-align: left;
+            width: 2rem;
+            background: url("@{img-base-url}tablet/more_less_tltp.png@{img-suffix-url}${project.version}") no-repeat;
+            display: inline-block;
+            line-height: 1rem;
+            width: 60px;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .help-message {
+        color: @fixed-tooltip-font-color;
+        font-size: @fixed-tooltip-font-size;
+        line-height: 1.4rem;
+        p {
+          font-size: @fixed-tooltip-font-size;
+        }
+      }
+
+    }
+  }
+}
+
+.tooltip.top-right .tooltip-arrow .tooltip-inner:before{
+  left:84%;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+@media screen and(max-width:@phone-width-limit) {
+  .tooltip {
+    z-index:1000;
+  }
+}

@@ -1,0 +1,43 @@
+
+<div class="photo-editing-area {{#unless LearnerInfo.Identification.Photo}} photo-empty {{/unless}}">
+
+	<em class="crop-guidelines">
+		{{get_text "LearnerInfo.Identification.Photo.Crop.Guidelines.Drag" group="EditorHelp"}}
+	</em>
+
+	<div class="photo-cropping-preview">	
+		<div class="photo-cropping">
+			<img id="Photo_Crop_Source"
+			 	 src="{{LearnerInfo.Identification.Photo.TempURI}}"
+			 	 alt="{{get_text "LearnerInfo.Identification.Photo.Crop.Source" group="EditorHelp"}}"/>
+		</div>
+		
+		<div class="photo-wysiwyg">
+			<div>
+				<em class="crop-guidelines">
+					{{get_text "LearnerInfo.Identification.Photo.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}
+				</em>
+			
+				<div class="photo-preview-area">
+					<img id="Photo_Crop_Preview"	 
+						 src="{{LearnerInfo.Identification.Photo.TempURI}}" 
+						 alt="{{get_text "LearnerInfo.Identification.Photo.Crop.Guidelines.Drag" group="EditorHelp"}}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="pref hidden">
+	<input type="hidden" 
+		   class="formfield pref photo" 
+		   name="LearnerInfo.Identification.Photo.TempURI" 
+		   data-bind-name="LearnerInfo.Identification.Photo"
+		   value="{{LearnerInfo.Identification.Photo.TempURI}}">
+	<input type="hidden" 
+		   class="formfield photo" 
+		   name="LearnerInfo.Identification.Photo.MimeType" 
+		   data-bind-name="LearnerInfo.Identification.Photo"
+		   value="{{LearnerInfo.Identification.Photo.MimeType}}">
+</div>

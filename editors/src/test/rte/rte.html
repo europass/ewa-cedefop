@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" >
+
+        <title>Test Redactor Rich Editor</title>
+
+
+        <link rel="stylesheet" type="text/css" href="../../main/webapp//static/ewa/styles/css-reset.css" />
+        <link rel="stylesheet" type="text/css" href="../../main/webapp/static/ewa/styles/main-styles.css" />
+        <link rel="stylesheet" type="text/css" href="../../main/webapp/static/ewa/styles/rich-text-editor.css" />
+
+        <script type="text/javascript" src="../../main/scripts/libs/jquery/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="../../main/scripts/libs/jquery-ui/jquery-ui-1.9.0.custom.patched.js"></script>
+        <script type="text/javascript" src="../../main/scripts/libs/redactor/redactor.js"></script>
+
+
+        <script type="text/javascript">
+            var redactorConfig = {
+                lang: "en",
+
+                allowedTags: ["a", "br", "p", "b", "i", "u", "ul", "ol", "li", "strong", "em"],
+
+                buttons: ['formatting', '|', 'bold', 'italic', 'underline', '|', 'unorderedlist', 'orderedlist', 'outdent', 'indent', '|', 'link'],
+
+                formattingTags: ['p'],
+
+                emptyHtml: '<br/>',
+
+                autoresize: false,
+
+                //fixed toolbar
+                fixed: true,
+
+                modal_link: String() +
+                        '<div id="redactor_modal_content">' +
+                        '<form id="redactorInsertLinkForm" method="post" action="">' +
+                        '<div id="redactor_tabs">' +
+                        '<a href="javascript:void(null);" class="redactor_tabs_act">URL</a>' +
+                        '<a href="javascript:void(null);">Email</a>' +
+                        '</div>' +
+                        '<input type="hidden" id="redactor_tab_selected" value="1" />' +
+                        '<div class="redactor_tab" id="redactor_tab1">' +
+                        '<label>URL</label><input type="text" title="URL" id="redactor_link_url" class="redactor_input"  />' +
+                        '<label>' + "Text (localise-me)" + '</label><input type="text" title="Text (localise-me)" class="redactor_input redactor_link_text" id="redactor_link_url_text" />' +
+                        '<label><input type="checkbox" title="Open link in new tab" id="redactor_link_blank"> ' + "Open link in new tab  (localise-me)" + '</label>' +
+                        '</div>' +
+                        '<div class="redactor_tab" id="redactor_tab2" style="display: none;">' +
+                        '<label>Email</label><input type="text" title="Email" id="redactor_link_mailto" class="redactor_input" />' +
+                        '<label>' + "Text (localise-me)" + '</label><input type="text" title="Text (localise-me)" class="redactor_input redactor_link_text" id="redactor_link_mailto_text" />' +
+                        '</div>' +
+                        '</form>' +
+                        '</div>' +
+                        '<div id="redactor_modal_footer">' +
+                        '<a href="javascript:void(null);" class="redactor_modal_btn redactor_btn_modal_close">' + "Cancel (localise-me)" + '</a>' +
+                        '<input type="button" class="redactor_modal_btn" id="redactor_insert_link_btn" value="' + "Add (localise-me)" + '" />' +
+                        '</div>',
+            };
+
+            function showDialog() {
+                $("#dialog-modal").dialog({
+
+                    //height: 400,
+                    modal: true,
+                    resizable: false,
+                    draggable: false,
+                    autoOpen: false,
+                    closeText: "Click to close",
+                    width: 675,
+                    position: ["center", "center"],
+                    dialogClass: "section_form",
+                    show: {effect: "fade", duration: "normal"},
+                    hide: {effect: "puff", duration: "normal", percent: 95},
+
+                    open: function (event, ui) {
+
+
+                        var textarea = $(this).find("textarea");
+
+                        textarea.height(250);
+
+                        textarea.redactor(redactorConfig);
+                    }
+                });
+                $("#dialog-modal").dialog("open");
+            }
+
+
+        </script>
+    </head>
+
+    <body>
+
+        <h1>Test Redactor Rich Text Editor</h1>
+
+        <div id="main">
+            <p><a href="javascript:void(null);" onclick="showDialog();">Open Modal</a></p>
+        </div>
+
+        <div id="dialog-modal" title="Basic modal dialog" style="display: none;">
+            <fieldset>
+                <header>
+                    <legend>ADDITIONAL INFORMATION</legend>
+                    <button class="help_switch tip spot on" data-title="Click to show or hide help" type="button" style="position: relative;">Help</button>
+                    <div class="clear"></div>
+                </header>
+                <fieldset class="editor">
+                    <div class="help placeholding">
+                        <textarea id="rte"></textarea>
+                        <span class="help placeholder" style="display: none;" name="LearnerInfo.Achievement[1].Description">Molecular characterisation of a H3o-loaded brain cell, Immunology Quarterly, New York, 02/2002</span>
+                    </div> 
+                </fieldset>
+                <menu label="Manage">
+                    <button class="submit" form="Form:LearnerInfo.Achievement[1]" type="button">Save</button>
+                    <button class="cancel" form="Form:LearnerInfo.Achievement[1]" type="button">Cancel</button>
+                </menu>
+            </fieldset>
+        </div>
+
+    </body>
+</html>

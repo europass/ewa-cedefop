@@ -1,0 +1,15 @@
+<fieldset class="PersonName salutationName">
+	<div class="help placeholding " name="LearnerInfo.Identification.PersonName">
+		<label for="PersonName">{{get_text "CoverLetter.Letter.ClosingSalutation.HolderName"}}</label>
+		<input type="text" 
+			   readonly
+		       class="formfield PersonName help readonly with-placeholder"
+			   title
+			   name="LearnerInfo.Identification.PersonName"
+			   data-help-key="Help.CL.SkillsPassport.LearnerInfo.Identification.PersonName"
+			   value="{{LearnerInfo.Identification.PersonName.FirstName}} {{LearnerInfo.Identification.PersonName.Surname}}">
+			<span name="CoverLetter.Letter.ClosingSalutation.PersonName" class="help placeholder" style="display:none;" >
+			  {{{get_text "CoverLetter.Letter.ClosingSalutation.HolderName" group="EditorPlaceholder"}}}
+			</span>
+	</div>
+</fieldset>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2015
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	<xsd:include schemaLocation="./Organisation.xsd"/>
+	<xsd:include schemaLocation="./Experience.xsd"/>
+	<xsd:include schemaLocation="./Sponsor.xsd"/>
+	
+	<!-- Learning Experience -->
+	<xsd:complexType name="LearningExperienceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the generic ExperienceType to include information about a learning experience. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ExperienceType">
+				<xsd:sequence>
+					<!-- Period, Description, Documentation -->
+					<xsd:element name="Field" type="FieldOfExperienceType" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Describes the position held during the experience or the title of the workshop/seminar/conference in which the learner participated.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					
+					<xsd:element name="Place" type="PlaceOfExperienceType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The place where the experience took place. Could be a simple description and/or be accompanied by the address.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					
+					<xsd:element name="Organisation" type="OrganisationType" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Describes the organisation offering the learning experiences (aka Host organisation)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					
+					<xsd:element name="Outcomes" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Describes the outcome in terms of knowledge and skills gained for the person during this learning experience. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					
+					<xsd:element name="Activities" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Describes the activities and responsibilities of the person during this learning experience. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					
+					<xsd:element name="SponsoredBy" type="SponsorType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Details on the organisational and financial (if any) background of the specific Learning Experience. E.g. programme under which the experience took place, the Organiser details.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				
+				<xsd:attribute name="id" type="xsd:ID">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							Contains a unique identifier of this experience.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="FieldOfExperienceType">
+		<xsd:sequence>
+			<xsd:element name="Role" type="RoleLabelType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Description" type="LabelType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="RoleLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="participated_training"/>
+								<xsd:enumeration value="participated_workshop"/>
+								<xsd:enumeration value="participated_conference"/>
+								<xsd:enumeration value="participated_seminar"/>
+								<xsd:enumeration value="attended_training"/>
+								<xsd:enumeration value="attended_workshop"/>
+								<xsd:enumeration value="attended_conference"/>
+								<xsd:enumeration value="attended_seminar"/>
+								<xsd:enumeration value="completed_training"/>
+								<xsd:enumeration value="completed_workshop"/>
+								<xsd:enumeration value="completed_conference"/>
+								<xsd:enumeration value="completed_seminar"/>
+								<xsd:enumeration value="held_position"/>
+								<xsd:enumeration value="gained_experience_as"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PlaceOfExperienceType">
+		<xsd:sequence>
+			<xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Address" type="AddressInfoType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

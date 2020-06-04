@@ -1,0 +1,15 @@
+
+{{#if SkillsPassport.Attachment}}
+<fieldset class="Attachment Upload existing-files">
+	<ul class="existing-attachment">
+		{{#each_with_index SkillsPassport.Attachment}}
+			<li class="attachment-info">
+				{{#call_partial . subsection="Add"}}
+					{{> templates/attachment/attachmentactions}}
+				{{/call_partial}}
+			</li>
+		{{/each_with_index}}
+	</ul>
+	
+</fieldset>
+{{/if}}

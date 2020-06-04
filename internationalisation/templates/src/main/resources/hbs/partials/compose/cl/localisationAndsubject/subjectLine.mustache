@@ -1,0 +1,10 @@
+{{=[[ ]]=}}
+<div class="value SubjectLine rich-content">
+<span {{#unless SkillsPassport.CoverLetter.Letter.SubjectLine}}class="default-value"{{/unless}}>
+{{#if SkillsPassport.CoverLetter.Letter.SubjectLine}}
+	{{#format_CLSubject SkillsPassport.CoverLetter.Letter.SubjectLine}}{{.}}{{/format_CLSubject}}
+{{else}}
+	[[#resources]][[& GuiLabel_CoverLetter:Letter:SubjectLine]][[/resources]]
+{{/if}}
+</span>
+</div>

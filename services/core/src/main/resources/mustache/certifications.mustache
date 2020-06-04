@@ -1,0 +1,22 @@
+{{#item}}
+<p>
+	<strong>{{item}}</strong>
+	{{#number}} | <strong>{{number}}</strong>{{/number}}
+</p>
+
+{{#authority}}
+<p><em>{{authority}}</em></p>
+{{/authority}}
+
+{{#startDate}}
+<p>
+	{{#authority}} | {{/authority}}
+	<em>{{formatStartDate}}</em>
+	{{#endDate}}
+		<em> - </em>
+		<em>{{formatEndDate}}</em>
+	{{/endDate}}
+</p>
+{{/startDate}}
+
+{{/item}}

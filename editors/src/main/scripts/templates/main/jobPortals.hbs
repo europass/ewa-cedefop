@@ -1,0 +1,94 @@
+<div id="PostToJobPortalsForm" class="overlay">
+    <div class="job-portals-info job-portal" style="display: none">
+        <button class="close close-job-portals-btn" style="display: none">Close</button>
+        <div class="ui-main-area drawer job-portal-number-{{noOfSharePortalsVisible}}" id="main-area" style="display: none">
+            
+            <div class="ui-job-portals-area drawer default" id="job-portals-default" style="display: none">
+                <h2>{{get_text "export.wizard.share.ok" group = "GuiLabel"}}</h2>
+                <p>{{get_text "select.share.service" group = "GuiLabel"}}</p>
+
+                <div class="job-share-options">
+                    {{#unless_eq locale compare="it"}}
+                    {{#shareIndeed}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-indeed" id="indeed"></div>
+                    </div>
+                    {{/shareIndeed}}
+                    {{/unless_eq}}
+
+                    {{#shareAnpal}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-anpal" id="anpal"></div>
+                    </div>
+                    {{/shareAnpal}}
+
+                    {{#if_eq locale compare="it"}}
+                    {{#shareIndeed}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-indeed" id="indeed"></div>
+                    </div>
+                    {{/shareIndeed}}
+                    {{/if_eq}}
+
+                    {{#shareCvLibrary}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-cvLibrary" id="cvlibrary"></div>
+                    </div>
+                    {{/shareCvLibrary}}
+
+                    {{#shareXing}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-xing" id="xing"></div>
+                    </div>
+                    {{/shareXing}}
+
+                    {{#shareMonster}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-monster" id="monster"></div>
+                    </div>
+                    {{/shareMonster}}
+
+                    {{#shareEures}}
+                    <div class="ui-job-portal-logo-area">
+                        <div class="icon icon-eures" id="eures"></div>
+                    </div>
+                    {{/shareEures}}
+                </div>
+
+                <div class="job-share-content">
+                    
+                </div>
+
+                <!-- messages section -->
+                <div class="drawer on-success" id="job-portal-success" style="display: none">
+                    <div class="note job-portal" style="display: none">
+                        <span class="success-icon"></span>
+                        <div class="text">
+                            <p>{{get_text "export.wizard.step.jobPortals.desc.on.success" group = "GuiLabel"}}</p>
+                            <p class="monster-success-info">{{get_text "export.wizard.step.monster.success.message" group = "GuiLabel"}}</p>
+                        </div>
+                    </div>
+                    <button id="btn-ok-to-job-portal" class="button green">{{get_text "Buttons.Done" group = "GuiLabel"}}</button>
+                </div>
+                <div class="drawer on-error" id="job-portal-error" style="display: none">
+                    <div class="note job-portal" style="display: none">
+                        <div class="text">{{get_text "export.wizard.step.jobPortals.desc.on.error" group = "GuiLabel"}}&nbsp;</div>
+                        <fieldset class="feedback-area" id="job-portal-warning-msg">
+                            <section class="notification error" style="">
+                                <div data-rel-key="" class="message-area">
+                                    <p></p>
+                                </div>
+                            </section>
+                        </fieldset>
+                    </div>
+                    <button id="btn-return-to-eures" class="button">{{get_text "Buttons.JobPortals.Return" group = "GuiLabel"}}</button>
+                </div> <!-- end of messages section -->
+            </div> <!-- #job-portals-default end -->
+
+        </div><!-- #main-area end -->
+
+        <div class="job-portals-side" style="display:none">
+            <button type="button" id="btn-cancel-share" class="button cancel"><span>{{get_text "Buttons.Cancel" group = "GuiLabel"}}</span></button>
+        </div>
+    </div>	
+</div>

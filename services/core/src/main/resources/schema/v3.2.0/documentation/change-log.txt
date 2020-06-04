@@ -1,0 +1,6 @@
+- PrintingPreferences more light
+- The DocumentInfo element is enriched with one additional element, named Bundle
+- New EuropassISOLanguages_V1.7.0.xsd, including language kmer (Cambodian)
+- XSDVersion changed to V3.2
+
+- To be launch together with the EWA Re-revamp (~ end September 2014)

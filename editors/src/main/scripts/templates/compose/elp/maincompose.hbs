@@ -1,0 +1,40 @@
+
+<h2 style="display:none;"><abbr title="Europass Language Passport">ELP</abbr></h2>
+
+<div class="elp compose">
+
+<!-- 	<header class="document">
+		{{> templates/compose/elp/header}}
+	</header> -->
+	
+	<dl id="Compose:ElpOverview" 
+			class="
+			{{#emptyObjects "3" 0=SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue 1=SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage 2=SkillsPassport.LearnerInfo.Identification.PersonName}}
+			empty
+			{{else}}
+			{{/emptyObjects}}	
+			elp-overview section item opens-modal-form personal"
+			data-rel-doc="elp"
+			data-rel-clazz="ElpOverviewFormView"
+			data-rel-form="Form:ElpOverview"
+			data-rel-section="SkillsPassport.LearnerInfo.Identification.PersonName SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic"
+			data-rel-index="">
+	</dl>
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+	{{else}}
+	<dl id="Compose:ElpForeignLanguagesList" 
+			class="section foreign-languages-details">
+			
+	</dl>
+	{{/isEmptyObject}}
+		
+	{{#with Preferences.LearnerInfo.CEFLanguageLevelsGrid}}
+		{{#show}}
+			{{> templates/compose/elp/levelsgrid}}
+		{{/show}}
+	{{/with}}
+ 
+ </div>
+{{> templates/compose/elp/footer}}

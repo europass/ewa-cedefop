@@ -1,0 +1,39 @@
+<div style="display:none" id="show_other_file_formats_container">
+	<header>
+		<legend>{{get_text "export.wizard.step2.desc" group="GuiLabel"}}</legend>
+	</header>
+	<div class="note" style="display: none" id="non-uploadable-warning">
+		<div class="warning">
+			<span class="icon"></span>
+			<div class="text">
+				{{get_text "export.wizard.help.step2.non.uploadable.file" group="EditorHelp"}}
+			</div>
+		</div>
+	</div>
+	{{#each formats}}
+	<fieldset class="export-checkbox file-format {{#if nonuploadable}} non-uploadable-file {{/if}} {{name}} ">
+
+		<input type="radio" class="css-checkbox formfield help" name="Export_Option_File" value="{{name}}"
+			data-help-key="export.wizard.help.step2.file.option.{{name}}" data-help-group="export.wizard.help.step2"
+			id="Export_Option_File_{{name}}" {{#if checked}}checked="checked" {{/if}}>
+		<label for="Export_Option_File_{{name}}"
+			class="css-label {{#if checked}}checked{{/if}} formfield-label overHelp">
+			<span class="icon"></span>
+			<span class="title">{{title}}</span>
+			{{#if nonuploadable}}<span class="attention non-uploadable"></span>{{/if}}
+		</label>
+	</fieldset>
+
+	{{/each}}
+</div>
+
+{{#unless displayAllFormats}}
+<fieldset class="file-format">
+	<p id="display_more_formats" class="show_more_document_formats">
+		{{get_text "export.wizard.help.step2.defaultFormat" group="EditorHelp"}}
+		<span>
+			{{get_text "export.wizard.help.step2.showMoreDocumentFormats" group="EditorHelp"}}
+		</span>
+	</p>
+</fieldset>
+{{/unless}}

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Test EWA Social Import</title>
+        <style type="text/css">
+            .TEST ol {
+                list-style-type: none;
+            }
+            .TEST li {
+                margin: 2px 5px;
+                position: relative;
+            }
+            .TEST legend { display: inline-block; color:#0010b0; font-weight: bold;}
+
+            .TEST label { display: inline-block; width: 200px; vertical-align: top; color:#009040; font-weight: bold;}
+
+            .TEST span.root { vertical-align: top; margin-left: 5px; }
+
+            .TEST textarea {
+                width: 100%;
+                height: 10em;
+            }
+
+        </style>
+
+        <script src="/editors/static/ewa/scripts/libs/jquery/jquery-1.8.2.js"></script>
+        <script src="/editors/static/ewa/scripts/libs/jquery-ui/jquery-ui-1.9.0.custom.patched.js"></script>
+        <link rel="stylesheet" type="text/css" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css"/>
+        <script type="text/javascript">
+
+            function service(frm) {
+                return frm.service.options[frm.service.selectedIndex].value;
+            }
+
+            function get(name) {
+                if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.href))
+                    return decodeURIComponent(name[1]);
+            }
+
+            function importData(frm) {
+                var S = service(frm);
+
+                var myURL = '/api/social/import/' + S;
+                // fire off the request to /form.php
+                request = $.ajax({
+                    url: myURL,
+                    type: "GET",
+                    data: ""
+                });
+
+                // callback handler that will be called on success
+                request.done(function (response, textStatus, jqXHR) {
+                    window.location.href = response; // redirect to whom is necessary
+
+                    /*  	      	var popup = window.open(response,"linkedInLogin");
+                     
+                     function addEvent(element, event, fn) {
+                     if (element.addEventListener)
+                     element.addEventListener(event, fn, false);
+                     else if (element.attachEvent)
+                     element.attachEvent('on' + event, fn);
+                     
+                     addEvent(window, 'load', function(){ some_methods_1() });
+                     */
+
+
+                    /* 	    	var $dialog = $('<div title="popup"></div>').html('Press OK').dialog({
+                     modal:true,
+                     autoOpen: false,
+                     buttons:
+                     {
+                     "Ok":
+                     function()
+                     {
+                     window.top.location = response;
+                     }
+                     }
+                     });
+                     $dialog.dialog('open'); */
+
+                    /*  	    	$("div#dialog > iframe").attr("src",response+"&output=embed");
+                     
+                     $( "#dialog" ).load(response+"&output=embed").dialog({
+                     autoOpen: false,
+                     position: 'center' ,
+                     title: 'EDIT',
+                     draggable: false,
+                     width : 800,
+                     height : 700,
+                     resizable : true,
+                     modal : true,
+                     });
+                     */
+                });
+
+                // callback handler that will be called on failure
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+                    alert("Failed");
+                });
+
+            }
+
+            function showData(frm) {
+                var S = service(frm);
+                var state = get('state');
+
+                var myURL = '/api/social/import/helper/' + S + ";jsessionid=" + state;
+                // fire off the request to /form.php
+                request = $.ajax({
+                    url: myURL,
+                    type: "GET",
+                    data: ""
+                });
+
+                // callback handler that will be called on success
+                request.done(function (response, textStatus, jqXHR) {
+                    frm.jsonResult.value = response;
+                });
+
+                // callback handler that will be called on failure
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+                    alert("Failed");
+                });
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="EWATestForm" class="TEST" onsubmit="sendData(this, 'popup');
+                return false;">
+            <fieldset>
+                <legend>Social Import Test</legend>
+                <ol>
+                    <li><label>Services:</label>
+                        <select name="service" id="service_id">
+                            <option value="linkedin" selected="selected">linkedin</option>
+                        </select>
+                        <button type="button" onclick="importData(this.form)" name="send">Import</button>
+                    </li>
+                    <li><label>Data</label>
+                        <textarea name="jsonResult"></textarea>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+
+        <!-- 	<div id="dialog" style="display:none;" title="Dialog Title">
+                        <iframe frameborder="0" scrolling="no" width="700" height="700" src=""></iframe>
+                </div>
+        -->
+        <script  type="text/javascript" >
+            var state = get('state');
+            if (state != 'undefined' && state != '' && state != 'null') {
+                showData($('#service_id').get(0).form);
+            }
+        </script>
+    </body>
+</html>

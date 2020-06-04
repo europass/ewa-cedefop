@@ -1,0 +1,309 @@
+/******************************
+GENERAL MAIN LAYOUT SECTIONS
+*******************************/
+
+
+
+
+
+
+
+/*****             MAIN ARTICLE - WYSIWYG      *****/
+
+.effective-content-area {
+  background: #fff;
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 20%;
+  top: 0;
+  //Desktop
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    width: @main-area-width;
+  }
+  //Tablet
+  @media only screen and (max-width: @tablet-width-limit ) {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    padding: 0px;
+  }
+  /*Rule for preventing an unwanted border at bottom (portrait mode) on iPad*/
+  @media only screen and (max-device-width: @tablet-width-limit) and (orientation: portrait) {
+    height: 100%;
+  }
+  //Upper Notifications
+  #notifications-area {
+    //Desktop
+    @media only screen and ( min-width: @desktop-width-limit ) {
+      padding: 0 5%;
+      width: 90%;
+      /*Specific rules for the success message after saving a section EWA-1608*/
+      #app-notifications > section.notification.success {
+        top: -30px !important;
+      }
+    }
+    //Tablet
+    @media only screen and (max-width: @tablet-width-limit ) {
+      padding: 0;
+      width: 100%;
+      #cookie-law-consent-section,
+      #document-storing-warning,
+      #app-notifications {
+        padding-top: 0px !important;
+        border-radius: 0px;
+        section {
+          border-radius: 0px;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          &.info {
+            border-bottom-color: @border-dark-blue;
+          }
+          &.confirm,
+          &.warning {
+            border-bottom-color: @orange;
+          }
+          &.error {
+            border-bottom-color: @bright-orange;
+          }
+          &.success {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  //Main Area
+  .main-area {
+    padding: 30px 5% 0 5%;
+    width: 90%;
+    //Tablet
+    @media only screen and (max-width: @tablet-width-limit ) {
+      font-size: 1.3rem;
+    }
+    @media only screen and(max-width: @phone-width-limit) {
+      padding: 10px 0 10px 10px;
+      width:100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit ) {
+
+  //Responsive editor
+  .effective-content-area .main-area .line:after {width: 1rem;	height: 0.9rem;}
+}
+
+
+
+
+/*.cv.compose .section.subsection-container button.opens-modal-form.add{
+  margin-bottom: 1rem;
+}*/
+
+.cv-section-subsection-button,
+.cv .section.subsection-container button.opens-modal-form.add,
+button.opens-modal-form.add{
+  margin: 0 0 0 -0.2rem;
+  padding: 0;
+  padding-left: 35%;
+  width: 100%;
+  text-align: left;
+}
+
+
+
+.cv ol.compose-list > li.list-item {
+  min-height:0;
+  margin:10px 0px;
+}
+
+.cv  ol.compose-list > li.compose-list > dd.content-label{
+  .cv-section-label-layout;
+  line-height:1.4;
+}
+.cv ol.compose-list > li.compose-list > dd.value{
+  width: @cv-section-content-width;
+  margin-left: 100% - @cv-section-content-width;
+}
+
+//related attachments alighnment
+dd.value.attachment,
+dl.skills > dd.value > div.attachment,
+tr.documentation > td > div.attachment {
+
+  text-align:left;
+  width:100%!important;
+  padding-right:125px;
+  box-sizing: border-box;
+  margin:0!important;
+  margin-top:10px!important;
+  span:not(.attachment){
+    color: @very-dark-grey;
+  }
+}
+
+table div.attachment{
+  text-align:left!important;
+  width:100%!important;
+  padding-right:97px!important;
+  box-sizing: border-box;
+  margin:0!important;
+  margin-top:10px!important;
+  span:not(.attachment){
+    color: @very-dark-grey;
+  }
+}
+
+dd.value.attachment{
+  margin-left:35%!important;
+  width:auto!important;
+}
+
+
+
+
+
+.rich-content{
+  &.value, .value{
+    p{
+      line-height:1.4;
+      padding:0;
+    }
+  }
+}
+
+
+/*********************
+*EMPTY SECTION*
+*********************/
+
+.empty-add-button,
+.compose div.empty.add {
+  font-size: 14px;
+  font-weight: bold;
+  margin: auto;
+  padding: 0 0 0 0;
+  vertical-align: middle;
+  border: none;
+  line-height:1.4;
+  span{
+    color:@orange-dark;
+  }
+  &:before{
+    content: "\e90b";
+    font-family: "europass-application" !important;
+    font-size: 18px;
+    font-weight: 400;
+    color:@orange-dark;
+    margin-right:5px;
+    vertical-align: middle;
+  }
+}
+
+.compose div.empty.add span {padding:0;}
+
+
+
+/**************************
+*ADD NEW ELEMENT
+**************************/
+
+.cv-section-subsection-button,
+.cv .section.subsection-container button.opens-modal-form.add,
+button.opens-modal-form.add{
+  margin-left:20px;
+  span{
+    display: inline-block;
+    color: @orange-dark;
+    font-weight: bold;
+    font-size: 14px;
+    transition: none;
+    text-align: left;
+    border: none;
+    vertical-align: bottom;
+    line-height:18px;
+
+    &:before{
+      line-height:15px;
+    }
+  }
+  span:not(.img-placeholder){
+    line-height:24px;
+  }
+}
+
+.cv .section.subsection-container .empty button.opens-modal-form.add,
+button.opens-modal-form.add{
+  margin-left:0;
+}
+
+.cv .section.section.section td button.opens-modal-form.add{
+  margin-left:0;
+}
+
+
+.section {
+  li.compose-list {
+    button.compose-list {
+      .img-placeholder {
+        &:before {
+          content: "\e90b";
+          font-family: "europass-application" !important;
+          color: @orange-dark;
+          font-size: 18px;
+          font-weight:400;
+        }
+      }
+    }
+    &:hover {
+      button.compose-list {
+        span {
+          color: @blue-darkling !important;
+          &:before {
+            color: @blue-darkling !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[id*="MotherTongue"].skills{
+  margin-top:20px;
+}
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .effective-content-area{
+    top:50px;
+    background-color:@medium-light-grey;
+  }
+  .cv ol.compose-list > li.compose-list{
+    > dd.content-label{
+      display:block;
+      width:100%;
+      text-align: left;
+      margin-left:0;
+      position:static;
+    }
+    > dd.value{
+      margin-left:0;
+      width:100%;
+    }
+  }
+  dd.value.attachment{
+    margin-left:0!important;
+  }
+}
+

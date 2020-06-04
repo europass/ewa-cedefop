@@ -1,0 +1,28 @@
+<select title
+			name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Use.Code" 
+	        data-help-key=""
+			class="formfield help Telephone Use with-placeholder hidden_select"
+			data-help-group="LearnerInfo.Identification.ContactInfo.Telephone"
+			rel="LearnerInfo.Identification.ContactInfo.Telephone">
+			
+			<option value="">{{get_text "LearnerInfo.Identification.ContactInfo.Telephone.Use" group="EditorPlaceholder"}}</option>
+			{{#loopForMap Use "TelephoneTypeMap" emptyOption=false showCode=false}}
+				<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+			{{/loopForMap}}
+	
+</select>
+
+<ul title
+			name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Use.Code" 
+	        data-help-key=""
+			class="formfield help Telephone Use with-placeholder custom_select custom_select_single"
+			data-help-group="LearnerInfo.Identification.ContactInfo.Telephone"
+			rel="LearnerInfo.Identification.ContactInfo.Telephone">
+			<li class="init" data-value="">{{get_text "LearnerInfo.Identification.ContactInfo.Telephone.Use" group="EditorPlaceholder"}}</li>
+			<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+			<ul>
+				{{#loopForMap Use "TelephoneTypeMap" emptyOption=false showCode=false}}
+					<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+				{{/loopForMap}}
+			</ul>
+</ul>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupOfExperience 
+    xmlns="http://europass.cedefop.europa.eu/Experience"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://europass.cedefop.europa.eu/Experience ./EuropassExperienceListSchema.xsd"
+    id="GR-P-123456789">
+    
+    <DocumentInfo>
+        <CreationDate>2013-02-11T00:00:00.000+03:00</CreationDate>
+        <LastUpdateDate>2013-02-13T00:00:00.000+03:00</LastUpdateDate>
+    </DocumentInfo>
+    
+    <ExperienceList>
+        <SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" locale="en">
+            <VerifiableDocumentInfo>
+                <DocumentType>EX</DocumentType>
+                <CreationDate>2013-02-11T00:00:00.000+03:00</CreationDate>
+                <LastUpdateDate>2013-02-13T00:00:00.000+03:00</LastUpdateDate>
+                <XSDVersion>V3.1</XSDVersion>
+                <Generator>Oxygen Testing</Generator>
+                <SigningInfo>
+                    <SingeeList>
+                        <Signee>
+                            <PersonName>
+                                <FirstName></FirstName>
+                                <Surname></Surname>
+                            </PersonName>
+                        </Signee>
+                    </SingeeList>
+                    <Date year="2013"/>
+                    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+                        <SignedInfo>
+                            <CanonicalizationMethod Algorithm=""></CanonicalizationMethod>
+                            <SignatureMethod Algorithm=""></SignatureMethod>
+                            <Reference>
+                                <DigestMethod Algorithm=""></DigestMethod>
+                                <DigestValue></DigestValue>
+                            </Reference>
+                        </SignedInfo>
+                        <SignatureValue></SignatureValue>
+                    </Signature>
+                </SigningInfo>
+                <DocumentReference/>
+                <ValidationInfo>
+                    <Procedure></Procedure>
+                </ValidationInfo>
+            </VerifiableDocumentInfo>
+            <LearnerInfo>
+                <Identification>
+                    <PersonName>
+                        <FirstName>Alexis</FirstName>
+                        <Surname>Papadopulos</Surname>
+                    </PersonName>
+                </Identification>
+            </LearnerInfo>
+        </SkillsPassport>
+    </ExperienceList>
+    
+</GroupOfExperience>

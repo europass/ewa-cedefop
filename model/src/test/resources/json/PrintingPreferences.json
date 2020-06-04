@@ -1,0 +1,308 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "PrintingPreferences": {
+            "ECV": [
+                {
+                    "name": "LearnerInfo.Identification.PersonName",
+                    "show": true,
+                    "order": "FirstName Surname"
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Address",
+                    "show": true,
+                    "format": "s \n p-z m (c)"
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Telephone",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Telephone[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Email",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Website",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Website[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Website[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Gender",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Birthdate",
+                    "show": true,
+                    "format": "numeric/long"
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Nationality",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Nationality[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Nationality[1]",
+                    "show": false
+                },				
+                {
+                    "name": "LearnerInfo.Occupation",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Position",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[1]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[1].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[1].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[1].Employer",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Title",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Organisation",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Level",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Field",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Title",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Organisation",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Organisation.ContactInfo.Address",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Level",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[1].Field",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.MotherTongue",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.MotherTongue[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].VerifiedBy",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].VerifiedBy[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].VerifiedBy[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].VerifiedBy",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].VerifiedBy[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Communication",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Organisational",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.JobRelated",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Computer",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Driving",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Other",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Achievement",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Achievement[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Achievement[1]",
+                    "show": true
+                }, 
+                {
+                    "name": "LearnerInfo.Achievement[2]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Achievement[3]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Achievement[4]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Documentation",
+                    "show": false
+                }
+            ]
+        }
+    }
+}

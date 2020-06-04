@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="fout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/europass-webapps-ganalytics.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${catalina.base}/logs/europass-webapps-ganalytics.%d{yyyy-MM-dd}.log.gz
+            </FileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- Original Pattern  -->
+            <Pattern> %-5level %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="europass.ewa.tools.ga.logger.DatabaseGAStatisticsLogger" level="DEBUG" additivity="false">
+        <appender-ref ref="fout" />
+    </logger>
+
+    <logger name="europass.ewa.tools.ga.steps.GARetreiveConsumeStep" level="INFO" additivity="true">
+        <appender-ref ref="stdout" />
+    </logger>
+
+    <logger name="europass.ewa.tools.ga.steps.GAAuthenticationStep" level="INFO" additivity="true">
+        <appender-ref ref="stdout" />
+    </logger>
+
+    <logger name="org.hibernate" level="DEBUG"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="fout"/>
+    </root>
+
+</configuration>

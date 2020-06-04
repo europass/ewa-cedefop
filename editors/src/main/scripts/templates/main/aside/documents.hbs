@@ -1,0 +1,48 @@
+<!-- <li class="heading">
+	<span>{{get_text "documents.select.document" group="GuiLabel"}}</span>
+</li> -->
+
+<li class="document">
+	<a name="compose.ecv" 
+	   title="{{get_text "compose.cv.tab.tooltip" group="EditorHelp"}}"
+	   data-href="cv/compose" >
+		{{get_text "Navigation.Header.SkillsPassport.CV" group="GuiLabel"}}
+		{{#hasECV}}
+			<em class="non-empty-indicator tip spot"/>
+			<span class="data-title" style="display:none;">{{get_text "documents.ecv.non.empty" group="EditorHelp"}}</span>	
+		{{/hasECV}}
+	</a>
+</li>
+<li class="document">
+	<a name="compose.esp" 
+	   title="{{get_text "compose.esp.tab.tooltip" group="EditorHelp"}}"
+	   data-href="esp/compose" >
+		{{get_text "Navigation.Header.SkillsPassport.ESP" group="GuiLabel"}}
+		{{#hasESP}}
+			<em class="non-empty-indicator tip spot"/>
+			<span class="data-title" style="display:none;">{{get_text "documents.esp.non.empty" group="EditorHelp"}}</span>	
+		{{/hasESP}}
+	</a>
+</li>
+<li class="document">
+	<a name="compose.elp" 
+	   title="{{get_text "compose.elp.tab.tooltip" group="EditorHelp"}}"
+	   data-href="lp/compose" >
+		{{get_text "Navigation.Header.SkillsPassport.ELP" group="GuiLabel"}}
+		{{#hasELP}}
+			<em class="non-empty-indicator tip spot"/>
+			<span class="data-title" style="display:none;">{{get_text "documents.elp.non.empty" group="EditorHelp"}}</span>	
+		{{/hasELP}}
+	</a>
+</li>
+<li class="document">
+	<a name="compose.ecl" 
+	   title="{{get_text "compose.cl.tab.tooltip" group="EditorHelp"}}"
+	   data-href="cl/compose" >
+		{{get_text "Navigation.Header.SkillsPassport.CL" group="GuiLabel"}}
+		{{#hasECL}}
+			<em class="non-empty-indicator tip spot"/>
+			<span class="data-title" style="display:none;">{{get_text "documents.ecl.non.empty" group="EditorHelp"}}</span>	
+		{{/hasECL}}
+	</a>
+</li>

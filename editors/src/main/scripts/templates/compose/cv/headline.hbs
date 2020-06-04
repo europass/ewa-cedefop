@@ -1,0 +1,57 @@
+<dt class="label">
+
+{{#if SkillsPassport.LearnerInfo.Headline}}
+		{{#if SkillsPassport.LearnerInfo.Headline.Type}}
+			{{#if SkillsPassport.LearnerInfo.Headline.Type.Code}}
+				<span class="title">{{SkillsPassport.LearnerInfo.Headline.Type.Label}}</span>
+			{{else}}
+				<span class="title">{{#alignSpecialChars . group="GuiLabel" fallbackKey="LearnerInfo.Headline.Type" cmsKey="LearnerInfo.Headline.Title"}}{{{.}}}{{/alignSpecialChars}}</span>
+			{{/if}}
+		{{else}}
+ 			<span class="title">{{#alignSpecialChars . group="GuiLabel" fallbackKey="LearnerInfo.Headline.Type" cmsKey="LearnerInfo.Headline.Title"}}{{{.}}}{{/alignSpecialChars}}</span>
+		{{/if}}
+	</dt>	
+	{{#call_partial . path="LearnerInfo.Headline"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+	<dd class="value
+		{{#headlineTypeCode SkillsPassport.LearnerInfo}}
+			{{#if_eq SkillsPassport.LearnerInfo.Headline.Type.Code compare="personal_statement"}} rich-content{{/if_eq}}
+		{{/headlineTypeCode}} Description">
+
+		{{#if SkillsPassport.LearnerInfo.Headline.Description}}
+			
+			<div class="value Description Label">
+				{{#headlineTypeCode ../../../SkillsPassport.LearnerInfo}}
+					{{#if_eq SkillsPassport.LearnerInfo.Headline.Type.Code compare="personal_statement"}}
+						<span class="personal-statement">{{nestHtmlLists SkillsPassport.LearnerInfo.Headline.Description.Label}}</span>
+					{{else}}
+						{{SkillsPassport.LearnerInfo.Headline.Description.Label}}
+					{{/if_eq}}
+				{{else}}
+					{{#if_eq SkillsPassport.LearnerInfo.Headline.Type.Code compare="personal_statement"}}
+						{{{SkillsPassport.LearnerInfo.Headline.Description.Label}}}
+					{{else}}
+						{{SkillsPassport.LearnerInfo.Headline.Description.Label}}
+					{{/if_eq}}
+				{{/headlineTypeCode}}
+			</div>
+ 			
+		{{else}}
+		<div class="empty add">
+			<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+		</div>
+		
+<!--			<span class="default-value description">{{get_text "LearnerInfo.Headline.Description" group="GuiLabel"}}</span>-->
+ 		{{/if}}
+		
+	</dd>
+
+{{else}}
+		<span class="title">{{#alignSpecialChars . group="GuiLabel" fallbackKey="LearnerInfo.Headline.Type" cmsKey="LearnerInfo.Headline.Title"}}{{{.}}}{{/alignSpecialChars}}</span>
+	</dt>
+	
+	<dd class="value">
+		<div class="empty add"><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span></div>
+	</dd>
+{{/if}}

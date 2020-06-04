@@ -1,0 +1,12 @@
+To be launched ...
+
+- XSDVersion changed to V3.4.1
+
+JSON Schema changes:
+1. Removed "aim" from the list of InstantMessaging values 
+
+XML Schema changes:
+1. Removed "aim" value from InstantMessagingUsesEnumeration in ContactInformation.xsd
+
+Related tasks:
+EPAS-1962 Remove AOL from IM dropdown

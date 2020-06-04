@@ -1,0 +1,564 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Epass\n"
+"Language: sr\n"
+
+#: 
+msgctxt "LearnerInfo.Achievement.Title.Label"
+msgid "/ewa/accessibility/cv/achievement-title-label"
+msgstr "/ewa/accessibility/cv/achievement-title-label"
+
+#: 
+msgctxt "LearnerInfo.Achievement.Description"
+msgid "/ewa/accessibility/cv/achievement-description"
+msgstr "/ewa/accessibility/cv/achievement-description"
+
+#: 
+msgctxt "LearnerInfo.Skills.Driving.Description"
+msgid "/ewa/accessibility/cv/driving-skills-description"
+msgstr "/ewa/accessibility/cv/driving-skills-description"
+
+#: 
+msgctxt "LearnerInfo.Education.Period"
+msgid "/ewa/accessibility/cv/education-period"
+msgstr "/ewa/accessibility/cv/education-period"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.Current"
+msgid "/ewa/accessibility/cv/education-period-current"
+msgstr "/ewa/accessibility/cv/education-period-current"
+
+#: 
+msgctxt "LearnerInfo.Education.Title"
+msgid "/ewa/accessibility/cv/education-title"
+msgstr "/ewa/accessibility/cv/education-title"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.Name"
+msgid "/ewa/accessibility/cv/education-organisation-name"
+msgstr "/ewa/accessibility/cv/education-organisation-name"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Municipality"
+msgid "/ewa/accessibility/cv/education-organisation-address-municipality"
+msgstr "/ewa/accessibility/cv/education-organisation-address-municipality"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Country.Label"
+msgid "/ewa/accessibility/cv/education-organisation-address-country"
+msgstr "/ewa/accessibility/cv/education-organisation-address-country"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.AddressLine"
+msgid "/ewa/accessibility/cv/education-organisation-addressline"
+msgstr "/ewa/accessibility/cv/education-organisation-addressline"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.PostalCode"
+msgid "/ewa/accessibility/cv/education-organisation-address-postalcode"
+msgstr "/ewa/accessibility/cv/education-organisation-address-postalcode"
+
+#: 
+msgctxt "LearnerInfo.Education.Organisation.ContactInfo.Website.Contact"
+msgid "/ewa/accessibility/cv/education-organisation-website"
+msgstr "/ewa/accessibility/cv/education-organisation-website"
+
+#: 
+msgctxt "LearnerInfo.Education.Level.Label"
+msgid "/ewa/accessibility/cv/education-level-label"
+msgstr "/ewa/accessibility/cv/education-level-label"
+
+#: 
+msgctxt "LearnerInfo.Education.Activities"
+msgid "/ewa/accessibility/cv/education-activities"
+msgstr "/ewa/accessibility/cv/education-activities"
+
+#: 
+msgctxt "LearnerInfo.Education.Field.Label"
+msgid "/ewa/accessibility/cv/education-field-label"
+msgstr "/ewa/accessibility/cv/education-field-label"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.From.Day"
+msgid "/ewa/accessibility/cv/education-period-from-day"
+msgstr "/ewa/accessibility/cv/education-period-from-day"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.From.Month"
+msgid "/ewa/accessibility/cv/education-period-from-month"
+msgstr "/ewa/accessibility/cv/education-period-from-month"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.From.Year"
+msgid "/ewa/accessibility/cv/education-period-from-year"
+msgstr "/ewa/accessibility/cv/education-period-from-year"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.To.Day"
+msgid "/ewa/accessibility/cv/education-period-to-day"
+msgstr "/ewa/accessibility/cv/education-period-to-day"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.To.Month"
+msgid "/ewa/accessibility/cv/education-period-to-month"
+msgstr "/ewa/accessibility/cv/education-period-to-month"
+
+#: 
+msgctxt "LearnerInfo.Education.Period.To.Year"
+msgid "/ewa/accessibility/cv/education-period-to-year"
+msgstr "/ewa/accessibility/cv/education-period-to-year"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Description.Label"
+msgid "/ewa/accessibility/cv/foreign-language-description-label"
+msgstr "/ewa/accessibility/cv/foreign-language-description-label"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Description.Code"
+msgid "/ewa/accessibility/cv/foreign-language-description-code"
+msgstr "/ewa/accessibility/cv/foreign-language-description-code"
+
+#: 
+msgctxt "LearnerInfo.Skills.Description"
+msgid "/ewa/accessibility/cv/skills-description"
+msgstr "/ewa/accessibility/cv/skills-description"
+
+#: 
+msgctxt "LearnerInfo.Headline.Type.Code"
+msgid "/ewa/accessibility/cv/headline-type-code"
+msgstr "/ewa/accessibility/cv/headline-type-code"
+
+#: 
+msgctxt "LearnerInfo.Headline.Description.Label"
+msgid "/ewa/accessibility/cv/headline-description-label"
+msgstr "/ewa/accessibility/cv/headline-description-label"
+
+#: 
+msgctxt "LearnerInfo.Headline.Description.Label.ForStudies"
+msgid "/ewa/accessibility/cv/headline-description-label-studies"
+msgstr "/ewa/accessibility/cv/headline-description-label-studies"
+
+#: 
+msgctxt "LearnerInfo.Headline.Description.Label.ForOccupation"
+msgid "/ewa/accessibility/cv/headline-description-label-occupation"
+msgstr "/ewa/accessibility/cv/headline-description-label-occupation"
+
+#: 
+msgctxt "LearnerInfo.Headline.Description.Label.ForPersonalStatement"
+msgid "/ewa/accessibility/cv/headline-description-label-personal-statement"
+msgstr "/ewa/accessibility/cv/headline-description-label-personal-statement"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.MotherTongue.Description.Label"
+msgid "/ewa/accessibility/cv/mother-tongue-desription-label"
+msgstr "/ewa/accessibility/cv/mother-tongue-desription-label"
+
+#: 
+msgctxt "LearnerInfo.Identification.PersonName.FirstName"
+msgid "/ewa/accessibility/cv/first-name"
+msgstr "/ewa/accessibility/cv/first-name"
+
+#: 
+msgctxt "LearnerInfo.Identification.PersonName.Surname"
+msgid "/ewa/accessibility/cv/surname"
+msgstr "/ewa/accessibility/cv/surname"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine"
+msgid "/ewa/accessibility/cv/addressline"
+msgstr "/ewa/accessibility/cv/addressline"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode"
+msgid "/ewa/accessibility/cv/postal-code"
+msgstr "/ewa/accessibility/cv/postal-code"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality"
+msgid "/ewa/accessibility/cv/municipality"
+msgstr "/ewa/accessibility/cv/municipality"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label"
+msgid "/ewa/accessibility/cv/country"
+msgstr "/ewa/accessibility/cv/country"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Telephone.Contact"
+msgid "/ewa/accessibility/cv/telephone"
+msgstr "/ewa/accessibility/cv/telephone"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Email.Contact"
+msgid "/ewa/accessibility/cv/email"
+msgstr "/ewa/accessibility/cv/email"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.Website.Contact"
+msgid "/ewa/accessibility/cv/website"
+msgstr "/ewa/accessibility/cv/website"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.InstantMessaging.Use.Label"
+msgid "/ewa/accessibility/cv/instant-messaging-label"
+msgstr "/ewa/accessibility/cv/instant-messaging-label"
+
+#: 
+msgctxt "LearnerInfo.Identification.ContactInfo.InstantMessaging.Contact"
+msgid "/ewa/accessibility/cv/instant-messaging-contact"
+msgstr "/ewa/accessibility/cv/instant-messaging-contact"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Gender.Code"
+msgid "/ewa/accessibility/cv/gender-code"
+msgstr "/ewa/accessibility/cv/gender-code"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Birthdate.format"
+msgid "/ewa/accessibility/cv/birthdate-format"
+msgstr "/ewa/accessibility/cv/birthdate-format"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Nationality.Label"
+msgid "/ewa/accessibility/cv/nationality-label"
+msgstr "/ewa/accessibility/cv/nationality-label"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.format"
+msgid "/ewa/accessibility/cv/work-experience-period-format"
+msgstr "/ewa/accessibility/cv/work-experience-period-format"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.Current"
+msgid "/ewa/accessibility/cv/work-experience-period-current"
+msgstr "/ewa/accessibility/cv/work-experience-period-current"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Position.Label"
+msgid "/ewa/accessibility/cv/work-experience-position-label"
+msgstr "/ewa/accessibility/cv/work-experience-position-label"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.Name"
+msgid "/ewa/accessibility/cv/work-experience-employer-name"
+msgstr "/ewa/accessibility/cv/work-experience-employer-name"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.Municipality"
+msgid "/ewa/accessibility/cv/work-experience-employer-municipality"
+msgstr "/ewa/accessibility/cv/work-experience-employer-municipality"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.Country.Label"
+msgid "/ewa/accessibility/cv/work-experience-employer-country"
+msgstr "/ewa/accessibility/cv/work-experience-employer-country"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.AddressLine"
+msgid "/ewa/accessibility/cv/work-experience-employer-addressLine"
+msgstr "/ewa/accessibility/cv/work-experience-employer-addressLine"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.PostalCode"
+msgid "/ewa/accessibility/cv/work-experience-employer-postal-code"
+msgstr "/ewa/accessibility/cv/work-experience-employer-postal-code"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.ContactInfo.Website.Contact"
+msgid "/ewa/accessibility/cv/work-experience-employer-website"
+msgstr "/ewa/accessibility/cv/work-experience-employer-website"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Employer.Sector.Label"
+msgid "/ewa/accessibility/cv/work-experience-employer-sector"
+msgstr "/ewa/accessibility/cv/work-experience-employer-sector"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Activities"
+msgid "/ewa/accessibility/cv/work-experience-activities"
+msgstr "/ewa/accessibility/cv/work-experience-activities"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.From.Day"
+msgid "/ewa/accessibility/cv/workexperience-period-from-day"
+msgstr "/ewa/accessibility/cv/workexperience-period-from-day"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.From.Month"
+msgid "/ewa/accessibility/cv/work-experience-period-from-month"
+msgstr "/ewa/accessibility/cv/work-experience-period-from-month"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.From.Year"
+msgid "/ewa/accessibility/cv/work-experience-period-from-year"
+msgstr "/ewa/accessibility/cv/work-experience-period-from-year"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.To.Day"
+msgid "/ewa/accessibility/cv/work-experience-period-to-day"
+msgstr "/ewa/accessibility/cv/work-experience-period-to-day"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.To.Month"
+msgid "/ewa/accessibility/cv/work-experience-period-to-month"
+msgstr "/ewa/accessibility/cv/work-experience-period-to-month"
+
+#: 
+msgctxt "LearnerInfo.WorkExperience.Period.To.Year"
+msgid "/ewa/accessibility/cv/work-experience-period-to-year"
+msgstr "/ewa/accessibility/cv/work-experience-period-to-year"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Birthdate.Day"
+msgid "/ewa/accessibility/cv/birthdate-day"
+msgstr "/ewa/accessibility/cv/birthdate-day"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Birthdate.Month"
+msgid "/ewa/accessibility/cv/birthdate-month"
+msgstr "/ewa/accessibility/cv/birthdate-month"
+
+#: 
+msgctxt "LearnerInfo.Identification.Demographics.Birthdate.Year"
+msgid "/ewa/accessibility/cv/birthdate-year"
+msgstr "/ewa/accessibility/cv/birthdate-year"
+
+#: 
+msgctxt "CoverLetter.Addressee.PersonName.Title.Label"
+msgid "/ewa/accessibility/cl/addressee-title-label"
+msgstr "/ewa/accessibility/cl/addressee-title-label"
+
+#: 
+msgctxt "CoverLetter.Addressee.PersonName.Title.Code"
+msgid "/ewa/accessibility/cl/addressee-tite-code"
+msgstr "/ewa/accessibility/cl/addressee-tite-code"
+
+#: 
+msgctxt "CoverLetter.Addressee.PersonName.FirstName"
+msgid "/ewa/accessibility/cl/addressee-firstname"
+msgstr "/ewa/accessibility/cl/addressee-firstname"
+
+#: 
+msgctxt "CoverLetter.Addressee.PersonName.Surname"
+msgid "/ewa/accessibility/cl/addressee-surname"
+msgstr "/ewa/accessibility/cl/addressee-surname"
+
+#: 
+msgctxt "CoverLetter.Addressee.Organisation.Name"
+msgid "/ewa/accessibility/cl/addressee-organisation-name"
+msgstr "/ewa/accessibility/cl/addressee-organisation-name"
+
+#: 
+msgctxt "CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine"
+msgid "/ewa/accessibility/cl/addressee-organisation-addressLine"
+msgstr "/ewa/accessibility/cl/addressee-organisation-addressLine"
+
+#: 
+msgctxt "CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.PostalCode"
+msgid "/ewa/accessibility/cl/addressee-organisation-postal-code"
+msgstr "/ewa/accessibility/cl/addressee-organisation-postal-code"
+
+#: 
+msgctxt "CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Municipality"
+msgid "/ewa/accessibility/cl/addressee-organisation-municipality"
+msgstr "/ewa/accessibility/cl/addressee-organisation-municipality"
+
+#: 
+msgctxt "CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Label"
+msgid "/ewa/accessibility/cl/addressee-organisation-country"
+msgstr "/ewa/accessibility/cl/addressee-organisation-country"
+
+#: 
+msgctxt "LearnerInfo.Identification.PersonName"
+msgid "/ewa/accessibility/cl/person-name"
+msgstr "/ewa/accessibility/cl/person-name"
+
+#: 
+msgctxt "CoverLetter.Letter.Localisation.Date.format"
+msgid "/ewa/accessibility/cl/localisation-date-format"
+msgstr "/ewa/accessibility/cl/localisation-date-format"
+
+#: 
+msgctxt "CoverLetter.Letter.Localisation.Place"
+msgid "/ewa/accessibility/cl/localisation-place"
+msgstr "/ewa/accessibility/cl/localisation-place"
+
+#: 
+msgctxt "CoverLetter.Letter.SubjectLine"
+msgid "/ewa/accessibility/cl/subject-line"
+msgstr "/ewa/accessibility/cl/subject-line"
+
+#: 
+msgctxt "CoverLetter.Letter.Localisation.Date.Day"
+msgid "/ewa/accessibility/cl/localisation-date-day"
+msgstr "/ewa/accessibility/cl/localisation-date-day"
+
+#: 
+msgctxt "CoverLetter.Letter.Localisation.Date.Month"
+msgid "/ewa/accessibility/cl/localisation-date-month"
+msgstr "/ewa/accessibility/cl/localisation-date-month"
+
+#: 
+msgctxt "CoverLetter.Letter.Localisation.Date.Year"
+msgid "/ewa/accessibility/cl/localisation-date-year"
+msgstr "/ewa/accessibility/cl/localisation-date-year"
+
+#: 
+msgctxt "CoverLetter.Letter.Body.MainBody"
+msgid "/ewa/accessibility/cl/body-mainbody"
+msgstr "/ewa/accessibility/cl/body-mainbody"
+
+#: 
+msgctxt "CoverLetter.Letter.Body.Opening"
+msgid "/ewa/accessibility/cl/body-opening"
+msgstr "/ewa/accessibility/cl/body-opening"
+
+#: 
+msgctxt "CoverLetter.Letter.Body.Closing"
+msgid "/ewa/accessibility/cl/body-closing"
+msgstr "/ewa/accessibility/cl/body-closing"
+
+#: 
+msgctxt "CoverLetter.Letter.OpeningSalutation.Salutation.Label"
+msgid "/ewa/accessibility/cl/opening-salutation-label"
+msgstr "/ewa/accessibility/cl/opening-salutation-label"
+
+#: 
+msgctxt "CoverLetter.Letter.OpeningSalutation.PersonName"
+msgid "/ewa/accessibility/cl/opening-salutation-person-name"
+msgstr "/ewa/accessibility/cl/opening-salutation-person-name"
+
+#: 
+msgctxt "CoverLetter.Letter.ClosingSalutation.Label"
+msgid "/ewa/accessibility/cl/closing-salutation-label"
+msgstr "/ewa/accessibility/cl/closing-salutation-label"
+
+#: 
+msgctxt "CoverLetter.Documentation.Heading.Label"
+msgid "/ewa/accessibility/cl/documentation-heading-label"
+msgstr "/ewa/accessibility/cl/documentation-heading-label"
+
+#: 
+msgctxt "CoverLetter.Documentation.InterDocument"
+msgid "/ewa/accessibility/cl/documentation-interdocument"
+msgstr "/ewa/accessibility/cl/documentation-interdocument"
+
+#: 
+msgctxt "CoverLetter.Documentation.ExtraDocument.Description"
+msgid "/ewa/accessibility/cl/documentation-extra-document-description"
+msgstr "/ewa/accessibility/cl/documentation-extra-document-description"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title"
+msgid "/ewa/accessibility/lp/certificate-title"
+msgstr "/ewa/accessibility/lp/certificate-title"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody"
+msgid "/ewa/accessibility/lp/certificate-awarding-body"
+msgstr "/ewa/accessibility/lp/certificate-awarding-body"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date.format"
+msgid "/ewa/accessibility/lp/certificate-date-format"
+msgstr "/ewa/accessibility/lp/certificate-date-format"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date.Day"
+msgid "/ewa/accessibility/lp/certificate-date-day"
+msgstr "/ewa/accessibility/lp/certificate-date-day"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date.Month"
+msgid "/ewa/accessibility/lp/certificate-date-month"
+msgstr "/ewa/accessibility/lp/certificate-date-month"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date.Year"
+msgid "/ewa/accessibility/lp/certificate-date-year"
+msgstr "/ewa/accessibility/lp/certificate-date-year"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level"
+msgid "/ewa/accessibility/lp/certificate-level"
+msgstr "/ewa/accessibility/lp/certificate-level"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Area.Label"
+msgid "/ewa/accessibility/lp/experience-area"
+msgstr "/ewa/accessibility/lp/experience-area"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description"
+msgid "/ewa/accessibility/lp/experience-description"
+msgstr "/ewa/accessibility/lp/experience-description"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.From.Day"
+msgid "/ewa/accessibility/lp/experience-period-from-day"
+msgstr "/ewa/accessibility/lp/experience-period-from-day"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.From.Month"
+msgid "/ewa/accessibility/lp/experience-period-from-month"
+msgstr "/ewa/accessibility/lp/experience-period-from-month"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.From.Year"
+msgid "/ewa/accessibility/lp/experience-period-from-year"
+msgstr "/ewa/accessibility/lp/experience-period-from-year"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.format"
+msgid "/ewa/accessibility/lp/experience-period-format"
+msgstr "/ewa/accessibility/lp/experience-period-format"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.To.Day"
+msgid "/ewa/accessibility/lp/experience-period-to-day"
+msgstr "/ewa/accessibility/lp/experience-period-to-day"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.To.Month"
+msgid "/ewa/accessibility/lp/experience-period-to-month"
+msgstr "/ewa/accessibility/lp/experience-period-to-month"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.To.Year"
+msgid "/ewa/accessibility/lp/experience-period-to-year"
+msgstr "/ewa/accessibility/lp/experience-period-to-year"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.Current"
+msgid "/ewa/accessibility/lp/experience-period-current"
+msgstr "/ewa/accessibility/lp/experience-period-current"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening"
+msgid "/ewa/accessibility/lp/proficiency-level-listening"
+msgstr "/ewa/accessibility/lp/proficiency-level-listening"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading"
+msgid "/ewa/accessibility/lp/proficiency-level-reading"
+msgstr "/ewa/accessibility/lp/proficiency-level-reading"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction"
+msgid "/ewa/accessibility/lp/proficiency-level-spoken-interaction"
+msgstr "/ewa/accessibility/lp/proficiency-level-spoken-interaction"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction"
+msgid "/ewa/accessibility/lp/proficiency-level-spoken-production"
+msgstr "/ewa/accessibility/lp/proficiency-level-spoken-production"
+
+#: 
+msgctxt "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing"
+msgid "/ewa/accessibility/lp/proficiency-level-writing"
+msgstr "/ewa/accessibility/lp/proficiency-level-writing"
+

@@ -1,0 +1,907 @@
+{
+  "Uploaded" : {
+    "SkillsPassport" : {
+      "Locale" : "en",
+      "DocumentInfo" : {
+        "DocumentType" : "ECV_ESP",
+        "CreationDate" : "2011-07-19T00:00:00.000Z",
+        "LastUpdateDate" : "2013-02-24T13:00:35.750Z",
+        "XSDVersion" : "V3.0",
+        "Generator" : "EWA",
+        "Comment" : "Automatically generated Europass CV"
+      },
+      "PrintingPreferences" : {
+        "ECV" : [ {
+          "name" : "LearnerInfo",
+          "show" : true,
+          "order" : "Identification Headline WorkExperience Education Skills Achievement ReferenceTo"
+        }, {
+          "name" : "LearnerInfo.Identification",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.PersonName",
+          "show" : true,
+          "order" : "FirstName Surname"
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Email",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Telephone",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Website",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.Website[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+          "show" : true,
+          "format" : "text/long"
+        }, {
+          "name" : "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.Demographics.Birthdate",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.Identification.Demographics.Gender",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.Demographics.Nationality",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.Demographics.Nationality[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Identification.Photo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Headline",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Position",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Employer",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[0].Employer.Sector",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Position",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Employer",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Website",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[1].Employer.Sector",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Position",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Employer",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Website",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[2].Employer.Sector",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Position",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Employer",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Employer.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Employer.ContactInfo.Website",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.WorkExperience[3].Employer.Sector",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.Education[0].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].ReferenceTo[1]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].ReferenceTo[2]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].ReferenceTo[3]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Title",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Organisation",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.Education[0].Level",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[0].Field",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.Education[1].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Title",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Organisation",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Organisation.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.Education[1].Level",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[1].Field",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].Period",
+          "show" : true,
+          "format" : "text/short"
+        }, {
+          "name" : "LearnerInfo.Education[2].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Education[2].Title",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].Activities",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].Organisation",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].Organisation.ContactInfo.Address",
+          "show" : true,
+          "format" : "s, z m (c)"
+        }, {
+          "name" : "LearnerInfo.Education[2].Level",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Education[2].Field",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.MotherTongue",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[2]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[2].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[2].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Certificate",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[2].Certificate[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Communication",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Communication.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Communication.ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Organisational",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Organisational.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Organisational.ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.JobRelated",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.JobRelated.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.JobRelated.ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Skills.Computer",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Computer.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Computer.ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Driving",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Driving.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Driving.ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Other",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Other.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Skills.Other.ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Achievement",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[0].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[0].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Achievement[1]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[1].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[1].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Achievement[2]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[2].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[2].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.Achievement[3]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[3].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[3].ReferenceTo[0]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[4]",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[4].ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.Achievement[4].ReferenceTo[0]",
+          "show" : false
+        }, {
+          "name" : "LearnerInfo.ReferenceTo",
+          "show" : true
+        }, {
+          "name" : "LearnerInfo.ReferenceTo[0]",
+          "show" : true
+        } ]
+      },
+      "LearnerInfo" : {
+        "Identification" : {
+          "PersonName" : {
+            "FirstName" : "Agnes",
+            "Surname" : "Zoller, PhD"
+          },
+          "ContactInfo" : {
+            "Address" : {
+              "Contact" : {
+                "AddressLine" : "Saint Quentinstraat 68",
+                "PostalCode" : "1000",
+                "Municipality" : "Brussels",
+                "Country" : {
+                  "Code" : "BE",
+                  "Label" : "Belgium"
+                }
+              }
+            },
+            "Email" : {
+              "Contact" : "zolleragi@gmail.com"
+            },
+            "Telephone" : [ {
+              "Contact" : "+32 473890323",
+              "Use" : {
+                "Code" : "mobile",
+                "Label" : "Mobile"
+              }
+            } ],
+            "Website" : [ {
+              "Contact" : "be.linkedin.com/pub/agnes-zoller/12/3b3/343"
+            } ]
+          },
+          "Demographics" : {
+            "Birthdate" : {
+              "Year" : 1981,
+              "Month" : 5,
+              "Day" : 29
+            },
+            "Gender" : {
+              "Code" : "F",
+              "Label" : "Female"
+            },
+            "Nationality" : [ {
+              "Code" : "HU",
+              "Label" : "Hungarian"
+            } ]
+          },
+          "Photo" : {
+            "MimeType" : "image/jpeg",
+            "TempURI" : "http://europassd.cedefop.europa.eu:8091/api/files/photo/C8FD2883E48BD93E04F3DAA74E1F16536E85E22DC32760A6B671C03A348379B41363948078039",
+            "Metadata" : [ {
+              "Key" : "dimension",
+              "Value" : "95x110"
+            }, {
+              "Key" : "number-of-pages",
+              "Value" : "1"
+            } ]
+          }
+        },
+        "WorkExperience" : [ {
+          "Period" : {
+            "From" : {
+              "Year" : 2012,
+              "Month" : 3,
+              "Day" : 1
+            },
+            "Current" : true
+          },
+          "Position" : {
+            "Label" : "European Coordinator Innovation Management"
+          },
+          "Activities" : "European Coordinator Innovation Management <br/>Corporate<br/>                    Innovation Strategy & Management<br/>Research and Innovation -<br/>                    Communication - Policy - Networking - Politics - Setting up cooperation with<br/>                    different companies, research institutions and universities at European level.<br/>                    <br/>Building up and supporting implementation of Public-Private<br/>                    Partnerships (PPP-s). Group leader of Chemical Mirror Group Applications in<br/>                    SPIRE PPP (www.spire2030.eu).<br/>Editor of the monthly EU Newsletter<br/>                    Research and Innovation.<br/>Supporting Europe's Economic Growth through<br/>                    Innovative Solutions, Market Close research applications / products, through<br/>                    Innovation Management.<br/>",
+          "Employer" : {
+            "Name" : "Evonik Degussa Antwerpen N.V.",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Brussels",
+                  "Country" : {
+                    "Code" : "BE",
+                    "Label" : "Belgium"
+                  }
+                }
+              },
+              "Website" : {
+                "Contact" : "www.evonik.com",
+                "Use" : {
+                  "Code" : "business"
+                }
+              }
+            },
+            "Sector" : {
+              "Label" : "Speciality Chemicals / Innovation Management"
+            }
+          }
+        }, {
+          "Period" : {
+            "From" : {
+              "Year" : 2006,
+              "Month" : 10,
+              "Day" : 2
+            },
+            "To" : {
+              "Year" : 2011,
+              "Month" : 5,
+              "Day" : 30
+            },
+            "Current" : false
+          },
+          "Position" : {
+            "Label" : "Researcher"
+          },
+          "Activities" : "PhD researcher in Chemical Engineering / Polymers",
+          "Employer" : {
+            "Name" : "University of Alicante",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Alicante",
+                  "Country" : {
+                    "Code" : "ES",
+                    "Label" : "Spain"
+                  }
+                }
+              },
+              "Website" : {
+                "Contact" : "www.ua.es",
+                "Use" : {
+                  "Code" : "business"
+                }
+              }
+            },
+            "Sector" : {
+              "Code" : "P",
+              "Label" : "Education"
+            }
+          }
+        }, {
+          "Period" : {
+            "From" : {
+              "Year" : 2006,
+              "Month" : 8,
+              "Day" : 19
+            },
+            "To" : {
+              "Year" : 2006,
+              "Month" : 9,
+              "Day" : 30
+            },
+            "Current" : false
+          },
+          "Position" : {
+            "Label" : "Assistant Leader of Laboratory and Diagnostic Engineer"
+          },
+          "Activities" : "Co-leading accredited laboratory of high standards, managing different<br/>                    projects for outside assignments and QC&QA documentation, supervision of<br/>                    technicians.",
+          "Employer" : {
+            "Name" : "Orszgágos Villamostávvezeték (OVIT)",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Budapest",
+                  "Country" : {
+                    "Code" : "HU",
+                    "Label" : "Hungary"
+                  }
+                }
+              },
+              "Website" : {
+                "Contact" : "www.ovit.hu",
+                "Use" : {
+                  "Code" : "business"
+                }
+              }
+            },
+            "Sector" : {
+              "Code" : "D",
+              "Label" : "Electricity, gas, steam and air conditioning supply"
+            }
+          }
+        }, {
+          "Period" : {
+            "From" : {
+              "Year" : 2005,
+              "Month" : 6,
+              "Day" : 3
+            },
+            "To" : {
+              "Year" : 2006,
+              "Month" : 8,
+              "Day" : 18
+            },
+            "Current" : false
+          },
+          "Position" : {
+            "Label" : "Quality Assurance Analyst"
+          },
+          "Activities" : "Quality Control and Quality Assurance of medicines and raw materials for<br/>                    the pharmaceutical industry according to European, British and US Pharmacopeias<br/>                    and standards, method development and validation, emission of quality<br/>                    certificates, supervision of technicians.",
+          "Employer" : {
+            "Name" : "Hungaropharma",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Budapest",
+                  "Country" : {
+                    "Code" : "HU",
+                    "Label" : "Hungary"
+                  }
+                }
+              },
+              "Website" : {
+                "Contact" : "www.hungaropharma.hu",
+                "Use" : {
+                  "Code" : "business"
+                }
+              }
+            },
+            "Sector" : {
+              "Label" : "Pharmaceutical Industry"
+            }
+          }
+        } ],
+        "Education" : [ {
+          "Period" : {
+            "From" : {
+              "Year" : 2006,
+              "Month" : 10,
+              "Day" : 2
+            },
+            "To" : {
+              "Year" : 2011,
+              "Month" : 5,
+              "Day" : 30
+            },
+            "Current" : false
+          },
+          "ReferenceTo" : [ {
+            "idref" : "ATT_1259957816429"
+          }, {
+            "idref" : "ATT_616636261124"
+          }, {
+            "idref" : "ATT_1175056189909"
+          }, {
+            "idref" : "ATT_1918119310583"
+          } ],
+          "Title" : "PhD or equivalent",
+          "Activities" : "PhD in Chemical Engineering <br/><br/>Summa cum laude (10<br/>                    out of 10) by unanimity <br/><br/>Engineering, Polymers,<br/>                    Formulation, Soft Foams, PVC, PVC-VA, Materials Science, Technical<br/>                    Characterisation of Materials, Rotatio<br/>nal Moulding, Polymer<br/>                    Processing, Chemistry, Physics.<br/><br/>Language skills: PhD<br/>                    pursued in Spanish<br/>Academic writing in English, 8 Publications in<br/>                    peer - reviewed international scientific journals. <br/>Reviewer for 4<br/>                    peer - reviewed international scientific journals.",
+          "Organisation" : {
+            "Name" : "University of Alicante (Chemical Engineering)",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Alicante",
+                  "Country" : {
+                    "Code" : "ES",
+                    "Label" : "Spain"
+                  }
+                }
+              }
+            }
+          },
+          "Level" : {
+            "Code" : "8",
+            "Label" : "EQF level 8"
+          }
+        }, {
+          "Period" : {
+            "From" : {
+              "Year" : 2006,
+              "Month" : 10,
+              "Day" : 2
+            },
+            "To" : {
+              "Year" : 2009,
+              "Month" : 7,
+              "Day" : 28
+            },
+            "Current" : false
+          },
+          "ReferenceTo" : [ {
+            "idref" : "ATT_1583747081539"
+          } ],
+          "Title" : "Master Degree or equivalent",
+          "Activities" : "Diplom of Advanced Studies in Chemical<br/>                    Engineering<br/><br/>Excellent qualification (9,5 out of<br/>                    10)<br/><br/>Polymer Engineering, Materials Science, PVC<br/>                    Formulation, Foaming Process, Technical<br/>                    Characterization.<br/><br/>Supervision of Technicians and<br/>                    Undergraduate (Erasmus) Students, Laboratory Practice and Research<br/>                    Activities.",
+          "Organisation" : {
+            "Name" : "University of Alicante (chemical Engineering)",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Alicante",
+                  "Country" : {
+                    "Code" : "ES",
+                    "Label" : "Spain"
+                  }
+                }
+              }
+            }
+          },
+          "Level" : {
+            "Code" : "7",
+            "Label" : "EQF level 7"
+          }
+        }, {
+          "Period" : {
+            "From" : {
+              "Year" : 1999,
+              "Month" : 9,
+              "Day" : 8
+            },
+            "To" : {
+              "Year" : 2005,
+              "Month" : 2,
+              "Day" : 3
+            },
+            "Current" : false
+          },
+          "Title" : "Master Degree or equivalent",
+          "Activities" : "Master in Science degree in Chemistry<br/><br/>Organic<br/>                    Chemistry, Synthesis, Instrumental Analysis, Extra qualification as a Researcher<br/>                    in Drugs and Medicines<br/>Chromatography, NMR, FT-IR, UV-VIS, VCD.<br/>                    <br/>Optically Active Fluorophilic Compounds.",
+          "Organisation" : {
+            "Name" : "Eötvös Loránd University (ELTE, Budapest, Organic Chemistry)",
+            "ContactInfo" : {
+              "Address" : {
+                "Contact" : {
+                  "Municipality" : "Budapest",
+                  "Country" : {
+                    "Code" : "HU",
+                    "Label" : "Hungary"
+                  }
+                }
+              }
+            }
+          },
+          "Level" : {
+            "Code" : "7",
+            "Label" : "EQF level 7"
+          }
+        } ],
+        "Skills" : {
+          "Linguistic" : {
+            "MotherTongue" : [ {
+              "Description" : {
+                "Code" : "hu",
+                "Label" : "Hungarian"
+              }
+            } ],
+            "ForeignLanguage" : [ {
+              "Description" : {
+                "Label" : "GERMAN"
+              },
+              "ProficiencyLevel" : {
+                "Listening" : "C1",
+                "Reading" : "C1",
+                "SpokenInteraction" : "C1",
+                "SpokenProduction" : "C1",
+                "Writing" : "B2"
+              }
+            }, {
+              "Description" : {
+                "Label" : "ENGLISH"
+              },
+              "ProficiencyLevel" : {
+                "Listening" : "C2",
+                "Reading" : "C2",
+                "SpokenInteraction" : "C2",
+                "SpokenProduction" : "C2",
+                "Writing" : "C2"
+              }
+            }, {
+              "Description" : {
+                "Label" : "SPANISH"
+              },
+              "ProficiencyLevel" : {
+                "Listening" : "C2",
+                "Reading" : "C2",
+                "SpokenInteraction" : "C2",
+                "SpokenProduction" : "C2",
+                "Writing" : "C2"
+              },
+              "Certificate" : [ {
+                "Title" : "Diploma in Spanish as a foreign language (DELE) Nivel\n                                    Superior (C2)"
+              } ],
+              "ReferenceTo" : [ {
+                "idref" : "ATT_690031449891"
+              } ]
+            } ]
+          },
+          "Communication" : {
+            "Description" : "outstanding interpersonal and communication skills - 4<br/>                    languages<br/>international and interdisciplinary<br/>                    background<br/>effective teamwork<br/>                    skills<br/><br/>Development Programme in \"Working in<br/>                    Teams\"<br/>"
+          },
+          "Organisational" : {
+            "Description" : "Innovation management<br/>cooperative leadership<br/>                    skills<br/>supervision and leading colleagues and<br/>                    experts<br/>organising events<br/>coordinating research projects<br/>                    and collaborations"
+          },
+          "Computer" : {
+            "Description" : "MS Office, Beilstein, Chemical Abstracts, Chemdraw, Corel Draw,<br/>                    Gaussian 98W, Gimp, ImageJ, Lotus Notes, Origin, Photoshop, Phyris Perkin Elmer,<br/>                    SAP, Science Direct, Sci Finder, TA Orchestrator"
+          },
+          "Driving" : {
+            "Description" : [ "B" ]
+          }
+        },
+        "Achievement" : [ {
+          "Title" : {
+            "Label" : " "
+          },
+          "Description" : "Notice period: 2 months"
+        }, {
+          "Title" : {
+            "Label" : "Reviewer for peer - reviewed international scientific journals"
+          },
+          "Description" : "<br/>I am Reviewer of:<br/><br/>Journal of Applied<br/>                    Polymer Science <br/>Polymer Engineering Journal <br/>Journal of<br/>                    Vinyl and Additive Technology<br/>Journal of Analytical and Applied<br/>                    Pyrolysis<br/>"
+        }, {
+          "Title" : {
+            "Code" : "seminars",
+            "Label" : "Seminars"
+          },
+          "Description" : "Scientific Communication Course for Researchers / Curso de Comunicación<br/>                    Científica para Investigadores (2008)<br/>Red de Universidades<br/>                    Valencianas para el fomento de la Investigación, el Desarrollo y la Innovación<br/>                    (Ruvid)<br/><br/><br/>"
+        }, {
+          "Title" : {
+            "Code" : "publications",
+            "Label" : "Publications"
+          },
+          "Description" : "Soft PVC foams: Study of the gelation, fusion, and foaming processes.<br/>                    II. Adipate, citrate and other types of plasticizers<br/>JOURNAL OF<br/>                    APPLIED POLYMER SCIENCE<br/>Volume 122, Issue 5, 5 December 2011, Pages:<br/>                    2981–2991, Agnes Zoller and Antonio Marcilla<br/>Article first published<br/>                    online : 6 JUL 2011, DOI: 10.1002/app.34108<br/><br/>Soft PVC<br/>                    foams: Study of the gelation, fusion, and foaming processes. I. Phthalate ester<br/>                    plasticizers<br/>JOURNAL OF APPLIED POLYMER SCIENCE<br/>Volume<br/>                    121, Issue 3, 5 August 2011, Pages: 1495–1505, Agnes Zoller and Antonio<br/>                    Marcilla<br/>Article first published online : 3 MAR 2011, DOI:<br/>                    10.1002/app.33671<br/><br/>Soft PVC foams: Study of the gelation,<br/>                    fusion and foaming processes. III. Mixed phthalate ester<br/>                    plasticizers<br/>JOURNAL OF APPLIED POLYMER SCIENCE<br/>Volume<br/>                    124, Issue 4, 15 May 2012, Pages: 2691–2701, Agnes Zoller and Antonio<br/>                    Marcilla<br/>Article first published online : 3 NOV 2011, DOI:<br/>                    10.1002/app.34898<br/><br/>Extensional viscosity measurements and<br/>                    characterization of poly (vinyl chloride-co-vinyl acetate) plastisols and<br/>                    foams<br/>JOURNAL OF APPLIED POLYMER SCIENCE<br/>Volume 128, Issue<br/>                    1, 5 April 2013, Pages: 354–362, Agnes Zoller and Antonio<br/>                    Marcilla<br/>Article first published online : 2 JUL 2012, DOI:<br/>                    10.1002/app.37844<br/><br/>Rheometric study of the gelation and<br/>                    fusion processes of poly(vinyl chloride-co-vinyl acetate) plastisols with<br/>                    different commercial plasticizers<br/>JOURNAL OF VINYL AND ADDITIVE<br/>                    TECHNOLOGY<br/>Volume 18, Issue 1, March 2012, Pages: 1–8, Agnes Zoller<br/>                    and Antonio Marcilla<br/>Article first published online : 2 FEB 2012,<br/>                    DOI: 10.1002/vnl.20290<br/><br/>DSC study of foamable poly (vinyl<br/>                    chloride-co-vinyl acetate) plastisols of different commercial<br/>                    plasticizers<br/>JOURNAL OF APPLIED POLYMER SCIENCE<br/>Volume<br/>                    121, Issue 6, 15 September 2011, Pages: 3314–3321, Agnes Zoller and Antonio<br/>                    Marcilla<br/>Article first published online : 11 APR 2011, DOI:<br/>                    10.1002/app.33924<br/><br/>Plastisol gelation and fusion<br/>                    rheological aspects<br/>JOURNAL OF APPLIED POLYMER<br/>                    SCIENCE<br/>Jacques Verdu, Agnes Zoller and Antonio<br/>                    Marcilla<br/>Article first published online : 6 FEB 2013, DOI:<br/>                    10.1002/app.39005<br/><br/><br/>Plastisol foaming process.<br/>                    Part 2. Decomposition of the foaming agent, polymer behaviour in the<br/>                    corresponding temperature range and resulting foam properties. by Verdú,<br/>                    Jacques; Zoller, Agnes; Marcilla, Antonio<br/>Accepted for publication in<br/>                    Polymer Engineering and Science 2012.<br/><br/>"
+        }, {
+          "Title" : {
+            "Code" : "conferences",
+            "Label" : "Conferences"
+          },
+          "Description" : "Oral Presentation: <br/>• THERMAL DECOMPOSITION OF PVC AND<br/>                    PVC-VA PLASTISOLS AND FOAMS. INFLUENCE OF TYPE OF RESIN AND TYPE OF<br/>                    PLASTICIZER<br/>A. Zoller and A. Marcilla<br/>6th International<br/>                    Symposium on Feedstock Recycling of Polymeric Materials (ISFR2011),<br/>                    <br/>Toledo, October 5 – 7, 2011<br/><br/>Posters:<br/>                    <br/>• Production and characterization of soft PVC foams: Study of the<br/>                    Gelation, Fusion and Foaming Processes of PVC Plastisols Prepared from Phthalate<br/>                    Ester Plasticizers<br/> A. Zoller, A. Marcilla;<br/>4th Conference<br/>                    on Polymer Behavior – IUPAC International Union of Pure and Applied<br/>                    Chemistry<br/> Łodz, September 20-23, 2010<br/><br/>• Study<br/>                    of the influence of plasticizers on the extensional viscosity of PVC foamed<br/>                    plastisols<br/> A. Marcilla, J.C. García, R. Femenia, A. Zoller;<br/>                    <br/> 11th Mediterranean Congress of Chemical Engineering<br/><br/>                    Barcelona, October 21-24, 2008<br/><br/>• Thermal Decomposition of<br/>                    PVC Plastisol Foams. Influence of the type of plasticizer<br/> Marcilla,<br/>                    A. Zoller, M.I. Beltrán;<br/> EPF 2011, XII GEP Congress,<br/><br/>                    Granada, 26th June - 1st July 2011<br/><br/>• Thermal<br/>                    Decomposition of PVC Plastisol Foams. Influence of the concentration of<br/>                    plasticizer<br/>A. Marcilla, A. Zoller, M.I. Beltrán;<br/>EPF<br/>                    2011, XII GEP Congress,<br/>Granada, 26th June - 1st July<br/>                    2011<br/><br/>• THERMAL DECOMPOSITION OF PRE-CURED PVC-VA<br/>                    PLASTISOLS AND FOAMS. INFLUENCE OF THE PLASTICIZER CONCENTRATION<br/>A.<br/>                    Zoller and A. Marcilla<br/>6th International Symposium on Feedstock<br/>                    Recycling of Polymeric Materials (ISFR2011), <br/>Toledo, October 5 – 7,<br/>                    2011<br/>"
+        } ]
+      }
+    },
+    "Feedback" : [ ]
+  }
+}

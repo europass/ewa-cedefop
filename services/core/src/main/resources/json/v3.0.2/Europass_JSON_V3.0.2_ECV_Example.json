@@ -1,0 +1,845 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "DocumentInfo": {
+            "DocumentType": "ECV",
+            "CreationDate": "2013-02-21T07:47:20.086Z",
+            "LastUpdateDate": "2013-03-13T19:13:14.265+02:00",
+            "XSDVersion": "V3.0",
+            "Generator": "EWA",
+            "Comment": "Europass CV"
+        },
+        "PrintingPreferences": {
+            "ECV":[ {
+                "name": "LearnerInfo",
+                "show": true,
+                "order": "Identification Headline WorkExperience Education Skills Achievement ReferenceTo"
+            },
+            {
+                "name": "LearnerInfo.Identification",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.PersonName",
+                "show": true,
+                "order": "FirstName Surname"
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Address",
+                "show": true,
+                "format": "s,m z c"
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Email",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Telephone",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Telephone[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Website",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.Website[0]",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.Demographics.Birthdate",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.Identification.Demographics.Gender",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.Demographics.Nationality",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.Demographics.Nationality[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Identification.Photo",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Headline",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Period",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Position",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Activities",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Employer",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+                "show": true,
+                "format": "s, z m (c)"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[0].Employer.Sector",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Period",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Position",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Activities",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Employer",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Address",
+                "show": true,
+                "format": "s, z m (c)"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Employer.ContactInfo.Website",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[1].Employer.Sector",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Period",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Position",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Activities",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Employer",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Address",
+                "show": true,
+                "format": "s, z m (c)"
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Employer.ContactInfo.Website",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.WorkExperience[2].Employer.Sector",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0].Period",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.Education[0].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Education[0].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Education[0].Title",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0].Activities",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0].Organisation",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+                "show": true,
+                "format": "s,m z c"
+            },
+            {
+                "name": "LearnerInfo.Education[0].Level",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[0].Field",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1].Period",
+                "show": true,
+                "format": "text/long"
+            },
+            {
+                "name": "LearnerInfo.Education[1].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Education[1].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Education[1].Title",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1].Activities",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1].Organisation",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1].Organisation.ContactInfo.Address",
+                "show": true,
+                "format": "s,m z c"
+            },
+            {
+                "name": "LearnerInfo.Education[1].Level",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Education[1].Field",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.MotherTongue",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.MotherTongue[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[1].Certificate[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Communication",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Communication.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Communication.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Organisational",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Organisational.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Organisational.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.JobRelated",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.JobRelated.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.JobRelated.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Computer",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Computer.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Computer.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Driving",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Driving.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Driving.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Other",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Skills.Other.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Skills.Other.ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Achievement",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Achievement[0]",
+                "show": true
+            },
+            {
+                "name": "LearnerInfo.Achievement[0].ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.Achievement[0].ReferenceTo[0]",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.ReferenceTo",
+                "show": false
+            },
+            {
+                "name": "LearnerInfo.ReferenceTo[0]",
+                "show": false
+            }]
+        },
+        "LearnerInfo": {
+            "Identification": {
+                "PersonName": {
+                    "FirstName": "Betty",
+                    "Surname": "Smith"
+                },
+                "ContactInfo": {
+                    "Address": {
+                        "Contact": {
+                            "AddressLine": "32 Reading rd",
+                            "PostalCode": "B26 3QJ",
+                            "Municipality": "Birmingham",
+                            "Country": {
+                                "Code": "UK",
+                                "Label": "United Kingdom"
+                            }
+                        }
+                    },
+                    "Email": {
+                        "Contact": "hobbies@kotmail.com"
+                    },
+                    "Telephone":[ {
+                        "Contact": "+44 2012345679",
+                        "Use": {
+                            "Code": "home",
+                            "Label": "Home"
+                        }
+                    },
+                    {
+                        "Contact": "+44 7123456789",
+                        "Use": {
+                            "Code": "mobile",
+                            "Label": "Mobile"
+                        }
+                    }],
+                    "Website":[ {
+                        "Contact": "http://betty.smith.com"
+                    }],
+                    "InstantMessaging":[ {
+                        "Contact": "betty.smith",
+                        "Use": {
+                            "Code": "aim",
+                            "Label": "AOL Instant Messenger (AIM)"
+                        }
+                    },
+                    {
+                        "Contact": "betty.smith",
+                        "Use": {
+                            "Code": "skype",
+                            "Label": "Skype"
+                        }
+                    }]
+                },
+                "Demographics": {
+                    "Birthdate": {
+                        "Year": 1975,
+                        "Month": 3,
+                        "Day": 1
+                    },
+                    "Gender": {
+                        "Code": "F",
+                        "Label": "Female"
+                    },
+                    "Nationality":[ {
+                        "Code": "UK",
+                        "Label": "British"
+                    }]
+                },
+                "Photo": {
+                    "MimeType": "image/jpeg",
+                    "Data": "base 64 encoded bytes go here",
+                    "Metadata":[ {
+                        "Key": "dimension",
+                        "Value": "116x134"
+                    },
+                    {
+                        "Key": "number-of-pages",
+                        "Value": "1"
+                    }],
+                    "cropping": null
+                }
+            },
+            "Headline": {
+                "Type": {
+                    "Code": "job_applied_for",
+                    "Label": "JOB APPLIED FOR"
+                },
+                "Description": {
+                    "Label": "European project manager"
+                }
+            },
+            "WorkExperience":[ {
+                "Period": {
+                    "From": {
+                        "Year": 2002,
+                        "Month": 8
+                    },
+                    "Current": true
+                },
+                "Position": {
+                    "Label": "Independent consultant"
+                },
+                "Activities": "Evaluation of European Commission youth training support measures for youth national<br/>agencies and young people",
+                "Employer": {
+                    "Name": "British Council",
+                    "ContactInfo": {
+                        "Address": {
+                            "Contact": {
+                                "AddressLine": "123, Bd Ney",
+                                "PostalCode": "75023",
+                                "Municipality": "Paris",
+                                "Country": {
+                                    "Code": "FR",
+                                    "Label": "France"
+                                }
+                            }
+                        },
+                        "Website": {
+                            "Contact": "http://www.britishcouncil.org/",
+                            "Use": {
+                                "Code": "business"
+                            }
+                        }
+                    },
+                    "Sector": {
+                        "Code": "J",
+                        "Label": "Information and communication"
+                    }
+                }
+            },
+            {
+                "Period": {
+                    "From": {
+                        "Year": 2002,
+                        "Month": 3
+                    },
+                    "To": {
+                        "Year": 2002,
+                        "Month": 7
+                    },
+                    "Current": false
+                },
+                "Position": {
+                    "Label": "Internship"
+                },
+                "Activities": "- evaluating youth training programmes for SALTO UK and the partnership between the<br/>Council of Europe and European Commission<br/>- organizing and running a 2 day workshop on non-formal education for Action 5 large scale projects focusing on quality, assessment and recognition<br/>- contributing to the steering sroup on training and developing action plans on training for<br/>the next 3 years. Working on the Users Guide for training and the support measures",
+                "Employer": {
+                    "Name": "European Commission, Youth Unit, DG Education and Culture",
+                    "ContactInfo": {
+                        "Address": { "Contact": {
+                                "AddressLine": "200, Rue de la Loi",
+                                "PostalCode": "1049",
+                                "Municipality": "Brussels",
+                                "Country": {
+                                    "Code": "BE",
+                                    "Label": "Belgium"
+                                }
+                            }
+                        },
+                        "Website": {
+                            "Contact": "http://ec.europa.eu/index_en.htm",
+                            "Use": {
+                                "Code": "business"
+                            }
+                        }
+                    },
+                    "Sector": {
+                        "Label": "European institution"
+                    }
+                }
+            },
+            {
+                "Period": {
+                    "From": {
+                        "Year": 2001,
+                        "Month": 10
+                    },
+                    "To": {
+                        "Year": 2002,
+                        "Month": 2
+                    },
+                    "Current": false
+                },
+                "Position": {
+                    "Label": "Researcher / Independent Consultant"
+                },
+                "Activities": "Working in a research team carrying out in-depth qualitative evaluation of the 2 year Advanced Training of Trainers in Europe using participant observations, in-depth interviews and focus groups. Work carried out in training courses in Strasbourg, Slovenia and Budapest.",
+                "Employer": {
+                    "Name": "Council of Europe",
+                    "ContactInfo": {
+                        "Address": {
+                            "Contact": {
+                                "AddressLine": "32 Smith Square",
+                                "PostalCode": "SW1P 3EU",
+                                "Municipality": "Budapest",
+                                "Country": {
+                                    "Code": "HU",
+                                    "Label": "Hungary"
+                                }
+                            }
+                        },
+                        "Website": {
+                            "Contact": "http://ec.europa.eu/unitedkingdom/",
+                            "Use": {
+                                "Code": "business"
+                            }
+                        }
+                    },
+                    "Sector": {
+                        "Code": "J",
+                        "Label": "Information and communication"
+                    }
+                }
+            }],
+            "Education":[ {
+                "Period": {
+                    "From": {
+                        "Year": 1997
+                    },
+                    "To": {
+                        "Year": 2001
+                    },
+                    "Current": false
+                },
+                "Title": "PhD - Thesis Title: 'Young People in the Construction of the Virtual University, Empirical research on e-learning",
+                "Activities": "Quantative Research, Qualitive Research, Youth Psychology",
+                "Organisation": {
+                    "Name": "Brunel University",
+                    "ContactInfo": {
+                        "Address": {
+                            "Contact": {
+                                "Municipality": "London",
+                                "Country": {
+                                    "Code": "UK",
+                                    "Label": "United Kingdom"
+                                }
+                            }
+                        }
+                    }
+                },
+                "Level": {
+                    "Code": "7",
+                    "Label": "EQF level 7"
+                },
+                "Field": {
+                    "Code": "22",
+                    "Label": "Humanities"
+                }
+            },
+            {
+                "Period": {
+                    "From": {
+                        "Year": 1993
+                    },
+                    "To": {
+                        "Year": 1997
+                    },
+                    "Current": false
+                },
+                "Title": "Bachelor of Science in Sociology and Psychology",
+                "Activities": "- sociology of Risk, Sociology of Scientific Knowledge/ Information Society<br/>- E-learning and Psychology; Research Methods",
+                "Organisation": {
+                    "Name": "Brunel University",
+                    "ContactInfo": {
+                        "Address": {
+                            "Contact": {
+                                "Municipality": "London",
+                                "Country": {
+                                    "Code": "UK",
+                                    "Label": "United Kingdom"
+                                }
+                            }
+                        }
+                    }
+                },
+                "Level": {
+                    "Code": "6",
+                    "Label": "EQF level 6"
+                },
+                "Field": {
+                    "Code": "22",
+                    "Label": "Humanities"
+                }
+            }],
+            "Skills": {
+                "Linguistic": {
+                    "MotherTongue":[ {
+                        "Description": {
+                            "Code": "en",
+                            "Label": "English"
+                        }
+                    },
+                    {
+                        "Description": {
+                            "Code": "zh",
+                            "Label": "Chinese"
+                        }
+                    }],
+                    "ForeignLanguage":[ {
+                        "Description": {
+                            "Code": "fr",
+                            "Label": "French"
+                        },
+                        "ProficiencyLevel": {
+                            "Listening": "C1",
+                            "Reading": "C2",
+                            "SpokenInteraction": "B2",
+                            "SpokenProduction": "C1",
+                            "Writing": "C2"
+                        }
+                    },
+                    {
+                        "Description": {
+                            "Code": "de",
+                            "Label": "German"
+                        },
+                        "ProficiencyLevel": {
+                            "Listening": "A2",
+                            "Reading": "A2",
+                            "SpokenInteraction": "A2",
+                            "SpokenProduction": "A2",
+                            "Writing": "A2"
+                        }
+                    }]
+                },
+                "Communication": {
+                    "Description": "- team work: I have worked in various types of teams from research teams to national league hockey. For 2 years I coached my university hockey team<br/>- mediating skills: I work on the borders between young people, youth trainers, youth policy and researchers, for example running a 3 day workshop at CoE Symposium Youth Actor of Social Change, and my continued work on youth training programmes<br/>- intercultural skills: I am experienced at working in a European dimension such as being a rapporteur at the CoE Budapest youth against violence seminar and working with refugees."
+                },
+                "Organisational": {
+                    "Description": "- whilst working for a Brussels based refugee NGO Convivial I organized a Civil Dialogue<br/>between refugees and civil servants at the European Commission 20th June 2002<br/>- during my PhD I organised a seminar series on research methods"
+                },
+                "JobRelated": {
+                    "Description": "I work on the borders between young people, youth trainers, youth policy and researchers, for example running a 3 day workshop at CoE Symposium Youth Actor of Social Change, and my continued work on youth training programmes"
+                },
+                "Computer": {
+                    "Description": "- competent with most Microsoft Office programmes<br/>- experience with HTML"
+                },
+                "Driving": {
+                    "Description":[
+                    "A",
+                    "A1",
+                    "B"],
+                    "path": "LearnerInfo.Skills.Driving",
+                    "subsection": "Driving"
+                },
+                "Other": {
+                    "Description": "Creating pieces of Art and visiting Modern Art galleries. Enjoy all sports particularly hockey, football and running. Love to travel and experience different cultures."
+                }
+            },
+            "Achievement":[ {
+                "Title": {
+                    "Code": "publications",
+                    "Label": "Publications"
+                },
+                "Description": "How to do Observations: Borrowing techniques from the Social Sciences to help Participants do Observations in Simulation Exercises Coyote EU/CoE Partnership Publication, (2002)."
+            }],
+            "ReferenceTo":[ {
+                "idref": "ATT_1003502538452"
+            }]
+        },
+        "Attachment":[ {
+            "Name": "diploma.jpg",
+            "MimeType": "image/jpeg",
+            "Data": "base 64 encoded bytes go here",
+            "Metadata":[ {
+                "Key": "dimension",
+                "Value": "650x991"
+            },
+            {
+                "Key": "number-of-pages",
+                "Value": "1"
+            }],
+            "Id": "ATT_1003502538452",
+            "Description": "Postgraduate Diploma Copy"
+        }]
+    }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="MappingListRoot" type="MappingListType"/>
+    
+    <xsd:complexType name="MappingListType">
+        <xsd:complexContent>
+            <xsd:extension base="SimpleMappingListType">
+	            <xsd:sequence>
+		            <xsd:element name="MappingList" type="SimpleMappingListType" minOccurs="0" maxOccurs="1"/>
+		        </xsd:sequence>
+                <xsd:attribute name="provider" use="optional" type="xsd:string"/>
+                <xsd:attribute name="providerVersion" use="optional" type="xsd:string"/>
+                <xsd:attribute name="europassVersion" use="optional" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>        
+    </xsd:complexType>
+    
+    <xsd:complexType name="SimpleMappingListType">
+        <xsd:sequence>
+            <xsd:element name="Mapping" type="MappingType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="MappingType">
+        <xsd:sequence>
+            <xsd:element name="MappingList" type="SimpleMappingListType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="from" type="xsd:string" use="required"/>
+        <xsd:attribute name="to" type="xsd:string" use="required"/>
+        <xsd:attribute name="through" type="xsd:string" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>A througher, translator or handler object that receives the from and to objects and processes accordingly the Object before this is set to the From</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="params" type="xsd:string" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>Extra parameters that need to be passed to any of the methods</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="concrete" type="xsd:string" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>The name of the concrete implementation (cases of lists where the item is a generic type)</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

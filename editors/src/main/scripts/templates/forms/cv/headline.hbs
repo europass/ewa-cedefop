@@ -1,0 +1,148 @@
+{{#with SkillsPassport}}
+<fieldset>
+    <header>
+        <legend>
+            {{#if LearnerInfo.Headline.Type.Label}}
+                {{LearnerInfo.Headline.Type.Label}}
+            {{else}}
+                {{#alignSpecialChars . group="GuiLabel" fallbackKey="LearnerInfo.Headline.Type" cmsKey="LearnerInfo.Headline.Title"}}{{{.}}}{{/alignSpecialChars}}
+            {{/if}}
+        </legend>
+    </header>
+
+    <fieldset class="Type" name="Type">
+	<label for="Type">{{get_text "LearnerInfo.Headline.Type" group="GuiLabel"}}</label>
+        <div class="composite select" name="LearnerInfo.Headline.Type">
+            <select name="LearnerInfo.Headline.Type.Code"
+                title
+                data-help-key="LearnerInfo.Headline.Type.Label"					         
+                class="formfield single hidden_select help medium Headline Type with-placeholder"
+                rel="LearnerInfo.Headline.Type">
+                <option value="" {{#unless LearnerInfo.Headline.Type.Label}}selected="selected"{{/unless}}>{{get_text "LearnerInfo.Headline.Type" group="EditorPlaceholder"}}</option>
+                {{#if LearnerInfo.Headline.Type.Label}}
+                        {{#loopForMap LearnerInfo.Headline.Type "HeadlineTypeMap" emptyOption=false showCode=false ifEmptySetSelected=2}}
+                                <option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+                        {{/loopForMap}}
+                {{else}}
+                        {{#loopForMap LearnerInfo.Headline.Type "HeadlineTypeMap" emptyOption=false showCode=false }}
+                                <option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+                        {{/loopForMap}}
+                {{/if}}
+            </select>
+            <ul name="LearnerInfo.Headline.Type.Code"
+                title
+                data-help-key="LearnerInfo.Headline.Type.Label"					         
+                class="formfield single help medium Headline Type with-placeholder custom_select custom_select_multi"
+                rel="LearnerInfo.Headline.Type">
+                <li class="init multi_instances" data-value="" {{#unless LearnerInfo.Headline.Type.Label}}selected="selected"{{/unless}}>{{get_text "LearnerInfo.Headline.Type" group="EditorPlaceholder"}}</li>
+                <span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+                <ul>
+                    {{#if LearnerInfo.Headline.Type.Label}}
+                        {{#loopForMap LearnerInfo.Headline.Type "HeadlineTypeMap" emptyOption=false showCode=false ifEmptySetSelected=2}}
+                            <li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+                        {{/loopForMap}}
+                    {{else}}
+                        {{#loopForMap LearnerInfo.Headline.Type "HeadlineTypeMap" emptyOption=false showCode=false }}
+                            <li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+                        {{/loopForMap}}
+                    {{/if}}
+                </ul>
+            </ul>
+            <input type="hidden" 
+                name="LearnerInfo.Headline.Type.Label"
+                class="formfield Headline Type "
+                rel="LearnerInfo.Headline.Type"
+                value = "{{LearnerInfo.Headline.Type.Label}}">
+
+            <!-- div class="esco-description-area"></div -->
+
+        </div>
+    </fieldset>
+
+    <fieldset class="LearnerInfo.Headline.Description Description" name="Description">
+	<label for="Description">{{get_text "LearnerInfo.Headline.Description" group="GuiLabel"}}</label>
+		
+        <div class="composite select occupation-related" name="LearnerInfo.Headline.Description"
+            {{#headlineTypeCode LearnerInfo}}
+                {{#if_eq LearnerInfo.Headline.Type.Code compare="studies_applied_for"}}
+                    style="display: none;"
+                {{else}}
+                    {{#if_eq LearnerInfo.Headline.Type.Code compare="personal_statement"}}
+                        style="display: none;"
+                    {{else}}
+                        style="display: block;"
+                    {{/if_eq}}
+                {{/if_eq}}
+                {{else}}
+                    style="display: block;"
+            {{/headlineTypeCode}}>
+            <input type="text" 
+                class="formfield single help typeahead Headline Description with-placeholder"
+                title
+                name="LearnerInfo.Headline.Description.Label"
+                data-help-key="LearnerInfo.Headline.Description.Label"
+                rel="LearnerInfo.Headline.Description"
+                placeholder="{{get_text "LearnerInfo.Headline.Description" group="EditorPlaceholder"}}"
+                value="{{LearnerInfo.Headline.Description.Label}}"/>
+            <!--  <span name="LearnerInfo.Headline.Description.Label" class="help placeholder">
+                    {{get_text "LearnerInfo.Headline.Description" group="EditorPlaceholder"}}
+                 </span> -->
+
+            <input type="hidden" 
+                name="LearnerInfo.Headline.Description.Code"
+                value="{{LearnerInfo.Headline.Description.Code}}">
+
+            <!-- div class="esco-description-area"></div -->
+
+        </div>
+
+        <div class="non-occupation-related"
+            {{#headlineTypeCode LearnerInfo}}
+                    {{#if_eq LearnerInfo.Headline.Type.Code compare="studies_applied_for"}}
+                            style="display: block;"
+                    {{else}}
+                            style="display: none;"
+                    {{/if_eq}}
+                    {{else}}
+                        style="display:none;"
+            {{/headlineTypeCode}}>
+            <input  type="text"
+                class="formfield single help Headline Description with-placeholder"
+                title
+                name="LearnerInfo.Headline.Description.Label"
+                data-help-key="LearnerInfo.Headline.Description.Label.ForStudies"
+                data-defaultvalue="{{get_text "LearnerInfo.Headline.Description" group="EditorPlaceholder"}}"
+                rel="LearnerInfo.Headline.Description"
+                placeholder="{{get_text "LearnerInfo.Headline.Description.Label.ForStudies" group="EditorPlaceholder"}}"					
+                value="{{LearnerInfo.Headline.Description.Label}}">
+        </div>
+		
+        <div class="personal-statement"
+                {{#headlineTypeCode LearnerInfo}}
+                        {{#if_eq LearnerInfo.Headline.Type.Code compare="personal_statement"}}
+                                style="display: block;"
+                        {{else}}
+                                style="display: none;"
+                        {{/if_eq}}
+                {{else}}
+                        style="display:none;"
+                {{/headlineTypeCode}}>
+                <fieldset rel="LearnerInfo.Headline.Description.Label" class="editor">
+                    <textarea
+                        id="LearnerInfo.Headline.Description.Label-textarea"
+                        title
+                        class="rich-editor single formfield help with-placeholder"
+                        name="LearnerInfo.Headline.Description.Label"
+                        data-help-key="LearnerInfo.Headline.Description.Label.ForPersonalStatement"
+                        placeholder="{{{get_text "LearnerInfo.Headline.Description-textarea" group="EditorPlaceholder"}}}"
+                        >{{{LearnerInfo.Headline.Description.Label}}}</textarea>
+                    <span name="LearnerInfo.Headline.Description.Label" class="help placeholder" style="display:none;">
+                            {{{get_text "LearnerInfo.Headline.Description-textarea" group="EditorPlaceholder"}}}
+                    </span>
+                </fieldset> 		
+        </div>
+		
+    </fieldset>
+
+</fieldset>
+{{/with}}

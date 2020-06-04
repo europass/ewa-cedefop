@@ -1,0 +1,85 @@
+
+<h2 style="display:none;"><abbr title="Curriculum Vitae">CV</abbr> Document</h2>
+
+<div class="cv compose">
+
+<!-- 	<header class="document"> -->
+<!-- 		{{> templates/compose/cv/header}} -->
+<!-- 	</header> -->
+	
+	<dl id="Compose:LearnerInfo.Identification" 
+		class="section item opens-modal-form personal"
+		data-rel-doc="cv"
+		data-rel-clazz="PersonalInfoFormView"
+		data-rel-form="Form:LearnerInfo.Identification"
+		data-rel-section="SkillsPassport.LearnerInfo.Identification"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Identification"
+		data-rel-index=""
+		data-validation-field="date currentDate email website">
+		
+	</dl>
+	
+	<dl id="Compose:LearnerInfo.Headline" 
+		class="section item opens-modal-form nested-modal clickeffect"
+		data-rel-doc="cv"
+		data-rel-clazz="HeadlineFormView"
+		data-rel-form="Form:LearnerInfo.Headline"
+		data-rel-section="SkillsPassport.LearnerInfo.Headline"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Headline"
+		data-rel-index="">
+			
+	</dl>
+	
+	<div class="work-education-experiences-area">
+	{{#if_eq Preferences.LearnerInfo.order compare="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"}}
+                <dl id="Compose:LearnerInfo.WorkExperience" 
+			class="section work-education subsection-container Work switch">
+			
+		</dl>
+
+		<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="WorkEducation"}}class="break-page"{{/if_contains}}>
+		<dl id="Compose:LearnerInfo.Education" 
+			class="section work-education subsection-container Education">
+			
+		</dl>
+	{{else}}
+		<dl id="Compose:LearnerInfo.Education" 
+			class="section work-education subsection-container Education switch">
+			
+		</dl>
+
+		<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="WorkEducation"}}class="break-page"{{/if_contains}}>
+		<dl id="Compose:LearnerInfo.WorkExperience" 
+			class="section work-education subsection-container Work">
+				
+		</dl>
+	{{/if_eq}}
+	</div>
+	
+        <hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="Skills"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills" 
+		class="section subsection-container personalskills">
+			
+	</dl>
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Achievement}}
+	{{else}}
+		<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="Achievement"}}class="break-page"{{/if_contains}}>
+		<dl id="Compose:LearnerInfo.Achievement" 
+			class="section subsection-container additional">
+			
+		</dl>
+	{{/isEmptyObject}}
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.ReferenceTo}}
+	{{else}}
+		<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="ReferenceTo"}}class="break-page"{{/if_contains}}>
+		<dl id="Compose:LearnerInfo.ReferenceTo" 
+			class="section subsection-container annexes">
+			
+		</dl>
+	{{/isEmptyObject}}
+	
+</div>
+<!--  footer -->
+{{> templates/compose/footer}}

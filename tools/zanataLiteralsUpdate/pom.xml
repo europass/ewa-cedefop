@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.europa.cedefop.europass.webapps</groupId>
+        <artifactId>europass-webapps-tools</artifactId>
+        <version>5.0.84</version>
+    </parent>
+    
+    <artifactId>europass-webapps-tools-zanataLiteralsUpdate</artifactId>
+    <packaging>jar</packaging>
+    <name>Europass Webapps Tools : Zanata literals update</name>
+    <description>Updates zanata en keys with latest texts</description>
+    
+    <dependencies>
+        
+        <dependency>
+            <artifactId>commons-io</artifactId>
+            <groupId>commons-io</groupId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <artifactId>commons-lang</artifactId>
+            <groupId>commons-lang</groupId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <type>jar</type>
+        </dependency>
+        
+    </dependencies>
+    
+</project>

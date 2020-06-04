@@ -1,0 +1,361 @@
+<style:style style:name="_LP_Table6" style:family="table"
+			style:master-page-name="Standard">
+			<style:table-properties style:width="180.09mm"
+				fo:margin-left="-0.07mm" fo:margin-right="0mm" style:page-number="auto"
+				table:align="margins" style:may-break-between-rows="false"
+				table:border-model="separating" />
+		</style:style>
+		<style:style style:name="_LP_Table6.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="127.95mm" style:rel-column-width="46561*" />
+		</style:style>
+		<style:style style:name="_LP_Table6.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="52.14mm" style:rel-column-width="18974*" />
+		</style:style>
+		<style:style style:name="_LP_Table6.1" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="14.5mm" />
+		</style:style>
+		<style:style style:name="_LP_Table6.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:background-color="transparent"
+				fo:padding="0mm" fo:border-left="none" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_LP_Table6.2" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.01mm" />
+		</style:style>
+		<style:style style:name="_LP_Table6.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding="0mm" fo:border-left="none" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_LP_Table10" style:family="table">
+			<style:table-properties style:width="180mm"
+				table:align="center" style:may-break-between-rows="false"
+				table:border-model="separating" />
+		</style:style>
+		<style:style style:name="_LP_Table10.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="44.98mm" />
+		</style:style>
+		<style:style style:name="_LP_Table10.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="135.03mm" />
+		</style:style>
+		<style:style style:name="_LP_Table10.1" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="13.23mm" />
+		</style:style>
+		<style:style style:name="_LP_Table10.A1" style:family="table-cell">
+			<style:table-cell-properties fo:padding="0mm" 
+				fo:border="none" />
+		</style:style>
+		<style:style style:name="_LP_Table10.B1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding="0mm" fo:border="none" />
+		</style:style>   
+		<style:style style:name="_LP_Table11" style:family="table"
+			style:master-page-name="Standard">
+			<style:table-properties style:width="180.02mm"
+				fo:margin-left="0mm" fo:margin-right="0mm" style:page-number="auto"
+				table:align="margins" style:may-break-between-rows="false"
+				table:border-model="separating" />
+		</style:style>
+		<style:style style:name="_LP_Table11.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="128.01mm" style:rel-column-width="46598*" />
+		</style:style>
+		<style:style style:name="_LP_Table11.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="52.02mm" style:rel-column-width="18937*" />
+		</style:style>
+		<style:style style:name="_LP_Table11.1" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="14.5mm" />
+		</style:style>
+		<style:style style:name="_LP_Table11.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:background-color="transparent"
+				fo:padding="0mm" fo:border-left="none" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_LP_Table11.2" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.01mm" />
+		</style:style>
+		<style:style style:name="_LP_Table11.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding="0mm" fo:border-left="none" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_LP_Table14" style:family="table">
+			<style:table-properties style:width="267.02mm"
+				table:align="margins" style:may-break-between-rows="false" />
+		</style:style>
+		<style:style style:name="_LP_Table14.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="133.51mm" style:rel-column-width="32767*" />
+		</style:style>
+		<style:style style:name="_LP_Table14.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="133.51mm" style:rel-column-width="32768*" />
+		</style:style>
+		<style:style style:name="_LP_Table14.1" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="5.01mm" />
+		</style:style>
+		<style:style style:name="_LP_Table14.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding="0mm" fo:border="none" />
+		</style:style>
+		<style:style style:name="_LP_MP1" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_1stPage_5f_Header_5f_LP">
+			<style:text-properties officeooo:rsid="003ae8a3" />
+		</style:style>	
+		<style:style style:name="_LP_MP2" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_footer_5f_text">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+		</style:style>
+		<style:style style:name="_LP_MP3" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_footer_5f_copyright">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0053e09d" />
+		</style:style>
+		<style:style style:name="_LP_MP4" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_Pages_5f_page_5f_number">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01405ad0" />
+		</style:style>
+		<style:style style:name="_LP_MP5" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_Pages_5f_Header">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties style:font-name="Arial1"
+				fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_LP_MP6" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_footer_5f_copyright">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0053e09d"
+				officeooo:paragraph-rsid="01780bcf" />
+		</style:style>
+		<style:style style:name="_LP_MP7" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:text-properties
+				officeooo:paragraph-rsid="01780bcf" />
+		</style:style>
+		<style:style style:name="_LP_MP8" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_grid_5f_Title">
+			<style:text-properties officeooo:rsid="0163d6d7"
+				officeooo:paragraph-rsid="0163d6d7" />
+		</style:style>
+		<style:style style:name="_LP_MP9" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_grid_5f_footer">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0044568a"
+				officeooo:paragraph-rsid="0164d68f" />
+		</style:style>
+		<style:style style:name="_LP_MP10" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_page_5f_number">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="0164d68f" />
+		</style:style>
+		<style:style style:name="_LP_MT1" style:family="text">
+			<style:text-properties officeooo:rsid="0053e09d" />
+		</style:style>
+		<style:style style:name="_LP_MT2" style:family="text">
+			<style:text-properties officeooo:rsid="002c86a9" />
+		</style:style>	
+
+        <!-- 		NEW STYLE NO LOGO -->
+		<style:style style:name="_LP_MP1_NO_LOGO" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_1stPage_5f_Header_5f_No_Logo">
+			<style:text-properties officeooo:rsid="003ae8a3" />
+		</style:style>
+        <style:style style:name="_LP_Table10.A1_No_Logo" style:family="table-cell">
+			<style:table-cell-properties fo:padding-top="1.4mm" fo:border="none" 
+			fo:text-align="left"  style:vertical-align="middle"   />
+		</style:style>
+		<style:style style:name="_LP_Table10.B1_No_Logo" style:family="table-cell">
+			<style:table-cell-properties fo:padding-top="1.4mm" fo:border="none"
+			fo:text-align="right"  style:vertical-align="middle"  />
+		</style:style>
+
+		<style:style style:name="_LP_MT3" style:family="text">
+			<style:text-properties officeooo:rsid="0044568a" />
+		</style:style>
+		<style:style style:name="_LP_Mfr1" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties style:wrap="parallel"
+				style:number-wrapped-paragraphs="1" style:wrap-contour="false"
+				style:vertical-pos="from-top" style:vertical-rel="paragraph"
+				style:horizontal-pos="from-left" style:horizontal-rel="paragraph"
+				style:shadow="none" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)"
+				draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%"
+				draw:blue="0%" draw:gamma="100%" draw:color-inversion="false"
+				draw:image-opacity="100%" draw:color-mode="standard" />
+		</style:style>
+		<style:style style:name="_LP_Mfr2" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties fo:margin-left="0mm"
+				fo:margin-right="0mm" style:wrap="none" style:vertical-pos="middle"
+				style:vertical-rel="text" style:horizontal-pos="center"
+				style:horizontal-rel="paragraph" style:mirror="none"
+				fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%"
+				draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%"
+				draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%"
+				draw:color-mode="standard" />
+		</style:style>
+		<style:page-layout style:name="_LP_Mpm1">
+			<style:page-layout-properties
+				fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1"
+				style:print-orientation="portrait" fo:margin-top="20mm"
+				fo:margin-bottom="20mm" fo:margin-left="20mm" fo:margin-right="20mm"
+				style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+				<style:footnote-sep style:width="0.18mm"
+					style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm"
+					style:line-style="solid" style:adjustment="left" style:rel-width="25%"
+					style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style>
+				<style:header-footer-properties
+					fo:min-height="0mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-bottom="4.99mm" />
+			</style:header-style>
+			<style:footer-style />
+		</style:page-layout>
+		<style:page-layout style:name="_LP_Mpm2">
+			<style:page-layout-properties
+				fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1"
+				style:print-orientation="portrait" fo:margin-top="13mm"
+				fo:margin-bottom="11.01mm" fo:margin-left="14.99mm" fo:margin-right="14.99mm"
+				style:shadow="none" fo:background-color="transparent"
+				style:register-truth-ref-style-name="_5f_ELP_5f_Table_5f_Titles"
+				style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0"
+				style:layout-grid-lines="20" style:layout-grid-base-height="7.06mm"
+				style:layout-grid-ruby-height="3.53mm" style:layout-grid-mode="none"
+				style:layout-grid-ruby-below="false" style:layout-grid-print="false"
+				style:layout-grid-display="false" style:footnote-max-height="0mm">
+				<style:background-image />
+				<style:columns fo:column-count="1" fo:column-gap="0mm" />
+				<style:footnote-sep style:width="0.18mm"
+					style:distance-after-sep="1.01mm" style:line-style="solid"
+					style:adjustment="left" style:rel-width="25%" style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style>
+				<style:header-footer-properties
+					svg:height="11.99mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-bottom="0mm" style:dynamic-spacing="true" />
+			</style:header-style>
+			<style:footer-style>
+				<style:header-footer-properties
+					svg:height="30mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-top="7mm" style:dynamic-spacing="false" />
+			</style:footer-style>
+		</style:page-layout>
+		<style:page-layout style:name="_LP_Mpm3">
+			<style:page-layout-properties
+				fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1"
+				style:print-orientation="portrait" fo:margin-top="13mm"
+				fo:margin-bottom="11.01mm" fo:margin-left="14.99mm" fo:margin-right="14.99mm"
+				style:shadow="none" fo:background-color="transparent"
+				style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0"
+				style:layout-grid-lines="20" style:layout-grid-base-height="7.06mm"
+				style:layout-grid-ruby-height="3.53mm" style:layout-grid-mode="none"
+				style:layout-grid-ruby-below="false" style:layout-grid-print="true"
+				style:layout-grid-display="true" style:footnote-max-height="0mm">
+				<style:background-image />
+				<style:columns fo:column-count="1" fo:column-gap="0mm" />
+				<style:footnote-sep style:width="0.18mm"
+					style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm"
+					style:line-style="solid" style:adjustment="left" style:rel-width="25%"
+					style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style>
+				<style:header-footer-properties
+					fo:min-height="17.99mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-bottom="4.99mm" style:dynamic-spacing="false" />
+			</style:header-style>
+			<style:footer-style>
+				<style:header-footer-properties
+					svg:height="30mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-top="07mm" style:dynamic-spacing="false" />
+			</style:footer-style>
+		</style:page-layout>
+		<style:page-layout style:name="_LP_Mpm4">
+			<style:page-layout-properties
+				fo:page-width="297mm" fo:page-height="210.01mm" style:num-format="1"
+				style:print-orientation="landscape" fo:margin-top="4.99mm"
+				fo:margin-bottom="11.01mm" fo:margin-left="14.99mm" fo:margin-right="14.99mm"
+				style:shadow="none" fo:background-color="transparent"
+				style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0"
+				style:layout-grid-lines="18" style:layout-grid-base-height="7.06mm"
+				style:layout-grid-ruby-height="3.53mm" style:layout-grid-mode="none"
+				style:layout-grid-ruby-below="false" style:layout-grid-print="true"
+				style:layout-grid-display="true" style:footnote-max-height="0mm">
+				<style:background-image />
+				<style:columns fo:column-count="1" fo:column-gap="0mm" />
+				<style:footnote-sep style:width="0.18mm"
+					style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm"
+					style:line-style="solid" style:adjustment="left" style:rel-width="25%"
+					style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style>
+				<style:header-footer-properties
+					fo:min-height="15.01mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-bottom="4mm" style:dynamic-spacing="true" />
+			</style:header-style>
+			<style:footer-style>
+				<style:header-footer-properties
+					fo:min-height="6.99mm" fo:margin-left="0mm" fo:margin-right="0mm"
+					fo:margin-top="1.99mm" style:dynamic-spacing="true" />
+			</style:footer-style>
+		</style:page-layout>
+		<style:page-layout style:name="_LP_Mpm5">
+			<style:page-layout-properties
+				fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1"
+				style:print-orientation="portrait" fo:margin-top="10mm"
+				fo:margin-bottom="10mm" fo:margin-left="20mm" fo:margin-right="10mm"
+				style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+				<style:footnote-sep style:width="0.18mm"
+					style:distance-before-sep="1.01mm" style:distance-after-sep="1.01mm"
+					style:line-style="solid" style:adjustment="left" style:rel-width="25%"
+					style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style />
+			<style:footer-style />
+		</style:page-layout>
+		<style:page-layout style:name="_LP_Mpm6">
+			<style:page-layout-properties
+				fo:page-width="210.01mm" fo:page-height="297mm" style:num-format="1"
+				style:print-orientation="portrait" fo:margin-top="20mm"
+				fo:margin-bottom="20mm" fo:margin-left="20mm" fo:margin-right="20mm"
+				style:writing-mode="lr-tb" style:footnote-max-height="0mm">
+				<style:footnote-sep style:line-style="solid"
+					style:adjustment="left" style:rel-width="25%" style:color="#000000" />
+			</style:page-layout-properties>
+			<style:header-style />
+			<style:footer-style />
+		</style:page-layout>

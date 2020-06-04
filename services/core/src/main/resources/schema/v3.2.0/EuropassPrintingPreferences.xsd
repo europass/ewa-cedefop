@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+       /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    
+    <!--  -->
+    <xsd:include schemaLocation="http://europass.cedefop.europa.eu/xml/included/EuropassAddressFormats_V1.3.0.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included "EuropassAddressFormats" schema defines the alternatives in formatting the address information dependent on the country of address. 
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    
+    <xsd:complexType name="PrintingPreferencesType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines an element which describes the printing preferences for the XML elements which are shown in the printed versions of the Europass Documents.
+                The printing preferences include options for showing/hiding specific fields (e.g. date of birth), sections (Specific work experience item) or entire lists (List of Foreign languages)
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Document" type="DocumentPreferencesType" minOccurs="1" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        The set of printing preferences are defined on a per-document basis. Initially the cardinality of this field is one.
+                        However we could envision an expanded XML which will include multiple Document elements, each defining its own printing preferences and thus describing a different document export.
+                        E.g. Document for a Europass CV and Document for a Europass LP.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DocumentPreferencesType">
+        <xsd:sequence>
+            <xsd:element name="Field" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        Contains four attributes: the name is mapped to a CV/LP XML element and is required. The rest attributes keep, format and before, define whether the element will be displayed, the formatting to be used and the order of its appearance respectively.
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:complexType>
+                    <xsd:attribute name="name" type="FieldNames" use="required"/>
+                    <xsd:attribute name="show" type="xsd:boolean"/>
+                    <xsd:attribute name="format" type="SimpleFieldFormats"/>
+                    <xsd:attribute name="order" type="OrderNames"/>
+                    <xsd:attribute name="position" type="PositionNames"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="type" type="DocumentTypeEnumeration" use="required"/>
+    </xsd:complexType>
+    <xsd:simpleType name="DocumentTypeEnumeration">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ECV"/>
+            <xsd:enumeration value="ELP"/>
+            <xsd:enumeration value="ECL"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- Valid types for the "format" attribute -->
+    <xsd:simpleType name="SimpleFieldFormats">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the supported patterns for formatting various fields. Currently date and address formats are supported. 
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:union memberTypes="DateFieldFormatPattern AddressFieldFormatPattern"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="DateFieldFormatPattern">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the supported pattern for formatting dates.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">	
+            <xsd:enumeration value="text/short"/>
+			<xsd:enumeration value="text/long"/>
+            <xsd:enumeration value="text/long/suffix"/>
+            <xsd:enumeration value="text/long/texts"/>
+			<xsd:enumeration value="numeric/long"/>
+			<xsd:enumeration value="numeric/medium"/>
+			<xsd:enumeration value="numeric/short"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="OrderNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the "order" attribute of afield element.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="FirstName Surname"/>
+            <xsd:enumeration value="Surname FirstName"/>
+            <xsd:enumeration value="Title FirstName Surname"/>
+            <xsd:enumeration value="Title Surname FirstName"/>
+            <xsd:enumeration value="FirstName Surname Title"/>
+            <xsd:enumeration value="Surname FirstName Title"/>
+            <xsd:enumeration value="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"/>
+            <xsd:enumeration value="Identification Headline Education WorkExperience Skills Achievement ReferenceTo"/>
+            <xsd:enumeration value="Identification Skills ReferenceTo"/>
+            <xsd:enumeration value="Addressee Letter.SubjectLine Letter.OpeningSalutation Letter.Body Letter.Localisation Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Letter.SubjectLine Addressee Letter.OpeningSalutation Letter.Body Letter.Localisation Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Letter.Localisation Addressee Letter.SubjectLine Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Letter.SubjectLine Addressee Letter.Localisation Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Letter.Localisation Letter.SubjectLine Addressee Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Addressee Letter.Localisation Letter.SubjectLine Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Addressee Letter.SubjectLine Letter.Localisation Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+            <xsd:enumeration value="Date Place"/>
+            <xsd:enumeration value="Place Date"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="PositionNames">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="left-align"/>
+            <xsd:enumeration value="right-align"/>
+            <xsd:enumeration value="middle-align"/>
+        </xsd:restriction>    
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="FieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the name attribute of the field element.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:union memberTypes="SimpleFieldNames 
+                                WorkExperienceDetailFieldNames
+                                EducationDetailFieldNames
+                                ForeignLanguageCertificateFieldNames
+                                ForeignLanguageExperienceFieldNames
+                                CoverLetterFieldNames"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="SimpleFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Lists the allowed texts to be used for the name attribute of the field element, having them correspond to the XML element of the learnerinfo root element.
+                NOTE: The names correspond to the JSON paths of the corresponding JSON field.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="LearnerInfo"/>
+            <xsd:enumeration value="LearnerInfo.Identification.PersonName"/>
+            <xsd:enumeration value="LearnerInfo.Identification.ContactInfo.Address"/>
+            <xsd:enumeration value="LearnerInfo.Identification.Demographics.Birthdate"/>
+            <xsd:enumeration value="LearnerInfo.CEFLanguageLevelsGrid"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="WorkExperienceDetailFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the name attribute of the field elements that refer to a specific work experirence.
+                Fields that may be hidden:
+                    - Period, 
+                    - the contact address of the employer
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="LearnerInfo\.WorkExperience\[\d+\]\.(Period|Employer\.ContactInfo\.Address)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="EducationDetailFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the name attribute of the field elements that refer to a specific educational experirence.
+                Fields that may be hidden:
+                - Period, 
+                - the contact address of the organisation
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="LearnerInfo\.Education\[\d+\]\.(Period|Organisation\.ContactInfo\.Address)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="ForeignLanguageCertificateFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the name attribute of the field elements that refer to a specific foreign language.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="LearnerInfo\.Skills\.Linguistic\.ForeignLanguage\[\d+\]\.Certificate\[\d+\]\.Date"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ForeignLanguageExperienceFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed texts to be used for the name attribute of the field elements that refer to a specific foreign language.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="LearnerInfo\.Skills\.Linguistic\.ForeignLanguage\[\d+\]\.Experience\[\d+\]\.Period"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+ 
+    <xsd:simpleType name="CoverLetterFieldNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines the allowed text to be used for the name attribute of the field elements that refer to the layout and printing preferences of the Cover Letter.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CoverLetter"/>
+            <xsd:enumeration value="CoverLetter.Addressee"/>
+            <xsd:enumeration value="CoverLetter.Addressee.PersonName"/>
+            <xsd:enumeration value="CoverLetter.Addressee.Organisation.ContactInfo.Address"/>
+            <xsd:enumeration value="CoverLetter.Letter.Localisation"/>
+            <xsd:enumeration value="CoverLetter.Letter.Localisation.Date"/>
+            <xsd:enumeration value="CoverLetter.Letter.ClosingSalutation"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

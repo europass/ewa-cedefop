@@ -1,0 +1,84 @@
+/*GENERAL CHANGES
+**********************************************************************/
+
+
+aside.right {
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    /*  EWA-1778 */
+    /*	    min-height: 716px;*/
+    min-height: 600px;
+    width: @aside-right-width;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    /*ebat added a white background and a left border due to a problem in LanguagesGrid - overlay*/
+    background-color: #f2f2f2;
+    border-left: 1px solid #ffffff;
+  }
+}
+
+#aside-right-upper,
+#aside-right-lower {
+  width: @aside-right-width;
+  background: @aside-right-bg;
+}
+
+#aside-right-upper #DocumentControls{
+  .enable-person-name-section.enable-person-name-section.enable-person-name-section{
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 36px;
+  }
+  .enable-person-name-switch.enable-person-name-switch.enable-person-name-switch {
+    background-color: #ccc;
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(../images/switch_off_medium.png?version=${project.version});
+    background-position: 2.8rem 0.55rem;
+    background-repeat: no-repeat;
+    &.enable-name{
+      background-color:#128EC4;
+      &:before{
+        transform: translateX(30px);
+      }
+      &:after{
+        display:block;
+      }
+    }
+    &:before {
+      transform: translateX(0);
+      border-radius: 50%;
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 12px;
+      bottom: 9px;
+      background-color: white;
+      z-index: 10;
+    }
+    &::after{
+      display:none;
+      position:absolute;
+      top:50%;
+      transform:translatey(-50%);
+      font-family: "europass-application" !important;
+      content:"\e928";
+      left:10px;
+      color:white;
+      font-size:20px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!-- <div class="note">
+	<p>{{get_text "LearnerInfo.Identification.Signature.Dimensions" group="EditorHelp"}}</p>
+	<p>{{get_smart_text "LearnerInfo.Identification.Signature.Types" group="EditorHelp" replacements="[ { \"key\" : \"[[signature.valid.types]]\", \"value\" :\"signaturetypes\" } ]" }}</p>
+	<p>{{get_smart_text "LearnerInfo.Identification.Signature.Files" group="EditorHelp" replacements="[ { \"key\" : \"[[signature.max.size]]\", \"value\" :\"signaturesize\" } ]"}}</p>
+</div> -->
+
+<fieldset style="margin-bottom:20px">
+	<legend class="notification warning">
+		<p>{{get_text "LearnerInfo.Identification.Signature.Dimensions" group="EditorHelp"}}</p>
+		<p>{{get_smart_text "LearnerInfo.Identification.Signature.Types" group="EditorHelp" replacements="[ { \"key\" : \"[[signature.valid.types]]\", \"value\" :\"signaturetypes\" } ]" }}</p>
+		<p>{{get_smart_text "LearnerInfo.Identification.Signature.Files" group="EditorHelp" replacements="[ { \"key\" : \"[[signature.max.size]]\", \"value\" :\"signaturesize\" } ]"}}</p>
+	</legend>
+	<div class="uploaded-files"></div>
+</fieldset>
+<div class="browse-file-area">
+    <span class="u-highlight-text">{{get_text "Help.SkillsPassport.Attachment.Add.File.Label" group="EditorHelp"}}</span>
+    <menu class="Signature choose-file" data-photo="false" data-signature="true">
+        <span class="button blue upload" title="{{get_text "import.wizard.location.option.local" group="GuiLabel"}}">
+			<span class="title">{{get_text "LearnerInfo.Identification.Signature.Upload" group="GuiLabel"}}</span>
+			<input type="file" name="file" size="1">
+		</span>
+        <span class="button blue upload cloud-attach-action" data-attach-cloud="googledrive" data-index="1"
+              title="{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}">
+            <span class="title">
+                <span>{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}</span>
+            </span>
+        </span>
+        <span class="button blue upload cloud-attach-action" data-attach-cloud="onedrive" data-index="2"
+              title="{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}">
+            <span class="title">
+                <span>{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}</span>
+            </span>
+        </span>
+        <span class="button blue upload cloud-attach-action" data-attach-cloud="dropbox" data-index="3"
+              title="{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}">
+            <span class="title">
+                <span>{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}</span>
+            </span>
+        </span>
+	</menu>
+</div>
+<div class="upload feedback-area"></div>
+
+<div class="existing-signature-details">
+	{{> templates/forms/signature/signaturedisplay}}
+</div>

@@ -1,0 +1,23 @@
+<footer>
+	<div class="document">
+		<span class="document-copyright">{{get_text "footerCopyright" group="GuiLabel"}}</span>
+        <span class="document-europass-link">
+			{{#if_eq locale compare="sr-cyr"}}
+                <a href="http://europass.cedefop.europa.eu/legal-notice"
+                   title="{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}"
+                   target="_blank">{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}</a>
+            {{else}}
+                {{#if_eq locale compare="sr-lat"}}
+                    <a href="http://europass.cedefop.europa.eu/legal-notice"
+                       title="{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}"
+                       target="_blank">{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}</a>
+                {{ else }}
+                    <a href="http://europass.cedefop.europa.eu/{{locale}}/legal-notice"
+                       title="{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}"
+                       target="_blank">{{get_text "/ewa/ewa-global/footer/legal-notice" group="GuiLabel"}}</a>
+                {{/if_eq}}
+            {{/if_eq}}
+		</span>
+	</div>
+</footer>
+

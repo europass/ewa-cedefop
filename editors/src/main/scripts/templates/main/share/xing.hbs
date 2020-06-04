@@ -1,0 +1,20 @@
+<div class="ui-xing-area ui-job-portal-area drawer default" id="xing-default">
+    <div class="note job-portal">
+        <div class="text post">{{get_text "export.wizard.step.xing.details" group = "GuiLabel"}}&nbsp;&nbsp;</div>
+        <fieldset class="feedback-area" id="xing-warning-msg">
+            <section class="notification error" style="">
+                <div data-rel-key="" class="message-area">
+                    <p></p>
+                </div>
+            </section>
+        </fieldset>
+        <div class="text emailNote warning">{{get_text "export.wizard.xing.missing.email" group = "GuiLabel"}}&nbsp;&nbsp;</div>
+        <div class="ui-terms">
+            <fieldset class="environmentInfo">
+                <input id="xing-terms-check" name="xing-terms-check" value="xing-terms-check" type="checkbox" class="css-checkbox formfield">
+                <label for="xing-terms-check" class="css-label formfield-label">{{get_text "export.wizard.step.xing.policies" group = "GuiLabel"}}</label>
+            </fieldset>
+        </div>  
+        <button id="btn-submit-to-xing" class="button orange submit">{{get_text	"Buttons.Xing.Post" group = "GuiLabel"}}</button>
+    </div>
+</div>

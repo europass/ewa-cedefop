@@ -1,0 +1,42 @@
+<menu class="ecl-controls">
+    <span class="heading">{{get_text "Extra.LearnerInfo.ECL" group="GuiLabel"}}</span>
+	<div class ="alignment-btns">
+	 	<button type="button" 
+	 		data-rel-doc="ecl" 
+	 		data-rel-origin="click-origin-controls"
+			data-rel-help-section="Help.SkillsPassport.CoverLetter.Letter.Body"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.Body"
+			data-rel-index="" 
+			rel="tooltip"
+			class="cl-justification justify {{#show}}blue-pressed{{/show}} button tip spot tip-adj tip-addTop-15pixels" >
+			<span class="img"></span>
+			<span class="data-title" style="display:none">{{get_text "Help.SkillsPassport.CoverLetter.Button.Justify" group="EditorHelp"}}</span>
+			</button>
+	 	<button type="button" 
+	 		data-rel-doc="ecl" 
+	 		data-rel-origin="click-origin-controls"
+			data-rel-help-section="Help.SkillsPassport.CoverLetter.Letter.Body"
+			data-rel-section="SkillsPassport.CoverLetter.Letter.Body"
+			data-rel-index="" 
+			rel="tooltip"
+			class="cl-justification unjustify {{^show}}blue-pressed{{/show}} button tip spot tip-adj tip-addTop-15pixels" >
+			<span class="img"></span>
+			<span class="data-title" style="display:none">{{get_text "Help.SkillsPassport.CoverLetter.Button.Unjustify" group="EditorHelp"}}</span>
+		</button>
+	</div>
+
+    <span class="heading">{{get_text "Extra.LearnerInfo.ECL.Signature.Enable.Name" group="GuiLabel"}}</span>
+    <div class="enable-person-name-section">
+        <button type="button"
+                data-rel-doc="ecl"
+                data-rel-origin="click-origin-controls"
+                data-rel-help-section=""
+                data-rel-section=""
+                data-rel-index=""
+                rel="tooltip"
+                class="enable-person-name-switch {{#showEnabledName}}enable-name{{/showEnabledName}}">
+            <span class="enable-signature-person"></span>
+        </button>
+    </div>
+
+</menu>

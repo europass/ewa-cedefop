@@ -1,0 +1,4 @@
+- The list of accepted values for formatting dates is enriched to include "text/long/texts". 
+  This format is used when the address format includes the full day and year numbers, the full month name and also any arbitrary texts.
+  E.g. in French "le 12 avril 2014"
+  

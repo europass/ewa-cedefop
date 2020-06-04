@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2015
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="./providers/XmlDigitalSignature.xsd"/>
+	
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	<xsd:include schemaLocation="./DocumentInformation.xsd"/>
+	<xsd:include schemaLocation="./PersonName.xsd"/>
+	<xsd:include schemaLocation="./ContactInformation.xsd"/>
+	<xsd:include schemaLocation="./Headline.xsd"/>
+	<xsd:include schemaLocation="./Organisation.xsd"/>
+	
+	<xsd:complexType name="SignedDocumentInfoType">
+		<xsd:complexContent>
+			<xsd:extension base="DocumentInfoType">
+				<xsd:sequence>
+					<xsd:element name="SigningInfo" type="SigningInfoType" minOccurs="0"/>
+					<xsd:element name="DocumentReference" type="DocumentReferenceType"/>
+					<xsd:element name="ValidationInfo" type="ValidationInfoType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SigningInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Provides information (signee person/organisation, date, digital signature) on the signature of the specific document.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="SingeeList">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A list of person/organisation that validate with their signature the current document.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Signee" type="SigneeType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Date" type="DateType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The date when the digital signature is added.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ds:Signature">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Contains information about the digital signature used to sign the current document, as well as the signing details.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SigneeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Describes a person/organisation that validates with her/it signature the current document.
+				The signee must include a person name. Optionally it may also include the contact info and headline (position, jurisdiction) of this person.
+				It may also include the organisation to which this person belongs to and in the name of which the signing is performed.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PersonName" type="PersonNameType"/>
+			<xsd:element name="Headline" type="HeadlineType" minOccurs="0"/>
+			<xsd:element name="ContactInfo" type="ContactInfoType" minOccurs="0"/>
+			<xsd:element name="Organisation" type="OrganisationType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ValidationInfoType">
+		<xsd:sequence>
+			<xsd:element name="Procedure" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Describe the procedure in order to validate the contents of this document.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DocumentReferenceType">
+		<xsd:attribute name="uri" type="xsd:anyURI">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">A uri under which the current document resides as resource</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="id" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">An id that identifies the current document</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	
+</xsd:schema>

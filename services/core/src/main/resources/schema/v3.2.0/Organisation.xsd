@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:nace="http://europass.cedefop.europa.eu/NACE" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+
+    <!--
+       /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:import namespace="http://europass.cedefop.europa.eu/NACE" 
+        schemaLocation="http://europass.cedefop.europa.eu/xml/imported/NACE_COM_V1.0.0.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The NACE namespace defines a list of business sectors codes, which are used to describe the information of a work experience.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:import>
+    
+    <xsd:include schemaLocation="CommonTypes.xsd"/>
+    <xsd:include schemaLocation="ContactInformation.xsd"/>
+
+    <!-- Organisation -->
+    <xsd:complexType name="OrganisationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines an abstract organisation type. An organisation is generally described by a name and an address. 
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ContactInfo" type="OrganisationalContactInfoType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <!-- Contact Information of Organisations-->
+    <xsd:complexType name="OrganisationalContactInfoType">
+        <xsd:sequence>
+            <xsd:element name="Address" type="ContactAddressType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Website" type="OrganisationalWebsiteType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="OrganisationalWebsiteType">
+        <xsd:complexContent>
+            <xsd:restriction base="ContactMethodType">
+                <xsd:sequence>
+                    <xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+                    <xsd:element name="Use" minOccurs="0" maxOccurs="1" type="OrganisationalWebsiteUseType"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="OrganisationalWebsiteUseType">
+        <xsd:complexContent>
+            <xsd:restriction base="LabelType">
+                <xsd:sequence>
+                    <xsd:element name="Code" minOccurs="0" type="xsd:string" fixed="business"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="EmployerType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines an organisation providing employment by extending the abstract organisation type to include information about the business sector the company belongs to.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="OrganisationType">
+                <xsd:sequence>
+                    <xsd:element name="Sector" type="BusinesSectorType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- Business Sector -->
+    <xsd:complexType name="BusinesSectorType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a business sector. The business sector is described by a code and a label. E.g. code: P, label: Education.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="LabelType">
+                <xsd:sequence>
+                    <xsd:element name="Code" minOccurs="0" type="nace:sector-level1">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">
+                                The business sector code type is define in the imported schema of NACE. 
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+</xsd:schema>

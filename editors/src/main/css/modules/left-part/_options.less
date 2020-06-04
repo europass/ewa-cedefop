@@ -1,0 +1,176 @@
+#AppSettingsForm {
+  color: @quite-dark-grey;
+  font-size: 16px;
+  .appsettings-info {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 770px;
+    z-index: 1002;
+    font-size: 1 rem;
+    text-align: left;
+    .side-left {
+      display: none;
+      button.green {
+        float: right;
+        margin-top: 15px;
+        margin-right: 5rem;
+        height: 3.8rem
+      }
+    }
+    button.close {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      right: -30px;
+    }
+    .ui-settings-area {
+      .box-sizing;
+      overflow-y: visible;
+      overflow-x: hidden;
+      height: 100%;
+      width: 90%;
+      padding: 30px 5rem;
+      /* Making the vertical overflow hidden due to an unexpected scrollbar appearance during animation */
+      /*overflow-y: auto;*/
+      /* 			&.scrollable .viewport .overview{ */
+      /* 			 	width: 100% !important; */
+      /* 			} */
+      .heading {
+        /* EWA-1829 */
+        font-size: 2rem;
+        display: inline-block;
+        margin: 10px 0 40px 0;
+      }
+      .settings-options {
+        height: 15rem;
+        &.include-europass-logo {
+          margin-top: 2rem;
+          margin-bottom: -3rem;
+        }
+        &.store-data-locally {
+          margin-top: 5rem;
+          margin-bottom: 2rem;
+        }
+        .application-choice {
+          display: inline-block;
+          width: 98%;
+          .selection-label {
+            color: @grey-dark-text-two;
+            font-size: 1.5rem;
+            float: left;
+            width: 24rem;
+            line-height: 2rem;
+          }
+          .selection-switch {
+            position: relative;
+            .onoff-switch-mixin;
+            .include-europass-logo-switch,
+            .store-data-locally-switch {
+              /* 			            float: right; */
+              /* 					    position: absolute; */
+              /* 					    right: -9rem;; */
+              left: 3.4rem;
+              top: 1.5rem;
+            }
+          }
+        }
+        .option-description {
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+          margin-top: 1.5rem;
+          width: 23rem;
+          color: @very-dark-grey;
+        }
+      }
+      .settings-modal-divider {
+        height: 0.2rem;
+        width: 508px;
+        background: linear-gradient(bottom, @startClr, @endClr) no-repeat;
+        background: -o-linear-gradient(bottom, @startClr, @endClr) no-repeat;
+        background: -moz-linear-gradient(bottom, @startClr, @endClr) no-repeat;
+        background: -ms-linear-gradient(bottom, @startClr, @endClr) no-repeat;
+        background: -webkit-linear-gradient(bottom, @startClr, @endClr) no-repeat;
+        background: -webkit-gradient(linear, left bottom, left top, from(@startClr), to(@endClr)) no-repeat;
+      }
+      button.green {
+        left: 21.1rem;
+        bottom: 2rem;
+        margin-top: 3rem;
+        background: @blue-regular;
+        &:hover {
+          background: darken(@blue-regular, 5%) !important;
+        }
+        > span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+#AppSettingsForm .appsettings-info .ui-settings-area .settings-modal-divider{
+  background:transparent;
+  border-top:1px solid #e6e6e6;
+}
+
+
+
+#AppSettingsForm .appsettings-info .ui-settings-area button.green > span{
+  font-size:1rem;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  #AppSettingsForm {
+
+    .appsettings-info {
+
+      .ui-settings-area{
+        padding:1rem;
+        .heading{
+          font-size:1.5rem;
+          margin-top:0;
+        }
+        .selection-label{
+          margin-right:70px;
+        }
+        .selection-switch.selection-switch.selection-switch.selection-switch{
+          position:static;
+          .onoffswitch{
+            top:0!important;
+            left:auto!important;
+            right:5px!important;
+          }
+        }
+        .settings-options .application-choice {
+          position:relative;
+          .selection-label {
+            width: auto;
+            float: none;
+          }
+        }
+      }
+    }
+    .appsettings-info .side-left button.green{
+      float: right;
+      margin-top: 10px;
+      margin-right: 15px;
+      height: auto;
+      padding:8px;
+      span{
+        font-weight:normal;
+      }
+    }
+    .appsettings-info .side-left{
+      height:50px!important;
+    }
+  }
+}
+

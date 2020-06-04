@@ -1,0 +1,47 @@
+
+To be launch in the end of Sprint 20 (March - April 2015)
+
+- XSDVersion changed to V3.3.0
+
+JSON Schema changes
+- Make adjustments on JSON Schema to eliminate some discrepancies (Noticed by Roger Ineichen,  interoperability partner).
+  1. websiteType (Use > Code Enumeration ): changed value work to blog, as in the XML Scheme.  Note: The website type is not displayed in the editor, this data will be ignored by the editor.
+  2. added type organisationalWebsiteType for usage on WorkExperience and Education with accepted value "business", that does not contain label.
+  3. changed the regular expression of the XSD Version so as to accept values like V3.2.1
+  4. changes for the ICT Skills (created ictLevelType, changed LearnerInfo/Skills/Computer schema)
+  5. changed languageNameType, changed pattern to accept 3 letter language codes
+  6. added courses and certifications on the enumeration of Achievement type
+  
+XML Schema changes  
+1. Added ComputerSkill.xsd with creation of the ComputerSkillType which is a restriction of the SkillType (EWA-1428)
+2. Altered EuropassLearnerInformation.xsd, to include the new ComputerSkill and define it for usage by the ComputerSkill.
+3. Added courses and certifications in simpleType enumeration AchievementTypesEnumeration, of Achievement.xsd (EWA-1526)
+4. Advance version on EuropassISCO_88_COM_V1.4.0.xsd for correction on occupation 12311 in de locale, remove occupation 21490, corrected occupation 32320 in el. 
+5. Advance version on EuropassISOCountries_V1.6.0.xsd for correction on KZ en and fr locale (), added country XK for Kosovo and translations
+6. Advance version on EuropassLanguages_V1.8.0.xsd for population with sign languages. (change xsd:restriction from languageCode to string)
+7. Added new printing preference of CoverLetter.Justification in the CoverLetterFieldNames. The new preference will have a boolean justify attribute, in order to store the justification of the CL sections.
+8. Added new Document Information Element, "EuropassLogo", which will control whether the europass logo will be visible in the generated document.
+9. Advance version on EuropassNationalities_V1.6.0.xsd for addition for Kosovo Nationalities  
+10.Remove preference for contactInfo.Address format.
+
+related tasks
+
+EWA-1405: ICT skills grid implementation
+
+EWA-1539: Remove address format pref from XML/JSON
+
+EWA-1624: Unconvential XML escaping
+
+EWA-1649: Various XSD corrections
+
+EWA-1369: Allow users to remove the Europass logo from the generated document *IMPLEMENTATION*
+
+EWA-1632: [sign langs] Populate XSD with sign languages
+
+EWA-1661: Add Kosovo to XSDs
+
+EWA-1119: CL editor: Global justification button *IMPLEMENTATION*
+
+EWA-1526: Add 'Courses' and 'Certifications' categories to Additional Information
+
+EPAS-1311 XSD issue using http

@@ -1,0 +1,1251 @@
+		<style:default-style style:family="graphic">
+			<style:graphic-properties svg:stroke-color="#3465af"
+				draw:fill-color="#729fcf" fo:wrap-option="no-wrap"
+				draw:shadow-offset-x="3mm" draw:shadow-offset-y="3mm"
+				draw:start-line-spacing-horizontal="2.83mm"
+				draw:start-line-spacing-vertical="2.83mm"
+				draw:end-line-spacing-horizontal="2.83mm"
+				draw:end-line-spacing-vertical="2.83mm" style:flow-with-text="false" />
+			<style:paragraph-properties
+				style:text-autospace="ideograph-alpha" style:line-break="strict"
+				style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
+				<style:tab-stops />
+			</style:paragraph-properties>
+			<style:text-properties
+				style:use-window-font-color="true" fo:font-size="12pt" fo:language="en"
+				fo:country="GB" style:letter-kerning="true" style:font-size-asian="10.5pt"
+				style:language-asian="zh" style:country-asian="CN"
+				style:font-size-complex="12pt" style:language-complex="hi"
+				style:country-complex="IN" />
+		</style:default-style>
+		<style:default-style style:family="paragraph">
+			<style:paragraph-properties
+				fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha"
+				style:punctuation-wrap="hanging" style:line-break="strict"
+				style:tab-stop-distance="12.7mm" style:writing-mode="page" />
+			<style:text-properties
+				style:use-window-font-color="true" style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:language="en" fo:country="GB"
+				style:letter-kerning="true" style:font-name-asian="SimSun"
+				style:font-size-asian="10.5pt" style:language-asian="zh"
+				style:country-asian="CN" style:font-name-complex="Mangal"
+				style:font-size-complex="12pt" style:language-complex="hi"
+				style:country-complex="IN" fo:hyphenate="false"
+				fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" />
+		</style:default-style>
+		<style:default-style style:family="table">
+			<style:table-properties table:border-model="collapsing" />
+		</style:default-style>
+		<style:default-style style:family="table-row">
+			<style:table-row-properties
+				fo:keep-together="auto" />
+		</style:default-style>
+		
+			<style:style style:name="_LP_Standard" style:family="paragraph" style:class="text">
+			<style:text-properties fo:color="#3f3a38" style:font-name="Arial1" fo:font-size="8pt" fo:letter-spacing="-0.011cm"/>
+		</style:style>
+		
+		<style:style style:name="_LP_Heading" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:next-style-name="_LP_Text_20_body"
+			style:class="text">
+			<style:paragraph-properties fo:margin-top="4.23mm"
+				fo:margin-bottom="2.12mm" style:contextual-spacing="false"
+				fo:keep-with-next="always" />
+			<style:text-properties style:font-name="Arial"
+				fo:font-size="14pt" style:font-name-asian="Microsoft YaHei"
+				style:font-size-asian="14pt" style:font-name-complex="Mangal"
+				style:font-size-complex="14pt" />
+		</style:style>
+		<style:style style:name="_LP_Text_20_body" style:display-name="_LP_Text body"
+			style:family="paragraph" style:parent-style-name="_LP_Standard"
+			style:class="text">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="2.12mm" style:contextual-spacing="false" />
+		</style:style>
+		<style:style style:name="_LP_List" style:family="paragraph"
+			style:parent-style-name="_LP_Text_20_body" style:class="list">
+			<style:text-properties style:font-size-asian="12pt"
+				style:font-name-complex="Mangal1_LP" />
+		</style:style>
+		<style:style style:name="_LP_Caption" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="extra">
+			<style:paragraph-properties fo:margin-top="2.12mm"
+				fo:margin-bottom="2.12mm" style:contextual-spacing="false"
+				text:number-lines="false" text:line-number="0" />
+			<style:text-properties fo:font-size="12pt"
+				fo:font-style="italic" style:font-size-asian="12pt"
+				style:font-style-asian="italic" style:font-name-complex="Mangal1_LP"
+				style:font-size-complex="12pt" style:font-style-complex="italic" />
+		</style:style>
+		<style:style style:name="_LP_Index" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="index">
+			<style:paragraph-properties
+				text:number-lines="false" text:line-number="0" />
+			<style:text-properties style:font-size-asian="12pt"
+				style:font-name-complex="Mangal1_LP" />
+		</style:style>
+		<style:style style:name="_LP_Header" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="extra">
+			<style:paragraph-properties
+				text:number-lines="false" text:line-number="0">
+				<style:tab-stops>
+					<style:tab-stop style:position="85mm" style:type="center" />
+					<style:tab-stop style:position="170mm" style:type="right" />
+				</style:tab-stops>
+			</style:paragraph-properties>
+		</style:style>
+		<style:style style:name="_LP_Footer" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="extra">
+			<style:paragraph-properties
+				text:number-lines="false" text:line-number="0">
+				<style:tab-stops>
+					<style:tab-stop style:position="85mm" style:type="center" />
+					<style:tab-stop style:position="170mm" style:type="right" />
+				</style:tab-stops>
+			</style:paragraph-properties>
+		</style:style>
+		<style:style style:name="_LP_Header_20_left"
+			style:display-name="_LP_Header left" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="extra">
+			<style:paragraph-properties
+				text:number-lines="false" text:line-number="0">
+				<style:tab-stops>
+					<style:tab-stop style:position="85mm" style:type="center" />
+					<style:tab-stop style:position="170mm" style:type="right" />
+				</style:tab-stops>
+			</style:paragraph-properties>
+		</style:style>
+		<style:style style:name="_LP_Table_20_Contents"
+			style:display-name="_LP_Table Contents" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:class="extra">
+			<style:paragraph-properties
+				text:number-lines="false" text:line-number="0" />
+		</style:style>
+		<style:style style:name="_LP_Table_20_Heading"
+			style:display-name="_LP_Table Heading" style:family="paragraph"
+			style:parent-style-name="_LP_Table_20_Contents" style:class="extra">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" text:number-lines="false"
+				text:line-number="0" />
+			<style:text-properties fo:font-weight="bold"
+				style:font-weight-asian="bold" style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="_LP_Heading_20_1" style:display-name="_LP_Heading 1"
+			style:family="paragraph" style:parent-style-name="_LP_Heading"
+			style:next-style-name="_LP_Text_20_body" style:default-outline-level="1"
+			style:class="text">
+			<style:text-properties fo:font-size="115%"
+				fo:font-weight="bold" style:font-size-asian="115%"
+				style:font-weight-asian="bold" style:font-size-complex="115%"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="_LP_Heading_20_2" style:display-name="_LP_Heading 2"
+			style:family="paragraph" style:parent-style-name="_LP_Heading"
+			style:next-style-name="_LP_Text_20_body" style:default-outline-level="2"
+			style:class="text">
+			<style:text-properties fo:font-size="14pt"
+				fo:font-style="italic" fo:font-weight="bold" style:font-size-asian="14pt"
+				style:font-style-asian="italic" style:font-weight-asian="bold"
+				style:font-size-complex="14pt" style:font-style-complex="italic"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="_LP_Heading_20_3" style:display-name="_LP_Heading 3"
+			style:family="paragraph" style:parent-style-name="_LP_Heading"
+			style:next-style-name="_LP_Text_20_body" style:default-outline-level="3"
+			style:class="text">
+			<style:text-properties fo:font-size="14pt"
+				fo:font-weight="bold" style:font-size-asian="14pt"
+				style:font-weight-asian="bold" style:font-size-complex="14pt"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_1stPage_5f_Header_5f_LP"
+			style:display-name="_ELP_1stPage_Header_LP" style:family="paragraph"
+			style:parent-style-name="_LP_Table_20_Contents" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="3mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="end" style:justify-single-word="false"
+				style:page-number="auto" style:vertical-align="bottom" />
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="18pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		
+<!-- 		NEW STYLE NO LOGO -->
+	<style:style style:name="_5f_ELP_5f_1stPage_5f_Header_5f_No_Logo"
+			style:display-name="_ELP_1stPage_Header_No_Logo" style:family="paragraph"
+			style:parent-style-name="_LP_Table_20_Contents" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="3mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="left" style:justify-single-word="false"
+				style:page-number="auto" style:vertical-align="bottom" 
+				fo:margin-left="-1.29cm"/>
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="14pt" style:font-size-asian="10.5pt" />
+	</style:style>
+
+		<style:style style:name="_5f_ELP_5f_Summary_5f_Name"
+			style:display-name="_ELP_Summary_Name" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_1stPage_5f_Header_5f_LP"
+			style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="8.01mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="center" style:justify-single-word="false"
+				style:page-number="auto" style:shadow="none" style:punctuation-wrap="hanging"
+				style:vertical-align="baseline" style:snap-to-layout-grid="false" />
+			<style:text-properties fo:color="#363534"
+				fo:font-size="18pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_titles_5f_center_5f_aligned"
+			style:display-name="_ELP_titles_center_aligned" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Summary_5f_Name">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties fo:color="#0c4da2"
+				fo:font-size="10pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Summary_5f_Languages"
+			style:display-name="_ELP_Summary_Languages" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties fo:color="#363534"
+				fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Table_5f_Language"
+			style:display-name="_ELP_Table_Language" style:family="paragraph"
+			style:parent-style-name="_LP_Standard" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="center" style:justify-single-word="false"
+				style:page-number="auto" fo:background-color="transparent">
+				<style:background-image />
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#363534"
+				style:font-name="Arial2" fo:font-size="14pt" fo:font-weight="bold"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Table_5f_Titles"
+			style:display-name="_ELP_Table_Titles" style:family="paragraph"
+			style:parent-style-name="_LP_Standard">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" style:register-true="true" />
+			<style:text-properties fo:color="#0c4da2"
+				style:font-name="Arial2" fo:font-size="10pt" fo:font-weight="bold"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_icon_5f_label"
+			style:display-name="_ELP_icon_label" style:family="paragraph"
+			style:parent-style-name="_LP_Standard">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="center" style:justify-single-word="false"
+				style:snap-to-layout-grid="false" />
+			<style:text-properties fo:color="#0c4da2"
+				style:font-name="Arial1" fo:font-size="8pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_content_5f_center_5f_aligned"
+			style:display-name="_ELP_content_center_aligned" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_icon_5f_label"
+			style:master-page-name="">
+			<style:paragraph-properties
+				fo:line-height="100%" style:page-number="auto" />
+			<style:text-properties fo:color="#363534"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_titles_5f_left_5f_alinged"
+			style:display-name="_ELP_titles_left_alinged" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="3mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="start" style:justify-single-word="false"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Experience"
+			style:display-name="_ELP_Experience" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_titles_5f_left_5f_alinged"
+			style:master-page-name="">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:line-spacing="0.71mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" style:page-number="auto" />
+			<style:text-properties
+				style:use-window-font-color="true" fo:font-size="8pt"
+				fo:font-weight="normal" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_content_5f_left_5f_aligned"
+			style:display-name="_ELP_content_left_aligned" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_content_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="3mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:line-spacing="0.71mm" fo:text-align="start"
+				style:justify-single-word="false" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f_Header"
+			style:display-name="_ELP_Common_Pages_Header" style:family="paragraph"
+			style:parent-style-name="_LP_Header_20_left" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="4.2mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="end" style:justify-single-word="false"
+				style:page-number="auto" fo:background-color="transparent">
+				<style:background-image />
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+<!-- 		NEW STYLE NO LOGO -->
+		<style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f_Header_No_Logo"
+			style:display-name="_ELP_Common_Pages_Header_No_Logo" style:family="paragraph"
+			style:parent-style-name="_LP_Header_20_left" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="4.2mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="start" style:justify-single-word="false"
+				style:page-number="auto" fo:background-color="transparent">
+				<style:background-image />
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="10pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Self-assesment_5f_grid_5f_Title"
+			style:display-name="_ELP_Self-assesment_grid_Title" style:family="paragraph"
+			style:parent-style-name="_LP_Header_20_left" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="5.5mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="center" style:justify-single-word="false"
+				style:page-number="auto" />
+			<style:text-properties fo:color="#0c4da2"
+				style:font-name="Arial1" fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Self-assesment_5f_grid_5f_footer"
+			style:display-name="_ELP_Self-assesment_grid_footer" style:family="paragraph"
+			style:parent-style-name="_LP_Footer" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="2.29mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:page-number="auto" fo:background-color="transparent"
+				style:shadow="none">
+				<style:tab-stops>
+					<style:tab-stop style:position="10mm" style:type="right" />
+				</style:tab-stops>
+				<style:background-image />
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="7pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Self-assesment_5f_page_5f_number"
+			style:display-name="_ELP_Self-assesment_page_number" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_grid_5f_footer"
+			style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="2.29mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="end" style:justify-single-word="false"
+				style:page-number="auto" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Common_5f_footer_5f_copyright"
+			style:display-name="_ELP_Common_footer_copyright" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_grid_5f_footer"
+			style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="start" style:justify-single-word="false"
+				style:page-number="auto" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f_page_5f_number"
+			style:display-name="_ELP_Common_Pages_page_number" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Self-assesment_5f_page_5f_number">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Common_5f_footer_5f_text"
+			style:display-name="_ELP_Common_footer_text" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_titles_5f_left_5f_alinged">
+			<style:paragraph-properties
+				fo:margin-left="-2.5mm" fo:margin-right="0mm" fo:margin-top="1mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:line-spacing="0mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" style:shadow="none">
+				<style:tab-stops />
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#1093cb"
+				fo:font-size="7pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_LP_Frame_20_contents"
+			style:display-name="_LP_Frame contents" style:family="paragraph"
+			style:parent-style-name="_LP_Text_20_body" style:class="extra" />
+		<style:style style:name="_5f_ELP_5f_level"
+			style:display-name="_ELP_level" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_icon_5f_label"
+			style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:page-number="auto" />
+			<style:text-properties fo:color="#363534"
+				fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_level_5f_label"
+			style:display-name="_ELP_level_label" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_icon_5f_label">
+			<style:text-properties fo:color="#363534"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Grid_5f_CEF"
+			style:display-name="_ELP_Grid_CEF" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_level" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0.88mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="end" style:justify-single-word="false"
+				style:page-number="auto" style:vertical-align="bottom" />
+			<style:text-properties fo:color="#999999"
+				fo:font-size="7pt" fo:font-style="italic" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Grid_5f_Level_5f_Label"
+			style:display-name="_ELP_Grid_Level_Label" style:family="paragraph">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Grid_5f_content"
+			style:display-name="_ELP_Grid_content" style:family="paragraph"
+			style:master-page-name="">
+			<style:paragraph-properties
+				fo:line-height="100%" style:page-number="auto" />
+			<style:text-properties fo:color="#363534"
+				style:font-name="Arial1" fo:font-size="6pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Grid_5f_vertical_5f_titles"
+			style:display-name="_ELP_Grid_vertical_titles" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_Table_5f_Titles"
+			style:master-page-name="">
+			<style:paragraph-properties
+				style:page-number="auto" style:snap-to-layout-grid="false" />
+			<style:text-properties fo:font-weight="normal"
+				style:font-size-asian="10.5pt" style:text-rotation-angle="90"
+				style:text-rotation-scale="line-height" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Grid_5f_icon_5f_label"
+			style:display-name="_ELP_Grid_icon_label" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_icon_5f_label"
+			style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				style:page-number="auto" />
+			<style:text-properties style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_footer_5f_logo"
+			style:display-name="_ELP_footer_logo" style:family="paragraph"
+			style:parent-style-name="_5f_ELP_5f_content_5f_center_5f_aligned">
+			<style:paragraph-properties fo:margin-top="1mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-align="end" style:justify-single-word="false"
+				style:vertical-align="middle" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_table_5f_above_5f_below"
+			style:display-name="_ELP_table_above_below" style:family="paragraph"
+			style:parent-style-name="_LP_Table" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="2.5mm"
+				fo:margin-bottom="2.5mm" style:contextual-spacing="false"
+				fo:text-align="start" style:justify-single-word="false"
+				style:page-number="auto" />
+			<style:text-properties style:font-name="Arial1"
+				fo:font-size="8pt" fo:font-style="normal" fo:font-weight="bold"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_LP_Table" style:family="paragraph"
+			style:parent-style-name="_LP_Caption" style:class="extra" />
+		<style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f"
+			style:display-name="_ELP_Common_Pages_LP" style:family="text">
+			<style:text-properties fo:color="#1093cb"
+				style:font-name="Arial1" fo:font-size="14pt" fo:background-color="transparent"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		
+<!-- 		        NEW STYLE NO LOGO -->
+        <style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f_Title_No_Logo"
+			style:display-name="_ELP_Common_Pages_Title_No_Logo" style:family="text"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_Pages_5f">
+			<style:text-properties fo:color="#1093cb"
+				fo:font-size="10pt" style:font-size-asian="10.5pt" />
+		</style:style>
+   
+		<style:style style:name="_5f_ELP_5f_Common_5f_Pages_5f_Name"
+			style:display-name="_ELP_Common_Pages_Name" style:family="text"
+			style:parent-style-name="_5f_ELP_5f_Common_5f_Pages_5f">
+			<style:text-properties fo:color="#0c4da2"
+				fo:font-size="10pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_LP_Internet_20_link"
+			style:display-name="_LP_Internet link" style:family="text">
+			<style:text-properties fo:color="#000000"
+				fo:language="zxx" fo:country="none" style:text-underline-style="solid"
+				style:text-underline-width="auto" style:text-underline-color="font-color"
+				style:language-asian="zxx" style:country-asian="none"
+				style:language-complex="zxx" style:country-complex="none" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Experience_5f_content"
+			style:display-name="_ELP_Experience_content" style:family="text">
+			<style:text-properties fo:color="#363534"
+				style:font-name="Arial1" fo:font-size="8pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Experience_5f_type"
+			style:display-name="_ELP_Experience_type" style:family="text"
+			style:parent-style-name="_5f_ELP_5f_Experience_5f_content">
+			<style:text-properties fo:font-weight="bold"
+				style:font-size-asian="10.5pt" />
+		</style:style>
+		
+		<style:style style:name="Frame" style:family="graphic">
+			<style:graphic-properties text:anchor-type="paragraph"
+				svg:x="0mm" svg:y="0mm" fo:margin-left="2.01mm" fo:margin-right="2.01mm"
+				fo:margin-top="2.01mm" fo:margin-bottom="2.01mm" style:wrap="parallel"
+				style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false"
+				style:vertical-pos="top" style:vertical-rel="paragraph-content"
+				style:horizontal-pos="center" style:horizontal-rel="paragraph-content"
+				fo:padding="1.5mm" fo:border="0.06pt solid #000000" />
+		</style:style>
+		<style:style style:name="europass_5f_SectionDetails"
+					 style:display-name="Europass_SectionDetails" style:family="paragraph"
+					 style:parent-style-name="_LP_Standard" style:default-outline-level=""
+					 style:list-style-name="" style:master-page-name="">
+		<style:paragraph-properties 
+					 style:line-spacing="0.71mm"
+					 fo:margin-top="0mm" 
+					 fo:margin-bottom="0mm" 
+					 style:contextual-spacing="false" 
+					 style:page-number="auto" 
+					 fo:background-color="transparent" 
+					 style:shadow="none" 
+					 text:number-lines="false" 
+					 text:line-number="0" 
+					 style:text-autospace="none">
+		<style:tab-stops/>
+		<style:background-image/>
+		</style:paragraph-properties>
+		<style:text-properties fo:color="#3f3a38" style:font-name="Arial1" fo:font-size="8pt" fo:letter-spacing="-0.11mm"/>
+		</style:style>
+		<style:style style:name="europass_5f_SectionDetails_ELP"
+					 style:display-name="Europass_SectionDetails_ELP" style:family="paragraph"
+					 style:parent-style-name="_LP_Standard" style:default-outline-level=""
+					 style:list-style-name="" style:master-page-name="">
+		<style:paragraph-properties 
+					 style:line-spacing="0.71mm"
+					 fo:margin-top="0mm" 
+					 fo:margin-bottom="0mm" 
+					 style:contextual-spacing="false" 
+					 style:page-number="auto" 
+					 fo:background-color="transparent" 
+					 style:shadow="none" 
+					 text:number-lines="false" 
+					 text:line-number="0" 
+					 style:text-autospace="none">
+		<style:tab-stops/>
+		<style:background-image/>
+		</style:paragraph-properties>
+		<style:text-properties fo:color="#3f3a38" style:font-name="Arial1" fo:font-size="8pt" fo:letter-spacing="-0.11mm"/>
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_SectionBullet" style:display-name="_Europass_LP_SectionBullet" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails" style:default-outline-level="1" style:master-page-name="">
+			<style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" fo:line-height="100%" style:page-number="auto" fo:background-color="transparent" style:shadow="none">
+			<style:tab-stops/>
+			<style:drop-cap/>
+			<style:background-image/>
+			</style:paragraph-properties>
+			<style:text-properties fo:color="#3f3a38"/>
+		</style:style>
+		<style:style style:name="_5f_ELP_5f_Attachment" style:display-name="_Europass_LP_Attachment" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails" style:master-page-name="">
+			<style:paragraph-properties fo:text-align="end" style:justify-single-word="false" style:page-number="auto" style:shadow="none"/>
+			<style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Subscript" 
+			 style:display-name="Europass_Text_Subscript" 
+			 style:family="text" 
+			 style:parent-style-name="europass_5f_SectionDetails_ELP">
+		<style:text-properties style:text-position="sub 58%" />
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Superscript" 
+				 style:display-name="Europass_Text_Superscript" 
+				 style:family="text" 
+				 style:parent-style-name="europass_5f_SectionDetails_ELP">
+		<style:text-properties style:text-position="super 58%" />
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Bold" style:display-name="Europass_Text_Bold" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-weight="bold"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Underline" style:display-name="Europass_Text_Underline" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Italics" style:display-name="Europass_Text_Italics" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-style="italic"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Bold_5f_And_5f_Underline" style:display-name="Europass_Text_Bold_And_Underline" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-weight="bold" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Bold_5f_And_5f_Italics" style:display-name="Europass_Text_Bold_And_Italics" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-weight="bold" fo:font-style="italic"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Bold_5f_And_5f_Underline_5f_And_5f_Italics" style:display-name="Europass_Text_Bold_And_Underline_And_Italics" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-weight="bold" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+		</style:style>
+		<style:style style:name="europass_5f_Text_5f_Underline_5f_And_5f_Italics" style:display-name="Europass_Text_Underline_And_Italics" style:family="text" style:parent-style-name="europass_5f_SectionDetails_ELP">
+			<style:text-properties style:font-name="Arial" fo:font-size="8pt" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+		</style:style>
+		<style:style style:name="europass_5f_numbered_5f_list_ELP" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails_ELP" style:class="list">
+		</style:style>
+		<style:style style:name="europass_5f_bulleted_5f_list_ELP" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails_ELP" style:class="list">
+		</style:style>
+		<style:style style:name="europass_5f_bulleted_5f_list_ELP_indent1" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails_ELP" style:class="list">
+		</style:style>
+		<style:style style:name="europass_5f_bulleted_5f_list_ELP_indent2" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails_ELP" style:class="list">
+		</style:style>
+		<style:style style:name="europass_5f_bulleted_5f_list_ELP_indent3" style:family="paragraph" style:parent-style-name="europass_5f_SectionDetails_ELP" style:class="list">
+		</style:style>
+		<!--  Numbered List -->
+		<text:list-style style:name="europass_5f_numbered_5f_list_ELP"
+		    style:display-name="europass_numbered_list_ELP">
+		    <text:list-level-style-number text:level="1" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.381cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="0.381cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="2" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.762cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="0.762cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="3" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.143cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.143cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="4" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.524cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.524cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="5" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.905cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.905cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="6" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.286cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.286cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="7" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.667cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.667cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="8" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.048cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.048cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="9" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.429cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.429cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		    <text:list-level-style-number text:level="10" text:style-name="_LP_Numbering_20_Symbols"
+		        style:num-suffix="." style:num-format="1">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.81cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.81cm"/>
+		        </style:list-level-properties>
+		    </text:list-level-style-number>
+		</text:list-style>
+		<!--  Bulleted List  -->
+		<text:list-style style:name="europass_5f_bulleted_5f_list_ELP" style:display-name="europass_bulleted_list_ELP">
+		    <text:list-level-style-bullet text:level="1" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▪">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.381cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="0.381cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="2" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▫">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.762cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="0.762cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="3" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▪">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.143cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.143cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="4" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▫">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.524cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.524cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="5" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▪">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.905cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.905cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="6" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▫">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.286cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.286cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="7" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▪">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.667cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.667cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="8" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▫">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.048cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.048cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="9" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▪">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.429cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.429cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		    <text:list-level-style-bullet text:level="10" text:style-name="_LP_Bullet_20_Symbols"
+		        text:bullet-char="▫">
+		        <style:list-level-properties
+		            text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.81cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.81cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+		</text:list-style>
+                <text:list-style style:name="europass_5f_bulleted_5f_list_ELP_indent1" style:display-name="europass_bulleted_list_ELP_indent1">
+                    <text:list-level-style-bullet text:level="1" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.381cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="0.756cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="2" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.762cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.137cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="3" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.143cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.518cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="4" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.524cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.899cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="5" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.905cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.28cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="6" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.286cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.661cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="7" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.667cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.042cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="8" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.048cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.423cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="9" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.429cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.804cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="10" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.81cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.185cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                </text:list-style>
+                <text:list-style style:name="europass_5f_bulleted_5f_list_ELP_indent2" style:display-name="europass_bulleted_list_ELP_indent2">
+                    <text:list-level-style-bullet text:level="1" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.381cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.131cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="2" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.762cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.512cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="3" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.143cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.893cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="4" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.524cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.274cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="5" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.905cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.655cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="6" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.286cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.036cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="7" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.667cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.417cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="8" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.048cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.764cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="9" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.429cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.179cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="10" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.81cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.56cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                </text:list-style>
+                <text:list-style style:name="europass_5f_bulleted_5f_list_ELP_indent3" style:display-name="europass_bulleted_list_ELP_indent3">
+                    <text:list-level-style-bullet text:level="1" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.381cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.506cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="2" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="0.762cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="1.887cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="3" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.143cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.268cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="4" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.524cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="2.649cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="5" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="1.905cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.03cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="6" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.286cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.411cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="7" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="2.667cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="3.792cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="8" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.048cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.173cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="9" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▪">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.429cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.554cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                    <text:list-level-style-bullet text:level="10" text:style-name="_LP_Bullet_20_Symbols" text:bullet-char="▫">
+                        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+		            <style:list-level-label-alignment text:label-followed-by="listtab"
+		                text:list-tab-stop-position="3.81cm" fo:text-indent="-0.381cm"
+		                fo:margin-left="4.935cm"/>
+		        </style:list-level-properties>
+		        <style:text-properties fo:font-family="Segoe UI"/>
+		    </text:list-level-style-bullet>
+                </text:list-style>
+		
+		<style:style 
+			style:name="europass_5f_paragraph_5f_indented" 
+			style:display-name="europass_paragraph_indented" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin="100%" 
+				fo:margin-left="1cm" 
+				fo:margin-right="0cm" 
+				fo:text-indent="0cm" 
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent1" 
+			style:display-name="europass_paragraph_indent1" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text" 
+			style:master-page-name="">
+			<style:paragraph-properties 
+				fo:margin-left="3.75mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false" 
+				style:page-number="auto"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent2" 
+			style:display-name="europass_paragraph_indent2" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="7.5mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent3" 
+			style:display-name="europass_paragraph_indent3" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="11.25mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent1_ELP" 
+			style:display-name="europass_paragraph_indent1_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text" 
+			style:master-page-name="">
+			<style:paragraph-properties 
+				fo:margin-left="3.75mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false" 
+				style:page-number="auto"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent2_ELP" 
+			style:display-name="europass_paragraph_indent2_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="7.5mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent3_ELP" 
+			style:display-name="europass_paragraph_indent3_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="11.25mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				style:auto-text-indent="false"/>
+		</style:style>
+		
+		<!-- Text Align style -->
+		
+		<style:style 
+			style:name="europass_5f_paragraph_align_justify" 
+			style:display-name="europass_paragraph_align_justify" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+					fo:text-align="justify" 
+					style:justify-single-word="false"/>
+		</style:style>
+		
+		<!-- Text Align and Indentation style -->
+		
+		<style:style 
+			style:name="europass_5f_paragraph_indent1_justify" 
+			style:display-name="europass_paragraph_indent1_justify" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text" 
+			style:master-page-name="">
+			<style:paragraph-properties 
+				fo:margin-left="3.75mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false" 
+				style:page-number="auto"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent2_justify" 
+			style:display-name="europass_paragraph_indent2_justify" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties
+				fo:margin-left="7.5mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm"
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent3_justify" 
+			style:display-name="europass_paragraph_indent3_justify" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="11.25mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm"
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent1_justify_ELP" 
+			style:display-name="europass_paragraph_indent1_justify_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text" 
+			style:master-page-name="">
+			<style:paragraph-properties 
+				fo:margin-left="3.75mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm" 
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false" 
+				style:page-number="auto"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent2_justify_ELP" 
+			style:display-name="europass_paragraph_indent2_justify_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties
+				fo:margin-left="7.5mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm"
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false"/>
+		</style:style>
+		<style:style 
+			style:name="europass_5f_paragraph_indent3_justify_ELP" 
+			style:display-name="europass_paragraph_indent3_justify_ELP" 
+			style:family="paragraph" 
+			style:parent-style-name="europass_5f_SectionDetails_ELP" 
+			style:class="text">
+			<style:paragraph-properties 
+				fo:margin-left="11.25mm" 
+				fo:margin-right="0mm" 
+				fo:text-indent="0mm"
+				fo:text-align="justify" 
+				style:justify-single-word="false"
+				style:auto-text-indent="false"/>
+		</style:style>
+		<text:notes-configuration text:note-class="footnote"
+			style:num-format="1" text:start-value="0" text:footnotes-position="page"
+			text:start-numbering-at="document" />
+		<text:notes-configuration text:note-class="endnote"
+			style:num-format="i" text:start-value="0" />
+		<text:linenumbering-configuration
+			text:number-lines="false" text:offset="4.99mm" style:num-format="1"
+			text:number-position="left" text:increment="5" />
+		
+		

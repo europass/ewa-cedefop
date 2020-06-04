@@ -1,0 +1,196 @@
+<dt class="label">
+	<span class="title">{{get_text "LearnerInfo.Identification" group="DocumentLabel"}}</span>
+	
+	<div class="clear"></div>
+{{! --- PHOTO ---}}
+{{#if SkillsPassport.LearnerInfo.Identification.Photo}}
+	<div class="Photo active opens-modal-form nested-modal {{#isEmptyObject SkillsPassport.LearnerInfo.Identification.Photo}}nophoto{{/isEmptyObject}}"
+		data-rel-doc="cv"
+		data-rel-clazz="PhotoFormView"
+		data-rel-form="Form:LearnerInfo.Identification.Photo"
+		data-rel-section="SkillsPassport.LearnerInfo.Identification.Photo"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Identification.Photo"
+		data-rel-index=""
+		rel="tooltip">
+		<span style="display:none;" class="data-title">{{get_text "Modify.LearnerInfo.Identification.Photo" group="EditorHelp"}}</span>
+			<div class="photo-preview-area">
+				<img id="personal-info-cv-photo"
+					 {{#get_obj_metadata SkillsPassport.LearnerInfo.Identification.Photo key="cropping"}}
+					 
+					 	{{#if cropping}}
+					 		{{#with cropping}}
+					 		style="width:{{width}}px;height:{{height}}px;margin-left:-{{x}}px;margin-top:-{{y}}px;" 
+					  		{{/with}}
+					  	{{else}}
+					  		{{#get_dimension_metadata .}}
+					 			style="{{#width}}width:{{.}}px;{{/width}}{{#height}}height:{{.}}px;{{/height}}"
+					 		{{else}}
+					 			style="width:95px;height:110px;"
+					  		{{/get_dimension_metadata}}
+					  		
+					  	{{/if}}
+					  	
+					 {{/get_obj_metadata}}
+					 
+					 	src="{{SkillsPassport.LearnerInfo.Identification.Photo.TempURI}}" 
+					 	alt="{{get_text "LearnerInfo.Identification.Photo" group="EditorPlaceholder"}}"/>
+			</div>
+
+            <button type="button"
+                    name=""
+                    class="upload-prompt opens-modal-form tip spot">
+                <span class="data-title" style="display:none;">{{get_text "Buttons.Edit.Content"}}</span>
+            </button>
+			<button type="button"
+					name="LearnerInfo.Identification.Photo_delete_btn"
+					class="photo delete tip spot"
+					data-rel-section="SkillsPassport.LearnerInfo.Identification.Photo"
+					data-rel-view="Compose:LearnerInfo.Identification"
+					data-rel-index="">
+				 <span class="data-title" style="display:none;">{{get_text "Delete.Photo" group="EditorHelp"}}</span>
+			</button>
+	</div>
+{{else}}
+{{/if}}
+</dt>
+
+{{#if SkillsPassport.LearnerInfo.Identification}}
+	{{#call_partial . path="" noDelete=true}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/if}}
+
+
+<dd class="personal-details value personal">
+	{{! --- PersonName Displayed always --- }}
+	{{! --- since displayed always we dont need to call print preferences  --- }}
+	{{#if SkillsPassport.LearnerInfo.Identification.PersonName}}
+	<div class="name value PersonName LearnerInfo.Identification.PersonName">
+		{{> templates/compose/personname}}
+		
+		<button type="button" 
+				name="switchPersonNamesOrder"
+				class="names switch tip spot nested-tip tip-closerTop">
+				<span style="display:none;" class="data-title">{{get_text "LearnerInfo.Identification.PersonName.Switch" group="EditorHelp"}}</span>
+				switch
+		</button>
+		
+	</div>
+	{{/if}}
+
+{{#isEmptyObject SkillsPassport.LearnerInfo.Identification.ContactInfo}}
+{{else}}
+<div class="PersonalBasic">
+
+
+{{! --- ContactInfo.Address --- }}
+{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Address.Contact}}
+<div class="value Address" id="LearnerInfo.Identification.ContactInfo.Address">
+		{{#format_address SkillsPassport.LearnerInfo.Identification.ContactInfo.Address.Contact}}
+		   <span class="Address">{{.}}</span>
+		{{/format_address}}
+</div>
+{{/if}}
+
+{{! --- ContactInfo.Telephone --- }}
+{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}
+<div class="value Telephone {{#unless SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}default-value{{/unless}}">
+{{#each_with_index SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}
+	<div class="item {{index}} {{#if Use.Code}} {{Use.Code}} {{else}} telephone-default {{/if}} ">
+		<span class="Use" style="display:none">{{Use.Label}}</span>
+		<span class="Contact">{{Contact}}</span>
+	</div>
+{{/each_with_index}}
+</div>
+{{/if}}
+
+{{! --- ContactInfo.Email --- }}
+{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Email}}
+<div class="value Email">
+	<span class="Use">{{SkillsPassport.LearnerInfo.Identification.ContactInfo.Email.Use.Label}}</span>	
+		<span class="Contact">{{SkillsPassport.LearnerInfo.Identification.ContactInfo.Email.Contact type="email"}}</span>
+</div>
+{{/if}}
+
+{{! --- ContactInfo.Website --- }}
+{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Website}}	
+	<div class="websites_container">
+	{{#each_with_index SkillsPassport.LearnerInfo.Identification.ContactInfo.Website}}		
+		<div class="value {{#ifLinkedin Contact}}Linkedin{{else}}Website{{/ifLinkedin}}">
+			<div class="item {{index}}">
+				<span class="Use">{{Use.Label}}</span>
+				{{#format_link Contact type="website"}}
+					<span class="Contact">{{{.}}}</span>
+				{{/format_link}}
+			</div>
+		</div>
+	{{/each_with_index}}
+	</div>		
+{{/if}}
+
+{{! --- ContactInfo.InstantMessaging --- }}
+{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.InstantMessaging}}
+<div class="value InstantMessaging">
+{{#each_with_index SkillsPassport.LearnerInfo.Identification.ContactInfo.InstantMessaging}}
+	<div class="item {{index}}">
+		<span class="Use">{{Use.Label}}</span>
+		<span class="Contact">{{Contact}}</span>
+	</div>
+{{/each_with_index}}
+</div>
+{{/if}}
+
+</div>
+{{/isEmptyObject}}
+
+
+{{#isEmptyObject SkillsPassport.LearnerInfo.Identification.Demographics}}
+{{else}}
+<div class="PersonalDetails">
+{{! --- Demographics.Gender ---}}
+{{#isEmptyObject SkillsPassport.LearnerInfo.Identification.Demographics.Gender }}
+{{else}}
+<dl class="Gender">
+	<dt class="label">{{get_text "LearnerInfo.Identification.Demographics.Gender" group="DocumentLabel"}}</dt>
+	<dd class="value">
+		{{#if SkillsPassport.LearnerInfo.Identification.Demographics.Gender.Label}}
+			<span class="Gender">{{SkillsPassport.LearnerInfo.Identification.Demographics.Gender.Label}}</span>
+		{{/if}}
+	</dd>
+</dl>
+{{/isEmptyObject}}
+{{! --- Demographics.Birthdate ---}}
+{{#if SkillsPassport.LearnerInfo.Identification.Demographics.Birthdate}}
+	<dl class="Birthdate">
+		<dt class="label">{{get_text "LearnerInfo.Identification.Demographics.Birthdate" group="DocumentLabel"}}</dt>
+		<dd class="value">
+			{{#format_date SkillsPassport.LearnerInfo.Identification.Demographics.Birthdate Preferences.LearnerInfo.Identification.Demographics.Birthdate true DocumentType="ECV"}}
+				<span class="Birthdate">{{.}}</span>
+			{{/format_date}}
+		</dd>
+	</dl>
+{{/if}}
+{{! --- Demographics.Nationality ---}}
+{{#if SkillsPassport.LearnerInfo.Identification.Demographics.Nationality}}
+	<dl class="Nationality">
+		<dt class="label">{{get_text "LearnerInfo.Identification.Demographics.Nationality"  group="DocumentLabel"}}</dt>
+		<dd class="value">
+			{{#commalist SkillsPassport.LearnerInfo.Identification.Demographics.Nationality ../Preferences.LearnerInfo.Identification.Demographics.Nationality.array}}
+			<span class="Nationality">{{.}}</span>
+			{{/commalist}}
+		</dd>
+	</dl>
+{{/if}}
+
+</div>
+{{/isEmptyObject}}
+
+
+
+{{#isIdentificationWithPhotoEmpty SkillsPassport.LearnerInfo.Identification}}
+	<div class="empty add PersonalInfo"
+		><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+	</div>
+{{/isIdentificationWithPhotoEmpty}}
+
+</dd> 

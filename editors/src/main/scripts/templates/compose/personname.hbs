@@ -1,0 +1,23 @@
+{{#if SkillsPassport.LearnerInfo.Identification.PersonName}}
+	{{#if_eq Preferences.LearnerInfo.Identification.PersonName.order compare="FirstName Surname"}}
+		{{#with SkillsPassport.LearnerInfo.Identification.PersonName}}
+		<span id="LearnerInfo.Identification.PersonName.FirstName"  class="{{#unless FirstName}}default-value{{/unless}} FirstName">{{#unless FirstName}}{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}{{/unless}}{{FirstName}}</span>
+		<span id="LearnerInfo.Identification.PersonName.Surname" class="{{#unless Surname}}default-value{{/unless}} Surname">{{#unless Surname}}{{get_text "LearnerInfo.Identification.PersonName.Surname"}}{{/unless}}{{Surname}}</span>
+		{{/with}}
+	{{else}}
+		{{#with SkillsPassport.LearnerInfo.Identification.PersonName}}
+		<span id="LearnerInfo.Identification.PersonName.Surname" class="{{#unless Surname}}default-value{{/unless}} Surname">{{#unless Surname}}{{get_text "LearnerInfo.Identification.PersonName.Surname"}}{{/unless}}{{Surname}}</span>
+		<span id="LearnerInfo.Identification.PersonName.FirstName" class="{{#unless FirstName}}default-value{{/unless}} FirstName">{{#unless FirstName}}{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}{{/unless}}{{FirstName}}</span>
+		{{/with}}
+	{{/if_eq}}
+{{else}}
+
+	{{#if_eq Preferences.LearnerInfo.Identification.PersonName.order compare="FirstName Surname"}}
+		<span id="LearnerInfo.Identification.PersonName.FirstName" class="default-value">{{#unless FirstName}}{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}{{/unless}}{{FirstName}}</span>
+		<span id="LearnerInfo.Identification.PersonName.Surname" class="default-value">{{#unless Surname}}{{get_text "LearnerInfo.Identification.PersonName.Surname"}}{{/unless}}{{Surname}}</span>
+	{{else}}
+		<span id="LearnerInfo.Identification.PersonName.Surname" class="default-value">{{#unless Surname}}{{get_text "LearnerInfo.Identification.PersonName.Surname"}}{{/unless}}{{Surname}}</span>
+		<span id="LearnerInfo.Identification.PersonName.FirstName" class="default-value">{{#unless FirstName}}{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}{{/unless}}{{FirstName}}</span>
+	{{/if_eq}}
+
+{{/if}}

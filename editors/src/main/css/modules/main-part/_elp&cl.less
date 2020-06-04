@@ -1,0 +1,1080 @@
+
+/* The on hover for ELP and ECL does not have a border radius */
+.cl.compose,
+.elp.compose{
+  .section,
+  .subsection,
+  ol.compose-list > li.list-item{
+    border-radius: 0px;
+    margin: 0.4rem 0 0.8rem;
+
+  }
+}
+/**** cefrgrid ****/
+
+.elp-info {
+  display: inline-block;
+  font-size: 10px;
+  padding-right: 29px;
+  width: 68%;
+}
+.portfolio-logo {
+  background: url("@{img-base-url}elp/elp_footer_logo.png@{img-suffix-url}${project.version}") no-repeat scroll 0 0 transparent;
+  display: inline-block;
+  float: right;
+  height: 60px;
+  width: 196px;
+  vertical-align: text-top;
+}
+
+.elp-info > p{
+  margin-top: 10px;
+}
+.elp .cefrgrid {
+  clear:both;
+  /* 	margin-left: @elp-horizontal-padding; */
+  /* 	margin-right: @elp-horizontal-padding; */
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: middle;
+  border:1px solid @elp-colorD;
+}
+.elp .cefrgrid .rich-content{
+  display: inline-block;
+  background: url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat scroll 0px -514px transparent;
+  padding: 1.5rem;
+  text-indent: 2rem;
+
+  font-size:15px;
+  color: @very-dark-grey;
+
+  a.cefr-link-main {
+    color: @bright-blue;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  button.cefr-btn {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0487d0;
+    cursor: pointer;
+    text-indent: 0;
+  }
+}
+
+
+.elp.compose{
+  .section,
+  .subsection,
+  ol.compose-list > li.list-item{
+    border: 1px solid transparent;
+    background: none;
+    margin-bottom: 2rem;
+    &:hover,&.tap-hover {
+      .display-sorting-btns-mixin;
+    }
+  }
+}
+
+
+/**    --------------------------
+ *     --- ELP RELATED STYLES ---
+ *     --------------------------
+ */
+
+.elp-spacing-for-nonactions {
+  margin-right: @elp-horizontal-padding;
+  margin-left: @elp-horizontal-padding;
+}
+
+.elp-tables-last-td-th-borders{
+  border-right: 1px solid @elp-colorD;
+}
+
+.elp-tables-td-th-borders{
+  border-bottom: 1px solid @elp-colorD;
+  border-left: 1px solid @elp-colorD;
+
+  &:last-child{
+    .elp-tables-last-td-th-borders;
+  }
+}
+
+.elp-left-section-no-border {
+  border-left: none!important;
+  border-bottom: none!important;
+}
+
+.elp-self-assesment-cells-props{
+  width: @elp-selfassessment-width;
+  /* font-size: 0.845rem; */
+  font-size: 1rem;
+  padding-top: 1.69rem;
+}
+
+.elp-self-assesment-table-header-props{
+  background-repeat: no-repeat;
+  background-position: center 0.26rem;
+  background-size: 1.3rem;
+}
+
+.elp-button-add-props{
+  background-color: transparent;
+  border: 0;
+  padding: 0.65rem 0;
+  text-align: center;
+}
+
+.oveflow-hidden{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.elp {
+
+  font-size: 2rem;
+
+  .label{
+    color: @elp-colorA;
+    padding: @elp-label-padding-top @elp-label-padding;
+    font-size: 1rem;
+  }
+
+  .value{
+    color: @elp-colorB;
+    padding: @elp-value-padding-top @elp-value-padding;
+    font-size: 1rem;
+  }
+
+  /*  	 &:hover{
+           .subsection-container {
+               > menu.section.manage{
+                  top: -1.92%;
+               }
+           }
+       }
+   */
+
+
+
+
+
+  .elp-overview.elp-overview{
+
+    &.section{
+
+      .default-value{
+        color: @wg-light-grey;
+      }
+
+      &.item{
+        position: relative;
+        text-align: center;
+        padding-right: 0px;
+        padding-left: 0px;
+
+        &:hover {
+          background-color: @blue-lightling;
+          border:1px dashed @blue-normal;
+        }
+        &.tap-hover {
+          background-color: @blue-lightling;
+          border:1px dashed @blue-normal;
+        }
+      }
+    }
+    .value {
+      font-size: 1.235rem;
+    }
+
+
+    .personal-details{
+      position: relative;
+      display: inline-block;
+      /* 		 	width: 50.1875rem; Commented out due to misplacement after the new rensponsiveness breakb*/
+      padding-bottom: @elp-margin;
+      margin-bottom: @elp-margin;
+      button.names.switch{
+        /* 				position: absolute; */
+        /* 				top: 16px; */
+        /* 				margin-left: 4px; */
+        z-index: 100;
+        vertical-align: bottom;
+      }
+    }
+
+    /*** Person Name ****/
+    .person-name span{
+      font-size: 1.56rem;
+    }
+
+    /*** Linguistic Skills ***/
+
+    .linguistic-skills{
+      position: relative;
+      display: inline-block;
+      width:100%;
+      /* padding-bottom: @elp-margin; */
+      margin-bottom: @elp-margin;
+      border-top: 1px solid @elp-overview-border;
+      border-bottom: 1px solid @elp-overview-border;
+
+      dl{
+        position:relative;
+        float:left;
+        width: 50% /* @elp-overview-linguistic-base-width; */ ;
+        margin-top: @elp-margin;
+        margin-bottom: @elp-margin;
+        padding: @elp-margin 0 @elp-margin 0;
+      }
+    }
+
+    dl.middle-border{
+      border-right: 1px solid @elp-overview-border;
+      height: 75%;
+      width: 50%;
+      float: left;
+      position: absolute;
+    }
+
+    menu{
+
+      &.manage{
+        top: -2px;
+
+        &.subsection{
+          margin: 0;
+        }
+      }
+    }
+
+    div.empty.add{
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  /******* lists *******/
+
+  /* specific rules for tap-hover on elp*/
+  dl.section.foreign-languages-details > ol.language-list > li.list-item > dl.foreign-language-details > dd.self-assessment.tap-hover > table > tbody > tr.menu-placeholder > td > menu.section.manage,
+  dl.section.foreign-languages-details > ol.language-list > li.list-item > dl.foreign-language-details > dd.linguistic-certificates > table > tbody > tr.menu-placeholder.list-item.opens-modal-form.tap-hover > td > menu.section.manage,
+  dl.section.foreign-languages-details > ol.language-list > li.list-item > dl.foreign-language-details > dd.linguistic-experiences > table > tbody > tr.menu-placeholder.list-item.opens-modal-form.tap-hover > td > menu.section.manage{
+
+    display: block !important;
+    right: 3px;
+  }
+
+
+  ol.compose-list{
+
+    li.list-item{
+      position:relative;
+    }
+  }
+
+  /*** Sections & Hover ***/
+
+  .elp-sortable-tbl-hover{
+    background-color: @blue-lightling;
+  }
+
+  .foreign-languages-details{
+
+    /*width: 97.7%;*/
+    width: 100%;
+
+
+    .language-list{
+
+      .list-item{
+
+        .foreign-language-title {
+
+          display: block;
+          text-align: center;
+          vertical-align: middle;
+          padding: 2 * @elp-margin;
+          border:1px solid @elp-colorD;
+          background: @wg-very-light-grey;
+          font-size: 0.91rem;
+          font-weight: bold;
+          color: @elp-colorB;
+          margin-top: -36px;
+          + dl{
+            /*          border:1px dashed transparent;*/
+          }
+          &:hover + dl{
+            background-color: @blue-lightling;
+            /*           border:1px dashed @blue-normal;*/
+          }
+        }
+        .list-actions td.empty:hover{
+          border-top:none;
+        }
+
+        /*        .foreign-language-details:hover{
+                  border:1px dashed @blue-normal;
+                }*/
+
+        .foreign-language-details {
+          .sorting-btns-mixin;
+
+          /* 					.sortable_placeholder:not(.list-item-sortable){ */
+          /* 						border-radius: 0; */
+          /*                         height: 2.2rem; */
+          /*                         left: 0; */
+          /*                         top: 0px; */
+          /*                         width: 2.2rem; */
+          /*                         background-position: 7px -233px; */
+          /*                         &:hover { */
+          /*                          background-position: 7px -273px; */
+          /*                         } */
+          /* 					} */
+        }
+      }
+
+      .empty.compose-list{
+
+        button{
+          .elp-button-add-props;
+
+          &:hover,&.tap-hover{
+            background-color: @wysiwyg-bg-elp;
+          }
+        }
+      }
+    }
+
+
+    table.self-assessment{
+
+      width: 100%;
+
+      text-align: center;
+      vertical-align: middle;
+
+      th{
+
+        .elp-self-assesment-table-header-props;
+        .elp-tables-td-th-borders;
+
+        &.listening{
+          .elp-self-assesment-cells-props;
+          background-image: url("@{img-base-url}elp/headphones.png@{img-suffix-url}${project.version}");
+        }
+        &.reading{
+          .elp-self-assesment-cells-props;
+          background-image: url("@{img-base-url}elp/book.png@{img-suffix-url}${project.version}");
+        }
+        &.spoken-interaction{
+          .elp-self-assesment-cells-props;
+          background-image: url("@{img-base-url}elp/twin_clouds.png@{img-suffix-url}${project.version}");
+        }
+        &.spoken-production{
+          .elp-self-assesment-cells-props;
+          background-image: url("@{img-base-url}elp/cloud.png@{img-suffix-url}${project.version}");
+        }
+        &.writing{
+          .elp-self-assesment-cells-props;
+          background-image: url("@{img-base-url}elp/pencil.png@{img-suffix-url}${project.version}");
+        }
+      }
+
+      td{
+
+        .elp-tables-td-th-borders;
+
+        &.menu-placeholder {
+
+          menu.manage button.edit{
+            position: absolute;
+            /*left: -77px;*/
+            right: 30px;
+            top: 28px;
+            background-color:@blue-lightling;
+            left:auto!important;
+            padding:2px 10px;
+          }
+        }
+      }
+    }
+
+
+
+    table.linguistic-certificates{
+
+      width: 104%;;
+      margin-left: -4%;
+
+      th,td{
+        .elp-tables-td-th-borders;
+        &.certf-placeholder-label {
+          width: @elp-label-left-placeholder-width;
+          .elp-left-section-no-border;
+        }
+
+        &.certf-placeholder {
+          border: none!important;
+        }
+
+        &.title{
+          max-width: @elp-certificate-title-width;
+          min-width: @elp-certificate-title-width;
+          width: @elp-certificate-title-width;
+          /*.oveflow-hidden; do not overflow because tooltip on sort-placeholder is not visible */
+        }
+
+        &.awardingBody{
+          max-width: @elp-certificate-awardingBody-width;
+          min-width: @elp-certificate-awardingBody-width;
+          width: @elp-certificate-awardingBody-width;
+          .oveflow-hidden;
+        }
+
+        &.date{
+          max-width: @elp-certificate-date-width;
+          min-width: @elp-certificate-date-width;
+          width: @elp-certificate-date-width;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+        &.level{
+          max-width: @elp-certificate-level-width;
+          min-width: @elp-certificate-level-width;
+          width: @elp-certificate-level-width;
+          text-align: center;
+          vertical-align: middle;
+        }
+        &.value{
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    table.linguistic-experiences{
+
+      width: 103.9%;
+      margin-left: -3.9%;
+
+      tr {
+
+        td,th{
+          .elp-tables-td-th-borders;
+
+          &.value{
+            line-height: 1.2rem;
+          }
+        }
+
+        &:hover {
+          td.exp-placeholder:hover {
+            background: none;
+          }
+
+
+        }
+
+        > .dnd {
+          .sortable_placeholder{
+            left: 100px;
+
+          }
+
+        }
+
+
+        > .period{
+
+          max-width: @elp-experience-period-width;
+          min-width: @elp-experience-period-width;
+          width: @elp-experience-period-width;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+        >.exp-placeholder-label {
+          width: @elp-label-left-placeholder-width;
+          .elp-left-section-no-border;
+        }
+
+        >.exp-placeholder {
+          border: none!important;
+        }
+
+        > .experience-description{
+
+          max-width: @elp-experience-description-width;
+          min-width: @elp-experience-description-width;
+          width: @elp-experience-description-width;
+          text-align: left;
+          vertical-align: left;
+          /*.oveflow-hidden; comment out in order for tooltip to show */
+
+          .area-of-use, .exp-description{
+            display:inline-block;
+          }
+          .area-of-use{
+            font-weight: bold;
+            margin-right: 0.13rem;
+          }
+          .area-of-use:after{
+            content: ":";
+          }
+          .exp-description{
+          }
+
+        }
+      }
+    }
+
+    table.list-actions {
+
+      border-collapse: separate;
+
+      tr.menu-placeholder {
+
+        .menu-placeholder{
+          position: relative;
+
+          menu.section.manage {
+            position: absolute;
+            display:none !important;
+
+            button.edit:not(.language-levels){
+              position: absolute;
+              /*left: -7.4rem;*/
+              right: 30px;;
+              top: 28px;
+              background-color:@blue-lightling;
+              padding:2px 10px;
+            }
+
+            button.delete{
+              position: absolute;
+              left: -1.8rem;
+              top: 28px;
+              background-color:@blue-lightling;
+              font-size:0;
+              padding:2px 5px;
+            }
+          }
+
+          .dnd{
+            display:none !important;
+            position: absolute; /*was commented out, uncomment because in elp experiences, text was pushed down*/
+            /* 						top: -16px; //related to the tooltip */
+          }
+        }
+
+        &:hover,&.tap-hover{
+          >td{
+            background-color:white;
+            .dnd{
+
+              display: block !important;
+
+              .sortable_placeholder{
+                background-position: 8px -231px;
+                border-radius: 0;
+                display: inline-block !important;
+                height: 39px;
+                left: 6px;
+                top: -26px;
+                width: 2.2rem;
+                &:hover,&.tap-hover {
+                  background-color: @bright-orange;
+                  background-position: 8px -271px;
+                }
+              }
+            }
+          }
+          menu.section.manage{
+            display: block !important;
+            right: 3px;
+            button{
+              height:auto;
+            }
+          }
+
+          td:not(.exp-placeholder):not(.certf-placeholder) {
+            background-color: @blue-lightling;
+          }
+        }
+        &.disable-editing{
+          menu.section.manage{
+            display: none !important;
+          }
+          .dnd {
+            display: none !important;
+            .sortable_placeholder{
+              display: none !important;
+            }
+          }
+        }
+      }
+
+      td {
+        .exp-description{
+          padding:0;
+          line-height: 1.2rem;
+          * { line-height: 1.2rem; }
+        }
+      }
+
+      tfoot{
+        tr {
+          td {
+            &.empty-add-left {
+              .elp-left-section-no-border;
+              cursor: default;
+            }
+            padding: 0;
+
+            button.add{
+              .elp-button-add-props;
+            }
+          }
+        }
+      }
+
+    }
+
+    :not(table).linguistic-certificates,
+    :not(table).linguistic-experiences,
+    .self-assessment{
+
+      &.label{
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+
+        border-color: @elp-colorD;
+        border-style: solid;
+        border-width: 0px 1px 1px;
+
+        padding: @elp-margin + 0.195rem;/* 3px; */
+
+        font-weight: bold;
+
+        position: relative;
+      }
+    }
+
+    table.linguistic-certificates tr.menu-placeholder:hover{
+      .dnd {
+        .sortable_placeholder {
+          background-color: rgba(0, 0, 0, 0);
+          background-position: 7px -233px;
+          left: 6px;
+          top: -27px;
+
+          &:hover{
+            height: 2.2rem;
+            background-color: @bright-orange;
+            background-position: 7px -273px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** ELP Footer ****/
+footer {
+
+  > .elp.footer-info{
+    margin: 1.3rem @elp-horizontal-padding;
+    position: relative;
+    color: @very-dark-grey;
+
+    border-top: 1px solid @wg-dark-grey;
+    border-bottom: 1px solid @wg-dark-grey;
+
+    padding: 0.65rem 0 1.3rem;
+  }
+
+  /* 	> div > span.elp.document-copyright > p {
+          width: 75%;
+          margin-left: 15px;
+      }
+   */
+
+}
+
+
+
+/*****************************************
+CL
+*****************************************/
+
+/***************************************************
+ ***************************************************
+ **********        COVER LETTER         ************
+ ***************************************************
+ ***************************************************/
+
+
+/******************* COMPOSE ***********************/
+
+@cl-dd-side-padding: 3%;
+@cl-add-button-left-padding: 45%;
+
+@cl-signature-width: 300px;
+@cl-signature-height: 100px;
+@cl-signature-max-height: 100px;
+@signature-background-hover: #FED687;
+
+.upload-prompt-span-mixin{
+  background: url("@{img-base-url}upload_arrow_grey_11.png@{img-suffix-url}${project.version}")  no-repeat scroll 0px 0px transparent;
+  color:@text-lightgrey;
+  font-size: 14px;
+  left: 5px;
+  top:30px;
+  position: relative;
+  height: @cl-signature-height;
+  text-align:center;
+  font-weight:bold;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.mixin-button-signature-delete{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 25px;
+  height: 30px;
+  color: transparent;
+  display: none;
+  border: none;
+}
+
+.mixin-button-signature-delete-hover{
+  display:inline-block;
+  cursor: pointer;
+}
+
+fieldset.other-europass-documents label{
+  display: inline-block;
+  margin-top: 75px;
+}
+
+
+.external-attachments div.multipliable div.composite  .multifield.add-item,
+.external-attachments div.multipliable div.composite button.multifield.remove-item {
+  left: 0;
+  position: relative;
+}
+
+.cl .value.rich-content{
+  p{
+    line-height:1.3rem;
+  }
+}
+
+.cl.compose{
+  * {
+    line-height: normal;
+  }
+  .PersonalBasic *{
+    line-height: 1.4;
+  }
+  /***** HOT: Cover Letter has language-specific alignments of sections DO NOT REMOVE! *****/
+  .right-align{
+    text-align: right;
+  }
+  .section {
+    padding: 1.5% 0;
+    >div.value.Localisation,
+    dd{
+      padding:0 @cl-dd-side-padding;
+
+    }
+
+    &.personal:after {
+      border-bottom: 2px solid @light-blue;
+      content: " ";
+      width: 100% - 2*@cl-dd-side-padding;
+      bottom: -0.5rem;
+      position: absolute;
+      margin: 0 3%;
+    }
+
+    &.personal button.names.switch {
+
+      margin-left: 0px;
+      position: relative;
+      top: 12px;
+      vertical-align: top;
+    }
+
+
+    div.empty.add{
+      .cl-empty-div-add-mixin;
+      span{
+        padding-left:0;
+      }
+    }
+
+
+    .Signature{
+      background: none no-repeat scroll 0 0 transparent;
+      border: 2px dashed transparent;
+      margin: 10px 0;
+      /*   height: @cl-signature-height; */
+      width: @cl-signature-width;
+      position: relative;
+      display: block;
+      border-radius: 0px;
+      button.signature.delete{
+        background:transparent;
+        .mixin-button-signature-delete;
+      }
+
+      &.active.nosignature{
+        border: 2px dashed @wg-medium-grey;
+        margin: 10px 0 10px 0;
+        width: @cl-signature-width;
+        height: @cl-signature-height;
+      }
+      &.active:hover,
+      &.active.nosignature{
+        span.upload-prompt{
+          display: inline-block;
+          .upload-prompt-span-mixin;
+        }
+        &.active.nosignature,
+        &.active.nosignature:hover {
+          border: 2px dashed @wg-medium-grey;
+        }
+      }
+    }
+    &:hover.Signature.active{
+      background: @bright-orange;
+    }
+    &:hover.Signature.active,
+    &.Signature.active:hover{
+      span.upload-prompt{
+        .upload-prompt-span-mixin;
+      }
+    }
+
+    &.Signature.active {
+      span.upload-prompt{
+        display: none;
+      }
+    }
+    &.Signature.active{
+      &:hover {
+        span.upload-prompt {
+          display: inline-block;
+        }
+      }
+    }
+    &:hover,&.tap-hover{
+      .Signature.active{
+        background: transparent;
+      }
+      .Signature button.signature.delete{
+        .mixin-button-signature-delete-hover;
+      }
+    }
+    menu.manage{
+      margin:0 !important;
+    }
+  }
+  .inline-values {
+    display: block;
+    >.value{
+      display: inline-block;
+      padding-right: 0.5rem;
+      >.item{
+        display: inline-block;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.cl .section.empty.item:hover,
+.cl .section.empty.item.tap-hover,
+.cl .subsection.empty.item:hover,
+.cl .subsection.empty.item.tap-hover{
+  div.empty.add{
+    background-position: @cl-add-button-left-padding -21px;
+  }
+}
+
+.cl .section div.documentation{
+  background-image: url("@{img-base-url}binder_icon.png@{img-suffix-url}${project.version}");
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+  padding-left: 20px;
+}
+
+.cl .section div.documentation > span {
+  color: @light-blue-alternative-second;
+}
+
+/* .notify{ */
+/* 	color: #FFA500; */
+/*     float: left; */
+/*     width: 280px; */
+/* } */
+
+
+
+
+/*** Specific rules for enclosed field and footer (CL) in order to be visible on tablets (landscape and portrait mode) ***/
+@media only screen and (max-width: @tablet-width-limit) and (orientation: landscape) {
+  div.cl {
+    dl#Compose\:CL\:Enclosed {
+      margin-bottom: 2rem;
+    }
+  }
+  footer > .document {
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit) and (orientation: portrait) {
+  div.cl {
+    dl#Compose\:CL\:Enclosed {
+      margin-bottom: 2rem;
+    }
+  }
+  footer > .document {
+    padding-bottom: 250px;
+  }
+}
+
+.elp.elp .foreign-languages-details .language-list .list-item .foreign-language-details button{
+  &.sort-move-up,&.sort-move-down,&.sort-move-top{
+    top:-35px;
+  }
+}
+
+.elp .foreign-languages-details table.list-actions tr.menu-placeholder:hover>td .dnd .sortable_placeholder{
+  top:-2px;
+  left:0;
+  width:2rem;
+}
+
+.elp .foreign-languages-details .language-list .empty.compose-list button:hover{
+  background-color:transparent;
+}
+
+.section.item.opens-modal-form.mainbody{
+  margin:0;
+  padding:0;
+  .description-body{
+    margin:20px 0;
+    p{
+      margin:20px 0;
+      &.indent1{
+          margin-left: 20px;
+          margin-bottom: 0px !important;
+      }
+      &.indent2{
+          margin-left: 40px;
+          margin-bottom: 0px !important;
+      }
+      &.indent3{
+          margin-left: 60px;
+          margin-bottom: 0px !important;
+      }
+    }
+  }
+}
+
+.cl{
+  .section.item.opens-modal-form.subject, .section.item.opens-modal-form.subject + dl {
+    margin: 0;
+  }
+}
+
+@media screen and(max-width:@phone-width-limit){
+  footer > .document{
+    padding-bottom:50px;
+  }
+  .cl .personal-details.value.personal>.name{
+    padding-left:0;
+  }
+  .elp .elp-overview.elp-overview.section.item{
+    background-color:white;
+    padding:10px;
+    box-sizing: border-box;
+  }
+  .compose .section .personal-details div.name span,.cl.compose .value,.cl.compose .default-value{
+    font-size:1rem;
+  }
+  .cl.compose .section{
+    padding:25px 5%!important;
+    border-radius:4px;
+    margin-bottom:3px;
+  }
+  .cl .section.empty.item div.empty.add{
+    position:absolute;
+    right:10px;
+    top:50%;
+    margin-top:0;
+    transform:translatey(-50%);
+    span{
+      font-size:0;
+      display:inline-block;
+    }
+  }
+  .cl.compose .section .Signature.active.nosignature{
+    width:200px;
+  }
+  .cl.compose .section.personal:after{
+    display:none;
+  }
+  fieldset.other-europass-documents label{
+    margin-top:20px;
+  }
+  .portfolio-logo{
+    float:none;
+  }
+  .elp .label,.elp .value,.elp .foreign-languages-details table.self-assessment th{
+    font-size:12px!important;
+  }
+  .cl .section.empty.item div.empty.add{
+    vertical-align: middle;
+  }
+  .cv .subsection-container .foreign-language-skills table.languages{
+    margin-left:1rem;
+  }
+  .subsection.item.skills.opens-modal-form.ict:not(.empty){
+    margin-left:1rem;
+  }
+  .cl .section.empty.item.tap-hover div.empty.add span{
+    font-size:14px;
+  }
+  .cl.compose .section{
+    margin:0.2rem 0 0.8rem;
+  }
+  .cl.compose .section.personal button.names.switch{
+    top:6px;
+  }
+  .elp .compose-list.sortable{
+    margin-left:30px;
+  }
+}
+
+@media screen and(min-width:@phone-width-limit){
+  .section.item.opens-modal-form.mainbody:not(.empty){
+    margin:30px 0 60px;
+    .description-body{
+      margin:20px 0;
+    }
+  }
+}

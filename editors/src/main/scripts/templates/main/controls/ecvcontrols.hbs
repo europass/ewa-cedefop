@@ -1,0 +1,88 @@
+{{#controls}}
+<menu class="ecv-controls">
+	<span class="heading">{{get_text "Extra.LearnerInfo.ECV" group="GuiLabel"}}</span>
+	{{#photo}}
+	<button type="button" 
+			class="opens-modal-form photo"
+			data-rel-doc="cv"
+			data-rel-clazz="PhotoFormView"
+			data-rel-form="Form:LearnerInfo.Identification.Photo"
+			data-rel-section="SkillsPassport.LearnerInfo.Identification.Photo"
+			data-rel-help-section="Help.SkillsPassport.LearnerInfo.Identification.Photo"
+			data-rel-index=""
+			data-rel-origin="click-origin-controls"
+			rel="tooltip">
+		{{get_text "Extra.LearnerInfo.Identification.Photo" group="GuiLabel"}}
+	</button>
+	{{/photo}}
+	{{#otherSkills}}
+	<button type="button" 
+			class="opens-modal-form other-skills"
+			data-rel-doc="cv"
+			data-rel-clazz="GenericSkillsFormView"
+			data-rel-form="Form:LearnerInfo.Skills.Other"
+			data-rel-section="SkillsPassport.LearnerInfo.Skills.Other"
+			data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Other"
+			data-rel-subsection="Other"
+			data-rel-index=""
+			data-rel-origin="click-origin-controls">
+		{{get_text "Extra.LearnerInfo.Skills.Other" group="GuiLabel"}}
+	</button>
+	{{/otherSkills}}
+	{{#driving}}
+	<button type="button" 
+			class="opens-modal-form driving-skills"
+			data-rel-doc="cv"
+			data-rel-clazz="DrivingFormView"
+			data-rel-form="Form:LearnerInfo.Skills.Driving"
+			data-rel-section="SkillsPassport.LearnerInfo.Skills.Driving"
+			data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Driving"
+			data-rel-subsection = "Driving"
+			data-rel-index=""
+			data-rel-origin="click-origin-controls">
+		{{get_text "Extra.LearnerInfo.Skills.Driving" group="GuiLabel"}}
+	</button>
+	{{/driving}}
+	{{#achievements}}
+	<button type="button" 
+			class="opens-modal-form achievements" 
+			data-rel-doc="cv"
+			data-rel-clazz="AchievementFormView"
+			data-rel-form="Form:LearnerInfo.Achievement[0]"
+			data-rel-section="SkillsPassport.LearnerInfo.Achievement[0]"
+			data-rel-help-section="Help.SkillsPassport.LearnerInfo.Achievement"
+			data-rel-index="0"
+			data-rel-origin="click-origin-controls">
+		{{get_text "Extra.LearnerInfo.Achievement" group="GuiLabel"}}
+	</button>
+	{{/achievements}}
+    {{#personalDataTreatmentAchievements}}
+    <button type="button"
+            class="opens-modal-form personal-data-treatment-achievements"
+            data-rel-doc="cv"
+            data-rel-clazz="AchievementFormView"
+            data-rel-form="Form:LearnerInfo.Achievement[0]"
+            data-rel-section="SkillsPassport.LearnerInfo.Achievement[0]"
+            data-rel-help-section="Help.SkillsPassport.LearnerInfo.Achievement"
+            data-rel-index="0"
+            data-rel-personal-data-treatment="true"
+            data-rel-origin="click-origin-controls">
+        {{get_text "Extra.LearnerInfo.Achievement.Personal.Data.Treatment" group="GuiLabel"}}
+    </button>
+    {{/personalDataTreatmentAchievements}}
+	{{#attachments}}
+	<button type="button" 
+			class="opens-modal-form attachments" 
+			data-rel-doc="attachment"
+			data-rel-clazz="AttachmentFormView"
+			data-rel-form="Form:Attachment"
+			data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo"
+			data-rel-help-section="Help.Add.ECV.Attachment"
+			data-rel-index="0"
+			data-rel-origin="click-origin-controls"
+			data-rel-document="ECV">
+		{{get_text "Extra.LearnerInfo.ReferenceTo" group="GuiLabel"}}
+	</button>
+	{{/attachments}}
+</menu>
+{{/controls}}

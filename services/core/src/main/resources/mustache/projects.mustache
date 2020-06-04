@@ -1,0 +1,17 @@
+{{#item}}
+
+<p>
+{{#name}}
+	<strong>{{name}}</strong>
+	{{#startDate}} | <em>{{formatStartDate}}</em>{{#endDate}}<em> - {{formatEndDate}}</em>{{/endDate}}{{/startDate}}
+	{{#description}}
+		<br/>{{description}}
+		{{#url}}<br/><a href="{{url}}" target="_blank">{{url}}</a>{{/url}}
+	{{/description}}
+	{{^description}}
+		{{#url}}<a href="{{url}}" target="_blank">{{url}}</a>{{/url}}
+	{{/description}}
+{{/name}}
+</p>
+
+{{/item}}

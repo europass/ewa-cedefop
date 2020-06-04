@@ -1,0 +1,223 @@
+{{#with SkillsPassport}}
+{{#with_list_item LearnerInfo.Skills.Linguistic.ForeignLanguage ../Idx}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Edit" group="GuiLabel"}}
+		{{#isEmptyObject Description}}
+		{{else}}
+		<span class="subsection-title"></span>
+		{{/isEmptyObject}}
+		</legend>
+	</header>
+
+	{{#with_list_item Certificate ../../SubIdx}}
+	
+	<fieldset class="Title">
+		<label for="Title">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title" group="DocumentLabel"}}</label>
+		<input type="text" 
+			class="formfield single help copy with-placeholder"
+			title
+			name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Title"
+			data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificates"
+			value="{{Title}}">
+		<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Title" class="help placeholder" style="display:none;">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Title" group="EditorPlaceholder"}}
+		</span>	
+	</fieldset>
+	
+	
+	<fieldset class="AwardingBody">
+		<label for="AwardingBody">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody" group="DocumentLabel"}}</label>
+		<input type="text" 
+			class="formfield single help copy with-placeholder"
+			title
+			name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].AwardingBody"
+			data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody"
+			value="{{AwardingBody}}">
+		<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].AwardingBody" class="help placeholder" style="display:none;">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.AwardingBody" group="EditorPlaceholder"}}
+		</span>	
+	</fieldset>
+
+	<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.IssueDate" class="Date">
+		<label for="Certificate-IssueDate">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.IssueDate" group="DocumentLabel"}}
+		</label>
+		
+		<div class="composite LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date">
+			<div class="custom_select_wrapper" tabindex="0">
+				<select title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Day"
+						class="formfield hidden_select pref global-format help Certificate Date Day with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date"
+						data-bind-document="ELP ECV">
+				<option value="" {{#unless Date.Day}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+				</option>
+				{{#loop Date.Day start="1" end="31" step="1" looptype="day"}}
+					<option value="{{Index}}" {{#equals ../Date.Day Index}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loop}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Day"
+						class="formfield custom_select pref global-format help Certificate Date Day with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date"
+						data-bind-document="ELP ECV">
+					<li class="init" data-value="" {{#unless Date.Day}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loop Date.Day start="1" end="31" step="1" looptype="day"}}
+							<li data-value="{{Index}}" {{#equals ../Date.Day Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+                    </ul>
+                </ul>
+				</select>
+			</div>
+
+			<div class="custom_select_wrapper" tabindex="0">
+				<select title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Month"
+						class="formfield hidden_select pref global-format help Certificate Date Month with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date" data-bind-document="ELP ECV">
+				<option value="" {{#unless Date.Month}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+				</option>
+				{{#loop Date.Month start="1" end="12" step="1" looptype="month"}}
+					<option value="{{Index}}" {{#equals ../Date.Month Index}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loop}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Month"
+						class="formfield custom_select pref global-format help Certificate Date Month with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date"
+						data-bind-document="ELP ECV">
+					<li class="init" data-value="" {{#unless Date.Month}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loop Date.Month start="1" end="12" step="1" looptype="month"}}
+							<li data-value="{{Index}}" {{#equals ../Date.Month Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+					</ul>
+				</ul>
+			</div>
+			<div class="custom_select_wrapper" tabindex="0">
+				<select title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Year"
+						class="formfield hidden_select pref global-format help Certificate Date Year with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date"
+						data-bind-document="ELP ECV">
+				<option value="" {{#unless Date.Year}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+				</option>
+				{{#loop Date.Year start="1930" end="+1" step="1" looptype="year"}}
+					<option value="{{Index}}" {{#equals ../Date.Year Index}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loop}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.Year"
+						class="formfield custom_select pref global-format help Certificate Date Year with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date"
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date"
+						data-bind-document="ELP ECV">
+					<li class="init" data-value="" {{#unless Date.Year}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loop Date.Year start="1930" end="+1" step="1" looptype="year"}}
+							<li data-value="{{Index}}" {{#equals ../Date.Year Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset> 
+	
+	<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.IssueDate.Format" class="DateFormat">
+		<label for="Certificate-IssueDate-Format">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.IssueDate.Format" group="GuiLabel"}}
+		</label>
+		<div class="custom_select_wrapper">
+			<select title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.format" 
+					data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date" 
+					class="formfield help hidden_select global-format ForeignLanguage Certificate Date Format PrintingPreferences Date"
+					data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date">
+						{{#with_pref_item ../../../Preferences.ELP.LearnerInfo.Skills.Linguistic.ForeignLanguage.array ../../../Idx}}
+							{{#with_pref_item current_pref_item.Certificate.array ../../../../SubIdx}}
+								{{#augment . Format=current_pref_item.Date.format DocumentType="ELP"}}
+									{{> templates/forms/dateformatoptions}}
+								{{/augment}}
+							{{/with_pref_item}}
+						{{/with_pref_item}}
+			</select>
+			<ul title
+				name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Date.format" 
+				data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Certificate.array[{{../../../SubIdx}}].Date" 
+				class="formfield help global-format ForeignLanguage Certificate Date Format PrintingPreferences Date custom_select"
+				data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Date">
+				<li class="init" data-value=""></li>
+					<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#date_format_options}}
+						<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+							{{text}}
+						</li>
+						{{/date_format_options}}
+					</ul>
+			</ul>
+		</div>
+	</fieldset>
+	
+	<fieldset class="Level">
+		<label for="Level">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level" group="DocumentLabel"}}
+		</label>
+		<div class="level select" name="Certificate">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Level" 
+						class="formfield help hidden_select cefr-level Level with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level" 
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Level">
+						<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level" group="EditorPlaceholder"}}
+						</option>
+					{{#loopForMap Level "CertificateLevelMap" emptyOption=false showCode=true extraSpaceBetween=true}}
+						<option value="{{Code}}&nbsp"{{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMap}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Level" 
+						class="formfield help custom_select cefr-level Level with-placeholder"
+						data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level" 
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Certificate[{{../../../SubIdx}}].Level">
+						<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate.Level" group="EditorPlaceholder"}}
+						</li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+							{{#loopForMap Level "CertificateLevelMap" emptyOption=false showCode=true extraSpaceBetween=true}}
+								<li data-value="{{Code}}&nbsp"&nbsp{{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+							{{/loopForMap}}
+						</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+	
+	
+	{{/with_list_item}}
+</fieldset>
+{{/with_list_item}}
+{{/with}}

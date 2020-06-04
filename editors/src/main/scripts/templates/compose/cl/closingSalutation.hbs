@@ -1,0 +1,21 @@
+
+<dt class="label"></dt>
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.ClosingSalutation 1=SkillsPassport.LearnerInfo.Identification.Signature}}
+{{else}}
+	{{#call_partial . path="" view="CL:ClosingSalutation" section="CoverLetter.Letter.ClosingSalutation SkillsPassport.LearnerInfo.Identification.Signature" name="CL:ClosingSalutation" form="CL:ClosingSalutation"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}{{/emptyObjects}}
+<dd {{#if Preferences.CoverLetter.Justification.justify}}style="text-align: justify !important;"{{/if}}>
+
+	{{> templates/compose/cl/signature}}
+
+    {{#if Preferences.CoverLetter.SignatureName.enableName}}
+	{{> templates/compose/personname}}
+    {{/if}}
+
+	{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.ClosingSalutation 1=SkillsPassport.LearnerInfo.Identification.Signature}}
+	<div class="empty add">
+		<span class="empty add"></span>
+	</div>
+	{{/emptyObjects}}
+</dd>

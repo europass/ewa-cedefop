@@ -1,0 +1,94 @@
+{{=[[ ]]=}}
+
+<fieldset>
+	<header>
+		<legend>[[#resources]][[& GuiLabel_CoverLetter:Enclosed:Legend]][[/resources]]</legend>
+	</header>
+
+{{#with SkillsPassport}}
+
+[[#preferences]]
+	[[#CoverLetter:Documentation]]
+	<fieldset>
+		[[#isText]]
+		<input type="text" 
+				class="formfield help enclosed with-placeholder"
+				title="{{get_text "CoverLetter.Documentation.Heading.Label" group="AccessibilityLabel"}}"
+				name="CoverLetter.Documentation.Heading.Label"
+				data-help-key="CoverLetter.Enclosed.Text.Label"
+				value="{{#if CoverLetter.Documentation.Heading}}{{CoverLetter.Documentation.Heading.Label}}{{else}}[[#resources]][[& CoverLetter:Enclosed]][[/resources]]{{/if}}">
+				
+		<span name="CoverLetter.Documentation.Heading.Label" class="help placeholder" style="display:none;">
+			[[#resources]][[& EditorPlaceholder_CoverLetter:Enclosed]][[/resources]]
+		</span>
+		[[/isText]]
+		[[^isText]]
+		<div class="composite select" name="CoverLetter.Documentation.Heading">
+			<input type="text"  
+					class="formfield help typeahead enclosed"
+					title="{{get_text "CoverLetter.Documentation.Heading.Label" group="AccessibilityLabel"}}"
+					name="CoverLetter.Documentation.Heading.Label"
+					data-help-key="CoverLetter.Enclosed.Hybrid.Label"
+					rel="CoverLetter.Documentation.Heading"
+					placeholder="[[#resources]][[& EditorPlaceholder_CoverLetter:Enclosed]][[/resources]]"
+					value="{{#if CoverLetter.Documentation.Heading}}{{CoverLetter.Documentation.Heading.Label}}{{else}}[[#resources]][[& EnclosedLabel_heading-1]][[/resources]]{{/if}}">
+<!--  			<span name="CoverLetter.Documentation.Heading.Label" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_CoverLetter:Enclosed]][[/resources]]
+			</span> -->
+			<input type="hidden"
+					class="Address"
+					name="CoverLetter.Documentation.Heading.Code"
+					data-help-key="CoverLetter.Enclosed.Hybrid.Code"
+					rel="CoverLetter.Documentation.Heading"
+					value="{{CoverLetter.Documentation.Heading.Code}}">
+		</div>
+		[[/isText]]
+	</fieldset>
+	[[/CoverLetter:Documentation]]
+[[/preferences]]
+		
+	
+	
+	<fieldset class="other-europass-documents">
+		{{#unless ../excludeAll}}
+		<label for="Title">[[#resources]][[& GuiLabel_CoverLetter:Documentation:InterDocument]][[/resources]]</label>
+		{{/unless}}
+		<ul class="europass-documents">
+			{{#loop_europass_documents CoverLetter.Documentation.InterDocument ../Extra }}
+			<li class="clickable-area europass-document-{{loopValue}} {{#if_eq checked compare="checked"}}selected{{/if_eq}}"
+				data-tip.position="left">
+				<input type="checkbox" 
+						class="europass-document parent-selectable clickable-area-input css-checkbox"
+						title="{{get_text "CoverLetter.Documentation.InterDocument" group="AccessibilityLabel"}}"
+						name="CoverLetter.Documentation.InterDocument[{{loopId}}].ref"
+						value="{{loopValue}}"
+						{{#if_eq checked compare="checked"}}checked="checked"{{/if_eq}}
+						id="europass-document-{{loopId}}"/>
+				<label for="{{loopValue}}" class="{{loopValue}} css-label">{{loopLabel}}</label>
+			</li>
+			{{/loop_europass_documents}}
+			</ul>
+	</fieldset>
+
+	<fieldset class="external-attachments">
+	  <label for="Title">[[#resources]][[& GuiLabel_CoverLetter:Documentation:ExtraDocument]][[/resources]]</label>
+		<div class="single multipliable compound">
+		{{#each_with_default CoverLetter.Documentation.ExtraDocument item="{ \"Description\" : \"\" }" }}
+		<div class="composite" data-index="{{index}}">
+			<input type="text" 
+					class="formfield single help copy with-placeholder"
+					title="{{get_text "CoverLetter.Documentation.ExtraDocument.Description" group="AccessibilityLabel"}}"
+					name="CoverLetter.Documentation.ExtraDocument[{{index}}].Description"
+					data-help-key="CoverLetter.Documentation.ExtraDocument.Description"
+					value="{{Description}}">
+			 <span name="CoverLetter.Documentation.ExtraDocument[{{index}}].Description" class="help placeholder" style="display:none;">
+					[[#resources]][[& EditorPlaceholder_CoverLetter:Documentation:ExtraDocument:Description]][[/resources]]
+			</span>
+		</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+	
+	{{/with}}
+	
+</fieldset>

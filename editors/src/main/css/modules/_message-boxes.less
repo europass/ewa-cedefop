@@ -1,0 +1,126 @@
+/*remote upload FOR IMPORT
+**************************************/
+
+.ui-widget-overlay {
+  background: @black;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+}
+
+.ui-dialog {
+  background: none repeat-x scroll 50% 50% #FFFFFF;
+  border: 1px solid #bbb;
+  z-index: 2000;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  .ui-dialog-titlebar {
+    height: 30px;
+    .ui-dialog-titlebar-close {
+      .close-button-mixin;
+      position: relative;
+      left: -35px;
+      top: 15px;
+    }
+  }
+  .confirmation {
+    .feedback-area {
+      section.notification.confirm {
+        background-image:url("@{img-base-url}notifications/msg-warning-indicator-large.png@{img-suffix-url}${project.version}");
+        background-color: transparent;
+        background-position: center top;
+        padding-top: 3rem;
+        text-align: center;
+      }
+    }
+    menu.confirm-dialog {
+      padding-bottom: 3rem;
+      text-align: center;
+      button:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+
+
+
+[id*="SkillsPassport.esp.Confirmation.Modal"]{
+  header{
+    padding:0 40px;
+  }
+  legend{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #9d9d9d;
+    margin: 0 0 10px;
+  }
+  .feedback-area{
+    margin:1.5rem 0 1rem;
+  }
+}
+
+fieldset.remote-upload, fieldset.reset-modal{
+  padding:0 40px 20px;
+  .import-confirmation-doc-select, .reset-confirmation-doc-select{
+    label{
+      width:100%!important;
+    }
+  }
+}
+
+[id="#deleteConfirmationDialog"]{
+  min-height:0!important;
+  .delete.message-area.notification.confirm.confirm.confirm{
+    padding-left:33px;
+    &:before{
+      display:none;
+    }
+  }
+}
+
+
+
+.reset-modal.reset-modal.reset-modal .feedback-area .formfield-label {
+  background: transparent!important;
+  border: none!important;
+  width:auto;
+  color:#2A7AB9;
+  padding-top:0;
+}
+
+.reset-modal button.disabled{
+  pointer-events:none;
+}
+
+@media screen and (min-width:@phone-width-limit){
+  .reset-modal > .feedback-area{
+    padding-right:100px;
+    .css-label.checkbox-label.formfield-label{
+      position:absolute;
+      right:20px;
+      top:35px;
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .ui-dialog{
+    max-width:80%;
+  }
+  fieldset.remote-upload, fieldset.reset-modal{
+    padding:0 10px 10px;
+  }
+}
+

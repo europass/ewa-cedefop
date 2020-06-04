@@ -1,0 +1,129 @@
+
+{{#with_list_item SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage Idx}}
+
+<table
+	id="List:SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Experience"
+	summary="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience"
+	class="linguistic-experiences list-actions"
+	data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Experience"
+	summary="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience">
+	<caption>{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience}}</caption>
+	<thead>
+		<tr>
+            <th class="label exp-placeholder-label"></th>
+			<th class="label experience-description">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description"  group="DocumentLabel"}}</th>
+			<th class="label period">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"  group="DocumentLabel"}}</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#unless Experience}}
+	<tr></tr>
+	{{/unless}}
+	
+	{{#each_with_index Experience}}
+	<tr id="experience-{{../list_index}}-{{index}}" 
+		class="menu-placeholder language compose-list list-item opens-modal-form section item"
+		data-rel-doc="elp"
+		data-rel-clazz="ElpLanguageExperienceFormView"
+		data-rel-form="Form:LinguisticExperience[{{../list_index}}][{{index}}]"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[{{index}}]"
+		data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience"
+		data-rel-item-index="{{index}}"
+		data-validation-field="date period"
+		data-rel-index="{{../list_index}}">
+
+		 <td class="menu-placeholder exp-placeholder">
+         {{#if_gt ../Experience.length compare="1"}}
+			<div class="dnd">
+				<span class="sortable_placeholder list-item-sortable tip spot tip-addLeft" data-tip.position="top-left">
+			  	 <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span>	
+			  +</span>
+			</div>
+			
+			{{/if_gt}}
+        </td>
+		<td class="menu-placeholder value description">
+			<div class="exp-description">
+			{{#emptyObjects "2" 0=Description 1=Area}}
+				<span class="default-value">
+					{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description"  group="DocumentLabel"}}
+				</span>
+			{{else}}
+				{{#area_with_description Description Area.Label}}{{{nestHtmlLists .}}}{{/area_with_description}}
+			{{/emptyObjects}}</div>
+		</td>
+		<td class="menu-placeholder value period">
+			<span class="period {{#unless Period}}default-value{{/unless}}">
+			{{#format_date_period Period current_pref_item.Period.format false DocumentType="ELP"}}
+				{{{.}}}
+			{{/format_date_period}}
+			</span>
+			<menu class="section manage">
+				<button class="opens-modal-form edit extra tip spot nested-tip tip-addRight"
+                        data-tip.position="top-right">
+                    <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+				</button>			
+				<button type="button"
+			        name="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[{{index}}]_delete_btn"
+			        class="elp delete tip spot nested-tip tip-addRight"
+			        data-tip.position="top-right"
+			        data-rel-form="Form:LinguisticExperience[{{../list_index}}][{{index}}]"
+			        data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[{{index}}]"
+			        data-rel-view="Compose:ElpForeignLanguagesList"
+			        data-rel-index="{{index}}">
+				    <span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+			    </button>
+			</menu>			
+		</td>
+ 	</tr>
+	{{/each_with_index}}
+
+	</tbody>
+	<tfoot>
+	<tr>
+	    <td class="empty-add-left "></td>
+		<td colspan="4" class="empty">
+			{{#isEmptyObject Experience}}
+			<button type="button" 
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[0]_add_btn" 
+					class="compose-list opens-modal-form add empty" 
+					data-rel-doc="elp"
+					data-rel-clazz="ElpLanguageExperienceFormView"
+					data-rel-form="Form:LinguisticExperience[{{../list_index}}][0]"
+					data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[0]"
+					data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience"
+					data-validation-field="date period"
+					data-rel-index="{{../list_index}}">
+						<span class="img-placeholder">&nbsp;</span>
+						<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+					</button>
+					
+			{{else}}
+			<button type="button" 
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[{{Experience.length}}]_add_btn" 
+					class="compose-list add opens-modal-form" 
+					data-rel-doc="elp"
+					data-rel-clazz="ElpLanguageExperienceFormView"
+					data-rel-form="Form:LinguisticExperience[{{../list_index}}][{{Experience.length}}]"
+					data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Experience[{{Experience.length}}]"
+					data-rel-help-section="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience"
+					data-validation-field="date period"
+					data-rel-index="{{../list_index}}">
+					<span class="img-placeholder">&nbsp;</span>
+					<span>
+					{{#if_lt Experience.length compare="1"}}
+						{{get_text "Buttons.Add.Content" group="GuiLabel"}}
+					{{/if_lt}}
+					{{#if_gteq Experience.length compare="1"}}
+						{{get_text "Buttons.Add.Content.Not.Empty.Language.Linguistic" group="GuiLabel"}}
+					{{/if_gteq}}
+					</span>
+				</button>
+				
+			{{/isEmptyObject}}
+		</td>
+	</tr>
+	</tfoot>
+</table>
+{{/with_list_item}}
+

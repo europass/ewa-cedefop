@@ -1,0 +1,42 @@
+<header>
+    <legend>{{get_text "text.import" group="GuiLabel"}}</legend>
+
+    <fieldset class="feedback-area">
+        <section class="notification warning">
+            <div class="import-overwrite-descr">
+                <span>{{get_text "import.wizard.step3.overwrite.description" group="GuiLabel"}}</span>
+
+            </div>
+        </section>
+    </fieldset>
+
+    <div class="import-overwrite-option">
+        <span>{{get_text "import.wizard.step3.overwrite.option.description" group="GuiLabel"}}</span>
+    </div>
+
+</header>
+
+<fieldset class="remote-upload important-confirmation confirmation">
+    <!--<fieldset class="feedback-area">	-->
+        <!--<section class="notification confirm">-->
+            <!--{{message}}-->
+        <!--</section>-->
+    <!--</fieldset>-->
+
+    {{#each docs}}
+        <fieldset class="import-confirmation-doc-select">
+            <input type="checkbox"
+                   id="Import_Option_Doc_Confirm_{{name}}"
+                   class="css-checkbox formfield help enabled"
+                   name="{{name}}">
+            <label for="Import_Option_Doc_Confirm_{{name}}"
+                    class="css-label checkbox-label formfield-label enabled"> {{title}} </label>
+        </fieldset>
+    {{/each}}
+
+    <menu label="Manage" class="confirm-dialog remote-upload">
+        <button type="button" class="confirm-cancel upload-confirm button">{{get_text "Buttons.Cancel" group="GuiLabel"}}</button>
+        <button type="button" class="confirm-submit upload-confirm green button">{{get_text "Buttons.Upload" group="GuiLabel"}}</button>
+    </menu>
+
+</fieldset>

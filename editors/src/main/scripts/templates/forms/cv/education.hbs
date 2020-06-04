@@ -1,0 +1,299 @@
+{{#with SkillsPassport}}
+
+	<fieldset>
+		<header>
+			<legend>{{get_text "LearnerInfo.Education" group="GuiLabel"}}</legend>
+		</header>
+		
+		{{#with_list_item LearnerInfo.Education ../Idx}}
+			
+		
+		<fieldset name="LearnerInfo.Education[{{list_index}}].Period" class="Experience Dates">
+		
+			<fieldset class="Experience Period">
+				<fieldset name="LearnerInfo.Education[{{list_index}}].Period.From">
+					<label for="LearnerInfo.Education.Dates.From">{{get_text "LearnerInfo.Education.Dates.From"}}</label>
+					{{> templates/forms/cv/educationPeriodFrom}}
+				</fieldset>
+				<fieldset name="LearnerInfo.Education[{{list_index}}].Period.To" >
+					<label for="LearnerInfo.Education.Dates.To">{{get_text "LearnerInfo.Education.Dates.To"}}</label>
+					{{> templates/forms/cv/educationPeriodTo}}
+				</fieldset>
+				<div class="overlay" {{#if_eq Period.Current compare="true"}}style="display:block;"{{else}}style="display: none;"{{/if_eq}}></div>
+			</fieldset>
+			
+		    <fieldset name="LearnerInfo.Education[{{list_index}}].Period.Current" class="Date today checkbox-field">
+				<input	id="LearnerInfo.Education[{{list_index}}].Period.Current"
+				        type="checkbox" 
+						class="formfield css-checkbox isBinary Date help today"
+						title
+						name="LearnerInfo.Education[{{list_index}}].Period.Current"
+						data-help-key="LearnerInfo.Education.Period.Current"
+						{{#if_eq Period.Current compare="true"}}checked="checked"{{/if_eq}}>
+				<label for="LearnerInfo.Education[{{list_index}}].Period.Current" class="css-label checkbox-label">
+					{{get_text "LearnerInfo.Education.Dates.Current" group="GuiLabel"}}
+				</label>
+			</fieldset>
+		
+			<fieldset name="LearnerInfo.Education[{{list_index}}].Period.Format" class="DateFormat">
+				<label for="LearnerInfo.Education.Dates.Format">{{get_text "LearnerInfo.Education.Dates.Format"}}</label>
+					<div class="custom_select_wrapper">
+						<select title
+								name="LearnerInfo.Education[{{list_index}}].Period.format" 
+								data-bind-name="LearnerInfo.Education.array[{{list_index}}].Period" 
+								class="with-placeholder formfield hidden_select format global-format PrintingPreferences Education Period help"
+								data-help-key="LearnerInfo.Education.Period">
+							{{#with_pref_item ../../Preferences.ECV.LearnerInfo.Education.array list_index}}
+								{{#augment . Format=current_pref_item.Period.format DocumentType="ECV"}}
+									{{> templates/forms/dateformatoptions}}
+								{{/augment}}
+							{{/with_pref_item}}
+						</select>
+						<ul title
+								name="LearnerInfo.Education[{{list_index}}].Period.format" 
+								data-bind-name="LearnerInfo.Education.array[{{list_index}}].Period" 
+								class="with-placeholder formfield custom_select format global-format PrintingPreferences Education Period help"
+								data-help-key="LearnerInfo.Education.Period">
+							<li class="init" data-value=""></li>
+							<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+							<ul>
+								{{#date_format_options}}
+								<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+									{{text}}
+								</li>
+								{{/date_format_options}}
+							</ul>
+						</ul>
+					</div>
+				<span class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Education.Dates.Format" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+			
+		</fieldset>	
+			
+		
+		<fieldset class="Edu Title">
+			<label for="Title">{{get_text "LearnerInfo.Education.Title"}}</label>
+			<input type="text" 
+				class="formfield single help with-placeholder"
+				title
+				name="LearnerInfo.Education[{{list_index}}].Title"
+				data-help-key="LearnerInfo.Education[{{list_index}}].Title"
+				value="{{Title}}">
+		  	<span name="LearnerInfo.Education[{{list_index}}].Title" class="help placeholder" style="display:none;">
+				{{get_text "LearnerInfo.Education.Title" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+		
+		
+		<fieldset class="Edu Organisation">
+		
+			 <fieldset class="LearnerInfo.Education[{{list_index}}].Organisation.Name">
+			    <label for="Organisation" class ="edu-org-title">{{get_text "LearnerInfo.Education.Organisation"}}</label>
+				<label for="Title">{{get_text "LearnerInfo.Education.Organisation.Title"}}</label>
+				<input type="text" 
+					class="formfield single help with-placeholder"
+					title
+					name="LearnerInfo.Education[{{list_index}}].Organisation.Name"
+					data-help-key="LearnerInfo.Education[{{list_index}}].Organisation.Name"
+					data-help-group="LearnerInfo.Education[{{list_index}}]"
+					value="{{Organisation.Name}}">
+				<span name="LearnerInfo.Education[{{list_index}}].Organisation.Name" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Education.Organisation" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+			
+			
+			<fieldset class="Organisation-Address hybrid" name="Address">
+				<fieldset class="Municipality partOne">
+					<label for="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Municipality">
+							{{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Municipality"}}
+					</label>
+					<input 	type="text" 
+							class="formfield help pref Address Municipality with-placeholder"
+							title
+							name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Municipality"
+							data-help-key="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Municipality"
+							data-bind-name="group"
+							data-bind-group="LearnerInfo.Education.array[{{list_index}}].Organisation.ContactInfo.Address"
+							value="{{Organisation.ContactInfo.Address.Contact.Municipality}}">
+					<span name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Municipality" class="help placeholder" style="display:none;">
+							{{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Municipality" group="EditorPlaceholder"}}
+					</span>
+				</fieldset>
+				<fieldset class="Country partTwo">
+					<label for="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country.Label">
+							{{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Country"}}
+					</label>
+					<div class="composite country select" name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country">
+						<input	type="text"  
+								class="formfield typeahead help pref Organisation Address Country with-placeholder"
+								title
+								name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country.Label"
+								data-help-key="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country.Label"
+								data-bind-name="group"
+								data-bind-group="LearnerInfo.Education.array[{{list_index}}].Organisation.ContactInfo.Address"
+								rel="Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country"
+								placeholder="{{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}"
+								value="{{Organisation.ContactInfo.Address.Contact.Country.Label}}">
+<!-- 						<span name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country.Label" class="help placeholder" style="display:none;">
+							{{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}
+						</span> -->
+						<input	type="hidden"
+								name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.Country.Code"
+								value="{{Organisation.ContactInfo.Address.Contact.Country.Code}}">
+					</div>
+				</fieldset>
+			</fieldset>	
+
+            <fieldset id="Education-Org-More-Details-fld" class=education-org-more-details>
+
+                <button type="button"
+                        name="LearnerInfo.Education[{{list_index}}].Organisation.Details_toggle_btn"
+                        class="toggle-expansion education {{#educationOrg_extra_fields Organisation.ContactInfo.Website.Contact Organisation.ContactInfo.Address.Contact.AddressLine Organisation.ContactInfo.Address.Contact.PostalCode}} less {{else}} more {{/educationOrg_extra_fields}}"
+                        data-rel-subform="SubForm:LearnerInfo.Education[{{list_index}}].Organisation.Details">
+                        {{get_text "LearnerInfo.Education.Organisation.Details" group="GuiLabel"}}
+                </button>
+			
+                <fieldset id="SubForm:LearnerInfo.Education[{{list_index}}].Organisation.Details"
+                    class="LearnerInfo.Education[{{list_index}}].Organisation.Details more"
+                    {{#educationOrg_extra_fields Organisation.ContactInfo.Website.Contact Organisation.ContactInfo.Address.Contact.AddressLine Organisation.ContactInfo.Address.Contact.PostalCode}} style="display:block;"  {{else}} style="display:none;"  {{/educationOrg_extra_fields}}>
+
+
+                    <fieldset class="Organisation-Address more">
+                        <fieldset class="AddressLine with-icon">
+                            <label for="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.AddressLine">
+                                {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.AddressLine" }}
+                            </label>
+                            <input type="text"
+                                    class="formfield help pref Address AddressLine with-placeholder"
+                                    title
+                                    name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.AddressLine"
+                                    data-help-key="LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.AddressLine"
+                                    data-bind-name="group"
+                                    data-bind-group="LearnerInfo.Education.array[{{list_index}}].Organisation.ContactInfo.Address"
+                                    value="{{Organisation.ContactInfo.Address.Contact.AddressLine}}">
+                            <span name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.AddressLine" class="help placeholder" style="display:none;">
+                                {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.AddressLine" group="EditorPlaceholder"}}
+                            </span>
+                        </fieldset>
+                        <fieldset class="PostalCode">
+                            <label for="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.PostalCode">
+                                {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.PostalCode" }}
+                            </label>
+                            <input type="text"
+                                    class="formfield help pref Address PostalCode with-placeholder"
+                                    title
+                                    name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.PostalCode"
+                                    data-help-key="LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.PostalCode"
+                                    data-bind-name="group"
+                                    data-bind-group="LearnerInfo.Education.array[{{list_index}}].Organisation.ContactInfo.Address"
+                                    value="{{Organisation.ContactInfo.Address.Contact.PostalCode}}">
+                            <span name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+                                {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Address.Contact.PostalCode" group="EditorPlaceholder"}}
+                            </span>
+                        </fieldset>
+                    </fieldset>
+
+
+                    <fieldset class="Edu Website" name="Website">
+                        <label for="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Website.Contact">
+                                {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Website" }}
+                        </label>
+                        <input type="url"
+                                class="formfield single help with-placeholder"
+                                title
+                                name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Website.Contact"
+                                data-help-key="LearnerInfo.Education.Organisation.ContactInfo.Website.Contact"
+                                value="{{Organisation.ContactInfo.Website.Contact}}">
+                        <span name="LearnerInfo.Education[{{list_index}}].Organisation.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+                            {{get_text "LearnerInfo.Education.Organisation.ContactInfo.Website" group="EditorPlaceholder"}}
+                        </span>
+                    </fieldset>
+
+                </fieldset>
+            </fieldset>
+		</fieldset>
+			
+		
+		<fieldset class="Level" name="Level">
+			<label for="Level">{{get_text "LearnerInfo.Education.Level"}}</label>
+			<div class="composite education-level select" name="LearnerInfo.Education[{{list_index}}].Level">
+				<input	type="text"  
+						class="formfield typeahead single help Level with-placeholder"
+						title
+						name="LearnerInfo.Education[{{list_index}}].Level.Label"
+						data-help-key="LearnerInfo.Education[{{list_index}}].Level"
+						rel="Education[{{list_index}}].Level"
+						placeholder="{{get_text "LearnerInfo.Education.Level" group="EditorPlaceholder"}}"
+						value="{{Level.Label}}">
+<!-- 				<span name="LearnerInfo.Education[{{list_index}}].Level.Label" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Education.Level" group="EditorPlaceholder"}}
+				</span> -->
+				<input	type="hidden"
+						name="LearnerInfo.Education[{{list_index}}].Level.Code"
+						value="{{Level.Code}}">
+			</div>
+		</fieldset>
+		
+		
+		
+		<fieldset rel="Activities" class="editor">
+			<label for="Activities">{{get_text "LearnerInfo.Education.Activities"}}</label>
+			<textarea
+				id="LearnerInfo.Education[{{list_index}}]-textarea"
+				class="rich-editor single formfield help with-placeholder"
+				title
+				name="LearnerInfo.Education[{{list_index}}].Activities"
+				data-help-key="LearnerInfo.Education[{{list_index}}].Activities"
+				placeholder="{{{get_text "LearnerInfo.Education.Activities" group="EditorPlaceholder"}}}"
+				>{{{Activities}}}</textarea>
+			<span name="LearnerInfo.Education[{{list_index}}].Activities" class="help placeholder" style="display:none;">
+				{{{get_text "LearnerInfo.Education.Activities" group="EditorPlaceholder"}}}
+			</span>
+		</fieldset>
+
+        <fieldset id="Education-Org-Extra-Fields-fld" class=education-org-extra-fields>
+
+			<button type="button" 
+				   id="LearnerInfo.Education[{{list_index}}].Details_checkbox"
+				   name="LearnerInfo.Education[{{list_index}}].Details_toggle_btn"
+				   class="css-checkbox toggle-expansion{{#if Field}} less {{else}} more {{/if}}"
+				   data-rel-subform="SubForm:LearnerInfo.Education[{{list_index}}].Details">
+				   {{get_text "Buttons.Toggle.Education.Form.Details" group="GuiLabel"}}
+			</button>
+	
+            <fieldset
+                id="SubForm:LearnerInfo.Education[{{list_index}}].Details"
+                class="LearnerInfo.Education[{{list_index}}].Details more"
+                {{#unless Field}} style="display:none;"{{/unless}}>
+                <fieldset class="Field" name="Field">
+                    <label for="Level">{{get_text "LearnerInfo.Education.Field"}}</label>
+                    <div class="composite education-field select" name="LearnerInfo.Education[{{list_index}}].Field">
+                        <input	type="text"
+                                class="formfield typeahead single help Field with-placeholder"
+                                title
+                                name="LearnerInfo.Education[{{list_index}}].Field.Label"
+                                data-help-key="LearnerInfo.Education[{{list_index}}].Field"
+                                rel="Education[{{list_index}}].Field"
+                                placeholder="{{get_text "LearnerInfo.Education.Field" group="EditorPlaceholder"}}"
+                                value="{{Field.Label}}">
+    <!-- 					<span name="LearnerInfo.Education[{{list_index}}].Field" class="help placeholder" style="display:none;">
+                                    {{get_text "LearnerInfo.Education.Field" group="EditorPlaceholder"}}
+                        </span> -->
+                        <input	type="hidden"
+                                name="LearnerInfo.Education[{{list_index}}].Field.Code"
+                                value="{{Field.Code}}">
+                    </div>
+                </fieldset>
+            </fieldset>
+
+        </fieldset>
+
+		{{/with_list_item}}
+	
+	</fieldset>
+{{/with}}
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

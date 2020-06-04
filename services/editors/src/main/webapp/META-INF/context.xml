@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context cookies="false">
+    <ResourceLink global="jdbc/EWA_STATISTICS" name="jdbc/EwaStatisticsDS" type="javax.sql.DataSource"/>
+</Context>

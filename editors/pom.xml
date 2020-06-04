@@ -1,0 +1,372 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>eu.europa.cedefop.europass.webapps</groupId>
+        <artifactId>europass-webapps</artifactId>
+        <version>5.0.84</version>
+    </parent>
+    <artifactId>europass-webapps-editors</artifactId>
+    <packaging>war</packaging>
+    <name>Europass Webapps Editors Web Application</name>
+    <profiles>
+        <profile>
+            <id>development-profile</id>
+            <properties>
+                <css.minification>false</css.minification>
+                <js.minification>false</js.minification>
+            </properties>
+        </profile>
+        <profile>
+            <id>testing-profile</id>
+            <properties>
+                <css.minification>false</css.minification>
+                <js.minification>false</js.minification>
+            </properties>
+        </profile>
+        <profile>
+            <id>production-profile</id>
+            <properties>
+                <css.minification>true</css.minification>
+                <js.minification>true</js.minification>
+            </properties>
+        </profile>
+    </profiles>
+    <properties>
+        <select2.version>s2.3.2</select2.version>
+    </properties>
+    <build>
+        <finalName>europass-webapps-editors-${project.version}</finalName>
+        <plugins>
+            <!-- Maven Resources Plugin Replace the included files with system properties 
+            or variables. Here we need to replace ${project.version} in jsp and less 
+            files. Important! This plugin needs to run *before* the maven less plugin. -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources-jsp-temp</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/target/filtered-jsp</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/src/main/pages</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>**/*.jsp</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-resources-less-temp</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/target/filtered-less</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/src/main/css</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>**/*.less</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-resources-jsp</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/pages</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/target/filtered-jsp</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Use Node.js for running the Require.js optimization, without having to install it in the machine -->
+            <plugin>
+                <groupId>com.github.skwakman.nodejs-maven-plugin</groupId>
+                <artifactId>nodejs-maven-plugin</artifactId>
+                <version>1.0.5-node-0.10.25</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>extract</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <targetDirectory>
+                        ${project.build.directory}/nodejs/
+                    </targetDirectory>
+                </configuration>
+            </plugin>
+            <!-- RequireJS Maven Plugin https://github.com/mcheely/requirejs-maven-plugin 
+            Furthe maintained at https://github.com/bringking/requirejs-maven-plugin -->
+            <plugin>
+                <groupId>com.github.bringking</groupId>
+                <artifactId>requirejs-maven-plugin</artifactId>
+                <version>${requirejs.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>optimize</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- optional path to a nodejs executable -->
+                    <nodeExecutable>${project.build.directory}/nodejs/node</nodeExecutable>
+                    <!-- path to optimizer json config file -->
+                    <configFile>${basedir}/src/main/build/config/build.js</configFile>
+                    <!-- optional path to optimizer executable -->
+                    <optimizerFile>${basedir}/src/main/build/tools/r.js</optimizerFile>
+                    <!-- optional parameters to optimizer executable
+                    <optimizerParameters>
+                                    <parameter>optimize=uglify</parameter>
+                                    <parameter>baseUrl=${baseDir}</parameter>
+                    </optimizerParameters> -->
+                    <!--
+                    Whether or not to process configFile with maven filters.
+                    If you use this option, some options in your configFile
+                    must resolve to absolute paths (see below)
+                    -->
+                    <filterConfig>true</filterConfig>
+                    <!-- Skip requirejs optimization if true -->
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+
+            <!-- LESS maven plugin -->
+            <plugin>
+                <groupId>org.lesscss</groupId>
+                <artifactId>lesscss-maven-plugin</artifactId>
+                <version>${less.plugin.version}</version>
+                <configuration>
+                    <sourceDirectory>${project.basedir}/target/filtered-less</sourceDirectory>
+                    <outputDirectory>
+                        ${project.basedir}/src/main/webapp/static/ewa/styles</outputDirectory>
+                    <compress>true</compress>
+                    <includes>
+                        <include>css-reset.less</include>
+                        <include>all-styles.less</include>
+                        <include>unsupported-browser-styles.less</include>
+                    </includes>
+                    <lessJs>${project.basedir}/src/main/build/tools/less-1.4.2.min.js</lessJs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- To make the optimize goal properly -->
+            <plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.lesscss</groupId>
+                                    <artifactId>lesscss-maven-plugin</artifactId>
+                                    <versionRange>[${less.plugin.version},)</versionRange>
+                                    <goals>
+                                        <goal>compile</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <ignore />
+                                </action>
+                            </pluginExecution>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>com.github.skwakman.nodejs-maven-plugin</groupId>
+                                    <artifactId>nodejs-maven-plugin</artifactId>
+                                    <versionRange>[1.0.5-node-0.10.25,)</versionRange>
+                                    <goals>
+                                        <goal>extract</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute>
+                                        <runOnIncremental>false</runOnIncremental>
+                                    </execute>
+                                </action>
+                            </pluginExecution>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>com.github.bringking</groupId>
+                                    <artifactId>requirejs-maven-plugin</artifactId>
+                                    <versionRange>[${requirejs.plugin.version},)</versionRange>
+                                    <goals>
+                                        <goal>optimize</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute>
+                                        <runOnIncremental>false</runOnIncremental>
+                                    </execute>
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>
+                    </lifecycleMappingMetadata>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.6.201602180812</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <!--This plugin's configuration is used to store Eclipse m2e settings 
+                only. It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>com.github.bringking</groupId>
+                                        <artifactId>requirejs-maven-plugin</artifactId>
+                                        <versionRange>
+                                            [${requirejs.plugin.version},)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>optimize</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>com.github.skwakman.nodejs-maven-plugin</groupId>
+                                        <artifactId>nodejs-maven-plugin</artifactId>
+                                        <versionRange>
+                                            [1.0.5-node-0.10.25,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>extract</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-servlet</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-utilities</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+
+        <!-- json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+        </dependency>
+
+        <!-- HTTP Client -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-drive</artifactId>
+            <version>v2-rev310-1.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client</artifactId>
+            <version>1.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+</project>

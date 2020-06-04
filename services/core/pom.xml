@@ -1,0 +1,323 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.europa.cedefop.europass.webapps</groupId>
+        <artifactId>europass-webapps-services</artifactId>
+        <version>5.0.84</version>
+    </parent>
+    <artifactId>europass-webapps-services-core</artifactId>
+    <packaging>jar</packaging>
+    <name>Europass Webapps Services Core</name>
+
+    <repositories>
+        <repository>
+            <id>repository.spring.milestone</id>
+            <name>Spring Milestone Repository</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.1</version>
+                <executions>
+                    <execution>
+                        <id>install-ewa-jpdfimages</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <groupId>ewa.com.qoppa.pdf</groupId>
+                            <artifactId>ewa-jPDFImages</artifactId>
+                            <version>2013.08</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/dependencies/ewa-jPDFImages-2013.08.jar</file>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install-pdfrenderer</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <groupId>ewa.com.sun.pdfview</groupId>
+                            <artifactId>PDFRenderer</artifactId>
+                            <version>0.9.1</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/dependencies/PDFRenderer-0.9.1.jar</file>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install-commons-imaging</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <groupId>org.apache.commons</groupId>
+                            <artifactId>commons-imaging</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/dependencies/commons-imaging-1.0-SNAPSHOT.jar</file>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install-javaxt-core</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <groupId>javaxt</groupId>
+                            <artifactId>javaxt-core</artifactId>
+                            <version>1.7.8</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/dependencies/javaxt-core.jar</file>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- PDF to Image Libraries -->
+        <dependency>
+            <groupId>org.ghost4j</groupId>
+            <artifactId>ghost4j</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ewa.com.qoppa.pdf</groupId>
+            <artifactId>ewa-jPDFImages</artifactId>
+            <version>2013.08</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ewa.com.sun.pdfview</groupId>
+            <artifactId>PDFRenderer</artifactId>
+            <version>0.9.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.icepdf</groupId>
+            <artifactId>icepdf-core</artifactId>
+            <version>5.0.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- 
+        Commercial
+        <dependency>
+                <groupId>ewa.org.jpedal</groupId>
+                <artifactId>ewa-jPedal</artifactId>
+                <version>2013.08</version>
+                <scope>test</scope>
+        </dependency> 
+        -->
+        <!-- Open Source-->
+        <dependency>
+            <groupId>ewa.org.jpedal</groupId>
+            <artifactId>ewa-jPedal-open</artifactId>
+        </dependency>
+
+        <!-- With other Europass projects -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-conversion</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-office-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-statistics</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--  Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-xml-provider</artifactId>
+        </dependency>
+
+        <!-- Commons -->
+        <dependency>
+            <artifactId>commons-io</artifactId>
+            <groupId>commons-io</groupId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons.fileupload.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+
+        <!-- PDF manipulation -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>	
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>jbig2-imageio</artifactId>
+        </dependency>
+
+        <!-- json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+        </dependency>
+
+        <!--  IMGSCALR -->
+        <dependency>
+            <groupId>org.imgscalr</groupId>
+            <artifactId>imgscalr-lib</artifactId>
+        </dependency>
+
+        <!-- JAI library -->
+        <dependency>
+            <groupId>javax.media</groupId>
+            <artifactId>jai_core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Place in Tomcat lib or Java's ext/lib.
+        A mere restart of the webapp does not seem to properly load this library. -->
+        <dependency>
+            <groupId>com.sun.media</groupId>
+            <artifactId>jai_imageio</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Should be available just in runtime. Because of distribution rights,
+        it cannot be available through repository, so the solution is to place it 
+        manually in	tomcat's lib folder and keep this snippet as an 
+        indication that is needed. -->
+        <dependency>
+            <groupId>com.sun.media</groupId>
+            <artifactId>jai_codec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jai-imageio</groupId>
+            <artifactId>jai-imageio-core</artifactId>
+        </dependency>    
+        <dependency>
+            <groupId>com.github.jai-imageio</groupId>
+            <artifactId>jai-imageio-jpeg2000</artifactId>
+        </dependency>
+
+        <!--  Mime Type Detection of Files -->
+        <dependency>
+            <groupId>eu.medsea.mimeutil</groupId>
+            <artifactId>mime-util</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-multipart</artifactId>
+            <!-- Important: We need to exclude the 1.6 dependency because of http://java.net/jira/browse/JAX_WS-965
+            according to which it does not allow to read an inputstream more than once. -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jvnet</groupId>
+                    <artifactId>mimepull</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Override jersey's because of a bug : http://java.net/jira/browse/JAX_WS-965-->
+        <dependency>
+            <groupId>org.jvnet.mimepull</groupId>
+            <artifactId>mimepull</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+        <!-- Bouncy Castle - encryption library used by iText in order to read pages-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-ext-jdk15on</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpkix-jdk15on</artifactId>
+        </dependency>
+
+        <!--  Linkedin -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-linkedin</artifactId>
+        </dependency>
+
+        <!-- Seems to be requires by Spring... Not loaded from spring-social-core, because it is optional -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.2.5</version>
+        </dependency>
+
+        <!--  Social Test -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-test</artifactId>
+            <!--   			<version>1.0.0.M3</version> -->
+            <version>1.0.0.RELEASE</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.social</groupId>
+                    <artifactId>spring-social-linkedin</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.social</groupId>
+                    <artifactId>spring-social-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-imaging</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javaxt</groupId>
+            <artifactId>javaxt-core</artifactId>
+            <version>1.7.8</version>
+        </dependency>
+
+    </dependencies>
+</project>

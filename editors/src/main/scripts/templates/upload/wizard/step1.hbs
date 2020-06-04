@@ -1,0 +1,25 @@
+<header>
+<legend>{{get_text "import.wizard.step1.desc" group="GuiLabel"}}</legend>
+</header>
+
+{{#each locations}}
+	{{#if hidden}}
+	{{else}}
+	<fieldset class="export-checkbox file-format {{name}}">
+		<input  type="radio" 
+				class="css-checkbox formfield help"
+				name="Import_Option_Loc"
+				value="{{name}}"
+				data-help-key="import.wizard.help.step1.location.option"
+				data-help-group="import.wizard.help.step1"
+				id="Import_Option_Loc_{{name}}"
+				{{#if checked}}checked="checked"{{/if}}>
+		<label  for="Import_Option_Loc_{{name}}"
+				class="css-label {{#if checked}}checked{{/if}} formfield-label">
+			<span class="icon"></span>
+			<span class="title">{{title}}</span>
+		</label>
+	
+	</fieldset>
+	{{/if}}
+{{/each}}

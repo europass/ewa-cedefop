@@ -1,0 +1,240 @@
+/*********************
+OLD CHECKBOXES
+*********************/
+
+input[type=checkbox].css-checkbox + label.css-label,
+input[type=radio].css-checkbox + label.css-label {
+  /*	.checkbox-label-bg-style;*/
+  cursor:pointer;
+  padding:8px 0px 0px 70px;
+  height:40px;
+  display:inline-block;
+  line-height:30px;
+  font-size:15px;
+  vertical-align:middle;
+  width: 20%;
+  /*TODO check if this ruins the rest of the checkboxes*/
+  margin: 0 0 20px 0;
+}
+fieldset.step-permision input[type=checkbox].css-checkbox + label.css-label {
+    padding: 8px 0px 0px 25px;
+    font-size:13px;
+    width: 100%;
+}
+
+
+/*general styles for all CSS Checkboxes*/
+
+
+
+
+
+input[type=checkbox].css-checkbox,
+input[type=radio].css-checkbox {
+  position: absolute;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  height:1px;
+  width:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label,
+input[type=radio].css-checkbox:checked + label.css-label,
+button.toggle-expansion.less,
+button.toggle-expansion.less:hover {
+
+  &:before{
+    border:4px solid #2b4868!important;
+  }
+  &:after{
+    color:#2b4868;
+    content:"\e928";
+    font-family:"europass-application"!important;
+    position:absolute;
+    left:32px;
+    top:50%;
+    transform:translatey(-50%);
+  }
+}
+
+input[type=checkbox].css-checkbox:checked:not(#send-browser-info) + label.css-label,
+input[type=radio].css-checkbox:checked + label.css-label,
+button.toggle-expansion.less,
+button.toggle-expansion.less:hover {
+  background-color: #ECF0F4;
+  border: 1px solid rgba(43, 72, 104, 0.3);
+}
+input[type=checkbox].css-checkbox:checked + label#permision-label.css-label {
+  background-color: transparent;
+  border: none;
+}
+
+
+.checkbox-label-bg-style{
+  position:relative;
+  background:transparent;
+  padding-top:15px;
+  box-sizing:border-box;
+  padding-bottom:15px;
+  height:72px;
+  line-height:1;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  &:before{
+    position:Absolute;
+    left:25px;
+    top:50%;
+    transform:translatey(-50%);
+    content:"";
+    height:20px;
+    width:20px;
+    border:4px solid #c45100;
+    display:inline-block;
+  }
+}
+
+.environmentInfo label.css-label,
+#Export_Option_Doc_ECV + label.css-label.css-label,
+#Export_Option_Doc_ECL + label.css-label.css-label,
+#Export_Option_Doc_ELP + label.css-label.css-label,
+#Export_Option_Doc_ESP + label.css-label.css-label,
+#Import_Option_Doc_ECL + label.css-label.css-label,
+#Import_Option_Doc_REST + label.css-label.css-label,
+#Import_Option_Doc_Confirm_ECL + label.css-label.css-label,
+#Import_Option_Doc_Confirm_REST + label.css-label.css-label,
+#Erase_Option_Doc_Confirm_ECL + label.css-label.css-label,
+#Erase_Option_Doc_Confirm_ECV + label.css-label.css-label,
+#Erase_Option_Doc_Confirm_ELP + label.css-label.css-label,
+#Erase_Option_Doc_Confirm_ESP + label.css-label.css-label,
+.reset-modal .feedback-area .formfield-label,
+.ui-anpal-area .css-label.formfield-label{
+  .checkbox-label-bg-style;
+  border:1px solid @medium-light-grey;
+}
+
+#resetConfirmationDialog .reset-modal.reset-modal.reset-modal .feedback-area .formfield-label{
+  background:transparent!important;
+  border:none!important;
+  position:relative;
+}
+
+
+
+input[type=checkbox].css-checkbox.incompatible + label.css-label,
+input[type=checkbox].css-checkbox.disabled + label.css-label{
+  .checkbox-label-bg-style;
+}
+button.toggle-expansion {
+  .checkbox-label-bg-style;
+  border: none;
+  color: #B6B6B6;
+  font-size: 15px;
+  height: 40px;
+  margin: 40px 0 45px 0;
+  padding-left:50px;
+}
+
+/*****************
+NEW CHECKBOXES
+*****************/
+
+
+
+#ui-monster-terms .css-label.formfield-label,.other-europass-documents .europass-documents li label, .Experience.Dates .Date.today label{
+  position: relative;
+  height: 20px;
+  &:before {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translatey(-50%);
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 4px solid #c45100;
+    display: inline-block;
+  }
+  &:checked {
+    border: none;
+    background: none;
+    &::after {
+      color: #2b4868;
+      content: "\e928";
+      font-family: "europass-application" !important;
+      position: absolute;
+      left: 32px;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+  }
+}
+
+#ui-monster-terms input[type=checkbox].css-checkbox:checked + label.css-label,.Experience.Dates .Date.today label{
+  background:transparent!important;
+  border:none;
+}
+
+.other-europass-documents .europass-documents.europass-documents.europass-documents li label{
+  background-color:transparent!important;
+  border:none;
+  padding-top:18px;
+}
+
+.Experience input[type=checkbox].css-checkbox:checked:not(#send-browser-info) + label.css-label{
+  background-color:transparent!important;
+  border:none!important;
+  line-height:20px!important;
+  padding-top:18px;
+}
+
+.Experience input[type=checkbox].css-checkbox:not(#send-browser-info) + label.css-label{
+  line-height:20px!important;
+}
+
+
+.Experience.Dates .Date.Date.Date.today label{
+  padding-top:0!important;
+}
+
+.Experience .checkbox-field .checkbox-label.checkbox-label.checkbox-label{
+  background-color: transparent!important;
+  border: none!important;
+  position:relative;
+  padding-top: 15px!important;
+  &:before{
+    /*		border: 4px solid #2b4868!important;*/
+    position: Absolute;
+    left: 25px;
+    top: 50%;
+    transform: translatey(-50%);
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 4px solid #c45100;
+    display: inline-block;
+  }
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  input[type=checkbox].css-checkbox + label.css-label, input[type=radio].css-checkbox + label.css-label{
+    width:100%;
+    margin-bottom:5px;
+  }
+  fieldset.step-permision input[type=checkbox].css-checkbox + label.css-label.css-label-long {
+      line-height: normal;
+  }
+}
+
+

@@ -1,0 +1,59 @@
+{{#with SkillsPassport}}
+
+<fieldset>
+		<header>
+			<legend>{{get_text "CoverLetter.Letter.Body.Legend" group="GuiLabel"}}</legend>
+		</header>
+		<fieldset rel="CoverLetter.Letter.Body.Opening" class="editor">
+			<label for="Opening">{{get_text "CoverLetter.Letter.Body.Opening"}}</label>
+			<textarea
+					id="CoverLetter.Letter.Body.Opening-textarea"
+					class="rich-editor single formfield help opening-body context-sensitive-recommendations with-placeholder"
+					title
+					name="CoverLetter.Letter.Body.Opening"
+					rows="9"
+					data-help-group="{{#ifTablet}}CoverLetter.Letter.Body.Tablet{{else}}CoverLetter.Letter.Body{{/ifTablet}}"
+					data-help-key="CoverLetter.Letter.Body.Opening"
+					placeholder="{{{get_text "CoverLetter.Letter.Body" group="EditorPlaceholder"}}}"
+					>{{{CoverLetter.Letter.Body.Opening}}}</textarea>
+			<span name="CoverLetter.Letter.Body.Opening" class="help placeholder" style="display:none;">
+					{{get_text "CoverLetter.Letter.Body.Opening.Tablet" group="EditorPlaceholder"}}					
+			</span>
+		</fieldset>     
+		   
+	  	<fieldset rel="CoverLetter.Letter.Body.MainBody" class="editor">
+			<label for="MainBody">{{get_text "CoverLetter.Letter.Body.MainBody"}}</label>
+			<textarea
+					id="CoverLetter.Letter.Body.MainBody-textarea"
+					class="rich-editor single formfield help context-sensitive-recommendations with-placeholder"
+					title
+					name="CoverLetter.Letter.Body.MainBody"
+					data-help-key="CoverLetter.Letter.Body.MainBody"
+					data-help-group={{#ifTablet}}CoverLetter.Letter.Body.Tablet{{else}}CoverLetter.Letter.Body{{/ifTablet}}
+					placeholder="{{{get_text "CoverLetter.Letter.Body" group="EditorPlaceholder"}}}"
+					>{{{CoverLetter.Letter.Body.MainBody}}}</textarea>
+			<span name="CoverLetter.Letter.Body.MainBody" class="help placeholder" style="display:none;">
+					{{get_text "CoverLetter.Letter.Body.MainBody.Tablet" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+		
+		<fieldset rel="CoverLetter.Letter.Body.Closing" class="editor">
+			<label for="Closing">{{get_text "CoverLetter.Letter.Body.Closing"}}</label>
+			<textarea
+					id="CoverLetter.Letter.Body.Closing-textarea"
+					class="rich-editor single formfield help closing-body context-sensitive-recommendations with-placeholder"
+					title
+					name="CoverLetter.Letter.Body.Closing"
+					rows="9"
+					data-help-key="CoverLetter.Letter.Body.Closing"
+					data-help-group={{#ifTablet}}CoverLetter.Letter.Body.Tablet{{else}}CoverLetter.Letter.Body{{/ifTablet}}
+					placeholder="{{{get_text "CoverLetter.Letter.Body" group="EditorPlaceholder"}}}"
+					>{{{CoverLetter.Letter.Body.Closing}}}</textarea>
+			<span name="CoverLetter.Letter.Body.Closing" class="help placeholder" style="display:none;">
+					{{get_text "CoverLetter.Letter.Body.Closing.Tablet" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>  
+		
+	
+</fieldset>
+{{/with}}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/EuropassSchema_V3.0.xsd" locale="en">
+    <DocumentInfo>
+        <CreationDate>2012-06-06T00:00:00.000+0300</CreationDate>
+        <LastUpdateDate>2012-06-06T00:00:00.000+0300</LastUpdateDate>
+        <XSDVersion>V3.0</XSDVersion>
+        <Generator>EWA</Generator>
+        <Comment>Comments</Comment>
+    </DocumentInfo>
+    <LearnerInfo>
+        <Identification>
+            <PersonName>
+                <FirstName>Eleni</FirstName>
+                <Surname>Kargioti</Surname>
+            </PersonName>
+        </Identification>
+    </LearnerInfo>
+</SkillsPassport>

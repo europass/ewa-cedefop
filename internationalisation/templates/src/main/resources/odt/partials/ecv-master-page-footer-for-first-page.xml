@@ -1,0 +1,11 @@
+{{=[[ ]]=}}
+	<style:footer>
+		<text:p text:style-name="MP2">
+			{{#DocumentInfo.EuropassLogo}}<text:span text:style-name="MT1">{{#DocumentInfo}}{{formatLastUpdateDate}}{{/DocumentInfo}}</text:span>{{/DocumentInfo.EuropassLogo}}
+			<text:tab/>
+			{{#DocumentInfo.EuropassLogo}}<text:span text:style-name="MT1">[[#resources]][[& Document:Footer:EuropeanUnion]][[/resources]] | [[#resources]][[& Document:Footer:EuropassLink]][[/resources]] </text:span>{{/DocumentInfo.EuropassLogo}}
+			<text:tab/>
+			<text:span text:style-name="MT1">[[#resources]][[& Document:Footer:Paging]][[/resources]] <text:page-number text:select-page="current"> 1</text:page-number></text:span>
+			<text:span text:style-name="MT1"> / </text:span><text:span text:style-name="MT1"><text:page-count>4</text:page-count></text:span>
+		</text:p>
+	</style:footer>

@@ -1,0 +1,39 @@
+{{#item}}
+
+{{#title}}
+<p>
+	<strong>
+		{{#url}}<a href="{{url}}" target="_blank">{{/url}}{{title}}{{#url}}</a>{{/url}}
+	</strong>
+{{/title}}
+{{^title}}
+<p>
+{{/title}}
+
+{{#startDate}}
+{{#title}} | {{/title}}
+<em> {{formatStartDate}} </em>
+{{/startDate}} 
+{{^title}}
+</p>
+{{/title}}
+
+{{#title}}
+</p>
+{{/title}}
+
+{{#authors}}
+	<p>{{authors}}</p>
+{{/authors}}
+
+{{#publisher}}
+<p>
+	<em> {{publisher}} </em>
+</p>
+{{/publisher}}
+
+{{#summary}}
+	<p>{{summary}}</p>
+{{/summary}}
+
+{{/item}}

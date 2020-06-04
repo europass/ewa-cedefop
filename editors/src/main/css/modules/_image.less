@@ -1,0 +1,280 @@
+/***************************************************
+ *****        PHOTO/SIGNATURE UPLOAD FORM      *****
+ ***************************************************/
+ 
+.existing-photo-details {
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	.crop-guidelines {
+		font-style: normal;
+		color: @grey-dark-text-two;
+		display: inline-block;
+		margin: 0 0 20px 0;
+		width:100%;
+	}
+
+	.photo-editing-area {
+		
+		.photo-empty {
+			display:none;
+		}
+		
+		.photo-cropping-preview {
+
+			background: repeat scroll 0 0 @very-light-grey;
+ 			overflow: hidden;
+ 			position: relative;
+ 			
+			.photo-cropping {
+	 			width: @photo-crop-source-width;
+				
+				background: transparent;
+				
+	 			border: none;
+
+				display: inline-block;
+				float: left;
+				
+				/* Fixes the page scrolling bug on Webkit browsers when attempting to crop the image. */
+				.photo-crop-holder input {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					opacity: 0;
+				}
+				
+				img {
+					width: inherit;
+					height: 100%;
+				}			
+			}
+			
+			.photo-wysiwyg {
+			
+				
+				position: absolute;
+				/* top: 15%; */
+				right: 0;
+				
+				width: @photo-crop-preview-width;
+				padding: @photo-crop-preview-padding;
+				text-align: center;
+				background: transparent;
+				border:none;
+				display: inline-block;
+				clear: left;
+				
+				.fit {
+					width: auto;
+					text-align: center;
+					
+					.photo-preview-area {
+						display:inline-block;
+					}
+				}
+				
+				.photo-preview-area {
+					border: 1px solid @medium-grey;
+					display: inline-block;
+				}
+			}
+			
+			.photo-guidelines {
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* CV Compose, Photo Add, Photo Edit*/
+.photo-preview-area {
+	width: @cv-photo-width;
+	height: @cv-photo-height;
+	overflow: hidden;
+}
+ 
+.existing-signature-details {
+
+	padding-top: 10px;
+
+	.crop-guidelines {
+		font-style: normal;
+		color: @grey-dark-text-two;
+		display: inline-block;
+		margin: 0 0 20px 0;
+		width:100%;
+	}
+
+	.signature-editing-area {
+	
+/* 		padding: 20px 10px; */
+		
+		.signature-empty {
+			display:none;
+		}
+		
+		.signature-cropping-preview {
+		
+			background: repeat scroll 0 0 @very-light-grey;
+
+			.signature-cropping {
+	 			width: @signature-crop-source-width;
+	 		
+				background:transparent;
+				/* height: @signature-crop-source-height; */
+/* 				border: @photo-crop-source-border solid @photo-crop-border-color; */
+				overflow: hidden;
+				display: inline-block;
+				float: left;
+				
+				/* Fixes the page scrolling bug on Webkit browsers when attempting to crop the image. */
+				.photo-crop-holder input {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					opacity: 0;
+				}
+				
+				img {
+					height: 100%;
+				}			
+			}
+			
+			.signature-wysiwyg {
+				/* height: ( @signature-crop-source-height - 2 * @photo-crop-preview-padding + 2 * @photo-crop-source-border - 2); */
+				width: 100%;
+				/* height: (@signature-crop-source-height - 2 * @photo-crop-preview-padding); */
+				padding: @photo-crop-preview-padding;
+				vertical-align: middle;
+				text-align: center;
+				background:transparent;
+				border: none;
+	 			display: inline-block;
+				clear: left;
+				
+				.fit {
+					width: auto;
+					text-align: center;
+					
+					.signature-preview-area {
+						display:inline-block;
+					}
+				}
+				
+				.signature-guidelines {
+					text-align: center;
+				}
+				
+				.signature-preview-area {
+					border: 1px solid @medium-grey;
+					display: inline-block;
+				}			
+			}
+			
+		}
+	
+	}
+}
+
+/* Signature Add, Signature Edit */
+.signature-preview-area {
+	width: @cl-signature-width;
+	max-height: @cl-signature-max-height;
+	overflow: hidden;
+}
+
+
+ 
+/********** JCROP SPECIFICS ***********/
+/* These styles define the border lines */
+.photo-crop-holder {
+  /* width: @photo-crop-source-width !important; */
+	direction: ltr;
+	text-align: left;
+	margin: 20px 8px 40px;
+}
+.photo-crop-vline,.photo-crop-hline {
+	background: repeat scroll left top @bright-orange;
+	font-size:0;
+	position:absolute;
+}
+.photo-crop-vline {
+	height:100%;
+	width:4px !important;
+}
+.photo-crop-hline {
+	width:100%;
+	height:4px! important;
+}
+.photo-crop-vline.right {
+	right:0;
+}
+.photo-crop-hline.bottom {
+	bottom:0;
+}
+
+.photo-crop-tracker {
+  height: 100%; 
+  width: 100%;
+  -webkit-tap-highlight-color: transparent; /* "turn off" link highlight */
+  -webkit-touch-callout: none;              /* disable callout, image save panel */
+  -webkit-user-select: none;                /* disable cut copy paste */
+}
+
+/* Positioning of handles and drag bars */
+.photo-crop-handle {
+
+	opacity:1 !important;
+	background-color:@bright-orange;
+	border:2px solid @bright-orange;
+	font-size:1px;
+	
+	width:8px !important;
+	height:8px !important;
+
+	&.ord-nw {
+		left:0;
+		margin-left:-4px;
+		margin-top:-4px;
+		top:0;
+	}
+	
+	&.ord-ne {
+		margin-right:-4px;
+		margin-top:-4px;
+		right:0;
+		top:0;
+	}
+	&.ord-se {
+		bottom:0;
+		margin-bottom:-4px;
+		margin-right:-4px;
+		right:0;
+	}
+	&.ord-sw {
+		bottom:0;
+		left:0;
+		margin-bottom:-4px;
+		margin-left:-4px;
+	}
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+	.photo-crop-holder {
+
+		margin: 5px;
+	}
+	.existing-photo-details .photo-editing-area .photo-cropping-preview .photo-wysiwyg.photo-wysiwyg {
+		position:static;
+		padding-left:0;
+	}
+	.existing-photo-details .photo-editing-area .photo-cropping-preview.photo-cropping-preview {
+		text-align: center;
+	}
+}

@@ -1,0 +1,88 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "CoverLetter.Letter.SubjectLine.Legend" group="GuiLabel"}}</legend>
+</header>
+
+	<fieldset name="CoverLetter.Letter.Localisation.Date" class="Date">
+	   <fieldset>
+			<label for="Date">{{get_text "CoverLetter.Letter.Localisation.Date" group="GuiLabel"}}</label>
+			<div class="composite CoverLetter.SubjectLine.Date">
+	
+				{{#unless CoverLetter.Letter.Localisation.Date}}
+				
+					{{#get_current_date}}
+						{{> templates/forms/cl/localisationDate}}
+					{{/get_current_date}}
+					
+				{{/unless}}
+				{{#if CoverLetter.Letter.Localisation.Date}}
+				{{#with CoverLetter.Letter.Localisation}}
+					{{> templates/forms/cl/localisationDate}}
+				{{/with}}
+				{{/if}}
+			</div>
+		</fieldset>
+		<fieldset class="DateFormat">
+			<label for="DateFormat">{{get_text "CoverLetter.Letter.Localisation.Date.Format" group="GuiLabel"}}</label>
+			<div class="custom_select_wrapper">
+				<select title
+						name="CoverLetter.Letter.Localisation.Date.format" 
+						class="formfield help hidden_select format PrintingPreferences Date with-placeholder"
+						data-help-key="CoverLetter.Letter.Localisation.Date"
+						data-bind-name="CoverLetter.Letter.Localisation.Date"
+						data-bind-group="CoverLetter.Letter.Localisation.Date">
+						{{#augment . Format=../Preferences.ECL.CoverLetter.Letter.Localisation.Date.format isGlobal=false DocumentType="ECL"}}
+							{{> templates/forms/dateformatoptions}}
+						{{/augment}}
+				</select>
+				<ul title
+						name="CoverLetter.Letter.Localisation.Date.format" 
+						class="formfield help custom_select format PrintingPreferences Date with-placeholder"
+						data-help-key="CoverLetter.Letter.Localisation.Date"
+						data-bind-name="CoverLetter.Letter.Localisation.Date"
+						data-bind-group="CoverLetter.Letter.Localisation.Date">
+						<li class="init" data-value=""></li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+							{{#date_format_options}}
+							<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+								{{text}}
+							</li>
+							{{/date_format_options}}
+						</ul>
+				</ul>
+			</div>
+			<span name="CoverLetter.Letter.Localisation.Date.format" class="help placeholder" style="display:none;">
+						{{get_text "CoverLetter.Letter.Localisation.Date.Format" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+	</fieldset>		
+
+	<fieldset name="CoverLetter.Letter.Localisation" class="City">
+		<label for="Email">{{get_text "CoverLetter.Letter.Localisation.Place" group="GuiLabel"}}</label>
+		<input type="City" 
+				class="formfield single help with-placeholder"
+				title
+				name="CoverLetter.Letter.Localisation.Place.Municipality"
+				data-help-key="CoverLetter.Letter.Localisation.Place"
+				value="{{CoverLetter.Letter.Localisation.Place.Municipality}}">
+		<span name="CoverLetter.Letter.Localisation.Place" class="help placeholder" style="display:none;">
+					{{get_text "CoverLetter.Letter.Localisation.Place" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+
+	<fieldset name="CoverLetter.Letter.SubjectLine" class="SubjectLine">
+		<label for="Line">{{get_text "CoverLetter.Letter.SubjectLine" group="GuiLabel"}}</label>
+		<input type="Line" 
+				class="formfield single help SubjectLine with-placeholder"
+				title
+				name="CoverLetter.Letter.SubjectLine"
+				data-help-key="CoverLetter.Letter.SubjectLine"
+				value="{{CoverLetter.Letter.SubjectLine}}">
+		<span name="CoverLetter.Letter.SubjectLine" class="help placeholder" style="display:none;">
+					{{get_text "CoverLetter.Letter.SubjectLine" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+</fieldset>
+{{/with}}

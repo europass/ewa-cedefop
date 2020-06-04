@@ -1,0 +1,95 @@
+<div class="custom_select_wrapper" tabindex="0">
+	<select title
+			name="CoverLetter.Letter.Localisation.Date.Day"
+	        data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield hidden_select help pref format Date Day with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+			
+		<option value="" {{#unless Date.Day}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+		</option>
+		
+		{{#loop Date.Day start="1" end="31" step="1" looptype="day"}}
+			<option value="{{Index}}" {{#equals ../Date.Day Index}}selected="selected"{{/equals}}>{{Label}}</option>
+		{{/loop}}
+	</select>
+	<ul title
+			name="CoverLetter.Letter.Localisation.Date.Day"
+	        data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield custom_select help pref format Date Day with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+		<li class="init" data-value="" {{#unless Date.Day}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+		</li>
+		<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+		<ul>
+			{{#loop Date.Day start="1" end="31" step="1" looptype="day"}}
+				<li data-value="{{Index}}" {{#equals ../Date.Day Index}}selected="selected"{{/equals}}>{{Label}}</li>
+			{{/loop}}
+		</ul>
+	</ul>
+</div>
+<div class="custom_select_wrapper" tabindex="0">
+	<select title
+			name="CoverLetter.Letter.Localisation.Date.Month" 
+			data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield hidden_select help pref format Date Month with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+		<option value="" {{#unless Date.Month}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+		</option>
+		{{#loop Date.Month start="1" end="12" step="1" looptype="month"}}
+			<option value="{{Index}}" {{#equals ../Date.Month Index}}selected="selected"{{/equals}}>{{Label}}</option>
+		{{/loop}}
+	</select>
+	<ul title
+			name="CoverLetter.Letter.Localisation.Date.Month" 
+			data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield custom_select help pref format Date Month with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+		<li class="init" data-value="" {{#unless Date.Month}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+		</li>
+		<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+		<ul>
+			{{#loop Date.Month start="1" end="12" step="1" looptype="month"}}
+				<li data-value="{{Index}}" {{#equals ../Date.Month Index}}selected="selected"{{/equals}}>{{Label}}</li>
+			{{/loop}}
+		</ul>
+	</ul>
+</div>
+<div class="custom_select_wrapper" tabindex="0">
+	<select title
+			name="CoverLetter.Letter.Localisation.Date.Year"
+			data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield hidden_select help pref format Date Year with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+		<option value="" {{#unless Date.Year}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+		</option>
+		{{#loop Date.Year start="1930" end="" step="1" looptype="year"}}
+			<option value="{{Index}}" {{#equals ../Date.Year Index}}selected="selected"{{/equals}}>{{Label}}</option>
+		{{/loop}}
+	</select>
+	<ul title
+			name="CoverLetter.Letter.Localisation.Date.Year"
+			data-help-key="CoverLetter.Letter.Localisation.Date"
+			class="formfield custom_select help pref format Date Year with-placeholder"
+			data-bind-name="group"
+			data-bind-group="CoverLetter.Letter.Localisation.Date">
+		<li class="init" data-value="" {{#unless Date.Year}}selected="selected"{{/unless}}>
+			{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+		</li>
+		<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+		<ul>
+			{{#loop Date.Year start="1930" end="" step="1" looptype="year"}}
+				<li data-value="{{Index}}" {{#equals ../Date.Year Index}}selected="selected"{{/equals}}>{{Label}}</li>
+			{{/loop}}
+		</ul>
+	</ul>
+</div>

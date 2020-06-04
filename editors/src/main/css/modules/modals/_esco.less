@@ -1,0 +1,105 @@
+@esco-gutter:30px;
+@esco-vertical-gutter:15px;
+
+
+
+
+.alt-esco-label-i{
+  width:auto;
+  padding:0;
+  margin:0;
+  &.esco-alt-selected{
+
+    a {
+      color:white;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        right: -8px;
+        bottom: -4px;
+        top: -4px;
+        background-color: @brown;
+        border-radius: 4px;
+        z-index: -1;
+      }
+    }
+  }
+  a{
+    color:@brown;
+    transition:all 0.3s ease;
+    font-weight:bold;
+    font-size:13px;
+    text-decoration:none;
+    line-height:40px;
+    position:relative;
+    padding:0;
+    background:transparent!important;
+    margin-right:35px;
+    &:hover {
+      color:white;
+      &:before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        right: -8px;
+        bottom: -4px;
+        top: -4px;
+        background-color: @brown;
+        border-radius: 4px;
+        z-index: -1;
+      }
+    }
+    &:after{
+      content:"(+)";
+      color:@orange-lighter;
+      margin-left:2px;
+    }
+  }
+  .classToAdd3{
+    padding-left:8px;
+  }
+}
+
+
+.esco-description-area{
+  > p{
+    margin:@esco-gutter @esco-vertical-gutter;
+    font-weight:600;
+  }
+}
+
+#escoAreaAltLabels{
+  margin:@esco-gutter @esco-vertical-gutter;
+}
+
+.esco-alternative-label{
+  margin-bottom:10px;
+  display:block;
+}
+
+.esco-more{
+  display:flex;
+  justify-content: flex-end;
+  padding:0;
+  text-decoration: underline;
+  color:@brown;
+  font-size:13px;
+  margin:0;
+  width:auto;
+  padding-right:30px;
+  &:after{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translatey(-50%);
+    content: "\e902";
+    font-family: "europass-application" !important;
+    font-size: 15px;
+    font-weight: 400;
+    color:#FECA1C;
+    margin-right:5px;
+    vertical-align: middle;
+    margin-left:10px;
+  }
+}

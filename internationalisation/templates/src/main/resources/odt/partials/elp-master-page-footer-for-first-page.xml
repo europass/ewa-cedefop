@@ -1,0 +1,36 @@
+	{{=[[ ]]=}}
+	
+	<style:footer>
+				<table:table table:name="_LP_Table6" table:style-name="_LP_Table6">
+					<table:table-column table:style-name="_LP_Table6.A" />
+					<table:table-column table:style-name="_LP_Table6.B" />
+					<table:table-row table:style-name="_LP_Table6.1">
+						<table:table-cell table:style-name="_LP_Table6.A1" office:value-type="string">
+							<text:p text:style-name="_LP_MP2">[[#resources]][[& ELP:Document:Footer:Council]][[/resources]]</text:p>
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table6.A1" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_footer_5f_logo">
+								<draw:frame draw:style-name="_LP_Mfr2" draw:name="_LP_graphics23" text:anchor-type="as-char" svg:width="39mm" svg:height="11.99mm" draw:z-index="16">
+									<draw:image xlink:href="Pictures/elp_footer_eu_logo.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+									<svg:title>[[& Accessibility:Europass:Footer:Logo]]</svg:title>
+								</draw:frame>
+							</text:p>
+						</table:table-cell>
+					</table:table-row>
+					<table:table-row table:style-name="_LP_Table6.2">
+						<table:table-cell table:style-name="_LP_Table6.A2" office:value-type="string">
+							{{#DocumentInfo.EuropassLogo}}<text:p text:style-name="_LP_MP3">[[#resources]][[& Document:Footer:EuropeanUnionCouncil]][[/resources]] | [[#resources]][[& Document:Footer:EuropassLink]][[/resources]] </text:p>{{/DocumentInfo.EuropassLogo}}
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table6.A2" office:value-type="string">
+							<text:p text:style-name="_LP_MP4">
+								{{#DocumentInfo.EuropassLogo}}<text:span text:style-name="_LP_MT1">{{#DocumentInfo}}{{formatLastUpdateDate}}{{/DocumentInfo}}</text:span>{{/DocumentInfo.EuropassLogo}}
+								<text:tab/><text:tab/>
+								<text:span text:style-name="_LP_MT1">[[#resources]][[& Document:Footer:Paging]][[/resources]]  </text:span>
+								<text:span text:style-name="_LP_MT1">
+									<text:page-number text:select-page="current">1</text:page-number></text:span>
+								<text:span text:style-name="_LP_MT1"> / </text:span><text:span text:style-name="_LP_MT1"><text:page-count>3</text:page-count></text:span></text:p>
+						</table:table-cell>
+					</table:table-row>
+				</table:table>
+				<text:p text:style-name="_5f_ELP_5f_Table_5f_Titles" />
+			</style:footer>

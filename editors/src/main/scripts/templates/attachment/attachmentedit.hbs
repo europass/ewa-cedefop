@@ -1,0 +1,21 @@
+{{#with SkillsPassport}}
+<fieldset class="edit-existing">
+	<header>
+		<legend>{{get_text "LearnerInfo.Attachment" group="GuiLabel"}}</legend>
+	</header>
+	
+	{{#with_list_item LearnerInfo.ReferenceTo ../Idx}}
+		<fieldset class="existing-files">
+			
+			{{#with_attachment ../Attachment idref}}
+			<div class="attachment-edit attachment-info existing-file-details">
+				{{#call_partial . subsection="Edit"}}
+					{{> templates/attachment/attachmentactions}}
+				{{/call_partial}}
+			</div>	
+			{{/with_attachment}}
+		</fieldset>
+	{{/with_list_item}}
+	
+</fieldset>
+{{/with}}

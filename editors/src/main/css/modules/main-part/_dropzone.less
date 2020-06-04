@@ -1,0 +1,71 @@
+fieldset.Signature.Upload.dropzone .signature-preview-area {
+  height: @cl-signature-height;
+}
+
+fieldset .Signature.Upload.dropzone {
+  border: medium none;
+}
+
+
+
+/***************************************************
+ ***************************************************
+ *****     FILE UPLOAD WITH DRAG N DROP        *****
+ ***************************************************
+ ***************************************************/
+/* FILE UPLOAD DRAG N' DROP */
+.dropzone {
+  display: none;
+  position: relative;
+  height:92%;
+}
+
+.dropzone.in.hover{
+  margin:40px;
+
+}
+
+.modal .dropzone {
+  max-width: 100%;   /* should be the same width as .modal .main */
+  height: 100%;
+}
+
+.dropzone .drop.here {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  text-align: center;
+  /**z-index: -1;**/
+  display: none;
+  height: inherit;
+  overflow-y:hidden;
+  border: 3px dashed #93278F;
+  padding: 2rem 0;
+  background: #ECE2EC;
+  color: @grey-dark-text-two;
+}
+
+#main-content-area .dropzone .drop.here .dropMsg {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-style: normal;
+  width: 90%;
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#93278F;
+  font-size: 24px;
+  &:after{
+    position:absolute;
+    top:70px;
+    font-size:60px;
+    content: "\e905";
+    color: #93278f;
+    font-family: "europass-application" !important;
+    left:50%;
+    transform:translatex(-50%);
+  }
+}

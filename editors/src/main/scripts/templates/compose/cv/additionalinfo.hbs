@@ -1,0 +1,152 @@
+<dt class="label list section-heading">
+    <button type="button" name="enablePageBreak" 
+        class="enablePageBreak sectionBreak tip spot tip-removeLeft--10pixels tip-closerTop" 
+        data-section="Achievement"
+        data-tip.position="top-left">Page Break
+        <span class="data-title" style="display:none;">
+            {{#if_contains Preferences.LearnerInfo.pageBreaks compare="Achievement"}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains}}
+            {{#if_absent Preferences.LearnerInfo.pageBreaks compare="Achievement"}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent}}
+        </span>
+    </button>
+    <span class="title">{{get_text "LearnerInfo.Achievement" group="DocumentLabel"}}</span>
+</dt>
+<dd class="line"></dd>
+<ol class="sortable compose-list" 
+	id="List:SkillsPassport.LearnerInfo.Achievement" 
+	data-rel-section="SkillsPassport.LearnerInfo.Achievement">
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Achievement}}
+		<li class="compose-list" 
+			id="ListItem:LearnerInfo.Achievement.Empty">
+
+			<button type="button" 
+					name="LearnerInfo.Achievement[0]_add_btn" 
+					class="section compose-list opens-modal-form  add empty" 
+					data-rel-doc="cv"
+					data-rel-clazz="AchievementFormView"
+					data-rel-form="Form:LearnerInfo.Achievement[0]"
+					data-rel-section="SkillsPassport.LearnerInfo.Achievement[0]"
+					data-rel-help-section="Help.SkillsPassport.LearnerInfo.Achievement"
+					data-rel-index="0">
+					<span class="img-placeholder">&nbsp;</span>
+					<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+			</button>
+		</li>
+	{{else}}
+		{{#each_with_index SkillsPassport.LearnerInfo.Achievement}}
+                                
+				<li class="compose-list list-item opens-modal-form" 
+					id="ListItem:LearnerInfo.Achievement[{{index}}]" 
+					data-index="{{index}}"
+					data-rel-doc="cv"
+					data-rel-clazz="AchievementFormView"
+					data-rel-form="Form:LearnerInfo.Achievement[{{index}}]"
+					data-rel-section="SkillsPassport.LearnerInfo.Achievement[{{index}}]"
+					data-rel-help-section="Help.SkillsPassport.LearnerInfo.Achievement"
+					data-rel-index="{{index}}">
+
+                                        <hr {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "Achievement" index}}class="break-page"{{/if_contains_cmplx}}>
+
+					<dd class="content-label Achievement">
+                                            {{#if_gt index compare="0"}}
+                                                <button type="button" name="enablePageBreak" 
+                                                    class="enablePageBreak subSectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "Achievement" index}}break-page{{/if_contains_cmplx}}" 
+                                                    data-section="Achievement{{index}}"
+                                                    data-tip.position="top-left">Page Break
+                                                    <span class="data-title" style="display:none;">
+                                                        {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "Achievement" index}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains_cmplx}}
+                                                        {{#if_absent_cmplx ../../Preferences.LearnerInfo.pageBreaks "Achievement" index}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent_cmplx}}
+                                                    </span>
+                                                </button>
+                                            {{/if_gt}}
+                                            {{Title.Label}}
+                                        </dd>
+
+					<dd class="value rich-content Achievement">
+						{{#if Description}}
+							{{nestHtmlLists Description}}
+						{{else}}
+							<span class="description default-value">{{get_text "LearnerInfo.Achievement.Description"}}</span>
+						{{/if}}
+					</dd>
+					
+					
+					{{#if ReferenceTo}}
+						<dd class="value Achievement attachment">
+							<span class="attachment inner-content-label">{{get_text "LearnerInfo.Achievement.ReferenceTo" group="DocumentLabel"}}</span>
+							{{#each_with_index ReferenceTo index_name="index2"}}
+								{{#with_attachment ../../../../SkillsPassport.Attachment idref}}
+									<span class="linked-attachment" name="{{Name}}">
+									{{#if_gt ../index2 compare="0"}}, {{/if_gt}}
+										{{Description}}
+									</span>
+								{{/with_attachment }}
+							{{/each_with_index}}
+						</dd>
+					{{/if}} 
+
+					{{#call_partial . path="LearnerInfo.Achievement" buttons="Extra"}}
+						{{> templates/menu/listitemmenu}}
+					{{/call_partial}}
+					
+					
+					{{#if_gt ../../SkillsPassport.LearnerInfo.Achievement.length compare="1"}}
+<!-- 						<span class="sortable_placeholder tip spot" data-tip.position="top-left"> -->
+<!-- 							  <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span>	 -->
+<!-- 							  +</span> -->
+						
+						<button type="button"
+								name="move_up"
+								class="sort-move-up {{#if_eq index compare="0"}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_eq}}"
+						        data-tip.position="top-left">
+						        <span>UP</span>
+						         <span class="data-title" style="display:none;">{{get_text "Move.Sort.Upwards" group="EditorHelp"}}</span>
+						        </button>
+						<button type="button"
+								name="move_down"
+								class="sort-move-down {{#if_last_item ../../SkillsPassport.LearnerInfo.Achievement.length compare=index}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_last_item}}"
+						        data-tip.position="top-left">
+								<span>DOWN</span>
+								<span class="data-title" style="display:none;">{{get_text "Move.Sort.Downwards" group="EditorHelp"}}</span>
+								</button>
+						
+						{{#if_last_item ../../SkillsPassport.LearnerInfo.Achievement.length compare=index}}
+							<button type="button"
+							        name="move_top"
+							        class="sort-move-top tip spot tip-removeLeft--10pixels"
+							        data-tip.position="top-left">
+							        <span>TOP</span>
+							        <span class="data-title" style="display:none;">{{get_text "Move.Sort.ToTop" group="EditorHelp"}}</span>
+							        </button>
+						{{/if_last_item}}
+					
+					{{/if_gt}}
+					
+					
+				</li>
+		{{/each_with_index}}
+		<li class="compose-list additional empty">
+			
+			<button type="button" 
+					name="LearnerInfo.Achievement[{{SkillsPassport.LearnerInfo.Achievement.length}}]_add_btn" 
+					class="section compose-list add opens-modal-form edit"
+					data-rel-doc="cv"
+					data-rel-clazz="AchievementFormView"
+					data-rel-form="Form:Achievement[{{SkillsPassport.LearnerInfo.Achievement.length}}]"
+					data-rel-section="SkillsPassport.LearnerInfo.Achievement[{{SkillsPassport.LearnerInfo.Achievement.length}}]"
+					data-rel-help-section="Help.SkillsPassport.LearnerInfo.Achievement"
+					data-rel-index="{{SkillsPassport.LearnerInfo.Achievement.length}}">	
+					<span class="img-placeholder">&nbsp;</span>
+					<span>
+					{{#if_lt SkillsPassport.LearnerInfo.Achievement.length compare="1"}}
+						{{get_text "Buttons.Add.Content" group="GuiLabel"}}
+					{{/if_lt}}
+					{{#if_gteq SkillsPassport.LearnerInfo.Achievement.length compare="1"}}
+						{{get_text "Buttons.Add.Content.Not.Empty.Information" group="GuiLabel"}}
+					{{/if_gteq}}
+					</span>
+			</button>
+		</li>
+		
+	{{/isEmptyObject}}
+</ol>

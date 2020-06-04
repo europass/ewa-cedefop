@@ -1,0 +1,34 @@
+
+<dt class="label">
+	<span class="title">{{get_text "LearnerInfo.Skills.Computer" group="DocumentLabel"}}</span>
+</dt>
+
+<dd class="value rich-content">
+
+	{{#isSectionWithAttachmentsEmpty SkillsPassport.LearnerInfo.Skills.Computer}}
+	
+		<div class="empty add"
+			><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+		</div>
+	{{else}}	
+		<div class="description">{{nestHtmlLists SkillsPassport.LearnerInfo.Skills.Computer.Description}}</div>
+		{{#if SkillsPassport.LearnerInfo.Skills.Computer.ReferenceTo}}
+			<div class="attachment">				
+				<span class="attachment inner-content-label">{{get_text "LearnerInfo.Skills.Computer.ReferenceTo" group="DocumentLabel"}}</span>
+				{{#each_with_index SkillsPassport.LearnerInfo.Skills.Computer.ReferenceTo}}
+					{{#with_attachment ../../SkillsPassport.Attachment idref}}
+						<span class="linked-attachment" name="{{Name}}">
+							{{#if_gt ../index compare="0"}}, {{/if_gt}}
+								{{#crop_text Description}}{{.}}{{/crop_text}}
+						</span>
+					{{/with_attachment }}
+				{{/each_with_index}}
+			</div>
+		{{/if}} 
+		
+		{{#call_partial SkillsPassport.LearnerInfo.Skills.Computer path="LearnerInfo.Skills.Computer" subsection="Computer" withAttachments="true"}}
+			{{> templates/menu/itemmenu}}
+		{{/call_partial}}
+
+	{{/isSectionWithAttachmentsEmpty}}
+</dd>

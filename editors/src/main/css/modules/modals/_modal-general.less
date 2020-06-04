@@ -1,0 +1,703 @@
+//Fixes Modal responsiveness
+.modal_overlay_open {
+    overflow: hidden;
+}
+
+.modal * {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  outline: none;
+}
+
+
+/************* FORM DRAWER ****************/
+
+.modal-font-family {
+  font-family: 'Open Sans',sans-serif;
+}
+.modal {
+  background: none repeat scroll 0 0 #FFFFFF;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 1050px; /*was 1015px; vpol changed for ewa-1234 + ewa-1142 Help text area in drawers is too small */
+  z-index: 1000;
+  //save button / for Modal
+  .button.submit.submit.save {
+    background: @blue-regular;
+    &:hover {
+      background: darken(@blue-regular, 5%);
+    }
+  }
+  //cancel button / for Modal
+  .button.cancel {
+    background: @white;
+    color: gray;
+    border: 1px solid gray;
+      &:hover {
+        background: #eaeaea;
+        color: darken(gray, 8%);
+        border: 1px solid darken(gray, 8%);
+      }
+  }
+}
+
+.modal button.close {
+  .close-button-mixin;
+  left: -30px;
+  position: absolute;
+  top: 20px;
+}
+.modal .main {
+  .box-sizing;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0px @modal-form-main-side-padding;
+  position: fixed;
+  top: 0;
+  width: @modal-form-main-width;
+
+  > fieldset{
+    width: 100%;
+  }
+}
+
+.modal header {
+  padding-top: 30px;
+
+  legend {
+    color: @quite-dark-grey;
+    /* EWA-1829 */
+    font-size: 2rem;
+    margin: 0 0 10px;
+    width: 100%;
+    text-align: center;
+    * {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: @tablet-width-limit) {
+      //Introduce extra space so that the header tooltip is properly displayed
+      padding-top: 1rem;
+      &.top-help {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+
+
+/***************************************************
+ ***************************************************
+ * Last buttons not visible due to the scrollbar  *
+ ***************************************************
+ ***************************************************/
+@media only screen and ( min-width: @desktop-width-limit ) {
+  .transition-overlay::before,
+  .transition-overlay {
+    display: none;
+  }
+  .modal{
+    button.toggle-expansion.toggle-personal-info.more,
+    fieldset.linked-attachments,
+    fieldset.Nationality,
+    fieldset.MotherTongue div.multipliable >*:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.modal .toggle-personal-info.toggle-expansion:hover, .modal .toggle-personal-info.toggle-expansion,.modal .toggle-expansion.education, .modal .toggle-expansion.more,.modal .toggle-expansion.less {
+  background:transparent!important;
+  border:none;
+  padding:0;
+  padding-left:65px;
+  color: @grey-dark-text-two;
+}
+
+button.toggle-expansion.less.toggle-expansion.less:hover, .modal .toggle-expansion.less.toggle-expansion.less{
+  background-color:transparent!important;
+  border:none!important;
+}
+
+
+/***************************************************
+ ***************************************************
+ *****            TABLET SPECIFIC              *****
+ ***************************************************
+ ***************************************************/
+
+@media only screen and (max-width: @tablet-width-limit)  {
+
+  .transition-overlay::before {
+    content: "";
+    display: inline-block;
+    height: inherit;
+    margin-right: -0.25em;
+    vertical-align: middle;
+  }
+  .transition-overlay {
+    left: 0;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 105;
+  }
+
+  //Modal drawer styling
+
+  .modal {
+    width:100% !important;
+  }
+  .modal .close {
+    display:none !important;
+  }
+  .modal .main {
+    /*width: 99% !important;
+    height: 80% !important;
+    Changed width and height of the modal due to an unexpectable white area at bottom (iPad)*/
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .modal .main{
+    /* Added a margin at bottom so that the edit existing photo section would be visible on tablets */
+    .existing-photo-details {
+      margin-bottom: 16%;
+    }
+  }
+
+
+
+  /* Specific rules for box shadow and images in input form fields*/
+  .modal {
+    fieldset input.formfield {
+      border: 1px solid @orange-dark;
+      filter: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #555555;
+      display: block;
+      filter: none;
+      font-size: 1.3rem;
+      height: 3.425rem;
+      margin: 0;
+      padding: 0.75rem 1.25rem;
+      width: 100%;
+      background-color: rgba(196,81,0,0.07);
+    }
+
+    fieldset .formfield.Email {
+      background: url("@{img-base-url}sprites/personal_icons.png@{img-suffix-url}${project.version}") no-repeat 14px -220px  #EAF1F4;
+      padding-left: 50px;
+    }
+    fieldset .formfield.Website{
+      background: url("@{img-base-url}sprites/personal_icons.png@{img-suffix-url}${project.version}") no-repeat 14px -282px  #EAF1F4;
+      padding-left: 50px;
+    }
+    fieldset .formfield.Address.first-line,
+    fieldset .formfield.AddressLine {
+      background: url("@{img-base-url}sprites/personal_icons.png@{img-suffix-url}${project.version}") no-repeat 14px 18px  rgba(196,81,0,0.07);
+      padding-left: 50px;
+    }
+  }
+
+  /****** Last buttons not visible due to the side overlay ******/
+  .modal {
+    .main > fieldset > fieldset:last-child,
+    button.toggle-expansion.toggle-personal-info.more {
+      margin-bottom: 6.5rem;
+    }
+    fieldset.salutationName div.help input.formfield,
+    button.toggle-expansion.toggle-personal-info.more,
+    fieldset.linked-attachments,
+    fieldset.Nationality,
+    fieldset.SubjectLine input.SubjectLine,
+    fieldset.ecl.InstantMessaging,
+    fieldset.external-attachments div.multipliable >*:last-child,
+    fieldset.MotherTongue div.multipliable >*:last-child,
+    form#Form\:CL\:MainBody fieldset > fieldset:last-child,
+    fieldset.ELP div.multipliable >*:last-child,
+    fieldset.Level > div.level,
+    form#Form\:AddresseeDetails fieldset.country{
+      margin-bottom: 14rem;
+    }
+    fieldset.Level > div.level[name="Certificate"]{
+      margin-bottom: 20.5rem;
+    }
+    .main > fieldset >fieldset.SelfAssesment{
+      margin-bottom: 29rem;
+    }
+    .main > fieldset >fieldset.Experience.Dates{
+      margin-bottom: 3.5rem;
+    }
+
+  }
+
+
+
+  /******************* Contact Form Specific **********************/
+
+  #SendFeedbackForm {
+    z-index:1002;
+
+    .sendfeedback-info {
+      width:100% !important;
+
+      .ui-sendfeedback-area.drawer{
+        width:100% !important;
+      }
+    }
+    .close {
+      display:none !important;
+    }
+
+  }
+
+  /******************* Modal Settings Specific **********************/
+
+  #PartnersResponseForm .basic-principles-content.modal, 
+  #PartnersResponseForm .prepare-your-interview-content.modal {
+    padding:0 70px;
+  }
+
+  #AppSettingsForm{
+    z-index:1002;
+
+    .appsettings-info{
+      width:100% !important;
+      .side-left {
+        display: block!important;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 5.6rem !important; /* 90px */
+        background: @white !important;
+        padding: 0 !important;
+        box-shadow: 0 -2px 4px 0 #c2c2c2;
+        left:0;
+        z-index: 1000;
+      }
+
+      .ui-settings-area.drawer{
+        width:100% !important;
+
+        .settings-modal-divider {
+          width: 100%;
+        }
+        .mdl-btn {
+          display: none;
+        }
+        fieldset {
+          .option-description,
+          .application-choice {
+            width: 100%;
+            .onoffswitch {
+              /*     		                  right: 10% !important; */
+              top: 23px !important;
+              left: 1rem !important;
+            }
+          }
+        }
+      }
+    }
+    .close {
+      display:none !important;
+    }
+  }
+
+  /******************* Modal 5 Basic Principles for a good CV Specific **********************/
+  #BasicCvPrinciplesForm{
+    z-index:1002;
+
+    .basic-principles-content, 
+    .prepare-your-interview-content {
+      width:100% !important;
+
+      .ui-cv-principles-area.drawer{
+        width:100% !important;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    .close {
+      display:none !important;
+    }
+  }
+
+
+  /******************* Share and Post to Eures Form **********************/
+
+  #PostToJobPortalsForm{
+    z-index:1002;
+
+    .job-portals-info{
+      width:100% !important;
+      #share-cloud {
+        .btn-share-cloud:last-child {
+          margin-bottom: 8rem !important;
+        }
+      }
+      #manage-share-drawer {
+        height: inherit;
+        margin: 0px 0px !important;
+        padding: 0px 70px !important;
+        width: inherit !important;
+        .manage-share-tile {
+          .manage-action.link-delete {
+            bottom: inherit!important;
+            left: initial!important;
+            margin-right: 1rem!important;
+            position: absolute!important;
+            margin-top: -8.5rem!important;
+            text-indent: -6px;
+            line-height: 1.2rem;
+          }
+          &:last-child {
+            margin-bottom: 8rem !important;
+          }
+        }
+      }
+      #btn-cancel-share {
+        float: right;
+        margin-right: 2rem;
+        height: 4rem;
+        &.non-visible{
+          display: none !important;
+        }
+      }
+      #share-for-review{
+        height: inherit;
+        margin: 0px 0px !important;
+        padding: 0px 70px !important;
+        width: inherit !important;
+        .button.cancel.share-form,
+        .button.green.send {
+          bottom: 10px !important;
+          position: fixed !important;
+          z-index: 1110 !important;
+          display: inline-block !important;
+        }
+        >fieldset >.placeholding.share-option {
+          display: block !important;
+        }
+        #btn-send-review {
+          margin-bottom: 0rem;
+          right: 5.7rem;
+        }
+        #share-comment-textarea {
+          margin-bottom: 8rem;
+        }
+        .placeholding.share-option {
+          display: inline-block;
+          width: 100%;
+          .button.copy-link-action {
+            position: absolute;
+            right: 73px;
+            top: inherit !important;
+            margin-top: 0px;
+            float: right;
+          }
+          .formfield.share-cloud-link {
+            width: 90% !important;
+            display: inline-block;
+            float: left;
+
+          }
+        }
+        .share-note > span.share-content {
+          width: 100% !important;
+
+        }
+      }
+      .ui-main-area.drawer{
+        /* 				left: 50% !important; */
+        /* 			    margin-left: -396.5px; */
+        /* 			    padding-left: 4%; */
+        position: relative;
+        width: auto !important;
+        /* 	    		.ui-eures-area.drawer.default, */
+        .ui-eures-area.drawer.on-error,
+        .ui-eures-area.drawer.on-success{
+          width:100% !important;
+          min-width: 100%;
+          max-width: 100%;
+          overflow: auto !important;
+          .note.eures{
+            width: 100%;
+            .text {
+              width: 90% !important;
+            }
+          }
+          .button.green.submit {
+            display: none!important;
+          }
+        }
+      }
+      .job-portals-side {
+        display: block;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 5.6rem !important; /* 90px */
+        background: @white !important;
+        padding: 0 !important;
+        box-shadow: 0 -2px 4px 0 #c2c2c2;
+        z-index: 1000;
+        .button.green.submit {
+          float: right;
+          height: 3.8rem;
+          margin-right: 2rem;
+          margin-top: 15px;
+        }
+        .button.cancel {
+          float: right;
+          height: 3.8rem;
+          margin-right: 1.5rem;
+          margin-top: 15px;
+        }
+      }
+    }
+    .close {
+      display:none !important;
+    }
+  }
+
+  /******************* Top UI Languages Specific **********************/
+
+
+}
+
+.modal header legend{
+  text-align: left;
+}
+
+.modal.modal .main>fieldset>fieldset:last-child{
+  margin-bottom:2rem;
+}
+
+@media screen and(max-width:@phone-width-limit){
+  .modal.modal .main>fieldset>fieldset:last-child{
+    margin-bottom:0;
+  }
+}
+
+.help.placeholder{
+  pointer-events:none;
+}
+
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  .modal {
+    .main {
+      padding: 10px 10px 10px 40px;
+    }
+    header{
+      padding-top:0;
+      legend{
+        font-size:1.5rem;
+        padding-top:0;
+      }
+    }
+    fieldset{
+      fieldset{
+        margin-bottom:0;
+      }
+      label{
+        margin-top:15px;
+      }
+    }
+  }
+  .modal fieldset.salutationName div.help input.formfield, .modal button.toggle-expansion.toggle-personal-info.more, .modal fieldset.linked-attachments, .modal fieldset.Nationality, .modal fieldset.SubjectLine input.SubjectLine, .modal fieldset.ecl.InstantMessaging, .modal fieldset.external-attachments div.multipliable > *:last-child, .modal fieldset.MotherTongue div.multipliable > *:last-child, .modal form#Form\:CL\:MainBody fieldset > fieldset:last-child, .modal fieldset.ELP div.multipliable > *:last-child, .modal fieldset.Level > div.level, .modal form#Form\:AddresseeDetails fieldset.country {
+    margin-top:10px;
+    margin-bottom:0rem;
+  }
+  button.toggle-expansion {
+    margin-top:10px;
+    margin-bottom:20px;
+  }
+  .modal .main > fieldset > fieldset.SelfAssesment {
+    margin-bottom: 10px;
+  }
+  .browse-file-area > menu.choose-file {
+    margin-top:0;
+    .button.upload.blue {
+      margin-top:0;
+    }
+  }
+  #Personal-Info-Extra-Fields-fld {
+    margin-bottom:7rem;
+  }
+  fieldset.ecl.InstantMessaging.InstantMessaging {
+    margin-bottom:10rem;
+  }
+}
+
+/* New Epas Modal */
+//-----------------------------------------------------------------------------------------
+  #new-europass-modal {
+    color: @white;
+    text-align: center;
+    z-index: 9999999 !important;
+    position: absolute;
+    display: table;
+    top: 7%;
+    bottom: 7%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 86%;
+    z-index: 3;
+    margin-bottom: 7%;
+    //links
+    a {
+      color: @light-blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    //modal posositon only for desktop
+    @media only screen and (min-height: 600px) {
+      position: fixed;
+      margin-bottom: 0;
+    }
+    &:after {
+      content: "";
+      position: fixed;
+      z-index: -2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0.6;
+    }
+    /* close modal */
+    //--------------------------------------
+    #close-modal {
+      position: absolute;
+      right: 50px;
+      top: 20px;
+      display: block;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      z-index: 99;
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 17px;
+        width: 3px;
+        height: 40px;
+        background: @light-blue;
+      }
+      &:before {
+      transform: rotate(47deg);
+      -webkit-transform: rotate(47deg);
+      -moz-transform: rotate(47deg);
+      -o-transform: rotate(47deg);
+      -ms-transform: rotate(47deg);
+      }
+      &:after {
+        transform: rotate(-47deg);
+        -webkit-transform: rotate(-47deg);
+        -moz-transform: rotate(-47deg);
+        -o-transform: rotate(-47deg);
+        -ms-transform: rotate(-47deg);
+      }
+    }
+    /* end of -- close modal */
+    /* modal inner */
+    //-------------------------------------------
+    .inner {
+      background-color: @blue-medium;
+      padding: 50px;
+      display: block;
+      margin: auto;
+      margin-bottom: 8%;
+      position: relative;
+      z-index: -1;
+      @media only screen and (min-height: 600px) {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+        max-width: 840px;
+      }
+      /* logo */
+      .epas-bg-image {
+        background: url("@{img-base-url}epas-new-logo.svg@{img-suffix-url}${project.version}") no-repeat center center transparent;
+        background-size: 100%;
+        height: 48px;
+        width: 178px;
+        margin: auto;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        @media only screen and (min-width: 400px) {
+          width: 248px;
+          margin-bottom: 25px;
+          margin-top: 0;
+        }
+      }
+      /* title */
+      h1,
+      p {
+        max-width: 840px;
+        margin: auto;
+        line-height: 1.2;
+        font-weight: 100;
+      }
+      h1 {
+        font-weight: 100;
+        margin-bottom: 25px;
+        font-size: 26px;
+        @media only screen and (min-width: 400px) {
+          font-size: 32px;
+        }
+        @media only screen and (min-width: 768px) {
+          font-size: 48px;
+        }
+      }
+      /* paragraph */
+      p {
+        font-weight: normal;
+        margin-bottom: 25px;
+        strong {
+          font-weight: bold;
+        }
+      }
+      /* button */
+      button {
+        background-color: #0E739F;
+        border: none;
+        padding: 10px;
+        width: 150px;
+        font-size: 19px;
+        border-radius: 8px;
+        color: @white;
+        font-weight: normal;
+      }
+    }
+    /* end of -- inner */
+  }
+
+
+
+
+
+  
+ 

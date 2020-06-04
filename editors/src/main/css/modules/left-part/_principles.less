@@ -1,0 +1,151 @@
+#BasicCvPrinciplesForm {
+  color: @quite-dark-grey;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  .basic-principles-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 770px;
+    z-index: 1002;
+    font-size: 1 rem;
+    text-align: left;
+    .side {
+      button.principles-bot-btn {
+        float: right;
+        margin-top: 15px;
+        margin-right: 5rem;
+        height: 3.8rem
+      }
+    }
+    button.close {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      left: auto;
+      z-index: 600;
+    }
+    .ui-cv-principles-area {
+      .box-sizing;
+      overflow-y: visible;
+      overflow-x: hidden;
+      height: 100%;
+      width: 98%;
+      /* EWA-1829 */
+      padding: 3rem 4.5rem;
+      position: fixed;
+      max-width: 770px;
+      min-width: 770px;
+      .heading {
+        /* EWA-1829 */
+        font-size: 2rem;
+        margin: 15px 0;
+      }
+      .principle-title {
+        margin-bottom: 30px;
+        margin-top: 60px;
+        font-size: 18px;
+        font-weight: bold;
+        color: @very-dark-grey;
+      }
+      > ul.principles-points {
+        margin-bottom: 36px;
+        > li {
+          line-height: 22px;
+          font-size: 15px;
+          margin-bottom: 25px;
+          margin-left: 20px;
+          list-style: square outside url("@{img-base-url}orange_square.png@{img-suffix-url}${project.version}")!important;
+          color: @grey-dark-text;
+        }
+      }
+      ul:last-child {
+        margin-bottom: 10rem;
+      }
+      ul li {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+#prepare-your-interview-btn span.btn-content .txt p{
+  font-size:0.95rem;
+}
+
+@media only screen and ( min-width: @desktop-width-limit ) {
+  //.basic-principles-content.modal .side {
+  .basic-principles-content.modal .side {
+    display: none!important;
+    > button {
+      display: none;
+    }
+  }
+}
+
+#PrepareYourInterviewForm{
+  z-index:1002;
+  .ui-cv-interview-area{
+    padding-left:40px!important;
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+@media only screen and (min-width: 1121px){}
+#basic-principles-btn{
+  margin-bottom:10px!important;
+}
+
+@media screen and(max-width:@tablet-width-limit){
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area{
+    max-width:none;
+    min-width:0;
+    width:100%;
+  }
+}
+
+
+@media screen and(max-width:@phone-width-limit) {
+  #BasicCvPrinciplesForm {
+    .basic-principles-content {
+      .ui-cv-principles-area {
+        padding:1rem;
+        .principle-title{
+          margin-top:30px;
+        }
+        .heading{
+          font-size:1.5rem;
+          line-height:1;
+        }
+      }
+    }
+  }
+  #BasicCvPrinciplesForm .basic-principles-content .side button.principles-bot-btn{
+    float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+    height: auto;
+  }
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area .interview-title{
+    margin-top:20px;
+  }
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area .interview-point-title{
+    margin:10px 0;
+  }
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area .interview-section > ul > li > ul > li{
+    margin-left:0;
+  }
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area .interview-section > ul > li > ul > li ul li{
+    margin-left:10px;
+  }
+  #PrepareYourInterviewForm .prepare-your-interview-content .ui-cv-interview-area.ui-cv-interview-area .interview-section > ul > li{
+    margin-left:0
+  }
+
+}

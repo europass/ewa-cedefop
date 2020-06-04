@@ -1,0 +1,56 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "LearnerInfo.Identification.Photo" group="GuiLabel"}}</legend>
+</header>
+
+<fieldset class="Photo Upload upload-area upload-button-set" id="fileupload" >
+	<!-- <legend>{{get_text "LearnerInfo.Identification.Photo.Upload.Prompt" group="GuiLabel"}}</legend> -->
+
+	<div class="uploaded-files"></div>
+	<legend class="notification warning">
+		<em>{{get_smart_text "LearnerInfo.Identification.Photo.Files" group="EditorHelp"  replacements="[ { \"key\" : \"[[photo.max.size]]\", \"value\" :\"photosize\" }, {\"key\" : \"[[photo.valid.types]]\", \"value\" :\"phototypes\"} ]" }}</em>
+	</legend>
+	<div class="note">
+		<p>{{get_text "LearnerInfo.Identification.Photo.Description" group="EditorHelp"}}</p>
+	</div>
+	
+	<div class="browse-file-area">
+        <span class="u-highlight-text">{{get_text "Help.SkillsPassport.Attachment.Add.File.Label" group="EditorHelp"}}</span>
+        <menu class="Photo choose-file" data-photo="true" data-signature="false">
+            <span class="button blue upload" title="{{get_text "import.wizard.location.option.local" group="GuiLabel"}}">
+				<span class="title">{{get_text "LearnerInfo.Identification.Photo.Upload" group="GuiLabel"}}</span>
+				<input type="file" name="file" size="1">
+			</span>
+            <span class="button blue upload cloud-attach-action" data-attach-cloud="googledrive" data-index="1"
+                    title="{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}">
+                <span class="title">
+                    <span>{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}</span>
+                </span>
+            </span>
+            <span class="button blue upload cloud-attach-action" data-attach-cloud="onedrive" data-index="2"
+                  title="{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}">
+                <span class="title">
+                    <span>{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}</span>
+                </span>
+            </span>
+            <span class="button blue upload cloud-attach-action" data-attach-cloud="dropbox" data-index="3"
+                  title="{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}">
+                <span class="title">
+                    <span>{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}</span>
+                </span>
+            </span>
+		</menu>
+		
+	</div>
+	<div class="upload feedback-area"></div>
+	
+</fieldset>
+
+
+<div class="existing-photo-details">
+	{{> templates/forms/photo/photodisplay}}
+</div>
+	
+</fieldset>
+{{/with}}

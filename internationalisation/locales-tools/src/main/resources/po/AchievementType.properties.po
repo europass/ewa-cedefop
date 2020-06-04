@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Epass\n"
+"Language: sr\n"
+
+#: 
+msgctxt "publications"
+msgid "Publications"
+msgstr "Publikacije"
+
+#: 
+msgctxt "presentations"
+msgid "Presentations"
+msgstr "Prezentacije"
+
+#: 
+msgctxt "projects"
+msgid "Projects"
+msgstr "Projekti"
+
+#: 
+msgctxt "conferences"
+msgid "Conferences"
+msgstr "Konferencije"
+
+#: 
+msgctxt "seminars"
+msgid "Seminars"
+msgstr "Seminari"
+
+#: 
+msgctxt "honors_awards"
+msgid "Honours and awards"
+msgstr "Priznanja i nagrade"
+
+#: 
+msgctxt "memberships"
+msgid "Memberships"
+msgstr "Članstva"
+
+#: 
+msgctxt "references"
+msgid "References"
+msgstr "Preporuke"
+
+#: 
+msgctxt "citations"
+msgid "Citations"
+msgstr "Citiranost"
+
+#: 
+msgctxt "courses"
+msgid "Courses"
+msgstr "Kursevi"
+
+#: 
+msgctxt "certifications"
+msgid "Certifications"
+msgstr "Sertifikati"
+

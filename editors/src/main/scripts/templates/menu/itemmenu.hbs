@@ -1,0 +1,31 @@
+<menu class="subsection manage" label="Manage {{subsection}}">
+
+	<button class="opens-modal-form edit extra tip spot nested-tip tip-addRight"
+            data-tip.position="top-right">
+        <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+    </button>
+		
+	{{#if withAttachments}}
+		<button type="button" 
+				name="{{path}}[{{index}}]_attach_btn" 
+				class="open-linked-attachments attach opens-modal-form tip spot nested-tip tip-addRight"
+				data-tip.position="top-right">
+				<span class="data-title" style="display:none">{{get_text "Attach.To.Section" group="EditorHelp"}}</span>
+			{{> templates/attachment/linkedindication}}
+		</button>
+	{{/if}}
+	
+	{{#if  noDelete}}
+	{{else}}
+		<button type="button"
+	            name="{{name}}{{path}}{{#if_gteq index compare='0'}}[{{index}}]{{/if_gteq}}_delete_btn"
+	            class="delete tip spot nested-tip tip-addRight"
+	            data-rel-form="Form:{{form}}{{path}}{{#if_gteq index compare='0'}}[{{index}}]{{/if_gteq}}"
+	            data-rel-section="SkillsPassport.{{section}}{{path}}{{#if_gteq index compare='0'}}[{{index}}]{{/if_gteq}}"
+	            data-rel-view="Compose:{{view}}{{path}}"
+	            {{#if_gteq index compare='0'}}data-rel-index="{{index}}"{{/if_gteq}}
+	            data-tip.position="top-right">
+	        <span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+	    </button>
+   	{{/if}}
+</menu>

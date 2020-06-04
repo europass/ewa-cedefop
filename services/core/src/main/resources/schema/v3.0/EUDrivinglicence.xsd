@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:driving="http://europass.cedefop.europa.eu/EUDriving" targetNamespace="http://europass.cedefop.europa.eu/EUDriving">
+	<xsd:simpleType name="drivinglicence">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">European driving licence - vehicle categories (http://ec.europa.eu/youreurope/nav/en/citizens/living/car/driving-license/index_en.html#326_3)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="A1"/>
+			<xsd:enumeration value="A2"/>
+			<xsd:enumeration value="AM"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="B1"/>
+			<xsd:enumeration value="BE"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="C1"/>
+			<xsd:enumeration value="C1E"/>
+			<xsd:enumeration value="CE"/>	
+			<xsd:enumeration value="D"/>
+		    <xsd:enumeration value="D1"/>
+			<xsd:enumeration value="D1E"/>
+			<xsd:enumeration value="DE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

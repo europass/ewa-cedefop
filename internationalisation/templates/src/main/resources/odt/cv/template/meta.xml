@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-meta 
+	xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" 
+	xmlns:ooo="http://openoffice.org/2004/office" 
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#" 
+	office:version="1.2">
+<office:meta>
+
+	<meta:creation-date>2012-10-10</meta:creation-date>
+	<dc:date>2012-10-10</dc:date>
+	<meta:generator>Europass - LibreOffice/4</meta:generator>
+	
+	<dc:description>Europass CV</dc:description>
+	<meta:keyword>Europass, CV, Cedefop</meta:keyword>
+	<dc:subject>Europass CV</dc:subject>
+	<dc:title>Europass CV</dc:title>
+	<dc:creator>Cedefop Europass Team</dc:creator>
+	<dc:europassLogo>true</dc:europassLogo>
+	
+	<meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="3" meta:word-count="9" meta:character-count="56" meta:non-whitespace-character-count="50"/>
+	<meta:user-defined meta:name="Editor">Cedefop Europass Team</meta:user-defined>
+	<meta:user-defined meta:name="Owner">Cedefop Europass Team</meta:user-defined>
+	
+
+</office:meta>
+</office:document-meta>

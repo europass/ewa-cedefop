@@ -1,0 +1,1315 @@
+
+/***************** COLORS **************************/
+
+
+@middle-blue:#2A7AB9;
+@mid-blue:#84b9de;
+@clickToAdd-orange: #FC6E0D;
+@wg-orange: #ffa05b;
+@light-orange: #FDE9B8;
+@dark-orange: #FF5505;
+@very-dark-orange: #D54406;
+@thumbnail-border-orange: #FFA256;
+
+
+@wg-very-very-light-grey: #F5F5F5;
+@wg-very-light-grey:#f4f4f4;
+
+@wg-light-grey:#d0d0d0;
+
+@wg-medium-grey:#c2c2c2;
+@wg-dark-grey:#b6b6b6;
+
+
+@borderbottom-blue:#1093CB;
+
+
+@black-text:#2f2e2d;
+/*@text-dark-grey: #494848;*/
+@foreign-lang-border-color: #cccccc;
+
+
+@empty-section-hover-color: #F3F3F3;
+
+@cv-footer-font-color: #737373;
+@cv-footer-font-color-ahover: #1093cb;
+
+@cv-personal-info-inner-label-color: #2FA1D2;
+
+/*************************************************************/
+
+@cv-headings-font-size: 1rem;
+@cv-headings-width: 30%;
+@inline-block-space: -0.4rem;
+@cv-subheadings-width: 30%;
+@cv-section-content-width: 65%;
+@cv-section-label-right-padding: 5%;
+
+@section-value-line-height: 15px;
+
+@cv-footer-font-size: 12px;
+
+
+/****************** FONTS *************************/
+@cv-prominent-content-font-size: 16px;
+
+/****************** RADIUS *************************/
+
+
+
+
+
+
+.opens-modal-form:hover {
+	cursor: pointer;
+}
+
+
+
+.cv.compose menu.section.manage button.delete {
+	top: 0px !important;
+}
+
+/***************** AUTO-SORTING **************************/
+
+
+.auto-sort-btn-mixin {
+	overflow: visible;
+	text-indent: -9999px;
+	/* 	   white-space: nowrap; removed due to tooltip's text "wrong" overflow*/
+	background-image: url('@{img-base-url}sprites/auto_sorting_spritesheet.png@{img-suffix-url}${project.version}');
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	z-index: 49;
+	cursor:pointer;
+	/* 	   position: absolute; removed for auto-sort button, it is needed only for sorting buttons (up-down-top)*/
+}
+
+.auto-sort-btn-img-pos-mixin (@posx, @posy) {
+	background-position: @posx @posy;
+
+}
+
+.sorting-btns-mixin {
+	button.sort-move-down {
+		display:none;
+		top: 0px;
+		.auto-sort-btn-mixin;
+		position: absolute;
+		left: 0px;
+		.auto-sort-btn-img-pos-mixin(0px, -100px);
+		&.inactive {
+			opacity: 0.3;
+		}
+
+		@media only screen and (max-width: @tablet-width-limit ) {
+			left: 5px;
+			.auto-sort-btn-img-pos-mixin(0px, -220px);
+		}
+	}
+	button.sort-move-up {
+		display:none;
+		left: 25px;
+		top: 0px;
+		.auto-sort-btn-mixin;
+		position: absolute;
+		.auto-sort-btn-img-pos-mixin(0px, -140px);
+		&.inactive {
+			opacity: 0.3;
+		}
+		@media only screen and (max-width: @tablet-width-limit ) {
+			left: 35px;
+			.auto-sort-btn-img-pos-mixin(0px, -260px);
+		}
+	}
+	button.sort-move-top {
+		display: none;
+		top: 0px;
+		.auto-sort-btn-mixin;
+		position: absolute;
+		left: 50px;
+		.auto-sort-btn-img-pos-mixin(0px, -175px);
+		&.inactive {
+			opacity: 0.3;
+		}
+		@media only screen and (max-width: @tablet-width-limit ) {
+			left: 65px;
+			.auto-sort-btn-img-pos-mixin(0px, -293px);
+		}
+	}
+}
+
+/***************** PAGE-BREAKS **************************/
+button.enablePageBreak {
+	position:relative;
+	font-size:0;
+	width: 39px;
+	height: 40px;
+	z-index: 49;
+	cursor:pointer;
+	background:transparent;
+	border:none;
+	vertical-align: top;
+	top:-12px;
+	visibility:hidden;
+	&:before{
+		content: "\e936";
+		font-family: "europass-application" !important;
+		color:@gray-bold;
+		font-size:22px;
+	}
+	@media only screen and ( min-width: @desktop-width-limit ) {
+		&:hover:before,&.tap-hover:before {
+			color: #f08244;
+		}
+	}
+}
+
+@media only screen and (max-width: @tablet-width-limit ) {
+	button.enablePageBreak{
+		visibility:visible;
+	}
+}
+
+.subsection.item,.compose-list.list-item,.annexes{
+	&:hover{
+		button.enablePageBreak{
+			visibility:visible;
+		}
+	}
+}
+
+.subsection-container{
+	&:hover{
+		> * > button.enablePageBreak{
+			visibility:visible;
+		}
+	}
+}
+
+button.break-page{
+	visibility: visible!important;
+	&:before{
+		color: #f08244;
+	}
+}
+
+
+/**** PAGE BREAK*********/
+.cv.compose hr{
+	border:none;
+	display:none;
+	&.break-page{
+		display:block;
+		border:none;
+		border-bottom: 1px dashed @gray-bold;
+		position:absolute;
+		margin-top:-20px;
+		width:100%;
+		+ .section button.enablePageBreak {
+			/*visibility:visible;
+					&:before {
+                        color: #f08244;
+                    }*/
+		}
+	}
+}
+
+
+/***Mixin for the animation of sorting elements - param: keyframe type***/
+.sort-animation-mixin(@keyFrameName) {
+	animation:         @keyFrameName 1s 1; /* CSS3 */
+	-moz-animation:    @keyFrameName 1s 1; /* Firefox */
+	-webkit-animation: @keyFrameName 1s 1; /* Webkit */
+	-o-animation: @keyFrameName 1s 1; /* Opera */
+	-ms-animation: @keyFrameName 1s 1;  /* IE */
+	animation-play-state:running;
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state: running;
+	-o-animation-play-state: running;
+	-ms-animation-play-state: running;
+}
+
+/*** Mixin for the transition of sorting elements - param: property that will be animated ***/
+.sort-transition-mixin(@prop) {
+	transition: @prop 1s ease-out;
+	-webkit-transition: @prop 1s ease-out;
+	-moz-transition: @prop 1s ease-out;
+	-o-transition: @prop 1s ease-out;
+	-ms-transition: @prop 1s ease-out
+}
+
+/*** Mixin for the transition of sorting elements' menu buttons - param: opacity level ***/
+.menu-manage-trans-mixin(@menu-opacity-lvl-tr){
+	menu.section.manage {
+		opacity: @menu-opacity-lvl-tr !important;
+		.sort-transition-mixin(opacity);
+		display: inline-block !important;
+	}
+}
+/*** Mixin for the transition of sorting elements' sort buttons - param: opacity level ***/
+.sorting-btns-trans-mixin(@btn-opacity-lvl-tr){
+	button.sort-move-up,
+	button.sort-move-down,
+	button.sort-move-top {
+		opacity: @btn-opacity-lvl-tr !important;
+		.sort-transition-mixin(opacity);
+		display: inline-block !important;
+		&.inactive {
+			opacity: 0.3 !important;
+			.sort-transition-mixin(opacity);
+		}
+	}
+}
+
+.menu-manage-opacity-mixin(@menu-opacity-lvl){
+	menu.section.manage {
+		opacity: @menu-opacity-lvl !important;
+		display: inline-block !important;
+	}
+}
+
+.sorting-btns-opacity-mixin(@btn-opacity-lvl){
+	button.sort-move-up,
+	button.sort-move-down,
+	button.sort-move-top {
+		opacity: @btn-opacity-lvl !important;
+		display: inline-block !important;
+		&.inactive {
+			opacity: 0.3 !important;
+		}
+	}
+}
+
+.list-item.frst-animation-start {
+	z-index: 9999;
+	.sort-animation-mixin(bg-less-opacity);
+	.sorting-btns-opacity-mixin(1);
+	.menu-manage-opacity-mixin(1);
+	> td {
+		.sort-animation-mixin(bg-less-opacity);
+		.label > .language-title {
+			.sorting-btns-opacity-mixin(1);
+		}
+		.menu-placeholder {
+			.menu-manage-opacity-mixin(1);
+		}
+	}
+}
+.list-item.scnd-animation-start {
+	z-index: 3333;
+	border-color: transparent !important;
+	.sort-animation-mixin(bg-more-opacity);
+	.sorting-btns-opacity-mixin(0);
+	.menu-manage-opacity-mixin(0);
+	> td {
+		border-color: transparent !important;
+		.sort-animation-mixin(bg-more-opacity);
+		.label > .language-title {
+			.sorting-btns-opacity-mixin(0);
+		}
+		.menu-placeholder {
+			.menu-manage-opacity-mixin(0);
+		}
+	}
+}
+
+.list-item.frst-animation-end{
+	z-index: inherit;
+	border-color: transparent !important;
+	.sort-transition-mixin(border-color);
+	.sorting-btns-trans-mixin(0);
+	.menu-manage-trans-mixin(0);
+	> td {
+		border-color: transparent !important;
+		.sort-transition-mixin(border-color);
+		.label > .language-title {
+			.sorting-btns-trans-mixin(0);
+		}
+		.menu-placeholder {
+			.menu-manage-trans-mixin(0);
+		}
+	}
+}
+
+.list-item.scnd-animation-end {
+	z-index: inherit;
+	.sort-transition-mixin(border-color);
+	.sorting-btns-trans-mixin(1);
+	.menu-manage-trans-mixin(1);
+	> td {
+		.sort-transition-mixin(border-color);
+		.label > .language-title {
+			.sorting-btns-trans-mixin(1);
+		}
+		.menu-placeholder {
+			.menu-manage-trans-mixin(1);
+		}
+	}
+}
+
+
+.section.additional,
+.section.annexes {
+	.sorting-btns-mixin;
+}
+
+.display-sorting-btns-mixin {
+	.sort-move-up.sort-move-up,
+	.sort-move-down.sort-move-down,
+	.sort-move-top.sort-move-top {
+		display: inline-block;
+	}
+}
+
+
+
+/****************************************************/
+/********        SUBSECTION CONTAINER     ***********/
+.cv .section.subsection-container{
+	border-radius:0px;
+	margin-top: -35px;
+}
+.cv .section.subsection-container.work-education{
+	margin-top: -3px;
+	padding-bottom: -27px;
+	padding-top: 0;
+}
+
+
+/****************************************************/
+/********          SECTIONS HOVER          **********/
+
+
+.section-empty-hover-bg-border{
+	background-color: @empty-section-hover-color;
+	border-color: transparent;
+}
+
+
+/* .cv .section .subsection.foreign-language-skills:hover, */
+
+
+.ui-sortable .is-being-dragged:hover {
+	border: none;
+	background: none!important;
+	menu.section.manage,
+	.sortable_placeholder {
+		display: none!important;
+	}
+}
+
+.empty-section-img-mixin{
+	span {
+		display: block;
+		color: @clickToAdd-orange;
+		font-weight: bold;
+		font-size:14px;
+		line-height: normal;
+		margin-left: 3px;
+	}
+}
+
+.empty-section-normal-div-mixin{
+	.empty-section-img-mixin;
+	margin-left: 2px;
+}
+.empty-section-hover-div-mixin{
+	.empty-section-img-mixin;
+	span {
+		color: @middle-blue;
+	}
+}
+.empty-section-add-button-span-mixin(@color , @pos){
+	span {
+		display: inline-block;
+		color: @orange-dark;
+		font-weight: bold;
+		font-size:14px;
+		line-height: normal;
+		transition: none;
+		text-align: left;
+		border: none;
+		vertical-align: bottom;
+		&.img-placeholder{
+			font-size:20px;
+			&:before{
+				content: "\e90b";
+				font-family: "europass-application" !important;
+				font-size: 18px;
+				font-weight: 400;
+				color:@orange-dark;
+				margin-right:5px;
+			}
+		}
+	}
+}
+.cl-empty-div-add-mixin {
+	background-position: @cl-add-button-left-padding 0;
+	margin-top: 1.2rem;
+	padding-left: @cl-add-button-left-padding;
+	text-align: left;
+	>span {
+		padding-left: 20.5px;
+	}
+}
+
+.button-opens-modal-form-empty-mixin {
+	.empty-section-add-button-span-mixin(@clickToAdd-orange, 0);
+	margin: 0 0 0 -0.2rem;
+	padding: @compose-section-padding;
+	padding-right: 0;
+	padding-left: @cv-headings-width + @cv-section-label-right-padding;
+	width: 100%;
+	text-align: left;
+}
+
+.hover-effects-override-mixin {
+	background-color: transparent;
+	border-color: transparent;
+	//	border-color: inherit;
+}
+
+
+
+/*
+.cv .section .subsection.foreign-language-skills.empty:hover,
+.cv .section .subsection.foreign-language-skills.empty.tap-hover
+{
+	.section-empty-hover-bg-border;
+	cursor: pointer;
+}*/
+
+
+
+
+/***************************************************/
+/********          DEFAULT VALUES         **********/
+.cv-span-dv,
+.compose  span.default-value {
+	font-weignt:normal;
+	color:@wg-medium-grey;
+}
+
+/***************************************************/
+/********          CLICK TO ADD         **********/
+
+
+
+
+
+@subsection-container-button-width: 65%;
+
+
+
+
+/*!** When the list is EMPTY the button is ORANGE! **!
+.cv-section-subsection-button-hover,
+.cv .section.subsection-container li.compose-list button.opens-modal-form.add:hover,
+.cv dl.subsection.foreign-language-skills button.opens-modal-form.add:hover,
+.cv dl.subsection.foreign-language-skills:hover > dd.value > button.opens-modal-form.add,
+button.opens-modal-form.add:hover,button.opens-modal-form.add.tap-hover,
+.cv .section.subsection-container button.opens-modal-form.add.tap-hover
+{
+	.empty-section-add-button-span-mixin(@middle-blue, -21px);
+}*/
+
+/*.section.item.opens-modal-form.personal{
+    margin-bottom: -10px;
+}*/
+
+
+
+/***************************************************/
+/********          SWITCH BUTTONS        **********/
+
+.section.personal {
+	button.names.switch {
+		background:url("@{img-base-url}sprites/switch_names.png@{img-suffix-url}${project.version}") no-repeat scroll 5px -17px transparent;
+		border:0;
+		color: transparent;
+		width: 33px;
+		height:17px;
+		overflow: visible; /*vpol added so that tooltips can be displayed in IE*/
+		display: inline-block;
+		vertical-align: bottom;
+		&:hover,&.tap-hover{
+			cursor: pointer;
+			background:url("@{img-base-url}sprites/switch_names.png@{img-suffix-url}${project.version}") no-repeat scroll 5px 0px transparent;
+		}
+	}
+}
+
+
+/***************************************************
+ ***************************************************
+ *****            DRAG AND DROP                 *****
+ ***************************************************
+ ***************************************************/
+.sortable_placeholder {
+	display: none;
+	left: 3px;
+	position: absolute;
+	top: 2px;
+	cursor: move;
+	background-image: url('@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}');
+	background-repeat:  no-repeat;
+	background-position: 15px -236px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	width:51px;
+	height: 28px;
+	text-indent: -9999px;
+	z-index: 8000;
+	text-align: left;
+}
+
+.sortable_placeholder {
+	&:hover,&.tap-hover {
+		background-position: 15px -276px;
+		/*		background-color: @bright-orange;*/
+	}
+}
+
+.section > ol.compose-list > li.list-item,
+ol.compose-list > li.list-item{
+	&:hover,&.tap-hover{
+		.sortable_placeholder:not(.list-item-sortable) {
+			display: inline-block;
+		}
+	}
+}
+
+/****** Effect for the white space as the item is being dragged ******/
+.draggable-item-overlay-bg( @startClr, @opacityLvl ){
+	background:linear-gradient(bottom, @startClr, @opacityLvl);
+	background:-o-linear-gradient(bottom, @startClr, @opacityLvl);
+	background:-moz-linear-gradient(bottom, @startClr, @opacityLvl);
+	background:-ms-linear-gradient(bottom, @startClr, @opacityLvl);
+	background:-webkit-linear-gradient(bottom, @startClr, @opacityLvl);
+	background:-webkit-gradient(linear, left bottom, left top, from(@startClr), to(@opacityLvl));
+	border: 1px solid @bright-orange;
+}
+.draggable-item-overlay {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 100;
+	.draggable-item-overlay-bg( white, rgba(255,255,255,0.5));
+}
+
+.compose .current-drag {
+	background-color: @white;
+	opacity: 1;
+
+	.draggable-item-overlay  {
+
+		.draggable-item-overlay-bg( @bright-light-blue, rgba(255,255,255,0.5))!important;
+		border: 1px solid @bright-blue !important;
+		/*rgba(240,250,254,0.5*/
+	}
+
+}
+
+.compose .draggable-item-overlay:not(.current-drag) {
+	.draggable-item-overlay-bg( @not-empty-section-hover-clr, rgba(255,255,255,0.4));
+}
+
+.draggable-item-on-re-ordering{
+	border: 2px solid @bright-blue;
+	background: white;
+}
+
+.item-re-ordering{
+	.draggable-item-on-re-ordering;
+	background-color: @very-very-light-blue;
+	border-style:dashed;
+	height: 80px;
+	margin: 40px 32px;
+}
+
+.empty-item-reorder {
+	.elp-left-section-no-border;
+	background: none repeat scroll 0 0 @white;
+}
+
+
+.item-re-ordering > span,
+.table-item-re-ordering > span,
+.esp-item-re-ordering > span {
+	display:block;
+	font-size: 14px;
+	color: @bright-blue;
+	font-weight: bold;
+	line-height: 15px;
+	position: relative;
+	text-align: center;
+	width: auto;
+	top: 45%;
+}
+
+
+.table-item-re-ordering {
+	border: 2px dashed @bright-orange !important;
+	background: white;
+	padding: 8px;
+	max-height: 80px;
+	> span {
+		color: @bright-orange;
+
+	}
+}
+
+.cv .table-item-re-ordering{
+	border-radius: @section-button-avg-radius;
+}
+
+.esp-item-re-ordering {
+	.draggable-item-on-re-ordering;
+	width: @esp-a4-item-width;
+	height: @esp-a4-item-height;
+	display: inline-block;
+}
+
+/***************************************************/
+/*****          Personal Information           *****/
+/***********************************************/
+
+/**********************************************/
+
+
+/***********************************/
+/***** Content within Lists ********/
+
+.cv ol.compose-list > li.compose-list > dd.content-label {
+	color: @middle-blue;
+	text-align: right;
+
+	position: absolute;
+}
+
+
+/***********************************/
+/***** Menu (Delete/Attach) ********/
+
+
+
+
+
+menu.section.manage > .edit-button.extra,
+menu.subsection.manage > .edit-button.extra{
+	border-radius: 0;
+}
+
+menu.section.manage.esp-thumb ,
+menu.subsection.manage.esp-thumb  {
+	border: none;
+	background: transparent;
+	position: absolute;
+	top: -8px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+menu.section.manage.esp-thumb ,
+menu.subsection.manage.esp-thumb  {
+	font-size:0px;
+}
+menu.section.manage.delete,
+menu.subsection.manage.delete {
+	right: 5px;
+}
+menu.section.manage.view,
+menu.subsection.manage.view {
+	left: 5px;
+}
+menu.subsection.manage button,
+menu.section.manage button{
+	display: inline-block;
+	/* override the user agent(Chrome) styles */
+	margin-right: 0rem !important;
+	/*remove the default inline spacing */
+	margin-left: -0.25rem;
+}
+
+
+
+.cv.compose menu.section.manage button:last-child,
+.cv.compose menu.subsection.manage button:last-child{
+	border-radius: 0 @button-small-radius 0 0 !important;
+}
+
+
+
+
+.menu-buttons-mixin-img-position(@imgpos){
+	background-position: center @imgpos;
+}
+
+.menu-buttons-mixin-img-position-hover(@imgpos){
+	background-position: center @imgpos;
+}
+.menu-buttons-mixin(@imgpos, @imgposhover){
+	background-image: url('@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}');
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	width: 2.2rem;
+	height: 2.25rem;
+	position: relative;
+	.menu-buttons-mixin-img-position(@imgpos);
+	background-repeat: no-repeat;
+	&:hover,&.tap-hover{
+		background-color: @bright-orange;
+		background-image: url('@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}');
+		.menu-buttons-mixin-img-position-hover(@imgposhover);
+	}
+}
+
+menu.subsection.manage a.view,
+menu.section.manage a.view{
+	/*.menu-buttons-mixin(-312px, -352px);*/
+	.menu-buttons-mixin(0px, 0px);
+}
+
+
+
+
+/***** attachment indication ***********/
+
+aside.steps .see-attachments {
+	position: relative;
+}
+em.number-of-attachments{
+	background-color: #58AADF;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	color: #FFF;
+	text-style:normal;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 16px;
+	text-align:center;
+	position:absolute;
+	left: 140px;
+	top:7px;
+	display: block;
+	padding: 1px 0 0 1px;
+}
+em.number-of-attachments-placeholder{
+	background-color:none;
+	border:none;
+	width: 16px;
+	height: 16px;
+	position:absolute;
+	line-height: 14px;
+	left: 140x;
+	top:7px;
+	display: block;
+}
+/* Number of Attachments indication in section */
+button.attach em.number-of-attachments {
+	left: 22px;
+	position: absolute;
+	top: -4px;
+	border-color: @very-dark-orange;
+	background-color: @dark-orange;
+	padding-top: 0px;
+	z-index: 999;
+}
+
+/******** menu appears *****************/
+.compose .section.item:hover menu,
+.compose .section.item.tap-hover menu,
+.compose .subsection.item:hover menu,
+.compose .subsection.item.tap-hover menu,
+.compose ol.compose-list > li.list-item:hover > menu
+.compose ol.compose-list > li.list-item.tap-hover > menu {
+	display: inline-block;
+}
+
+dl#Compose:LearnerInfo.Identification.section{
+	min-height:125px;
+}
+
+
+/****************************************************/
+/********             WORK/EDU           **********/
+.Address.minimal{
+	display: inline;
+	/* It seems as if there is a space in between, so remove some space */
+	position: relative;
+	left: -4px;
+}
+.cv  ol.compose-list > li.compose-list  dd.value.Title,
+.cv  ol.compose-list > li.compose-list  dd.value.Position {
+	color: @middle-blue;
+	font: @cv-prominent-content-font-size;
+}
+.work-education-experiences-area dl.work-education{
+	margin-bottom: 0px;
+	border: none;
+}
+
+
+.cv  ol.compose-list > li.compose-list  dd.value.Level{
+	text-align: right;
+	color: @mid-blue;
+}
+
+
+
+/****************************************************/
+
+/****************************************************/
+/********             OCCUPATION           **********/
+.cv > .section > .value.Occupation {
+	font-size: 17px;
+}
+
+.cv span.description{
+	display:inline-block;
+	margin-top:-12px;
+	font-size:17px;
+	position: absolute;
+}
+dd.value span.personal-statement {
+	font-size: 10pt;
+}
+
+/********         FOREIGN LANGUAGES        **********/
+
+@cv-item-horizontal-spacing: 10px;
+
+
+
+
+
+
+
+/******************************************************/
+/***************ICT (COMPUTER) SKILLS *****************/
+
+
+.cv .computer-skills table.ict-skills {
+
+	border-collapse: separate;
+	padding: 0px;
+}
+
+table.ict-skills th.sub-heading,
+table.ict-skills th .label {
+	color:@middle-blue;
+
+	text-align: right;
+
+	width: @cv-subheadings-width;
+	padding-right: @inline-block-space;
+}
+
+table.ict-skills > thead > tr {
+	color:@middle-blue;
+	.InformationProcessing,
+	.Communication,
+	.ContentCreation,
+	.Safety,
+	.ProblemSolving {
+		padding: 6px;
+		width: 8rem;
+		border-bottom: 1px solid @foreign-lang-border-color;
+		border-right: 1px solid @foreign-lang-border-color;
+		border-top: 0px solid transparent;
+	}
+}
+
+table.ict-skills > thead > tr:first-child {
+	text-transform:uppercase;
+}
+
+table.ict-skills > thead > tr > th span.title {
+	text-transform:none;
+}
+
+table.ict-skills th.menu-placeholder{
+	border-color: transparent;
+	padding: 0;
+}
+
+table.ict-skills th {
+	border: 1px solid @foreign-lang-border-color;
+	border-bottom: 2px solid @foreign-lang-border-color;
+	padding: 5px 3px 4px;
+}
+
+table.ict-skills th.no-display{
+	display:none;
+}
+
+table.ict-skills th.no-border {
+	border: 1px solid transparent;
+	padding: @language-heading-padding;
+	width: @cv-subheadings-width + @cv-section-label-right-padding;
+	border-right: 1px;
+}
+
+table.ict-skills tr.ict-self-evaluation td {
+	text-align: center;
+	padding: 6px 0px;
+	width: 8rem;
+	padding: 6px 0px 6px 0.5rem!important;
+	line-break: strict;
+}
+
+tr.ictSkills {
+	.compose-section-bg;
+}
+
+table.ict-skills tbody tr.ict-certificates td:not(.label):not(.menu-placeholder){
+	background-color: @bg-certificates;
+	border-top:1px solid @border-top-certificates;
+	border-bottom:1px solid @border-bot-certificates;
+	line-height: 30px;
+	text-align: center;
+}
+
+table.ict-skills tr.ictSkills table tr.ict-self-evaluation td,
+table.ict-skills tr.ictSkills table tr.ict-certificates td,
+table.ict-skills tr.ictSkillstable tr.ict-documentation td {
+	border-bottom: 1px solid @foreign-lang-border-color;
+	border-radius: 0;
+	padding: 6px 0;
+}
+
+table.ict-skills tr.ictSkills td:first-child {
+	border-radius: 4px 0 0 4px;
+	border-width: 1px 0 1px 1px;
+	padding: 0 2.3rem 0 0;
+}
+
+table.ict-skills tr.ictSkills td:last-child {
+	border-radius: 0 4px 4px 0;
+	border-width: 1px 1px 1px 0;
+	padding: 6px 0;
+}
+
+table.ict-skills tr.ictSkills > td {
+	border-color: transparent;
+	border-style: solid;
+	border-width: 1px 0;
+}
+
+tr.ict-documentation > td > div.attachment{
+	text-align:right;
+	padding-top: 8px;
+}
+
+table.ict-skills tr.computer table tr.ict-documentation:last-child td{
+	border-bottom-color: transparent;
+}
+
+table.ict-skills tr.ictSkills:hover > menu,
+table.ict-skills tr.ictSkills.tap-hover > menu {
+	display: inline-block;
+
+}
+/* table.ict-skills thead:hover + tbody, */
+/* table.ict-skills thead.tap-hover + tbody{ */
+
+/* 	menu.section.manage { */
+/* 	   display: none; */
+/* 	} */
+
+/* } */
+dl.computer-skills:hover tr.ictSkills:not(:hover),
+dl.computer-skills.tap-hover tr.ictSkills:not(.tap-hover) {
+
+	menu.section.manage {
+		display: none;
+	}
+
+}
+
+/* EWA - 1680 related specific rule, for not breaking the layout of the ict table after reaching a certain maximum limit */
+@media only screen and (max-width: 1750px ) {
+	table.ict-skills > thead > tr {
+		.InformationProcessing,
+		.Communication,
+		.ContentCreation,
+		.Safety,
+		.ProblemSolving {
+			-moz-hyphens: auto;
+			-ms-word-break: break-all;
+			word-break: break-word
+		}
+	}
+
+	table.ict-skills tr.ict-self-evaluation td {
+		-moz-hyphens: auto;
+		-ms-word-break: break-all;
+		word-break: break-word
+	}
+}
+
+
+
+
+/*******************************************/
+/************ ANNEXES **********************/
+dl[id$=ReferenceTo] li.compose-list {
+	min-height: 15px;
+}
+dl[id$=ReferenceTo] li.compose-list > a {
+	margin-left: 35%;
+	padding-left: 20px;
+	position:relative;
+}
+dl[id$=ReferenceTo] li.compose-list > a:before {
+	content: '\2022';
+	position:absolute;
+	left: 0px;
+	top:2px;
+}
+
+
+/****************************************************/
+
+
+
+/************* CV FOOTER ********************/
+
+.grey-transparent-bg-close-btn{
+	background: url("@{img-base-url}close_button_grey.png@{img-suffix-url}${project.version}") no-repeat 3px 4px transparent;
+	border: none;
+	width: 20px;
+	height: 20px;
+	color: transparent;
+}
+
+footer{clear:both;}
+
+footer > .document{
+	color: @cv-footer-font-color;
+	font-size: @cv-footer-font-size;
+	line-height: 16px;
+	padding: 20px 0 50px 0;
+	text-align: center;
+}
+
+/********************************************/
+/***** Rich text editors *****/
+/********************************************/
+.rich-content,
+.rich-editor,
+.description,
+.email-note
+{ .html-text; }
+
+fieldset .rich-editor{
+	.rich-content-elements;
+}
+
+fieldset .rich-editor li p{
+	margin: 0px;
+}
+.rich-content > .description {
+	margin-right:30px;
+}
+
+
+
+/***************************************************
+ ***************************************************
+ *****               ESP VIEW                  *****
+ ***************************************************
+ ***************************************************/
+
+.attachment_thumb_props{
+	width: @esp-a4-item-width !important;
+	height: @esp-a4-item-height !important;
+	border:1px solid @wg-light-grey;
+	display:inline-block !important;
+	-moz-box-shadow: 3px 3px @esp-thumbnail-shadow !important;
+	-webkit-box-shadow: 3px 3px @esp-thumbnail-shadow !important;
+	box-shadow: 3px 3px @esp-thumbnail-shadow !important;
+	padding: 0 !important;
+	margin: 0 0.7rem 1.1rem 0 !important;
+	border-radius: 0 !important;
+
+}
+
+.attachment_thumb_props_hover{
+
+	border:1px solid @middle-blue !important;
+	-moz-box-shadow: 3px 3px @middle-blue !important;
+	-webkit-box-shadow: 3px 3px @middle-blue !important;
+	box-shadow: 3px 3px @middle-blue !important;
+}
+
+.attachment_preview_thumb_props_hover{
+
+	background-color:@light-orange;
+
+	border:1px solid @thumbnail-border-orange !important;
+	-moz-box-shadow: 3px 3px @thumbnail-border-orange !important;
+	-webkit-box-shadow: 3px 3px @thumbnail-border-orange !important;
+	box-shadow: 3px 3px @thumbnail-border-orange !important;
+}
+
+
+
+
+/*             DOCUMENT FOOTER            */
+/******************************************/
+
+footer > .document {
+	padding: 36px 0 50px;
+}
+
+footer > .elp.document{
+	margin-left: @elp-horizontal-padding;
+}
+
+footer .document .document-copyright,
+footer .document .document-europass-link{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+
+footer .document .document-copyright{
+	padding-right: 5px;
+	margin-right: 5px;
+	border-right: 1px solid @cv-footer-font-color;
+}
+
+footer .document .document-europass-link{
+}
+footer .document .document-europass-link > a,
+footer .document .document-europass-link > a:link,
+footer .document .document-europass-link > a:visited,
+footer .document .document-europass-link > a:active,
+footer > div > span.elp.document-copyright > p > a,
+footer > div > span.elp.document-copyright > p > a:link,
+footer > div > span.elp.document-copyright > p > a:visited,
+footer > div > span.elp.document-copyright > p > a:active{
+	color: @cv-footer-font-color;
+	text-decoration: none;
+}
+footer .document .document-europass-link > a:hover,
+footer > div > span.elp.document-copyright > p > a:hover {
+	color: @cv-footer-font-color-ahover;
+}
+
+
+/***************************************************
+ ***************************************************
+ *****           TABLET SPECIFIC               *****
+ ***************************************************
+ ***************************************************/
+
+
+//Rule to prevent overlapping between the Organisation and the EQF level when a certain width is reached
+@media only screen and (max-width: 1440px ) {
+	div.work-education-experiences-area{
+		ol#List\:SkillsPassport\.LearnerInfo\.Education{
+			dd.Organisation {
+				width: 50%;
+			}
+		}
+	}
+}
+/** Ipad specific device setting, if used elsewhere add in _variables.less */
+@media only screen and (device-width:768px) {
+	/** Hide drag and drop item for tablets in cv sections
+	.section > ol.compose-list ,
+	ol.compose-list{
+		&> li.list-item{
+			&:hover,&.tap-hover{
+				.sortable_placeholder:not(.list-item-sortable) {
+					display: none;
+				}
+			}
+		}
+	}*/
+	// Padding fix for elp delete buttons
+	.elp menu.manage button.delete{
+		padding: 0 11px;
+	}
+
+	/** override :hover effects for ipad */
+	:not(.tap-hover){
+		&.section.item, &.subsection.item, &.section.item.empty , &.subsection.item.empty,
+		.cv .section .subsection.foreign-language-skills.empty&, .cv .section .subsection.foreign-language-skills&,
+		.cv .section .compose-list > li.list-item&, .cv .section.subsection-container li.compose-list button.opens-modal-form.add&,
+		.cv .section.subsection-container li.compose-list&,
+		table.languages tr.language.compose-list&
+			//(EWA1817 A4) .elp .foreign-languages-details table.linguistic-experiences.list-actions tr.menu-placeholder
+		{
+			&:hover{
+
+				.hover-effects-override-mixin;
+
+				>span,>span.img-placeholder {
+					.empty-section-add-button-span-mixin(@clickToAdd-orange, 0px) !important;
+				}
+
+				>td {
+					.hover-effects-override-mixin;
+
+					&.value,&.menu-placeholder {
+						background-color:white;
+					}
+					.dnd span.sortable_placeholder{
+						display: none !important;
+					}
+				}
+
+				/** Reset ESP attachment thumbnail on; :hover */
+				&.attachment_thumbnail.opens-modal-form:not(.tap-hover) {
+					menu.section.manage {
+						display:none;
+					}
+					//.1attachment_thumb_props !important;
+				}
+				button.opens-modal-form.add:not(.tap-hover) {
+
+					.hover-effects-override-mixin;
+					&:hover:not(.tap-hover) {
+						.hover-effects-override-mixin;
+						>span,>span.img-placeholder {
+							.empty-section-add-button-span-mixin(@clickToAdd-orange, 0px) !important;
+						}
+					}
+				}
+				div.empty.add:not(.Skills), .foreign-language-skills.empty .opens-modal-form.empty.add {
+					margin : 0px !important;
+					.empty-section-normal-div-mixin;
+					.empty-section-add-button-span-mixin(@clickToAdd-orange, 0px) !important;
+					>span:not(.img-placeholder) {
+						margin-left: 3px !important;
+						.empty-section-add-button-span-mixin(@clickToAdd-orange, 0px) !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and(max-width:@phone-width-limit){
+	footer{
+		padding-bottom:40px;
+	}
+	dl[id$=ReferenceTo] li.compose-list > a{
+		margin-left:10%;
+	}
+	.document-europass-link a{
+		color:@blue!important;
+	}
+}

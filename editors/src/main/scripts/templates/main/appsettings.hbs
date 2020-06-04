@@ -1,0 +1,49 @@
+<div id="AppSettingsForm" class="overlay">
+	<div class="appsettings-info" style="display:none">
+			<button class="close" style="display:none">Close</button>
+			<div class="ui-settings-area drawer" style="display:none">
+			     <span class="heading">{{get_text "gui.appsettings.drawer.heading" group="GuiLabel"}}</span>
+                 <fieldset class="include-europass-logo settings-options">
+                 <section class="application-choice" id="include-logo-options">
+                 <span class="selection-label">{{get_text "ApplicationSettings.Include.Logo.Label" group="GuiLabel"}} </span>
+                 <span class="selection-switch">
+                 <fieldset class="include-europass-logo-switch onoffswitch">
+				    <input
+						type="checkbox"
+						id="include-europass-logo-control"
+						class="include-europass-logo-control  onoffswitch-checkbox"
+						checked="checked"
+						name="onoffswitch"/> 
+					<label for="include-europass-logo-control">
+						<i></i>
+				    </label>
+		        </fieldset></span>
+                 </section>
+                 <div class="option-description">{{get_text "settings.include.europass.logo" group="Notification"}}</div>
+                 </fieldset>
+                 <div class="settings-modal-divider"></div>
+                 <fieldset class="store-data-locally settings-options">
+                 <section class="application-choice" id="local-storage-options">
+                 <span class="selection-label">{{get_text "store.data.locally" group="GuiLabel"}}</span>
+                 <span class="selection-switch">
+                 <fieldset class="store-data-locally-switch onoffswitch">
+				    <input
+					    type="checkbox"
+						id="store-data-locally-control"
+						class="store-data-locally-control  onoffswitch-checkbox"
+						checked="checked"
+						name="onoffswitch"/> 
+					<label for="store-data-locally-control">
+						<i></i>
+				    </label>
+		        </fieldset></span>
+                 </section>
+                 <div class="option-description">{{get_text "settings.store.data.locally" group="Notification"}}</div>
+                 </fieldset>
+                    <button type="button" class="button green mdl-btn"><span>{{get_text "Buttons.Done" group="GuiLabel"}}</span></button>
+			</div>
+			<div class="side-left" style="display:none">
+			       <button type="button" class="button green"><span>{{get_text "Buttons.Done" group="GuiLabel"}}</span></button>
+		    </div>
+	</div>
+</div>

@@ -1,0 +1,105 @@
+
+
+<div id="SendFeedbackForm" class="overlay">
+
+	<div class="sendfeedback-info" style="display:none">
+	
+		<button class="close contact" style="display:none">Close</button>
+		
+		<div class="ui-sendfeedback-area drawer" style="display:none">
+		
+			<span class="heading">{{get_text "gui.sendfeedback.drawer.heading" group="GuiLabel"}}</span>
+			
+			<section data-step-idx="1">
+				 <form id="FormSendFeedBack" class="main modalform isForm" tabindex="-1">
+					<legend class="notification warning">
+						<em>{{get_text "ContactUs.Warning" group="EditorHelp"}}</em>
+					</legend>
+					
+					<fieldset class="sender-email">
+						
+						<!-- Blank input used to prevent submition of form via enter key and also for implementing the Honeypot Catchpa 
+						(http://haacked.com/archive/2007/09/11/honeypot-captcha.aspx/)-->
+						<input type="text" style="display:none;" name="ContactInfo.Captcha" value="">
+						<label for="ContactInfo.Email">{{get_text "ContactInfo.Email.Input.Label"}}</label>
+						<input type="email" 
+								class="formfield help single with-placeholder Email"
+								title
+								name="ContactInfo.Email"
+								data-bind-name="ContactInfo.Email"
+								data-help-key="ContactInfo.Email"
+								value="{{ContactInfo.Email}}">
+						
+						<span name="ContactInfo.Email" class="help placeholder" style="display:none;" >
+							{{{get_text "ContactInfo.Email" group="EditorPlaceholder"}}}
+						</span>	
+					</fieldset>
+					<fieldset name="ContactInfo.Message" class="editor">
+						<label for="feedback-msg-textaera">{{get_text "ContactInfo.Message.Textarea.Label" group="GuiLabel"}}</label>
+						<textarea
+							cols="10"
+							id="feedback-msg-textaera"
+							class="no-rte single formfield noHelp with-placeholder ckeditor-box"
+							title
+							name="ContactInfo.Message"
+							data-help-key=""
+							>{{ContactInfoModel.Message}}</textarea>
+						<span name="ContactInfo.Message"  class="help placeholder" style="display:none;">
+							{{{get_text "ContactInfo.Message" group="EditorPlaceholder"}}}
+						</span>	
+					</fieldset>
+                    <section id="sendfeedback-notification-area" class="feedback-area"></section>
+                    <fieldset class="environmentInfo">
+						<input type="checkbox" 
+							class="formfield css-checkbox noHelp"
+							title
+							name="ContactInfo.EnvironmentInfo"
+							data-help-key=""
+							value="Yes"
+							id="send-browser-info"/ {{#if ContactInfo.IncludeInfo}}checked= true {{/if}}>
+						<label for="send-browser-info" class="css-label formfield-label">{{get_text "ContactInfo.EnvironmentInfo.Label" group="GuiLabel"}}</label>
+					</fieldset>
+					<menu label="Manage" class="buttons">
+						<div class="left btn-placeholder">
+							<button type="button" class="cancel button" form="FormSendFeedBack"><span>{{get_text "Buttons.Cancel" group="GuiLabel"}}</span></button>
+						</div>
+						<div class="right btn-placeholder">
+							<button type="button" class="button green validate next" form="FormSendFeedBack"><span>{{get_text "Buttons.Send" group="GuiLabel"}}</span></button>
+						</div>
+					</menu>
+				</form>
+			</section>
+			
+			<section data-step-idx="2" class="hidden">
+					<legend class="notification info">
+						<em>{{get_text "ContactInfo.Email.NoReply.Alert" group="EditorHelp"}}</em>
+					</legend>
+					<menu label="Manage" class="buttons">
+						<div class="left btn-placeholder">
+							<button type="button" class="previous blue" form="FormSendFeedBack"><span>{{get_text "Buttons.Previous" group="GuiLabel"}}</span></button>
+						</div>
+						<div class="right btn-placeholder">
+							<button type="button" class="button green sendmail" form="FormSendFeedBack"><span>{{get_text "Buttons.Send.Anyway" group="GuiLabel"}}</span></button>
+						</div>
+					</menu>
+			</section>
+			<section id="sendfeedback-notification-area" class="feedback-area"></section>
+			<section data-step-idx="3" class="hidden">
+				<section class="success">
+					<menu label="Manage" class="buttons">
+						<div class="center btn-placeholder">
+							<button type="button" class="green return" form="FormSendFeedBack"><span>{{get_text "Buttons.Return" group="GuiLabel"}}</span></button>
+						</div>
+					</menu>
+				</section>
+			</section>
+			
+			<section class="feedback-email">
+				<span>{{get_text "Cedefop.Feedback.Email.Info" group="GuiLabel"}}&nbsp;{{#obfuscation . group="GuiLabel" nlsKey="Cedefop.Feedback.Email" titleKey="Cedefop.Feedback.Email" titleGroup="GuiLabel"}}{{{.}}}{{/obfuscation}}</span>
+			</section>
+			
+		</div>
+		
+	</div>
+	
+</div>

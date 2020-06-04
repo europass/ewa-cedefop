@@ -1,0 +1,58 @@
+.rich-content-paragraph-element{
+  line-height: 1.4rem;
+  padding: 2px 0px 19px;
+  margin: 0px 0xp 12px 0px;
+}
+
+.rich-content-elements{
+  div:not(.mainbody):not(.tooltip):not(.empty), :not(div.tooltip){
+    .rich-content-paragraph-element;
+  }
+  br{
+    .rich-content-paragraph-element;
+  }
+  p{
+    .rich-content-paragraph-element;
+
+    &.indent1{
+      margin-left: 20px;
+      margin-bottom: 0px !important;
+    }
+    &.indent2{
+      margin-left: 40px;
+      margin-bottom: 0px !important;
+    }
+    &.indent3{
+      margin-left: 60px;
+      margin-bottom: 0px !important;
+    }
+    &.align-justify {
+      text-align: justify;
+    }
+    &:last-of-type{
+      padding: 2px 0;
+    }
+  }
+  blockquote{
+    .rich-content-paragraph-element;
+    margin-left: 2em !important;
+  }
+}
+
+.cv.compose .rich-content.value p{
+  line-height:1.4;
+}
+
+.rich-content.rich-content ul li{
+  margin-left:20px;
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .rich-content div:not(.mainbody):not(.tooltip):not(.empty), .rich-editor div:not(.mainbody):not(.tooltip):not(.empty), .description div:not(.mainbody):not(.tooltip):not(.empty), .email-note div:not(.mainbody):not(.tooltip):not(.empty), .rich-content :not(div.tooltip), .rich-editor :not(div.tooltip), .description :not(div.tooltip), .email-note :not(div.tooltip){
+    padding:2px 0 0;
+  }
+}

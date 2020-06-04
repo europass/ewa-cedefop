@@ -1,0 +1,49 @@
+
+/*****             ASIDE LEFT                  *****/
+
+#aside-left-default {
+  background: @blue-medium;
+  height: 100%;
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    z-index: 1001;
+    width: 2*@aside-left-width;
+    position: fixed;
+    top: 0;
+    left: -2*@aside-left-width;
+  }
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    width: @aside-left-width;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 600px;
+  }
+}
+
+
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  #aside-left-default {
+    top:50px;
+    width:100%;
+    left:-100%;
+    height: ~"calc(100% - 50px)";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

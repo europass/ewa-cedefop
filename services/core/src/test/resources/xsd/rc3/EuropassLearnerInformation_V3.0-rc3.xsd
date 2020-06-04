@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:nace="http://europass.cedefop.europa.eu/NACE" 
+	xmlns:isced="http://europass.cedefop.europa.eu/ISCED/97" 
+	xmlns:isco88com="http://europass.cedefop.europa.eu/ISCO/88/COM" 
+	xmlns:driving="http://europass.cedefop.europa.eu/EUDriving" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2010
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	<xsd:import namespace="http://europass.cedefop.europa.eu/NACE" schemaLocation="http://europass.cedefop.europa.eu/xml/resources/NACE_COM.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The NACE namespace defines a list of business sectors codes, which are used to describe the information of a work experience.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://europass.cedefop.europa.eu/ISCED/97" schemaLocation="http://europass.cedefop.europa.eu/xml/resources/ISCED97.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The ISCED namespace defines a list of educational field and educational level codes, which are used to describe the information of an educational experience.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://europass.cedefop.europa.eu/EUDriving" schemaLocation="http://europass.cedefop.europa.eu/xml/resources/EUDrivinglicence.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The EUDriving namespace defines a list of driving licence codes, which are used to describe the information of a driving licence.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:include schemaLocation="EuropassISOCountries_V1.3.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "ISOCountries" schema defines the list of country codes that may appear in the Europass XML documents. 
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	<xsd:include schemaLocation="EuropassISOLanguages_V1.3.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "ISOLanguages" schema defines the list of language codes that may appear in the Europass XML documents.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	<xsd:include schemaLocation="EuropassNationalities_V1.3.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "EuropassNationalities" schema defines the list of nationality codes that may appear in the Europass XML documents. The code of each nationality matches the coresponding coutnry's code.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	<xsd:include schemaLocation="EuropassISCO_88_COM_V1.3.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "ISCO 88 COM " schema defines the list of occupation field codes that are used to describe the information of a work experience.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	
+	
+	<xsd:complexType name="LearnerInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a sequence of elements that fully describe a Europass XML document.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Identification" type="IdentificationType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ProfileSummary" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains a summary of the individual's profile, main achievements and goals. It is optional.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Occupation" type="OccupationalFieldType" minOccurs="0" maxOccurs="1"/>
+			<!--  Experiences -->
+			<xsd:element name="WorkExperienceList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="WorkExperience" type="WorkExperienceType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="EducationList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Education" type="EducationalExperienceType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Skills -->
+			<xsd:element name="Skills" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Linguistic" type="LinguisticSkillType" minOccurs="0"/>
+						<xsd:element name="Communication" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Organisational" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="JobRelated" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Computer" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Driving" type="DrivingSkillType" minOccurs="0"/>
+						<xsd:element name="Other" type="GenericSkillType" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Achievements -->
+			<xsd:element name="AchievementList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Achievement" type="AchievementType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>	
+			</xsd:element>
+			<!-- Achievements -->
+			<xsd:element name="Documentation" type="DocumentationType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--  PERSONAL INFORMATION -->
+	
+	<xsd:complexType name="IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains the personal information of the individual, which includes at least the name, and optionally contact information, demographics and photo.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PersonName" type="PersonNameType"/>
+			<xsd:element name="ContactInfo" type="ContactInfoType" minOccurs="0"/>
+			<xsd:element name="Demographics" type="DemographicsType" minOccurs="0"/>
+			<xsd:element name="Photo" type="PhotoDataType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Person name Information -->
+	<xsd:complexType name="PersonNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Describes the name of a person. Consists of a first-name and surname. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FirstName" type="xsd:string"/>
+			<xsd:element name="Surname" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Contact Information -->
+	<xsd:complexType name="ContactInfoType">
+		<xsd:sequence>
+			<xsd:element name="Address" type="ContactAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Email" type="ContactEmailType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="TelephoneList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Telephone" type="TelephoneType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="WebsiteList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Website" type="WebsiteType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="InstantMessagingList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="InstantMessaging" type="InstantMessagingType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ContactMethodList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ContactMethod" type="ContactMethodType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactMethodType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains information about the available contact methods for the individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Contact" minOccurs="1" maxOccurs="1" type="xsd:anyType"/>
+			<xsd:element name="Use" minOccurs="0" maxOccurs="1" type="LabelType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Defines the use of the contact method. This might be different depending on the contact method chosen. Also it might be absent, as for example is the case for the Contact Addess Type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TelephoneType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+					<xsd:element name="Use" minOccurs="1" maxOccurs="1" type="TelephoneUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WebsiteType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" type="xsd:anyURI"/>
+					<xsd:element name="Use" minOccurs="1" maxOccurs="1" type="WebsiteUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="InstantMessagingType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" type="xsd:string"/>
+					<xsd:element name="Use" minOccurs="1" maxOccurs="1" type="InstantMessagingUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ContactEmailType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines the email address of an individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:pattern value="[^@]+@[^\.]+\..+">
+									<xsd:annotation>
+										<xsd:documentation xml:lang="en">
+											Pattern to accept text formatted as email address.
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:pattern>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="0" type="LabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ContactAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines the contact address of an individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" type="AddressInfoType"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="0" type="LabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Demographics Information -->
+	<xsd:complexType name="DemographicsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains demographics-related information about the individual. It includes the birthdate, gender and list of nationalities.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Birthdate" type="DateType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The date of birth of the individual. According to its type, the Birthdate element has no content and must have at least a year attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Gender" type="GenderLabelType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The gender is described by one of M or F, which correspond to male, female and non specified accordingly. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NationalityList" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Nationality" type="NationalityType" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									Defines a nationality. The nationality is described by a code and is a text only element. E.g. code: DE, label: German.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- EXPERIENCES -->
+	<xsd:complexType name="ExperienceListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a list of Experiences.  
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Experience" type="ExperienceType" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ExperienceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines the information describing an Experience. An Experience contains information about the period the experience took place and an optional free text description of the experience.  
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Period" type="PeriodType"/>
+			<xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Documentation" minOccurs="0" maxOccurs="1" type="DocumentationType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WorkExperienceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the generic ExperienceType to include information about a work experience. 
+				Contains information about the period the experience took place and the title of the position, as well as optionally the activities/ tasks and information of the employer. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ExperienceType">
+				<xsd:sequence>
+					<xsd:element name="Position" type="OccupationalFieldType"/>
+					<xsd:element name="Activities" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="Employer" type="EmployerType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="EducationalExperienceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the generic ExperienceType to include information about a learning achievement or a training period. 
+				Contains information about the period the learning experience took place and the awarded title, as well as optionally information about the skills acquired, the organisation providing the education, the educational field and level. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ExperienceType">
+				<xsd:sequence>
+					<xsd:element name="Title" type="xsd:string"/>
+					<xsd:element name="Activities" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="Organisation" type="OrganisationType" minOccurs="0"/>
+					<xsd:element name="Level" type="EducationalLevelType" minOccurs="0"/>
+					<xsd:element name="Field" type="EducationalFieldType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<!-- Organisation -->
+	<xsd:complexType name="OrganisationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an abstract organisation type. An organisation is generally described by a name and an address. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="ContactInfo" type="OrganisationalContactInfoType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Contact Information of Organisations-->
+	<xsd:complexType name="OrganisationalContactInfoType">
+		<xsd:sequence>
+			<xsd:element name="Address" type="ContactAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Website" type="OrganisationalWebsiteType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrganisationalWebsiteType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" type="xsd:anyURI"/>
+					<xsd:element name="Use" minOccurs="1" maxOccurs="1">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="LabelType">
+									<xsd:sequence>
+										<xsd:element name="Code" minOccurs="0" type="xsd:string" fixed="business"/>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="EmployerType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an organisation providing employment by extending the abstract organisation type to include information about the business sector the company belongs to.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="OrganisationType">
+				<xsd:sequence>
+					<xsd:element name="Sector" type="BusinesSectorType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<!-- SKILLS -->
+	<xsd:complexType name="SkillType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a skill. A Skill has a description and may be accompanied by sutiable documentation.
+				Morever a Skill may be acquired during one or more experience periods, and be verified by one or more certificates
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Description" type="xsd:anyType" minOccurs="1"/>
+			<xsd:element name="ProficiencyLevel" type="xsd:anyType" minOccurs="0"/>
+			<xsd:element name="AcquiredDuring" type="ExperienceListType" minOccurs="0"/>
+			<xsd:element name="VerifiedBy" type="CertificateListType" minOccurs="0"/>
+			<xsd:element name="Documentation" type="DocumentationType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GenericSkillType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a generic skill, which is modelled with one unstructured (free text) Description element.
+				It may also accept Documentation information.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="SkillType">
+				<xsd:sequence>
+					<xsd:element name="Description" type="xsd:string" minOccurs="1"/>
+					<xsd:element name="Documentation" type="DocumentationType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DrivingSkillType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a skill, the description of which is a driving category.
+				Note that a reference to an attachment may also be added.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="SkillType">
+				<xsd:sequence>
+					<xsd:element name="Description" minOccurs="1" maxOccurs="1" >
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Licence" type="driving:drivinglicence" minOccurs="1" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Documentation" type="DocumentationType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LinguisticSkillType">
+		<xsd:sequence>
+			<xsd:element name="MotherTongueList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MotherTongue" type="MotherTongueSkillType" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ForeignLanguageList" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ForeignLanguage" type="ForeignLanguageSkillType" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="MotherTongueSkillType">
+		<xsd:complexContent>
+			<xsd:restriction base="SkillType">
+				<xsd:sequence>
+					<xsd:element name="Description" type="MotherLanguageType" minOccurs="1"/>
+					<xsd:element name="Documentation" type="DocumentationType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ForeignLanguageSkillType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the abstract foreign language type by adding three elements that describe the level of knowledge of the language and related linguistic diplomas and/or experiences. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="SkillType">
+				<xsd:sequence>
+					<xsd:element name="Description" type="ForeignLanguageType" minOccurs="1"/>
+					<xsd:element name="ProficiencyLevel" minOccurs="0">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="xsd:anyType">
+									<xsd:sequence>
+										<xsd:element name="Listening" type="CEFLanguageLevelType"/>
+										<xsd:element name="Reading" type="CEFLanguageLevelType"/>
+										<xsd:element name="SpokenInteraction" type="CEFLanguageLevelType"/>
+										<xsd:element name="SpokenProduction" type="CEFLanguageLevelType"/>
+										<xsd:element name="Writing" type="CEFLanguageLevelType"/>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="AcquiredDuring" type="ExperienceListType" minOccurs="0"/>
+					<xsd:element name="VerifiedBy" minOccurs="0">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="CertificateListType">
+									<xsd:sequence>
+										<xsd:element name="Certificate" type="LinguisticCertificateType" minOccurs="1" maxOccurs="unbounded"/>
+									</xsd:sequence>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Documentation" type="DocumentationType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- Languages -->
+	<xsd:complexType name="LanguageType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an abstarct type to describe a language. Generally a language is described by a label which may include a code attribute. E.g. for the Greek language it would be code: el , label: Greek.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="xsd:language"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MotherLanguageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a mother language. The restriction is that a mother language cannot be an extinct language, or a language not used anymore, e.g. ancient Greek.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="motherCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The mother language code is defined in the included schema "EuropassISOLanguages". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ForeignLanguageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an abstract type for a foreign language.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="foreignCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The foreign language code is defined in the included schema "EuropassISOLanguages". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<!-- Certificates -->
+	<xsd:complexType name="CertificateListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a list of Certificates.  
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Certificate" type="CertificateType" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CertificateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a generic type for a Certificate. A Certificate contains information about the title name, the awarding body and the date of awarding. Optionally it contains information about the level that corresponds to this diploma.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Title" type="xsd:string"/>
+			<xsd:element name="AwardingBody" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Date" type="DateType" minOccurs="0"/>
+			<xsd:element name="Level" type="xsd:anyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LinguisticCertificateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a Linguistic Certificate by restricting the allowed type for the level element to by "CEFLanguageLevel"
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="CertificateType">
+				<xsd:sequence>
+					<xsd:element name="Title" type="xsd:string"/>
+					<xsd:element name="AwardingBody" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="Date" type="DateType" minOccurs="0"/>
+					<xsd:element name="Level" type="CEFLanguageLevelType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!-- ACHIEVEMENTS -->
+	<xsd:complexType name="AchievementType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Generic type to define an Achievement.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Title" type="AchievementTypeLabelType"/>
+			<xsd:element name="Description" type="xsd:string"/>
+			<xsd:element name="Documentation" minOccurs="0" maxOccurs="1" type="DocumentationType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Documentation -->
+	<xsd:complexType name="DocumentationType">
+		<xsd:sequence>
+			<xsd:element name="ReferenceTo" minOccurs="0" maxOccurs="unbounded" type="InternalReferenceType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Miscellaneous types -->
+	<xsd:simpleType name="CEFLanguageLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The CEF language level is comprised of one leter (either A, B or C) and one digit (either 1 or 2). E.g. A1, B2, C1. The levels are defined by the Common European Framework of Reference for Languages (CEF)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([A-C][12])?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Reusable types -->
+	
+	
+	
+	<xsd:complexType name="InternalReferenceType">
+		<xsd:attribute name="idref" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AddressInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an address which is described by the addressLine, usually referring to the residence's street and street number, the municipality, postal code and country.
+				The minimum required information is the Country.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="AddressLine" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="PostalCode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Municipality" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Country" type="CountryType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LabelType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Gender Types -->
+	<xsd:complexType name="GenderLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="M"/>
+								<xsd:enumeration value="F"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Achievement Types  -->
+	<xsd:complexType name="AchievementTypeLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="honors_awards"/>
+								<xsd:enumeration value="publications"/>
+								<xsd:enumeration value="projects"/>
+								<xsd:enumeration value="citations"/>
+								<xsd:enumeration value="memberships"/>
+								<xsd:enumeration value="conferences"/>
+								<xsd:enumeration value="seminars"/>
+								<xsd:enumeration value="workshops"/>
+								<xsd:enumeration value="references"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Telephone use  -->
+	<xsd:complexType name="TelephoneUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="home"/>
+								<xsd:enumeration value="work"/>
+								<xsd:enumeration value="mobile"/>
+								<xsd:enumeration value="fax"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Website use  -->
+	<xsd:complexType name="WebsiteUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="personal"/>
+								<xsd:enumeration value="business"/>
+								<xsd:enumeration value="blog"/>
+								<xsd:enumeration value="portfolio"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- InstantMessaging use  -->
+	<xsd:complexType name="InstantMessagingUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="gtalk"/>
+								<xsd:enumeration value="skype"/>
+								<xsd:enumeration value="icq"/>
+								<xsd:enumeration value="aim"/>
+								<xsd:enumeration value="msn"/>
+								<xsd:enumeration value="yahoo"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Nationality -->
+	<xsd:complexType name="NationalityType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a nationality. The nationality is described by a code and a label. E.g. code: FR, label: French.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="nationalityCountryCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Defines the country code type to which the nationality corresponds. The type is defined in the included schema "EuropassISOCountries". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Country -->
+	<xsd:complexType name="CountryType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a country. The country is described by a code and a label. E.g. code: FR, label: France.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="countryCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Defines the country code type. The type is defined in the included schema "EuropassISOCountries". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Occupation -->
+	<xsd:complexType name="OccupationalFieldType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an occupational field. The occupational field is described by a code and a label. E.g. code: 41150, label: Secretary.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="isco88com-level5">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The occupational field code type is defined in the included schema "EuropassISCO_88_COM". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Business Sector -->
+	<xsd:complexType name="BusinesSectorType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a business sector. The business sector is described by a code and a label. E.g. code: P, label: Education.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="nace:sector-level1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The business sector code type is define in the imported schema of NACE. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Educational Level -->
+	<xsd:complexType name="EducationalLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an educational level. The educational level is described by a code and a label. E.g. code: 5, label: ISCED 5.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="isced:level">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The educational level code type is defined in the imported schema of ISCED97. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Educational Field -->
+	<xsd:complexType name="EducationalFieldType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an educational field. The educational field is described by a code and a label. E.g. code: 21, label: Arts.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="isced:field-level2">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The educational field code type is defined in the imported schema of ISCED97. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+		
+	<!-- Dates and Period -->
+	<xsd:complexType name="PeriodType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A period is comprised of three sub elements for the start and end dates of the period, as well as an idicator whether the specific period is current. 
+				The end date and the current indicator are optional.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="From" type="DateType"/>
+			<xsd:element name="To" type="DateType" minOccurs="0"/>
+			<xsd:element name="Current" type="xsd:boolean" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines date information, which consists of day, month and year.The date must include at least one year element.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="xsd:anyType">
+				<xsd:attribute name="day" type="xsd:gDay" use="optional"/>
+				<xsd:attribute name="month" type="xsd:gMonth" use="optional"/>
+				<xsd:attribute name="year" type="xsd:gYear" use="required"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- Attachments and Photo -->
+	<xsd:complexType name="FileDataType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Data" type="BinaryDataType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PhotoDataType">
+		<xsd:complexContent>
+			<xsd:restriction base="FileDataType">
+				<xsd:sequence>
+					<xsd:element name="Data" type="PhotoBinaryDataType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="BinaryDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a file supplied by the individual encoded according to based64.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:base64Binary">
+				<xsd:attribute name="mimeType" use="required" type="MimeTypeEnumeration"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="MimeTypeEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="image/jpeg"/>
+			<xsd:enumeration value="image/png"/>
+			<xsd:enumeration value="application/pdf"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ImageMimeTypeEnumeration">
+		<xsd:restriction base="MimeTypeEnumeration">
+			<xsd:enumeration value="image/jpeg"/>
+			<xsd:enumeration value="image/png"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+	
+	<xsd:complexType name="PhotoBinaryDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a photograph supplied by the individual encoded according to based64.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="BinaryDataType">
+				<xsd:attribute name="mimeType" use="required" type="ImageMimeTypeEnumeration"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

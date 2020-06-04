@@ -1,0 +1,55 @@
+
+<div class="attachment">
+	<span class="icon"/>
+	{{> templates/attachment/justuploaded}}
+</div>		
+
+{{#if Id}}
+
+<div class="menu-prompt">
+	<span class="edit-icon"></span>
+</div>
+<div class="menu-options">
+	<div class="arrow">
+		<div class="inner">
+			<a  class="option linked toggle-expansion more"
+				data-expansion-effect="fade"
+				data-rel-subform="{{subsection}}:SubForm:Attachment.{{Id}}.ViewLinked">
+				{{get_text "Attachment.Linked.Sections" group="EditorHelp"}}
+			</a>
+			<a  class="option rename toggle-expansion more""
+				data-expansion-effect="fade"
+				data-rel-subform="{{subsection}}:SubForm:Attachment.{{Id}}.Rename">
+				{{get_text "Rename.Attachment" group="EditorHelp"}}
+			</a>
+			{{#if_eq subsection compare="Add"}}
+			<a  class="option delete toggle-expansion"
+				data-expansion-effect="fade"
+				data-rel-subform="{{subsection}}:SubForm:Attachment.{{Id}}.DeleteConfirm">
+				{{get_text "Delete.Attachment" group="EditorHelp"}}
+			</a>
+			{{/if_eq}}
+		</div>
+	</div>
+</div>
+
+<div id="{{subsection}}:SubForm:Attachment.{{Id}}.ViewLinked" 
+	 class="attachment-action attachment-linked" 
+	 data-rel-id="{{Id}}" 
+	 data-rel-index="{{index}}" 
+	 style="display:none"></div>
+
+<div id="{{subsection}}:SubForm:Attachment.{{Id}}.Rename" 
+	 class="attachment-action attachment-rename" 
+	 data-rel-id="{{Id}}" 
+	 data-rel-index="{{index}}" 
+	 style="display:none"></div>
+{{#if_eq subsection compare="Add"}}
+
+<div id="{{subsection}}:SubForm:Attachment.{{Id}}.DeleteConfirm" 
+	 class="attachment-action attachment-delete" 
+	 data-rel-id="{{Id}}" 
+	 data-rel-index="{{index}}" 
+	 style="display:none"></div>
+{{/if_eq}}
+{{/if}}

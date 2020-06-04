@@ -1,0 +1,749 @@
+/*** Export & Import - Modal  ***/
+
+//select
+@select-active-bg-color: #2F4A67;
+@select-bg-color:#EAEDF0;
+@select-icon-bg-color: #1093CB;
+//worning / message
+@worning-bg-color: #FEF1E9;
+@worning-span-text-color: #DD5116;
+//success - valid / message
+@success-bg-color: #CEF9CA;
+@success-span-text-color: #656565;
+@success-icon-text-color: #125C05;
+//invalid / message
+@invalid-bg-color: #FFCCCB;
+@invalid-text-color: #E40707;
+//heading
+@heading-number-bg-color: #307AB4;
+//Check Box
+@export-help-checkbox-border-color: #c45100;
+@export-check-box-color: #777777;
+
+/*** Export Modal  ***/
+//***********************************************************************************************
+
+
+//Modal style / only for export
+//----------------------------------------------------------------
+//Mobile close btn
+@media only screen and ( max-width: @tablet-width-limit ) {
+  .export.modal button.close:not(.message) {
+    position: fixed;
+    left: 7px;
+    top: 13px;
+    margin: 0;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    text-indent: 0;
+    opacity: 1;
+    line-height: 32px;
+    display: inline-block !important;
+    padding: 18px;
+    font-size: 0;
+    &:before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        content: "×";
+        font-size: 40px;
+        color: rgb(18, 146, 203);
+        line-height: 0.7;
+    }
+  }  
+}
+
+.export.modal .main {
+    label span {
+        pointer-events: none;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        padding: 10px 10px 10px 40px;
+    }
+    max-width: 1050px;
+    width: 100%;
+    padding-bottom: 30px;
+  .note {
+    width: 100%;
+    max-width: 920px;
+  }
+  #document-recipient-email-form {
+    margin-bottom: 0.5rem !important;
+    margin-top: 1em;
+    @media only screen and ( min-width: @desktop-width-limit ) {
+        margin-bottom: 5.5rem !important;
+        width: 80%;
+        label[for="document-recipient-email"] {
+            display: inline-block;
+            vertical-align: top;
+            width: 22%;
+            margin-top: 15px;
+        }
+        div.help.placeholding[name="Email"] {
+            display: inline-block;
+            vertical-align: top;
+            width: 70%;
+        }
+    }
+    //E-mail address invalid & valid / messages
+    span.validation-feedback {
+        display: inline-block;
+        left: 0;
+        bottom: 0;
+        border-radius: 4px;
+        background-position: 2% center;
+        background-repeat: no-repeat;
+        padding: 15px 70px;
+        margin-top: 30px;
+        color: @grey-dark-text-two;
+        position: relative;
+        font-size: 0.85rem;
+        &:before {
+            font-family: "europass-application" !important;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translatey(-50%);
+        }
+        @media only screen and ( min-width: @desktop-width-limit ) {
+            position: absolute;
+            left: 18%;
+            &:before {
+               left: 20px;
+            }
+        }
+    }
+    //invalid / messages only
+    span.validation-feedback.invalid {
+        background-color: @invalid-bg-color;
+        &:before {
+            content: "\e92f";
+            color: @invalid-text-color;
+            font-size: 30px;
+        }
+    }
+    span.validation-feedback.valid {
+        background-color: @success-bg-color;
+        &:before {
+            content: "\e928";
+            color: @success-icon-text-color;
+            font-size: 26px;
+        }   
+    }
+  }
+  //forms
+  #document-recipient-email-form input {
+    max-width: 420px;
+    @media only screen and ( min-width: @desktop-width-limit ) {
+        max-width: none;
+    }
+    font-size: 18px;
+  }
+  //Icons for export btns
+  .wizard-controls {
+    max-width: 920px;
+    position: relative;
+  }
+  .wizard-controls fieldset.step-permision {
+    
+    @media only screen and ( min-width: @tablet-width-limit ) {
+        float: left;
+        width: 66%;
+        margin-top: 1em;
+    }
+      p, b, a {
+      font-size: 13px;
+      }
+      p, b {
+      color: @grey-dark-text-two;
+      }
+      b {
+      font-weight: bold;
+      font-size: 16px;
+      }
+      //Check Box
+      label {
+        position: relative;
+        padding-left: 0;
+        color: @grey-dark-text-two;
+        &:before {
+            content: "";
+            border: 4px solid @export-help-checkbox-border-color;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            margin-right: 1em;
+            vertical-align: top;
+        }
+        &:after {
+            left: 7px;
+            top: 47%;
+        }
+      }
+  }
+  .wizard-controls button {
+    &.disabled {
+        cursor: not-allowed !important;
+    }
+    width: auto;
+    @media only screen and ( min-width: @desktop-width-limit ) {
+        float: right;
+        min-width: 20%;
+        max-width: 34%;
+
+    }
+    &:extend(.icon);
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    &:before {
+        font-weight: normal;
+        position: relative;
+        left: -20px;
+        font-size: 18px;
+        margin: -5px;
+        font-family: "europass-application" !important;
+        background: none;
+    }
+  }
+  //My Device
+  .wizard-controls button#download-button:before {
+    content: "\e938";
+  }
+  //Email
+  .wizard-controls button#email-button {
+    @media only screen and ( min-width: @desktop-width-limit ) {
+        position: absolute;
+        top: -7px;
+        right: 0px;
+        z-index: 99999999;
+    }
+  }
+  .wizard-controls button#email-button:before {
+        content: "\e937";
+  }
+  //dropbox
+  .wizard-controls button.dropbox:before {
+    content: "\e933";
+  }
+    //googledrive
+  .wizard-controls button.googledrive:before {
+    content: "\e92a";
+  }
+    //onedrive
+  .wizard-controls button.onedrive:before {
+    content: "\e92b";
+  }
+}
+.export.modal .side {
+ display: none !important; 
+}
+
+.export.modal {
+    //header
+    header:not(.main-modal-title) legend {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    //success message
+    .notification {
+        &.error {
+            background: @invalid-bg-color;
+            color: @invalid-text-color;
+        }
+        &.success {
+            background: @success-bg-color;
+            color: @success-span-text-color;
+        }
+        padding: 10px;
+        position: relative !important;
+        margin-top: 1em;
+        //close / success message
+        .close.message {
+            left: auto;
+            right: 10px;
+            background: none;
+            width: 30px;
+            height: 30px;
+            top: 6px;
+            display: block !important;
+            position: absolute !important;
+            //&:extend(.icon);
+            &:before {
+                content: "";
+                background-image: url(../images/sprites/close_small.png?version=5.0.68.1);
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                border: none;
+                width: 15px;
+                height: 15px;
+                position: absolute !important;
+                top: 6px;
+                right: 8px;
+                text-indent: 0;
+                opacity: 0.2;
+            }
+        }
+        .close.message:hover:before {
+            opacity: 0.4; 
+        }
+        .message-area {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    .error:before {
+        content: "\e92f";
+        color: @invalid-text-color;
+        display: inline-block;
+        position: relative !important;
+    }
+    .success:before {
+        content: "\e928";
+        color: @success-icon-text-color;
+        font-size: 26px;
+        font-family: "europass-application" !important;
+        transform: translatey(-50%);
+        display: inline-block;
+    }
+    //warning message
+    .note > .warning {
+        margin-bottom: 30px;
+        background: @msg-warning-bg;
+        border-radius: 4px;
+        @media only screen and ( max-width: @tablet-width-limit ) {
+            //padding-top: 10px;
+            //padding-bottom: 10px;
+        }
+        padding-top: 15px;
+        padding-bottom: 17px;
+        padding-left: 65px;
+        padding-right: 65px;
+        color: @grey-dark-text-two;
+        position: relative;
+
+        .icon {
+            display: inline-block;
+            margin-right: 20px;
+            padding-left: 25px;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            &:before {
+                //left: 20px;
+                font-size: 27px;
+            }
+        }
+
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0.85rem;
+            ul li {
+                font-size: 0.85rem;
+            }
+            span.warning {
+              font-weight: bold;
+              color: @worning-span-text-color;
+              margin-right: 10px;
+              font-size: 0.85rem;
+            } 
+        }
+    }
+}
+.export .wizard-step-4 {
+   max-width: 920px; 
+}
+.export #export-wizard-step-2, .export #export-wizard-step-3 {
+    border-bottom: 5px solid #f2f2f2;
+    border-bottom: 5px solid @select-bg-color;
+    max-width: 920px;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.wizard-step-1,
+.wizard-step-3 {
+    header legend:before {
+        content: "";
+        font-size: 18px;
+        z-index: 99;
+        background: @heading-number-bg-color;
+        padding: 7px 14px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        margin-right: 15px;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        header legend:before {
+          padding: 2px 9px;
+          margin-right: 8px; 
+        }
+    }
+}
+
+.wizard-step-1 header legend:before {
+    content: "1"
+}
+
+.wizard-step-3 header legend:before {
+    content: "2"
+}
+
+
+//Export Modal / checkbox & radio btn
+//--------------------------------------------------------------------
+form>div {
+    fieldset.export-checkbox {
+        @media only screen and ( max-width: @tablet-width-limit ) {
+            margin-right: 9px;
+            margin-bottom: 14px;
+        }
+        display: inline-block !important;
+        margin-right: 20px;
+        margin-bottom: 25px;
+
+        label {
+            &.disabled {
+                opacity: 0.5;
+                cursor: not-allowed !important;
+            }
+
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            @media only screen and ( max-width: @tablet-width-limit ) {
+                padding-left: 10px !important;
+                padding-right: 10px !important; 
+            }
+            border-radius: 10px;
+        }
+
+        label:before {
+            top: 0 !important;
+            right: -12px !important;
+            left: auto !important;
+            border-radius: 50%;
+            border: 2px solid transparent !important;
+            height: 27px !important;
+            width: 27px !important;
+        }
+
+        label:after {
+            left: auto !important;
+            right: -4px !important;
+            top: 0 !important;
+            color: @white  !important;
+        }
+
+
+        .environmentInfo label.css-label,
+        #Export_Option_Doc_ECV+label.css-label.css-label,
+        #Export_Option_Doc_ECL+label.css-label.css-label,
+        #Export_Option_Doc_ELP+label.css-label.css-label,
+        #Export_Option_Doc_ESP+label.css-label.css-label,
+        #Import_Option_Doc_ECL+label.css-label.css-label,
+        #Import_Option_Doc_REST+label.css-label.css-label,
+        #Import_Option_Doc_Confirm_ECL+label.css-label.css-label,
+        #Import_Option_Doc_Confirm_REST+label.css-label.css-label,
+        #Erase_Option_Doc_Confirm_ECL+label.css-label.css-label,
+        #Erase_Option_Doc_Confirm_ECV+label.css-label.css-label,
+        #Erase_Option_Doc_Confirm_ELP+label.css-label.css-label,
+        #Erase_Option_Doc_Confirm_ESP+label.css-label.css-label,
+        .reset-modal .feedback-area .formfield-label,
+        .ui-anpal-area .css-label.formfield-label {
+            color: @export-check-box-color;
+            @media only screen and ( max-width: @tablet-width-limit ) {
+                height: 40px;
+                font-size: 13px;
+            }
+            border: 1px solid @select-bg-color !important;
+            background: @select-bg-color !important;
+        }
+
+
+
+        input[type=checkbox].css-checkbox:checked:not(#send-browser-info)+label.css-label,
+        input[type=radio].css-checkbox:checked+label.css-label,
+        button.toggle-expansion.less,
+        button.toggle-expansion.less:hover {
+            background-color: @select-active-bg-color !important;
+            border: 1px solid @select-active-bg-color !important;
+            color: white !important;
+
+            .icon:before {
+                color: @white;
+                border-color: @white;
+            }
+        }
+
+
+
+
+        input[type=checkbox].css-checkbox:checked+label.css-label:before,
+        input[type=radio].css-checkbox:checked+label.css-label:before,
+        button.toggle-expansion.less:before,
+        button.toggle-expansion.less:hover:before {
+            background: @select-active-bg-color !important;
+            border: 2px solid @white  !important;
+            height: 27px !important;
+            width: 27px !important;
+            display: block !important;
+        }
+
+
+        button.toggle-expansion.less:after,
+        button.toggle-expansion.less:hover:after {
+            color: @white;
+            right: -6px !important;
+            display: block !important;
+        }
+
+    }
+}
+
+//Export Modal / radio btn only
+//--------------------------------------------------------------------
+form>div {
+
+    fieldset.export-checkbox {
+        input[type=radio].css-checkbox+label.css-label {
+            &:before {
+                background: transparent;
+                content: "";
+                position: absolute;
+                left: 32px;
+                top: 50%;
+                transform: translatey(-50%);
+            }
+
+            width: auto !important;
+            padding-top: 20px !important;
+            padding-bottom: 10px !important;
+            padding-left: 60px !important;
+            @media only screen and ( max-width: @tablet-width-limit ) {
+                padding-top: 8px !important;
+                padding-bottom: 0px !important;
+                padding-left: 35px !important;
+            }
+            background: @select-bg-color;
+            border: 1px solid @select-bg-color;
+            position: relative;
+            color: @export-check-box-color;
+            .title {
+                @media only screen and ( max-width: @tablet-width-limit ) {
+                    font-size: 13px !important;
+                }
+            }
+            .icon {
+                left: 24px !important;
+                @media only screen and ( max-width: @tablet-width-limit ) {
+                    left: 9px !important;
+                }
+                position: absolute;
+            }
+        }
+
+
+        input[type=checkbox].css-checkbox:checked+label.css-label:before,
+        input[type=radio].css-checkbox:checked+label.css-label:before {
+            background: @select-active-bg-color !important;
+            border: 2px solid @white !important;
+            height: 27px !important;
+            width: 27px !important;
+            display: block !important;
+        }
+    }
+
+    //general style for / icons
+    .file-format {
+      max-width: 920px;
+      &:extend(.icon);
+    }
+    .file-format .icon:before {
+        font-family: "europass-application" !important;
+        line-height: 30px;
+        color: @select-icon-bg-color;
+        font-size: 24px !important;
+    }
+    //pdf / icon
+    .file-format.pdf .icon:before {
+      content: "\e923";
+      color: #d90200;
+      border: 2px solid #d90200;
+      padding: 4px;
+      font-size: 15px !important;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        .file-format.pdf .icon:before {
+            font-size: 8px !important;
+        }
+    }
+    //word / icon
+    .file-format.word .icon:before {
+      content: "\e927";
+      color: #3262A1;
+      border: 2px solid #3262A1;
+      padding: 4px;
+      font-size: 15px !important;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        .file-format.word .icon:before {
+            font-size: 8px !important;
+        }
+    }
+    //odt(open-document) / icon
+    .file-format.odt .icon:before {
+      content: "\e925";
+      color: #1D86C9;
+      border: 2px solid #1D86C9;
+      padding: 4px;
+      font-size: 15px !important;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        .file-format.odt .icon:before {
+            font-size: 8px !important;
+        }
+    }
+    //xml / icon
+    .file-format.xml .icon:before {
+      content: "\e926";
+      color: #74A932;
+      border: 2px solid #74A932;
+      padding: 4px;
+      font-size: 15px !important;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        .file-format.xml .icon:before {
+            font-size: 8px !important;
+        }
+    }
+    //local(My device) / icon
+    .file-format.local .icon:before {
+      content: "\e938";
+    }
+    //email / icon
+    .file-format.email .icon:before {
+      content: "\e937";
+    }
+
+}
+
+//Expand Btn
+form>div fieldset.file-format {
+  p span {
+    cursor: pointer;
+    color: @heading-number-bg-color;
+    font-weight: bold;
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        font-size: 13px;
+    }
+  }
+  .show_more_document_formats {
+    background-color: white;
+    color: @grey-dark-text-two;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        font-size: 13px;
+        margin-top: 1.4em;   
+    }
+    span {
+        &:hover {
+          background-color: white;
+          text-decoration: underline;
+        }
+    }
+  }
+}
+
+
+//only for step 3 region / for mobile
+.wizard-step-3 .icon:before {
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        //font-size: 17px !important;
+    }
+}
+.wizard-step-3 .warning .icon:before {
+    @media only screen and ( max-width: @tablet-width-limit ) {
+        //font-size: 23px !important;
+    }
+}
+
+
+/*** Import Modal  ***/
+//***********************************************************************************************
+.export {
+    #import-wizard-step-2 header legend:before {
+        content: "2";
+        font-size: 18px;
+        z-index: 99;
+        background: @heading-number-bg-color;
+        padding: 7px 14px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        margin-right: 15px;
+    }
+    #import-wizard-step-1, 
+    #import-wizard-step-2 {
+        border-bottom: 5px solid #f2f2f2;
+        border-bottom: 5px solid @select-bg-color;
+        max-width: 920px;
+        padding-bottom: 0.2em;
+        margin-bottom: 1em;
+    }
+    #import-wizard-step-2 {
+      margin-bottom: 1.2em;  
+    }
+    form fieldset.import-info, .import-overwrite-option {
+        color: @grey-dark-text-two;
+        line-height: 1.6rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+    //Browse Btn
+    #import-local-file {
+        .button.upload.blue {
+            &.disabled {
+                cursor: not-allowed !important;
+            }
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+            margin-top: 7px;
+        }
+        .button.upload.blue > .title {
+            word-break: break-all;
+        }
+        .button.upload > span:before {
+            content: "\e905"; 
+        }
+        @media only screen and ( min-width: @desktop-width-limit ) {
+          float: right; 
+        }
+    }
+    form > div#import-wizard-step-1 .file-format.local .icon:before {
+        content: "\e905";
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Microsoft OneDrive Redirect</title>
+    </head>
+    <body>
+        <h1>OneDrive sign-in</h1>
+        <p>Please close this window.</p>
+    </body>
+    <script>
+        (function () {
+            var accessToken;
+            try {
+                var authResponse = window.location.hash.substring(1);
+                var authInfo = JSON.parse(
+                        '{' + authResponse.replace(/([^=]+)=([^&]+)&?/g, '"$1":"$2",').slice(0, -1) + '}',
+                        function (key, value) {
+                            return key === "" ? value : decodeURIComponent(value);
+                        });
+
+                accessToken = authInfo.access_token;
+                if (authResponse.indexOf('error=login_required') == 0) {
+                    accessToken = 'login_required';
+                }
+            } catch (error) {
+                accessToken = '';
+            }
+            if (window.opener != null) {
+                window.opener.document.cookie = "cloud-access-token=" + accessToken + ';path=/editors/';
+            } else {
+                window.parent.document.cookie = "cloud-access-token=" + accessToken + ';path=/editors/';
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            window.close();
+        })();
+    </script>
+</html>

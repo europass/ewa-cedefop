@@ -1,0 +1,308 @@
+#SendFeedbackForm {
+  *:not(.placeholder) {
+    color: @grey-dark-text-two;
+    font-size: 16px;
+  }
+  .sendfeedback-info {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 770px;
+    z-index: 1002;
+    font-size: 1 rem;
+    text-align: left;
+    .ui-sendfeedback-area {
+      .box-sizing;
+      /* Modified height from 90% for notification's visibility reasons */
+      height: 100%;
+      width: 90%;
+      padding: 30px 70px;
+      /* Making the vertical overflow hidden due to an unexpected scrollbar appearance during animation */
+      /*overflow-y: auto;*/
+      &.scrollable .viewport .overview {
+        width: 100% !important;
+      }
+      a {
+        background: none;
+        display: inline;
+        padding: 0;
+        color: @bright-blue;
+      }
+      label.css-label {
+        width: 91%;
+        text-transform: none;
+      }
+    }
+    .heading {
+      /* EWA-1829 */
+      font-size: 2rem;
+      //font-weight: 300;
+      display: inline-block;
+      margin: 10px 0 40px 0;
+    }
+    button.close.contact {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      right: -30px;
+    }
+    textarea {
+      .box-sizing;
+      height: 200px;
+      padding: @input-veritical-padding @input-horizontal-padding;
+      resize: none;
+      width: 100%;
+    }
+    input,
+    textarea {
+      font-size: 1.3rem;
+      color: @input-text-clr;
+    }
+    .editor .help.placeholding .help.placeholder {
+      top: 0;
+      height: auto;
+    }
+    legend.notification {
+      /*background-image: url("@{img-base-url}sprites/exclamation_mark.png@{img-suffix-url}${project.version}") no-repeat; */
+      /*background-position: 1rem center; */
+      //padding-left: 12%;
+      //padding-right: 0.8rem;
+      text-align: justify;
+      line-height: 18px;
+      width: 75%;
+      border-radius: 4px;
+      padding: 15px 70px;
+      @media screen and(max-width:@phone-width-limit) {
+        width: 70%;
+        &:before {
+          left: 20px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        padding-right: 30px;
+      }
+      @media screen and (max-width: 380px) {
+        width: 64%;
+      }
+      p, p a {
+        font-size: 0.9rem;
+      }
+      &.warning {
+        background-position: 0.8rem center;
+      }
+    }
+    section.notification:last-child {
+      padding-bottom: 2% !important;
+    }
+    menu {
+      margin-top: 1rem;
+      .btn-placeholder {
+        display: inline-block;
+        width: 50%;
+        button.next.green,
+        button.previous.blue {
+          color: #ffffff;
+          font-size: 15px;
+        }
+        button.return {
+          width: 57.2%;
+        }
+        button.sendmail,
+        button.previous {
+          width: 200px;
+        }
+        &.right {
+          margin-left: -1%;
+          text-align: right;
+        }
+        &.left {
+          margin-right: 0;
+        }
+        &.center {
+          text-align: center;
+          width: 100%;
+          margin-top: 1rem;
+        }
+      }
+      button {
+        &.validate.green > span,
+        &.green.sendmail > span {
+          .button-with-span-image-bg(url("@{img-base-url}sprites/contact_email_icon.png@{img-suffix-url}${project.version}"),
+                  center,
+                  left);
+          display: inline-block;
+          padding-left: 35px;
+        }
+        &:not(.cancel)> span {
+          color: #ffffff;
+        }
+      }
+    }
+    .feedback-email {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    .info-text {
+      em {
+        color: black;
+        font-weight: bold;
+      }
+      margin-bottom: 2rem;
+    }
+  }
+  .feedback-area section.notification.success {
+    position: relative;
+    left: 0;
+    width: 100%;
+    .message-area {
+      p:first-child {
+        font-size: 1.5rem;
+      }
+      p:last-child {
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+    color: white;
+  }
+}
+
+/** Specific rules for "your Opinion" modal buttons alignment**/
+
+@media (max-width:@tablet-width-limit) {
+  #SendFeedbackForm .sendfeedback-info menu .btn-placeholder.right {
+    margin-left: 23.2%;
+    text-align: right;
+  }
+  #SendFeedbackForm .sendfeedback-info menu .btn-placeholder {
+    display: inline;
+    width: 50%;
+  }
+  #SendFeedbackForm .sendfeedback-info menu {
+    text-align: center;
+  }
+}
+
+#SendFeedbackForm *:not(.placeholder){
+  line-height:20px;
+  &:focus{
+    outline:none;
+  }
+  .heading.heading{
+    line-height: 1;
+    color: @quite-dark-grey;
+  }
+}
+
+
+#SendFeedbackForm .sendfeedback-info .ui-sendfeedback-area label.css-label{
+  line-height:20px;
+}
+
+
+#FormSendFeedBack .environmentInfo .formfield-label{
+  background:none;
+  border:none;
+}
+
+#SendFeedbackForm .sendfeedback-info menu button.validate.green > span, #SendFeedbackForm .sendfeedback-info menu button.green.sendmail > span{
+  background:none;
+  padding-left:0;
+}
+
+#FormSendFeedBack .validate.next:after{
+  display:none;
+}
+
+#FormSendFeedBack{
+  .help{
+    .Email{
+      background-color:#FBF3ED!important;
+    }
+  }
+}
+
+#FormSendFeedBack .buttons {
+  .validate.next.button span {
+    position: relative;
+    &:before{
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translatey(-50%);
+      font-family: "europass-application" !important;
+      content: "\e90c";
+      font-size: 19px;
+      color:white;
+    }
+  }
+  //cancel button / for your options modal
+  .button.cancel {
+    background: @white;
+    color: gray !important;
+    border: 1px solid gray;
+      &:hover {
+        background: #eaeaea;
+        color: darken(gray, 8%);
+        border: 1px solid darken(gray, 8%);
+      }
+      span {
+        color: gray !important;
+      }
+  }
+  //Save Btn / for your options modal
+  .button.validate {
+    background: @blue-regular;
+    &:hover {
+      background: darken(@blue-regular, 5%);
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  #SendFeedbackForm{
+    .sendfeedback-info .ui-sendfeedback-area{
+      padding:1rem;
+    }
+    .sender-email .help.placeholding > .help.placeholder{
+      margin-left:0;
+      padding-left:50px;
+    }
+
+  }
+  #FormSendFeedBack .buttons.buttons .validate.next.button span{
+    font-size:14px;
+    font-weight:normal;
+    padding-left:15px;
+    &:before {
+      left: -10px;
+    }
+  }
+  .cancel.button span{
+    font-size:14px;
+    font-weight:normal;
+  }
+  .sendfeedback-info{
+    .heading.heading.heading{
+      font-size:1.5rem;
+    }
+    legend.notification{
+      width:100%;
+    }
+  }
+  #SendFeedbackForm .sendfeedback-info .heading{
+    font-size:1.5rem;
+    margin-top:0;
+  }
+}

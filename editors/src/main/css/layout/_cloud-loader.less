@@ -1,0 +1,157 @@
+
+.background-loader {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+}
+
+.background-loader > span {
+    width: 4.8vmin;
+    height: 4.8vmin;
+    border-radius: 6vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation-name: move;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    top: calc(50% - 6vmin);
+    left: 50%;
+    transform-origin: -6vmin center;
+}
+.background-loader > span:nth-child(1) {
+    background: #66778C;
+    animation-delay: -0.5s;
+    opacity: 0;
+}
+.background-loader > span:nth-child(2) {
+    background: #66778C;
+    animation-delay: -1s;
+    opacity: 0;
+}
+.background-loader > span:nth-child(3) {
+    background: #66778C;
+    animation-delay: -1.5s;
+    opacity: 0;
+}
+.background-loader > span:nth-child(4) {
+    background: #66778C;
+    animation-delay: -2s;
+    opacity: 0;
+}
+.background-loader > span:nth-child(5) {
+    background: #66778C;
+    animation-delay: -2.5s;
+    opacity: 0;
+}
+.background-loader > span:nth-child(6) {
+    background: #66778C;
+    animation-delay: -3s;
+    opacity: 0;
+}
+
+@keyframes move {
+    0% {
+        transform: scale(1) rotate(0deg) translate3d(0, 0, 1px);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        z-index: 10;
+        transform: scale(0) rotate(360deg) translate3d(0, 0, 1px);
+    }
+}
+/*loading dots*/
+/* loading dots */
+.loading-dots:after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    40% {
+        color: white;
+        text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    60% {
+        text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    80%, 100% {
+        text-shadow: .25em 0 0 white, .5em 0 0 white;
+    }
+}
+
+
+.cloud-is-loading-text {
+    position: absolute;
+    bottom: 37%;
+    left: 50%;
+    transform: translatex(-60%);
+    color: white;
+    font-size: 16px;
+}
+
+.loader-logo {
+    width: 63px;
+    margin: 8px;
+    height: 43px;
+    background: url(../images/europass-logo-small.svg?version=5.0.65) no-repeat center center transparent;
+    background-position: 100%;
+    background-size: contain;
+    position: absolute;
+    bottom: 48%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    @media screen and(max-width:@tablet-width-limit){
+        display:none;
+    }
+}
+
+
+
+
+#waiting-indicator-cloud  ~ #CloudSignInForm{
+    background-color:transparent!important;
+}
+
+
+
+
+.cloud-is-loading-button{
+    font-family: 'Open Sans',sans-serif;
+    outline: none;
+    background-color: #2979b8;
+    color: white;
+    border-radius: 7px;
+    transition-property: none;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0 1px 0;
+    line-height: 1em;
+    font-weight: 700;
+    padding: 13px 13px;
+    width: 200px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size:24px;
+    &:hover{
+        background-color:#0e739f;
+    }
+}
+
+/*loading dots*/
+

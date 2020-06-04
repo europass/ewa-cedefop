@@ -1,0 +1,22 @@
+<dt class="label">
+	<span class="title">{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="DocumentLabel"}}</span>
+</dt>
+{{#if SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue}}
+		{{#call_partial . path="LearnerInfo.Skills.Linguistic.MotherTongue"}}
+			{{> templates/menu/itemmenu}}
+		{{/call_partial}}
+{{/if}}
+<dd class="value">
+	
+	{{#if SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue}}
+		<div class="MotherTongue content-label">
+			{{#commalist SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue ../Preferences.LearnerInfo.Skills.Linguistic.MotherTongue.array}}
+			<span class="MotherTongue">{{.}}</span>
+			{{/commalist}}
+		</div>
+	{{else}}
+		<div class="empty add"
+			><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+		</div>
+	{{/if}}
+</dd>

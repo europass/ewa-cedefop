@@ -1,0 +1,18 @@
+
+<dt class="label"></dt>
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.Localisation 1=SkillsPassport.CoverLetter.Letter.SubjectLine}}
+{{else}}
+	{{#call_partial . path="" section="CoverLetter.Letter.SubjectLine SkillsPassport.CoverLetter.Letter.Localisation"  view="CL:SubjectLineLocalisation" name="CL:SubjectLineLocalisation" form="SubjectLineLocalisation" }}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/emptyObjects}}
+<dd>
+
+{{#emptyObjects "2" 0=SkillsPassport.CoverLetter.Letter.Localisation 1=SkillsPassport.CoverLetter.Letter.SubjectLine}}
+<div class="empty add">
+	<span class="empty add">
+		
+	</span>
+</div>
+{{/emptyObjects}}
+</dd>	

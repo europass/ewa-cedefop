@@ -1,0 +1,57 @@
+{{=[[ ]]=}}
+{{#addressee}}
+<text:section text:style-name="_CL_Section_Addressee" text:name="CL_Addressee">
+	[[#preferences]]
+	[[#CoverLetter:Addressee]]
+	[[#hasPosition]]
+		[[#isLeftAligned]]
+			<text:p text:style-name="_CL_Addressee_Left">
+		[[/isLeftAligned]]
+		[[#isRightAligned]]
+			<text:p text:style-name="_CL_Addressee_Right">
+		[[/isRightAligned]]
+		[[#isMiddleAligned]]
+			<text:p text:style-name="_CL_Addressee_Center">
+		[[/isMiddleAligned]]
+	[[/hasPosition]]
+	[[^hasPosition]]
+		<text:p text:style-name="_CL_Addressee">
+	[[/hasPosition]]
+	[[/CoverLetter:Addressee]]
+	[[/preferences]]
+	
+	
+	{{#isPersonNameFirst}}
+	[[!-- #PersonNameFirst First --]]
+		{{#personName}}
+			<text:span>{{{nameTxt}}}</text:span>
+		{{/personName}}
+		{{#position}}
+			<text:span><text:line-break/>{{label}}</text:span>
+		{{/position}}
+		{{#organisation}}
+			{{{organisationTxt}}}
+		{{/organisation}}
+	{{/isPersonNameFirst}}
+	[[!-- #PersonNameFirst First --]]
+	{{^isPersonNameFirst}}
+	[[!-- ^PersonNameFirst Not First --]]
+		{{#organisation}}
+			{{#name}}
+				<text:span>{{{organisationName}}}<text:line-break/></text:span>
+			{{/name}}
+		{{/organisation}}
+		{{#personName}}
+			<text:span>{{{nameTxt}}}</text:span>
+		{{/personName}}
+		{{#position}}
+			<text:span><text:line-break/>{{label}}</text:span>
+		{{/position}}
+		{{#organisation}}
+			{{{organisationContactInfo}}}
+		{{/organisation}}
+	{{/isPersonNameFirst}}
+	[[!-- /PersonNameFirst Not First --]]
+		</text:p>
+</text:section>
+{{/addressee}}

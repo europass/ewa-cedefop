@@ -1,0 +1,52 @@
+{{#with SkillsPassport}}
+<fieldset>
+	<header>
+	<legend>{{get_text "LearnerInfo.Achievement" group="GuiLabel"}}</legend>
+	</header>
+	
+	{{#with_list_item LearnerInfo.Achievement ../Idx}}
+		
+		
+		<fieldset class="Title" name="Title">
+			<label for="Achievement">{{get_text "LearnerInfo.Achievement.Title"}}</label>
+			<div class="composite select Achievement" name="LearnerInfo.Achievement[{{list_index}}].Title">
+				<input	type="text" 
+						class="formfield typeahead single help Title with-placeholder"
+						title
+						name="LearnerInfo.Achievement[{{list_index}}].Title.Label"
+						rel="Achievement[{{list_index}}].Title"
+						value="{{Title.Label}}"
+						placeholder="{{get_text "LearnerInfo.Achievement.Title" group="EditorPlaceholder"}}"
+						data-help-key="SkillsPassport.LearnerInfo.Achievement.Title">
+<!-- 			    <span name="LearnerInfo.Achievement[{{list_index}}].Title.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Achievement.Title" group="EditorPlaceholder"}}
+	            </span>	 -->
+				<input	type="hidden"
+						class="Title"
+						name="LearnerInfo.Achievement[{{list_index}}].Title.Code"
+						rel="Achievement[{{list_index}}].Title"
+						value="{{Title.Code}}">
+			</div>
+		</fieldset>	
+		
+		
+		<fieldset rel="LearnerInfo.Achievement[{{list_index}}].Description" class="editor">
+			<label for="Description">{{get_text "LearnerInfo.Achievement.Description"}}</label>
+			<textarea
+				id="LearnerInfo.Achievement[{{list_index}}]-textarea"
+				class="rich-editor single formfield help with-placeholder"
+				title
+				name="LearnerInfo.Achievement[{{list_index}}].Description"
+				placeholder="{{{get_text "LearnerInfo.Achievement.Description" group="EditorPlaceholder"}}}"
+				data-help-key="SkillsPassport.LearnerInfo.Achievement.Description">{{{Description}}}</textarea>
+			<span name="LearnerInfo.Achievement[{{list_index}}].Description" class="help placeholder" style="display:none;">
+				{{get_text "LearnerInfo.Achievement.Description" group="EditorPlaceholder"}}
+	        </span>	
+		</fieldset>
+		
+	{{/with_list_item}}
+
+</fieldset>
+{{/with}}
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

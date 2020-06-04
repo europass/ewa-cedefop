@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    <!--
+    /*
+     * Copyright European Union 2002-2014
+     *
+     *
+     * Licensed under the EUPL, Version 1.1 or – as soon they 
+     * will be approved by the European Commission - subsequent  
+     * versions of the EUPL (the "Licence"); 
+     * You may not use this work except in compliance with the 
+     * Licence. 
+     * You may obtain a copy of the Licence at: 
+     *
+     * http://ec.europa.eu/idabc/eupl.html
+     *
+     *  
+     * Unless required by applicable law or agreed to in 
+     * writing, software distributed under the Licence is 
+     * distributed on an "AS IS" basis, 
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+     * express or implied. 
+     * See the Licence for the specific language governing 
+     * permissions and limitations under the Licence. 
+     *
+     */ 
+    -->
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            Europass XML describes the information of Europass documents and more. 
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:include schemaLocation="EuropassLearnerInformation.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included schema describes the structure of the Learner Information element.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    <xsd:include schemaLocation="EuropassCoverLetter.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included schema describes the structure of the Cover Letter element.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    <xsd:include schemaLocation="EuropassPrintingPreferences.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included "PrintingPreferences" schema defines printing preferences for the Europass XML elements. For almost each XML element, a "Field" element is added that defines whether this field should appear in the produced Europass document (PDF, Word, ODT, HTML) and according to which format and at what order.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    
+    <xsd:include schemaLocation="DocumentInformation.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included "DocumentInformation" schema defines metadata elements that describe the specific XML instance.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    
+    <xsd:include schemaLocation="CommonTypes.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included "CommonTypes" schema defines simple and complex types re-used accross the Europass XML Schema Definition.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    
+    <xsd:include schemaLocation="DigitalContent.xsd">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                The included "DigitalContent" schema defines elements that refer to digital content included to the specific XML instance. This content refers to PDF, JPG, PNG files that described document attached to a Europass Document, the photo of the Learner of the signature of the Learner.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:include>
+    
+    <xsd:element name="SkillsPassport">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+			Skill Passport is the root element of any Europass XML document. This element actually defines a person’s portfolio that includes information coming from the Curriculum Vitae, Language Passport or other Europass documents, as well other non-Europass documents.
+			It is the actual template describing and organizing the learner’s information, and the way this information appears in the produced document –considering the printing preferences about the order and the format–. It also included all the documents attached as supporting material to this portfolio.
+			</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+           <xsd:sequence>
+               <xsd:element name="DocumentInfo" type="DocumentInfoType" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+			    		<xsd:documentation xml:lang="en">
+			    			Contains metadata information about the specific document
+               			</xsd:documentation>
+					</xsd:annotation>
+               </xsd:element>
+				<xsd:element name="PrintingPreferences" type="PrintingPreferencesType" minOccurs="0"  maxOccurs="1">
+					<xsd:annotation>
+			    		<xsd:documentation xml:lang="en">
+			    			Includes the preferences of the individual related to how to display the information included in the Europass XML when printed into readable format (e.g. PDF, ODT, DOC).
+			    		</xsd:documentation>
+					</xsd:annotation>
+               </xsd:element>
+               <xsd:element name="LearnerInfo" type="LearnerInfoType" minOccurs="1" maxOccurs="1">
+                   <xsd:annotation>
+                       <xsd:documentation xml:lang="en">
+                           The core element of Europass schema, that includes all information about personal data, learning achievements, work experiences, skills, competences, diplomas and other miscellaneous information.
+                       </xsd:documentation>
+                   </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="AttachmentList" type="AttachmentListType" minOccurs="0" maxOccurs="1">
+               		<xsd:annotation>
+               			<xsd:documentation xml:lang="en">
+               				List any digital document (PDF, JPEG or PNG format( that an individual has attached to her Europass document to support/evidence of her personal data, learning achievements, work experiences, skills, competences, diplomas, etc. 
+               			</xsd:documentation>
+               		</xsd:annotation>
+               </xsd:element>
+               <xsd:element name="CoverLetter" type="CoverLetterType" minOccurs="0" maxOccurs="1">
+                   <xsd:annotation>
+                       <xsd:documentation xml:lang="en">
+                           Includes the content of a Cover Letter.
+                       </xsd:documentation>
+                   </xsd:annotation>
+               </xsd:element>
+           </xsd:sequence>
+            <xsd:attribute name="locale" type="LocaleType" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
+

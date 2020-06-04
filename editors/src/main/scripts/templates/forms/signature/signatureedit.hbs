@@ -1,0 +1,30 @@
+
+<div class="signature-editing-area {{#unless LearnerInfo.Identification.Signature}} photo-empty {{/unless}}">
+
+	<em class="crop-guidelines">
+		{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Guidelines.Drag" group="EditorHelp"}}
+	</em>
+	
+	<div class="signature-cropping-preview">
+		<div class="signature-cropping">
+			<img id="Signature_Crop_Source"
+			 	 src="{{LearnerInfo.Identification.Signature.TempURI}}"
+			 	 alt="{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Source" group="EditorHelp"}}"/>
+		</div>
+		
+		<div class="signature-wysiwyg">
+		
+			<div>
+			<em class="crop-guidelines">
+				{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}
+			</em>
+		
+			<div class="signature-preview-area">
+				<img id="Signature_Crop_Preview"	 
+					 src="{{LearnerInfo.Identification.Signature.TempURI}}" 
+					 alt="{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Guidelines.Drag" group="EditorHelp"}}"/>
+			</div>
+			</div>
+		</div> 
+	</div> 
+</div>

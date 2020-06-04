@@ -1,0 +1,89 @@
+
+/***************************************************
+ ***************************************************
+ *****            MAIN SKELETON  off canvas    *****
+ ***************************************************
+ ***************************************************/
+
+@media only screen and (max-width: @tablet-width-limit ) {
+  .transition-ease-mixin( @duration ) {
+    transition: transform @duration ease;
+    -ms-transition: -ms-transform @duration ease;
+    -moz-transition: -moz-transform @duration ease;
+    -webkit-transition: -webkit-transform @duration ease;
+    -o-transition: -o-transform @duration ease;
+  }
+  .translate-mixin( @x, @y ) {
+    transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+  }
+  // Styling for move right
+  .off-canvas-wrap.noactive-left.move-right {
+    #aside-left-default {
+      .translate-mixin( 100%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+    #header-logo-moto-small,
+    #main-content-area,
+    #aside-right-lower {
+      .translate-mixin( 40%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+  }
+  .off-canvas-wrap.noactive-left.noactive-right {
+    #aside-left-default {
+      .translate-mixin( -100%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+    #header-logo-moto-small,
+    #main-content-area,
+    #aside-right-lower {
+      .translate-mixin( 0%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+  }
+  // Styling for move left
+  .off-canvas-wrap.noactive-right.move-left {
+    #aside-right-upper {
+      .translate-mixin( -100%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+    #aside-right-lower {
+      #show-right-sidebar-btn {
+        background-position: 0px 10px;
+      }
+    }
+    #header-logo-moto-small,
+    #main-content-area,
+    #aside-right-lower {
+      .translate-mixin( -40%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+  }
+  .off-canvas-wrap.noactive-right.noactive-left {
+    #aside-right-upper {
+      .translate-mixin( 100%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+    #header-logo-moto-small,
+    #main-content-area,
+    #aside-right-lower {
+      .translate-mixin( 0%, 0);
+      .transition-ease-mixin( 500ms);
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  .off-canvas-wrap.move-right #show-right-sidebar-btn{
+    pointer-events: none;
+    opacity:0.3;
+  }
+}

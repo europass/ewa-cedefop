@@ -1,0 +1,341 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "LearnerInfo.Identification" group="GuiLabel"}}</legend>
+</header>
+
+<fieldset class="PersonName">
+	<fieldset class="FirstName">
+		<label for="FirstName">{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}</label>
+		<input type="text" 
+				class="formfield help mandatory single pref PersonName with-placeholder"
+				title
+				name="LearnerInfo.Identification.PersonName.FirstName"
+				data-bind-name="LearnerInfo.Identification.PersonName"
+				data-bind-document="ECV ELP"
+				data-help-key="LearnerInfo.Identification.PersonName.FirstName"
+				value="{{LearnerInfo.Identification.PersonName.FirstName}}">
+		<span name="LearnerInfo.Identification.PersonName.FirstName" class="help placeholder" style="display:none;" >
+		  {{{get_text "LearnerInfo.Identification.PersonName.FirstName" group="EditorPlaceholder"}}}
+		</span>
+	</fieldset>
+	<fieldset class="Surname">
+		<label for="Surname">{{get_text "LearnerInfo.Identification.PersonName.Surname"}}</label>
+		<input type="text" 
+				class="formfield help single mandatory pref PersonName with-placeholder"
+				title
+				name="LearnerInfo.Identification.PersonName.Surname"
+				data-bind-name="LearnerInfo.Identification.PersonName"
+				data-bind-document="ECV ELP"
+				data-help-key="LearnerInfo.Identification.PersonName.Surname"
+				value="{{LearnerInfo.Identification.PersonName.Surname}}">
+		<span name="LearnerInfo.Identification.PersonName.Surname" class="help placeholder" style="display:none;">
+			{{get_text "LearnerInfo.Identification.PersonName.Surname" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+</fieldset>
+
+<fieldset class="ContactInfo">
+
+	<fieldset class="addressFields" name="AddressFields">
+		<fieldset class="AddressLine with-icon" name="AddressLine">
+			<label for="Address">{{get_text "LearnerInfo.Identification.ContactInfo.Address" group="GuiLabel"}}</label>
+			<input type="text" 
+					class="formfield help pref single-not Address AddressLine with-placeholder"
+					title
+					name="LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine"
+					data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine"
+					data-bind-name="group"
+					data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+					value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine}}">
+			<span name="LearnerInfo.Identification.PersonName.Surname" class="help placeholder" style="display:none;">
+				{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+		
+		<fieldset class="ContactInfo-Address hybrid2">
+			<fieldset class="PostalCode first" name="PostalCode">
+				<label for="PostalCode">{{get_text "LearnerInfo.Identification.ContactInfo.Address.PostalCode" group="GuiLabel"}}</label>
+				<input type="text" 
+						class="formfield help pref Address PostalCode with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode"
+						data-bind-name="group"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode}}">
+				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode" group="EditorPlaceholder"}}
+				</span>
+		    </fieldset>
+			<fieldset class="Municipality second" name="Municipality">
+				<label for="Municipality">{{get_text "LearnerInfo.Identification.ContactInfo.Address.City" group="GuiLabel"}}</label>
+				<input type="text" 
+						class="formfield help pref Address Municipality with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality"
+						data-bind-name="group"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality}}">
+				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+		</fieldset>
+		
+		<fieldset class="country" name="Country">
+			<label for="Country">{{get_text "LearnerInfo.Identification.ContactInfo.Address.Country" group="GuiLabel"}}</label>
+			<div class="composite" name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country">
+				<input type="text"
+						class="formfield help typeahead single pref Address Country with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label"
+						data-bind-name="group"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						rel="Identification.ContactInfo.Address.Contact.Country"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label}}"
+						placeholder="{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}">
+<!-- 				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}
+				</span>-->
+				<!-- data-defaultvalue="{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}" -->
+ 				<input type="hidden"
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Code"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Code}}">
+			</div>
+		</fieldset>
+	</fieldset>
+
+	<fieldset class="Telephone" name="Telephone">
+		<label for="Telephone">{{get_text "LearnerInfo.Identification.ContactInfo.Telephone" group="GuiLabel"}}</label>
+		<div class="multipliable fixed-value-list-input compound">
+			{{#each_with_default LearnerInfo.Identification.ContactInfo.Telephone item="{ \"Use\" : {\"Label\" : \"\" , \"Code\" : \"\"} , \"Contact\" : \"\" }"}}
+			
+			<div class="composite" name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}]" data-index="{{index}}" >
+				<div class="composite select {{Use.Label}} no_clear"
+					name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Use">
+					{{> templates/forms/telephone}}
+				</div>
+				<input type="tel" 
+						class="formfield help copy Telephone Number with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Contact"
+						data-help-key= ""
+						data-help-group="LearnerInfo.Identification.ContactInfo.Telephone"
+						value="{{Contact}}">
+				<span name="LearnerInfo.Identification.ContactInfo.Telephone" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Identification.ContactInfo.Telephone.Contact" group="EditorPlaceholder"}}
+				</span>
+			</div>
+			{{/each_with_default}}
+		</div>
+	</fieldset>
+
+	<fieldset class="Email with-icon" name="Email">
+		<label for="Email">{{get_text "LearnerInfo.Identification.ContactInfo.Email" group="GuiLabel"}}</label>
+		<input type="email" 
+				class="formfield help Email with-placeholder" 
+				title
+				name="LearnerInfo.Identification.ContactInfo.Email.Contact"
+				data-help-key="LearnerInfo.Identification.ContactInfo.Email"
+				value="{{LearnerInfo.Identification.ContactInfo.Email.Contact}}">
+		<span name="LearnerInfo.Identification.ContactInfo.Email.Contact" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Email" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+
+	<fieldset class="Website with-icon" name="Website">
+		<label for="Website">{{get_text "LearnerInfo.Identification.ContactInfo.Website" group="GuiLabel"}}</label>
+		<div class="single multipliable compound">
+		{{#each_with_default LearnerInfo.Identification.ContactInfo.Website item="{ \"Contact\" : \"\" }" }}
+			<div class="composite" data-index="{{index}}">
+				<input type="url" 
+						class="formfield help copy Website with-placeholder" 
+						title
+						name="LearnerInfo.Identification.ContactInfo.Website[{{index}}].Contact"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Website"
+						value="{{Contact}}">
+				 <span name="LearnerInfo.Identification.ContactInfo.Website.Contact" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Identification.ContactInfo.Website" group="EditorPlaceholder"}}
+				</span>
+			</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+
+	<fieldset class="InstantMessaging" name="InstantMessaging">
+		<label for="InstantMessaging">{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging" group="GuiLabel"}}</label>
+		<div class="multipliable compound auto-complete-list-input" data-list-map="InstantMessagingType">
+		{{#each_with_default LearnerInfo.Identification.ContactInfo.InstantMessaging item="{ \"Use\" : {\"Label\" : \"\" , \"Code\" : \"\"} , \"Contact\" : \"\" }"}}
+		<div class="composite" name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}]" data-index="{{index}}">
+			<div class="composite select tt-dropdown-over-input" name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use" data-index="{{index}}">
+				<input type="text" 
+						class="formfield help typeahead InstantMessaging Use with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use.Label"
+						data-help-key=""
+						data-help-group="LearnerInfo.Identification.ContactInfo.InstantMessaging"
+						rel="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use"
+						placeholder="{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Use" group="EditorPlaceholder"}}"
+						value="{{Use.Label}}">
+<!-- 			   <span class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Use" group="EditorPlaceholder"}}
+			   </span> -->
+				<input type="hidden"
+						name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use.Code"
+						value="{{Use.Code}}">
+  			</div>
+			<input type="text" 
+					class="formfield help copy InstantMessaging Account with-placeholder"
+					title
+					name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Contact"
+					data-help-key=""
+					data-help-group="LearnerInfo.Identification.ContactInfo.InstantMessaging"
+					value="{{Contact}}">
+			<span name="LearnerInfo.Identification.ContactInfo.InstantMessaging.Contact" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Contact" group="EditorPlaceholder"}}
+			</span>
+		</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+	
+</fieldset>
+
+<fieldset id="Personal-Info-Extra-Fields-fld" class=personal-info-extra-fields>
+    <button type="button"
+            name="LearnerInfo.Identification.Demographics_toggle_btn"
+            class="toggle-personal-info toggle-expansion {{#if LearnerInfo.Identification.Demographics}} less {{else}} more {{/if}}"
+            data-rel-subform="SubForm:LearnerInfo.Identification.Demographics">
+            {{get_text "Buttons.Toggle.Form.Details" group="GuiLabel"}}
+    </button>
+
+    <fieldset
+        id="SubForm:LearnerInfo.Identification.Demographics"
+        class="LearnerInfo.Identification.Demographics more"
+        {{#unless LearnerInfo.Identification.Demographics}}style="display:none;"{{/unless}}>
+
+        <legend class="notification warning">
+            <em>{{get_text "LearnerInfo.Identification.Demographics.Details" group="EditorHelp"}}</em>
+        </legend>
+
+        <fieldset class="LearnerInfo.Identification.Demographics.Gender Gender">
+            <label for="Gender">{{get_text "LearnerInfo.Identification.Demographics.Gender" group="DocumentLabel"}}</label>
+            <div class="choice" id="Control:LearnerInfo.Identification.Demographics.Gender">
+                <input type="radio"
+                        class="formfield css-checkbox help"
+                        title
+                        name="LearnerInfo.Identification.Demographics.Gender.Code"
+                        data-help-key="LearnerInfo.Identification.Demographics.Gender.Code"
+                        value="M"
+                        id="Gender-M"/ {{#if_eq LearnerInfo.Identification.Demographics.Gender.Code compare="M"}}checked="checked"{{/if_eq}}>
+                <label for="Gender-M" class="css-label formfield-label">{{get_text "LearnerInfo.Identification.Demographics.Gender.M" group="DocumentLabel"}}</label>
+                <input type="radio"
+                        class="formfield css-checkbox help"
+                        title
+                        name="LearnerInfo.Identification.Demographics.Gender.Code"
+                        data-help-key="LearnerInfo.Identification.Demographics.Gender.Code"
+                        value="F"
+                        id="Gender-F"/ {{#if_eq LearnerInfo.Identification.Demographics.Gender.Code compare="F"}}checked="checked"{{/if_eq}}>
+                <label for="Gender-F" class="css-label formfield-label">{{get_text "LearnerInfo.Identification.Demographics.Gender.F" group="DocumentLabel"}}</label>
+                <input type="radio"
+                        class="formfield css-checkbox PrintingPreferences help"
+                        title
+                        name="LearnerInfo.Identification.Demographics.Gender.Code"
+                        data-help-key="LearnerInfo.Identification.Demographics.Gender.Code"
+                        value="NA"
+                        id="Gender-NA"
+                        {{#unless LearnerInfo.Identification.Demographics.Gender.Code}}checked="checked"{{/unless}}/>
+                <label for="Gender-NA" class="css-label formfield-label">{{get_text "LearnerInfo.Identification.Demographics.Gender.NA" group="GuiLabel"}}</label>
+                <input type="hidden"
+                        class="formfield"
+                        name="LearnerInfo.Identification.Demographics.Gender.Label"
+                        data-help-group=""
+                        rel="Identification.ContactInfo.Demographics.Gender"
+                        value="{{LearnerInfo.Identification.Demographics.Gender.Label}}">
+            </div>
+        </fieldset>
+
+        <fieldset name="LearnerInfo.Identification.Demographics.Birthdate" class="Date">
+            <label for="Birthdate">{{get_text "LearnerInfo.Identification.Demographics.Birthdate" group="DocumentLabel"}}</label>	
+            <div class="composite birthdatefields Identification.Demographics.Birthdate">
+                {{#unless LearnerInfo.Identification.Demographics.Birthdate}}
+                    {{#with_default LearnerInfo.Identification.Demographics.Birthdate item="{ \"Birthdate\" : { \"Day\" : \"\", \"Month\" : \"\" , \"Year\" : \"\" } }" }}
+					{{> templates/forms/birthdate}}
+                    {{/with_default}}
+                {{/unless}}
+                {{#if LearnerInfo.Identification.Demographics.Birthdate}}
+                {{#with LearnerInfo.Identification.Demographics}}
+                    {{> templates/forms/birthdate}}
+                {{/with}}
+                {{/if}}
+				</div>
+        </fieldset>
+
+        <fieldset name="LearnerInfo.Identification.Demographics.Birthdate.format" class="Birthdate-format">
+            <label for="Birthdate-format">{{get_text "LearnerInfo.Identification.Demographics.Birthdate.format" group="GuiLabel"}}</label>
+				<div class="custom_select_wrapper">
+					<select title
+							name="LearnerInfo.Identification.Demographics.Birthdate.format"
+						class="formfield help Birthdate hidden_select format PrintingPreferences Date with-placeholder"
+							data-help-key="LearnerInfo.Identification.Demographics.Birthdate"
+							data-bind-name="LearnerInfo.Identification.Demographics.Birthdate">
+						{{#augment . Format=../Preferences.ECV.LearnerInfo.Identification.Demographics.Birthdate.format isGlobal=false DocumentType="ECV"}}
+							{{> templates/forms/dateformatoptions}}
+						{{/augment}}
+					</select>				
+					<ul title
+							name="LearnerInfo.Identification.Demographics.Birthdate.format"
+							class="formfield custom_select no_clear help Birthdate format PrintingPreferences Date with-placeholder"
+							data-help-key="LearnerInfo.Identification.Demographics.Birthdate"
+							data-bind-name="LearnerInfo.Identification.Demographics.Birthdate">
+						<li class="init" data-value=""></li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+							{{#date_format_options}}
+							<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+								{{text}}
+							</li>
+							{{/date_format_options}}
+						</ul>
+					</ul>
+				</div>
+            <span class="help placeholder" style="display:none;">
+                        {{get_text "LearnerInfo.Identification.Demographics.Birthdate.Format" group="EditorPlaceholder"}}
+            </span>
+        </fieldset>
+
+        <fieldset class="Nationality LearnerInfo.Identification.Demographics.Nationality">
+            <label for="Nationality">{{get_text "LearnerInfo.Identification.Demographics.Nationality" group="DocumentLabel"}}</label>
+            <div class="single multipliable compound distinct auto-complete-list"
+                data-list-map="Nationalities"
+                data-excluded-sections="LearnerInfo.Identification.Demographics.Nationality">
+            {{#each_with_default LearnerInfo.Identification.Demographics.Nationality item="{ \"Code\" : \"\" , \"Label\" : \"\" }" }}
+                <div class="nationality composite select tt-dropdown-over-input" name="LearnerInfo.Identification.Demographics.Nationality[{{index}}]" data-index="{{index}}">
+                    <input type="text"
+                        class="formfield typeahead single help copy Nationality with-placeholder"
+                        rel="Identification.Demographics.Nationality[{{index}}]"
+                        title
+                        name="LearnerInfo.Identification.Demographics.Nationality[{{index}}].Label"
+                        data-help-key="LearnerInfo.Identification.Demographics.Nationality[{{index}}].Label"
+                        data-help-group="LearnerInfo.Identification.Demographics.Nationality"
+                        placeholder="{{get_text "LearnerInfo.Identification.Demographics.Nationality" group="EditorPlaceholder"}}"
+                        value="{{Label}}">
+    <!-- 				<span name="LearnerInfo.Identification.Demographics.Nationality.Label" class="help placeholder" style="display:none;">
+                        {{get_text "LearnerInfo.Identification.Demographics.Nationality" group="EditorPlaceholder"}}
+                    </span>-->
+                    <input type="hidden"
+                        name="LearnerInfo.Identification.Demographics.Nationality[{{index}}].Code"
+                        value="{{Code}}">
+                </div>
+            {{/each_with_default}}
+            </div>
+        </fieldset>
+
+    </fieldset>
+</fieldset>
+
+</fieldset>
+{{/with}}

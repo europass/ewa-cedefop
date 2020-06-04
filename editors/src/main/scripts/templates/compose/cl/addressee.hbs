@@ -1,0 +1,102 @@
+<dt class="label"></dt>
+{{#if SkillsPassport.CoverLetter.Addressee}}
+	{{#call_partial . view ="CL:AddresseeDetails" section="CoverLetter.Addressee"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/if}}
+<dd>
+	{{#get_addressee_order SkillsPassport.CoverLetter.Addressee}} 	
+	
+		{{#emptyObjects "3" 0=SkillsPassport.CoverLetter.Addressee.PersonName.Title 1=SkillsPassport.CoverLetter.Addressee.PersonName 2=SkillsPassport.CoverLetter.Addressee.Organisation}}
+			<div class="name value addressee-name">
+				<span class="default-value">{{get_text "CoverLetter.Addressee.Contact.Person" }}</span>
+			</div>
+		{{else}}
+			<div class="name value addressee-name">
+				{{#get_personname_order SkillsPassport.CoverLetter.Addressee.PersonName ../Preferences.CoverLetter.Addressee.PersonName}}
+					{{.}}
+				{{/get_personname_order}}
+			 </div>
+		 {{/emptyObjects}}
+		
+		<div class="value addressee-organisation">
+	        {{#if SkillsPassport.CoverLetter.Addressee.Organisation}}
+	        	{{#with SkillsPassport.CoverLetter.Addressee.Organisation}}
+	        		<span>{{Name}}</span>
+	        	{{/with}}
+	        {{/if}}
+		</div>
+	
+		{{#unless SkillsPassport.CoverLetter.Addressee}}
+			<div class="value addressee-organisation">
+				<span class="default-value">{{get_text "CoverLetter.Addressee.Organisation"}}</span>
+			</div>
+		{{/unless}}
+	
+	{{else}}
+		
+		<div class="value addressee-organisation">
+	        {{#if SkillsPassport.CoverLetter.Addressee.Organisation}}
+	        	{{#with SkillsPassport.CoverLetter.Addressee.Organisation}}
+	        		<span>{{Name}}</span>
+	        	{{/with}}
+	        {{/if}}
+		</div>
+
+		{{#unless SkillsPassport.CoverLetter.Addressee}}
+			<div class="value addressee-organisation">
+				<span class="default-value">{{get_text "CoverLetter.Addressee.Organisation"}}</span>
+			</div>
+		{{/unless}}
+		{{#emptyObjects "3" 0=SkillsPassport.CoverLetter.Addressee.PersonName.Title 1=SkillsPassport.CoverLetter.Addressee.PersonName 2=SkillsPassport.CoverLetter.Addressee.Organisation}}
+		<div class="name value addressee-name">
+			<span class="default-value">{{get_text "CoverLetter.Addressee.Contact.Person" }}</span>
+		</div>
+			{{else}}
+		<div class="name value addressee-name">
+			{{#get_personname_order SkillsPassport.CoverLetter.Addressee.PersonName ../Preferences.CoverLetter.Addressee.PersonName}}
+				{{.}}
+			{{/get_personname_order}}
+		 </div>
+	 {{/emptyObjects}}
+	{{/get_addressee_order}}
+	
+	{{#if SkillsPassport.CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact}}
+		{{#with SkillsPassport.CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact}}
+		{{#if AddressLine}}
+			<div class="value addressee-organisation-address">				
+				<span class="Address AddresLine">{{AddressLine}}</span>
+			</div>
+		{{/if}}
+		{{#if AddressLine2}}
+			<div class="value addressee-organisation-address">				
+				<span class="Address AddresLine2">{{AddressLine2}}</span>
+			</div>
+		{{/if}}
+		{{/with}}
+		{{#format_address SkillsPassport.CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact partial="m-z"}}
+			<div class="value addressee-organisation-address">				
+				<span class="Address Municipality PostalCode">{{.}}</span>
+			</div>
+		{{/format_address}}
+		{{#with SkillsPassport.CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact}}
+		{{#if Country}}
+			<div class="value addressee-organisation-address">
+				<span class="Address Country">{{Country.Label}}</span>
+			</div>
+		{{/if}}
+		{{/with}}
+	{{/if}}
+			
+	{{#unless SkillsPassport.CoverLetter.Addressee}}
+	<div class="value addressee-organisation-address">
+		<span class="default-value Address">{{get_text "CoverLetter.Addressee.Organisation.ContactInfo.Address"}}</span>
+	</div>
+	{{/unless}}	
+		
+	{{#unless SkillsPassport.CoverLetter.Addressee}}
+	<div class="empty add">
+		<span class="empty add">{{get_text "Buttons.Add.ECL.Addressee.Content" group="GuiLabel"}}</span>
+	</div>
+	{{/unless}}
+</dd>	

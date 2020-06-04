@@ -1,0 +1,56 @@
+{{#with SkillsPassport}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Computer" group="GuiLabel"}}</legend>
+	</header>
+	
+	<fieldset class="ComputerSkill ECV ICTSelfAssesment ICTLevel" name="LearnerInfo.Skills.Computer.ICTLevel">
+		<legend class="ICTLevel">{{get_text "LearnerInfo.Skills.Computer.ICTLevel" group="GuiLabel"}}</legend>
+		{{> templates/forms/computerSelfAssesment}}
+	</fieldset>
+	
+	
+	<fieldset class="Certificate ComputerSkill ECV">
+		<legend class="Certificate">{{get_text "LearnerInfo.Skills.Computer.Certificate" group="GuiLabel"}}</legend>
+		
+		<div class="single multipliable compound ">
+		{{#each_with_default LearnerInfo.Skills.Computer.Certificate item="{ \"Title\" : \"\" }" }}
+			<div class="composite" data-index="{{index}}">
+				<input type="text" 
+					class="formfield single help copy with-placeholder"
+					title
+					name="LearnerInfo.Skills.Computer.Certificate[{{index}}].Title"
+					data-init-index="{{index}}"
+					rel="LearnerInfo.Skills.Computer"
+					data-help-key="LearnerInfo.Skills.Computer.Certificate"
+					value="{{Title}}">
+				<span name="LearnerInfo.Skills.Computer.Certificate[{{index}}].Title" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Skills.Computer.Certificate" group="EditorPlaceholder"}}
+				</span>
+			</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+	
+	<fieldset rel="Description" class="editor ictAdditionalInfo">
+			<label for="Description">{{get_text "LearnerInfo.Skills.Computer.Description" group="GuiLabel"}}</label>
+			<textarea
+				id="LearnerInfo.Skills.Computer-textarea"
+				class="rich-editor single formfield help with-placeholder"
+				title
+				name="LearnerInfo.Skills.Computer.Description"
+				data-help-key="LearnerInfo.Skills.Computer.Description"
+				placeholder="{{{get_text "LearnerInfo.Skills.Computer.Description" group="EditorPlaceholder"}}}"
+				>{{{LearnerInfo.Skills.Computer.Description}}}</textarea>
+			<span name="LearnerInfo.Skills.Computer.Description" class="help placeholder" style="display:none;">
+				{{{get_text "LearnerInfo.Skills.Computer.Description" group="EditorPlaceholder"}}}
+			</span>
+		</fieldset>
+		
+	</fieldset>
+	
+{{/with}}
+
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

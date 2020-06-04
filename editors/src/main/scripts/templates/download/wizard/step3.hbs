@@ -1,0 +1,35 @@
+<header>
+<legend>{{get_text "export.wizard.step3.desc" group="GuiLabel"}}</legend>
+</header>
+
+<div id="email-warning" class="email note" style="display:none">
+	<div class="warning">
+		<span class="icon"></span>
+		<div class="text">
+			{{get_text "Buttons.ReceiveCV.Email.Note" group="EditorHelp"}}
+		</div>
+	</div>
+</div>
+
+{{#each locations}}
+	{{#if hidden}}
+	{{else}}
+	<fieldset class="export-checkbox file-format {{name}}">
+	
+		<input  type="radio" 
+				class="css-checkbox formfield help"
+				name="Export_Option_Loc"
+				value="{{name}}"
+				data-help-key="export.wizard.help.step3.location.option"
+				data-help-group="export.wizard.help.step3"
+				id="Export_Option_Loc_{{name}}"
+				{{#if checked}}checked="checked"{{/if}}>
+		<label  for="Export_Option_Loc_{{name}}"
+				class="css-label {{#if checked}}checked{{/if}} formfield-label">
+			<span class="icon"></span>
+			<span class="title">{{title}}</span>
+		</label>
+	
+	</fieldset>
+	{{/if}}
+{{/each}}

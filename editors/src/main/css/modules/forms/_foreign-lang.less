@@ -1,0 +1,262 @@
+
+/**********************/
+
+/***************************************************
+ ****************  FOREIGN LANGS   *****************
+ *****************  ICT SKILLS   ******************/
+
+/* Icons for Self-Assessment fieldsets (Language Skills and Computer Skills */
+
+.icon_self_assessment (@img @imgPosX  @imgPosY){
+  background-image: @img;
+  background-position: @imgPosX  @imgPosY;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* Language Skills */
+@lang_self_assessment_icon: url("@{img-base-url}sprites/icons_self_assessment.png@{img-suffix-url}${project.version}");
+
+/* Computer Skills */
+@ict_self_assessment_icon: url("@{img-base-url}sprites/ict_spritesheet.png@{img-suffix-url}${project.version}");
+
+
+fieldset.ICTSelfAssesment,
+fieldset.SelfAssesment {
+  border: 1px solid @text-lightgrey;
+  margin-top:20px;
+  padding:10px 18px;
+}
+legend.ProficiencyLevel,
+legend.ICTLevel,
+legend.Certificate {
+  color: @grey-dark-text-two;
+  font-size:17px;
+  margin-left: 10px;
+  padding: 0 8px;
+}
+
+fieldset.ICTSelfAssesment{
+  padding:10px 60px;
+}
+
+fieldset.Certificate{
+  border:1px solid  @text-lightgrey;
+  margin: 10px 0;
+  padding: 18px;
+}
+
+/* Self Assesment Selected Value Format */
+/* Language Skills */
+form[id^="Form:LearnerInfo.Skills.Linguistic.ForeignLanguage"] {
+  fieldset.Level .level[name="Certificate"] .formatSelection span,
+  fieldset[class*='ProficiencyLevel'] .level .formatSelection span{
+    display: inline-block;
+    margin-right: 0px;
+  }
+  fieldset.Level .level[name="Certificate"] .formatSelection span.short-key-label:before,
+  fieldset[class*='ProficiencyLevel'] .level .formatSelection span.short-key-label:before{
+    content: "-";
+    margin-left: -1px;
+    margin-right: 4px;
+  }
+}
+/* Ict Skills */
+form[id="Form:LearnerInfo.Skills.Computer"] {
+  fieldset.Level .level[name="Certificate"] .formatSelection span,
+  fieldset[class*='ProficiencyLevel'] .level .formatSelection span{
+    &.Code {
+      display: none;
+    }
+    display: inline-block;
+    margin-right: 0px;
+  }
+  fieldset.Level .level[name="Certificate"] .formatSelection span.short-key-label:before,
+  fieldset[class*='ProficiencyLevel'] .level .formatSelection span.short-key-label:before{
+    margin-left: -1px;
+    margin-right: 4px;
+  }
+
+  ul.options.open li span.Label  {
+    .short-key-label {
+      display: block;
+    }
+  }
+}
+
+
+
+fieldset.Level .level[name="Certificate"] .formatSelection span.level:before,
+fieldset[class*='ProficiencyLevel'] .level .formatSelection span.level:before{
+  content: "(";
+}
+fieldset.Level .level[name="Certificate"] .formatSelection span.level:after,
+fieldset[class*='ProficiencyLevel'] .level .formatSelection span.level:after{
+  content: ")";
+}
+
+.ICTSelfAssesment ul.options {
+  > li {
+    padding-top: 1rem!important;
+    padding-bottom: 0.5rem!important;
+    &:first-child {
+      padding-top: 0!important;
+    }
+    > span.Label {
+      border-left: none !important;
+    }
+  }
+}
+
+fieldset.ProficiencyLevel {
+  fieldset.Listening,
+  fieldset.Reading,
+  fieldset.SpokenProduction,
+  fieldset.SpokenInteraction,
+  fieldset.Writing > div.level {
+    padding-left: 35px;
+    background:transparent!important;
+    font-family:"europass-application"!important;
+    position:relative;
+    &:before{
+      font-family:"europass-application"!important;
+      color:@orange-dark;
+      font-size:20px;
+      font-weight:bold;
+      position:absolute;
+      left:0px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+
+  fieldset.Listening:before{
+    content:"\e911";
+  }
+  fieldset.Reading:before{
+    content:"\e91d";
+  }
+  fieldset.SpokenInteraction:before{
+    content:"\e910";
+  }
+  fieldset.SpokenProduction:before{
+    content:"\e90f";
+  }
+  fieldset.Writing > div.level:before {
+    content:"\e90e";
+  }
+}
+
+.Website input.single.help.with-placeholder, .Email .Email{
+  padding-left:40px;
+}
+
+.ContactInfo {
+  .Email, .Website{
+    .help.placeholding{
+      background-color: rgba(196,81,0,0.07);
+    }
+  }
+}
+.AddressLine{
+  .help.placeholding{
+    background-color: rgba(196,81,0,0.07);
+  }
+}
+
+
+
+
+
+fieldset.ICTLevel {
+  label {
+    margin-left: -2rem;
+    margin-bottom: 1.5rem;
+  }
+  fieldset.Information,
+  fieldset.Communication,
+  fieldset.ContentCreation,
+  fieldset.Safety,
+  fieldset.ProblemSolving {
+    width: 94%;
+    background:transparent!important;
+    .help.placeholding{
+      font-family:"europass-application"!important;
+      position:relative;
+
+      &:before{
+        font-family:"europass-application"!important;
+        color:@orange-dark;
+        font-size:20px;
+        font-weight:400;
+        position:absolute;
+        left:-40px;
+        top:50%;
+        transform:translateY(-50%);
+        display:inline-block;
+      }
+    }
+  }
+
+  fieldset.ProblemSolving .help.placeholding:before {
+    content:"\e90f";
+  }
+  fieldset.Information .help.placeholding:before {
+    content:"\e90a";
+  }
+  fieldset.Communication  .help.placeholding:before {
+    content:"\e906";
+  }
+  fieldset.ContentCreation  .help.placeholding:before {
+    content:"\e907";
+  }
+  fieldset.Safety  .help.placeholding:before{
+    content:"\e90d";
+  }
+  fieldset.ProblemSolving .ProblemSolving .help.placeholding:before{
+    content:"\e908";
+  }
+}
+
+fieldset.Certificate.ComputerSkill {
+  margin-top: 2rem;
+
+}
+fieldset.ictAdditionalInfo {
+  margin-top: 2rem!important;
+  label {
+    font-size: 36px;
+    margin-bottom: 2.2rem;
+    color: @quite-dark-grey;
+  }
+}
+
+@media screen and(max-width:@phone-width-limit) {
+  fieldset.ICTSelfAssesment{
+    padding:10px
+  }
+  fieldset.ICTLevel label{
+    margin-left:0;
+  }
+  fieldset.ICTLevel fieldset.Information, fieldset.ICTLevel fieldset.Communication, fieldset.ICTLevel fieldset.ContentCreation, fieldset.ICTLevel fieldset.Safety, fieldset.ICTLevel fieldset.ProblemSolving{
+    width:100%;
+  }
+  fieldset.ICTSelfAssesment{
+    padding-left:53px;
+  }
+  fieldset.ictAdditionalInfo {
+    margin-top: 1rem!important;
+    label {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+
+    }
+  }
+  .elp .foreign-language-details{
+    background:white;
+  }
+  .elp.compose .section, .elp.compose .subsection, .elp.compose ol.compose-list > li.list-item{
+    margin-left:1rem;
+  }
+
+}

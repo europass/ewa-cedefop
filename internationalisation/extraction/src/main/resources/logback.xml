@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern> %-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="fout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/internationalisation/internationalisation-extraction.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${catalina.base}/logs/internationalisation/internationalisation-extraction.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
+            <MaxHistory>30</MaxHistory><!-- keep 30 days' worth of history -->
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern> %-5level %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="stdout" />
+        <appender-ref ref="fout"/>
+    </root>
+</configuration>

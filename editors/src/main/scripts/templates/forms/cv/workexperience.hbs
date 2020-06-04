@@ -1,0 +1,262 @@
+{{#with SkillsPassport}}
+
+	<fieldset>
+		<header>
+			<legend>{{get_text "LearnerInfo.WorkExperience" group="GuiLabel"}}</legend>
+		</header>
+		
+		{{#with_list_item LearnerInfo.WorkExperience ../Idx}}
+	
+			
+		<fieldset name="LearnerInfo.WorkExperience[{{list_index}}].Period" class="Experience Dates">
+			
+			<fieldset class="Experience Period">
+				<fieldset name="LearnerInfo.WorkExperience[{{list_index}}].Period.From">
+					<label for="LearnerInfo.WorkExperience.Dates.From">{{get_text "LearnerInfo.WorkExperience.Dates.From"}}</label>
+					{{> templates/forms/cv/workPeriodFrom}}
+				</fieldset>
+				<fieldset name="LearnerInfo.WorkExperience[{{list_index}}].Period.To">
+					<label for="LearnerInfo.WorkExperience.Dates.To">{{get_text "LearnerInfo.WorkExperience.Dates.To"}}</label>
+					{{> templates/forms/cv/workPeriodTo}}			   
+				</fieldset>
+				<div class="overlay" {{#if_eq Period.Current compare="true"}}style="display:block"{{else}}style="display: none;"{{/if_eq}}></div>
+			</fieldset>
+			
+			<fieldset name="LearnerInfo.WorkExperience[{{list_index}}].Period.Current" class="Date today checkbox-field">
+				<input 	type="checkbox"
+						id="LearnerInfo.WorkExperience[{{list_index}}].Period.Current"
+						class="formfield css-checkbox isBinary Date help today"
+						title
+						data-help-key="LearnerInfo.WorkExperience.Period.Current"
+						name="LearnerInfo.WorkExperience[{{list_index}}].Period.Current"
+						{{#if_eq Period.Current compare="true"}}checked="checked"{{/if_eq}}>
+				<label for="LearnerInfo.WorkExperience[{{list_index}}].Period.Current" class="css-label checkbox-label">{{get_text "LearnerInfo.WorkExperience.Dates.Current" group="GuiLabel"}}</label>
+			</fieldset>
+			
+			<fieldset name="LearnerInfo.WorkExperience[{{list_index}}].Period.Format period-format" class="DateFormat">
+				<label for="Period.Format">{{get_text "LearnerInfo.WorkExperience.Dates.Format"}}</label>
+				<div class="custom_select_wrapper">
+				<select title
+						name="LearnerInfo.WorkExperience[{{list_index}}].Period.format" 
+						data-bind-name="LearnerInfo.WorkExperience.array[{{list_index}}].Period" 
+							class="formfield hidden_select global-format format PrintingPreferences Work Period help with-placeholder"
+						data-help-key="LearnerInfo.WorkExperience.Period">
+					{{#with_pref_item ../../Preferences.ECV.LearnerInfo.WorkExperience.array list_index}}
+						{{#augment . Format=current_pref_item.Period.format DocumentType="ECV"}}
+							{{> templates/forms/dateformatoptions}}
+						{{/augment}}
+					{{/with_pref_item}}
+				</select>
+					<ul title
+							name="LearnerInfo.WorkExperience[{{list_index}}].Period.format" 
+							data-bind-name="LearnerInfo.WorkExperience.array[{{list_index}}].Period" 
+							class="formfield custom_select global-format format PrintingPreferences Work Period help with-placeholder"
+							data-help-key="LearnerInfo.WorkExperience.Period">
+						<li class="init" data-value=""></li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+							{{#date_format_options}}
+							<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+								{{text}}
+							</li>
+							{{/date_format_options}}
+						</ul>
+					</ul>
+				</div>
+				<span class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.WorkExperience.Dates.Format" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+			
+		</fieldset>
+			
+		<fieldset class="LearnerInfo.WorkExperience[{{list_index}}].Position Occupation" >
+			<label for="Position">{{get_text "LearnerInfo.WorkExperience.Position"}}</label>
+			<div class="composite occupation select" name="LearnerInfo.WorkExperience[{{list_index}}].Position">
+				<input type="text"  
+						class="formfield typeahead single help Position with-placeholder"
+						title
+						name="LearnerInfo.WorkExperience[{{list_index}}].Position.Label"
+						data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Position"
+						data-help-group="LearnerInfo.WorkExperience[{{list_index}}]"
+						rel="WorkExperience[{{list_index}}].Position"
+						placeholder="{{get_text "LearnerInfo.WorkExperience.Position" group="EditorPlaceholder"}}"
+						value="{{Position.Label}}">
+<!-- 				<span name="LearnerInfo.WorkExperience[{{list_index}}].Position.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.WorkExperience.Position" group="EditorPlaceholder"}}
+				</span> -->
+				<input type="hidden" 
+						name="LearnerInfo.WorkExperience[{{list_index}}].Position.Code"
+						value="{{Position.Code}}">
+
+                                <!-- div class="esco-description-area"></div -->
+
+			</div>
+		</fieldset>
+		
+		
+		<fieldset class="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo Organisation">
+		
+			<fieldset class="LearnerInfo.WorkExperience[{{list_index}}].Employer">
+				<label for="Employer" class ="wrk-emp-title">{{get_text "LearnerInfo.WorkExperience.Employer"}}</label>
+				<label for="Name">{{get_text "LearnerInfo.WorkExperience.Employer.Name"}}</label>
+				<input type="text" 
+					class="formfield single help with-placeholder"
+					title
+					name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Name"
+					data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.Name"
+					value="{{Employer.Name}}">
+				<span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Name" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.WorkExperience.Employer" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+		
+			<fieldset class="Organisation-Address hybrid">
+				<fieldset class="Municipality partOne">
+					<label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Municipality">{{get_text "LearnerInfo.WorkExperience.Employer.Municipality" group="GuiLabel"}}</label>
+					<input type="text" 
+							class="formfield help pref Address Municipality with-placeholder"
+							title
+							name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Municipality"
+							data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Municipality"
+							data-bind-name="group"
+							data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Employer.ContactInfo.Address"
+							value="{{Employer.ContactInfo.Address.Contact.Municipality}}">
+				   <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Municipality" class="help placeholder" style="display:none;">
+					      {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.Municipality" group="EditorPlaceholder"}}
+				   </span>
+				</fieldset>
+			    <fieldset class="Country partTwo">
+				  <label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country.Label">{{get_text "LearnerInfo.WorkExperience.Employer.Country" group="GuiLabel"}}</label>
+				  <div class="composite country select" name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country">
+						<input type="text"  
+								class="formfield typeahead help pref Organisation Address Country with-placeholder"
+								title
+								name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country.Label"
+								data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country.Label"
+								data-bind-name="group"
+								data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Employer.ContactInfo.Address"
+								rel="WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country"
+								placeholder="{{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}"
+								value="{{Employer.ContactInfo.Address.Contact.Country.Label}}">
+<!-- 					    <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country.Label" class="help placeholder" style="display:none;">
+					         {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}
+				        </span> -->
+						<input type="hidden"
+								name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.Country.Code"
+								value="{{Employer.ContactInfo.Address.Contact.Country.Code}}">
+					</div>
+				</fieldset>
+		</fieldset>
+
+        <fieldset id="Workexperience-More-Details-fld" class=workexperience-more-details>
+
+            <button type="button"
+                    name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Details_toggle_btn"
+                    class="toggle-expansion workexp {{#employer_extra_fields Employer.ContactInfo.Website.Contact Employer.Sector Employer.ContactInfo.Address.Contact.AddressLine Employer.ContactInfo.Address.Contact.PostalCode}} less {{else}} more {{/employer_extra_fields}}"
+                    data-rel-subform="SubForm:LearnerInfo.WorkExperience[{{list_index}}].Employer.Details">
+                    {{get_text "LearnerInfo.WorkExperience.Employer.Details" group="GuiLabel"}}
+            </button>
+			
+            <fieldset id="SubForm:LearnerInfo.WorkExperience[{{list_index}}].Employer.Details"
+                    class="LearnerInfo.WorkExperience[{{list_index}}].Employer.Details more details"
+                    {{#employer_extra_fields Employer.ContactInfo.Website.Contact Employer.Sector Employer.ContactInfo.Address.Contact.AddressLine Employer.ContactInfo.Address.Contact.PostalCode}} style="display:block;"  {{else}} style="display:none;"  {{/employer_extra_fields}}>
+
+                    <fieldset class="Organisation-Address Employer-Address hybrid">
+                        <fieldset class="partOneMore AddressLine with-icon">
+                            <label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.AddressLine">{{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.AddressLine"}}</label>
+                            <input type="text"
+                                    class="formfield help pref Address AddressLine with-placeholder"
+                                    title
+                                    name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.AddressLine"
+                                    data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.AddressLine"
+                                    data-bind-name="group"
+                                    data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Employer.ContactInfo.Address"
+                                    value="{{Employer.ContactInfo.Address.Contact.AddressLine}}">
+                            <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.AddressLine" class="help placeholder" style="display:none;">
+                                {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.AddressLine" group="EditorPlaceholder"}}
+                            </span>
+                        </fieldset>
+                        <fieldset class="partTwoLess PostalCode">
+                            <label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.PostalCode">{{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.PostalCode"}}</label>
+                            <input type="text"
+                                    class="formfield help pref Address PostalCode with-placeholder"
+                                    title
+                                    name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.PostalCode"
+                                    data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.PostalCode"
+                                    data-bind-name="group"
+                                    data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Employer.ContactInfo.Address"
+                                    value="{{Employer.ContactInfo.Address.Contact.PostalCode}}">
+                            <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+                                {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Address.Contact.PostalCode" group="EditorPlaceholder"}}
+                            </span>
+                        </fieldset>
+                </fieldset>
+
+                <fieldset class="Employer-Website" name="Website">
+                    <label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Website.Contact">
+                        {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Website.Contact"}}
+                    </label>
+                    <input type="url"
+                            class="formfield single help with-placeholder"
+                            title
+                            name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Website.Contact"
+                            data-help-key="LearnerInfo.WorkExperience.Employer.ContactInfo.Website.Contact"
+                            value="{{Employer.ContactInfo.Website.Contact}}">
+                    <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+                             {{get_text "LearnerInfo.WorkExperience.Employer.ContactInfo.Website" group="EditorPlaceholder"}}
+                    </span>
+                    <input type="hidden"
+                           name="LearnerInfo.WorkExperience[{{list_index}}].Employer.ContactInfo.Website.Use.Code"
+                           value="{{#if Employer.ContactInfo.Website.Contact}}business{{/if}}">
+                </fieldset>
+
+                <fieldset class="Employer-Sector">
+                    <div class="composite sector select" name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector">
+                        <label for="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector.Label">
+                            {{get_text "LearnerInfo.WorkExperience.Employer.Sector"}}
+                        </label>
+                        <input type="text"
+                                class="formfield typeahead single help Sector with-placeholder"
+                                title
+                                name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector.Label"
+                                data-help-key="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector.Label"
+                                rel="WorkExperience[{{list_index}}].Employer.Sector"
+                                placeholder="{{get_text "LearnerInfo.WorkExperience.Employer.Sector" group="EditorPlaceholder"}}"
+                                value="{{Employer.Sector.Label}}">
+    <!-- 			        <span name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector.Label" class="help placeholder" style="display:none;">
+                             {{get_text "LearnerInfo.WorkExperience.Employer.Sector" group="EditorPlaceholder"}}
+                        </span>-->
+                        <input type="hidden"
+                                name="LearnerInfo.WorkExperience[{{list_index}}].Employer.Sector.Code"
+                                value="{{Employer.Sector.Code}}">
+                    </div>
+                </fieldset>
+
+            </fieldset>
+        </fieldset>
+	</fieldset>
+		
+		
+	<fieldset rel="LearnerInfo.WorkExperience[{{list_index}}].Activities" class="editor">
+		<label for="Activities">{{get_text "LearnerInfo.WorkExperience.Activities"}}</label>
+		<textarea
+				id="LearnerInfo.WorkExperience[{{list_index}}]-textarea"
+				class="rich-editor single formfield help with-placeholder"
+				title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Activities"
+				data-help-key="LearnerInfo.WorkExperience.Activities"
+				placeholder="{{{get_text "LearnerInfo.WorkExperience.Activities" group="EditorPlaceholder"}}}"
+				>{{{Activities}}}</textarea>
+		<span name="LearnerInfo.WorkExperience[{{list_index}}].Activities" class="help placeholder" style="display:none;">
+			         {{{get_text "LearnerInfo.WorkExperience.Activities" group="EditorPlaceholder"}}}
+		</span>
+	 </fieldset>
+	 
+	{{/with_list_item}}
+	
+</fieldset>
+{{/with}}
+
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

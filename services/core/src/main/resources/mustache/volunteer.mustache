@@ -1,0 +1,25 @@
+{{#item}}
+
+{{#role}}
+	<p>
+		<strong>{{role}}</strong>
+{{/role}}
+{{#organization}}
+	{{^role}}
+	<p>
+	{{/role}}
+		{{#role}} | {{/role}}
+		<em>{{organization}}</em> 
+	{{^role}}
+	</p>
+	{{/role}}
+{{/organization}}
+{{#role}}
+	</p>
+{{/role}}
+
+{{#cause}}
+<p><em>{{cause}}</em></p>
+{{/cause}}
+
+{{/item}}

@@ -1,0 +1,56 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "CoverLetter.Letter.OpeningSalutation.Salutation.Header" group="GuiLabel"}}</legend>
+</header>
+			
+<fieldset class="CoverLetter.Letter.OpeningSalutation openingSalutation hybrid2">
+	<fieldset class="first">
+		<div class="composite select title" name="CoverLetter.Letter.OpeningSalutation.Salutation">
+			<label for="Title">{{get_text "CoverLetter.Letter.OpeningSalutation.Salutation"}}</label>
+			<input type="text"  
+					class="formfield help typeahead with-placeholder"
+					title
+					name="CoverLetter.Letter.OpeningSalutation.Salutation.Label"
+					data-help-key="CoverLetter.Letter.OpeningSalutation.Salutation.Label"
+					rel="CoverLetter.Letter.OpeningSalutation.Salutation"
+					value="{{CoverLetter.Letter.OpeningSalutation.Salutation.Label}}"
+					placeholder="{{get_text "CoverLetter.Letter.OpeningSalutation.Salutation" group="EditorPlaceholder"}}">
+<!-- 		      <span name="CoverLetter.Letter.OpeningSalutation.Salutation.Label" class="help placeholder" placeholder="" style="display:none;">
+					{{get_text "CoverLetter.Letter.OpeningSalutation.Salutation" group="EditorPlaceholder"}}
+			  </span>
+ -->		      <input type="hidden"
+					class="OpeningSalutation"
+					name="CoverLetter.Letter.OpeningSalutation.Salutation.Code"
+					data-help-key="CoverLetter.Letter.OpeningSalutation.Salutation.Code"
+					rel="CoverLetter.Letter.OpeningSalutation.Salutation"
+					value="{{CoverLetter.Letter.OpeningSalutation.Salutation.Code}}">
+		</div>
+		<div class="OpeningSalutation limitedOpenSalutation" id="limitedOpenSalutationDiv">
+			<label for="Title">{{get_text "CoverLetter.Letter.OpeningSalutation.Salutation"}}</label>
+			<input type="text" id="limitedOpenSalutationField"
+					class="formfield help mandatory Salutation with-placeholder"
+					title
+					name="CoverLetter.Letter.OpeningSalutation.Salutation.Label"
+					data-help-key="CoverLetter.Letter.OpeningSalutation.Salutation.Label"
+					value="{{CoverLetter.Letter.OpeningSalutation.Salutation.Label}}">
+		</div>
+	</fieldset>
+	<fieldset class="second">
+		<div class="addressee_surname" name="CoverLetter.Letter.OpeningSalutation.PersonName">
+			<label for="PersonName">{{get_text "CoverLetter.Letter.OpeningSalutation.PersonName"}}</label>
+			<input type="text" 
+			       class="formfield help mandatory PersonName with-placeholder"
+				   title
+				   name="CoverLetter.Letter.OpeningSalutation.PersonName.Surname"
+				   data-prev-value=""
+				   data-help-key="CoverLetter.Letter.OpeningSalutation.PersonName"
+				   value="{{CoverLetter.Letter.OpeningSalutation.PersonName.Surname}}">
+			<span name="CoverLetter.Letter.OpeningSalutation.PersonName" class="help placeholder" style="display:none;" >
+			  {{{get_text "CoverLetter.Letter.OpeningSalutation.PersonName" group="EditorPlaceholder"}}}
+			</span>
+		</div>
+	</fieldset>
+</fieldset>
+</fieldset>
+{{/with}}

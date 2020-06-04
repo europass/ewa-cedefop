@@ -1,0 +1,29 @@
+{{#item}}
+
+{{#title}}
+<p>
+	<strong>
+		{{#url}}<a href="{{url}}" target="_blank">{{/url}}{{title}}{{#url}}</a>{{/url}}
+	</strong>
+</p>
+{{#summary}}
+	<p>{{summary}}</p>
+{{/summary}}
+{{/title}}
+
+{{^title}}<p>{{/title}}
+{{#number}}{{number}}{{/number}}
+
+{{#status}}
+	{{#title}} | {{/title}}
+	<em>{{status}} </em>
+	{{#startDate}} | <em>{{formatStartDate}}</em>{{/startDate}}
+{{/status}}
+{{#office}} | <em> {{office}} </em>{{/office}}
+{{^title}}</p>{{/title}}
+
+{{#inventorsCommSeperatedListText}}
+	<p>{{inventorsCommSeperatedListText}}</p>
+{{/inventorsCommSeperatedListText}}
+
+{{/item}}

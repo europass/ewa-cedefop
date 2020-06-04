@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	
+	<xsd:include schemaLocation="http://europass.cedefop.europa.eu/xml/included/EuropassISOLanguages_V1.6.0.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "ISOLanguages" schema defines the list of language codes that may appear in the Europass XML documents.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	
+	<xsd:complexType name="LanguageType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an abstract type to describe a language. Generally a language is described by a label which may include a code attribute. E.g. for the Greek language it would be code: el , label: Greek.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="xsd:language"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="MotherLanguageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a mother language. The restriction is that a mother language cannot be an extinct language, or a language not used anymore, e.g. ancient Greek.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="motherCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The mother language code is defined in the included schema "EuropassISOLanguages". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="ForeignLanguageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an abstract type for a foreign language.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="foreignCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The foreign language code is defined in the included schema "EuropassISOLanguages". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

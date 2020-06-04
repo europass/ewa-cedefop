@@ -1,0 +1,93 @@
+{{#with SkillsPassport}}
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Linguistic.Edit" group="GuiLabel"}}</legend>
+	</header>
+	
+	<fieldset class="LearnerInfo.Identification.PersonName PersonName">
+		<fieldset class="LearnerInfo.Identification.PersonName.FirstName FirstName">
+			<label for="FirstName">{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}</label>
+			<input type="text" 
+					class="formfield help mandatory pref PersonName with-placeholder"
+					title
+					name="LearnerInfo.Identification.PersonName.FirstName"
+					data-bind-name="LearnerInfo.Identification.PersonName"
+					data-help-key="LearnerInfo.Identification.PersonName.FirstName"
+					data-bind-document="ELP ECV"
+					value="{{LearnerInfo.Identification.PersonName.FirstName}}">
+			<span name="LearnerInfo.Identification.PersonName.FirstName" class="help placeholder" style="display:none;" >
+			  {{{get_text "LearnerInfo.Identification.PersonName.FirstName" group="EditorPlaceholder"}}}
+			</span>
+		</fieldset>
+		<fieldset class="LearnerInfo.Identification.PersonName.Surname Surname">
+			<label for="Surname">{{get_text "LearnerInfo.Identification.PersonName.Surname"}}</label>
+			<input  type="text" 
+					class="formfield help mandatory pref PersonName with-placeholder"
+					title
+					name="LearnerInfo.Identification.PersonName.Surname"
+					data-bind-name="LearnerInfo.Identification.PersonName"
+					data-help-key="LearnerInfo.Identification.PersonName.Surname"
+					data-bind-document="ELP ECV"
+					value="{{LearnerInfo.Identification.PersonName.Surname}}">
+			<span name="LearnerInfo.Identification.PersonName.Surname" class="help placeholder" style="display:none;">
+				{{get_text "LearnerInfo.Identification.PersonName.Surname" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+	</fieldset>
+	
+	<fieldset class="LearnerInfo.Skills.Linguistic.MotherTongue" >
+		<label for="MotherTongue">{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="DocumentLabel"}}</label>
+		<div class="single multipliable compound auto-complete-list elp global"
+			data-excluded-sections="LearnerInfo.Skills.Linguistic.MotherTongue LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-excluded-global="" 
+			data-list-map="Language"> <!-- data-excluded-global left intentionally blank to be handled by the modal -->
+			{{#each_with_default LearnerInfo.Skills.Linguistic.MotherTongue item="{ \"Description\" : {\"Label\" : \"\" , \"Code\" : \"\"}  }"}}
+				<div class="level mother-tongue composite select elp" name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}]" data-index="{{index}}">
+					<input 	type="text" 
+							class="formfield typeahead single copy MotherTongue help with-placeholder"
+							title
+							name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Label"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.MotherTongue"
+							rel="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}]"
+							placeholder="{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="EditorPlaceholder"}}"
+							value="{{Description.Label}}">
+<!-- 					<span name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="EditorPlaceholder"}}
+					</span>-->
+					<input	type="hidden"
+							name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Code"
+							value="{{Description.Code}}"> 
+				</div>
+			{{/each_with_default}}
+		</div>
+	</fieldset>
+	
+	<fieldset class="ForeignLanguage ELP Overview" >
+		<label for="ForeignLanguage">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="DocumentLabel"}}</label>
+		<div class="single multipliable compound auto-complete-list elp global"
+			data-excluded-sections="LearnerInfo.Skills.Linguistic.MotherTongue LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-excluded-global=""
+			data-list-map="Language"> <!-- data-excluded-global left intentionally blank to be handled by the modal -->
+			{{#each_with_default LearnerInfo.Skills.Linguistic.ForeignLanguage item="{ \"Description\" : {\"Label\" : \"\" , \"Code\" : \"\"}  }"}}
+				<div class="level foreign-language composite select elp" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]" data-index="{{index}}">
+					<input 	type="text" 
+							class="formfield typeahead single copy ForeignLanguage help with-placeholder"
+							title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Description.Label"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.OtherLanguage"
+							rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]"
+							placeholder="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}"
+							value="{{Description.Label}}">
+<!-- 					<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Description.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}
+					</span>	-->
+					<input	type="hidden"
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Description.Code"
+							data-init-index="{{index}}"	
+							value="{{Description.Code}}">
+				</div>
+			{{/each_with_default}}
+		</div>
+	</fieldset>
+</fieldset>
+{{/with}}

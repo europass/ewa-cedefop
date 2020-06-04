@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+        /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:include schemaLocation="CommonTypes.xsd"/>
+    <xsd:include schemaLocation="Certificate.xsd"/>
+    <xsd:include schemaLocation="Documentation.xsd"/>
+    <xsd:include schemaLocation="Skill.xsd"/>
+    
+    
+    <xsd:complexType name="ComputerSkillType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a computer skill, which is modelled with one unstructured (free text) Description element, 
+                and it may provide additional information about proficiency level, and verification organization.
+                It may also accept Documentation information (reference document).
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="SkillType">
+                <xsd:sequence>
+                    <xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ProficiencyLevel" type="ComputerLevelType" minOccurs="0"/>
+                    <xsd:element name="VerifiedBy" type="ComputerCertificateListType" minOccurs="0"/>
+                    <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ComputerLevelType">
+        <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+                <xsd:sequence>
+                    <xsd:element name="Information" type="ICTLevelType" minOccurs="0"/>
+                    <xsd:element name="Communication" type="ICTLevelType" minOccurs="0"/>
+                    <xsd:element name="ContentCreation" type="ICTLevelType" minOccurs="0"/>
+                    <xsd:element name="Safety" type="ICTLevelType" minOccurs="0"/>
+                    <xsd:element name="ProblemSolving" type="ICTLevelType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="ICTLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The ICT Skill level is comprised of Basic, Independent or Proficient User
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<!--<xsd:pattern value="([A-C][12])?"/> -->
+			<xsd:enumeration value="A"/><!-- Basic User -->
+            <xsd:enumeration value="B"/><!-- Independent User -->
+            <xsd:enumeration value="C"/><!-- Proficient User -->
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="ComputerCertificateListType">
+        <xsd:complexContent>
+            <xsd:restriction base="CertificateListType">
+                <xsd:sequence>
+                    <xsd:element name="Certificate" type="ComputerCertificateType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ComputerCertificateType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a Computer Certificate by restricting elements allowing only title
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="CertificateType">
+                <xsd:sequence>
+                    <xsd:element name="Title" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+</xsd:schema>

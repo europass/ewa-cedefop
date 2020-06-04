@@ -1,0 +1,16 @@
+{
+  "apiStandardProfileRequest": {
+    "headers": {
+      "_total": 1,
+      "values": [{
+        "name": "x-li-auth-token",
+        "value": "name:O91G"
+      }]
+    },
+    "url": "http://api.linkedin.com/v1/people/UB2kruYmAL"
+  },
+  "id": "UB2kruYmAL",
+  "firstName": "Robert",
+  "lastName": "Drysdale",
+  "headline": "Software Architect" 
+}

@@ -1,0 +1,54 @@
+<fieldset class="linked-attachments">
+	<fieldset class="Attachment upload-area upload-button-set" id="fileupload" >
+		
+		<div class="browse-file-area">
+            <span class="u-highlight-text">{{get_text "Help.SkillsPassport.Attachment.Add.File.Label" group="EditorHelp"}}</span>
+            <menu class="Attachment choose-file" data-photo="false" data-signature="false">
+                <span class="button blue upload" title="{{get_text "import.wizard.location.option.local" group="GuiLabel"}}">
+					<span class="title">
+						<span>{{get_text "LearnerInfo.Attachment.Linked.Add" group="GuiLabel"}}</span>
+					</span>
+					<input type="file" name="file" size="1"  multiple="multiple">
+				</span>
+                <span class="button blue upload cloud-attach-action" data-attach-cloud="googledrive" data-index="1"
+                      title="{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}">
+					<span class="title">
+						<span>{{get_text "share.cloud.location.option.googledrive" group="GuiLabel"}}</span>
+					</span>
+				</span>
+                <span class="button blue upload cloud-attach-action" data-attach-cloud="onedrive" data-index="2
+                      title="{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}">
+					<span class="title">
+						<span>{{get_text "share.cloud.location.option.onedrive" group="GuiLabel"}}</span>
+					</span>
+				</span>
+                <span class="button blue upload cloud-attach-action"  data-attach-cloud="dropbox" data-index="3"
+                      title="{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}">
+					<span class="title">
+						<span>{{get_text "share.cloud.location.option.dropbox" group="GuiLabel"}}</span>
+					</span>
+				</span>
+			</menu>
+			
+			<div class="note">
+				<p>{{get_text "LearnerInfo.Attachment.Description" group="EditorHelp"}}</p>
+				<em class="attention">{{get_smart_text "LearnerInfo.Attachment.Files" group="EditorHelp" replacements="[ { \"key\" : \"[[file.max.size]]\", \"value\" :\"filesize\" }, {\"key\" : \"[[file.valid.types]]\", \"value\" :\"filetypes\"}, {\"key\" : \"[[file.max.cumulative.size]]\", \"value\" :\"fileCumulativeSize\"} ]"}}</em>
+			</div>
+		</div>
+
+        <header>
+            <legend>{{get_text "LearnerInfo.Attachment.Linked" group="GuiLabel"}}</legend>
+            <div class="clear"></div>
+        </header>
+
+        <div class="existing-file-details">
+            {{> templates/attachment/listlinkedattachmentactions}}
+        </div>
+
+        <div class="uploaded-files"></div>
+		
+		<div class="upload feedback-area"></div>
+	
+	</fieldset>
+
+</fieldset>

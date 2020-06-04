@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport 
+    xmlns="http://europass.cedefop.europa.eu/Europass"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass ./EuropassSchema.xsd" locale="en">
+    <VerifiableDocumentInfo>
+        <DocumentType>EX</DocumentType>
+        <CreationDate>2013-02-11T00:00:00.000+03:00</CreationDate>
+        <LastUpdateDate>2013-02-13T00:00:00.000+03:00</LastUpdateDate>
+        <XSDVersion>V3.1</XSDVersion>
+        <Generator>Oxygen Testing</Generator>
+        
+        <SigningInfo>
+            <SingeeList>
+                <Signee>
+                    <PersonName>
+                        <FirstName>Bernard</FirstName>
+                        <Surname>Leteuil</Surname>
+                    </PersonName>
+                    <ContactInfo>
+                        <Email>
+                            <Contact>Berteuil.letuil@mail.haute-ecole-de-namur.be</Contact>
+                        </Email>
+                        <TelephoneList>
+                            <Telephone>
+                                <Contact>+32 4123456</Contact>
+                            </Telephone>
+                        </TelephoneList>
+                    </ContactInfo>
+                </Signee>
+            </SingeeList>
+            
+            <Date year="2013" month="--02" day="---10"/>
+            
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <SignedInfo>
+                    <CanonicalizationMethod Algorithm=""></CanonicalizationMethod>
+                    <SignatureMethod Algorithm=""></SignatureMethod>
+                    <Reference>
+                        <DigestMethod Algorithm=""></DigestMethod>
+                        <DigestValue></DigestValue>
+                    </Reference>
+                </SignedInfo>
+                <SignatureValue></SignatureValue>
+            </Signature>
+            
+        </SigningInfo>
+        
+        <DocumentReference 
+            id="GR-123456789" 
+            uri="http://europass.cedefop.europa.eu/ex/GR-123456789"/>
+        
+        <ValidationInfo>
+            <Procedure>
+                &lt;ul&gt;&lt;li&gt;The information contained herein should be submitted at the national committee of validation of non-formal and informal training.&lt;/li&gt;&lt;/ul&gt;
+            </Procedure>
+        </ValidationInfo>
+    </VerifiableDocumentInfo>
+    
+    <LearnerInfo>
+        
+        <Identification>
+            <PersonName>
+                <FirstName>Alexis</FirstName>
+                <Surname>Papadopoulos</Surname>
+            </PersonName>
+            <ContactInfo>
+                <Email>
+                    <Contact>alexis.papadopoulos@gmail.com</Contact>
+                </Email>
+            </ContactInfo>
+            <Demographics>
+                <Birthdate year="1986" month="--06" day="---12"/>
+            </Demographics>
+        </Identification>
+        
+        <LearningExperienceList>
+            <Experience id="Experience">
+                <Period>
+                    <From year="2012" month="--01" day="---20"/>
+                    <To year="2012" month="--06" day="---30"/>
+                    <DurationEquivalent>6 months</DurationEquivalent>
+                </Period>
+                
+                <Field>
+                    <Role>
+                        <Code>held_position</Code>
+                        <Label>help the position of</Label>
+                    </Role>
+                    <Description>
+                        <Label>Visual impairment instructor and research practitioner</Label>
+                    </Description>
+                </Field>
+                
+                <Place>
+                    <Description>The Karlsruhe Institute of Technology Study Centre for the Visually Impaired Students (SZS)</Description>
+                    <Address>
+                        <Municipality>Berlin</Municipality>
+                        <Country>
+                            <Code>DE</Code>
+                            <Label>Germany</Label>
+                        </Country>
+                    </Address>
+                </Place>
+                                
+                <Organisation>
+                    <Name>Karlsruhe Institute of Technology</Name>
+                    <Logo>
+                        <MimeType>image/png</MimeType>
+                        <Data><!-- encoded bytes of the logo go here--></Data>
+                    </Logo>
+                </Organisation>
+                
+                <Outcomes>
+                    &lt;ul&gt;&lt;li&gt;Positive Developments in Psychosocial Intervention Research&lt;/li&gt;
+                    &lt;li&gt;New Developments in Non-Pharmacological Interventions&lt;/li&gt;
+                    &lt;li&gt;Using Technology to Support Social Engagement in People with Dementia&lt;/li&gt;
+                    &lt;li&gt;Interventions to Promote Well-being for People with Dementia and their Caregivers&lt;/li&gt;
+                    &lt;li&gt;Behavioral Alternatives to Anti-Psychotic Prescribing for People with Dementia&lt;/li&gt;&lt;/ul&gt;
+                </Outcomes>
+                
+                <Activities>
+                    &lt;ul&gt;&lt;li&gt;Positive Developments in Psychosocial Intervention Research&lt;/li&gt;
+                    &lt;li&gt;New Developments in Non-Pharmacological Interventions&lt;/li&gt;
+                    &lt;li&gt;Using Technology to Support Social Engagement in People with Dementia&lt;/li&gt;
+                    &lt;li&gt;Interventions to Promote Well-being for People with Dementia and their Caregivers&lt;/li&gt;
+                    &lt;li&gt;Behavioral Alternatives to Anti-Psychotic Prescribing for People with Dementia&lt;/li&gt;&lt;/ul&gt;
+                </Activities>
+                
+                <SponsoredBy>
+                    <Programme>
+                        <Code>ERA</Code>
+                        <Label>Erasmus for All / Leonardo Da Vinci</Label>
+                    </Programme>
+                    <Project>
+                        <Code>LDTV/23423/bla/2012</Code>
+                        <Label>Mobility and Orientation for Blind and Visually impaired Persons using IT technologies</Label>
+                    </Project>
+                    <Organiser>
+                        <Name>University of Crete</Name>
+                    </Organiser> 
+                </SponsoredBy>
+            </Experience>
+            
+        </LearningExperienceList>
+              
+        <Skills>
+            
+            <Linguistic>
+                <Skill>
+                    <Description>
+                        &lt;ul&gt;&lt;li&gt;Ability to pick up the hold of a telephone conversation for technical IT matters in Spanish&lt;/li&gt;&lt;/ul&gt;
+                    </Description>
+                    <AcquiredDuring>
+                        <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                    </AcquiredDuring>
+                </Skill>
+            </Linguistic>
+            
+            <Communication>
+                <Skill resourceRef="http://europass.cedefop.europa.eu/TechnicalResources/XML/rdceo/competencies/Europass-Skills-Social.xml">
+                    <Description>
+                        &lt;ul&gt;&lt;li&gt;ability to communicate in an appropriate and convincing manner in French orally&lt;/li&gt;&lt;/ul&gt;
+                    </Description>
+                    <AcquiredDuring>
+                        <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                    </AcquiredDuring>
+                </Skill>
+            </Communication>
+            
+            <Organisational>
+                <Skill resourceRef="http://europass.cedefop.europa.eu/TechnicalResources/XML/rdceo/competencies/Europass-Skills-Organisational.xml">
+                    <Description>
+                         &lt;ul&gt;&lt;li&gt;ability to adapt to the work autonomously&lt;/li&gt;&lt;/ul&gt;
+                     </Description>
+                     <AcquiredDuring>
+                         <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                     </AcquiredDuring>
+                </Skill>
+            </Organisational>
+            
+            <Computer>
+                <Skill resourceRef="http://europass.cedefop.europa.eu/TechnicalResources/XML/rdceo/competencies/Europass-Skills-Computer.xml">
+                    <Description>
+                        &lt;ul&gt;&lt;li&gt;ability to adapt to the work autonomously ability to create and maintain a customer database in Excel&lt;/li&gt;&lt;/ul&gt;
+                    </Description>
+                    <AcquiredDuring>
+                        <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                    </AcquiredDuring>
+                </Skill>
+            </Computer>
+            
+            <Other>
+                <Skill resourceRef="http://europass.cedefop.europa.eu/TechnicalResources/XML/rdceo/competencies/Europass-Skills-Other.xml">
+                    <Description>
+                     &lt;ul&gt;&lt;li&gt;ability to adapt to the work autonomously&lt;/li&gt;&lt;/ul&gt;
+                     </Description>
+                    <AcquiredDuring>
+                         <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                     </AcquiredDuring>
+                </Skill>
+                <Skill resourceRef="http://europass.cedefop.europa.eu/TechnicalResources/XML/rdceo/competencies/Europass-Skills-Other.xml">
+                    <Description>
+                        &lt;ul&gt;&lt;li&gt;ability to communicate in an appropriate and convincing manner in French orally&lt;/li&gt;&lt;/ul&gt;
+                    </Description>
+                    <AcquiredDuring>
+                        <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                    </AcquiredDuring>
+                </Skill>
+            </Other>
+        </Skills>
+        
+        <AchievementList>
+            <Achievement>
+                <Title><Label>Additional Information</Label></Title>
+                <Description>
+                    &lt;ul&gt;&lt;li&gt;The person was very well adapted to the environment and was very quick to learn.&lt;/li&gt;
+                    &lt;li&gt;Improving Quality of Life for People with Dementia in the Community&lt;/li&gt;&lt;/ul&gt;
+                </Description>
+                <AccomplishedDuring>
+                    <ReferencedExperience resourceRef="http://europass.cedefop.europa.eu/ex/GR-123456789#Experience"/>
+                </AccomplishedDuring>
+            </Achievement>
+        </AchievementList>
+        
+    </LearnerInfo>
+    
+</SkillsPassport>

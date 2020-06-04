@@ -1,0 +1,234 @@
+<dt class="label list section-heading" style="display:none"><span>ELP Foreign Languages List</span></dt>
+
+<ol class="language-list sortable compose-list" 
+	id="List:SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage" 
+	data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+	data-bind-document="ECV ELP">
+	
+	{{#each_with_index SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+	<li class="subsection-container compose-list list-item highlight-container"
+		id="ListItem:LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]"
+		data-rel-index="{{index}}">
+ 
+		<div class="foreign-language-title">
+		{{#isEmptyObject Description.Label}}
+			&ndash;
+		{{else}}
+			{{Description.Label}}
+		{{/isEmptyObject}}	
+		</div>
+		
+		<dl class="foreign-language-details">
+
+			{{#if_gt ../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare="1"}}
+<!-- 				<span class="sortable_placeholder tip spot tip-addLeft language-sorter" data-tip.position="top-left"> -->
+<!-- 					  <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span></span> -->
+			
+				<button type="button"
+						        name="move_up"
+						        class="sort-move-up {{#if_eq index compare="0"}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_eq}}"
+						        data-tip.position="top-left">
+          
+						        <span>UP</span>
+						         <span class="data-title" style="display:none;">{{get_text "Move.Sort.Upwards" group="EditorHelp"}}</span>
+						        </button>
+						<button type="button"
+						        name="move_down"
+						        class="sort-move-down {{#if_last_item ../../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare=index}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_last_item}}"
+						        data-tip.position="top-left">
+								<span>DOWN</span>
+								<span class="data-title" style="display:none;">{{get_text "Move.Sort.Downwards" group="EditorHelp"}}</span>
+								</button>
+				
+				{{#if_last_item ../../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare=index}}
+					<button type="button"
+							        name="move_top"
+							        class="sort-move-top tip spot tip-removeLeft--10pixels"
+							        data-tip.position="top-left">
+							        <span>TOP</span>
+							        <span class="data-title" style="display:none;">{{get_text "Move.Sort.ToTop" group="EditorHelp"}}</span>
+				                    </button>
+				{{/if_last_item}}
+			
+			{{/if_gt}}
+			
+			<menu class="section manage">
+				<button type="button"
+			        name="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]_delete_btn"
+			        class="elp delete tip spot nested-tip tip-addRight bg-hover" data-tip.position="top-right"
+			        data-rel-form="Form:ElpForeignLanguage[{{index}}].ProficiencyLevel"
+			        data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]"
+			        data-rel-view="Compose:ElpForeignLanguagesList"
+			        data-rel-index="{{index}}">
+			    <span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+			    </button>
+			</menu>
+			
+			<dt class="self-assessment label">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.SelfAssessment"  group="DocumentLabel"}}
+			</dt>
+			
+			<dd class="self-assessment opens-modal-form"
+				data-rel-doc="elp"
+				data-rel-clazz="ElpProficiencyLevelFormView"
+				data-rel-form="Form:ElpForeignLanguage[{{index}}].ProficiencyLevel"
+				data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].ProficiencyLevel SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Description"
+				data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+				data-rel-index="{{index}}">
+				<table id="List:SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].ProficiencyLevel"  class="self-assessment list-actions" summary="{{Description.Label}}">
+					<caption>{{Description.Label}}</caption>
+					
+					<thead>
+					<tr>
+						<th class="label understanding" colspan="2">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Understanding"  group="DocumentLabel"}}
+						</th>
+						<th class="label speaking" colspan="2">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Speaking" group="DocumentLabel" }}
+						</th>
+						<th class="label main-writing">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="DocumentLabel" }}
+						</th>
+					</tr>
+					<tr>
+						<th class="label listening">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="DocumentLabel" }}
+						</th>
+						<th class="label reading">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="DocumentLabel" }}
+						</th>
+						<th class="label spoken-interaction">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction"  group="DocumentLabel"}}
+						</th>
+						<th class="label spoken-production">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="DocumentLabel" }}
+						</th>
+						<th class="label writing">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing.elp" group="DocumentLabel" }}
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- <div class="edit-indicator"><span>{{get_text "Buttons.Edit.Content"}}</span></div> -->
+					<tr class="menu-placeholder value description">
+						{{#if ProficiencyLevel}}
+						
+						<td class="listening value">
+							<span class="cefr-level">{{ProficiencyLevel.Listening}}</span>
+							<span class="cefr-short-description">{{#showLangShortDescr ProficiencyLevel.Listening "LanguageShortLevelMap"}}{{.}}{{/showLangShortDescr}}</span>
+							{{#unless ProficiencyLevel.Listening}}
+								<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="EditorPlaceholder"}}</span>
+							{{/unless}}
+						</td>
+						<td class="reading value">
+							<span class="cefr-level">{{ProficiencyLevel.Reading}}</span>
+							<span class="cefr-short-description">{{#showLangShortDescr ProficiencyLevel.Reading "LanguageShortLevelMap"}}{{.}}{{/showLangShortDescr}}</span>
+							{{#unless ProficiencyLevel.Reading}}
+								<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="EditorPlaceholder"}}</span>
+							{{/unless}}
+						</td>
+						<td class="spoken-interaction value">
+							<span class="cefr-level">{{ProficiencyLevel.SpokenInteraction}}</span>
+							<span class="cefr-short-description">{{#showLangShortDescr ProficiencyLevel.SpokenInteraction "LanguageShortLevelMap"}}{{.}}{{/showLangShortDescr}}</span>
+							{{#unless ProficiencyLevel.SpokenInteraction}}
+								<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction" group="EditorPlaceholder"}}</span>
+							{{/unless}}
+						</td>
+						<td class="spoken-production value">
+							<span class="cefr-level">{{ProficiencyLevel.SpokenProduction}}</span>
+							<span class="cefr-short-description">{{#showLangShortDescr ProficiencyLevel.SpokenProduction "LanguageShortLevelMap"}}{{.}}{{/showLangShortDescr}}</span>
+							{{#unless ProficiencyLevel.SpokenProduction}}
+								<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="EditorPlaceholder"}}</span>
+							{{/unless}}
+						</td>
+						<td class="menu-placeholder writing value">
+							<span class="cefr-level">{{ProficiencyLevel.Writing}}</span>
+							<span class="cefr-short-description">{{#showLangShortDescr ProficiencyLevel.Writing "LanguageShortLevelMap"}}{{.}}{{/showLangShortDescr}}</span>
+							{{#unless ProficiencyLevel.Writing}}
+								<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}</span>
+							{{/unless}}
+							<menu class="section manage">
+								<button class="opens-modal-form edit extra language-levels tip spot nested-tip tip-addRight"
+                                        data-tip.position="top-right">
+                                    <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+								</button>
+								<button type="button"
+							            name="ElpForeignLanguage[{{index}}].ProficiencyLevel_delete_btn"
+							            class="elp delete tip spot nested-tip tip-addRight"
+							            data-rel-form="Form:ElpForeignLanguage[{{index}}].ProficiencyLevel"
+							            data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].ProficiencyLevel"
+							            data-rel-view="Compose:ElpForeignLanguagesList"
+							            data-rel-index="{{index}}"
+							            data-tip.position="top-right">
+							        <span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+							    </button>			
+							</menu>			
+						</td>
+						{{/if}}
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+					{{#unless ProficiencyLevel}}
+						<td colspan="7" class="empty">
+							<button class="empty add opens-modal-form">
+								<span class="img-placeholder">&nbsp;</span>
+								<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span>
+							</button>
+						</td>
+					{{/unless}}
+					</tr>
+					</tfoot>
+				</table>
+				
+			</dd> 
+		
+			
+						
+			<dt class="linguistic-certificates label">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificates" group="DocumentLabel" }}</dt>
+			<dd id="Compose:LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Certificate"
+				class="linguistic-certificates"
+				data-rel-index="{{index}}">
+				
+			</dd>
+		
+			
+			<dt class="linguistic-experiences label">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience" group="DocumentLabel" }}</dt>
+			<dd id="Compose:LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}].Experience"
+				data-rel-index="{{index}}"
+				class="linguistic-experiences">
+				
+			</dd>
+		</dl>
+ 		
+	</li>
+	{{/each_with_index}}
+		
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+		
+
+	{{else}}
+	<li class="compose-list empty">
+	<button type="button" 
+		name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}]_add_btn" 
+		class="compose-list add opens-modal-form elp-language" 
+		data-rel-doc="elp"
+		data-rel-clazz="ElpProficiencyLevelFormView"
+		data-rel-form="Form:New:ElpForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}].ProficiencyLevel"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}]"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+		data-rel-index="{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}">
+		<span class="img-placeholder">&nbsp;</span>
+		<span>
+		{{#if_lt SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare="1"}}
+			{{get_text "Buttons.Add.Content" group="GuiLabel"}}
+		{{/if_lt}}
+		{{#if_gteq SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare="1"}}
+			{{get_text "Buttons.Add.Content.Not.Empty.Language" group="GuiLabel"}}
+		{{/if_gteq}}
+		</span>
+	</button>
+	</li>
+	{{/isEmptyObject}}
+</ol>
+	

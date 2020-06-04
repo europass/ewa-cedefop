@@ -1,0 +1,25 @@
+{{=[[ ]]=}}
+	<style:header>
+		{{#DocumentInfo.EuropassLogo}}
+		<text:p text:style-name="MP1">
+		<draw:frame draw:style-name="Mfr1" draw:name="graphics1" text:anchor-type="paragraph" svg:width="4.491cm" svg:height="1.289cm" draw:z-index="19">
+        <draw:image xlink:href="Pictures/100002010000021300000095AD132CD4.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+		<svg:title>[[#resources]][[& Accessibility:Europass:Logo]][[/resources]]</svg:title>
+		</draw:frame>
+		<text:tab/>[[#resources]][[& Document:Header:CV]][[/resources]]</text:p>
+		{{/DocumentInfo.EuropassLogo}}
+		{{^DocumentInfo.EuropassLogo}}
+		<table:table table:name="_ECV_Table10_No_Logo" table:style-name="_ECV_Table10_No_Logo">
+						<table:table-column table:style-name="_ECV_Table10.A_No_Logo" />
+						<table:table-column table:style-name="_ECV_Table10.B_No_Logo" />
+						<table:table-row table:style-name="_ECV_Table10.1_No_Logo">
+							<table:table-cell table:style-name="_ECV_Table10.A1_No_Logo" office:value-type="string">
+							<text:p text:style-name="MP3_ECV_NO_LOGO">
+								<text:span text:style-name="MT2_NO_LOGO">[[#resources]][[& Document:Header:CV]][[/resources]]</text:span></text:p>
+							</table:table-cell>
+							<table:table-cell table:style-name="_ECV_Table10.B1_No_Logo" office:value-type="string">
+							</table:table-cell>
+				        </table:table-row>
+		 </table:table>
+        {{/DocumentInfo.EuropassLogo}}
+	</style:header>

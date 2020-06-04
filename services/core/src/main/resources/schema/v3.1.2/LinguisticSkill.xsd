@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+        /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+
+    <xsd:include schemaLocation="CommonTypes.xsd"/>
+    <xsd:include schemaLocation="Skill.xsd"/>
+    <xsd:include schemaLocation="Language.xsd"/>
+    <xsd:include schemaLocation="Certificate.xsd"/>
+    <xsd:include schemaLocation="Experience.xsd"/>
+
+    <xsd:complexType name="LinguisticSkillType">
+        <xsd:sequence>
+            <xsd:element name="MotherTongueList" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="MotherTongue" type="MotherTongueSkillType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignLanguageList" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="ForeignLanguage" type="ForeignLanguageSkillType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="MotherTongueSkillType">
+        <xsd:complexContent>
+            <xsd:restriction base="SkillType">
+                <xsd:sequence>
+                    <xsd:element name="Description" type="MotherLanguageType" minOccurs="0"/>
+                    <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ForeignLanguageSkillType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Restricts the generic skill type by specifying the data type of the elements that describe the level of knowledge of the language and related linguistic diplomas and/or experiences. 
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="SkillType">
+                <xsd:sequence>
+                    <xsd:element name="Description" type="ForeignLanguageType" minOccurs="0"/>
+                    <xsd:element name="ProficiencyLevel" type="ProficiencyLevelType" minOccurs="0"/>
+                    <xsd:element name="AcquiredDuring" minOccurs="0" type="LinguisticExperienceListType"/>
+                    <xsd:element name="VerifiedBy" type="LinguisticCertificateListType" minOccurs="0"/>
+                    <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ProficiencyLevelType">
+        <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+                <xsd:sequence>
+                    <xsd:element name="Listening" type="CEFLanguageLevelType" minOccurs="0"/>
+                    <xsd:element name="Reading" type="CEFLanguageLevelType" minOccurs="0"/>
+                    <xsd:element name="SpokenInteraction" type="CEFLanguageLevelType" minOccurs="0"/>
+                    <xsd:element name="SpokenProduction" type="CEFLanguageLevelType" minOccurs="0"/>
+                    <xsd:element name="Writing" type="CEFLanguageLevelType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LinguisticCertificateListType">
+        <xsd:complexContent>
+            <xsd:restriction base="CertificateListType">
+                <xsd:sequence>
+                    <xsd:element name="Certificate" type="LinguisticCertificateType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LinguisticCertificateType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a Linguistic Certificate by restricting the allowed type for the level element to be "CEFLanguageLevel"
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="CertificateType">
+                <xsd:sequence>
+                    <xsd:element name="Title" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="AwardingBody" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Date" type="DateType" minOccurs="0"/>
+                    <xsd:element name="Level" type="CEFLanguageLevelType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LinguisticExperienceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Extends the generic ExperienceType to include information about an experience that results in acquiring linguistic skills.
+                Contains information about the period the linguistic experience took place and the area/context into which it is acquiared. 
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+                <xsd:sequence>
+                    <xsd:element name="Period" type="PeriodType" minOccurs="0"/>
+                    <xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Documentation" minOccurs="0" type="IntraDocumentDocumentationType"/>
+                    <xsd:element name="Area" type="LinguisticExperienceAreaType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="LinguisticExperienceListType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a list of Experiences.  
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="AbstractExperienceListType">
+                <xsd:sequence>
+                    <xsd:element name="Experience" type="LinguisticExperienceType" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    
+    <!-- Linguistic Experience Area -->
+    <xsd:complexType name="LinguisticExperienceAreaType">
+        <xsd:complexContent>
+            <xsd:restriction base="LabelType">
+                <xsd:sequence>
+                    <xsd:element name="Code" minOccurs="0" type="LinguisticExperienceAreasEnumeration"/>
+                    <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    
+    <xsd:simpleType name="LinguisticExperienceAreasEnumeration">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="studying_training_language"/>
+            <xsd:enumeration value="work_language"/>
+            <xsd:enumeration value="living_traveling_language"/>
+            <xsd:enumeration value="mediating_groups_language"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+</xsd:schema>

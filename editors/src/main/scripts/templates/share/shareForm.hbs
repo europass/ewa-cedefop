@@ -1,0 +1,63 @@
+<div id="share-for-review" style="display: none">
+	<div id="notification-copy"></div>
+	<header style="display: block;">
+		<div class="top-share-btns">
+			<button id="share-cv-btn" class="toggle-share-btn share-cv button blue-pressed">
+				<span class="txt">{{get_text "share.document.blue.button.share" group="GuiLabel"}}</span>
+			</button>
+			<button id="manage-shares-btn" class="toggle-share-btn manage-shares button">
+				<span class="txt">{{get_text "share.document.blue.button.manage" group="GuiLabel"}}</span>
+			</button>
+		</div>
+	</header>
+	<div class="share-note">
+		<span class="share-content">
+			<span class="share-txt">{{get_text	"share.cloud.note.content.text" group="GuiLabel"}}</span>
+		</span>
+	</div>
+	<fieldset class="share-user-email" style="padding-top: 20px"><p> User email: <span class="email"></span></p></fieldset>
+	<fieldset class="share-to-link">
+		<label for="share-to-link" class="share-link-label"></label>
+		<div class="placeholding hasValue share-option">
+			<input class="formfield share-cloud-link" id="europass-cloud-share-link" readonly>
+			<button id="copy-link-btn" class="button blue copy-link-action"><span>&nbsp</span></button>
+		</div>
+	</fieldset>
+	<fieldset class="email-address">
+		<label for="email-address">{{get_text "share.cloud.label.email.addres" group="GuiLabel"}}</label>
+		<div class="placeholding hasValue">
+			<input class="formfield email">
+			<input type="hidden" class="formfield share-user-email" id="share-user-email" readonly>
+		</div>
+	</fieldset>
+	<fieldset class="editor">
+		<label for="share-comment-textarea">{{get_text "share.cloud.label.comments.textarea" group="GuiLabel"}}</label>
+		<div class="help placeholding">
+			<textarea class="no-rte single formfield noHelp with-placeholder ckeditor-box" id="share-comment-textarea" cols="10"></textarea>
+		</div>
+	</fieldset>
+	<fieldset class="feedback-area" id="share-warning-msg">
+		<section class="notification error" style="">
+			<div data-rel-key="" class="message-area">
+				<p></p>
+			</div>
+		</section>
+	</fieldset>
+	<button class="button cancel share-form">{{get_text "Buttons.Cancel" group="GuiLabel"}}</button>
+	<button class="green button send" id="btn-send-review">
+		<span>{{get_text "share.cloud.green.button.send" group="GuiLabel"}}</span>
+	</button>
+</div>
+<div id="manage-share-drawer" style="display: none">
+	<div id="notification-revoke"></div>
+	<header class="manage-hdr">
+		<div class="top-share-btns">
+			<button id="share-cv-btn" class="toggle-share-btn share-cv button blue-pressed">
+				<span class="txt">{{get_text "share.document.blue.button.share" group="GuiLabel"}}</span>
+			</button>
+			<button id="manage-shares-btn" class="toggle-share-btn manage-shares button">
+				<span class="txt">{{get_text "share.document.blue.button.manage" group="GuiLabel"}}</span>
+			</button>
+		</div>
+	</header>
+</div>

@@ -1,0 +1,21 @@
+<header>
+    <legend>{{get_text "text.import" group="GuiLabel"}}</legend>
+
+
+
+    <div class="import-overwrite-option">
+        <span>{{get_text "import.wizard.step3.overwrite.option.description" group="GuiLabel"}}</span>
+    </div>
+
+</header>
+
+{{#each docs}}
+    <fieldset class="export-checkbox import-doc-select">
+        <input type="checkbox"
+               id="Import_Option_Doc_{{name}}"
+               class="css-checkbox formfield help enabled"
+               name="{{name}}">
+        <label for="Import_Option_Doc_{{name}}"
+               class="css-label checkbox-label formfield-label enabled"> {{title}} </label>
+    </fieldset>
+{{/each}}

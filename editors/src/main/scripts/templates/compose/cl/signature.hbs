@@ -1,0 +1,43 @@
+
+	
+<div class="Signature value CoverLetter.ClosingSalutation active{{#isEmptyObject SkillsPassport.LearnerInfo.Identification.Signature}} nosignature{{/isEmptyObject}}"
+	data-rel-help-section="Help.SkillsPassport.LearnerInfo.Identification.Signature"
+	data-rel-section="SkillsPassport.LearnerInfo.Identification.Signature"
+	data-rel-index=""
+	rel="tooltip">
+	{{#if SkillsPassport.LearnerInfo.Identification.Signature}}
+			
+		<div class="signature-preview-area">
+			<img id="signature-cl-photo"
+				{{#get_obj_metadata SkillsPassport.LearnerInfo.Identification.Signature key="cropping"}}
+				
+				 	{{#if cropping}}
+				 		{{#with cropping}}
+				 		style="width:{{width}}px;height:{{height}}px;margin-left:-{{x}}px;margin-top:-{{y}}px;" 
+				  		{{/with}}
+					{{else}}				
+					{{#get_dimension_metadata . type="signature"}}
+				 		style="width:{{width}}px;height:{{height}}px;"
+	 			  	{{/get_dimension_metadata}}
+	
+					{{/if}}
+				{{/get_obj_metadata}}
+				 
+				 	src="{{SkillsPassport.LearnerInfo.Identification.Signature.TempURI}}" 
+				 	alt="{{get_text "LearnerInfo.Identification.Signature" group="GuiLabel"}}"/>
+
+		</div>
+		<button type="button" 
+				name="SkillsPassport.LearnerInfo.Identification.Signature_delete_btn" 
+				class="signature delete tip spot"
+				data-rel-section="SkillsPassport.LearnerInfo.Identification.Signature"
+				data-rel-view="Compose:CL:ClosingSalutation"
+				data-rel-index="">
+			 <span class="data-title" style="display:none;">{{get_text "Delete.Photo" group="EditorHelp"}}</span>
+		</button>
+	{{else}}
+		<span class="upload-prompt">{{get_text "LearnerInfo.Identification.Signature.Upload.Prompt" group="GuiLabel"}}</span>
+	{{/if}}
+	
+	
+</div>

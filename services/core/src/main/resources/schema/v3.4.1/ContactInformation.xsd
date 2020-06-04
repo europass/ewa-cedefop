@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://europass.cedefop.europa.eu/Europass"
+	targetNamespace="http://europass.cedefop.europa.eu/Europass" elementFormDefault="qualified">
+
+	<!--
+	   /*
+		* Copyright European Union 2002-2019
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include
+		schemaLocation="https://europass.cedefop.europa.eu/xml/included/EuropassISOCountries_V1.7.0.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "ISOCountries" schema defines the list of country codes that may appear in the Europass XML documents. 
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+
+	<xsd:include schemaLocation="CommonTypes.xsd"/>
+
+	<!-- Contact Information -->
+	<xsd:complexType name="ContactInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains all the available methods of contacting individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Address" type="ContactAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Email" type="ContactEmailType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="TelephoneList" type="TelephoneListType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="WebsiteList" type="WebsiteListType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="InstantMessagingList" type="InstantMessagingListType" minOccurs="0"
+				maxOccurs="1"/>
+			<xsd:element name="ContactMethodList" type="ContactMethodListType" minOccurs="0"
+				maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ContactMethodListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Lists any other method of contacting an individual - extension point.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ContactMethod" type="ContactMethodType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ContactMethodType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains information about the available contact methods for the individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="xsd:anyType"/>
+			<xsd:element name="Use" minOccurs="0" maxOccurs="1" type="LabelType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Defines the use of the contact method. This might be different depending on the contact method chosen. Also it might be absent, as for example is the case for the Contact Addess Type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="TelephoneListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Lists the telephone numbers owned by the individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Telephone" type="TelephoneType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TelephoneType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="1" type="TelephoneUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="WebsiteListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Lists the websites that are owned, built by or refer to the individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Website" type="WebsiteType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="WebsiteType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="1" type="WebsiteUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="InstantMessagingListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Lists the instant messaging accounts numbers owned by the individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="InstantMessaging" type="InstantMessagingType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="InstantMessagingType">
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="1"
+						type="InstantMessagingUseLabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="ContactEmailType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines the email address of an individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="0" maxOccurs="1"
+						type="ContactEmailContactType"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="0" type="LabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="ContactEmailContactType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Pattern to accept text formatted as email address.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[^@]+@[^\.]+\..+">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Pattern to accept text formatted as email address.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="ContactAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines the contact address of an individual.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="ContactMethodType">
+				<xsd:sequence>
+					<xsd:element name="Contact" minOccurs="0" maxOccurs="1" type="AddressInfoType"/>
+					<xsd:element name="Use" minOccurs="0" maxOccurs="0" type="LabelType"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="AddressInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an address which is described by the address line, usually referring to the residence's street and street number, 
+				a second address line, usually refering to the building or apartment number, the municipality, postal code and country.
+				The minimum required information is the Country.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="AddressLine" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AddressLine2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PostalCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Municipality" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Country" type="CountryType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<!-- Country -->
+	<xsd:complexType name="CountryType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a country. The country is described by a code and a label. E.g. code: FR, label: France.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" maxOccurs="1" type="countryCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Defines the country code type. The type is defined in the included schema "EuropassISOCountries". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<!-- Telephone use  -->
+	<xsd:complexType name="TelephoneUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="TelephoneUsesEnumeration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="TelephoneUsesEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="home"/>
+			<xsd:enumeration value="work"/>
+			<xsd:enumeration value="mobile"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- Website use  -->
+	<xsd:complexType name="WebsiteUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="WebsiteUsesEnumeration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="WebsiteUsesEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="personal"/>
+			<xsd:enumeration value="business"/>
+			<xsd:enumeration value="blog"/>
+			<xsd:enumeration value="portfolio"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- InstantMessaging use  -->
+	<xsd:complexType name="InstantMessagingUseLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="InstantMessagingUsesEnumeration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="InstantMessagingUsesEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="gtalk"/>
+			<xsd:enumeration value="skype"/>
+			<xsd:enumeration value="icq"/>
+			<xsd:enumeration value="msn"/>
+			<xsd:enumeration value="yahoo"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+</xsd:schema>

@@ -1,0 +1,678 @@
+
+.button  {
+  border-radius: 7px;
+  transition-property: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin: 20px 0 1px 0;
+  font-size: 15px;
+  line-height: 1em;
+  font-weight: 700;
+  padding: 13px 13px;
+  width: 200px;
+  text-align: center;
+  border:none;
+  /*background-image: -moz-linear-gradient(top, @grey-gradient-start-color 0%, @grey-gradient-end-color 100%);
+  background-image: -webkit-linear-gradient(top, @grey-gradient-start-color 0%, @grey-gradient-end-color 100%);
+  background-image: linear-gradient(to bottom, @grey-gradient-start-color 0%, @grey-gradient-end-color 100%);*/
+  cursor:pointer;
+  &.grey-btn-padding {
+    padding: 18px 22px;
+    
+  }
+}
+
+.button.finish {
+  color:white;
+  &:before{
+    content:"\e900";
+    font-family:"europass-application"!important;
+    position: relative;
+    left: -20px;
+    font-size: 18px;
+    margin: -5px;
+  }
+}
+
+.button.submit.submit,
+.button.blue.upload,
+button.connect,
+button.confirm-submit,
+button.next,
+button.complete,
+.confirm-save.load-cv-document,
+.basic-principles-content .principles-bot-btn,
+.prepare-your-interview-content .interview-bot-btn,
+.appsettings-info .button.green,
+#redactor-modal-box .redactor-modal-action-btn,
+#btn-ok-to-job-portal,
+#cloudManageDocumentsRadioForm .confirm-delete-action,
+#cloudManageDocumentsRadioForm .stop-sharing-document,
+#cloudManageDocumentsRadioForm .confirm-share-action {
+  background: @blue-regular;
+  color: @white;
+  &:hover {
+    background: @blue;
+  }
+  span {
+    color: @white;
+    font-weight: bold;
+  }
+}
+//submit btn
+/*button.confirm-submit,
+.browse-file-area .button.blue.upload.uploading,
+.dropzone fieldset.add-new .Attachment.choose-file .button.blue.upload {
+  background: @blue-regular;
+  color: @white;
+  &:hover {
+    background: darken(@blue-regular, 5%);
+  }
+  span {
+    color: @white;
+    font-weight: bold;
+  }
+}*/
+
+//main blue --> @blue-regular
+//hover --> @blue
+
+.button.cancel.cancel,
+.confirm-cancel,
+#cloudManageDocumentsRadioForm .reject-share-action,
+#btn-return-to-eures,
+#redactor-modal-box .redactor-modal-close-btn,
+.ui-sendfeedback-area .success .buttons .return,
+.confirm-discard-load.load-cv-document,
+#cloudManageDocumentsRadioForm .reject-delete-action {
+  background: @white;
+  color: gray;
+  border: 1px solid gray;
+  &:hover {
+    background: #eaeaea;
+    color: darken(gray, 8%);
+    border: 1px solid darken(gray, 8%);
+  }
+  span {
+    color: gray !important;
+    font-weight: bold;
+    &:hover {
+      color: darken(gray, 8%);
+    }
+  }
+}
+
+
+.upload-attachment {
+  background: @blue-regular !important;
+  border: none !important;
+  color: @white !important;
+  &:hover {
+    background: @blue !important;
+  }
+  span {
+    color: @white !important;
+    font-weight: bold;
+  }
+}
+
+//cancel btn
+/*button.confirm-cancel,
+.button.cancel.cancel {
+  background: @white;
+  color: gray;
+  border: 1px solid gray;
+  &:hover {
+    background: #eaeaea;
+    color: darken(gray, 8%);
+    border: 1px solid darken(gray, 8%);
+  }
+  span {
+    color: gray !important;
+    font-weight: bold;
+    &:hover {
+      color: darken(gray, 8%);
+    }
+  }
+}*/
+
+
+//Fixes close btn for Publish CV Modal
+@media only screen and ( max-width: @phone-width-limit ) {
+  #PostToJobPortalsForm .job-portals-side .button.cancel.cancel span {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+  }
+}
+
+.ui-sendfeedback-area .success .buttons .return{
+  border:none;
+  border-radius:4px;
+  padding:10px;
+}
+
+.orange {
+  .button;
+}
+
+
+
+
+
+
+/****************** DISABLED *************************/
+@button-disabled-from-bg: #b1b1b1;
+@button-disabled-to-bg: #9f9f9f;
+
+.bg-gradient-disabled{
+  background-color: @button-disabled-from-bg;
+  background-image: -moz-linear-gradient(center top , @button-disabled-from-bg, @button-disabled-to-bg);
+  background-image: -o-linear-gradient(center top , @button-disabled-from-bg, @button-disabled-to-bg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@button-disabled-from-bg), to(@button-disabled-to-bg));
+  background-repeat: no-repeat;
+}
+
+.button.disabled{
+  opacity:0.3;
+  box-shadow:none;
+  background-size: 100% 100%;
+  cursor:default;
+}
+.button.disabled:before,
+.button.disabled:after{
+  .bg-gradient-disabled;
+  border: none;
+}
+/*** Cancel Button to Equal the Height of the green Save button ***/
+.modal .button.save + .button.cancel{
+  line-height: 23px;
+}
+
+
+
+/********* BUTTON WITH GRADIENT AND IMAGE IN BACKGROUND - MIXIN ***********/
+/******************************************************************/
+/********* USE WHEN YOU HAVE TO ADD IMAGES TO BUTTONS!!! **********/
+/******************************************************************/
+.button-with-span-image-bg(@image, @imgPosX, @imgPosY){
+  background: @image @imgPosX  @imgPosY no-repeat transparent;
+}
+/****************** UPLOAD BUTTON WITH IMAGE *************************/
+
+
+
+.button.upload{
+  >span{
+    /*.button-with-span-image-bg(url("@{img-base-url}sprites/download_export_import_sprites.png@{img-suffix-url}${project.version}"), 0px, -160px);*/
+    position:relative;
+    display: inline-block;
+    line-height: 22px;
+    &:before{
+      content:"\e90b";
+      font-family:"europass-application"!important;
+      color:white;
+      margin-right:10px;
+      font-weight:200;
+      font-size:18px;
+    }
+  }
+  .title{
+    span{
+      background:transparent!important;
+      padding-left:5px!important;
+      vertical-align:top;
+    }
+  }
+}
+/****************** BLUE UPLOAD BUTTON WITH IMAGE *************************/
+
+
+/*.button.upload.blue{
+  span.title {
+    .button-with-span-image-bg(url("@{img-base-url}sprites/locations_fileformats_upload.png@{img-suffix-url}${project.version}"), 10px, -1190px);
+  }
+}*/
+
+
+#btn-share-googledrive{
+  border:2px solid #1F89B9;
+  background-color:transparent;
+  color:#1F89B9;
+  &:hover{
+    background-color: rgba(32, 154, 207, 0.10);
+  }
+}
+
+#btn-share-dropbox{
+  border:2px solid #1F89B9;
+  background-color:transparent;
+  color:#1F89B9;
+  &:hover{
+    background-color: rgba(32, 154, 207, 0.10);
+  }
+}
+
+
+#btn-share-onedrive{
+  border:2px solid #1F89B9;
+  background-color:transparent;
+  color:#1F89B9;
+  &:hover{
+    background-color: rgba(32, 154, 207, 0.10);
+  }
+}
+
+/*******************save buttons***************************************/
+
+
+.button.btn-next-bot,button.next{
+  background-color:@orange-dark;
+  color:white;
+  &:after {
+    margin-right:-15px;
+    position:relative;
+    right:-10px;
+    vertical-align: middle;
+    width:10px;
+    height:10px;
+    content:"";
+    border-right:5px solid white;
+    border-bottom:5px solid white;
+    transform:rotate(-45deg);
+    display:inline-block;
+  }
+  &:hover{
+    background-color: @orange-medium;;
+  }
+}
+
+
+.button.previous {
+  background-color:@blue-regular;
+  color:white;
+  &:before{
+    margin-left:-15px;
+    position:relative;
+    left:-10px;
+    vertical-align: middle;
+    width:10px;
+    height:10px;
+    content:"";
+    border-left:5px solid white;
+    border-bottom:5px solid white;
+    transform:rotate(45deg);
+    display:inline-block;
+  }
+  &:hover{
+    background-color: #0e739f;
+  }
+}
+
+.button.cancel {
+  span {
+    color: white!important;
+  }
+}
+
+
+.button.validate,
+.button.mdl-btn{
+  background: @blue-regular;
+  color: @white;
+  &:hover {
+    background: @blue;
+  }
+  span {
+    color: @white !important;
+    font-weight: bold;
+  }
+}
+
+
+
+
+/****************** SHARE DOCUMENT BUTTON WITH IMAGE *************************/
+
+.button.share-document{
+  > span {
+    .button-with-span-image-bg(url("@{img-base-url}sprites/post_to_eures_icons.png@{img-suffix-url}${project.version}"), 0, -80px);
+    display: inline-block;
+    line-height: 23px;
+    padding-left: 40px;
+  }
+}
+
+
+/****************** QUICK DOWNLOAD/PREVIEW BUTTON WITH IMAGE *************************/
+
+.button.quick-download.preview{
+  > span.img {
+    .button-with-span-image-bg(url("@{img-base-url}sprites/post_to_eures_icons.png@{img-suffix-url}${project.version}"), 0, -20px);
+    display: inline-block;
+    line-height: 23px;
+    padding-left: 40px;
+  }
+}
+/****************** EXPORT/ DOWNLOAD BUTTON WITH IMAGE *************************/
+.button.export.download{
+  >span {
+    .button-with-span-image-bg(url("@{img-base-url}sprites/download_export_import_sprites.png@{img-suffix-url}${project.version}"), 0, -81px);
+    display: inline-block;
+    line-height: 23px;
+    padding-left: 40px;
+  }
+}
+
+
+/***BUTTON SAVE RIGHT BOTTOM
+**********************************/
+aside.right #ExportWizard .save-file-wrapper:hover{
+  background:transparent!important;
+}
+
+aside.right #ExportWizard .save-file-wrapper:hover button{
+  background:#2979b8!important;
+}
+
+
+
+/***************************************************
+ ***************************************************
+ *****            GENERIC BUTTONS              *****
+ ***************************************************
+ ***************************************************/
+
+/******** ADD / DELETE ITEMS ***************/
+
+button.multifield.add-item,
+button.multifield.remove-item {
+  /*background-color: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+  background-color: -o-linear-gradient(center top , #FFFFFF, #E6E6E6);
+  background-color: -webkit-gradient( linear, left top, left bottom, from(#ffffff), to(#E6E6E6));*/
+  background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}");
+  background-color: #0F89BC;
+  color:transparent;
+  height:22px;
+}
+
+
+/***************************************************
+ *****           UPLOAD FILE BUTTON          *******
+ ***************************************************
+ ***************************************************
+ *****   FILE UPLOAD WITH UPLOAD INDICATOR     *****
+ ***************************************************/
+
+.upload-area{
+  padding: 1rem 0;
+  position: relative;
+
+  menu.choose-file{
+    display: block;
+    position: relative;
+    clear: left;
+    text-align: left;
+    position:relative;
+    width: 40%;
+
+    .button.upload.blue {
+
+      margin-top: 0;
+      padding: 0;
+      display: block;
+      min-height: 3.2rem;
+
+      >input{
+        //File field
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1px;
+        opacity: 0;
+        direction: ltr;
+        border-color: transparent;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+      >.title{
+        display: block;
+        padding: 1rem 1rem 1rem 1rem;
+      }
+      >.progress-bar{
+        background: @uploading-button-solid-blue-bg;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        display: none;
+      }
+      >.text-uploading{
+        line-height: 3rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform:translatex(-50%);
+        height: 100%;
+        z-index: 10;
+        display: none;
+        &:before{
+          content: "\e934";
+          font-family: "europass-application" !important;
+          color:white;
+          font-size:18px;
+          margin-right:10px;
+        }
+      }
+      &.uploading{
+        >.title, >.input{ display: none; }
+        >.progress-bar, >.text-uploading{ display: block;color:white }
+      }
+    }
+  }
+}
+
+
+/******************* Desktop Specific 5 basic principles main button **********************/
+@media only screen and ( min-width: @desktop-width-limit ) {
+  #basic-principles-btn, #prepare-your-interview-btn {
+    position: relative;
+    margin-top: 10px !important;
+  }
+}
+
+
+#basic-principles-btn, #prepare-your-interview-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+  text-align: left;
+  padding-left: 30px;
+  @media screen and (max-width: @desktop-width-limit) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  &:hover:before {
+    color: white;
+  }
+  &:before {
+    width: auto;
+    background: transparent;
+    content: "\e904";
+    font-family: "europass-application" !important;
+    font-size: 25px;
+    border: none;
+    left: 0;
+    position: absolute;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: @blue-lighter;
+    font-weight: bold;
+    top: 50%;
+    transform: translatey(-50%);
+  }
+  &:after {
+    background: transparent;
+  }
+  span.btn-content {
+    background-position: 0px -7px;
+    height: auto;
+    line-height: 15px !important;
+    .txt {
+      vertical-align: bottom;
+      margin-top: 5px;
+      color: @gold;
+      font-weight: 400;
+      p {
+        color: @gold;
+      }
+    }
+  }
+}
+
+
+.upload-button-set {
+  menu.choose-file.choose-file.choose-file {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:1rem;
+    .text-uploading {
+      width:100%;
+      animation:fading 1s ease infinite;
+      padding-left:0!important;
+    }
+    > span.upload:first-child{
+      margin-bottom:20px;
+      width:100%;
+      border-radius: 5px;
+      @media screen and(max-width:@phone-width-limit) {
+        margin-bottom:1px;
+      }
+    }
+    span {
+      border-radius: 0;
+      margin: 1px;
+      box-sizing: border-box;
+      .title {
+        display: flex;
+        justify-content: center;
+        &:before {
+          font-size: 22px;
+        }
+      }
+      &:nth-child(1) {
+        .title:before {
+          content: "\e922";
+          font-size: 19px;
+        }
+      }
+      &:nth-child(2) {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width:31.5%;
+        @media screen and(max-width:@phone-width-limit) {
+          width:100%;
+        }
+        .title:before {
+          content: "\e92a";
+        }
+      }
+      &:nth-child(3) {
+        border:none;
+        width:31.5%;
+        @media screen and(max-width:@phone-width-limit) {
+          width:100%;
+        }
+        .title:before {
+          content: "\e92b";
+        }
+      }
+      &:nth-child(4) {
+        width:31.5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @media screen and(max-width:@phone-width-limit) {
+          width:100%;
+        }
+        .title:before {
+          content: "\e933";
+        }
+      }
+    }
+  }
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .upload-area menu.choose-file .button.upload.blue>.text-uploading.text-uploading{
+    line-height:2.5rem!important;
+  }
+  .upload-area menu.choose-file .button.upload.blue.uploading>.title, .upload-area menu.choose-file .button.upload.blue.uploading>.input{
+    display:flex!important;
+    opacity:0;
+  }
+  .upload-button-set {
+    menu.choose-file.choose-file.choose-file {
+      .text-uploading {
+        font-size:14px;
+      }
+      span .title:before{
+        font-size:16px!important;
+        margin-right:3px;
+        margin-top:2px;
+      }
+      .button.button span {
+        font-size: 12px;
+      }
+    }
+  }
+  .button.button {
+    width: 100px;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 300;
+    span{
+      font-size:13px;
+    }
+  }
+  .button.submit.submit span{
+    font-weight:300;
+  }
+  .button.btn-next-bot:after, button.next:after{
+    height:7px;
+    width:7px;
+    border-right-width:3px;
+    border-bottom-width:3px;
+    margin-top:-2px;
+  }
+  .button.previous:before{
+    height:7px;
+    width:7px;
+    border-left-width:3px;
+    border-bottom-width:3px;
+    margin-left:8px;
+    margin-top:-2px;
+  }
+}
+
+
+@keyframes fading {
+  from{
+    opacity:0.3;
+  }
+  to{
+    opacity:1;
+  }
+}

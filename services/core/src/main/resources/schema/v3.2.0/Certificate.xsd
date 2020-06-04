@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	
+	<!-- Certificates -->
+	<xsd:complexType name="CertificateListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a list of Certificates.  
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Certificate" type="CertificateType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CertificateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a generic type for a Certificate. A Certificate contains information about the title name, the awarding body and the date of awarding. It also contains information about the level that corresponds to this diploma.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Title" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="AwardingBody" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Date" type="DateType" minOccurs="0"/>
+			<xsd:element name="Level" type="xsd:anyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

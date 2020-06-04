@@ -1,0 +1,236 @@
+{{#if_eq Preferences.LearnerInfo.order compare="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"}}
+		<button type="button" 
+				name="switchWorkEducationOrder"
+				class="work-education-switch  switch tip spot tip-addLeft tip-removeLeft-9pixels"
+				data-tip.position="top-left">
+				<span class="data-title" style="display:none">{{get_text "Buttons.Switch.Section" group="EditorHelp"}}</span>
+		</button>
+{{/if_eq}}
+<dt class="label list section-heading">
+    {{#if_gt SkillsPassport.LearnerInfo.WorkExperience.length compare="1"}}
+	<span class="sort container">
+            <button type="button"
+                name="autosort"
+                class="autoSort byDate tip spot workExperience tip-removeLeft--10pixels tip-closerTop"
+                data-tip.position="top-left">Auto Sort
+                <span class="data-title" style="display:none;">{{get_text "Auto.Sort.Descend" group="EditorHelp"}}</span>
+            </button>
+        </span>
+    {{/if_gt}}
+    {{#if_eq Preferences.LearnerInfo.order compare="Identification Headline Education WorkExperience Skills Achievement ReferenceTo"}}
+       <button type="button" name="enablePageBreak" 
+            class="enablePageBreak sectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains Preferences.LearnerInfo.pageBreaks compare="WorkEducation"}}break-page{{/if_contains}}" 
+            data-section="WorkEducation"
+            data-tip.position="top-left">Page Break
+            <span class="data-title" style="display:none;">
+                {{#if_contains Preferences.LearnerInfo.pageBreaks compare="WorkEducation"}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains}}
+                {{#if_absent Preferences.LearnerInfo.pageBreaks compare="WorkEducation"}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent}}
+            </span>
+        </button>
+    {{/if_eq}}
+    <span class="title">{{get_text "LearnerInfo.WorkExperience" group="DocumentLabel"}}</span>
+</dt>
+<dd class="line"></dd>
+<ol class="sortable compose-list" 
+	id="List:SkillsPassport.LearnerInfo.WorkExperience" 
+	data-rel-section="SkillsPassport.LearnerInfo.WorkExperience">
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.WorkExperience}}
+	
+		
+		<li class="compose-list empty" 
+			id="ListItem:LearnerInfo.WorkExperience.Empty">
+			
+			<button type="button" 
+				name="LearnerInfo.WorkExperience[0]_add_btn" 
+				class="section compose-list opens-modal-form add empty" 
+				data-rel-doc="cv"
+				data-rel-clazz="WorkExperienceFormView"
+				data-rel-form="Form:WorkExperience[0]"
+				data-rel-section="SkillsPassport.LearnerInfo.WorkExperience[0]"
+				data-rel-help-section="Help.SkillsPassport.LearnerInfo.WorkExperience"
+				data-validation-field="date period"
+				data-rel-index="0">
+				<span class="img-placeholder">&nbsp;</span>
+				<span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span></button>
+		</li>
+
+	{{else}}
+		{{#each_with_index SkillsPassport.LearnerInfo.WorkExperience}}
+                               
+				
+                                <li class="compose-list list-item opens-modal-form" 
+					id="ListItem:LearnerInfo.WorkExperience[{{index}}]" 
+					data-index="{{index}}"
+					data-rel-doc="cv"
+					data-rel-clazz="WorkExperienceFormView"
+					data-rel-form="Form:WorkExperience[{{index}}]"
+					data-rel-section="SkillsPassport.LearnerInfo.WorkExperience[{{index}}]"
+					data-rel-help-section="Help.SkillsPassport.LearnerInfo.WorkExperience"
+					data-rel-index="{{index}}"
+					data-validation-field="date period">
+
+                                        <hr {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "WorkExperience" index }}class="break-page"{{/if_contains_cmplx}}>
+
+                                        <dd class="content-label Period">
+
+                                            {{#if_gt index compare="0"}}
+                                                <button type="button" name="enablePageBreak" 
+                                                    class="enablePageBreak subSectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "WorkExperience" index}}break-page{{/if_contains_cmplx}}" 
+                                                    data-section="WorkExperience{{index}}"
+                                                    data-tip.position="top-left">Page Break
+                                                    <span class="data-title" style="display:none;">
+                                                        {{#if_contains_cmplx ../../Preferences.LearnerInfo.pageBreaks "WorkExperience" index}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains_cmplx}}
+                                                        {{#if_absent_cmplx ../../Preferences.LearnerInfo.pageBreaks "WorkExperience" index}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent_cmplx}}
+                                                    </span>
+                                                </button>
+                                            {{/if_gt}}
+
+                                            {{#if Period}}
+                                                {{#format_date_period Period current_pref_item.Period.format false DocumentType="ECV"}}
+                                                        <span class="PeriodRange">{{{.}}}</span>
+                                                {{/format_date_period}}
+                                            {{/if}}
+                                        </dd>
+					
+					{{#if Position}}
+					<dd class="value Position">
+						<span class="Position">{{Position.Label}}</span>
+					</dd>
+					{{/if}}
+					
+					{{#if Employer}}
+					<dd class="value Employer">
+						{{#if Employer.Name}}
+							<span class="Name">{{Employer.Name}}</span>
+						{{/if}}
+						
+						{{#if Employer.ContactInfo.Address}}
+							<div class="Address {{#unless Employer.ContactInfo.Address.Contact.AddressLine}}{{#unless Employer.ContactInfo.Address.Contact.PostalCode}}minimal{{/unless}}{{/unless}}">
+							{{#unless Employer.ContactInfo.Address.Contact.AddressLine}}
+								{{#unless Employer.ContactInfo.Address.Contact.PostalCode}}
+									{{#if Employer.Name}}
+										{{^isOnlyCountry Employer.ContactInfo.Address.Contact}}
+											<span class="comma-separator">, </span>
+										{{else}}
+										    &nbsp;
+										{{/isOnlyCountry}}
+									{{/if}}
+								{{/unless}}
+							{{/unless}}
+							{{#if Employer.ContactInfo.Address.Contact}}
+								{{#format_organisation_address Employer.ContactInfo.Address.Contact}}
+									<span class="Address">{{.}}</span>
+								{{/format_organisation_address}}
+							{{/if}}
+							</div>
+						{{/if}}
+						
+						{{#if Employer.ContactInfo.Website}}
+							<div class="Website">
+							{{#if Employer.ContactInfo.Website.Contact}}
+								<span class="Website">
+								{{#format_link Employer.ContactInfo.Website.Contact type="website"}}{{{.}}}{{/format_link}}
+								</span>
+							{{/if}}
+							</div>
+						{{/if}}
+						
+					</dd>
+					{{/if}}
+					
+					
+					{{#if Activities}}
+					<dd class="value rich-content Activities">
+							{{nestHtmlLists Activities}}
+					</dd>
+					{{/if}}
+					
+					{{#if Employer.Sector}}
+						<dd class="value rich-content Sector">
+							<span class="Sector inner-content-label">{{get_text "LearnerInfo.WorkExperience.Employer.Sector" group="DocumentLabel"}}</span>
+						{{#if Employer.Sector.Label}}
+							<span class="Sector">{{Employer.Sector.Label}}</span>
+						{{/if}}
+						</dd>
+					{{/if}}
+					
+					
+					{{#if ReferenceTo}}
+						<dd class="value attachment">
+							<span class="attachment inner-content-label">{{get_text "LearnerInfo.WorkExperience.ReferenceTo" group="DocumentLabel"}}</span>
+								{{#each_with_index ReferenceTo index_name="index2"}}
+									{{#with_attachment ../../../../SkillsPassport.Attachment idref}}
+										<span class="linked-attachment" name="{{Name}}">
+											{{#if_gt ../index2 compare="0"}}, {{/if_gt}}
+											{{#crop_text Description}}{{.}}{{/crop_text}}
+										</span>
+									{{/with_attachment }}
+								{{/each_with_index}}
+						</dd>
+					{{/if}} 
+					
+					{{#call_partial . path="LearnerInfo.WorkExperience" buttons="Extra"}}
+						{{> templates/menu/listitemmenu}}
+					{{/call_partial}}
+					{{#if_gt ../../SkillsPassport.LearnerInfo.WorkExperience.length compare="1"}}
+<!-- 						<span class="sortable_placeholder tip spot" data-tip.position="top-left"> -->
+<!-- 						<span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span> -->
+                          
+						<button type="button"
+						        name="move_up"
+						        class="sort-move-up  {{#if_eq index compare="0"}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_eq}}"
+						        data-tip.position="top-left">
+          
+						        <span>UP</span>
+						        <span class="data-title" style="display:none;">{{get_text "Move.Sort.Upwards" group="EditorHelp"}}</span>
+						        </button>
+						<button type="button"
+						        name="move_down"
+						        class="sort-move-down {{#if_last_item ../../SkillsPassport.LearnerInfo.WorkExperience.length compare=index}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_last_item}}"
+						        data-tip.position="top-left">
+								<span>DOWN</span>
+								<span class="data-title" style="display:none;">{{get_text "Move.Sort.Downwards" group="EditorHelp"}}</span>
+								</button>
+						
+						{{#if_last_item ../../SkillsPassport.LearnerInfo.WorkExperience.length compare=index}}
+							<button type="button"
+							        name="move_top"
+							        class="sort-move-top tip spot tip-removeLeft--10pixels"
+							        data-tip.position="top-left">
+							        <span>TOP</span>
+							        <span class="data-title" style="display:none;">{{get_text "Move.Sort.ToTop" group="EditorHelp"}}</span>
+						    </button>
+						{{/if_last_item}}
+
+<!-- 						</div> -->
+					{{/if_gt}}
+				</li>
+					
+		{{/each_with_index}}
+		
+		
+		<li class="compose-list subsection-container empty">
+			<button type="button" 
+				name="LearnerInfo.WorkExperience[{{SkillsPassport.LearnerInfo.WorkExperience.length}}]_add_btn" 
+				class="section compose-list add opens-modal-form edit" 
+				data-rel-doc="cv"
+				data-rel-clazz="WorkExperienceFormView"
+				data-rel-form="Form:WorkExperience[{{SkillsPassport.LearnerInfo.WorkExperience.length}}]"
+				data-rel-section="SkillsPassport.LearnerInfo.WorkExperience[{{SkillsPassport.LearnerInfo.WorkExperience.length}}]"
+				data-rel-help-section="Help.SkillsPassport.LearnerInfo.WorkExperience"
+				data-rel-index="{{SkillsPassport.LearnerInfo.WorkExperience.length}}"
+				data-validation-field="date period">
+				<span class="img-placeholder">&nbsp;</span>
+				<span>
+				{{#if_lt SkillsPassport.LearnerInfo.WorkExperience.length compare="1"}}
+					{{get_text "Buttons.Add.Content" group="GuiLabel"}}
+				{{/if_lt}}
+				{{#if_gteq SkillsPassport.LearnerInfo.WorkExperience.length compare="1"}}
+					{{get_text "Buttons.Add.Content.Not.Empty.WorkExperience" group="GuiLabel"}}
+				{{/if_gteq}}
+				</span>
+			</button>
+		</li>
+	{{/isEmptyObject}}
+</ol>

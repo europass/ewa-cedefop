@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingListRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../schema/ProfileMapping.xsd"
+    provider="LinkedIn"
+    providerVersion="1.0.0.RC2"
+    europassVersion="3.0.1">
+    
+    <MappingList>
+   <!-- Identification -->
+    
+    <!-- PersonName -->
+    <!-- getFirstName will return a String, therefore a set must take place  -->
+    <Mapping from="/firstName" to="/learnerInfo/identification/personName/firstName"/>
+    <Mapping from="/lastName" to="/learnerInfo/identification/personName/surname"/>
+    <!-- end - PersonName -->
+    
+    <!-- Contact Info -->
+    
+    <!-- Location -->
+    <Mapping from="/location" to="/learnerInfo/identification/contactInfo/address/contact">
+        <MappingList>
+            <!--EWA-924: Disabled because it returns the country name <Mapping from="./name" to="./municipality"/>  -->
+            <Mapping from="./country" to="./country" through="CountryCodeHandler"/>
+        </MappingList>
+     </Mapping>
+    
+    <!-- Address --> 
+    <Mapping from="/mainAddress" to="/learnerInfo/identification/contactInfo/address/contact/addressLine"/>
+	
+    <!-- Email -->
+    <Mapping from="/emailAddress" to="/learnerInfo/identification/contactInfo/email/contact"/>
+    
+    <!-- IM Account -->
+    <Mapping from="/imAccounts" to="/learnerInfo/identification/contactInfo/instantMessagingList">
+        <MappingList>
+            <!-- InstantMessagingHandler will set Use/Code and also user InstantMessagingType to fetch the translation for Use/Label -->
+            <Mapping from="./imAccountType" to="./use" through="InstantMessagingHandler"/>
+            <Mapping from="./imAccountName" to="./contact"/>
+        </MappingList>
+    </Mapping>
+    
+    <!-- Phone Numbers -->
+    <Mapping from="/phoneNumbers" to="/learnerInfo/identification/contactInfo/telephoneList">
+        <MappingList>
+            <Mapping from="./phoneType" to="./use/code"/>
+            <Mapping from="./phoneNumber" to="./contact"/>
+         </MappingList>
+    </Mapping>
+
+    <!-- Profile URL as Website  -->
+    <Mapping from="/publicProfileUrl" to="/learnerInfo/identification/contactInfo/websiteList">
+        <MappingList>
+            <Mapping from="." to="./contact" />
+        </MappingList>
+    </Mapping>
+    
+    <!-- Twitter Account as Website  -->
+    <Mapping from="/twitterAccounts" to="/learnerInfo/identification/contactInfo/websiteList">
+        <MappingList>
+            <!-- AddPrefixHandler will append the text given by the params to the Object as String taken from "From" -->
+            <Mapping from="./providerAccountName" to="./contact" through="AddPrefixHandler" params="https://twitter.com/"/>
+        </MappingList>
+    </Mapping>
+    
+    <!-- Member URL Resources -->
+    <Mapping from="/memberUrlResources" to="/learnerInfo/identification/contactInfo/websiteList">
+        <MappingList>
+            <Mapping from="./url" to="./contact"/>
+        </MappingList>
+    </Mapping>
+    
+    <!-- end - Contact Info -->
+    
+    <!-- Demographics -->
+    <!-- get returns int, set accepts Integer -->
+    <Mapping from="/dateOfBirth" to="/learnerInfo/identification/demographics/birthdate">
+        <MappingList>
+            <Mapping from="./year" to="./year"/>
+            <Mapping from="./month" to="./month"/>
+            <Mapping from="./day" to="./day"/>
+        </MappingList>
+    </Mapping>
+    
+    <!-- end - Demographics -->
+    
+    <!-- Photo -->
+    <!-- PhotoHandler will follow via GET the url provided by LinkedIn and get the photo bytes. -->
+<!--     <Mapping from="/profilePictureUrl" to="/learnerInfo/identification/photo" through="PhotoHandler"/> -->
+    <Mapping from="/extraData" to="/learnerInfo/identification/photo" through="PhotoHandler"/>
+    <!-- end - Photo -->
+    
+    
+    <!-- end - Identification -->
+    <!-- ____________________________________________________________________________________________________ -->
+    <!-- If both LinkedIn[ Headline ] and LinkedIn[ Summary ] then Summary will prevail.
+    	 If only LinkedIn[ Headline ] then Headline will prevail.
+    	 If only LinkedIn[ Summary ] then Summary will prevail.
+    	 If none of LinkedIn[ Headline ] or LinkedIn[ Summary ] then null will prevail.
+     -->
+    <!-- Headline -->
+    <Mapping from="/headline" to="/learnerInfo/headline">
+        <MappingList>
+        <!-- LinkedIn's value will be used for the Description -->
+            <Mapping from="." to="./description/label"/>
+            <!-- The PositionTypeHandler will set the respective SkillsPassport object denoted by the "To" to the fixed value "position" -->
+            <Mapping from="." to="./type/code" through="FixValueHandler" params="position"/>
+            <!-- The PositionTranslator will need the taxonomy of HeadlineType.json -->
+            <Mapping from="." to="./type/label" through="TaxonomyTranslatorHandler" params="HeadlineType position"/>
+        </MappingList>
+    </Mapping>
+    <!-- Summary -->
+    <Mapping from="/summary" to="/learnerInfo/headline">
+        <MappingList>
+        	<!-- LinkedIn's value will be used for the Description -->
+            <Mapping from="." to="./description/label"/>
+            <!-- The PositionTypeHandler will set the respective SkillsPassport object denoted by the "To" to the fixed value "position" -->
+            <Mapping from="." to="./type/code" through="FixValueHandler" params="personal_statement"/>
+            <!-- The PositionTranslator will need the taxonomy of HeadlineType.json -->
+            <Mapping from="." to="./type/label" through="TaxonomyTranslatorHandler" params="HeadlineType personal_statement"/>
+        </MappingList>
+    </Mapping>
+    <!-- end - Headline -->
+    
+    <!-- ____________________________________________________________________________________________________ -->
+    
+    <!-- Work Experience -->
+    <!-- To: List / From: List -->
+    <Mapping from="/positions" to="/learnerInfo/workExperienceList">
+        <MappingList>
+            <Mapping from="./title" to="./position/label"/>
+            <Mapping from="./summary" to="./activities"/>
+            
+            <Mapping from="./startDate" to="./period/from">
+                <MappingList>
+                    <Mapping from="./year" to="./year"/>
+                    <Mapping from="./month" to="./month"/>
+                    <Mapping from="./day" to="./day"/>
+                </MappingList>
+            </Mapping>
+            <Mapping from="./endDate" to="./period/to">
+                <MappingList>
+                    <Mapping from="./year" to="./year"/>
+                    <Mapping from="./month" to="./month"/>
+                    <Mapping from="./day" to="./day"/>
+                </MappingList>
+            </Mapping>
+            <Mapping from="./isCurrent" to="./period/current"/>
+            
+            <Mapping from="./company" to="./employer">
+                <MappingList>
+                    <Mapping from="./name" to="./name"/> 
+                   <!-- Not ready yet  <Mapping from="./industry" to="./sector" through="SectorHandler"/> --> 
+                </MappingList>
+            </Mapping>
+        </MappingList>
+    </Mapping>
+    <!-- end - Work Experience -->
+    
+    <!-- ____________________________________________________________________________________________________ -->
+    
+    <!-- Education Experience -->
+    <Mapping from="/educations" to="/learnerInfo/educationList">
+        <MappingList>
+            <Mapping from="." to="./title" through="EducationalFieldHandler"/>
+            <Mapping from="./activities" to="./activities"/>
+            
+            <Mapping from="./startDate" to="./period/from">
+                <MappingList>
+                    <Mapping from="./year" to="./year"/>
+                    <Mapping from="./month" to="./month"/>
+                    <Mapping from="./day" to="./day"/>
+                </MappingList>
+            </Mapping>
+            <Mapping from="./endDate" to="./period/to">
+                <MappingList>
+                    <Mapping from="./year" to="./year"/>
+                    <Mapping from="./month" to="./month"/>
+                    <Mapping from="./day" to="./day"/>
+                </MappingList>
+            </Mapping>
+            <!-- no such method in LinkedIn Education <Mapping from="./isCurrent" to="./period/current"/> -->
+            
+            <Mapping from="./schoolName" to="./organisation/name"/>
+            
+        </MappingList>
+    </Mapping>
+    <!-- end - Education Experience -->
+    <!-- ____________________________________________________________________________________________________ -->
+    <!-- Skills -->
+    
+    <!-- Linguistic Skills -->
+    <!-- LanguagesHandler will need to fetch each item of the language list and decide according to the proficiency level whether this is a mother language or not -->
+    <Mapping from="/extraData" to="/learnerInfo/skills/linguistic" through="LanguageHandler"/>
+    
+    
+    <!-- end - Linguistic Skills -->
+    <!-- ____________________________________________________________________________________________________ -->
+    <!-- Other Skills -->
+    <!-- Interests -->
+    <!-- interests is already a comma separated string, so just map it without handler -->
+    <Mapping from="/interests" to="/learnerInfo/skills/other/description"/>
+    <!-- end - Other Skills -->
+    <!-- From: List / To: Free Text -->
+    <!-- SkillHandler will iterate the list of structured Skill objects and translate it to a simple html text that will be set to the Other Skills section of Europass  -->
+    <Mapping from="/skills" to="/learnerInfo/skills/jobRelated/description" through="SkillHandler"/>
+    <!-- end - Skills -->
+    <!-- ____________________________________________________________________________________________________ -->
+    <!-- Additional Information -->
+    <!-- When the From is a List -->
+    
+    <!-- From is a String / To is a Single List Item -->
+    <!-- The TaxonomyTranslatorHandler should set the Title/Label by following the AchievementType.json localisable resource 
+        and fetching the label using as key the value given to the "params" attribute of the same entry. -->
+
+    <!-- Projects -->
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="ProjectsHandler" params="AchievementType projects"/>
+    
+    <!-- Honors -->
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="HonorsAwardsHandler" params="AchievementType honors_awards"/>
+
+    <!-- From is a List && Structured / To is a Single List Item && Free Text-->
+    <!-- Recommendations -->
+    <Mapping from="/recommendationsReceived" to="/learnerInfo/achievementList" through="RecommendationHandler" params="AchievementType references"/>
+    
+    <!-- Courses --> 
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="CoursesHandler" params="SocialAchievementType courses"/>
+    
+    <!-- Patents -->
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="PatentsHandler" params="SocialAchievementType patents"/>
+    
+    <!-- Publications -->
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="PublicationsHandler" params="AchievementType publications"/>
+    
+    <!-- Volunteer -->
+	<Mapping from="/extraData" to="/learnerInfo/workExperienceList" through="VolunteerHandler"/>
+
+    <!-- Certifications -->
+    <Mapping from="/extraData" to="/learnerInfo/achievementList" through="CertificationsHandler" params="SocialAchievementType certifications"/>
+    
+    <!-- end - Additional Information -->
+
+    </MappingList>
+</MappingListRoot>

@@ -1,0 +1,42 @@
+<fieldset class="process" data-active-step="">
+    <legend class="preview">
+        <div class="graphic-step step1"><div class="wrapper">
+                <span class="icon"></span>
+                <span class="title"> {{get_text "export.wizard.step1.img.desc" group="GuiLabel"}}</span>
+        </div></div>
+        <div class="graphic-step step2"><div class="wrapper">
+                <span class="icon"></span>
+                <span class="title"> {{get_text "export.wizard.step2.img.desc" group="GuiLabel"}}</span>
+        </div></div>
+        <div class="graphic-step step3"><div class="wrapper">
+                <span class="icon"></span>
+                <span class="title"> {{get_text "export.wizard.step3.img.desc" group="GuiLabel"}}</span>
+        </div></div>
+    </legend>
+	
+    <fieldset id="export-wizard-step-1" class="step step1" style="display:none"></fieldset>
+
+    <fieldset id="export-wizard-step-2" class="step step2"  style="display:none"></fieldset>
+
+    <fieldset id="export-wizard-step-3" class="step step3"  style="display:none"></fieldset>
+
+    <fieldset id="export-wizard-step-4" class="step step4"  style="display:none"></fieldset>
+</fieldset>
+<fieldset class="feedback-area"></fieldset>
+
+<button id="wizardDownloadOkBtn" type="button" class="button green complete" form="" style="display:none">
+    {{get_text "buttons.wizard.ok" group="GuiLabel"}}
+</button>
+
+<hr id="shareLineBreak" style="display:none">
+<div id="PostToJobPortals" style="display:none">
+    {{get_text "export.wizard.share.message" group="GuiLabel"}}
+</div>
+<button id="shareDocBtn" type="button" class="button orange complete" form="{{formName}}" style="display:none">
+    {{get_text "export.wizard.share.ok" group="GuiLabel"}}
+</button>
+<div class="fixed-btn-bg">
+<button type="button" class="button green connect" form="{{formName}}" style="display:none">
+	<span>{{get_text "buttons.wizard.connect" group="GuiLabel"}}</span>
+</button>
+</div>

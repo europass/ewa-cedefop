@@ -1,0 +1,27 @@
+<div class="ui-anpal-area ui-job-portal-area drawer default" id="anpal-default">
+    <div class="note job-portal">
+        <div class="text post">{{get_text "export.wizard.anpal.textPost" group = "GuiLabelExtra"}}&nbsp;&nbsp;</div>
+        <div id="ui-anpal-terms">
+            <div class="text">{{get_text "export.wizard.anpal.fiscalCodeLabel" group = "GuiLabelExtra"}}:</div>
+            <div class="text"><input type="text" id="fiscalCode" maxLength="16" value="" />*</div>
+            <div class="text ficalCodeNote warning">{{get_text "export.wizard.anpal.errorFiscalCodeValue" group = "GuiLabelExtra"}}&nbsp;&nbsp;</div>
+            <div>
+                <input id="anpal-privacy-consent" name="anpal-privacy-consent" value="anpal-privacy-consent" type="checkbox" class="css-checkbox formfield">
+                <label for="anpal-privacy-consent" class="css-label formfield-label">{{get_text "export.wizard.anpal.privacyConsent" group = "GuiLabelExtra"}}</label>
+            </div>
+            <div class="anpal-submit-controls">
+                <input id="anpal-extra-ue-consent" name="anpal-extra-ue-consent" value="anpal-extra-ue-consent" type="checkbox" class="css-checkbox formfield">
+                <label for="anpal-extra-ue-consent" class="css-label formfield-label">{{get_text "export.wizard.anpal.extraUEConsent" group = "GuiLabelExtra"}}</label>
+            </div>
+        </div>
+        <fieldset class="feedback-area" id="anpal-warning-msg">
+            <section class="notification error" style="">
+                <div data-rel-key="" class="message-area">
+                    <p></p>
+                </div>
+            </section>
+        </fieldset>
+        <div class="text emailNote warning">{{get_text "export.wizard.anpal.emailNoteWarning" group = "GuiLabelExtra"}}&nbsp;&nbsp;</div>
+        <button id="btn-submit-to-anpal" class="button orange submit">{{get_text "Buttons.Anpal.Post" group = "GuiLabel"}}</button>
+    </div>
+</div>

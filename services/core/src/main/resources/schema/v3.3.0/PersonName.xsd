@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	<xsd:include schemaLocation="CommonTypes.xsd"></xsd:include>
+	
+	<!-- Person name Information -->
+	<xsd:complexType name="PersonNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Describes the name of a person. Consists of a first-name and surname. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Title" type="PersonTitleLabelType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FirstName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Surname" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PersonTitleLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="PersonTitleCodesEnumeration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="PersonTitleCodesEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="mr"/>
+			<xsd:enumeration value="ms"/>
+			<xsd:enumeration value="mrs"/>
+			<xsd:enumeration value="miss"/>
+			<xsd:enumeration value="dr"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

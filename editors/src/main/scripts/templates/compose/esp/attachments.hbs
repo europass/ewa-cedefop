@@ -1,0 +1,111 @@
+
+<ol class="sortable compose-list" 
+	id="List:SkillsPassport.LearnerInfo.ReferenceTo" 
+	data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo">
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.ReferenceTo}}
+		<li class="attachment_thumbnail">
+			<button type="button" 
+					name="Attachment_add_btn" 
+					class="section compose-list opens-modal-form add empty"
+					data-rel-doc="attachment"
+					data-rel-clazz="AttachmentFormView"
+					data-rel-form="Form:Attachment"
+					data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo"
+					data-rel-help-section="Help.Add.ESP.Attachment"
+					data-rel-document="ESP"
+					data-rel-index="0">
+					
+					<span class="img-placeholder">&nbsp;</span>
+  					<span>{{get_text "Buttons.Add.Content.ESP" group="GuiLabel"}}</span>
+			</button>
+		</li>
+	{{else}}
+		{{#each_with_index SkillsPassport.LearnerInfo.ReferenceTo}}
+				
+				
+				<li class="attachment_thumbnail compose-list list-item opens-modal-form" 
+					id="ListItem:LearnerInfo.ReferenceTo[{{index}}]"
+					data-index="{{index}}"
+					data-rel-doc="attachment"
+					data-rel-clazz="AttachmentEditFormView"
+					data-rel-form="Form:AttachmentEdit"
+					data-rel-section="Attachment"
+					data-rel-help-section="Help.Edit.ESP.Attachment"
+					data-rel-index="{{index}}"
+					data-rel-document="ESP">
+			
+					<div class="mini-logo"></div>
+					{{#with_attachment ../../SkillsPassport.Attachment idref}}
+						<div class="clear title">
+						{{#crop_text Description length="18" crop="8" }}
+						   <span>{{.}}</span>
+						{{/crop_text}}
+							
+						</div>
+                        {{^if_eq MimeType compare="application/pdf"}}
+                            <div class="thumb">
+                                <img class="attachment-esp-photo"
+                                    src="{{TempURI}}/thumb" alt="mini-logo"/>
+                            </div>
+                        {{/if_eq}}
+                        {{#if_eq MimeType compare="application/pdf"}}
+                            <div class="thumb pdf-default-attachment-icon" data-temp-uri="{{TempURI}}">
+                                <img class="attachment-esp-photo" style="display: none"
+                                     alt="mini-logo"/>
+                            </div>
+                        {{/if_eq}}
+					{{/with_attachment }}
+
+					<menu class="section manage esp-thumb delete view list-item" label="Manage">
+						<button class="opens-modal-form edit extra tip spot nested-tip">
+                            <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+                        </button>
+  						{{#with_attachment ../../SkillsPassport.Attachment idref}}
+							<a href="{{TempURI}}"
+								class="ReferenceTo view tip spot"
+								target="_blank"
+								name="{{Name}}" 
+								title="{{Description}}">
+								<span class="data-title">{{get_text "View.Attachment" group="EditorHelp"}}</span>	
+							</a>
+						{{/with_attachment }}					
+						<button type="button" 
+								name="LearnerInfo.ReferenceTo[{{index}}]_delete_btn" 
+								class="section attachment delete tip spot nested-tip"
+								data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo[{{index}}]"
+								data-rel-help-section="Help.Delete.ESP.Attachment"
+								data-rel-view="Compose:Esp.Attachment"
+								data-rel-index="{{index}}"
+								data-rel-document="ESP">
+							<span class="data-title" style="display:none">{{get_text "Delete.Attachment" group="EditorHelp"}}</span>	
+						</button>
+					</menu>
+					{{#if_gt ../../SkillsPassport.LearnerInfo.ReferenceTo.length compare="1"}}
+						<span class="sortable_placeholder tip spot nested-tip" data-tip.position="top-left">						
+								  <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span>	
+								  +</span>
+					{{/if_gt}}
+					
+				</li>
+		{{/each_with_index}}
+		
+		<li class="attachment_thumbnail">
+			<button type="button" 
+					name="Attachment_add_btn" 
+					class="section compose-list opens-modal-form add empty"
+					data-rel-doc="attachment"
+					data-rel-clazz="AttachmentFormView"
+					data-rel-form="Form:Attachment"
+					data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo"
+					data-rel-help-section="Help.Add.ESP.Attachment"
+					data-rel-index="{{SkillsPassport.LearnerInfo.ReferenceTo.length}}"
+					data-rel-document="ESP">
+					
+					<span class="img-placeholder">&nbsp;</span>
+  					<span>{{get_text "Buttons.Add.Content.ESP" group="GuiLabel"}}</span>
+  										
+			</button>
+		</li>
+	{{/isEmptyObject}}
+</ol>

@@ -1,0 +1,252 @@
+
+/***********************
+WORK EXPERIENCE
+***********************/
+
+.cv .section{
+  &.work-education{
+    ol.sortable.compose-list li.compose-list.empty{
+      padding:0;
+      button{
+        padding-top:20px;
+        padding-bottom:20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:359px){
+
+  .work-education .list.section-heading .container.sort~span.title{
+    font-size:12px;
+  }
+
+}
+/*.cv .section.subsection-container button.opens-modal-form.add, button.opens-modal-form.add{
+  padding:20px 0;
+}*/
+
+
+
+.cv.compose .sortable.compose-list {
+  margin-top: 1.5rem;
+}
+
+
+
+.work-education-experiences-area {
+  padding-top: 42px;
+  position:relative;
+  .label.list.section-heading {
+    display: inline-block;
+    button.autoSort.byDate {
+      position:relative;
+      .auto-sort-btn-mixin;
+      .auto-sort-btn-img-pos-mixin(0px, -10px);
+      /* 			  margin-left: -40px; */
+      top: -10px;
+      visibility:hidden;
+      &:hover,&.tap-hover {
+        .auto-sort-btn-img-pos-mixin(0px, -50px);
+      }
+    }
+  }
+  .sorting-btns-mixin;
+  /*** Education and training - EQF Level Position***/
+  ol#List\:SkillsPassport\.LearnerInfo\.Education{
+    dd.Level {
+      height: auto;
+      position: absolute;
+      width: 21%;
+      left: 44%;
+      top: 0;
+      span.Level{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        width: 80%;
+        top: 2.2rem;
+      }
+    }
+    dd.Title {
+      width: 42%;
+    }
+  }
+}
+
+.section:hover .label.list.section-heading button.autoSort.byDate{
+  visibility:visible;
+  .auto-sort-btn-mixin;
+  .auto-sort-btn-img-pos-mixin(0px, -10px);
+}
+
+.section:hover .label.list.section-heading button.autoSort.byDate:hover{
+  background-position: 0 -50px;
+}
+
+/*** Work experience - Education Switch ***/
+
+
+.work-education-experiences-area .work-education button.work-education-switch.switch  {
+  width: 17px;
+  height:28px;
+  background: url('@{img-base-url}sprites/switch_sections.png@{img-suffix-url}${project.version}') no-repeat top left transparent;
+  position: absolute;
+  left: -1.5rem;
+  top: 47%;
+  margin-left:-8px;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  box-shadow: 0 0 0 5px #fff;
+  outline:0;
+}
+
+.work-education-experiences-area button.work-education-switch.switch {
+  &:hover,&.tap-hover  {
+    background: url('@{img-base-url}sprites/switch_sections.png@{img-suffix-url}${project.version}') no-repeat -17px 0 transparent;
+  }
+}
+
+.cv .section.work-education.switch:before  {
+  content: "";
+  width: 1px;
+  background: #ccc;
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  height: 100%;
+}
+
+
+.cv .section.work-education.switch > .label:before  {
+  content:"";
+  height:1px;
+  width: 2rem;
+  background:#ccc;
+  position:absolute;
+  left:-1.5rem;
+  top: 0.5rem;
+}
+
+.cv .section.work-education.switch:after {
+  background: none repeat scroll 0 0 #ccc;
+  bottom: -0.5rem;
+  content: "";
+  height: 1px;
+  left: -1.5rem;
+  position: absolute;
+  width: 2rem;
+}
+
+
+/****************
+LIST FIXES
+*****************/
+
+.list.section-heading{
+  .container.sort{
+    span, + span{
+      vertical-align:top;
+    }
+  }
+}
+
+.list.section-heading{
+  .container.sort{
+    ~ span.title{
+      vertical-align:top;
+    }
+  }
+}
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .cv .section {
+    &.work-education {
+      /*     ol.sortable.compose-list li.compose-list.empty > button {
+             padding: 10px 0;
+           }*/
+    }
+  }
+  .work-education-experiences-area{
+    padding-top:0;
+  }
+  .cv .section.subsection-container.work-education{
+    margin-top:0;
+  }
+  .cv .section.work-education.switch{
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+    .label:before{
+      display:none;
+    }
+  }
+  .cv.compose .sortable.compose-list {
+    margin-top:0;
+
+  }
+  .sortable.compose-list{
+    font-size:13px;
+  }
+  .cv .section.work-education ol.sortable.compose-list li.compose-list{
+    border:none;
+  }
+  .section.item:hover, .section.item.tap-hover, .elp table.list-actions>tbody>tr.item.tap-hover, .subsection.item:hover, .subsection.item.tap-hover, .section .compose-list>li.list-item:hover, .section .compose-list>li.list-item.tap-hover, ol.compose-list>li.compose-list:hover, ol.compose-list>li.compose-list.tap-hover, ol.compose-list.tap-hover>li.compose-list, .tap-hover.list-item.opens-modal-form, .tap-hover, .foreign-language-skills.empty:hover{
+    border:none;
+  }
+  .section.work-education > .label{
+    position:relative;
+    z-index:10;
+    text-align: left;
+  }
+  .section.work-education > .label > span{
+    pointer-events: none;
+  }
+  button.section.compose-list.compose-list.tap-hover span{
+    color:@blue-darkling!important;
+    &:before{
+      color:@blue-darkling;
+    }
+  }
+  .section.compose-list.opens-modal-form.add.empty.tap-hover{
+    background-color: #ecf6fb;
+  }
+  /* .sort.container,.sort-move-down,.sort-move-up,.sort-move-top{
+     display:none;
+   }*/
+  .work-education-experiences-area ol#List\:SkillsPassport\.LearnerInfo\.Education dd.Level{
+    position:static;
+  }
+  .work-education-experiences-area ol#List\:SkillsPassport\.LearnerInfo\.Education dd.Level span.Level{
+    position:static;
+    width:auto;
+  }
+  .work-education-experiences-area ol#List\:SkillsPassport\.LearnerInfo\.Education dd.Title{
+    width:80%;
+  }
+  .work-education-experiences-area ol#List\:SkillsPassport\.LearnerInfo\.Education dd.Level{
+    width:80%;
+  }
+  .work-education-experiences-area ol#List\:SkillsPassport\.LearnerInfo\.Education dd.Level span.Level{
+    text-align: left;
+    width:80%;
+  }
+  .cv ol.compose-list > li.compose-list dd.value.Level{
+    text-align: left;
+  }
+  .work-education-experiences-area .label.list.section-heading button.autoSort.byDate{
+    display:none!important;
+  }
+}
+

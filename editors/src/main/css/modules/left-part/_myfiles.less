@@ -1,0 +1,427 @@
+
+/**   EPAS-471 **/
+#MyFilesListForm {
+	color: #FFFFFF;
+	font-size: 16px;
+	z-index:1002;
+	.myFilesList-info {
+		background: none repeat scroll 0 0 #FFFFFF;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1002;
+		font-size: 1rem;
+		text-align: left;
+		width: 70%;
+		@media only screen and (min-width: @desktop-width-limit){
+			width: 50%;
+		}
+		h2{
+			color: #9d9d9d;
+			font-size: 2rem;
+			font-weight: 300;
+			small{
+				display: inline-block;
+				padding: 0.5rem 0 0.5rem 1.7rem;
+				margin: 0 0 0 1rem;
+				font-size: 0.8rem;
+				font-weight: normal;
+				vertical-align: middle;
+				background-position: left;
+				background-size: auto 1.1rem;
+				background-repeat: no-repeat;
+			}
+			[id*=-disconnect]{
+				cursor: pointer;
+				color: @upload-button-blue-gradient-end;
+			}
+		}
+		button.close {
+			.close-button-mixin;
+			position: absolute;
+			top: 15px;
+			right: -30px;
+		}
+		.ui-settings-area {
+			.box-sizing;
+			color: #aaa;
+			overflow-y: visible;
+			overflow-x: hidden;
+			height: 100%;
+			width: 100%;
+			padding: 30px 2rem;
+		}
+	}
+}
+
+#addBlankDocument{
+	display: block;
+	padding: 0.2rem 0 0.3rem 1.7rem;
+	margin: 1rem 0 0 0;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: @darkOrange;
+	cursor: pointer;
+	background-image: url(../images/sprites/round_plus_icons.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	&:hover{
+		color: @menu-medium-blue;
+		background-position: 0 -1.3rem;
+	}
+}
+
+//save-your-cv-section
+#save-your-cv-section {
+	position: relative;
+	margin-top: 1rem;
+	border-radius: 4px;
+	padding: 20px;
+	padding-left: 70px;
+	background: #ffcccb;
+	color: #49484c;
+    line-height: 1.4;
+    &:before {
+    	font-family: "europass-application";
+	    content: "\e92f";
+	    font-size: 35px;
+	    position: absolute;
+	    left: 17px;
+	    top: 31px;
+	    color: #fa7d23;
+	    color: red;
+	    transform: translatey(-50%);
+	    text-align: center;
+    }
+}
+
+
+.manage-document-tile{
+	margin-bottom: 15px;
+	background-color: #fff;
+	border: 1px solid #e8ebef;
+	border-radius: 4px;
+	&:hover{
+		background-color: #edf2f5;
+	}
+	&.cloud-file-selected{
+		background-color: #edf2f5;
+		border-color: #95a4b4;
+	}
+}
+.manage-document-container{
+	display: table;
+	cursor: pointer;
+	width: 100%;
+	& > div{
+		display: table-cell;
+		padding: 1rem 0;
+	}
+	button{
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+		width: 32px;
+		height: 32px;
+		background-color: transparent;
+		border: 0;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		&[disabled]{
+			opacity: 0.5;
+			cursor: default;
+		}
+		&:hover{
+			&:before{
+				color:@blue-darkling;
+			}
+		}
+		span{
+			display: none;
+		}
+	}
+	.btn-cloud-share{
+		&:before{
+			content:"\e902";
+			font-family:"europass-application"!important;
+			color:@orange-dark;
+			font-size:18px;
+		}
+	}
+	.btn-cloud-copy{
+		&:before{
+			content:"\e921";
+			font-family:"europass-application"!important;
+			color:@orange-dark;
+			font-size:18px;
+		}
+	}
+	.btn-cloud-delete{
+		&:before{
+			content: "\e903";
+			font-family: "europass-application" !important;
+			font-size: 18px;
+			font-weight: 400;
+			color:@orange-dark;
+		}
+	}
+	.btn-cloud-rename{
+		&:before{
+			content:"\e92d";
+			font-family:"europass-application"!important;
+			color:@orange-dark;
+			font-size:18px;
+		}
+	}
+	input[type="text"]{
+		padding: 0.5rem;
+		border-radius: 4px;
+		border: 1px solid @darkOrange;
+		&.cloud-document-filename{
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+.manage-document-radio{
+	width: 10%;
+	position: relative;
+	input{
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		top: 25px;
+		right: 0;
+		bottom: 0;
+		left:28px;
+	}
+}
+.manage-document-link{
+	width: 65%;
+	button[class*="image-"]{
+		width: 22px;
+		height: 22px;
+	}
+	.document-metadata {
+		.cvLocale {
+			font-weight: bold;
+		}
+	}
+}
+.cloud-document-filename{
+	font-weight: bold;
+	color: @grey-dark-text-two;
+	word-break: break-all;
+}
+.rename-selected{
+	color: #2c4969;
+	width: inherit;
+}
+.lastModifiedDate, .cvLocale, .filetypes {
+	color: #8b9bad;
+	color: @grey-dark-text-two;
+	font-size: 0.8rem;
+}
+.manage-document-actions{
+	width: 25%;
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 1rem !important;
+}
+.manage-action.link-delete{
+	padding: 1rem 1rem 1rem 1rem;
+	font-size: 0.8rem;
+	text-align: center;
+	color: @very-dark-grey;
+	.button.blue{
+		width: auto;
+		padding: 0.8rem 1.2rem;
+		font-size: 0.8rem;
+	}
+}
+
+#MyFilesListForm .manage-document-container button.btn-cloud-share:before{
+	font-size:20px;
+	content:"\e932";
+}
+
+#MyFilesListForm #cloudManageDocumentsRadioForm {
+
+	.message-inner {
+		font-size:13px;
+		padding:20px;
+		line-height:1.2;
+		color: @grey-dark-text-two;
+		@media screen and (max-width:@phone-width-limit){
+			padding:0 10px 10px;
+		}
+		> span {
+			color: @grey-dark-text-two;
+			display:inline-block;
+			margin-bottom:0;
+			font-size:19px;
+		}
+		span {
+			color: @grey-dark-text-two;
+		}
+	}
+	.share-cloud-recipient-email-input.Email{
+		height: 40px;
+		padding:5px;
+		background:white!important;
+	}
+	textarea {
+		resize: none;
+		width: 85%;
+		height:90px;
+		box-sizing: border-box;
+		padding:5px;
+	}
+	.share-cloud-message{
+		label{
+			margin:10px 0;
+			font-size:13px;
+		}
+	}
+	.share-cloud-recipient-email {
+		> div {
+			max-width:85%;
+			> span {
+				margin:10px 0;
+				color: @grey-dark-text-two;
+				display:inline-block;
+			}
+		}
+	}
+	.share-cloud-sender-email{
+		margin-bottom:10px;
+		span{
+			color:#666;
+		}
+	}
+}
+
+#cloudManageDocumentsRadioForm{
+	.share-explanatory-text{
+		margin:10px 0;
+		padding-left:30px;
+		font-size:16px;
+	}
+}
+
+
+#cloudManageDocumentsRadioForm .share-explanatory-text{
+	&:before{
+		left:0!important;
+	}
+}
+
+.manage-document-container .btn-cloud-rename-confirm:before{
+	content: "\e928";
+	font-family: "europass-application" !important;
+	color: @green-darker;
+	font-size: 18px;
+}
+
+@media screen and(max-width:@phone-width-limit) {
+	#MyFilesListForm .myFilesList-info{
+		width:100%;
+		.close{
+			display:block!important;
+		}
+		h2{
+			font-size:1.5rem;
+		}
+		.ui-settings-area{
+			padding:10px;
+		}
+		.manage-document-radio input{
+			left:0;
+		}
+	}
+	#MyFilesListForm .myFilesList-info .ui-settings-area{
+		padding-left:40px;
+	}
+	#MyFilesListForm .myFilesList-info button.close {
+		position: fixed;
+		left: 7px;
+		top: 13px;
+		margin: 0;
+		background-image: none;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		border: none;
+		width: 15px;
+		height: 15px;
+		text-indent: 0;
+		opacity: 1;
+		line-height: 32px;
+		display: inline-block;
+		padding: 18px;
+		font-size: 0;
+		&:before{
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "×";
+			font-size: 40px;
+			color: #1292CB;
+			line-height: 0.7;
+		}
+	}
+	#MyFilesListForm #cloudManageDocumentsRadioForm {
+		.share-cloud-recipient-email-input.Email {
+			width: 100%;
+		}
+		textarea {
+			width: 100%;
+		}
+		.reject-share-action,.confirm-share-action {
+			width:auto;
+			font-weight:400;
+		}
+	}
+}
+
+.onedrive .btn-cloud-share.image-share{
+	display:none;
+}
+
+.post-share-action{
+	.arrow{
+		.message-inner{
+			font-size:14px!important;
+			color:#666;
+			span{
+				font-size:14px!important;
+				color:#666;
+			}
+			button{
+				margin-top:0!important;
+				margin-left:20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:@phone-width-limit){
+	.manage-document-container{
+		.manage-document-radio{
+			display:none;
+		}
+		> .manage-document-link{
+			padding-top:10px;
+		}
+		.manage-document-link{
+			padding-left:10px;
+			max-width:200px;
+		}
+		.manage-document-actions{
+			width:100%;
+			display:flex;
+		}
+	}
+}

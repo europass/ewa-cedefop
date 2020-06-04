@@ -1,0 +1,8 @@
+{{#if ReferenceTo}}
+<em class="number-of-attachments linked tip spot active-tip-text" 
+	data-tip-replacement-text="{{ReferenceTo.length}}"
+	data-tip-replacement-key="[[number_of_attachments]]">
+	<span class="data-title" style="display:none;">{{get_text "Attachment.Number.Indicator" group="EditorHelp"}}</span>
+	{{ReferenceTo.length}}
+</em>
+{{/if}}

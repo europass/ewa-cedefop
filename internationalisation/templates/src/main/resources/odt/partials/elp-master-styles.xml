@@ -1,0 +1,119 @@
+	{{=[[ ]]=}}
+		<style:master-page style:name="_5f_ELP_5f_Common_5f_Pages"
+			style:display-name="_ELP_Common_Pages" style:page-layout-name="_LP_Mpm3">
+			<style:header>
+				{{#DocumentInfo.EuropassLogo}}
+					<table:table table:name="_LP_Table10" table:style-name="_LP_Table10">
+					<table:table-column table:style-name="_LP_Table10.A" />
+					<table:table-column table:style-name="_LP_Table10.B" />
+					<table:table-row table:style-name="_LP_Table10.1">
+						<table:table-cell table:style-name="_LP_Table10.A1" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_Table_5f_Titles">
+								<draw:frame draw:style-name="_LP_Mfr1" draw:name="_LP_graphics20" text:anchor-type="paragraph" svg:x="0.19mm" svg:y="0.19mm" svg:width="45mm" svg:height="11.99mm" draw:z-index="17">
+									<draw:image xlink:href="Pictures/elp_header_europass_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+									<svg:title>[[& Accessibility:Europass:Logo]]</svg:title>
+								</draw:frame></text:p>
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table10.B1" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Header">
+								<text:span text:style-name="_5f_ELP_5f_Common_5f_Pages_5f">
+									<text:span text:style-name="_LP_MT2">
+										[[#resources]] [[& Document:Header:ELP]][[/resources]]<text:line-break /></text:span></text:span>
+								<text:span text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Name">
+									<text:span text:style-name="_LP_MT2">{{#LearnerInfo.Identification.PersonName}}{{{inOrder}}}{{/LearnerInfo.Identification.PersonName}}</text:span></text:span></text:p>
+						</table:table-cell>
+					</table:table-row>
+				</table:table>
+				<text:p text:style-name="_LP_MP5" />
+				{{/DocumentInfo.EuropassLogo}}
+				{{^DocumentInfo.EuropassLogo}}
+				<table:table table:name="_LP_Table10" table:style-name="_LP_Table10">
+					<table:table-column table:style-name="_LP_Table10.A" />
+					<table:table-column table:style-name="_LP_Table10.B" />
+					<table:table-row table:style-name="_LP_Table10.1">
+						<table:table-cell table:style-name="_LP_Table10.A1_No_Logo" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Header_No_Logo">
+								<text:span text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Title_No_Logo">
+									<text:span text:style-name="_LP_MT1">
+										[[#resources]] [[& Document:Header:ELP]][[/resources]] 
+									</text:span>
+								</text:span>
+							</text:p>
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table10.B1_No_Logo" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Header">
+								<text:span text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_Name">
+									<text:span text:style-name="_LP_MT2">{{#LearnerInfo.Identification.PersonName}}{{{inOrder}}}{{/LearnerInfo.Identification.PersonName}}</text:span></text:span></text:p>
+						</table:table-cell>
+					</table:table-row>
+				</table:table>
+				<text:p text:style-name="_LP_MP5" />
+				{{/DocumentInfo.EuropassLogo}}
+							
+			</style:header>
+			<style:footer>
+				<table:table table:name="_LP_Table11" table:style-name="_LP_Table11">
+					<table:table-column table:style-name="_LP_Table11.A" />
+					<table:table-column table:style-name="_LP_Table11.B" />
+					<table:table-row table:style-name="_LP_Table11.1">
+						<table:table-cell table:style-name="_LP_Table11.A1" office:value-type="string">
+							<text:p text:style-name="_LP_MP2">[[#resources]] [[& ELP:Document:Footer:Council]][[/resources]] </text:p>
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table11.A1" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_footer_5f_logo">
+								<draw:frame draw:style-name="_LP_Mfr2" draw:name="graphics21" text:anchor-type="as-char" svg:width="39mm" svg:height="11.99mm" draw:z-index="18">
+									<draw:image xlink:href="Pictures/elp_footer_eu_logo.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+									<svg:title>[[#resources]] [[& Accessibility:Europass:Footer:Logo]][[/resources]] </svg:title>
+								</draw:frame>
+							</text:p>
+						</table:table-cell>
+					</table:table-row>
+					<table:table-row table:style-name="_LP_Table11.2">
+						<table:table-cell table:style-name="_LP_Table11.A2" office:value-type="string">
+							{{#DocumentInfo.EuropassLogo}}<text:p text:style-name="_LP_MP6">[[#resources]] [[& Document:Footer:EuropeanUnionCouncil]][[/resources]]  | [[#resources]][[& Document:Footer:EuropassLink]][[/resources]]</text:p>{{/DocumentInfo.EuropassLogo}}
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table11.A2" office:value-type="string">
+							<text:p text:style-name="_5f_ELP_5f_Common_5f_Pages_5f_page_5f_number">
+								{{#DocumentInfo.EuropassLogo}}<text:span text:style-name="_LP_MT1">{{#DocumentInfo}}{{formatLastUpdateDate}}{{/DocumentInfo}}</text:span>{{/DocumentInfo.EuropassLogo}}
+								<text:tab/><text:tab/>
+								<text:span text:style-name="_LP_MT1">[[#resources]] [[& Document:Footer:Paging]][[/resources]]  </text:span>
+								<text:span text:style-name="_LP_MT1">
+									<text:page-number text:select-page="current">2
+									</text:page-number>
+								</text:span>
+								<text:span text:style-name="_LP_MT1"> / </text:span>
+								<text:span text:style-name="_LP_MT1">
+									<text:page-count>3</text:page-count></text:span></text:p>
+						</table:table-cell>
+					</table:table-row>
+				</table:table>
+				<text:p text:style-name="_LP_MP7" />
+			</style:footer>
+		</style:master-page>
+		<style:master-page style:name="_5f_ELP_5f_Self-assesment_5f_grid_5f_Page" style:display-name="_ELP_Self-assesment_grid_Page" style:page-layout-name="_LP_Mpm4">
+			<style:header>
+				<text:p text:style-name="_LP_MP8">[[#resources]] [[& Document:Header:ElpCEF]][[/resources]]  - [[#resources]] [[& Document:Header:ElpSelfAssesmentGrid]][[/resources]] </text:p>
+			</style:header>
+			<style:footer>
+				<table:table table:name="_LP_Table14" table:style-name="_LP_Table14">
+					<table:table-column table:style-name="_LP_Table14.A" />
+					<table:table-column table:style-name="_LP_Table14.B" />
+					<table:table-row table:style-name="_LP_Table14.1">
+						<table:table-cell table:style-name="Table14.A1" office:value-type="string">
+							{{#DocumentInfo.EuropassLogo}}<text:p text:style-name="_LP_MP9">[[#resources]] [[& Document:Footer:EuropeanUnionCouncil]][[/resources]]  | [[#resources]][[& Document:Footer:EuropassLink]][[/resources]]
+							</text:p>{{/DocumentInfo.EuropassLogo}}
+						</table:table-cell>
+						<table:table-cell table:style-name="_LP_Table14.A1" office:value-type="string">
+							<text:p text:style-name="_LP_MP10">
+								<text:span text:style-name="_LP_MT3">[[#resources]] [[& Document:Footer:Paging]][[/resources]]  </text:span>
+								<text:span text:style-name="_LP_MT3">
+									<text:page-number text:select-page="current">3</text:page-number></text:span>
+								<text:span text:style-name="_LP_MT3"> / </text:span><text:span text:style-name="_LP_MT3"><text:page-count>3</text:page-count></text:span></text:p>
+						</table:table-cell>
+					</table:table-row>
+				</table:table>
+<!-- 				<text:p text:style-name="Standard" /> -->
+			</style:footer>
+		</style:master-page>
+		<style:master-page style:name="_LP_HTML" style:page-layout-name="_LP_Mpm5" />
+		<style:master-page style:name="_LP_Footnote" style:page-layout-name="_LP_Mpm6" />

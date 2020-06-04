@@ -1,0 +1,195 @@
+
+<fieldset class="ProficiencyLevel Information">
+	<label for="Information">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="DocumentLabel"}}</label>
+	
+	<fieldset class="Information">
+		<div class="level select" name="Information">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Information"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="DocumentLabel"}}"
+						class="formfield hidden_select ict-level Information noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Information">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Information "IctInformationProcessingLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Information"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex custom_select_digital ict-level Information noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Information">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Information "IctInformationProcessingLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+<fieldset class="ProficiencyLevel Communication">
+	<label for="Communication">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="DocumentLabel"}}</label>
+	<fieldset class="Communication">
+		<div class="level select" name="Communication">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Communication"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="DocumentLabel"}}"
+						class="formfield hidden_select ict-level Communication noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Communication">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Communication "IctCommunicationLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Communication"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex custom_select_digital ict-level Communication noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Communication">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Communication "IctCommunicationLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+<fieldset class="ProficiencyLevel ContentCreation">
+	<label for="ContentCreation">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="DocumentLabel"}}</label>
+	<fieldset class="ContentCreation">
+		<div class="level select" name="ContentCreation">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="DocumentLabel"}}"
+						class="formfield hidden_select ict-level ContentCreation noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation "IctContentCreationLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex custom_select_digital ict-level ContentCreation noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation "IctContentCreationLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+<fieldset class="ProficiencyLevel Safety">
+	<label for="Safety">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="DocumentLabel"}}</label>
+	<fieldset class="Safety">
+		<div class="level select" name="Safety">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Safety"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="DocumentLabel"}}"
+						class="formfield hidden_select custom_select_digital ict-level Safety noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Safety">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Safety "IctSafetyLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.Safety"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex ict-level Safety noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.Safety">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.Safety "IctSafetyLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+                </ul>
+				</select>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+<fieldset class="ProficiencyLevel ProblemSolving">
+	<label for="ProblemSolving">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="DocumentLabel"}}</label>
+	<fieldset class="ProblemSolving">
+		<div class="custom_select_wrapper">
+			<div class="level select" name="ProblemSolving">
+				<select	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="DocumentLabel"}}"
+						class="formfield hidden_select ict-level ProblemSolving noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving "IctProblemSolvingLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving"
+						data-name="{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex custom_select_digital ict-level ProblemSolving noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving "IctProblemSolvingLevelMap" "IctLevelMap" emptyOption=false showCode=false shortLabel=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+                </ul>
+				</select>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+	

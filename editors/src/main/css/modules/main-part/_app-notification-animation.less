@@ -1,0 +1,144 @@
+#notifications-area,
+#dragdrop-feedback {
+  //Cookie Law
+  #cookie-law-consent-section {
+    .notifications-wrapper-mixin;
+  }
+  #app-notifications,
+  #dragdrop-notifications {
+    .notifications-wrapper-mixin;
+    section {
+      margin-top: 30px !important;
+    }
+  }
+  #document-storing-warning {
+    .notifications-wrapper-mixin;
+  }
+  #new-europass-portal-info {
+    .notifications-wrapper-mixin;
+  }
+}
+
+
+
+
+/***********************
+NEW ANIMATION
+***********************/
+
+
+.notifications-wrapper-mixin {
+  * {
+    color: @grey-dark-text-two;
+  }
+  section {
+    .msg-wrapper-mixin;
+    margin-top: 30px;
+    @media screen and(max-width:@phone-width-limit){
+      margin-top: 0;
+    }
+    .message-area {
+      .notifications-html;
+    }
+    &.info {
+      background-color: @msg-info-bg;
+    }
+    &.success {
+      background-color: white;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 50%;
+      width: auto;
+      height: 60px;
+      transform: translatex(-50%);
+      padding-left: 60px;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: hide-success 1s 2.5s ease forwards, highlight-message 2.5s  ease forwards;;
+      border-bottom-left-radius: 4px !important;
+      border-bottom-right-radius: 4px !important;
+      .message-area {
+        margin-top: -10px;
+        margin-top: 3px; //Maz Changes
+        padding-left: 15px;
+        font-weight: bold;
+        &:after {
+          opacity: 1;
+          height: 2rem;
+          width: 1rem;
+          transform-origin: left top;
+          border-right: 2px solid @green-darker;
+          border-top: 2px solid @green-darker;
+          content: '';
+          left: 20px;
+          top: 45%;
+          position: absolute;
+          animation-duration: 3s;
+          animation-timing-function: ease;
+          animation-name: checkmarking;
+          transform: scaleX(-1) rotate(135deg);
+        }
+      }
+    }
+    &.confirm,
+    &.warning {
+      background-color: @msg-warning-bg;
+    }
+    &.error {
+      background-color: @msg-error-bg;
+    }
+    button {
+      .msg-close-btn-mixin;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes hide-success {
+  to{
+    margin-top:-100px;
+  }
+}
+
+@keyframes highlight-message {
+  0% {
+    background-color:white;
+  }
+  40% {
+    background-color:@green-lightest;
+  }
+  60% {
+    background-color:@green-lightest;
+  }
+  100% {
+    background-color:white;
+  }
+}
+
+
+@keyframes checkmarking {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 1rem;
+    opacity: 1;
+  }
+  40% {
+    height: 2rem;
+    width: 1rem;
+    opacity: 1;
+  }
+  100% {
+    height: 2rem;
+    width: 1rem;
+    opacity: 1;
+  }
+}
+

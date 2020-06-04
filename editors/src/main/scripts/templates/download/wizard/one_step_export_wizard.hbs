@@ -1,0 +1,31 @@
+<header class="main-modal-title">
+	<legend>{{get_text "export.wizard.option.new" group="GuiLabel"}}</legend>
+</header>
+
+<div id="export-wizard-step-1" class="wizard-step-1"></div>
+<div id="export-wizard-step-2" class="wizard-step-2"></div>
+<div id="export-wizard-step-3" class="wizard-step-3"></div>
+<div id="export-wizard-step-4" class="wizard-step-4"></div>
+
+<div class="export-form-controls wizard-controls">	
+	{{#permissionToKeepCv}}
+	    <fieldset class="step-permision checkbox-field">
+		    <div id="permision-text">{{get_text "export.wizard.permission.text" group="GuiLabel"}}</div>
+		    <input type="checkbox"
+			class="formfield css-checkbox isBinary"
+			id="keep-cv-permission"
+			name="keep-cv-permission">
+		    <label for="keep-cv-permission" id="permision-label" class="css-label css-label-long checkbox-label">{{get_text "export.wizard.permission.checkbox" group="GuiLabel"}}</label>
+	    </fieldset> 
+	{{/permissionToKeepCv}}
+	<button type="button" id="download-button" class="button finish green submit" form="{{formName}}">
+		{{get_text "export.wizard.download" group="GuiLabel"}}
+	</button>
+	<button type="button" id="connect-button" class="button green connect " form="{{formName}}" style="display:none">
+		<span>{{get_text "buttons.wizard.connect" group="GuiLabel"}}</span>
+	</button>
+	<div id="email_area"></div>
+	<button type="button" id="email-button" class="button green connect" form="{{formName}}" style="display:none">
+		<span>{{get_text "Buttons.Send" group="GuiLabel"}}</span>
+	</button>
+</div>

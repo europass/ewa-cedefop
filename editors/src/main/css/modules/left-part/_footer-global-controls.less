@@ -1,0 +1,242 @@
+
+
+/**************************************************************************
+GLOBAL CONTROLS
+***************************************************************************/
+
+.global-controls {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  padding: 0 8% 0;
+  width: 84%;
+  background-color:@blue-darkest;
+  @media only screen and ( min-width: 809px ) and (max-width:1120px){
+    background-color:transparent;
+  }
+  @media only screen and ( min-width: @desktop-width-limit ){
+    padding: 0 1.7rem 0.7rem;
+
+  }
+  * {
+    color: @white;
+    font-size: 0.85rem;
+    outline: none;
+  }
+  #application-settings {
+    a,
+    a:visited {
+      display: block;
+      padding: 14px 0 10px 30px;
+      background-image: url("@{img-base-url}sprites/global_controls.png@{img-suffix-url}${project.version}");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: 0 -325px;
+      text-decoration: none;
+    }
+    a:hover,
+    a.tap-hover {
+      cursor: pointer;
+      background-position: 0 -401px;
+    }
+  }
+  #europass-contents-reset {
+    button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      padding: 14px 0 10px 30px;
+      background-image: url("@{img-base-url}sprites/global_controls.png@{img-suffix-url}${project.version}");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: 0 10px;
+      text-decoration: none;
+      overflow: visible; /*vpol added so that tooltip can be displayed in IE*/
+      &:hover,
+      &.tap-hover {
+        cursor: pointer;
+        background-position: 0 -66px;
+      }
+    }
+  }
+  #contact-us {
+    a,
+    a:visited {
+      display: block;
+      padding: 14px 0 10px 30px;
+      background-image: url("@{img-base-url}sprites/global_controls.png@{img-suffix-url}${project.version}");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: 0 -151px;
+      text-decoration: none;
+    }
+    a:hover,
+    a.tap-hover {
+      cursor: pointer;
+      background-position: 0 -241px;
+    }
+  }
+  //Tablet
+  @media only screen and (max-width: @tablet-width-limit ) {
+    #application-settings {
+      width: 51%;
+      float: left;
+    }
+    #europass-contents-reset {
+      width: 51%;
+      float: left;
+    }
+    #contact-us {
+      width: 51%;
+      float: left;
+    }
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit ) and (orientation: landscape) {
+  .global-controls {
+    position: relative;
+    margin-top: 38%;
+  }
+}
+
+
+
+
+footer.global-controls {
+  /*  #basic-principles-btn, #prepare-your-interview-btn {
+      margin: 10px 0 !important;
+    }*/
+  button{
+    width:auto;
+  }
+  #prepare-your-interview-btn:before {
+    content: "\e910";
+    font-size: 18px;
+  }
+}
+
+//Ie Problem
+@media all and (-ms-high-contrast:none) {
+  footer.global-controls #prepare-your-interview-btn:before {
+  /* IE10 */
+    font-size: 14px;
+  }
+  #basic-principles-btn:before, #prepare-your-interview-btn:before {
+    font-size: 17px;
+  }
+  .global-controls #application-settings a,
+  .global-controls #application-settings a:visited {
+    background-size: 16px;
+    background-position: 0 -230px;
+  }
+  .global-controls #application-settings a:hover, 
+  .global-controls #application-settings a.tap-hover {
+    background-position: 0 -285px;
+  }
+  .global-controls #contact-us a, .global-controls #contact-us a:visited {
+    background-size: 16px;
+    background-position: 0 -103px;
+  }
+  .global-controls #contact-us a:hover,
+  .global-controls #contact-us a.tap-hover {
+    background-position: 0 -168px;
+  }
+
+  /* IE11 */
+   *::-ms-backdrop, footer.global-controls #prepare-your-interview-btn:before {
+      font-size: 14px;
+    }
+  *::-ms-backdrop, #basic-principles-btn:before, #prepare-your-interview-btn:before {
+    font-size: 17px;
+  }
+  *::-ms-backdrop, .global-controls #application-settings a,
+  *::-ms-backdrop, .global-controls #application-settings a:visited {
+    background-size: 16px;
+    background-position: 0 -230px;
+  }
+  *::-ms-backdrop, .global-controls #application-settings a:hover, 
+  *::-ms-backdrop, .global-controls #application-settings a.tap-hover {
+    background-position: 0 -285px;
+  }
+  *::-ms-backdrop, .global-controls #contact-us a, .global-controls #contact-us a:visited {
+    background-size: 16px;
+    background-position: 0 -103px;
+  }
+  *::-ms-backdrop, .global-controls #contact-us a:hover,
+  *::-ms-backdrop, .global-controls #contact-us a.tap-hover {
+    background-position: 0 -168px;
+  }
+}
+
+
+footer.global-controls a, footer.global-controls button{
+  color:@gold;
+}
+
+
+@media only screen and (min-height: 450px) and (max-height: 850px) {
+  .global-controls {
+    bottom: 0px !important;
+  }
+}
+
+
+/*Rules for blue modal footer clickable area - tablet, orientation portrait*/
+
+@media (max-width: @tablet-width-limit) and (orientation: portrait) {
+  .global-controls {
+    #application-settings {
+      float: left;
+      margin-top: 0;
+    }
+    #europass-contents-reset {
+      float: left;
+    }
+    #contact-us {
+      float: left;
+      width: 51%;
+    }
+    #local-storage-options {
+      float: none;
+      display: inline;
+      .onoffswitch label {
+        left: 25px;
+        top: -38px;
+      }
+      .heading {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media screen and(max-height:600px) {
+  .global-controls {
+    button {
+      margin-bottom: 5px !important;
+      margin-top: 5px !important;
+    }
+    #basic-principles-section {
+      margin-bottom:0px!important;
+    }
+    #application-settings a, #application-settings a:visited{
+      padding-top:5px!important;
+      padding-bottom:5px!important;
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .global-controls #contact-us a.tap-hover{
+    border:none;
+  }
+}
+
+
+

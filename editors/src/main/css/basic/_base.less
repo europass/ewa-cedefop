@@ -1,0 +1,84 @@
+
+hr{
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+body {
+  position: absolute;
+  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input:focus,
+button,
+a {
+  outline: none;
+}
+
+/***************************************************
+ ***************************************************
+ *****            GENERIC RULES                *****
+ ***************************************************
+ ***************************************************/
+* {
+  font-family: 'Open Sans', sans-serif !important;
+  /* 	color: @gray-text; */
+}
+
+
+
+.description strong,
+.email-note strong,
+.rich-content strong,
+fieldset .rich-editor strong,
+.description b,
+.email-note b,
+.rich-content b,
+fieldset .rich-editor b{
+  font-weight: bold;
+}
+
+.email-note a,
+.rich-content a,
+fieldset .rich-editor a,
+.description a{
+  color: inherit;
+}
+
+
+/*****     For Chrome, Safari and Opera (Webkit) , ndim change ::-webkit-scrollbar height to 1% because it flooded the CL screen on chrome   *****/
+
+::-webkit-scrollbar { width: 10px; height: 1%; }
+::-webkit-scrollbar-button {  display: none; }
+::-webkit-scrollbar-track {  background-color: @medium-light-grey; }
+::-webkit-scrollbar-track-piece { background-color: @medium-light-grey; }
+::-webkit-scrollbar-thumb { height: 50%; background-color: #1678B2; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background-color: rgba(22,120,178,0.7);}
+
+
+
+/* Tablet specific rules for preventing the vertical scrollbar from being appeared */
+@media only screen and ( max-width: @tablet-width-limit ) {
+  ::-webkit-scrollbar-thumb:vertical { display: none; }
+}
+/* Desktop specific rules for preventing the horizontal scrollbar from being appeared */
+@media only screen and ( min-width: @desktop-width-limit ) {
+  ::-webkit-scrollbar-thumb:horizontal { display: none; }
+
+}
+@-moz-document url-prefix() {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+

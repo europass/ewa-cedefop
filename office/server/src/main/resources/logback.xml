@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="fout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/europass-oo-server.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${catalina.base}/logs/europass-oo-server.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>~%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{20} -- %ex{full}#AdditionalInfo:%msg%n</Pattern>
+        </layout>
+    </appender>
+    <logger name="org.apache.pdfbox.pdmodel.font.PDSimpleFont" level="ERROR" />
+    <logger name="europass.ewa.oo.server.impl.OOPoolCleanupThread" level="DEBUG" />	
+    <logger name="europass.ewa.oo.server.resources.OOResource" level="DEBUG" />
+    <logger name="europass.ewa.oo.server.resources.OOPoolImplementation" level="DEBUG" />
+    <logger name="europass.ewa.oo.server.jobs" level="DEBUG" />	
+    <root level="INFO">
+        <appender-ref ref="stdout" />
+        <appender-ref ref="fout" />
+    </root>
+</configuration>

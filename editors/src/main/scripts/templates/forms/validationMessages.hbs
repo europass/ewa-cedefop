@@ -1,0 +1,11 @@
+{{#if errors}}
+<div class="feedback-area" style="{{style}}">
+	<section class="notification {{status}}">
+		<ul>
+		{{#each errors}}
+			<li>{{message}}</li>
+		{{/each}}
+		</ul>
+	</section>
+</div>
+{{/if}}

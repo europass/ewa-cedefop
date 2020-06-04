@@ -1,0 +1,34 @@
+{{#if LearnerInfo.Identification.Photo}}
+<div class="photo-wysiwyg fit">
+	<em class="crop-guidelines">
+		{{get_text "LearnerInfo.Identification.Photo.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}
+	</em>
+	<div class="photo-preview-area">
+		<img 
+			 {{#get_obj_metadata LearnerInfo.Identification.Photo key="cropping"}}
+			 	{{#if cropping}}
+			 		{{#with cropping}}
+			  		style="width:{{width}}px;height:{{height}}px;margin-left:-{{x}}px;margin-top:-{{y}}px;" 
+			  		{{/with}}
+			  	{{/if}}
+			 {{/get_obj_metadata}}
+			 
+			 src="{{LearnerInfo.Identification.Photo.TempURI}}" 
+			 alt="{{get_text "LearnerInfo.Identification.Photo.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}"/>
+	</div>
+</div> 
+
+<div class="pref hidden">
+	<input type="hidden" 
+		   class="formfield pref photo" 
+		   name="LearnerInfo.Identification.Photo.TempURI" 
+		   data-bind-name="LearnerInfo.Identification.Photo"
+		   value="{{LearnerInfo.Identification.Photo.TempURI}}">
+	<input type="hidden" 
+		   class="formfield photo" 
+		   name="LearnerInfo.Identification.Photo.MimeType" 
+		   data-bind-name="LearnerInfo.Identification.Photo"
+		   value="{{LearnerInfo.Identification.Photo.MimeType}}">
+</div>
+
+{{/if}}

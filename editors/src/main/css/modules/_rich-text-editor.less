@@ -1,0 +1,716 @@
+#redactor-modal header {
+	border-radius: 3px 3px 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 11px 30px 10px 15px;
+}
+
+.redactor-link-tooltip {
+	position: absolute;
+	z-index: 3000;
+	padding: 10px;
+	line-height: 1;
+	display: inline-block;
+	background-color: #000;
+	color: #555 !important;
+}
+.redactor-link-tooltip,
+.redactor-link-tooltip a {
+	font-size: 12px;
+	/* 	font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif !important; */
+	font-family: 'Open Sans', sans-serif !important;
+}
+.redactor-link-tooltip a {
+	color: #ccc;
+	margin: 0 5px;
+	text-decoration: none;
+}
+.redactor-link-tooltip a:hover {
+	color: #fff;
+}
+
+.redactor-modal-delete-btn {
+	background: none;
+	color: #fff;
+	background-color: #b52525;
+}
+.redactor-modal-delete-btn:hover {
+	color: rgba(255, 255, 255, .6);
+	background-color: #881b1b;
+}
+.redactor-modal-action-btn {
+	background: none;
+	color: #fff;
+	background-color: #2461b5;
+}
+.redactor-modal-action-btn:hover {
+	color: rgba(255, 255, 255, .6);
+	background-color: #1a4580;
+}
+
+.redactor-input-error {
+	border-color: #e82f2f!important;
+	box-shadow: 0 0 0 2px rgba(232, 47, 47, .3), 0 1px 2px rgba(0, 0, 0, .2) inset!important;
+}
+
+.redactor-editor em,
+.redactor-editor i{
+	font-style: italic;
+}
+.redactor-editor u{
+	font-style: underline;
+}
+.redactor-editor strong,
+.redactor-editor b{
+	font-weight: bold;
+}
+.redactor-paragraph-marker{
+	line-height: normal !important;
+	padding: 2px 0px !important;
+	/* 	TEWA-1757 POSSIBLE FIX  */
+	/* 	margin: 0px 0px 12px 0px; */
+}
+.redactor-editor br{
+	.redactor-paragraph-marker;
+}
+.redactor-editor p{
+	.redactor-paragraph-marker;
+}
+.redactor-editor div{
+	.redactor-paragraph-marker;
+}
+.redactor-editor li p{
+	margin: 0px !important;
+}
+
+/********************************************/
+/***** BULLETED LISTS *****/
+/********************************************/
+@empty-square: "\25a1";
+@full-square: "\25a0";
+
+.redactor-editor ol,
+.redactor-editor ul{
+	padding-left: 0px !important;
+	/* 	EWA-1757 POSSIBLE FIX  */
+	/* 	margin: 0 0 12px 0px !important; */
+}
+.redactor-editor ol li.nesting ol,
+.redactor-editor ul li.nesting ul{
+	padding-left: 0 !important;
+}
+.list-level-style{
+	margin-left: 1em;
+	position: relative;
+}
+.list-level-style-before{
+	position: absolute;
+	top: 0px;
+	left: -1em;
+}
+.odd-level-style-before{
+	content: @full-square;
+}
+.even-level-style-before{
+	content: @empty-square;
+}
+
+.redactor-editor ol li,
+.redactor-editor ul li{
+	.list-level-style;
+}
+.redactor-editor ol li:before,
+.redactor-editor ul li:before{
+	.list-level-style-before;
+}
+/* list level 1 */
+.redactor-editor ol li:before,
+.redactor-editor ul li:before{
+	.odd-level-style-before;
+}
+/* list level 2 */
+.redactor-editor ol ol li:before,
+.redactor-editor ul ul li:before{
+	.even-level-style-before;
+}
+/* list level 3 */
+.redactor-editor ol ol ol li:before,
+.redactor-editor ul ul ul li:before{
+	.odd-level-style-before;
+}
+/* list level 4 */
+.redactor-editor ol ol ol ol li:before,
+.redactor-editor ul ul ul ul li:before{
+	.even-level-style-before;
+}
+/* list level 5 */
+.redactor-editor ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul li:before{
+	.odd-level-style-before;
+}
+/* list level 6 */
+.redactor-editor ol ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul ul li:before{
+	.even-level-style-before;
+}
+/* list level 7 */
+.redactor-editor ol ol ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul ul ul li:before{
+	.odd-level-style-before;
+}
+/* list level 8 */
+.redactor-editor ol ol ol ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul ul ul ul li:before{
+	.even-level-style-before;
+}
+/* list level 9 */
+.redactor-editor ol ol ol ol ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul ul ul ul ul li:before{
+	.odd-level-style-before;
+}
+/* list level 10 */
+.redactor-editor ol ol ol ol ol ol ol ol ol ol li:before,
+.redactor-editor ul ul ul ul ul ul ul ul ul ul li:before{
+	.even-level-style-before;
+}
+/********************************************/
+
+.redactor-editor blockquote{
+	color: #222222 !important;
+	font-style: normal !important;
+	.redactor-paragraph-marker;
+	margin-left: 2em !important;
+}
+
+sup {
+	top: 0;
+	vertical-align: top;
+}
+
+sub {
+	top: 8px;
+}
+
+sup, sub {
+	font-size: xx-small !important;
+	line-height: 0;
+	position: relative;
+}
+
+.redactor-editor div,
+.redactor-editor p,
+.redactor-editor ul,
+.redactor-editor ol,
+.redactor-editor table,
+.redactor-editor dl,
+.redactor-editor blockquote,
+.redactor-editor pre {
+	font-size: 1rem;
+	/*   line-height: 1.6em; */
+}
+
+/********* Toolbar ***************/
+.redactor-dropdown{
+	width: 150px;
+	padding: 0px;
+	top: 55px;  /** !important off because of insert link tooltip displacement in redactor 9.2.6 */
+	border: 1px solid #bdbdbd;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px #bdbdbd;
+	&:after,  &:before {
+		border-color: transparent;
+		border-style: solid;
+		content: ' ';
+		height: 0;
+		width: 0;
+		position: absolute;
+	}
+	&:after{
+		border-bottom: 5px solid @white;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-width: 12px;
+
+		left: 7%;
+		bottom: 100%;
+	}
+	&:before{
+		border-bottom: 5px solid #bdbdbd;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-width: 14px;
+
+		left: 6%;
+		bottom: 100%;
+	}
+	a{
+		color: @very-dark-grey;
+		font-size: 0.85rem;
+		padding: 0.5rem;
+	}
+	a:hover {
+		color: @light-blue !important;
+		background-color: @white;
+	}
+}
+
+#redactor-modal #redactor-modal-close,
+#redactor-modal header{
+	display: none;
+}
+
+/************ Toolbar Buttons ****************/
+
+.toolbar-button-bg-img(@pos-y, @pos-x){
+	background: url("@{img-base-url}sprites/text_formatting_sprite.png@{img-suffix-url}${project.version}") no-repeat scroll rgba(0, 0, 0, 0);
+	background-position: @pos-y @pos-x;
+}
+
+.toolbar-button-bg-fx(@pos-x, @pos-y){
+	.toolbar-button-bg-img(@pos-x, @pos-y);
+	&:hover,
+	&:active,
+	&.redactor-act{
+		.toolbar-button-bg-img(@pos-x, @pos-y - 40px);
+	}
+}
+
+.redactor-toolbar li {
+	a{
+		display: block;
+		margin: 20px 0px 5px 0px;
+		outline: medium none;
+		padding: 0px 10px;
+		width: 26px;
+		height: 26px;
+		&:hover,
+		&:active,
+		&.redactor-act{
+			outline: none;
+			background-color: transparent;
+		}
+		/* &.redactor-btn-image{
+     !*     			background-position: none; *!
+             width: 24px;
+             height: 26px;
+         }
+
+         &.re-bold{
+             .toolbar-button-bg-fx(right, -11px);
+         }
+
+         &.re-italic{ !* previous @pos-y - 80px *!
+             .toolbar-button-bg-fx(right, -91px);
+         }
+
+         &.re-underline{ !* previous @pos-y - 80px *!
+             .toolbar-button-bg-fx(right, -171px);
+         }
+
+         &.re-unorderedlist{ !* previous @pos-y - 80px *!
+             .toolbar-button-bg-fx(right, -251px);
+         }
+
+         &.re-outdent{
+             .toolbar-button-bg-fx(right, -331px);
+         }
+         &.re-indent{
+             .toolbar-button-bg-fx(right, -412px);
+         }
+
+         &.re-superScript.redactor-btn-image{
+             .toolbar-button-bg-fx(right, -494px);
+         }
+
+         &.re-subScript.redactor-btn-image{
+             .toolbar-button-bg-fx(right, -570px);
+         }
+
+         &.re-removeFormat.redactor-btn-image{
+             .toolbar-button-bg-fx(right, -650px);
+         }
+
+         &.re-link{
+             .toolbar-button-bg-img(right, -727px);
+             &:hover,
+             &:active,
+             &.redactor-act{
+                 .toolbar-button-bg-img(right, -766px);
+             }
+         }
+
+         &.re-alignjustify{
+             .toolbar-button-bg-fx(right, -813px);
+         }
+
+         &.re-alignleft{
+             .toolbar-button-bg-fx(right, -890px);
+         }
+             &.re-addText.redactor-btn-image{
+             .toolbar-button-bg-fx(10px, -974px);
+             &:hover,
+             &:active,
+             &.redactor-act{
+                 .toolbar-button-bg-img(10px, -1017px);
+             }
+         }*/
+	}
+
+	&:last-child {
+		border-left: 1px solid #D4DEE0;
+	}
+}
+
+
+/********* Add Link Dialog *****************/
+#redactor-modal{
+	color: @very-dark-grey;
+	text-align: left;
+	width: 530px !important;
+	padding: 0px;
+	background: white;
+	border-radius: 4px;
+	border-color: 4px;
+
+	header{
+		font-size: 1rem;
+		color: @dark-blue;
+		padding: 1rem;
+		border-bottom: 1px solid #edf2f6;
+		background: #edf2f6;
+		color: #567D98;
+	}
+	#redactor-modal-close{
+		.white-on-blue-bg-close-btn;
+		font-size: 0px;
+		background-position: 4px 5px;
+		top: 0.8rem;
+		right: 1rem;
+	}
+	#redactor-modal-inner{
+		padding: 1rem;
+
+		form {
+			input {
+				.input-field-box-fx;
+				.box-sizing;
+				.input-outer-layout;
+				color: @input-text-clr;
+				display: block;
+				width: 100%;
+				border-radius:3px;
+				border:none;
+			}
+			label, input{
+				font-size: @input-font-size !important;
+			}
+		}
+	}
+	input[type="text"]{
+		box-shadow: none;
+		border-radius: 4px;
+		border-color: #cccccc;
+	}
+	input:focus{
+		outline:none;
+		border: 1px solid #86bbe0;
+		-moz-box-shadow: 0 0 2px 2px @light-blue-alternative;
+		-webkit-box-shadow: 0 0 2px 2px @light-blue-alternative;
+		box-shadow: 0 0 2px 2px  @light-blue-alternative;
+	}
+	menu {
+		padding: 10px;
+		text-align: right;
+
+		.confirm{
+			.button;
+			padding: 13px 17px;
+			width: 104px;
+			height: 44px;
+			font-size: 1rem;
+			vertical-align: bottom;
+		}
+		.reject{
+			.button;
+			padding-top: 13px;
+			padding-bottom: 13px;
+			margin-right: 30px;
+			width: 18%;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+
+
+/********************************
+NEW CK EDITOR
+********************************/
+
+/*EDITABLE THEME BOLD UNDERLINE ETC
+****************************************/
+.cke_editable_themed.cke_editable_themed{
+	padding-top:15px;
+	strong{
+		font-weight:700;
+		font-size:18px;
+	}
+	em{
+		font-style: italic;
+		font-size:18px;
+	}
+	u{
+		font-size:18px;
+	}
+	li{
+		list-style-type:none;
+		margin-left:13px;
+		&:before{
+			display:inline-block;
+			margin-right:1rem;
+		}
+	}
+	ul li:before{
+		.odd-level-style-before;
+	}
+	ul ul li:before{
+		.even-level-style-before;
+	}
+	ul ul ul li:before{
+		.odd-level-style-before;
+	}
+	ul ul ul ul li:before{
+		.even-level-style-before;
+	}
+	ul ul ul ul ul li:before{
+		.odd-level-style-before;
+	}
+	ul ul ul ul ul ul li:before{
+		.even-level-style-before;
+	}
+	ul ul ul ul ul ul ul li:before{
+		.odd-level-style-before;
+	}
+	ul ul ul ul ul ul ul ul li:before{
+		.even-level-style-before;
+	}
+	ul ul ul ul ul ul ul ul ul li:before{
+		.odd-level-style-before;
+	}
+	ul ul ul ul ul ul ul ul ul ul li:before{
+		.even-level-style-before;
+	}
+}
+
+/*GENERAL STYLING
+****************************************/
+
+
+.cke p + p{
+	margin-top:15px;
+}
+
+fieldset.editor .help.placeholding > .help.placeholder {
+	white-space:normal;
+}
+
+.cke.cke {
+	.cke_editable{
+		p,li{
+			color:@font-gray;
+			font-size:18px;
+			line-height:1.2;
+		}
+	}
+	.cke_inner {
+		border: 1px solid rgba(196, 81, 0, 0.44);
+	}
+	a.cke_button_on.cke_button_on{
+		padding:4px 6px 6px;
+		background:@light-grey;
+	}
+	&.cke_focus {
+		.cke_inner {
+			border: 1px solid rgba(43, 72, 104, 0.96);
+		}
+		.cke_top {
+			background-color: @blue-medium-light;
+
+		}
+	}
+	.cke_top {
+		background-color: rgba(196, 81, 0, 0.07);
+		padding: 15px;
+	}
+
+	.cke_chrome {
+		border: none;
+	}
+
+	.cke_toolgroup {
+		margin: 1px 2px 1px 0;
+		a {
+			font-size: 20px;
+		}
+	}
+	a.cke_button{
+		padding:4px 6px 6px;
+	}
+	.cke_toolgroup a {
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		&:hover{
+			padding:4px 6px 6px;
+		}
+
+		span {
+			background: transparent !important;
+		}
+		&:before {
+			font-family: "europass-application" !important;
+			background: transparent !important;
+			font-size: 20px;
+			display: block !important;
+			color: @orange-dark;
+		}
+		&:hover:before {
+			color: #f97c22;
+		}
+		&.cke_button__bold:before {
+			content: "\e913";
+		}
+		&.cke_button__italic:before {
+			content: "\e917";
+		}
+		&.cke_button__underline:before {
+			content: "\e91b";
+		}
+		&.cke_button__bulletedlist:before {
+			content: "\e919";
+		}
+		&.cke_button__outdent:before {
+			content: "\e916";
+		}
+		&.cke_button__indent:before {
+			content: "\e91a";
+		}
+		&.cke_button__link:before {
+			content: "\e918";
+		}
+		&.cke_button__unlink:before {
+			content: "\e931";
+		}
+		&.cke_button__removeformat:before {
+			content: "\e915";
+			font-size: 23px;
+		}
+		&.cke_button__subscript:before {
+			content: "\e914";
+		}
+		&.cke_button__superscript:before {
+			content: "\e91c";
+			position:relative;
+			top:-1px;
+		}
+		&.cke_button__recommendations:before {
+			content: "\e912";
+		}
+	}
+}
+
+.cke{
+	div:not(.mainbody):not(.tooltip):not(.empty), :not(div.tooltip){
+		.rich-content-paragraph-element;
+	}
+	br{
+		.rich-content-paragraph-element;
+	}
+	p{
+		&.indent1{
+			margin-left: 20px;
+			margin-bottom: 0px !important;
+		}
+		&.indent2{
+			margin-left: 40px;
+			margin-bottom: 0px !important;
+		}
+		&.indent3{
+			margin-left: 60px;
+			margin-bottom: 0px !important;
+		}
+		&.align-justify {
+			text-align: justify;
+		}
+		&:last-of-type{
+			padding: 2px 0;
+		}
+	}
+	ul{
+		&.indent1{
+			margin-left: 20px;
+			margin-bottom: 0px !important;
+		}
+		&.indent2{
+			margin-left: 40px;
+			margin-bottom: 0px !important;
+		}
+		&.indent3{
+			margin-left: 60px;
+			margin-bottom: 0px !important;
+		}
+		&.align-justify {
+			text-align: justify;
+		}
+		&:last-of-type{
+			padding: 2px 0;
+		}
+	}
+	blockquote{
+		.rich-content-paragraph-element;
+		margin-left: 2em !important;
+	}
+}
+
+
+
+/***PLACEHOLDER
+*****************************************/
+
+
+
+fieldset.editor{
+	.help.placeholding{
+		> .help.placeholder{
+			top:4.2rem;
+			height: auto;
+			padding-left:12px;
+			font-size:16px;
+		}
+	}
+
+	.last{
+		margin-bottom: 100px;
+	}
+}
+
+.cke ~ .help.placeholder{
+	pointer-events:none;
+}
+
+
+
+@media screen and(max-width:@phone-width-limit) {
+	fieldset.editor .help.placeholding > .help.placeholder{
+		top:5.2rem;
+	}
+}
+
+
+
+
+
+.help.placeholder{
+	pointer-events:none;
+}

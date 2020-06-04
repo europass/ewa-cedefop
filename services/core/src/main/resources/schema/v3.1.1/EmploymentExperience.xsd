@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+
+    <!--
+       /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:include schemaLocation="Experience.xsd"/>
+    <xsd:include schemaLocation="OccupationalField.xsd"/>
+    <xsd:include schemaLocation="Organisation.xsd"/>
+    
+    <xsd:complexType name="WorkExperienceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Extends the generic ExperienceType to include information about a work experience. 
+                Contains information about the period the experience took place and the title of the position, as well as the activities/ tasks and information of the employer. 
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="ExperienceType">
+                <xsd:sequence>
+                    <xsd:element name="Position" type="OccupationalFieldType" minOccurs="0"/>
+                    <xsd:element name="Activities" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Employer" type="EmployerType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="WorkExperienceListType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Contains an list of work experiences. The order of those experiences is defined by the related printing preferences.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="WorkExperience" type="WorkExperienceType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

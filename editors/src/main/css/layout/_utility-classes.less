@@ -1,0 +1,51 @@
+
+.clearfix{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+.data-process{
+  color:@orange-dark;
+  display:block;
+}
+
+
+.show-for-small {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media only screen and ( max-width: @tablet-width-limit ) {
+  .show-for-large {
+    display: none !important;
+  }
+  .show-for-small {
+    display: block;
+  }
+}
+
+.share-icon {
+  background-repeat: no-repeat;
+  background-image: url("@{img-base-url}sprites/locations_fileformats_upload.png@{img-suffix-url}${project.version}");
+  background-color: transparent;
+  height: 100%;
+  width: 38px;
+  display: inline-block;
+}
+
+.clickable-area{
+  cursor: pointer;
+}
+
+.u-highlight-text {
+  color: @grey-dark-text-two;
+  font-size: 18px ! important;
+}

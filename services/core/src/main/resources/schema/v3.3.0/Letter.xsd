@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+       /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:include schemaLocation="CommonTypes.xsd"/>
+    <xsd:include schemaLocation="ContactInformation.xsd"/>
+    <xsd:include schemaLocation="PersonName.xsd"/>
+    
+    <xsd:complexType name="LetterType">
+        <xsd:sequence>
+            <xsd:element name="Localisation" type="LetterLocalisationType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="SubjectLine" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="OpeningSalutation" type="OpeningSalutationType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Body" type="BodyType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="ClosingSalutation" type="ClosingSalutationType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LetterLocalisationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes the date and place of the writing of the specific cover letter.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="DateType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Place" type="LocalisationPlaceType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LocalisationPlaceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Restricts the usual Address information by defining that it may include only a Municipality and/or Country.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="AddressInfoType">
+                <xsd:sequence>
+                    <xsd:element name="Municipality" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="Country" type="CountryType" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+   <xsd:complexType name="OpeningSalutationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Describes the opening salutation to the expected reader of this cover letter.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Salutation" type="OpeningSalutationSalutationType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="PersonName" type="PersonNameType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="BodyType">
+        <xsd:sequence>
+            <xsd:element name="Opening" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="MainBody" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Closing" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ClosingSalutationType">
+        <xsd:complexContent>
+            <xsd:restriction base="LabelType">
+                <xsd:sequence>
+                    <xsd:element name="Code" minOccurs="0" maxOccurs="1" type="ClosingSalutationTypesEnumeration"/>
+                    <xsd:element name="Label" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="ClosingSalutationTypesEnumeration">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="closing-salut-[1-9]{1}([0-9]{1})?"></xsd:pattern>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+    <xsd:complexType name="OpeningSalutationSalutationType">
+        <xsd:complexContent>
+            <xsd:restriction base="LabelType">
+                <xsd:sequence>
+                    <xsd:element name="Code" minOccurs="0" maxOccurs="1" type="OpeningSalutationTypesEnumeration"/>
+                    <xsd:element name="Label" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="OpeningSalutationTypesEnumeration">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="opening-salut-[1-9]{1}([0-9]{1})?(-impersonal)?"></xsd:pattern>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

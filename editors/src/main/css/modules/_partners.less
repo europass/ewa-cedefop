@@ -1,0 +1,71 @@
+#PartnersResponseForm{
+
+  .partners-main-on-success, .partners-main-on-error {
+      display: none;
+  }
+
+  .button.complete{
+    position: relative;
+    left: 25%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .modal  {
+    legend {
+      /*padding-top: 2rem; removed for consistency reasons*/
+      color: @quite-dark-grey;
+      font-size: 2rem;
+      font-weight: 300;
+
+      &.on-error{
+        display: none;
+      }
+    }
+  }
+
+  .note.partnersMain {
+    .text {
+      color: @quite-dark-grey;
+
+      .html-text;
+
+      padding: 2rem 1.5rem 2rem 1.5rem;
+    }
+    .icon {
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-image: url("@{img-base-url}sprites/cloud_social_providers.png@{img-suffix-url}${project.version}");
+      display: block;
+      height: 175px;
+      width: 160px;
+      position: relative;
+      left: 50%;
+      margin-left: -80px;
+      margin-top: 3rem;
+    }
+  }
+
+  .modal {
+    &.success-status{
+      width: 780px !important;
+      .note.partnersMain{
+        .icon {
+          background-position: -160px -1100px !important;
+        }
+      }
+    }
+    /*
+      On Error
+     */
+    &.error-status{
+      width: 780px !important;
+      .note.partnersMain{
+        .icon{
+          background-position: -320px -1100px !important;
+         }
+      }
+    }
+  }
+}

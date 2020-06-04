@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:eqf="http://europass.cedefop.europa.eu/EQF/08" 
+	targetNamespace="http://europass.cedefop.europa.eu/EQF/08">
+
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">
+			The European Qualifications Framework (EQF) acts as a translation device to make 
+			national qualifications more readable across Europe, promoting workers' and learners' 
+			mobility between countries and facilitating their lifelong learning. The core of the EQF 
+			concerns eight reference levels describing what a learner knows, understands and 
+			is able to do – 'learning outcomes'. Levels range from basic (Level 1) to advanced (Level 8).
+			The EQF applies to all types of education, training and qualifications, 
+			from school education to academic, professional and vocational.
+			(http://ec.europa.eu/education/lifelong-learning-policy/eqf_en.htm)
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:simpleType name="level">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Each of the 8 levels is defined by a set of descriptors indicating the learning outcomes 
+				relevant to qualifications at that level in any system of qualifications.
+				Knowledge: in the context of EQF, knowledge is described as theoretical and/or factual.
+				Skills: in the context of EQF, skills are described as cognitive 
+				        (involving the use of logical, intuitive and creative thinking) 
+				        and practical (involving manual dexterity and the use of methods, materials, 
+				        tools and instruments).
+				Competence: In the context of EQF, competence is described in terms of responsibility and autonomy.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 1: 
+						i) basic general knowledge, 
+						ii) basic skills required to carry out simple tasks, 
+						iii) work or study under direct supervision in a structured context
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 2: 
+						i)  basic factual knowledge of a field of work or study 
+						ii) basic cognitive and practical skills required to use relevant information in order to carry out tasks and to solve routine problems using simple rules and tools, 
+						iii) work or study under supervision with some autonomy
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 3: 
+						i) knowledge of facts, principles, processes and general concepts, in a field of work or study, 
+						ii) a range of cognitive and practical skills required to accomplish tasks and solve problems by selecting and applying basic methods, tools, materials and information, 
+						iii) take responsibility for completion of tasks in work or study; adapt own behaviour to circumstances in solving problems
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 4: 
+						i) factual and theoretical knowledge in broad contexts within a field of work or study, 
+						ii) a range of cognitive and practical skills required to generate solutions to specific problems in a field of work or study, 
+						iii) exercise self-management within the guidelines of work or study contexts that are usually predictable, but are subject to change; supervise the routine work of others, taking some responsibility for the evaluation and improvement of work or study activities
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 5: 
+						i) comprehensive, specialised, factual and theoretical knowledge within a field of work or study and an awareness of the boundaries of that knowledge, 
+						ii) a comprehensive range of cognitive and practical skills required to develop creative solutions to abstract problems, 
+						iii) exercise management and supervision in contexts of work or study activities where there is unpredictable change; review and develop performance of self and others
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="6">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 6: 
+						i) advanced knowledge of a field of work or study, involving a critical understanding of theories and principles, 
+						ii) advanced skills, demonstrating mastery and innovation, required to solve complex and unpredictable problems in a specialised field of work or study, 
+						iii) manage complex technical or professional activities or projects, taking responsibility for decision- making in unpredictable work or study contexts; take responsibility for managing professional development of individuals and groups
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="7">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 7: 
+						i) highly specialised knowledge, some of which is at the forefront of knowledge in a field of work or study, as the basis for original thinking and/or research; critical awareness of knowledge issues in a field and at the interface between different fields, 
+						ii) specialised problem-solving skills required in research and/or innovation in order to develop new knowledge and procedures and to integrate knowledge from different fields, 
+						iii) manage and transform work or study contexts that are complex, unpredictable and require new strategic approaches; take responsibility for contributing to professional knowledge and practice and/or for reviewing the strategic performance of teams
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="8">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Level 8: 
+						i) knowledge at the most advanced frontier of a field of work or study and at the interface between fields, 
+						ii) the most advanced and specialised skills and techniques, including synthesis and evaluation, required to solve critical problems in research and/or innovation and to extend and redefine existing knowledge or professional practice, 
+						iii) demonstrate substantial authority, innovation, autonomy, scholarly and professional integrity and sustained commitment to the development of new ideas or processes at the forefront of work or study contexts including research
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/EuropassSchema_V3.0.xsd" locale="en">
+    <DocumentInfo>
+        <CreationDate>2012-06-06T00:00:00.000+0300</CreationDate>
+        <LastUpdateDate>2012-06-06T00:00:00.000+0300</LastUpdateDate>
+        <XSDVersion>V3.0</XSDVersion>
+        <Generator>EWA</Generator>
+        <Comment>Comments</Comment>
+    </DocumentInfo>
+    <LearnerInfo>
+        <Identification>
+            <PersonName>
+                <FirstName>Eleni</FirstName>
+                <Surname>Kargioti</Surname>
+            </PersonName>
+        </Identification>
+        <EducationList>
+            <Education>
+                <Period>
+                    <From year="2008" month="--05"/>
+                    <Current>true</Current>
+                </Period>
+                <Documentation>
+                    <ReferenceTo idref="ATT_1"/>
+                    <ReferenceTo idref="ATT_2"/>
+                    <ReferenceTo idref="ATT_3"/>
+                </Documentation>
+                <Title>Computer Science</Title>
+                <Activities>&lt;ul&gt;&lt;li&gt;Programming&lt;/li&gt;&lt;li&gt;Data structures&lt;/li&gt;&lt;/ul&gt;</Activities>
+                <Organisation>
+                    <Name>University of Aegean</Name>
+                    <ContactInfo>
+                        <Address>
+                            <Contact>
+                                <Country>
+                                    <Code>EL</Code>
+                                    <Label>Hellas</Label>
+                                </Country>
+                            </Contact>
+                        </Address>
+                    </ContactInfo>
+                </Organisation>
+                <Field>
+                    <Code>21</Code>
+                    <Label>Arts</Label>
+                </Field>
+            </Education>
+        </EducationList>
+    </LearnerInfo>
+</SkillsPassport>

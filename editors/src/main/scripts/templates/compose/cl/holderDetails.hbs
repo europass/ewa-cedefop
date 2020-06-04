@@ -1,0 +1,120 @@
+<dt class="label"></dt>
+<dd class="personal-details value personal">
+	{{! --- PersonName Displayed always --- }}
+	{{! --- since displayed always we dont need to call print preferences  --- }}
+
+	{{#if SkillsPassport.LearnerInfo.Identification.PersonName}}
+	<div class="name value PersonName LearnerInfo.Identification.PersonName">
+		{{> templates/compose/personname}}
+		
+		<button type="button" 
+				name="switchPersonNamesOrder"
+				class="names switch tip spot nested-tip tip-closerTop">
+				<span style="display:none;" class="data-title">{{get_text "LearnerInfo.Identification.PersonName.Switch" group="EditorHelp"}}</span>switch
+		</button>
+		
+	</div>
+	{{else}}
+		{{#emptyObjects "4" 
+			0=SkillsPassport.LearnerInfo.Identification.ContactInfo.Address.Contact 
+			1=SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone
+			2=SkillsPassport.LearnerInfo.Identification.ContactInfo.Email
+			3=SkillsPassport.LearnerInfo.Identification.ContactInfo.InstantMessaging
+		}}
+		<div class="name value PersonName LearnerInfo.Identification.PersonName">
+			{{> templates/compose/personname}}
+			
+			<button type="button" 
+					name="switchPersonNamesOrder"
+					class="names switch tip spot nested-tip">
+					<span style="display:none;" class="data-title">{{get_text "LearnerInfo.Identification.PersonName.Switch" group="EditorHelp"}}</span>switch
+			</button>
+			
+		</div>
+		{{/emptyObjects}}
+	{{/if}}
+
+
+	<div class="PersonalBasic">
+		{{! --- ContactInfo.Address --- }}
+		{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Address.Contact}}
+		<div class="value Address" id="LearnerInfo.Identification.ContactInfo.Address">
+			{{#format_address SkillsPassport.LearnerInfo.Identification.ContactInfo.Address.Contact}}
+			   <span class="Address">{{.}}</span>
+			{{/format_address}}
+		</div>
+		{{/if}}
+		{{#unless SkillsPassport.LearnerInfo.Identification}}
+		<div class="value Address" id="LearnerInfo.Identification.ContactInfo.Address">
+			<span class="default-value Address">{{get_text "LearnerInfo.Identification.ContactInfo.Address" group="GuiLabel"}}</span>
+		</div>
+		{{/unless}}
+
+		<div class="inline-values">
+		{{! --- ContactInfo.Telephone --- }}
+		
+			{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}
+			<div class="value Telephone {{#unless SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}default-value{{/unless}}">
+				{{#each_with_index SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}
+					{{#if_lt index compare=2}}
+						<div class="item {{index}} {{#if Use.Code}} {{Use.Code}} {{else}} telephone-default {{/if}} ">
+							<span class="Use" style="display:none">{{Use.Label}}</span>
+							<span class="Contact">{{Contact}}</span>
+						</div>
+					{{/if_lt}}
+				{{/each_with_index}}
+			</div>
+			{{/if}}
+			{{#unless SkillsPassport.LearnerInfo.Identification}}
+			<div class="value Telephone {{#unless SkillsPassport.LearnerInfo.Identification.ContactInfo.Telephone}}default-value{{/unless}}">
+				<span class="default-value Use"></span>
+				<span class="default-value Contact">{{get_text "LearnerInfo.Identification.ContactInfo.Telephone" group="GuiLabel"}}</span>
+			</div>
+			{{/unless}}
+			
+		{{! --- ContactInfo.Email --- }}
+			{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.Email}}
+			<div class="value Email">
+				<span class="Use">{{SkillsPassport.LearnerInfo.Identification.ContactInfo.Email.Use.Label}}</span>				
+					<span class="Contact">{{SkillsPassport.LearnerInfo.Identification.ContactInfo.Email.Contact type="email"}}</span>
+			</div>
+			{{/if}}
+			{{#unless SkillsPassport.LearnerInfo.Identification}}
+			<div class="value Email">
+				<span class="default-value Use"></span>
+				<span class="default-value Contact">{{get_text "LearnerInfo.Identification.ContactInfo.Email" group="GuiLabel"}}</span>
+			</div>
+			{{/unless}}
+		
+		{{! --- ContactInfo.InstantMessaging --- }}
+			{{#if SkillsPassport.LearnerInfo.Identification.ContactInfo.InstantMessaging}}
+			<div class="value InstantMessaging">
+				{{#each_with_index SkillsPassport.LearnerInfo.Identification.ContactInfo.InstantMessaging}}
+					{{#if_lt index compare=1}}
+					<div class="item {{index}}">
+						<span class="Use">{{Use.Label}}</span>
+						<span class="Contact">{{Contact}}</span>
+					</div>
+					{{/if_lt}}
+				{{/each_with_index}}
+			</div>
+			{{/if}}
+			{{#unless SkillsPassport.LearnerInfo.Identification}}
+			<div class="value InstantMessaging">
+				<span class="default-value Use"></span>
+				<span class="default-value Contact">{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging" group="GuiLabel"}}</span>
+			</div>
+			{{/unless}}
+		
+		</div>
+	</div>
+</dd>
+{{#isIdentificationWithPhotoEmpty SkillsPassport.LearnerInfo.Identification}}
+	<div class="empty add PersonalInfo">
+		<span class="empty add">{{get_text "Buttons.Add.ECL.Holder.Content" group="GuiLabel"}}</span>
+	</div>
+{{else}}
+	{{#call_partial . path="" noDelete=true}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/isIdentificationWithPhotoEmpty}}

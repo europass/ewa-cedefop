@@ -1,0 +1,13 @@
+<div class="{{#if tooltip}}fixed-form-tooltip {{position}}{{/if}} form-help " data-rel="{{id}}">
+ {{#if tooltip}}<button class="fixed-tooltip-close" type="button">X</button>{{/if}}
+	<div class=" {{#if tooltip}}fixed-tooltip-wrapper{{/if}} form-help-wrapper">
+		<div class="{{#if tooltip}}fixed-tooltip-inner{{/if}} help-message">{{{message}}}
+{{#if tooltip}}<div class = "btn-toggle-wrapper">
+				  <button class="btn-toggle-txt more" type="button">
+				  <span></span>
+				  </button>
+			  </div>
+ {{/if}}</div>
+		
+	</div>
+</div>

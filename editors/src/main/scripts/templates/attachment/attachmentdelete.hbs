@@ -1,0 +1,22 @@
+<div class="arrow">
+	<div class="message inner">
+		<em>
+		{{get_text "LearnerInfo.Attachment.File.Delete" group="GuiLabel"}}
+		</em>
+		<menu label="Manage">
+			<button type="button" 
+					class="reject"
+					data-rel-subform="{{subsection}}:SubForm:Attachment.{{Attachment.Id}}.DeleteConfirm"
+			>{{get_text "texts.action.reject" group="GuiLabel"}}</button>
+			<button type="button" 
+					class="confirm"
+					data-rel-id="{{Attachment.Id}}"
+					data-rel-index="{{att_index}}"
+					data-rel-section="SkillsPassport.LearnerInfo.ReferenceTo[{{att_index}}]"
+					data-rel-subform="{{subsection}}:SubForm:Attachment.{{Attachment.Id}}.DeleteConfirm"
+			>{{get_text "texts.action.delete" group="GuiLabel"}}</button>
+	
+		</menu>
+	</div>
+</div>
+

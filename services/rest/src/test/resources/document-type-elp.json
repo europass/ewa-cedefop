@@ -1,0 +1,37 @@
+{
+  "SkillsPassport" : {
+    "Locale" : "en",
+    "DocumentInfo" : {
+      "DocumentType" : "ELP"
+    },
+    "LearnerInfo" : {
+      "Identification" : {
+        "PersonName" : {
+          "FirstName" : "Panagiotis",
+          "Surname" : "Giannelos"
+        },
+        "ContactInfo" : {
+          "Email" : {
+            "Contact" : "pgia@qnr.com.gr"
+          }
+        }
+      },
+      "Skills" : {
+        "Linguistic" : {
+          "MotherTongue" : [ {
+            "Description" : {
+              "Code" : "el",
+              "Label" : "Greek"
+            }
+          } ],
+          "ForeignLanguage" : [ {
+            "Description" : {
+              "Code" : "en",
+              "Label" : "English"
+            }
+          } ]
+        }
+      }
+    }
+  }
+}

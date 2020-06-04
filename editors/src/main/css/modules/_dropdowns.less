@@ -1,0 +1,244 @@
+
+
+
+
+
+
+
+
+.tt-menu.tt-menu .tt-dataset,div.fancy-select ul.options.options,div.fancy-select .trigger.open{
+	background-image:none;
+	background-color:#EEF0F2;
+}
+
+div.fancy-select ul.options.options{
+	top:100%;
+}
+
+
+/****new dropdowns*
+**************************************************************************************************/
+
+/****for icons to work properly********/
+
+.custom_select_wrapper{
+	position:relative;
+	.help.help.help.placeholding{
+		position:static;
+	}
+}
+
+.custom_select{
+	position:relative;
+	> li{
+		border-radius: 3px;
+		color: @font-gray-light;
+		border: 1px solid rgba(196, 81, 0, 0.44);
+		background-color: rgba(196, 81, 0, 0.07);
+		box-sizing: border-box;
+		font-size: 1.3rem;
+		line-height: 1em;
+		font-weight: 400;
+		padding: 16px 50px 16px 20px;
+		height: 3.425rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor:pointer;
+		&.selected{
+			color:@input-text-clr;
+		}
+	}
+	ul{
+		padding:15px 0;
+		width:100%;
+		position:absolute;
+		left:0;
+		top:100%;
+		display:none;
+		border: 1px solid rgba(43, 72, 104, 0.96);
+		border-top: none;
+		border-radius: 0;
+		box-sizing: border-box;
+		background-color: @blue-medium-light;
+		z-index:605;
+		max-height:350px;
+		overflow-y:auto;
+		overflow-x:hidden;
+		li{
+			display: list-item;
+			padding: 0.5rem 1.3rem;
+			margin: 0;
+			cursor: pointer;
+			min-height: 1em;
+			user-select: none;
+			color: #494848;
+			width: 100%;
+			font-size:18px;
+			&:hover{
+				color:@orange-dark;
+			}
+		}
+	}
+	&.active{
+		ul{
+			display:block;
+		}
+		> li{
+			background-color: @blue-medium-light;
+			border: 1px solid rgba(43, 72, 104, 0.96);
+		}
+	}
+	&.focused{
+		> li{
+			background-color: @blue-medium-light;
+			border: 1px solid rgba(43, 72, 104, 0.96);
+		}
+	}
+}
+
+select.hidden_select{
+	display:none;
+}
+
+
+/**********************************************************
+SELECTS WITH INSIDE DIVIDED CONTENT custom_select_complex
+**********************************************************/
+
+
+
+.custom_select.custom_select_complex {
+	ul {
+		padding:1rem;
+		.short-key-label {
+			color: @portal-dark-blue;
+			font-weight:700;
+		}
+		li {
+			box-sizing: border-box;
+			padding:0;
+			&:not(:last-child){
+				border-bottom: 1px solid #d0d0d0;
+			}
+		}
+		.Code {
+			color: @portal-dark-blue;
+			font-size: 22px;
+			text-align: center;
+			display: inline-block;
+			float: left;
+			width: 10%;
+		}
+		.Label {
+			color:@grey-dark-text;
+			display: inline-block;
+			padding: 0.3rem 0px 0.3rem 0.5rem;
+			width: 87%;
+			border-left: 1px solid #d0d0d0;
+			&:hover{
+				color:@portal-dark-blue;
+			}
+		}
+	}
+	li {
+		&.selected {
+			.Code{
+				&:after{
+					content: "-";
+					margin:0 4px;
+				}
+			}
+			.Label {
+				font-size:0;
+				.short-key-label{
+					font-size:16px;
+				}
+			}
+		}
+	}
+}
+
+/**********************************************************
+SELECTS WITH INSIDE DIVIDED CONTENT custom_select_digital
+**********************************************************/
+
+.custom_select_digital {
+	.short-key-label {
+		display:block;
+	}
+	.Label{
+		border-left:none!important;
+	}
+	ul{
+		li{
+			padding:10px 0;
+		}
+	}
+}
+
+
+
+span.twitter-typeahead{
+	position:relative;
+	&:after{
+		content:"";
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		cursor: pointer;
+		width: 12px;
+		height: 12px;
+		border-right: 5px solid #c45100;
+		border-bottom: 5px solid #c45100;
+		transform: rotate(45deg) translatey(-4px);
+		background: transparent;
+		pointer-events: none;
+		display: block;
+		font-size: 0;
+	}
+}
+
+
+
+
+
+span.fancySelect.arrow {
+	background: none repeat scroll 0 0 rgba(0,0,0,0);
+	border: medium none;
+	margin: 0;
+	width: 42px;
+	filter: none;
+}
+span.fancySelect {
+	position: absolute;
+	top: 1rem;
+	right: 0rem;
+	cursor: pointer;
+}
+
+span.fancySelect.arrow b {
+	width: 12px;
+	height: 12px;
+	border-right: 5px solid #c55200;
+	border-bottom: 5px solid #c55200;
+	transform: rotate(45deg) translatey(-4px);
+	background: transparent;
+	pointer-events: none;
+	display: block;
+	font-size: 0;
+}
+
+.fancySelect.clear{
+	right:1.5rem;
+	&:before{
+		content:"\2716";
+		color:@quite-dark-grey;
+		font-size:18px;
+	}
+	&:hover{
+		&:before{
+			color: @very-dark-grey;
+		}
+	}
+}

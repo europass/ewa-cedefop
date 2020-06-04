@@ -1,0 +1,1163 @@
+
+
+@driving-input-width: 30px;
+@driving-label-width: 30px;
+
+
+@driving-li-width: 152px;
+@driving-li-width-percentage: 20%;
+@driving-li-height: 120px;
+
+@driving-between-states: 140px;
+@driving-between-licenses: 60px;
+@driving-x-space: 0px;
+@driving-y-space: 7px;
+
+
+@button-avg-radius: 8px ;
+
+/*** ELP VARS ***/
+
+@dash-separator-content: "\2013";
+@parenthesis-left: "\0028";
+@parenthesis-right: "\0029";
+
+
+/*** General Rules ***/
+
+
+
+
+
+div.level{
+	margin-top:5px;
+}
+
+fieldset.Period{
+	position: relative;
+}
+
+.Period div.overlay{
+	background:#F9F9F9;
+	opacity:0.6;
+	bottom: 0;
+	left: 0;
+	width: 81%;
+	position:absolute;
+	height:70px;
+	display:none;
+}
+
+
+/************************************************/
+
+
+header > legend {
+	.modal-font-family;
+}
+
+legend.notification {
+	.modal-font-family;
+	/*     background-size: 2rem; */
+	background-repeat: no-repeat;
+	min-height:30px;
+	color: @font-gray;
+	padding: 3% 0 3% 10%;
+	width: 90%;
+	margin-top: 0.5rem;
+	&.warning{
+		background-image: url("@{img-base-url}notifications/msg-warning-indicator-large.png@{img-suffix-url}${project.version}");
+		background-position: 1rem center;
+	}
+
+	&.info{
+		background-image: url("@{img-base-url}notifications/msg-warning-indicator-large.png@{img-suffix-url}${project.version}");
+		background-position: 1rem center;
+	}
+}
+
+form fieldset {
+	min-width:inherit; /* Fix for overflow to work inside fieldsets */
+}
+
+form > fieldset > fieldset:last-child {
+	// margin-bottom: 40px;
+}
+
+.group-wrk-edu-label-mixin {
+	font-size: 1.5rem;
+	margin-bottom: -0.5rem;
+}
+form[id^="Form:WorkExperience"] {
+	label.wrk-emp-title	{
+		.group-wrk-edu-label-mixin;
+	}
+}
+
+form[id^="Form:LearnerInfo.Education"] {
+	label.edu-org-title	{
+		.group-wrk-edu-label-mixin;
+	}
+}
+
+fieldset.ForeignLanguage.ELP.Overview {
+	padding-top: 20px;
+}
+
+form#Form\:LearnerInfo\.CEFLanguageLevelsGrid {
+	note {
+		a.cefr-link-note {
+			color: @bright-blue;
+			text-decoration: none;
+		}
+	}
+}
+
+
+fieldset.CEFLanguageLevelsGrid {
+
+	width: 590px;
+	margin-bottom:20px;
+	margin-left: 2%;
+
+	.button{
+		width: 240px;
+		height: 135px;
+		float:left;
+		> span.icon {
+			background:url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat scroll 0px -110px transparent;
+			width: 185px;
+			height: 75px;
+			display: block;
+			margin-left: 20px;
+		}
+		> span.cefr-text {
+			display: inline-block;
+			position: relative;
+			top: 10px;
+			font-weight: normal;
+			b.cefr-bld {
+				font-weight: bold;
+			}
+		}
+		&.last-child{
+			float:right;
+			> span.icon {
+				background:url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat scroll 0px -305px transparent;
+				height: 75px;
+				margin-left: 70px;
+				width: 75px;
+			}
+			> span.cefr-text {
+				display: inline-block;
+				position: relative;
+				top: 10px;
+			}
+		}
+		&.blue-pressed {
+			-webkit-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+			-moz-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+			box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+			> span.icon {
+				background:url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat scroll 0px -10px transparent;
+			}
+		}
+	}
+}
+fieldset.cefr-note {
+	margin: 1rem 0;
+}
+fieldset.cefr-warning {
+	margin-top: 2rem;
+	em {
+		display: inline-block;
+		width: 555px;
+		a.cefr-link-modal{
+			padding-left: 2px;
+			padding-right: 2px;
+			color: @bright-blue;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		.icon {
+			background: url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat scroll -18px -423px transparent;
+			display: inline-block;
+			height: 24px;
+			width: 20px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+	}
+}
+
+
+fieldset.Issuedate-format {
+	span.fancySelect.arrow {
+		position: relative;
+		left: 456px;
+		top: -39px;
+	}
+
+	.trigger {
+
+		width: auto !important;
+		margin-right: 7.2rem !important;
+	}
+	.options {
+		margin-left: 4.4rem !important;
+		margin-right: 11.55rem !important;
+		top: auto !important;
+		width: auto !important;
+
+	}
+
+}
+
+
+
+/* Tablet Rules */
+
+@media only screen and (max-width: @tablet-width-limit ) {
+
+	fieldset.Issuedate-format {
+		span.fancySelect.arrow {
+
+			float: right;
+			left: initial;
+			margin-right: 7.3rem;
+			position: relative;
+		}
+	}
+
+	/* Added a margin in tablet version so that the buttons would appear centered inside the form */
+	fieldset.CEFLanguageLevelsGrid {
+		position: relative;
+		left: 50%;
+		margin-left: -295px;
+	}
+
+	fieldset.cefr-warning {
+		a.cefr-link-modal {
+			/* 		   background-position: 173px -423px!important; */
+			/* 		   padding-right: 48px; */
+		}
+	}
+}
+
+/* Rules for small tablets */
+@media only screen and (max-width: 1024px ) and (orientation: portrait) {
+	fieldset.cefr-warning {
+		margin-left: -60px;
+		legend {
+			width: 100%;
+			background-position: 6px 12px !important;
+		}
+	}
+}
+
+.input-outer-layout{
+	padding: @input-veritical-padding @input-horizontal-padding;
+	height:  @input-veritical-padding + @input-horizontal-padding + @input-font-size + @select2-chosen-span-border;
+	margin: 0;
+}
+
+fieldset input.formfield.readonly,
+fieldset input.formfield.readonly:focus {
+	background-color: #F0F0F0;
+}
+
+.input-field-box-focus-fx{
+	box-shadow: 0 1px 2px #8cc1de inset, 0 1px 0 #8cc1de inset, 0 -1px 0 #8cc1de inset, 1px 0 0 #8cc1de inset, -1px 0 0 #8cc1de inset;
+	/* EWA-1766 */
+	background-color: @input-field-bg-focused !important;
+	border:none;
+}
+
+fieldset label {
+	.modal-font-family;
+	color: @grey-dark-text-two;
+	font-size: 17px;
+	font-weight: 400;
+	display: block;
+	margin: 40px 0 15px;
+	/*	line-height: normal !important;*/
+}
+
+fieldset label:first-letter{
+	text-transform: capitalize;
+}
+
+fieldset input.formfield  {
+	.input-field-box-fx;
+	.box-sizing;
+	.input-outer-layout;
+	color: @input-text-clr;
+	display: block;
+	font-size: @input-font-size;
+	width: 100%;
+	border-radius:3px;
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: @font-gray-light;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color:  @font-gray-light;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: @font-gray-light;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color:  @font-gray-light;
+	}
+}
+
+fieldset input.formfield + input.formfield{
+	background:transparent!important;
+}
+
+fieldset input.formfield.enclosed {
+	margin-top: 45px;
+}
+
+fieldset input.formfield.formfield.formfield:focus,
+fieldset textarea.formfield.formfield.formfield.no-rte:focus{
+	background-color:#EEF0F2!important;
+	outline:none;
+	box-shadow:none;
+	border:1px solid rgba(43,72,104,0.96);
+}
+
+/*** margin-bottom for grouping fieldsets ***/
+fieldset.PersonName,
+fieldset.addressFields,
+fieldset.Birthdate-format,
+fieldset.Experience.Dates,
+fieldset.more.details,
+fieldset.Level,
+fieldset.Telephone,
+fieldset.Occupation,
+fieldset.Edu.Website,
+fieldset.Edu.Title,
+fieldset.Addressee {
+	margin-bottom: 2rem;
+}
+fieldset.Email {
+	margin-bottom: 4.5rem;
+}
+
+fieldset.Website{
+	/* each multipliable field takes an extra margin 2% ~ 12px ~ 0.75rem */
+	margin-bottom: 2rem - 0.75rem;
+}
+
+fieldset.Date.today,
+fieldset.environmentInfo{
+	margin-top: 40px;
+}
+
+.Edu.Website .help.placeholder{
+	padding-left:55px;
+}
+
+
+
+fieldset .help.placeholding {
+	line-height: 0;
+	position: relative;
+}
+
+
+fieldset .help.placeholding > .help.placeholder {
+	.box-sizing;
+	bottom: 0;
+	color: @font-gray-light;
+	cursor: text;
+	left: 0;
+	padding: @input-veritical-padding @input-horizontal-padding;
+	position: absolute;
+	font-size: 1.3rem;
+	height: @input-height;
+	overflow: hidden;
+	line-height: normal;
+	z-index: 600;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
+
+
+
+.sender-email .help.placeholding > .help.placeholder{
+	margin-left: 24px;
+}
+
+.input-bg-image-position {
+	padding-left: 50px;
+}
+fieldset .Email {
+	.help.placeholding {
+		position: relative;
+		font-family:"europass-application"!important;
+		&:before{
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			transform: translatey(-50%);
+			font-family: "europass-application"!important;
+			content: "\e90c";
+			font-size: 19px;
+			color: @orange-dark;
+		}
+	}
+}
+
+
+fieldset .formfield.Email {
+	font-family: "europass-application"!important;
+	//background: transparent!important;
+}
+
+fieldset .formfield.Website {
+	background: transparent!important;
+}
+
+fieldset.Website{
+	.help.placeholding{
+		position:relative;
+		font-family:"europass-application"!important;
+		&:before{
+			position:absolute;
+			left:15px;
+			top:50%;
+			transform:translatey(-50%);
+			font-family:"europass-application"!important;
+			content:"\e920";
+			font-size:19px;
+			color:@orange-dark;
+		}
+	}
+}
+
+fieldset .formfield.Address.first-line,
+fieldset .formfield.AddressLine {
+	background:transparent!important;
+	padding-left:35px;
+}
+
+
+
+fieldset.AddressLine{
+	.help.placeholding{
+		position:relative;
+		font-family:"europass-application"!important;
+		&:before{
+			position:absolute;
+			left:15px;
+			top:50%;
+			transform:translatey(-50%);
+			font-family:"europass-application"!important;
+			content:"\e91f";
+			font-size:19px;
+			color:@orange-dark;
+		}
+	}
+}
+
+fieldset.AddressLine.with-icon,
+fieldset.Website.with-icon,
+fieldset.Email.with-icon{
+	.help.placeholding{
+		> .help.placeholder{
+			left: 30px;
+		}
+	}
+}
+
+
+.composite.country.select .help.placeholding{
+	line-height: 0px;
+}
+
+.Experience.Period .composite > *,
+.Birthdate .composite > *,
+.Date .composite > * {
+	float: left;
+	width: 25%;
+	margin-right: 3%;
+}
+
+.formfield.fancySelect.Birthdate.format,
+.formfield.fancySelect.Period.format {
+	width: 81%;
+}
+fieldset.Birthdate-format > .help.placeholding > .form-tooltip.bottom{
+	right: 4rem;
+}
+
+fieldset.DateFormat {
+	& > .help.placeholding {
+		width: 81%;
+	}
+	label{
+		margin-top: 27px;
+	}
+}
+
+fieldset .Signature .notify{
+	float: right;
+	width: 50%;
+	& > p {
+		color: #FFA500 !important;
+	}
+}
+
+
+/*************** HYBRID FIELDS *********************/
+
+.hybrid2-first-field {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 2%;
+	width: 42%;
+}
+
+.hybrid2-second-field {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 55%;
+}
+
+.hybrid2{
+	.first{
+		.hybrid2-first-field;
+	}
+
+	.second{
+		.hybrid2-second-field;
+	}
+
+}
+
+
+fieldset.Organisation{
+	fieldset.Organisation-Address > fieldset.Municipality {
+		.hybrid2-first-field;
+	}
+
+	fieldset.Organisation-Address > fieldset.Country{
+		.hybrid2-second-field;
+	}
+
+	fieldset.Organisation-Address.more > fieldset.AddressLine{
+		/* 1% for the default space that introduce the inline-block */
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 2%;
+		width: 62%;
+	}
+	fieldset.Organisation-Address.more > fieldset.PostalCode{
+		display: inline-block;
+		vertical-align: top;
+		width: 35%;
+	}
+}
+
+
+
+
+
+/**** In ECL when only one Instant Messaging is allowed, increase the width of the field ****/
+
+
+/*** CL Addressee Details ***/
+fieldset.Addressee{
+	.addressee {
+		float: left;
+		margin-right: 2%;
+		width: 28%;
+	}
+	.addresseeNameField{
+		float: left;
+		margin-right: 2%;
+		width: 32%;
+	}
+	.addresseeNameField:last-child{
+		margin-right: 0;
+		width: 36%;
+	}
+	.addressee:last-child{
+		margin-right: 0;
+		width: 24%;
+	}
+}
+
+div[name="CoverLetter.Addressee.PersonName.Title.Label"] span.typeahead.clear.clear{
+	right:3rem!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+.europass-documents input[type=checkbox].css-checkbox + label.css-label{
+	width: 92%;
+	margin-bottom: 25px;
+}
+
+
+/* Tab navigation in personal info modal -  sex selection - radio boxes */
+
+div.modal{
+	div#Control\:LearnerInfo\.Identification\.Demographics\.Gender {
+		padding: 10px 10px 0;
+	}
+}
+
+.Gender .choice label{
+	position:relative;
+	&:before{
+		position:absolute;
+		left:25px;
+		top:50%;
+		transform:translatey(-50%);
+		content:"";
+		height:20px;
+		width:20px;
+		border:4px solid #c45100;
+		display:inline-block;
+	}
+}
+
+.Gender .choice input[type=radio].css-checkbox + label.css-label{
+	background:none!important;
+	border:none!important;
+	line-height:34px!important;
+}
+
+
+
+/*Class for focused gender choice area*/
+.genderDivFocus{
+	outline: #909090 thin dotted !important;
+	outline:none!important;
+
+}
+
+
+
+button.toggle-expansion:hover {
+	cursor:pointer;
+	background: url("@{img-base-url}sprites/checkbox_states.png@{img-suffix-url}${project.version}") no-repeat 0px -60px transparent;
+	color: #B6B6B6;
+	text-decoration: none;
+	transition: none;
+}
+button.toggle-expansion{
+	&.toggle-personal-info.more{
+		margin-bottom: 40px;
+	}
+	&.workexp,
+	&.education{
+		margin-bottom: 10px;
+	}
+}
+
+/**************************************/
+
+
+div.modal{
+	form#Form\:LearnerInfo\.Skills\.Communication,
+	form#Form\:LearnerInfo\.Skills\.Organisational,
+	form#Form\:LearnerInfo\.Skills\.JobRelated,
+	form#Form\:LearnerInfo\.Skills\.Computer,
+	form#Form\:LearnerInfo\.Skills\.Other
+	{
+		fieldset.editor{
+			margin-top: 50px;
+		}
+	}
+
+	/* Rule for subform label in education, to reduce the space between toggle button and field (education section) */
+	fieldset[id^="SubForm:LearnerInfo.Education"]{
+		fieldset.Field {
+			label[for="Level"] {
+				margin-top: 0;
+			}
+		}
+	}
+	/* Specific rules for applying the grey bottom line in cover letter - modal - first paragraph of help message
+	and in import/export wizard options.  */
+
+	.help-text-line-mixin {
+		border-bottom: 3px solid @text-lightgrey;
+		margin-bottom: 1rem;
+		padding-bottom: 0.5rem;
+	}
+
+	/*Specific rules for the help-message concerning non-uploadable file-formats*/
+
+	.important-msg-mixin {
+
+		background-image: url("@{img-base-url}sprites/exclamation_mark.png@{img-suffix-url}${project.version}");
+		background-repeat: no-repeat;
+		background-position: 0px -57px;
+		color: @warning-msg-text-clr;
+		text-indent: 1.5rem;
+		margin-bottom: 1rem;
+		margin-top: 0.5rem;
+		font-size: 15px;
+
+	}
+
+
+	div [data-rel="header-help_import.wizard.help.step1"],
+	div [data-rel="header-help_export.wizard.help.step3"] {
+		div.help-message {
+			.help-text-line-mixin;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+	}
+	div [data-rel="header-help_export.wizard.help.step2"] {
+		b {
+			font-weight: bold;
+			color: @warning-msg-text-clr;
+		}
+	}
+
+
+	div [data-rel="Export_Option_File_export.wizard.help.step2.file.option.pdf"],
+	div [data-rel="Export_Option_File_export.wizard.help.step2.file.option.word"],
+	div [data-rel="Export_Option_File_export.wizard.help.step2.file.option.odt"],
+	div [data-rel="Export_Option_File_export.wizard.help.step2.file.option.xml"] {
+		div.help-message {
+			p:nth-child(3){
+				.help-text-line-mixin;
+			}
+			.help-message.field {
+				p {
+					.important-msg-mixin;
+				}
+			}
+			.help-message.group {
+				b{
+					font-weight: bold;
+					color: @warning-msg-text-clr;
+				}
+			}
+		}
+	}
+
+	div [data-rel="CoverLetter.Letter.Body.Opening_CoverLetter.Letter.Body.Opening"],
+	div [data-rel="CoverLetter.Letter.Body.MainBody_CoverLetter.Letter.Body.MainBody"],
+	div [data-rel="CoverLetter.Letter.Body.Closing_CoverLetter.Letter.Body.Closing"] {
+
+		div.help-message.group {
+			p {
+				.help-text-line-mixin;
+
+			}
+		}
+	}
+
+	@media only screen and (max-width: @tablet-width-limit ) {
+		div.fixed-form-tooltip[data-rel="CoverLetter.Letter.Body.Opening_CoverLetter.Letter.Body.Opening"],
+		div.fixed-form-tooltip[data-rel="CoverLetter.Letter.Body.MainBody_CoverLetter.Letter.Body.MainBody"],
+		div.fixed-form-tooltip[data-rel="CoverLetter.Letter.Body.Closing_CoverLetter.Letter.Body.Closing"] {
+			div.help-message.group {
+				p {
+					.help-text-line-mixin;
+					margin-right: 3rem !important;
+					margin-left: 11rem !important;
+
+				}
+
+			}
+
+			div.help-message.field {
+				p {
+					margin-left: 11rem!important;
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	div [data-rel="Import_Option_Loc_import.wizard.help.step1.location.option.local"],
+	div [data-rel="Import_Option_Loc_import.wizard.help.step1.location.option.linkedin"],
+	div [data-rel="Import_Option_Loc_import.wizard.help.step1.location.option.dropbox"],
+	div [data-rel="Import_Option_Loc_import.wizard.help.step1.location.option.googledrive"],
+	div [data-rel="Import_Option_Loc_import.wizard.help.step1.location.option.onedrive"],
+	div [data-rel="Export_Option_Loc_export.wizard.help.step3.location.option.local"],
+	div [data-rel="Export_Option_Loc_export.wizard.help.step3.location.option.email"],
+	div [data-rel="Export_Option_Loc_export.wizard.help.step3.location.option.dropbox"],
+	div [data-rel="Export_Option_Loc_export.wizard.help.step3.location.option.googledrive"],
+	div [data-rel="Export_Option_Loc_export.wizard.help.step3.location.option.onedrive"] {
+
+		div.help-message.group {
+			.help-text-line-mixin;
+		}
+	}
+}
+
+
+
+
+/***** ELP FORM STYLES ***/
+
+.modal fieldset header legend .subsection-title{
+	margin-left: 10px;
+}
+/** Format Title of Linked Section ***/
+.modal fieldset header legend .subsection-title:before{
+	content: @parenthesis-left;
+}
+.modal fieldset header legend .subsection-title:after{
+	content: @parenthesis-right;
+}
+.subsection-title .linked-subsection{
+	margin-right: 5px;
+}
+.subsection-title .linked-subsection:after{
+	content: @dash-separator-content;
+	padding-left: 5px;
+}
+
+/*****************************************************************/
+/****   E U R O P A S S   L A N G U A G E   P A S S P O R T   ****/
+/*****************************************************************/
+
+
+
+/*************************************/
+/****   HELP TOOLTIP and ON/OFF   ****/
+/*************************************/
+.modal{
+	.main{
+		.form-tooltip{
+
+			z-index: 650;
+			width: 42%;
+
+			* {
+				color: @quite-dark-grey;
+				font-size: 0.9rem;
+			}
+			&.left{
+				top: 3rem;
+				left: 59%;
+
+				.tooltip-arrow{
+					width: 90%;
+					.tooltip-inner{
+						&:before{
+							top: 15%;
+						}
+						&:after{
+							top: 16%;
+						}
+					}
+				}
+			}
+			&.bottom{
+				top: 4rem;
+				right: 0rem;/*-0.7rem;*/
+
+				.tooltip-arrow{
+					width: 90%;
+					.tooltip-inner{
+						&:before{
+							left: 65%;
+						}
+						&:after{
+							left: 66%;
+						}
+					}
+				}
+			}
+		}
+		fieldset.Date{
+			.form-tooltip.bottom{
+				width: 80%;
+				.tooltip-arrow{
+					.tooltip-inner{
+						&:before{
+							left: 66%;
+						}
+						&:after{
+							left: 67%;
+						}
+					}
+				}
+			}
+		}
+		fieldset.editor{
+			.form-tooltip.bottom{
+				top: 105%;
+			}
+		}
+		@media only screen and ( min-width: @desktop-width-limit ) {
+			//All help tooltips inside the main area are hidden in Desktops
+			.form-help { display: none !important; }
+		}
+		@media only screen and (max-width: @tablet-width-limit ) {
+			//Help tooltips inside main area in tablets
+			.form-help { display: block; }
+		}
+	}
+}
+
+
+
+
+/**************************************************************************************
+ ***********   DISABLED FORM FIELDS, E.G. COVER LETTER EXTRA TELS AND IMS *************
+ **************************************************************************************/
+.formfield.readonlyFormfield{
+	color:@medium-light-grey;
+	background-color:@very-light-grey;
+}
+
+
+/******** CONTEXT MENU RECOMMENDATIONS *********/
+
+.context-recommendations-list-widths-heights{
+	min-width: @context-menu-min-width;
+	max-height: @context-menu-min-height;
+}
+
+.context-recommendations-list-tooltip-inner{
+
+	color: #666666;
+	-moz-box-shadow: 0 0 2px 2px @portal-light-blue;
+	-webkit-box-shadow: 0 0 2px 2px @portal-light-blue;
+	max-width: 500px;
+}
+
+div.context-recommendations-list.tooltip {
+	position: absolute;
+	outline:none;
+	/* 	top:100px;
+        left:200px; */
+	display:none;
+	min-width:@context-menu-min-width;
+	z-index: 1050;
+
+	* { z-index: 1050; }
+
+	.context-recommendations-list-widths-heights;
+
+	.tooltip-arrow{
+		background: none;
+		background-color: transparent;
+		border: 3px solid @light-blue-alternative;
+		padding: 0;
+		width: auto;
+
+		.tooltip-inner.left {
+
+			.context-recommendations-list-tooltip-inner;
+
+			&:before{
+				top: 6px;
+				left: -16px;
+				border-right-color:@light-blue-alternative;
+
+				border-top-width: 12px;
+				border-right-width: 12px;
+				border-bottom-width: 12px;
+			}
+
+			&:after{
+
+				border-right-color: @white;
+
+				border-top-width: 11px;
+				border-right-width: 11px;
+				border-bottom-width: 11px;
+
+				left: -11px;
+				top: 7px;
+			}
+		}
+
+		.tooltip-inner.right {
+
+			.context-recommendations-list-tooltip-inner;
+
+			&:before{
+				top: 6px;
+				right: -16px;
+				border-left-color:@light-blue-alternative;
+
+				border-top-width: 12px;
+				border-left-width: 12px;
+				border-bottom-width: 12px;
+			}
+
+			&:after{
+
+				border-left-color: @white;
+
+				border-top-width: 8px;
+				border-left-width: 8px;
+				border-bottom-width: 8px;
+
+				right: -11px;
+				top: 10px;
+			}
+		}
+
+		.context-list {
+
+			background-color: @white;
+
+			padding: 6px 10px;
+			text-align: left;
+
+			.context-recommendations-list-widths-heights;
+			overflow-y: auto;
+
+			ul.noListStyle{
+
+				border-bottom: none;
+
+				> li {
+
+					> ul{
+						border-bottom: 1px solid @medium-light-grey;
+					}
+
+					ul li:last-child{
+						padding: 5px 0 8px 0;
+					}
+
+					&:last-child ul{
+						border-bottom: none;
+					}
+				}
+			}
+
+			li.phrase{
+
+				.description{.wordwrap;}
+
+				border:none !important;
+				display: list-item;
+				font-size: 13px;
+				padding: 2px 0;
+
+				&:hover {
+					cursor:pointer;
+					color:@text-dark-blue;
+				}
+			}
+		}
+	}
+}
+
+
+.modal.email .button.connect span{
+	background-image:none!important;
+	padding-left:0;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width:100%;
+	&:before{
+		font-family:"europass-application"!important;
+		content:"\e90c";
+		font-size:20px;
+		color:white;
+		margin-right:10px;
+	}
+}
+
+fieldset .formfield.Email{
+	font-family:'Open Sans',sans-serif !important;
+}
+
+
+fieldset.sender-email .help.placeholding:before {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translatey(-50%);
+	font-family: "europass-application" !important;
+	content: "\e90c";
+	font-size: 19px;
+	color: #c45100;
+}
+
+fieldset.sender-email .help.placeholding .Email{
+	padding-left:45px;
+}
+
+
+.Website input.single.help.with-placeholder + span{
+	padding-left:50px;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+	.hybrid2{
+		.first,.second{
+			width:100%;
+		}
+	}
+
+	.Experience.Period .composite > *,
+	.Birthdate .composite > *,
+	.Date .composite > * {
+		float: left;
+		width: 100%;
+		margin-right: 3%;
+		margin-bottom:2%;
+	}
+	fieldset.Addressee{
+		.addressee,.addresseeNameField,.addresseeNameField:last-child{
+			width:100%;
+		}
+	}
+	fieldset.AddressLine.with-icon .help.placeholding > .help.placeholder{
+		width:~"calc(100% - 30px)";
+	}
+	.modal form#Form\:AddresseeDetails fieldset.country{
+		margin-bottom:10rem;
+	}
+	fieldset.Organisation fieldset.Organisation-Address>fieldset.Municipality{
+		width:100%;
+	}
+	fieldset.Organisation fieldset.Organisation-Address > fieldset.Country{
+		width:100%;
+	}
+	fieldset.Organisation fieldset.Organisation-Address.more > fieldset.AddressLine{
+		width:100%;
+	}
+	fieldset.Organisation fieldset.Organisation-Address.more > fieldset.PostalCode{
+		width:100%;
+	}
+	.Period div.overlay{
+		width: 100%;
+		height:200px;
+	}
+}

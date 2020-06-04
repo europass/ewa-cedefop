@@ -1,0 +1,36 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="GuiLabel"}}</legend>
+</header>
+
+<fieldset class="MotherTongue" >
+	<label for="MotherTongue">{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="DocumentLabel"}}</label>
+	<div class="single multipliable compound global auto-complete-list" 
+			data-excluded-sections="LearnerInfo.Skills.Linguistic.MotherTongue LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-excluded-global="LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-list-map="Language">
+		{{#each_with_default LearnerInfo.Skills.Linguistic.MotherTongue item="{ \"Description\" : {\"Label\" : \"\" , \"Code\" : \"\"}  }"}}
+			<div class="level composite mother-tongue select" name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}]" data-index="{{index}}">
+				<input 	type="text" 
+						class="formfield typeahead single copy MotherTongue noHelp with-placeholder"
+						title
+						name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Label"
+						data-help-key=""
+						rel="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}]"
+						placeholder="{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="EditorPlaceholder"}}"
+						code="{{Description.Code}}"
+						value="{{Description.Label}}">
+<!-- 				<span name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Label" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Skills.Linguistic.MotherTongue" group="EditorPlaceholder"}}
+				</span>	 -->
+				<input	type="hidden"
+						name="LearnerInfo.Skills.Linguistic.MotherTongue[{{index}}].Description.Code"
+						value="{{Description.Code}}">
+			</div>
+		{{/each_with_default}}
+	</div>
+</fieldset>
+
+</fieldset>
+{{/with}}

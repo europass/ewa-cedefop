@@ -1,0 +1,212 @@
+/*** ONE SELECT2, AN INPUT AND AN ADD BUTTON ***/
+.multipliable.compound {
+  .composite.select,
+  .help.placeholding{
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 1%;
+    margin-left:0;
+    margin-bottom: 2%;
+    width: 57%;
+  }
+  button{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: -0.3rem;
+    width: 7%;
+    margin-bottom: 2%;
+  }
+}
+
+fieldset.ecl.InstantMessaging{
+  .multipliable.compound >.composite.NoButton > .help.placeholding{
+    width: 65%;
+    margin-right: 0;
+  }
+}
+
+/*** AN INPUT AND AN ADD BUTTON ***/
+
+
+.multipliable.compound .composite.select, .multipliable.compound .composite.select2autocomplete {
+  vertical-align: top;
+  display: inline-block;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+
+.multipliable.compound .composite.select .help.placeholding, .multipliable.compound .composite.select2autocomplete .help.placeholding {
+  width: 100%;
+  float: none;
+  margin: 0;
+}
+
+.single.multipliable .composite,
+.single.multipliable.compound .composite{
+  width: 100%;
+  float: none;
+  margin: 0;
+  .help.placeholding{
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    width: 91%;
+  }
+  button{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: -0.3rem;
+    width: 6%;
+  }
+}
+
+/***************************** Buttons ***********************/
+
+div.multipliable div.composite button.multifield.add-item,
+div.multipliable div.composite button.multifield.remove-item{
+  height:54px;
+  border-radius:2px;
+  color:#ffffff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  /*background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}"), linear-gradient(to bottom, #1198d1, #106f98);*/
+  background-repeat:no-repeat;
+  border: 1px solid #3e6d81;
+  border-bottom: 1px solid #31454d;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), inset 1px 1px 1px #14b7fd;
+  text-indent:-9999px;
+  cursor:pointer;
+  overflow: visible; /*vpol added so the tooltips are shown in the IE */
+  /* 	position: absolute; */
+
+  /*&:hover {background-size: auto, 100% 130%;}*/
+
+  &.add-item{
+    background-position:center 16px, 0 100%;
+  }
+
+  &.remove-item{
+    background-position:center -56px, 0 100%;
+  }
+}
+
+
+/* Specific Rule for multifield add/remove item buttons in Firefox */
+@-moz-document url-prefix() {
+  div.multipliable div.composite button.multifield.add-item,
+  div.multipliable div.composite button.multifield.remove-item{
+    background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}"), linear-gradient(to bottom, #1198d1, #106f98);
+  }
+  form fieldset {
+    display: table-column /*Fix for firefox*/
+  }
+}
+
+/* Specific Rule for multifield add/remove item buttons in Chrome and Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  div.multipliable div.composite button.multifield.add-item,
+  div.multipliable div.composite button.multifield.remove-item{
+    background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}"), -webkit-gradient(linear, center top, center bottom, from(#1198d1), to(#106f98));
+  }
+}
+
+div.multipliable div.composite button.multifield.remove-item{
+  background-position: 9px -152px!important;
+  background-image: url(../images/sprites/edit_section_sprites.png?version=${project.version})!important;
+  background-color:transparent;
+  box-shadow:none;
+  border:none;
+  &:before{
+    font-family: "europass-application" !important;
+    color: #c45100;
+    font-size: 26px;
+    font-weight: bold;
+    display:inline-block;
+    width:30px;
+    height:30px;
+    border:none;
+  }
+}
+
+
+div.multipliable div.composite button.multifield.add-item{
+  font-family:"europass-application"!important;
+  background:transparent!important;
+  text-indent:0;
+  border:none;
+  text-shadow:none;
+  font-size:0;
+  box-shadow:none;
+  &:before{
+    content:"\e90b";
+    font-family:"europass-application"!important;
+    color:#FA8632;
+    font-size:22px;
+  }
+}
+
+/* Specific Rule for multifield add/remove item buttons in Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  div.multipliable div.composite button.multifield.add-item,
+  div.multipliable div.composite button.multifield.remove-item{
+    background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}"), linear-gradient(to bottom, #1198d1, #106f98);
+  }
+}
+
+
+/* Specific Rule for multifield add/remove item buttons in IE 10 and above*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  div.multipliable div.composite button.multifield.add-item,
+  div.multipliable div.composite button.multifield.remove-item{
+    background-image: url("@{img-base-url}sprites/add_delete_forms.png@{img-suffix-url}${project.version}"), linear-gradient(to bottom, #1198d1, #106f98);
+  }
+}
+
+div.multipliable div.composite button.multifield.remove-item {
+  background-position: 13px -143px !important;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  .multipliable.compound{
+    .composite.select, .composite.select2autocomplete, .composite.select,.composite.select2autocomplete,.help.placeholding,.composite .help.placeholding{
+      display:block;
+      width:100%;
+      &.hasValue.hasValue.hasValue{
+        display:inline-block;
+        width:87%;
+      }
+    }
+  }
+  div.multipliable div.composite button.multifield.add-item.add-item{
+    float:right;
+    margin-right:0;
+  }
+  .single.multipliable .composite .help.placeholding, .single.multipliable.compound .composite .help.placeholding{
+    width:100%;
+  }
+
+  fieldset.ecl.InstantMessaging{
+    .multipliable.compound >.composite.NoButton > .help.placeholding{
+      width: 100%;
+    }
+  }
+  .single.multipliable .composite button, .single.multipliable.compound .composite button{
+    width:30px;
+  }
+  div.multipliable div.composite button.multifield.add-item.remove-item, div.multipliable div.composite button.multifield.remove-item.remove-item{
+    padding:5px 19px;
+  }
+  div.multipliable div.composite button.multifield.add-item{
+    width:30px;
+  }
+  div.multipliable div.composite button.multifield.add-item.add-item{
+    margin-right:10px;
+  }
+}

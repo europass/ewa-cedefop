@@ -1,0 +1,7 @@
+{
+	"LearnerInfo" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo", "order" : "Identification Headline WorkExperience Education Skills Achievement ReferenceTo"},
+	"LearnerInfo.Identification.PersonName" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo.Identification.PersonName", "order" : "FirstName Surname"},
+	"LearnerInfo.Identification.Demographics.Birthdate" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo.Identification.Demographics.Birthdate", "format" : "text/short" },
+	"LearnerInfo.WorkExperience[0].Period" : { "@type" : "PrintingPreference", "name" : "LearnerInfo.WorkExperience[0].Period", "format" : "text/short" },
+	"LearnerInfo.Education[0].Period" : { "@type" : "PrintingPreference", "name" : "LearnerInfo.Education[0].Period", "format" : "text/short" }
+}

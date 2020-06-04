@@ -1,0 +1,95 @@
+<div class="composite LearnerInfo.WorkExperience[{{list_index}}].Period.From">
+	<div class="custom_select_wrapper" tabindex="0">
+		<select title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Day" 
+				class="formfield hidden_select pref Period global-format workfrom Date Day help with-placeholder"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<option value="" {{#unless Period.From.Day}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Day" group="EditorPlaceholder"}}
+				</option>
+				{{#loop Period.From.Day start="1" end="31" step="1" looptype="day"}}
+					<option value="{{Index}}" {{#equals ../Period.From.Day Index}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loop}}
+		</select>
+		<ul title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Day" 
+				class="formfield pref Period global-format workfrom Date Day help with-placeholder custom_select custom_select_multi"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<li class="init" data-value="" {{#unless Period.From.Day}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Day" group="EditorPlaceholder"}}
+				</li>
+				<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+				<ul>
+				{{#loop Period.From.Day start="1" end="31" step="1" looptype="day"}}
+					<li data-value="{{Index}}" {{#equals ../Period.From.Day Index}}selected="selected"{{/equals}}>{{Label}}</li>
+				{{/loop}}
+				</ul>
+		</ul>
+	</div>
+	<div class="custom_select_wrapper" tabindex="0">
+		<select title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Month" 
+				class="formfield hidden_select pref Period global-format workfrom Date Month help with-placeholder"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<option value="" {{#unless Period.From.Month}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Month" group="EditorPlaceholder"}}
+				</option>
+				{{#loop Period.From.Month start="1" end="12" step="1" looptype="month"}}
+					<option value="{{Index}}" {{#equals ../Period.From.Month Index}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loop}}
+		</select>
+		<ul title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Month" 
+				class="formfield pref Period global-format workfrom Date Month help with-placeholder custom_select custom_select_multi"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<li class="init" data-value="" {{#unless Period.From.Month}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Month" group="EditorPlaceholder"}}
+				</li>
+				<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+				<ul>
+					{{#loop Period.From.Month start="1" end="12" step="1" looptype="month"}}
+						<li data-value="{{Index}}" {{#equals ../Period.From.Month Index}}selected="selected"{{/equals}}>{{Label}}</li>
+					{{/loop}}
+				</ul>
+		</ul>
+	</div>
+	<div class="custom_select_wrapper" tabindex="0">
+		<select title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Year" 
+				class="formfield hidden_select pref Period global-format workfrom Date Year help with-placeholder"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<option value="" {{#unless Period.From.Year}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Year" group="EditorPlaceholder"}}
+				</option>
+			{{#loop Period.From.Year start="1930" end="+1" step="1" looptype="year"}}
+				<option value="{{Index}}" {{#equals ../Period.From.Year Index}}selected="selected"{{/equals}}>{{Label}}</option>
+			{{/loop}}
+		</select>
+		<ul title
+				name="LearnerInfo.WorkExperience[{{list_index}}].Period.From.Year" 
+				class="formfield pref Period global-format workfrom Date Year help with-placeholder custom_select custom_select_multi"
+				data-help-key="LearnerInfo.WorkExperience.Period"
+				data-bind-name="group"
+				data-bind-group="LearnerInfo.WorkExperience.array[{{list_index}}].Period">
+				<li class="init" data-value="" {{#unless Period.From.Year}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.WorkExperience.Period.From.Year" group="EditorPlaceholder"}}
+				</li>
+				<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+				<ul>
+					{{#loop Period.From.Year start="1930" end="+1" step="1" looptype="year"}}
+						<li data-value="{{Index}}" {{#equals ../Period.From.Year Index}}selected="selected"{{/equals}}>{{Label}}</li>
+					{{/loop}}
+				</ul>
+		</ul>
+	</div>
+</div>

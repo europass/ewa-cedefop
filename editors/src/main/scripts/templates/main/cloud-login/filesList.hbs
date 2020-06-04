@@ -1,0 +1,29 @@
+<div id="MyFilesListForm" class="overlay">
+    <div class="myFilesList-info job-portals-info" style="display:none">
+        <button class="close" style="display:none">Close</button>
+
+        <!--ui-settings-area is configured during showCloudOptions-->
+        <div class="ui-settings-area drawer" style="display:none">
+            <div class="drawer on-error cloud-error-container" id="my-cloud-files-error" style="display:none">
+				<p></p>
+			</div>
+			<div class="top-manage-documents-section">
+				<h2>
+                    {{get_text "cloudLogin.drawer.connected.myfiles.heading" group="GuiLabel"}}
+					<small>
+                        {{get_text "cloudLogin.drawer.connected.tolocation.heading" group="GuiLabel"}}&nbsp;<span id="connected-to-service"></span>.
+						<span id="cloud-disconnect">{{get_text "cloudLogin.drawer.connected.signout.heading" group="GuiLabel"}}</span>
+					</small>
+				</h2>
+            </div>            
+            <div class="add-new-document-section">
+                <span id="addBlankDocument">{{get_text "cloudLogin.drawer.connected.addnewfile" group="GuiLabel"}}</span>
+            </div>
+            <div id="save-your-cv-section">
+                {{get_text "cloudLogin.drawer.save.cv" group="GuiLabel"}}
+            </div>
+            <div id="cloudManageDocumentsRadioForm"></div>
+            <button id="confirm-cloud-load-document" type="button" class="button orange mdl-btn"><span>{{get_text "Buttons.Done" group="GuiLabel"}}</span></button>
+        </div>
+    </div>
+</div>

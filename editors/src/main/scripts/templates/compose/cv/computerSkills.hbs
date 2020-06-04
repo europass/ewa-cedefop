@@ -1,0 +1,149 @@
+{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Computer}}
+	<dt class="label">
+		<span class="title">{{get_text "LearnerInfo.Skills.Computer"  group="DocumentLabel"}}</span>
+	</dt>
+	<dd class="value">
+		<div class="empty add"><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span></div>
+	</dd>
+{{else}}
+	
+	<dt class="" style="display:none">{{get_text "LearnerInfo.Skills.Computer"  group="DocumentLabel"}}</dt>
+	<dd class="computer-skills">
+		<table cellpadding="1" class="ict-skills"
+				id="List:SkillsPassport.LearnerInfo.Skills.Computer"
+				data-rel-section="SkillsPassport.LearnerInfo.Skills.Computer"
+				summary="{{get_text "LearnerInfo.Skills.Computer"  group="DocumentLabel"}}">
+			<caption>{{get_text "LearnerInfo.Skills.Computer"  group="DocumentLabel"}}</caption>
+			<thead>
+				<tr id="nodnd-1">
+					<th id="nodnd-1-ComputerSkill" class="no-border sub-heading">
+                                            <button type="button" name="enablePageBreak" 
+                                                class="enablePageBreak sectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsComputer"}}break-page{{/if_contains}}" 
+                                                data-section="SkillsComputer"
+                                                data-tip.position="top-left">Page Break
+                                                <span class="data-title" style="display:none;">
+                                                    {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsComputer"}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains}}
+                                                    {{#if_absent Preferences.LearnerInfo.pageBreaks compare="SkillsComputer"}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent}}
+                                                </span>
+                                            </button>						
+                                            <span class="title">{{get_text "LearnerInfo.Skills.Computer"  group="DocumentLabel"}}</span>
+					</th>
+					<th id="nodnd-1-ComputerSkill.ICTLevel" colspan="5" align="center">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel"  group="DocumentLabel"}}</th>
+					<th class="menu-placeholder" id="nodnd-1-menu-placeholder">&nbsp;</th>
+				</tr>
+				<tr id="nodnd-2">
+					<th id="nodnd-2-no-border" class="no-border">&nbsp;</th>
+					<th id="nodnd-2-InformationProcessing" class="InformationProcessing">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="DocumentLabel" }}</th>
+					<th id="nodnd-2-Communication" class="Communication">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="DocumentLabel" }}</th>
+					<th id="nodnd-2-ContentCreation" class="ContentCreation">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation"  group="DocumentLabel"}}</th>
+					<th id="nodnd-2-Safety" class="Safety">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="DocumentLabel" }}</th>
+					<th id="nodnd-2-ProblemSolving" class="ProblemSolving">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="DocumentLabel" }}</th>
+					<th class="menu-placeholder" id="nodnd-2-menu-placeholder">&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody data-rel-section="SkillsPassport.LearnerInfo.Skills.Computer">
+				{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Computer}}
+					<tr id="nodnd-3" class="language nodrag">
+						<td colspan="7" headers="nodnd-1-Computer">&nbsp;</td>
+					</tr>
+				{{else}}
+					{{#with SkillsPassport.LearnerInfo.Skills.Computer}}
+						<tr id="ict-skills" 
+							class="computer ictSkills"
+							data-nested-tds="7"
+							data-rel-doc="cv"
+							data-rel-clazz="ComputerSkillsFormView"
+							data-rel-form="Form:LearnerInfo.Skills.Computer"
+							data-rel-section="SkillsPassport.LearnerInfo.Skills.Computer"
+							data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Computer">
+							
+							<td class="label" headers="nodnd-1-Computer"></td>
+							<td colspan="5" headers="nodnd-1-Computer" >
+							<table id="ICTLevel" cellpadding="0" width="100%">
+								<tbody>
+ 									<tr class="ict-self-evaluation">
+										<td id="ICTLevel.InformationProcessing" class="InformationProcessing">
+											{{#showLangShortDescr ProficiencyLevel.Information "IctLevelMap"}}{{.}}{{/showLangShortDescr}}
+											{{#unless ProficiencyLevel.Information}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Information" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="ICTLevel.Communication" class="Communication">
+											{{#showLangShortDescr ProficiencyLevel.Communication "IctLevelMap"}}{{.}}{{/showLangShortDescr}}
+											{{#unless ProficiencyLevel.Communication}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Communication" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="ICTLevel.ContentCreation" class="ContentCreation">
+											{{#showLangShortDescr ProficiencyLevel.ContentCreation "IctLevelMap"}}{{.}}{{/showLangShortDescr}}
+											{{#unless ProficiencyLevel.ContentCreation}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="ICTLevel.Safety" class="Safety">
+											{{#showLangShortDescr ProficiencyLevel.Safety "IctLevelMap"}}{{.}}{{/showLangShortDescr}}
+											{{#unless ProficiencyLevel.Safety}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.Safety" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="ICTLevel.ProblemSolving" class="ProblemSolving" >
+											{{#showLangShortDescr ProficiencyLevel.ProblemSolving "IctLevelMap"}}{{.}}{{/showLangShortDescr}}
+											{{#unless ProficiencyLevel.ProblemSolving}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Computer.ProficiencyLevel.ProblemSolving" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+									</tr>
+									{{#if Certificate}}
+										<tr class="ict-certificates">
+											<td colspan="5" headers="nodnd-1-ComputerSkill">
+												<ul>
+												{{#each_with_index Certificate }}
+													<li class="Title" >
+														{{#isEmptyObject Title}}
+															&ndash;
+														{{else}}
+															{{Title}}
+														{{/isEmptyObject}}
+													</li>
+												{{/each_with_index}}
+												</ul>
+											</td>
+										</tr>
+									{{/if}}
+									{{#if Description}}
+										<tr class="ictAdditionalInfo">
+											<td colspan="5" headers="nodnd-1-ComputerSkill">
+											<dd class="value rich-content AdditionalInfo">
+												{{nestHtmlLists Description}}
+											</dd>
+											</td>
+										</tr>
+									{{/if}}
+									{{#if ReferenceTo}}
+										<tr class="ict-documentation">
+											<td colspan="5" headers="nodnd-1-ComputerSkill">
+												<div class="attachment">
+													<span class="attachment inner-content-label">{{get_text "LearnerInfo.Skills.Computer.ReferenceTo" group="DocumentLabel"}}</span>
+													{{#each_with_index ReferenceTo}}{{#with_attachment ../../../../SkillsPassport.Attachment idref}}<span class="linked-attachment" name="{{Name}}">{{#if_gt ../index compare="0"}}, {{/if_gt}}{{#crop_text Description}}{{.}}{{/crop_text}}</span>{{/with_attachment}}{{/each_with_index}}
+												</div>
+											</td>
+										</tr>
+									{{/if}}
+								</tbody>
+							</table>
+						</td>
+						<td class="menu-placeholder" headers="nodnd-1-menu-placeholder">
+							{{#call_partial . path="LearnerInfo.Skills.Computer" buttons="Extra"}}
+								{{> templates/menu/listitemmenu}}
+							{{/call_partial}}
+						</td>
+					</tr>
+				{{/with}}
+				</tbody>
+			</table>
+			</dd>
+		
+	
+	{{/isEmptyObject}}
+	
+{{/isEmptyObject}}

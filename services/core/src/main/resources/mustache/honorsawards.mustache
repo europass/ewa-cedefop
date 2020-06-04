@@ -1,0 +1,11 @@
+{{#item}}
+{{#name}}
+<p>
+<strong>{{.}}</strong>
+{{#issuer}} | <em>{{.}}</em>{{/issuer}} 
+</p>
+{{/name}}
+{{^name}}
+{{#issuer}}<p><em>{{.}}</em></p>{{/issuer}}
+{{/name}}
+{{/item}}

@@ -1,0 +1,27 @@
+<menu class="section manage" label="Manage">
+
+	<button class="opens-modal-form edit extra  tip spot nested-tip tip-addRight"
+            data-tip.position="top-right">
+        <span class="data-title" style="display:none">{{get_text "Buttons.Edit.Content"}}</span>
+    </button>
+
+	<button type="button" 
+			name="{{path}}[{{index}}]_attach_btn" 
+			class="open-linked-attachments attach opens-modal-form tip spot nested-tip tip-addRight"
+			data-tip.position="top-right">
+			<span class="data-title" style="display:none">{{get_text "Attach.To.Section" group="EditorHelp"}}</span>
+		{{> templates/attachment/linkedindication}}
+	</button>
+	
+	<button type="button" 
+			name="{{path}}[{{index}}]_delete_btn" 
+			class="delete tip spot nested-tip tip-addRight"
+			data-rel-form="Form:{{path}}{{#if index}}[{{index}}]{{/if}}"
+            data-rel-section="SkillsPassport.{{path}}{{#if_gteq index compare='0'}}[{{index}}]{{/if_gteq}}"
+			data-rel-view="Compose:{{path}}"
+			data-rel-index="{{index}}"
+			data-tip.position="top-right">
+		<span class="data-title" style="display:none">{{get_text "Delete.Section" group="EditorHelp"}}</span>
+	</button>
+
+</menu>

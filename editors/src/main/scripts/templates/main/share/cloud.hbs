@@ -1,0 +1,27 @@
+{{#shareForReview}}
+<div class="ui-cloud-area drawer" id="share-cloud">
+    <header style="display: block;">
+        <legend class="normal cloud-title">{{get_text "export.wizard.step.share.cloud.desc" group = "GuiLabel"}}
+        </legend>
+    </header>
+    <div class="note cloud">
+        <span class="icon"></span>
+        <div class="text">{{get_text "export.wizard.step.share.cloud.details" group = "GuiLabel"}}</div>
+    </div>
+    <button id="btn-share-googledrive" class="button btn-share-cloud">
+        <span class="share-icon"></span> <span
+            class="title">{{get_text "share.cloud.location.option.googledrive" group = "GuiLabel"}}</span>
+    </button>
+    &nbsp;
+    <button id="btn-share-dropbox" class="button btn-share-cloud">
+        <span class="share-icon"></span> <span
+            class="title">{{get_text	"share.cloud.location.option.dropbox" group = "GuiLabel"}}</span>
+    </button>
+    &nbsp;
+    <button id="btn-share-onedrive" class="button btn-share-cloud">
+        <span class="share-icon"></span> <span
+            class="title">{{get_text "share.cloud.location.option.onedrive" group = "GuiLabel"}}</span>
+    </button>
+    &nbsp;
+</div>
+{{/shareForReview}}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+       /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            Describes a Europass Cover Letter. The Cover Letter includes information about:
+            - the person to whom it is addressed to (addressee);
+            - the subject, date and place;
+            - the main content of the letter;
+            - the suitable opening and closing letter salutations;
+            - the list of enclosed documents;
+            The details of the person who prepares the Cover Letter are available in the "LearnerInfo" section of an XML instance that follows the Europass XML Schema Definition.
+        </xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:include schemaLocation="PersonName.xsd"/>
+    <xsd:include schemaLocation="Organisation.xsd"/>
+    <xsd:include schemaLocation="OccupationalField.xsd"/>
+    <xsd:include schemaLocation="Letter.xsd"/>
+    <xsd:include schemaLocation="DocumentInformation.xsd"/>
+    <xsd:include schemaLocation="Documentation.xsd"/>
+    
+    <xsd:complexType name="CoverLetterType">
+        <xsd:sequence> 
+            <xsd:element name="Addressee" type="AddresseeType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Letter" type="LetterType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Documentation" type="GenericDocumentationType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="AddresseeType">
+        <xsd:sequence>
+            <xsd:element name="PersonName" type="PersonNameType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Position" type="OccupationalFieldType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Organisation" type="OrganisationType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    
+</xsd:schema>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="https://europass.cedefop.europa.eu/xml/included/EuropassNationalities_V1.6.0.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The included "EuropassNationalities" schema defines the list of nationality codes that may appear in the Europass XML documents. The code of each nationality matches the coresponding coutnry's code.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:include>
+	
+	<xsd:include schemaLocation="CommonTypes.xsd"/>
+
+	<!-- Demographics Information -->
+	<xsd:complexType name="DemographicsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains demographics-related information about the individual. It includes the birthdate, gender and list of nationalities.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Birthdate" type="DateType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The date of birth of the individual. According to its type, the Birthdate element has no content and must have at least a year attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Gender" type="GenderLabelType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The gender is described by one of M or F, which correspond to male, female and non specified accordingly. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NationalityList" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Nationality" type="NationalityType" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation xml:lang="en">
+									Defines a nationality. The nationality is described by a code and is a text only element. E.g. code: DE, label: German.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+	<!-- Nationality -->
+	<xsd:complexType name="NationalityType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a nationality. The nationality is described by a code and a label. E.g. code: FR, label: French.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="nationalityCountryCode">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Defines the country code type to which the nationality corresponds. The type is defined in the included schema "EuropassISOCountries". 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<!-- Gender Types -->
+	<xsd:complexType name="GenderLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="GenderCodesEnumeration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="GenderCodesEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="F"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

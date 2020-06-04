@@ -1,0 +1,16 @@
+{
+  "SkillsPassport" : {
+    "Locale" : "en",
+    "DocumentInfo" : {
+      "DocumentType" : "ECL"
+    },
+    "LearnerInfo" : {
+      "Identification" : {
+        "PersonName" : {
+          "FirstName" : "Panagiotis",
+          "Surname" : "Giannelos"
+        }
+      }
+    }
+  }
+}

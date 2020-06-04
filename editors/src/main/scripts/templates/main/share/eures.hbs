@@ -1,0 +1,19 @@
+<div class="ui-eures-area ui-job-portal-area drawer default" id="eures-default">
+    <div class="note job-portal">
+        <div class="text post">{{get_text "export.wizard.step.eures.details" group = "GuiLabel"}}&nbsp;</div>
+        <fieldset class="feedback-area" id="eures-warning-msg">
+            <section class="notification error" style="">
+                <div data-rel-key="" class="message-area">
+                    <p></p>
+                </div>
+            </section>
+        </fieldset>
+        <div class="ui-terms">
+            <fieldset class="environmentInfo">
+                <input id="eures-terms-check" name="eures-terms-check" value="eures-terms-check" type="checkbox" class="css-checkbox formfield">
+                <label for="eures-terms-check" class="css-label formfield-label">{{get_text "export.wizard.step.eures.policies" group = "GuiLabel"}}</label>
+            </fieldset>
+        </div>    
+        <button id="btn-submit-to-eures" class="button orange submit">{{get_text "Buttons.Eures.Post" group = "GuiLabel"}}</button>
+    </div>
+</div>

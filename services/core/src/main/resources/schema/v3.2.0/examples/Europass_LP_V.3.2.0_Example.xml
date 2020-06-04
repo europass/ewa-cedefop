@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass ../EuropassSchema.xsd" locale="en">
+    <DocumentInfo>
+    	<DocumentType>ELP</DocumentType>
+        <CreationDate>2012-03-01T00:00:00.000Z</CreationDate>
+        <LastUpdateDate>2012-03-01T00:00:00.000Z</LastUpdateDate>
+        <XSDVersion>V3.2</XSDVersion>
+        <Generator>Oxygen Testing</Generator>
+        <Comment>This is an example LP XML according to XSD v3.2.0</Comment>
+    </DocumentInfo>
+    <PrintingPreferences>
+        <Document type="ELP">
+            <Field name="LearnerInfo" order="Identification Skills ReferenceTo"/>
+            <Field name="LearnerInfo.Identification.PersonName" order="FirstName Surname"/>
+            <Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date" show="true" format="text/long"/>
+            <Field name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period" show="true" format="text/long"/>
+        </Document>
+    </PrintingPreferences>
+    <LearnerInfo>
+        <Identification>
+            <PersonName>
+                <FirstName>Babis</FirstName>
+                <Surname>Sougias</Surname>
+            </PersonName>
+        </Identification>
+        <Skills>
+            <Linguistic>
+                <MotherTongueList>
+                    <MotherTongue>
+                        <Description>
+                            <Code>el</Code>
+                            <Label>Greek</Label>
+                        </Description>
+                    </MotherTongue>
+                    <MotherTongue>
+                        <Description>
+                            <Label>Elvish</Label>
+                        </Description>
+                    </MotherTongue>
+                </MotherTongueList>
+                <ForeignLanguageList>
+                    <ForeignLanguage>
+                        <Description>
+                            <Code>en</Code>
+                            <Label>English</Label>
+                        </Description>
+                        <ProficiencyLevel>
+                            <Listening>C1</Listening>
+                            <Reading>C1</Reading>
+                            <SpokenInteraction>C1</SpokenInteraction>
+                            <SpokenProduction>C1</SpokenProduction>
+                            <Writing>C1</Writing>
+                        </ProficiencyLevel>
+                        <AcquiredDuring>
+                            <Experience>
+                                <Period>
+                                    <From year="2005"/>
+                                    <To year="2007"/>
+                                </Period>
+                                <Description>Masters in United Kingdom.</Description>
+                                <Area>
+                                	<Code>studying_training_language</Code>
+                                </Area>
+                            </Experience>
+                            <Experience>
+                                <Period>
+                                    <From year="2007"/>
+                                    <To year="2008"/>
+                                </Period>
+                                <Description>Working in english-speaking company in the Netherlands.</Description>
+                                <Area>
+                                	<Code>living_traveling_language</Code>
+                                </Area>
+                            </Experience>
+                        </AcquiredDuring>
+                        <VerifiedBy>
+                            <Certificate>
+                                <Title>Cambridge Proficiency</Title>
+                            </Certificate>
+                            <Certificate>
+                                <Title>Michigan Proficiency</Title>
+                                <Level></Level>
+                            </Certificate>
+                        </VerifiedBy>
+                        <Documentation>
+                            <ReferenceTo idref="LP_ATT_1"/>
+                        </Documentation>
+                    </ForeignLanguage>
+                    <ForeignLanguage>
+                        <Description>
+                            <Code>grc</Code>
+                            <Label>Ancient Greek</Label>
+                        </Description>
+                    </ForeignLanguage>
+                </ForeignLanguageList>
+            </Linguistic>
+        </Skills>
+    </LearnerInfo>
+    <AttachmentList>
+        <Attachment id="LP_ATT_1">
+        	<Name>Cambridge Certificate of Proficiency in English</Name>
+            <MimeType>application/pdf</MimeType>
+            <Data><!-- bytes go here --></Data>       
+        </Attachment>
+    </AttachmentList>
+</SkillsPassport>

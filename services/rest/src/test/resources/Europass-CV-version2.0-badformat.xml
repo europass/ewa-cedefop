@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://europass.cedefop.europa.eu/xml/cv_en_GB.xsl" type="text/xsl"?>
+<europass:learnerinfo locale="en_GB" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:europass="http://europass.cedefop.europa.eu/Europass/V2.0" xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass/V2.0 http://europass.cedefop.europa.eu/xml/EuropassSchema_V2.0.xsd">
+	<docinfoXx>
+		<issuedate>2012-09-17T18:26:08+03:00</issuedate>
+		<xsdversion>V2.0</xsdversion>
+		<comment>Automatically generated Europass CV</comment></docinfo>
+	<prefs>
+		<field before="step1.lastName" name="step1.firstName"></field>
+		<field keep="false" name="step1.addressInfo"></field>
+		<field keep="false" name="step1.telephone"></field>
+		<field keep="false" name="step1.mobile"></field>
+		<field keep="false" name="step1.fax"></field>
+		<field keep="false" name="step1.email"></field>
+		<field keep="false" name="step1.nationality"></field>
+		<field format="/numeric/long" keep="true" name="step1.birthDate"></field>
+		<field keep="false" name="step1.gender"></field>
+		<field keep="false" name="step1.photo"></field>
+		<field keep="false" name="step1.application.label"></field>
+		<field before="step4List" keep="false" name="step3List"></field>
+		<field keep="false" name="step4List"></field>
+		<field keep="false" name="step5.motherLanguages"></field>
+		<field keep="false" name="step5.foreignLanguageList"></field>
+		<field keep="false" name="step6.socialSkills"></field>
+		<field keep="false" name="step6.organisationalSkills"></field>
+		<field keep="false" name="step6.technicalSkills"></field>
+		<field keep="false" name="step6.computerSkills"></field>
+		<field keep="false" name="step6.artisticSkills"></field>
+		<field keep="false" name="step6.otherSkills"></field>
+		<field keep="false" name="step6.drivingLicences"></field>
+		<field keep="false" name="step7.additionalInfo"></field>
+		<field keep="false" name="step7.annexes"></field>
+		<field keep="false" name="grid"></field></prefs>
+	<identification>
+		<firstname>Τάκης</firstname>
+		<lastname>Σουγιάς</lastname>
+		<contactinfo>
+			<address>
+				<addressLine></addressLine>
+				<municipality></municipality>
+				<postalCode></postalCode>
+				<country>
+					<label></label></country></address>
+			<telephone></telephone>
+			<fax></fax>
+			<mobile></mobile>
+			<email></email></contactinfo>
+		<demographics>
+			<birthdate>2001-05-02</birthdate>
+			<gender>NA</gender>
+			<nationality>
+				<label></label></nationality></demographics></identification>
+	<application>
+		<label></label></application>
+	<languagelist>
+		<language xsi:type="europass:mother">
+			<label></label></language></languagelist>
+	<skilllist>
+		<skill type="social"></skill>
+		<skill type="organisational"></skill>
+		<skill type="technical"></skill>
+		<skill type="computer"></skill>
+		<skill type="artistic"></skill>
+		<skill type="other"></skill>
+		<structured-skill xsi:type="europass:driving"></structured-skill></skilllist>
+	<misclist>
+		<misc type="additional"></misc>
+		<misc type="annexes"></misc></misclist></europass:learnerinfo>

@@ -1,0 +1,331 @@
+{{#with SkillsPassport}}
+{{#with_list_item LearnerInfo.Skills.Linguistic.ForeignLanguage ../Idx}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Edit" group="GuiLabel"}}
+		{{#isEmptyObject Description}}
+		{{else}}
+		<span class="subsection-title"></span>
+		{{/isEmptyObject}}
+		</legend>
+	</header>
+
+	{{#with_list_item Experience ../../SubIdx}}
+	
+	<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Area" 
+			  class="Title">
+		<label for="Area">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Area" group="GuiLabel"}}
+		</label>
+		<div class="composite select experience-type" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Area">
+			<input	type="text"  
+					class="formfield typeahead single help Title with-placeholder"
+					title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Area.Label"
+					data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Area"
+					rel="Area"
+					placeholder="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Area" group="EditorPlaceholder"}}"
+					value="{{Area.Label}}">
+
+			<input	type="hidden"
+					class="Title"
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Area.Code"
+					rel="Area"
+					value="{{Area.Code}}">
+		</div>
+	</fieldset>	
+
+	
+	<fieldset rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Description" class="editor">
+		<label for="ELPDescription">
+			{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description" group="DocumentLabel"}}
+		</label>
+		<textarea
+				title
+				id="ckeditor"
+				class="rich-editor single formfield help with-placeholder" 
+				name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Description"
+				data-help-key="Help.Elp.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description"
+				placeholder="{{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description" group="EditorPlaceholder"}}}"
+				>{{{Description}}}</textarea>
+		<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Description" class="help placeholder" style="display:none;">
+			         {{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Description" group="EditorPlaceholder"}}}
+		</span>
+	</fieldset>   
+		
+	<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period" 
+			  class="Experience Dates">
+		<fieldset class="Experience Period">
+			
+			<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From">
+				<label for="ElpExperience.FromDate">
+					{{get_text "LearnerInfo.Education.Dates.From"}}
+				</label>
+				
+				<div class="composite LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From">
+					<div class="custom_select_wrapper" tabindex="0">
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Day"
+							class="formfield hidden_select pref Period global-format Experience Date Day help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless From.Day}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.From.Day start="1" end="31" step="1" looptype="day"}}
+							<option value="{{Index}}" {{#equals ../Period.From.Day Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+						<ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Day"
+							class="formfield custom_select pref Period global-format Experience Date Day help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<li class="init" data-value="" {{#unless From.Day}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+						</li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+						{{#loop Period.From.Day start="1" end="31" step="1" looptype="day"}}
+							<li data-value="{{Index}}" {{#equals ../Period.From.Day Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+						</ul>
+						</ul>
+					</div>
+					<div class="custom_select_wrapper" tabindex="0">
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Month"
+							class="formfield hidden_select pref Period global-format Experience Date Month help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless Period.From.Month}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.From.Month start="1" end="12" step="1" looptype="month"}}
+							<option value="{{Index}}" {{#equals ../Period.From.Month Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+						<ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Month"
+							class="formfield custom_select pref Period global-format Experience Date Month help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<li class="init" data-value="" {{#unless Period.From.Month}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+						</li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+						{{#loop Period.From.Month start="1" end="12" step="1" looptype="month"}}
+							<li data-value="{{Index}}" {{#equals ../Period.From.Month Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+						</ul>
+						</ul>
+					</div>
+					<div class="custom_select_wrapper" tabindex="0">
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Year"
+							class="formfield hidden_select pref Period global-format Experience Date Year help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless Period.From.Year}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.From.Year start="1930" end="+1" step="1" looptype="year"}}
+							<option value="{{Index}}" {{#equals ../Period.From.Year Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+						<ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.From.Year"
+							class="formfield custom_select pref Period global-format Experience Date Year help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<li class="init" data-value="" {{#unless Period.From.Year}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+						</li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+						{{#loop Period.From.Year start="1930" end="+1" step="1" looptype="year"}}
+							<li data-value="{{Index}}" {{#equals ../Period.From.Year Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+						</ul>
+						</ul>
+					</div>
+
+				
+				</div>
+				
+			</fieldset>
+
+			<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To">
+				
+				<label for="ElpExperience.ToDate">
+					{{get_text "LearnerInfo.Education.Dates.To"}}
+				</label>
+				
+				<div class="composite LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To">
+					<div class="custom_select_wrapper" {{#unless_eq Period.Current compare="true"}}tabindex="0"{{/unless_eq}}>
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Day"
+							class="formfield hidden_select pref Period global-format Experience Date Day help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless To.Day}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.To.Day start="1" end="31" step="1" looptype="day"}}
+							<option value="{{Index}}" {{#equals ../Period.To.Day Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+						<ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Day"
+							class="formfield custom_select pref Period global-format Experience Date Day help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<li class="init" data-value="" {{#unless To.Day}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Day" group="EditorPlaceholder"}}
+						</li>
+						<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						<ul>
+						{{#loop Period.To.Day start="1" end="31" step="1" looptype="day"}}
+							<li data-value="{{Index}}" {{#equals ../Period.To.Day Index}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loop}}
+						</ul>
+						</ul>
+					</div>
+					<div class="custom_select_wrapper" {{#unless_eq Period.Current compare="true"}}tabindex="0"{{/unless_eq}}>
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Month"
+							class="formfield hidden_select pref Period global-format Experience Date Month help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless Period.To.Month}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.To.Month start="1" end="12" step="1" looptype="month"}}
+							<option value="{{Index}}" {{#equals ../Period.To.Month Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+                        <ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Month"
+							class="formfield custom_select pref Period global-format Experience Date Month help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+                            <li class="init" data-value="" {{#unless Period.To.Month}}selected="selected"{{/unless}}>
+                                {{get_text "LearnerInfo.Identification.Demographics.Birthdate.Month" group="EditorPlaceholder"}}
+                            </li>
+						    <span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+						    <ul>
+                                {{#loop Period.To.Month start="1" end="12" step="1" looptype="month"}}
+                                    <li data-value="{{Index}}" {{#equals ../Period.To.Month Index}}selected="selected"{{/equals}}>{{Label}}</li>
+                                {{/loop}}
+                            </ul>
+						</ul>
+						</select>
+					</div>
+
+					<div class="custom_select_wrapper" {{#unless_eq Period.Current compare="true"}}tabindex="0"{{/unless_eq}}>
+						<select title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Year"
+							class="formfield hidden_select pref Period global-format Experience Date Year help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+						<option value="" {{#unless Period.To.Year}}selected="selected"{{/unless}}>
+							{{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+						</option>
+						{{#loop Period.To.Year start="1930" end="+1" step="1" looptype="year"}}
+							<option value="{{Index}}" {{#equals ../Period.To.Year Index}}selected="selected"{{/equals}}>{{Label}}</option>
+						{{/loop}}
+						</select>
+						<ul title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.To.Year"
+							class="formfield custom_select pref Period global-format Experience Date Year help with-placeholder"
+							data-bind-name="group"
+							data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+							data-bind-group="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period">
+                            <li class="init" data-value="" {{#unless Period.To.Year}}selected="selected"{{/unless}}>
+                                {{get_text "LearnerInfo.Identification.Demographics.Birthdate.Year" group="EditorPlaceholder"}}
+                            </li>
+                            <span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+                            <ul>
+                                {{#loop Period.To.Year start="1930" end="+1" step="1" looptype="year"}}
+                                    <li data-value="{{Index}}" {{#equals ../Period.To.Year Index}}selected="selected"{{/equals}}>{{Label}}</li>
+                                {{/loop}}
+                            </ul>
+                        </ul>
+						</select>
+					</div>
+					
+				</div>
+
+			</fieldset>			
+
+			<div class="overlay" {{#if_eq Period.Current compare="true"}}style="display:block"{{else}}style="display: none;"{{/if_eq}}></div>
+
+		</fieldset>	
+
+		<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Dates.Current" class="Date today">
+			<input type="checkbox"
+					id="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Dates.Current" 
+					class="formfield css-checkbox isBinary Date help today"
+					title
+					data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.Current"
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.Current"
+					{{#if_eq Period.Current compare="true"}}checked="checked"{{/if_eq}}/>
+					
+			<label class="css-label checkbox-label" 
+				for="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Dates.Current">
+				{{get_text "LearnerInfo.WorkExperience.Dates.Current" group="GuiLabel"}}
+			</label>
+					
+		</fieldset>
+
+		<fieldset name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.format period-format" class="DateFormat">
+			<label for="">{{get_text "LearnerInfo.Education.Dates.Format"}}</label>
+			<div class="custom_select_wrapper">
+				<select title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.format" 
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period"
+						data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+						class="formfield hidden_select help global-format ForeignLanguage Experience Format PrintingPreferences Period with-placeholder">
+						{{#with_pref_item ../../../Preferences.ELP.LearnerInfo.Skills.Linguistic.ForeignLanguage.array ../../../Idx}}
+							{{#with_pref_item current_pref_item.Experience.array ../../../../SubIdx}}
+								{{#augment . Format=current_pref_item.Period.format DocumentType="ELP"}}
+									{{> templates/forms/dateformatoptions}}
+								{{/augment}}
+							{{/with_pref_item}}
+						{{/with_pref_item}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../../Idx}}].Experience[{{../../../SubIdx}}].Period.format" 
+						data-bind-name="LearnerInfo.Skills.Linguistic.ForeignLanguage.array[{{../../../Idx}}].Experience.array[{{../../../SubIdx}}].Period"
+						data-help-key="Help.Elp.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period"
+						class="formfield custom_select help global-format ForeignLanguage Experience Format PrintingPreferences Period with-placeholder">
+					<li class="init" data-value=""></li>
+					<span class="fancySelect arrow multi_instances"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#date_format_options}}
+						<li data-value="{{pattern}}" {{#selected}}selected="selected"{{/selected}}>
+							{{text}}
+						</li>
+						{{/date_format_options}}
+					</ul>
+				</ul>
+			</div>
+		</fieldset>			
+		{{/with_list_item}}
+	</fieldset>
+</fieldset>
+{{/with_list_item}}
+{{/with}}

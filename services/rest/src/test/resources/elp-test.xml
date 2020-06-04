@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/EuropassSchema_V3.0.xsd"
+	locale="en">
+	<DocumentInfo>
+		<DocumentType>ELP</DocumentType>
+		<CreationDate>2013-05-22T14:39:23.846Z</CreationDate>
+		<LastUpdateDate>2013-05-23T12:30:43.438Z</LastUpdateDate>
+		<XSDVersion>V3.0</XSDVersion>
+		<Generator>EWA</Generator>
+		<Comment>Europass ELP</Comment>
+	</DocumentInfo>
+	<LearnerInfo>
+		<Identification>
+			<PersonName>
+				<FirstName>Kostas</FirstName>
+				<Surname>Kavvalakis</Surname>
+			</PersonName>
+		</Identification>
+		<Skills>
+			<Linguistic>
+				<MotherTongueList>
+					<MotherTongue>
+						<Description>
+							<Code>el</Code>
+							<Label>Greek</Label>
+						</Description>
+					</MotherTongue>
+					<MotherTongue>
+						<Description>
+							<Code>de</Code>
+							<Label>German</Label>
+						</Description>
+					</MotherTongue>
+				</MotherTongueList>
+				<ForeignLanguageList>
+					<ForeignLanguage>
+						<Description>
+							<Code>en</Code>
+							<Label>English</Label>
+						</Description>
+						<ProficiencyLevel>
+							<Listening>B2</Listening>
+							<Reading>B2</Reading>
+							<SpokenInteraction>B2</SpokenInteraction>
+							<SpokenProduction>B2</SpokenProduction>
+							<Writing>B2</Writing>
+						</ProficiencyLevel>
+						<VerifiedBy>
+						    <Certificate>
+								<Title>CPE</Title>
+								<AwardingBody>British Council</AwardingBody>
+								<Date year="2013" month="--10" day="---15" />
+								<Level>C2</Level>
+							</Certificate>
+							<Certificate>
+								<Title>Michigan Certificate of Proficiency in English</Title>
+							</Certificate>
+						</VerifiedBy>
+					</ForeignLanguage>
+					<ForeignLanguage>
+						<Description>
+							<Code>fr</Code>
+							<Label>French</Label>
+						</Description>
+						<ProficiencyLevel>
+							<Listening>A1</Listening>
+							<Reading>A1</Reading>
+							<SpokenInteraction>B1</SpokenInteraction>
+							<SpokenProduction>A2</SpokenProduction>
+							<Writing>A1</Writing>
+						</ProficiencyLevel>
+						<VerifiedBy>
+							<Certificate>
+								<Title>DElfi</Title>
+							</Certificate>
+						</VerifiedBy>
+					</ForeignLanguage>
+				</ForeignLanguageList>
+			</Linguistic>
+		</Skills>
+	</LearnerInfo>
+</SkillsPassport>

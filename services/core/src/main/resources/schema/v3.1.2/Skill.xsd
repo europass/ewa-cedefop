@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass"
+    elementFormDefault="qualified">
+    
+    <!--
+        /*
+        * Copyright European Union 2002-2014
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:include schemaLocation="CommonTypes.xsd"/>
+    <xsd:include schemaLocation="Experience.xsd"/>
+    <xsd:include schemaLocation="Certificate.xsd"/>
+    
+    
+    <xsd:complexType name="SkillType" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a skill. A Skill has a description and may be accompanied by sutiable documentation.
+                Morever a Skill may be acquired during one or more experience periods, and be verified by one or more certificates
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Description" type="xsd:anyType" minOccurs="0"/>
+            <xsd:element name="ProficiencyLevel" type="xsd:anyType" minOccurs="0"/>
+            <xsd:element name="AcquiredDuring" type="AbstractExperienceListType" minOccurs="0"/>
+            <xsd:element name="VerifiedBy" type="CertificateListType" minOccurs="0"/>
+            <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="GenericSkillType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a generic skill, which is modelled with one unstructured (free text) Description element.
+                It may also accept Documentation information.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:restriction base="SkillType">
+                <xsd:sequence>
+                    <xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Documentation" type="IntraDocumentDocumentationType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

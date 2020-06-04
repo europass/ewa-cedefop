@@ -1,0 +1,31 @@
+<dt class="label"></dt>
+<dd {{#if Preferences.CoverLetter.Justification.justify}}style="text-align: justify !important;"{{/if}}>
+	{{#emptyCLEnclosed SkillsPassport.CoverLetter.Documentation }}
+	{{!-- when only Heading.Label is saved in the model, 
+	      and it is exactly the same as DocumentLabe[CoverLetter.Enclosed],
+	      then this section appears as EMPTY --}}
+	<span class="default-value">{{get_text "CoverLetter.Enclosed" group="DocumentLabel"}}</span>
+	<div class="empty add">
+		<span class="empty add">{{get_text "Buttons.Add.ECL.Enclosed.Content"}}</span>
+	</div>
+	{{else}}
+	{{#call_partial . path="" view="CL:Enclosed" section="CoverLetter.Documentation"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+	{{#with SkillsPassport.CoverLetter.Documentation}}
+	<div class="documentation value">
+		<span>
+			{{#if Heading.Label}}
+				{{Heading.Label}}
+			{{else}}
+				{{get_text "CoverLetter.Enclosed" group="DocumentLabel"}}
+			{{/if}}
+		</span>
+		{{#commalist InterDocument [] labelKey="ref"}}{{#comma_split . }}{{get_text "CoverLetter.Enclose.Document.{{subsection}}" .}}{{/comma_split}}{{/commalist
+		}}{{#if InterDocument}}{{#if ExtraDocument}}, {{/if}}{{/if}}
+		{{#commalist ExtraDocument [] labelKey="ref"}}{{.}}{{/commalist}}
+	</div>
+	{{/with}}
+	{{/emptyCLEnclosed}}
+
+</dd>	

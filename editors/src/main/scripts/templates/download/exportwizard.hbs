@@ -1,0 +1,45 @@
+<div class="preview-publish-wrapper">
+<div class = "top-btn-border"></div>
+
+<button id="quick-download-btn"
+		type="button"
+		class="green button quick-download preview">
+		<span class="img"><span class="txt">{{get_text "quick.download" group="GuiLabel"}}</span></span>
+</button>
+
+{{#share}}
+<button id="share-document-btn"
+        type = "button"
+        class = "button share-document orange">
+        <span class="img"><span class="txt">{{get_text "share.document.new" group="GuiLabel"}}</span></span>
+</button>
+{{/share}}
+{{^share}}
+{{#isPartner}}
+    <button id="share-document-btn"
+            type = "button"
+            class = "button share-document orange">
+        <span class="img"><span class="txt">{{get_text "share.document.new" group="GuiLabel"}}</span></span>
+    </button>
+{{/isPartner}}
+{{/share}}
+
+<section id="publish-tooltip" style="display:none"></section>
+
+</div>
+
+<div class="save-file-wrapper">
+<button id="export-wizard-init-btn"
+		type="button"
+		class="blue button export download"
+		data-href="download">
+	<span class="img"><span class="txt">{{get_text "export.wizard.option.new" group="GuiLabel"}}</span></span>
+</button>
+<button id="cloud-share-done-reviewing"
+        style="display: none"
+        type="button"
+        class="blue button export download">
+    <span class="img"><span class="txt">{{get_text "share.document.finish.and.send.back.main" group="GuiLabel"}}</span></span>
+</button>
+
+</div>

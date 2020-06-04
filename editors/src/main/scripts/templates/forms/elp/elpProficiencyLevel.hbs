@@ -1,0 +1,48 @@
+{{#with SkillsPassport}}
+{{#with_list_item LearnerInfo.Skills.Linguistic.ForeignLanguage ../Idx}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Edit" group="GuiLabel"}}
+		{{#isEmptyObject Description}}
+		{{else}}
+		<span class="subsection-title"></span>
+		{{/isEmptyObject}}
+		</legend>
+	</header>
+		
+	
+
+	<fieldset class="LearnerInfo.Skills.Linguistic.ForeignLanguage ForeignLanguage ELP OneLanguage" >
+		<label for="ForeignLanguage">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="DocumentLabel"}}</label>
+		<div class="compound global">
+				<div class="level composite select proficiency-level" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../Idx}}]" data-index="{{../../Idx}}">
+					<input 	type="text" 
+							class="formfield typeahead single elp ForeignLanguage noHelp with-placeholder"
+							title
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../Idx}}].Description.Label"
+							data-help-key=""
+							rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../Idx}}]"
+							placeholder="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}"
+							value="{{Description.Label}}">
+<!-- 					<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../Idx}}].Description.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}
+					</span>	-->
+					<input	type="hidden"
+							name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../../Idx}}].Description.Code"
+							value="{{Description.Code}}">
+				</div>	
+		</div>
+	</fieldset>
+	
+	<fieldset class="SelfAssesment ProficiencyLevel ForeignLanguage ELP OneLanguage" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel">
+	<legend class="ProficiencyLevel">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel" group="GuiLabel"}}</legend>
+		{{> templates/forms/languageSelfAssesment}}
+	</fieldset>
+	
+		
+
+	{{/with_list_item}}
+</fieldset>
+
+{{/with}}

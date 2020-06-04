@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://europass.cedefop.europa.eu/xml/cv_fr_FR.xsl" type="text/xsl"?>
+<europass:learnerinfo xmlns:europass="http://europass.cedefop.europa.eu/Europass/V1.1" 
+											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+											xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass/V1.1 http://europass.cedefop.europa.eu/xml/EuropassSchema_V1.1.xsd"
+											locale="fr_FR">
+	
+		<docinfo>
+		<issuedate>2007-07-18T11:56:36+03:00</issuedate>
+		<xsdversion>V1.1</xsdversion>
+		<comment>Automatically generated Europass CV</comment>
+	</docinfo>	
+	<prefs>
+	
+		
+		<field name="step1.lastName" before="step1.firstName" />
+	
+	
+	
+	<field name="step1.address" keep="true" />
+	
+	
+	<field name="step1.mobile" keep="true" />
+	
+	
+	<field name="step1.fax" keep="false" />
+	
+	
+	<field name="step1.email" keep="false" />
+	
+	
+	<field name="step1.nationality" keep="true" />
+	
+	
+	<field name="step1.birthDate" keep="true" format="" />
+	
+	
+	<field name="step1.gender" keep="true" />
+  
+  
+  
+  <field name="step1.photo" keep="false" />
+
+	
+	
+	<field name="step1.application" keep="true" />
+	
+	
+	<field name="step3List" keep="true" before="step4List"/>
+	
+		<field name="step3List[0].period" format="/text/long" />
+		
+		
+		<field name="step3List[0].position" keep="true" />
+		
+		
+		<field name="step3List[0].activities" keep="true" />
+		
+		
+		<field name="step3List[0].employer" keep="true" />
+		
+		
+		<field name="step3List[0].sector" keep="true" />
+	
+		<field name="step3List[1].period" format="/text/long" />
+		
+		
+		<field name="step3List[1].position" keep="true" />
+		
+		
+		<field name="step3List[1].activities" keep="true" />
+		
+		
+		<field name="step3List[1].employer" keep="true" />
+		
+		
+		<field name="step3List[1].sector" keep="true" />
+	
+	
+	
+	<field name="step4List" keep="true" />
+	
+		<field name="step4List[0].period" format="" />
+		
+		
+		<field name="step4List[0].title" keep="true" />
+		
+		
+		<field name="step4List[0].skills" keep="true" />
+		
+		
+		<field name="step4List[0].organisation" keep="true" />
+		
+		
+		<field name="step4List[0].level" keep="true" />
+	
+	
+	
+	<field name="step5.motherLanguages" keep="true" />
+	
+	
+	<field name="step5.foreignLanguageList" keep="true" />
+	
+		
+		
+		<field name="step5.foreignLanguageList[0]" keep="true" />
+	
+	
+	
+	<field name="step6.socialSkills" keep="false" />
+	
+	
+	<field name="step6.organisationalSkills" keep="true" />
+	
+	
+	<field name="step6.technicalSkills" keep="true" />
+	
+	
+	<field name="step6.computerSkills" keep="true" />	
+	
+	
+	<field name="step6.artisticSkills" keep="true" />	
+	
+	
+	<field name="step6.otherSkills" keep="false" />	
+	
+	
+	<field name="step6.drivingLicences" keep="false" />	
+	
+	
+	<field name="step7.additionalInfo" keep="false" />	
+	
+	
+	<field name="step7.annexes" keep="false" />	
+	
+	
+	<field name="grid" keep="true" />	
+</prefs>
+	<identification>
+		<firstname>Bernard</firstname>
+		<lastname>Σουγιάς</lastname>
+		<contactinfo>			
+			<address>2, rue de la cache
+13000 Marseille</address>
+			<telephone>04 21 34 56 78</telephone>
+			<fax></fax>
+			<mobile></mobile>
+			<email></email>
+		</contactinfo>
+		<demographics>
+			<birthdate>1975-04-02</birthdate>
+			<gender>M</gender>
+			<nationality>Française</nationality>
+		</demographics>
+		
+	</identification>
+	<application>Serrurier-métallier</application>
+	
+	
+		<workexperiencelist>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>2001</year>
+							
+							
+								<month>--02</month>
+							
+							
+						</from>
+						<to>
+							
+							
+							
+						</to>
+					</period>
+					<position>Artisan serrurier</position>
+					<activities>- installation de serrures et portes blindées
+- installation de coffres-forts
+- dépannages d&#039;urgence (SOS serrurerie)</activities>
+					<employer>Sésame Serrures
+Place de Cogolin
+13000 Marseille</employer>
+					<sector>Artisanat du bâtiment</sector>
+				</workexperience>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>1995</year>
+							
+							
+								<month>--02</month>
+							
+							
+						</from>
+						<to>
+							
+								<year>2000</year>
+							
+							
+								<month>--12</month>
+							
+							
+						</to>
+					</period>
+					<position>Serrurier-métallier</position>
+					<activities>- pose de serrures et portes blindées
+- poses de portes et fenêtres bois, métal, aluminium, PVC
+- dépannage serrurerie</activities>
+					<employer>Demoment SARL
+Place du capitaine Marchand
+F-38200 Vienne</employer>
+					<sector>Bâtiment</sector>
+				</workexperience>
+			
+		</workexperiencelist>
+	
+	
+	
+		<educationlist>
+			
+				<education>
+					<period>
+						<from>
+							
+								<year>1994</year>
+							
+							
+							
+						</from>
+						<to>
+							
+							
+							
+						</to>
+					</period>
+					<title>CAP de Serrurier-métallier</title>
+					<skills>- organisation du poste de travail à l’atelier comme sur chantier à partir des documents définissant l’ouvrage, en prenant en compte les particularités de l’atelier et du chantier et en préparant les outillages et les matériels dont les moyens d’accès
+- mise en place des équipements individuels et collectifs de protection et de sécurité, ainsi que des protections de zones vulnérables liées à l’intervention
+- débit et usinage des profilés métalliques
+- assemblage par soudage et équipement des ouvrages
+- pose et mise en service des ouvrages après réception des supports</skills>
+					<organisation>CFA DE Toulon
+Centre de formation d&#039;apprentis
+La Grande Tourrache
+ZI de Toulon Est
+BP 241
+83078 Toulon CEDEX 9</organisation>
+					<level>Niveau français V</level>
+				</education>
+			
+		</educationlist>
+	
+	
+	<languagelist>
+		<language type="mother">
+			<name>Français</name>
+		</language>
+		
+		
+			<language type="foreign">
+				<name>Italien</name>
+				<level>
+					<listening>b2</listening>
+					<reading>b2</reading>
+					<spokeninteraction>b1</spokeninteraction>
+					<spokenproduction>a2</spokenproduction>
+					<writing>a2</writing>
+				</level>
+			</language>
+		
+	</languagelist>
+	
+	<skilllist>
+		<skill type="social"></skill>
+		<skill type="organisational">- bonnes capacités de planification du travail
+- bonnes aptitudes à l&#039;organisation du travail d&#039;une équipe</skill>
+		<skill type="technical">- étalonnage des systèmes d&#039;alarme</skill>
+		<skill type="computer">- bonne maîtrise des logiciels de gestion comptable</skill>
+		<skill type="artistic">- réalisation de pièces de ferronnerie
+- restauration de serrurerie ancienne</skill>
+		<skill type="other"></skill>
+		<skill type="driving"></skill>
+	</skilllist>
+	
+	<misclist>
+		<misc type="additional"></misc>
+		<misc type="annexes"></misc>
+	</misclist>
+
+	
+	
+	
+</europass:learnerinfo>

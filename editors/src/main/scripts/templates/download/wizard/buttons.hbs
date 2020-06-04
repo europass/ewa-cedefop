@@ -1,0 +1,35 @@
+<menu label="Manage" class="buttons {{className}}">
+
+    <!--LETS REMOVE ONOFF SWITCH -->
+    <!--<div class="form-help-switch-area">-->
+		<!--<fieldset class="help-switch onoffswitch">-->
+			<!--<input-->
+				<!--id="{{formName}}-help-control"-->
+				<!--class="help-switch-control onoffswitch-checkbox tip spot"-->
+				<!--data-tip.position = "top-left"-->
+				<!--type="checkbox"-->
+				<!--checked="checked"-->
+				<!--name="onoffswitch"/> -->
+			<!--<label for="{{formName}}-help-control">-->
+				<!--<i></i>-->
+		    <!--</label>-->
+			<!--<span class="data-title" style="display:none">{{get_text "Modal.Help.Tooltip" group="EditorHelp"}}</span>-->
+		<!--</fieldset>-->
+	<!--</div>-->
+	
+	<div class="form-controls">
+		<button type="button" class="button finish green submit" form="{{formName}}" style="display:none">
+			{{get_text "export.wizard.download" group="GuiLabel"}}
+		</button>
+		<button type="button" class="button next blue" form="{{formName}}">
+			{{get_text "buttons.wizard.next" group="GuiLabel"}}
+		</button>
+		<button type="button" class="button previous blue" form="{{formName}}">
+			{{get_text "buttons.wizard.previous" group="GuiLabel"}}
+		</button>
+		{{!--<!-- Cedefop does not want to display a Cancel button inside the wizards --> --}}
+		<button type="button" class="button cancel help-check" form="{{formName}}" style="display:none">
+			{{get_text "Buttons.Cancel" group="GuiLabel"}}
+		</button>
+	</div>
+</menu>

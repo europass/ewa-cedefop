@@ -1,0 +1,62 @@
+{{#with SkillsPassport}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="GuiLabel"}}</legend>
+	</header>
+		
+	{{#with_list_item LearnerInfo.Skills.Linguistic.ForeignLanguage ../Idx}}
+	
+	<fieldset class="ForeignLanguage ECV OneLanguage" >
+		<label for="Description">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Description" group="GuiLabel"}}</label>
+		<div class="composite foreign-language select" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+			<input 	type="text" 
+					class="formfield typeahead single ForeignLanguage noHelp with-placeholder"
+					title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Description.Label"
+					data-help-key="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]"
+					rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]"
+					placeholder="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}"
+					value="{{Description.Label}}">
+<!-- 			<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Description.Label" class="help placeholder" style="display:none;">
+							{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage" group="EditorPlaceholder"}}
+			</span>	 -->
+			<input	type="hidden"
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].Description.Code"
+					value="{{Description.Code}}">
+		</div>
+	</fieldset>
+	
+	<fieldset class="ForeignLanguage ECV OneLanguage SelfAssesment ProficiencyLevel" name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel">
+		<legend class="ProficiencyLevel">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel" group="GuiLabel"}}</legend>
+		{{> templates/forms/languageSelfAssesment}}
+	</fieldset>
+	
+	<fieldset class="Certificate ForeignLanguage ECV OneLanguage">
+		<legend class="Certificate">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate" group="GuiLabel"}}</legend>
+		<div class="single multipliable compound">
+		{{#each_with_default Certificate item="{ \"Title\" : \"\" }" }}
+			<div class="composite" data-index="{{index}}">
+				<input type="text" 
+					class="formfield single help copy with-placeholder"
+					title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{index}}].Title"
+					data-init-index="{{index}}"
+					rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}]"
+					data-help-key="LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate"
+					value="{{Title}}">
+				<span name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{../list_index}}].Certificate[{{index}}].Title" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.Certificate" group="EditorPlaceholder"}}
+				</span>	
+			</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+		
+
+	{{/with_list_item}}
+</fieldset>
+
+{{/with}}
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

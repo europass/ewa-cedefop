@@ -1,0 +1,17 @@
+{
+  "apiStandardProfileRequest": {
+    "headers": {
+      "_total": 1,
+      "values": [{
+        "name": "x-li-auth-token",
+        "value": "name:O91G"
+      }]
+    },
+    "url": "http://api.linkedin.com/v1/people/UB2kruYmAL"
+  },
+  "id": "UB2kruYmAL",
+  "firstName": "Robert",
+  "lastName": "Drysdale",
+  "headline": "Software Architect" ,
+  "summary": "J2EE Application Architect with over 10 years industry experience.  In-depth technical knowledge combined with extensive international customer facing experience.  Full Project Lifecycle exposure from scoping and technology selection through to implementation and final delivery to customer.  Knowledge and proven ability in complete solutions design.  Experience of mentoring team members and of the implementation of the latest development processes and tools."
+}

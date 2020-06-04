@@ -1,0 +1,8 @@
+{{=[[ ]]=}}
+{{#letter}}
+{{#subjectLine}}
+<text:section text:style-name="_CL_Section_Subject_Line" text:name="CL_Subject_Line">
+	<text:p text:style-name="_CL_Subject_Line[[#subjectLineNoMarginStyle]]_NoMargin[[/subjectLineNoMarginStyle]]">{{{subjectLineWithBold}}}</text:p>
+</text:section>
+{{/subjectLine}}
+{{/letter}}

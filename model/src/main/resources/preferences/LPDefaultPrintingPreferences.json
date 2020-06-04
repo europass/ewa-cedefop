@@ -1,0 +1,7 @@
+{
+	"LearnerInfo" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo", "order" : "Identification Skills ReferenceTo"},
+	"LearnerInfo.Identification.PersonName" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo.Identification.PersonName", "order" : "FirstName Surname"},
+	"LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date" : { "@type" : "PrintingPreference", "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0].Date", "format" : "text/short" },
+	"LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period" : { "@type" : "PrintingPreference", "name" : "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Experience[0].Period", "format" : "text/short" },
+	"LearnerInfo.CEFLanguageLevelsGrid" : {  "@type" : "PrintingPreference", "name" : "LearnerInfo.CEFLanguageLevelsGrid", "show" : true }
+}

@@ -1,0 +1,209 @@
+{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+		<dt class="label">
+			<span class="title noSkipOpen">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage"  group="DocumentLabel"}}</span>
+		</dt>
+		<dd class="value">
+			<div type="button" 
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[0]_add_btn" 
+					class="subsection compose-list add Skills empty noSkipOpen" 
+					data-rel-doc="cv"
+					data-rel-clazz="ForeignLanguageFormView"
+					data-rel-form="Form:LearnerInfo.Skills.Linguistic.ForeignLanguage[0]"
+					data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[0]"
+					data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+					data-rel-index="0"
+					><span class="img-placeholder"></span><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span></div>
+		</dd>
+ {{else}}
+ <dt class="" style="display:none">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage"  group="DocumentLabel"}}</dt>
+ <dd class="foreign-language-skills">
+	<table cellpadding="1" class="languages"
+		id="List:SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+		data-bind-document="ECV ELP" 
+		summary="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage"  group="DocumentLabel"}}">
+		<caption>{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage"  group="DocumentLabel"}}</caption>
+		<thead class="open-modal-skippme">
+			<tr id="nodnd-1">
+				<th id="nodnd-1-ForeignLanguage" class="no-border sub-heading">
+					<span class="title">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage"  group="DocumentLabel"}}</span>
+				</th>
+				<th id="nodnd-1-ProficiencyLevel.Understanding" colspan="2" align="center">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Understanding"  group="DocumentLabel"}}</th>
+				<th id="nodnd-1-ProficiencyLevel.Speaking" colspan="2" align="center">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Speaking" group="DocumentLabel" }}</th>
+				<th id="nodnd-1-ProficiencyLevel.Writing" align="center">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="DocumentLabel" }}</th>
+				<th id="nodnd-1-menu-placeholder" class="menu-placeholder">&nbsp;</th>
+			</tr>
+			
+			<tr id="nodnd-2">
+				<th id="nodnd-2-no-border" class="no-border">&nbsp;</th>
+				<th id="nodnd-2-Listening" class="Listening">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="DocumentLabel" }}</th>
+				<th id="nodnd-2-Reading" class="Reading">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="DocumentLabel" }}</th>
+				<th id="nodnd-2-SpokenInteraction" class="SpokenInteraction">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction"  group="DocumentLabel"}}</th>
+				<th id="nodnd-2-SpokenProduction" class="SpokenProduction">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="DocumentLabel" }}</th>
+				<th id="nodnd-2-Writing" class="Writing">&nbsp;</th>
+				<th id="nodnd-2-menu-placeholder" class="menu-placeholder">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody 
+			data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+			data-bind-group="^(LearnerInfo\.Skills\.Linguistic\.ForeignLanguage\[(\d)\])([\S]*)$">
+			{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+				<tr id="nodnd-3" class="language nodrag">
+					<td colspan="7" headers="nodnd-1-ForeignLanguage">&nbsp;</td>
+				</tr>
+			{{else}}
+
+				{{#each_with_index SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage}}
+					
+						<tr id="language-{{index}}" 
+							class="language compose-list list-item opens-modal-form"
+							data-nested-tds="7"
+							data-rel-doc="cv"
+							data-rel-clazz="ForeignLanguageFormView"
+							data-rel-form="Form:LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]"
+							data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{index}}]"
+							data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+							data-rel-index="{{index}}">							
+							
+							<td class="label" headers="nodnd-1-ForeignLanguage">
+								<div class="language-title">
+								{{#if_gt ../../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare="1"}}
+<!-- 									<span class="sortable_placeholder tip spot" data-tip.position="top-left"> -->
+<!-- 										  	 <span class="data-title" style="display:none;">{{get_text "Reorder.List.Sections" group="EditorHelp"}}</span>	 -->
+<!-- 										  +</span> -->
+								
+									<button type="button"
+											name="move_up"
+											class="sort-move-up  {{#if_eq index compare="0"}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_eq}}"
+											data-tip.position="top-left">
+											<span>UP</span>
+											<span class="data-title" style="display:none;">{{get_text "Move.Sort.Upwards" group="EditorHelp"}}</span>
+									</button>
+									<button type="button"
+											name="move_down"
+											class="sort-move-down {{#if_last_item ../../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare=index}}inactive{{else}}tip spot tip-removeLeft--10pixels{{/if_last_item}}"
+											data-tip.position="top-left">
+											<span>DOWN</span>
+											<span class="data-title" style="display:none;">{{get_text "Move.Sort.Downwards" group="EditorHelp"}}</span>
+									</button>
+									
+									{{#if_last_item ../../SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length compare=index}}
+										<button type="button"
+												name="move_top"
+												class="sort-move-top tip spot tip-removeLeft--10pixels"
+												data-tip.position="top-left">
+											<span>TOP</span>
+											<span class="data-title" style="display:none;">{{get_text "Move.Sort.ToTop" group="EditorHelp"}}</span>
+										</button>
+									{{/if_last_item}}
+								
+								{{/if_gt}}
+								
+								{{Description.Label}}
+								</div>
+							</td>
+							<td colspan="5" headers="nodnd-1-ForeignLanguage">
+ 								<table id="ProficiencyLevel" cellpadding="0" width="100%" summary="{{Description.Label}}">
+									<caption>{{Description.Label}}</caption>
+ 									<tr class="self-evaluation">
+										<td id="language-{{index}}-ProficiencyLevel.Listening" class="Listening">
+											{{ProficiencyLevel.Listening}}
+											{{#unless ProficiencyLevel.Listening}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="language-{{index}}-ProficiencyLevel.Reading" class="Reading">
+											{{ProficiencyLevel.Reading}}
+											{{#unless ProficiencyLevel.Reading}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="language-{{index}}-ProficiencyLevel.SpokenInteraction" class="SpokenInteraction">
+											{{ProficiencyLevel.SpokenInteraction}}
+											{{#unless ProficiencyLevel.SpokenInteraction}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="language-{{index}}-ProficiencyLevel.SpokenProduction" class="SpokenProduction">
+											{{ProficiencyLevel.SpokenProduction}}
+											{{#unless ProficiencyLevel.SpokenProduction}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+										<td id="language-{{index}}-ProficiencyLevel.Writing" class="Writing" >
+											{{ProficiencyLevel.Writing}}
+											{{#unless ProficiencyLevel.Writing}}
+												<span class="default-value">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}</span>
+											{{/unless}}
+										</td>
+									</tr>
+									{{#if Certificate}}
+									<tr class="certificates">
+										<td colspan="5" headers="nodnd-1-ForeignLanguage">
+											<ul>
+												{{#each_with_index Certificate index_name="index2"}}
+														<li class="Title" >
+														{{#isEmptyObject Title}}
+															&ndash;
+														{{else}}
+															{{Title}}
+													{{/isEmptyObject}}	
+														</li>
+												{{/each_with_index}}
+											</ul>
+										</td>
+									</tr>
+									{{/if}}
+									
+									
+									{{#if ReferenceTo}}
+									<tr class="documentation">
+										<td colspan="5" headers="nodnd-1-ForeignLanguage">
+											<div class="attachment">
+												<span class="attachment inner-content-label">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ReferenceTo" group="DocumentLabel"}}</span>
+												{{#each_with_index ReferenceTo index_name="index2"}}
+													{{#with_attachment ../../../../SkillsPassport.Attachment idref}}
+														<span class="linked-attachment" name="{{Name}}">
+															{{#if_gt ../index2 compare="0"}}, {{/if_gt}}
+															{{#crop_text Description}}{{.}}{{/crop_text}}
+														</span>
+													{{/with_attachment }}
+												{{/each_with_index}}
+											</div>
+										</td>
+									</tr>
+									{{/if}} 
+ 								</table>
+							</td>
+							<td class="menu-placeholder" headers="nodnd-1-menu-placeholder">
+							{{#call_partial . path="LearnerInfo.Skills.Linguistic.ForeignLanguage" buttons="Extra"}}
+								{{> templates/menu/listitemmenu}}
+							{{/call_partial}}
+							</td>
+						</tr>
+					
+				{{/each_with_index}}
+			{{/isEmptyObject}}
+		</tbody>
+		
+		<tfoot>
+			<tr class="compose-list nodrag table-footer" 
+				id="ForeignLanguage-empty">
+				<td colspan="7" headers="nodnd-1-ForeignLanguage">
+						<button type="button" 
+								name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}]_add_btn" 
+								class="subsection compose-list add Skills opens-modal-form edit" 
+								data-rel-doc="cv"
+								data-rel-clazz="ForeignLanguageFormView"
+								data-rel-form="Form:LearnerInfo.Skills.Linguistic.ForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}]"
+								data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage[{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}]"
+								data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage"
+								data-rel-index="{{SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.length}}"
+								><span class="img-placeholder"></span><span>{{get_text "Multifield.Add.Language.Field.Tooltip" group="EditorHelp"}}</span></button>
+				</td>
+			</tr>
+		</tfoot>
+	
+	</table>
+	{{/isEmptyObject}}
+</dd>

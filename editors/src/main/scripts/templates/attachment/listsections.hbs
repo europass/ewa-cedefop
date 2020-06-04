@@ -1,0 +1,39 @@
+<div class="arrow">
+	<div class="message inner">
+		<ul class="sections">
+		{{#isEmptyArray Section}}
+			<li class="empty">
+				{{get_text "LearnerInfo.Attachment.Linked.Nowhere" group="GuiLabel"}}
+			</li>
+		{{/isEmptyArray}}
+		{{#each Section }}
+			<li>
+				<a class="lsection" name="{{Path}}"> 
+					<span class="subsection-title">{{{Name}}}</span>
+				</a>
+				
+				{{#if controls}}
+				<menu class="attachment">
+					<span class="edit-icon"></span>
+					<div class="options">
+						<div class="arrow">
+							<div class="inner">
+								<a  data-rel="{{Path}}"
+									class="option unlink attach">
+									{{get_text "Attachment.Section.Unlink" group="EditorHelp"}}</a>
+							</div>
+					</div>
+				</div>
+				</menu>
+				{{/if}}
+			</li>
+		{{/each }}
+		</ul>
+		<menu label="Manage">
+			<button type="button" 
+					class="reject"
+					data-rel-subform="{{subsection}}:SubForm:Attachment.{{AttachmentId}}.ViewLinked"
+			>{{get_text "texts.action.reject" group="GuiLabel"}}</button>
+		</menu>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+To be launched in the end of Version 54 (October 2019)
+
+- XSDVersion changed to V3.4.0
+
+JSON Schema changes:
+1. Removed document type "EX"
+2. Added enableName, pageBreaks properties to preferencesType
+3. Added new american date format to preferencesType
+4. Updated occupationalFieldType code pattern (now using pattern for esco codes)
+5. Added missing MimeType to fileDataType
+6. Added missing property Use to organisationType Address
+7. Updated Locale type pattern to support new language codes (eg. sr-ltn)
+8. Added missing DocumentInfo property Copyright
+
+XML Schema changes:
+1. Removed document type "EX"
+2. EuropassISCO_88_COM_V1.4.0.xsd removed (we are now getting an up to date ESCO occupations list with every version deployment)
+3. Advance version of EuropassISOCountries_V1.7.0.xsd to change Norwegian language abbreviation (no > nb) and correct TT (Trinidad and Tobago) in en locale
+4. Advance version of EuropassISOLanguages_V1.9.0.xsd to change Norwegian language abbreviation (no > nb), change languages capilalisation in Turkish, correct om language capitalisation in mk, correct hr language capitalisation in csq, update iso code for Swedish Sign Language (swl-sgn > swl), add sr-cyr and sr-lat editors languages, add ber, fil, wol, ori and me taxonomy languages
+5. Advance version of EuropassNationalities_V1.7.0.xsd to change Norwegian language abbreviation (no > nb)
+6. Updated CommonTypes.xsd LocaleType to support new language codes (eg. sr-ltn)
+7. Updated CommonTypes.xsd PeriodType to add minOccurs="0" to From element
+8. Updated DateFieldFormatPattern type to include american date format.
+9. OccupationalField.xsd no longer includes EuropassISCO_88_COM_V1.4.0.xsd, updated the OccupationalFieldType element Code type
+10. Included schemaLocation to use https in ContactInformation.xsd, Demographics.xsd, DrivingSkill.xsd, EducationalExperience.xsd, EuropassPrintingPreferences.xsd, Language.xsd, Organisation.xsd
+11. Added new attribute enableName in the DocumentPreferencesType to store the user preference regarding the inclusion of their Name/Surname in the closing salutation of their cover letter
+12. Added new attribute pageBreaks in the DocumentPreferencesType to store the user preference regarding where to add page breaks in the CV document
+
+Related tasks:
+EPAS-170 Change Norwegian Language Abbreviation in dropdown language menu
+EPAS-305 ESCO Integration
+EPAS-317 Add Filipino Language
+EPAS-403 Croatian taxonomy fix
+EPAS-493 Add Berber language in the editors language taxonomy
+EPAS-495 Changes in Turkish wordings 
+EPAS-749 Fix 'Trinidad and Tobago' country name
+EPAS-777 Addition of taxonomy language (Wolof)
+EPAS-851 Addition of Odia language
+EPAS-924 Serbian for Editors
+EPAS-981 Add missing language in editors taxonomies (Add Montenegrin language xsd schema)
+EPAS-1014 Addition of oromo language in editors
+EPAS-1015 Update swedish sign language isocode in schema: correct code swl
+EPAS-1053 Editable name in CL closing salutation
+EPAS-1195 Add american date format in English language
+EPAS-1273 Page break in WYSIWYG
+EPAS-1311 XSD issue using http
+EPAS-1933 Requests from epas2 team

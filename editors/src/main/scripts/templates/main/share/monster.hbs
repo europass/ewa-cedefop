@@ -1,0 +1,40 @@
+<div class="ui-monster-area ui-job-portal-area drawer default" id="monster-default">
+    <div class="note job-portal">
+        <div class="text post">{{get_text "export.wizard.step.monster.details" group = "GuiLabel"}}&nbsp;</div>
+        <div class="text emailNote warning">{{get_text "export.wizard.step.monster.mandatory.fieds" group = "GuiLabel"}}</div>
+        <div class="text sizeNoteNoPost warning">{{get_text "export.wizard.step.monster.cv.cannot.post" group = "GuiLabel"}}</div>
+        <div class="text sizeNotePostNoAttachments warning">{{get_text "export.wizard.step.monster.cv.no.attachments" group = "GuiLabel"}}</div>
+        <div id="ui-monster-terms">
+            <div class="text">{{get_text "export.wizard.step.monster.details.info" group = "GuiLabel"}}</div>
+            <div class="custom_select_wrapper">
+                <select id="monster-country">
+                    <option value="-1"></option>
+                    <option value="UK">{{get_text "UK" group = "CountryLabel"}}</option>
+                    <option value="FR">{{get_text "FR" group = "CountryLabel"}}</option>
+                    <option value="NL">{{get_text "NL" group = "CountryLabel"}}</option>
+                    <option value="DE">{{get_text "DE" group = "CountryLabel"}}</option>
+                    <option value="SE">{{get_text "SE" group = "CountryLabel"}}</option>
+                    <option value="IT">{{get_text "IT" group = "CountryLabel"}}</option>
+                    <option value="ES">{{get_text "ES" group = "CountryLabel"}}</option>
+                    <option value="CZ">{{get_text "CZ" group = "CountryLabel"}}</option>
+                    <option value="FI">{{get_text "FI" group = "CountryLabel"}}</option>
+                    <option value="AT">{{get_text "AT" group = "CountryLabel"}}</option>
+                    <option value="BE">{{get_text "BE" group = "CountryLabel"}}</option>
+                    <option value="IE">{{get_text "IE" group = "CountryLabel"}}</option>
+                    <option value="LU">{{get_text "LU" group = "CountryLabel"}}</option>
+                    <option value="CH">{{get_text "CH" group = "CountryLabel"}}</option>
+                    <option value="UK">{{get_text "monster.other.countries" group = "GuiLabel"}}</option>
+                </select>
+            </div>
+            <div>
+                <input id="monster-terms-check" name="monster-terms-check" value="monster-terms-check" type="checkbox" class="css-checkbox formfield">
+                <label for="monster-terms-check" class="css-label formfield-label">{{get_text "export.wizard.step.monster.policies" group = "GuiLabel"}}</label>
+            </div>
+            <div class="monster-submit-controls" >
+                <input id="monster-cv-searchable" name="monster-cv-searchable" value="monster-cv-searchable" type="checkbox" class="css-checkbox formfield">
+                <label for="monster-cv-searchable" class="css-label formfield-label">{{get_text "export.wizard.step.monster.searchable" group = "GuiLabel"}}</label>
+            </div>
+        </div>                       
+        <button id="btn-submit-to-monster" class="button orange submit monster-submit-controls">{{get_text	"Buttons.Monster.Post" group = "GuiLabel"}}</button>
+    </div>
+</div>

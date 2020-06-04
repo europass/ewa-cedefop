@@ -1,0 +1,51 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "LearnerInfo": {
+            "Achievement": [
+                {
+                    "Title": {
+                        "Code": "projects", 
+                        "Label": "Projects"
+                    },
+                    "Description": "<ul><li>Project 1</li><li>Project 2</li><li>Project 3</li></ul>"
+                },
+                {
+                    "Title": {
+                        "Code": "memberships", 
+                        "Label": "Memberships"
+                    },
+                    "Description": "<ul><li>Membership 1</li><li>Membership 2</li><li>Membership 3</li></ul>"
+                },
+                {
+                    "Title": {
+                        "Code": "references", 
+                        "Label": "References"
+                    },
+                    "Description": "<ul><li>Reference 1</li><li>Reference 2</li><li>Reference 3</li></ul>"
+                },
+                {
+                    "Title": {
+                        "Code": "seminars", 
+                        "Label": "Seminars"
+                    },
+                    "Description": "<ul><li>Seminar 1</li><li>Seminar 2</li><li>Seminar 3</li></ul>"
+                },
+                {
+                    "Title": {
+                        "Label": "Participations"
+                    },
+                    "Description": "<ul><li>Theatre 1</li><li>Theatre 2</li><li>Theatre 3</li></ul>",
+                    "ReferenceTo": [
+                        {
+                            "idref": "ATT_4"
+                        },
+                        {
+                            "idref": "ATT_5"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

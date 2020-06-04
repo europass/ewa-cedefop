@@ -1,0 +1,219 @@
+/******************
+MENU GENERAL
+******************/
+
+menu button {
+  line-height:1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+.mixin-button-image-delete-hover{
+  display:inline-block;
+  cursor: pointer;
+}
+
+
+
+/* rule for the delete buttons on the compose sections */
+li.list-item > menu.subsection.manage button.delete.tip,
+li.list-item > menu.section.manage button.delete.tip,
+li.list-item > dl > menu.section.manage > button.delete.tip {
+  overflow: visible !important;/* so that the tooltips are visible */
+  text-indent: 0px;
+  white-space: wrap;
+  top: -50px;
+  position:relative;
+}
+
+
+
+
+button.delete{
+  background:transparent;
+  border:none;
+  &:before{
+    content: "\e903";
+    font-family: "europass-application" !important;
+    font-size: 20px;
+    font-weight: 400;
+    color:@orange-dark;
+  }
+  &:hover:before{
+    color:@blue-darkling;
+  }
+}
+
+
+
+table.languages tr.compose-list,
+li.compose-list {
+  .sorting-btns-mixin;
+  &:hover, &.tap-hover {
+    .display-sorting-btns-mixin;
+    menu.section.manage {
+      display: inline-block;
+    }
+  }
+}
+
+
+menu {
+  &.section,&.subsection {
+    &.manage {
+      border: none;
+      background: transparent;
+      position: absolute;
+      bottom:23px;
+      right:25px;
+      display:none;
+      margin: 0px;
+      padding-right: 0;
+      padding-left: 0;
+      padding-top:0;
+      padding-bottom:0;
+      z-index:100;
+    }
+  }
+}
+
+/*****************************
+EDIT
+*****************************/
+menu {
+  &.section,&.subsection {
+    &.manage {
+      &:hover, &.tap-hover{
+        >.edit{
+          background-color: transparent;
+          span{
+            background-image: url('@{img-base-url}sprites/edit_section_sprites.png@{img-suffix-url}${project.version}');
+            background-position: left top;
+            background-repeat: no-repeat;
+            color: @bright-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.Photo.active .upload-prompt{
+  position:relative;
+  background:none;
+  top:4px;
+  border:none;
+  right:20px;
+  &:before {
+    display:none;
+    content: "\e92d";
+    font-family: "europass-application" !important;
+    color: @orange-dark;
+    font-size: 20px;
+  }
+}
+
+.section.item:hover .Photo.active .upload-prompt{
+  &:before{
+    display:block;
+  }
+}
+
+
+
+.Photo.active .upload-prompt:hover:before,.opens-modal-form.edit.extra:hover:before{
+  color:@blue-darkling!important;
+}
+
+menu {
+  &.section, &.subsection {
+    &.manage {
+      .opens-modal-form.edit.extra{
+        background:transparent;
+        border:none;
+      }
+      > .edit, > .edit:hover, > .edit.tap-hover {
+        font-size:0;
+        &:before{
+          content:"\e92d";
+          font-family:"europass-application"!important;
+          color:@orange-dark;
+          font-size:20px;
+        }
+      }
+    }
+  }
+}
+
+/************************
+*ATTACH FILE
+************************/
+menu.subsection.manage button.attach,
+menu.section.manage button.attach{
+  background:transparent;
+  border:none;
+  &:before{
+    content:"\e930";
+    font-family:"europass-application"!important;
+    color:@orange-dark;
+    font-size:20px;
+  }
+  &:hover:before{
+    color:@blue-darkling;
+  }
+}
+
+
+
+
+.open-linked-attachments{
+  position:relative;
+}
+
+/*LANGUAGE FIX
+*************************/
+
+[id*="Compose:ElpOverview"]{
+  .opens-modal-form {
+    .tooltip.top-right {
+      top:-53px!important;
+    }
+  }
+}
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+
+  menu {
+    &.section, &.subsection {
+      &.manage {
+        background-color:@blue-lightling;
+        right:10px;
+        .opens-modal-form.edit.extra{
+          background:transparent;
+          border:none;
+        }
+        > .edit, > .edit:hover, > .edit.tap-hover {
+          &:before{
+            padding:0 3px;
+          }
+        }
+        button.attach:before, menu.section.manage button.attach:before{
+          padding:0 3px;
+        }
+        button.delete:before{
+          padding:0 3px;
+        }
+      }
+    }
+  }
+  #SendFeedbackForm .sendfeedback-info legend.notification {
+    //width:100% !important;
+  }
+}

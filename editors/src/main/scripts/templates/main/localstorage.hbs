@@ -1,0 +1,21 @@
+<div class="clickable-area">
+	<span class="heading">{{get_text "store.data.locally" group="GuiLabel"}}</span>
+	<fieldset class="onoffswitch tip spot">
+	<div class="onoffswitch">
+		<input
+			id="store-data-locally-control"
+			class="store-data-locally-control clickable-area-input onoffswitch-checkbox"
+			type="checkbox"
+			name="onoffswitch"
+			{{#if storable}}
+				{{#if_eq storable compare="true"}}checked="checked"{{/if_eq}}
+			{{/if}}/> 
+		<label for="store-data-locally-control">
+			<i></i>
+		</label>
+		</div>
+		
+	</fieldset>
+	
+	<span class="data-title" style="display:none">{{get_text "store.data.locally" group="EditorHelp"}}</span>
+</div>

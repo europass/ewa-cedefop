@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<!-- Europass Documents -->
+	<xsd:simpleType name="DocumentTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Enumeration of values that describe the Europass Documents that can be represented as XML instances that follow this specific XML Schema Definition.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ECV_ESP"/>
+			<xsd:enumeration value="ESP"/>
+			<xsd:enumeration value="ECV"/>
+			<xsd:enumeration value="ELP"/>
+			<xsd:enumeration value="ECL"/>
+			<xsd:enumeration value="EX"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="DocumentListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains an list of documents.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Document" type="DocumentTypeType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Locale -->
+	<xsd:simpleType name="LocaleType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The locale is comprised of two lowercase and two uppercase letters, separated by underscore. E.g. de_DE or sv_SE.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-z]{2}(_[A-Z]{2})*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Code/Label Elements -->
+	<xsd:complexType name="LabelType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+		
+	<!-- Dates and Period -->
+	<xsd:complexType name="PeriodType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A period is comprised of three sub elements for the start and end dates of the period, as well as an idicator whether the specific period is current. 
+				The end date and the current indicator are optional.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="From" type="DateType"/>
+			<xsd:element name="To" type="DateType" minOccurs="0"/>
+			<xsd:element name="Current" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Boolean that indicates that the experience spans until today</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Duration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Describes the duration that corresponds to the start and end dates of this period</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DurationEquivalent" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Describes the duration that is equivalent to the start and end dates of this period (may not be accurate correspondence)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines date information, which consists of day, month and year.The date must include at least the year attribute.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="xsd:anyType">
+				<xsd:attribute name="day" type="xsd:gDay" use="optional"/>
+				<xsd:attribute name="month" type="xsd:gMonth" use="optional"/>
+				<xsd:attribute name="year" type="xsd:gYear" use="required"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="CEFLanguageLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The CEF language level is comprised of one letter (either A, B or C) and one digit (either 1 or 2). E.g. A1, B2, C1. The levels are defined by the Common European Framework of Reference for Languages (CEFR)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([A-C][12])?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+		
+
+</xsd:schema>

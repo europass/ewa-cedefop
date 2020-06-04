@@ -1,0 +1,276 @@
+{{=[[ ]]=}}
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>[[#resources]][[& GuiLabel_CoverLetter:Addressee]][[/resources]]</legend>
+</header>
+	
+[[#preferences]]
+	[[#CoverLetter:Addressee:PersonName]]
+<fieldset class="CoverLetter.Addressee Addressee">
+[[#isTitleFirst]]
+	<div class="composite select addressee" name="CoverLetter.Addressee.PersonName.Title">
+		<label for="Title">[[#resources]][[& GuiLabel_CoverLetter:Addressee:PersonName:Title]][[/resources]]</label>
+		<input type="text"  
+				class="formfield help typeahead with-placeholder"
+				title="{{get_text "CoverLetter.Addressee.PersonName.Title.Label" group="AccessibilityLabel"}}"
+				name="CoverLetter.Addressee.PersonName.Title.Label"
+				data-help-key="CoverLetter.Addressee.PersonName.Title"
+				rel="CoverLetter.Addressee.PersonName.Title"
+				placeholder="[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:PersonName:Title]][[/resources]]"
+				value="{{CoverLetter.Addressee.PersonName.Title.Label}}">
+<!-- 		<span name="CoverLetter.Addressee.PersonName.Title.Label" class="help placeholder" style="display:none;">
+			[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:PersonName:Title]][[/resources]]
+		</span>-->
+		<input type="hidden"
+				class="Address"
+				title="{{get_text "CoverLetter.Addressee.PersonName.Title.Code" group="AccessibilityLabel"}}"
+				name="CoverLetter.Addressee.PersonName.Title.Code"
+				data-help-key="CoverLetter.Addressee.PersonName.Title.Code"
+				rel="CoverLetter.Addressee.PersonName.Title"
+				value="{{CoverLetter.Addressee.PersonName.Title.Code}}">
+	</div>
+	[[#isSurnameAfterFirstName]]
+		<div class="addresseeNameField">
+			<label for="FirstName">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.FirstName" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.FirstName"
+					data-help-key="CoverLetter.Addressee.PersonName.FirstName"
+					value="{{CoverLetter.Addressee.PersonName.FirstName}}">
+			<span name="CoverLetter.Addressee.PersonName.FirstName" class="help placeholder" style="display:none;" >
+			  	[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]
+			</span>
+		</div>
+		
+		<div class="addresseeNameField">
+			<label for="Surname">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:Surname]][[/resources]]</label>
+			<!--  data-defaultvalue="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="EditorPlaceholder"}}" -->
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Surname"
+					data-help-key="CoverLetter.Addressee.PersonName.Surname"
+					value="{{CoverLetter.Addressee.PersonName.Surname}}">
+			<span name="CoverLetter.Addressee.PersonName.Surname" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:Surname]][[/resources]]
+			</span>
+		</div>
+	[[/isSurnameAfterFirstName]]
+	[[^isSurnameAfterFirstName]]
+		<div class="addresseeNameField">
+			<label for="Surname">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:Surname]][[/resources]]</label>
+			<!--  data-defaultvalue="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="EditorPlaceholder"}}" -->
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Surname"
+					data-help-key="CoverLetter.Addressee.PersonName.Surname"
+					value="{{CoverLetter.Addressee.PersonName.Surname}}">
+			<span name="CoverLetter.Addressee.PersonName.Surname" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:Surname]][[/resources]]
+			</span>
+		</div>
+		
+		<div class="addresseeNameField">
+			<label for="FirstName">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.FirstName" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.FirstName"
+					data-help-key="CoverLetter.Addressee.PersonName.FirstName"
+					value="{{CoverLetter.Addressee.PersonName.FirstName}}">
+			<span name="CoverLetter.Addressee.PersonName.FirstName" class="help placeholder" style="display:none;" >
+			  	[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]
+			</span>
+		</div>
+	[[/isSurnameAfterFirstName]]
+[[/isTitleFirst]]
+[[^isTitleFirst]]
+	[[#isSurnameAfterFirstName]]
+		<div class="addresseeNameField first">
+			<label for="FirstName">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.FirstName" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.FirstName"
+					data-help-key="CoverLetter.Addressee.PersonName.FirstName"
+					value="{{CoverLetter.Addressee.PersonName.FirstName}}">
+			<span name="CoverLetter.Addressee.PersonName.FirstName" class="help placeholder" style="display:none;" >
+			  	[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]
+			</span>
+		</div>
+		
+		<div class="addresseeNameField">
+			<label for="Surname">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:Surname]][[/resources]]</label>
+			<!--  data-defaultvalue="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="EditorPlaceholder"}}" -->
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Surname"
+					data-help-key="CoverLetter.Addressee.PersonName.Surname"
+					value="{{CoverLetter.Addressee.PersonName.Surname}}">
+			<span name="CoverLetter.Addressee.PersonName.Surname" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:Surname]][[/resources]]
+			</span>
+		</div>
+	[[/isSurnameAfterFirstName]]
+	[[^isSurnameAfterFirstName]]
+		<div class="addresseeNameField first">
+			<label for="Surname">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:Surname]][[/resources]]</label>
+			<!--  data-defaultvalue="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="EditorPlaceholder"}}" -->
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Surname" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Surname"
+					data-help-key="CoverLetter.Addressee.PersonName.Surname"
+					value="{{CoverLetter.Addressee.PersonName.Surname}}">
+			<span name="CoverLetter.Addressee.PersonName.Surname" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:Surname]][[/resources]]
+			</span>
+		</div>
+		
+		<div class="addresseeNameField">
+			<label for="FirstName">[[#resources]][[& GuiLabel_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help mandatory PersonName with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.FirstName" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.FirstName"
+					data-help-key="CoverLetter.Addressee.PersonName.FirstName"
+					value="{{CoverLetter.Addressee.PersonName.FirstName}}">
+			<span name="CoverLetter.Addressee.PersonName.FirstName" class="help placeholder" style="display:none;" >
+			  	[[#resources]][[& EditorPlaceholder_LearnerInfo:Identification:PersonName:FirstName]][[/resources]]
+			</span>
+		</div>
+	[[/isSurnameAfterFirstName]]
+		<div class="composite select addressee last" name="CoverLetter.Addressee.PersonName.Title">
+			<label for="Title">[[#resources]][[& GuiLabel_CoverLetter:Addressee:PersonName:Title]][[/resources]]</label>
+			<input type="text"  
+					class="formfield help typeahead with-placeholder"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Title.Label" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Title.Label"
+					data-help-key="CoverLetter.Addressee.PersonName.Title"
+					rel="CoverLetter.Addressee.PersonName.Title"
+					placeholder="[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:PersonName:Title]][[/resources]]"
+					value="{{CoverLetter.Addressee.PersonName.Title.Label}}">
+<!-- 			<span name="CoverLetter.Addressee.PersonName.Title.Label" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:PersonName:Title]][[/resources]]
+			</span> -->
+			<input type="hidden"
+					class="Address"
+					title="{{get_text "CoverLetter.Addressee.PersonName.Title.Code" group="AccessibilityLabel"}}"
+					name="CoverLetter.Addressee.PersonName.Title.Code"
+					data-help-key="CoverLetter.Addressee.PersonName.Title.Code"
+					rel="CoverLetter.Addressee.PersonName.Title"
+					value="{{CoverLetter.Addressee.PersonName.Title.Code}}">
+		</div>
+[[/isTitleFirst]]
+	
+	
+	
+</fieldset>
+
+
+	[[/CoverLetter:Addressee:PersonName]]
+[[/preferences]]
+<fieldset class="CoverLetter.Addressee.ContactInfo">
+
+	<fieldset class="CoverLetter.Addressee.CompanyName" name="CompanyName">
+		<label for="Email">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation]][[/resources]]</label>
+		<input type="email" 
+				class="formfield single help Organisation Name with-placeholder"
+				name="CoverLetter.Addressee.Organisation.Name"
+				data-help-key="CoverLetter.Addressee.Organisation"
+				value="{{CoverLetter.Addressee.Organisation.Name}}">
+		<span name="CoverLetter.Addressee.Organisation.Name" class="help placeholder" style="display:none;">
+			[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation]][[/resources]]
+		</span>
+	</fieldset>
+
+	<fieldset class="CoverLetter.Addressee.ContactInfo.Address" name="Address">
+		<fieldset class="AddressLine with-icon" name="AddressLine">
+			<label for="Address">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation:ContactInfo:Address]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help pref Address AddressLine single with-placeholder"
+					name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine"
+					data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine"
+					data-bind-name="group"
+					data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address"
+					value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine}}">
+			<span name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:AddressLine]][[/resources]]
+			</span>
+		</fieldset>
+		<fieldset class="AddressLine with-icon" name="AddressLine2">
+			<label for="Address">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Address]][[/resources]]</label>
+			<input type="text" 
+					class="formfield help pref Address AddressLine with-placeholder"
+					name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine2"
+					data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine2"
+					data-bind-name="group"
+					data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address2"
+					value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine2}}">
+			<span name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.AddressLine2" class="help placeholder" style="display:none;">
+				[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:AddressLine2]][[/resources]]</span>
+			</span>
+		</fieldset>
+		<fieldset class="hybrid2">
+			<fieldset class="PostalCode first" name="PostalCode">
+				<label for="PostalCode">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Postal]][[/resources]]</label>
+				<input type="text" 
+						class="formfield help pref Address PostalCode with-placeholder"
+						name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.PostalCode"
+						data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.PostalCode"
+						data-bind-name="group"
+						data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address"
+						value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.PostalCode}}">
+				<span name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+						[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:PostalCode]][[/resources]]
+				</span>
+			</fieldset>
+			<fieldset class="Municipality second" name="Municipality">
+				<label for="Municipality">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Municipality]][[/resources]]</label>
+				<input type="text" 
+						class="formfield help pref Address Municipality with-placeholder"
+						name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Municipality"
+						data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Municipality"
+						data-bind-name="group"
+						data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address"
+						value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Municipality}}">
+				<span name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Municipality" class="help placeholder" style="display:none;">
+						[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Municipality]][[/resources]]
+				</span>
+			</fieldset>
+		</fieldset>
+		<fieldset class="country" name="Country">
+			<label for="Country">[[#resources]][[& GuiLabel_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Country]][[/resources]]</label>
+			<div class="composite select" name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country">
+				<input type="text"  
+						class="formfield help typeahead pref Address Country with-placeholder"
+						name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Label"
+						data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Label"
+						data-bind-name="group"
+						data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address"
+						rel="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country"
+						placeholder="[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Country]][[/resources]]"
+						value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Label}}">
+<!-- 				<span name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Label" class="help placeholder" style="display:none;">
+					[[#resources]][[& EditorPlaceholder_CoverLetter:Addressee:Organisation:ContactInfo:Address:Contact:Country]][[/resources]]
+				</span>
+				data-defaultvalue="{{get_text "CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}" -->
+				<input type="hidden"
+						class="Address"
+						name="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Code"
+						data-help-key="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Code"
+						data-bind-name="group"
+						data-bind-group="CoverLetter.Addressee.Organisation.ContactInfo.Address"
+						rel="CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country"
+						value="{{CoverLetter.Addressee.Organisation.ContactInfo.Address.Contact.Country.Code}}">
+			</div>
+		</fieldset>
+	</fieldset>
+</fieldset>
+
+</fieldset>
+{{/with}}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:isced="http://europass.cedefop.europa.eu/ISCED/97" 
+	xmlns:eqf="http://europass.cedefop.europa.eu/EQF/08" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:import namespace="http://europass.cedefop.europa.eu/EQF/08" 
+		schemaLocation="http://europass.cedefop.europa.eu/xml/imported/EQF_08_V1.0.0.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The EQF namespace defines a list of educational level codes, which are used to describe the information of an educational experience.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	
+	<xsd:import namespace="http://europass.cedefop.europa.eu/ISCED/97" 
+		schemaLocation="http://europass.cedefop.europa.eu/xml/imported/ISCED97_V1.0.0.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The ISCED namespace defines a list of educational field and educational level codes, which are used to describe the information of an educational experience.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	<xsd:include schemaLocation="./Organisation.xsd"/>
+	<xsd:include schemaLocation="./Experience.xsd"/>
+	
+	<!-- Educational Experience -->
+	<xsd:complexType name="EducationalExperienceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the generic ExperienceType to include information about a learning achievement or a training period. 
+				Contains information about the period the learning experience took place and the awarded title, as well as information about the skills acquired, the organisation providing the education, the educational field and level. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ExperienceType">
+				<xsd:sequence>
+					<xsd:element name="Title" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="Activities" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="Organisation" type="OrganisationType" minOccurs="0"/>
+					<xsd:element name="Level" type="EducationalLevelType" minOccurs="0"/>
+					<xsd:element name="Field" type="EducationalFieldType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EducationalExperienceListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains an list of learning achievements or a training periods (formal or not). The order of those experiences is defined by the related printing preferences.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Education" type="EducationalExperienceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<!-- Educational Level -->
+	<xsd:complexType name="EducationalLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an educational level. The educational level is described by a code and a label. E.g. code: 5, label: ISCED 5.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="eqf:level">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The educational level code type is defined in the imported schema of ISCED97. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!-- Educational Field -->
+	<xsd:complexType name="EducationalFieldType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines an educational field. The educational field is described by a code and a label. E.g. code: 21, label: Arts.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" type="isced:field-level2">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The educational field code type is defined in the imported schema of ISCED97. 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+</xsd:schema>

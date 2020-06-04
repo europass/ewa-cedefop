@@ -1,0 +1,208 @@
+{{#with SkillsPassport}}
+<fieldset>
+<header>
+	<legend>{{get_text "LearnerInfo.Identification" group="GuiLabel"}}</legend>
+</header>
+
+<fieldset class="LearnerInfo.Identification.PersonName PersonName">
+	<fieldset class="LearnerInfo.Identification.PersonName.FirstName FirstName">
+		<label for="FirstName">{{get_text "LearnerInfo.Identification.PersonName.FirstName"}}</label>
+		<input type="text" 
+				class="formfield help mandatory pref PersonName with-placeholder"
+				title
+				name="LearnerInfo.Identification.PersonName.FirstName"
+				data-bind-name="LearnerInfo.Identification.PersonName"
+				data-bind-document="ECV ELP"
+				data-help-key="LearnerInfo.Identification.PersonName.FirstName"
+				value="{{LearnerInfo.Identification.PersonName.FirstName}}">
+		<span name="LearnerInfo.Identification.PersonName.FirstName" class="help placeholder" style="display:none;" >
+		  {{{get_text "LearnerInfo.Identification.PersonName.FirstName" group="EditorPlaceholder"}}}
+		</span>
+	</fieldset>
+	<fieldset class="LearnerInfo.Identification.PersonName.Surname Surname">
+		<label for="Surname">{{get_text "LearnerInfo.Identification.PersonName.Surname"}}</label>
+		<!--  data-defaultvalue="{{get_text "LearnerInfo.Identification.PersonName.Surname" group="EditorPlaceholder"}}" -->
+		<input type="text" 
+				class="formfield help mandatory pref PersonName with-placeholder"
+				title
+				name="LearnerInfo.Identification.PersonName.Surname"
+				data-bind-name="LearnerInfo.Identification.PersonName"
+				data-bind-document="ECV ELP"
+				data-help-key="LearnerInfo.Identification.PersonName.Surname"
+				value="{{LearnerInfo.Identification.PersonName.Surname}}">
+		<span name="LearnerInfo.Identification.PersonName.Surname" class="help placeholder" style="display:none;">
+			{{get_text "LearnerInfo.Identification.PersonName.Surname" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+</fieldset>
+
+<fieldset class="LearnerInfo.Identification.ContactInfo">
+	<fieldset class="addressFields" name="Address">
+		<fieldset class="AddressLine with-icon" name="AddressLine">
+			<label for="Address">{{get_text "LearnerInfo.Identification.ContactInfo.Address" group="GuiLabel"}}</label>
+			<input type="text" 
+					class="formfield help pref Address AddressLine with-placeholder first-line"
+					title
+					name="LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine"
+					data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine"
+					data-bind-name="group"
+					data-bind-document="ECV ELP"
+					data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+					value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine}}">
+			<span name="LearnerInfo.Identification.PersonName.Surname" class="help placeholder" style="display:none;">
+				{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.AddressLine" group="EditorPlaceholder"}}
+			</span>
+		</fieldset>
+		<fieldset class="ContactInfo-Address hybrid2">
+			<fieldset class="PostalCode first" name="PostalCode">
+				<label for="PostalCode">{{get_text "LearnerInfo.Identification.ContactInfo.Address.PostalCode" group="GuiLabel"}}</label>
+				<input type="text" 
+						class="formfield help pref Address PostalCode with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode"
+						data-bind-name="group"
+						data-bind-document="ECV ELP"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode}}">
+				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.PostalCode" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+			<fieldset class="Municipality second" name="Municipality">
+				<label for="Municipality">{{get_text "LearnerInfo.Identification.ContactInfo.Address.City" group="GuiLabel"}}</label>
+				<input type="text" 
+						class="formfield help pref Address Municipality with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality"
+						data-bind-name="group"
+						data-bind-document="ECV ELP"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality}}">
+				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Municipality" group="EditorPlaceholder"}}
+				</span>
+			</fieldset>
+		</fieldset>
+		<fieldset class="country" name="Country">
+			<label for="Country">{{get_text "LearnerInfo.Identification.ContactInfo.Address.Country" group="GuiLabel"}}</label>
+			<div class="composite select country" name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country">
+				<input type="text"  
+						class="formfield help typeahead pref Address Country with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label"
+						data-help-key="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label"
+						data-bind-name="group"
+						data-bind-document="ECV ELP"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Address"
+						rel="Identification.ContactInfo.Address.Contact.Country"
+						placeholder="{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label}}">
+<!-- 				<span name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Label" class="help placeholder" style="display:none;">
+						{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}
+				</span> -->
+				<!-- data-defaultvalue="{{get_text "LearnerInfo.Identification.ContactInfo.Address.Contact.Country" group="EditorPlaceholder"}}" -->
+ 				<input type="hidden"
+						name="LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Code"
+						value="{{LearnerInfo.Identification.ContactInfo.Address.Contact.Country.Code}}">
+			</div>
+		</fieldset>
+	</fieldset>
+
+	<fieldset class="LearnerInfo.Identification.ContactInfo.Telephone ecl Telephone" name="Telephone">
+		<label for="Telephone">{{get_text "LearnerInfo.Identification.ContactInfo.Telephone" group="GuiLabel"}}</label>
+		<div class="multipliable fixed-value-list-input compound" data-max-items="2">
+		{{#each_with_default LearnerInfo.Identification.ContactInfo.Telephone item="{ \"Use\" : {\"Label\" : \"\" , \"Code\" : \"\"} , \"Contact\" : \"\" }"}}
+		<div class="composite" name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}]" data-index="{{index}}" >
+			<div class="composite select {{Use.Label}}"
+				name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Use">
+				{{> templates/forms/telephone}}
+			
+<!-- 				<input type="hidden"
+						class="formfield pref Telephone Use hidden"
+						name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Use.Label"
+						data-help-key=""
+						data-bind-document="ECV"
+						data-help-group="LearnerInfo.Identification.ContactInfo.Telephone"
+						data-bind-name="LearnerInfo.Identification.ContactInfo.Telephone.array[{{index}}]"
+						data-bind-group="LearnerInfo.Identification.ContactInfo.Telephone"
+						rel="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}]"   
+						value="{{Use.Label}}"> -->
+			</div>
+			<input type="tel" 
+					class="formfield help copy pref Telephone Number with-placeholder"
+					title
+					name="LearnerInfo.Identification.ContactInfo.Telephone[{{index}}].Contact"
+					data-help-key= ""
+					data-bind-document="ECV"
+					data-bind-name="LearnerInfo.Identification.ContactInfo.Telephone.array[{{index}}]"
+					data-bind-group="LearnerInfo.Identification.ContactInfo.Telephone"
+					data-help-group="LearnerInfo.Identification.ContactInfo.Telephone"
+					value="{{Contact}}">
+			<span name="LearnerInfo.Identification.ContactInfo.Telephone" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Telephone.Contact" group="EditorPlaceholder"}}
+			</span>
+		</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+
+	<fieldset class="LearnerInfo.Identification.ContactInfo.Email Email with-icon" name="Email">
+		<label for="Email">{{get_text "LearnerInfo.Identification.ContactInfo.Email" group="GuiLabel"}}</label>
+		<input type="email" 
+				class="formfield single help pref Email with-placeholder"
+				title
+				name="LearnerInfo.Identification.ContactInfo.Email.Contact"
+				data-bind-document="ECV"
+				data-help-key="LearnerInfo.Identification.ContactInfo.Email"
+				data-bind-name="LearnerInfo.Identification.ContactInfo.Email"
+				value="{{LearnerInfo.Identification.ContactInfo.Email.Contact}}">
+		<span name="LearnerInfo.Identification.ContactInfo.Email.Contact" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.Email" group="EditorPlaceholder"}}
+		</span>
+	</fieldset>
+
+	<fieldset class="LearnerInfo.Identification.ContactInfo.InstantMessaging ecl InstantMessaging" name="InstantMessaging">
+		<label for="InstantMessaging">{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging" group="GuiLabel"}}</label>
+		<div class="multipliable compound auto-complete-list-input" data-max-items="1">
+		{{#each_with_default LearnerInfo.Identification.ContactInfo.InstantMessaging item="{ \"Use\" : {\"Label\" : \"\" , \"Code\" : \"\"} , \"Contact\" : \"\" }"}}
+		<div class="composite" name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}]" data-index="{{index}}">
+			<div class="composite select tt-dropdown-over-input" name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use" data-index="{{index}}">
+				<input type="text" 
+						class="formfield help typeahead InstantMessaging Use with-placeholder"
+						title
+						name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use.Label"
+						data-help-key=""
+						data-bind-document="ECV"
+						data-help-group="LearnerInfo.Identification.ContactInfo.InstantMessaging"
+						rel="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use"
+						placeholder="{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Use" group="EditorPlaceholder"}}"
+						value="{{Use.Label}}">
+<!-- 			   <span class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Use" group="EditorPlaceholder"}}
+			   </span> -->
+				<input type="hidden"
+						name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Use.Code"
+						value="{{Use.Code}}">
+			</div>
+			<input type="text" 
+					class="formfield help copy pref InstantMessaging Account with-placeholder"
+					title
+					name="LearnerInfo.Identification.ContactInfo.InstantMessaging[{{index}}].Contact"
+					data-help-key=""
+					data-bind-document="ECV"
+					data-help-group="LearnerInfo.Identification.ContactInfo.InstantMessaging"
+					data-bind-name="LearnerInfo.Identification.ContactInfo.InstantMessaging.array[{{index}}]"
+					data-bind-group="LearnerInfo.Identification.ContactInfo.InstantMessaging"
+					value="{{Contact}}">
+			<span name="LearnerInfo.Identification.ContactInfo.InstantMessaging.Contact" class="help placeholder" style="display:none;">
+					{{get_text "LearnerInfo.Identification.ContactInfo.InstantMessaging.Contact" group="EditorPlaceholder"}}
+			</span>
+		</div>
+		{{/each_with_default}}
+		</div>
+	</fieldset>
+	
+</fieldset>
+{{/with}}

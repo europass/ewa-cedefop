@@ -1,0 +1,67 @@
+<div id="toolbar-{{id}}" class="html-format-toolbar" style="display: none;">
+	
+	<a  data-wysihtml5-command="bold" title="CTRL+B" 
+    	class="format-option bold" 
+    	title="{{get_text "bold" group="EditorCommands"}}">bold</a>
+    	
+    <a  data-wysihtml5-command="italic" title="CTRL+I"
+    	class="format-option italic" 
+    	title="{{get_text "italic" group="EditorCommands"}}">italic</a>
+    	
+    <a  data-wysihtml5-command="underline" title="CTRL+U"
+    	class="format-option underline" 
+    	title="{{get_text "underline" group="EditorCommands"}}">underline</a>	
+    
+    <a  data-wysihtml5-command="formatBlock" 
+    	data-wysihtml5-command-value="p"
+    	class="format-option p" 
+    	title="{{get_text "p" group="EditorCommands"}}">p</a>
+    	
+    <a  data-wysihtml5-command="insertUnorderedList"
+    	class="format-option ullist" 
+    	title="{{get_text "ul" group="EditorCommands"}}">insertUnorderedList</a>
+    	
+    <a  data-wysihtml5-command="insertOrderedList"
+    	class="format-option ollist" 
+    	title="{{get_text "ol" group="EditorCommands"}}">insertOrderedList</a>
+
+    <a  data-wysihtml5-command="createLink"
+    	class="format-option createLink" 
+    	title="{{get_text "createLink" group="EditorCommands"}}">insert link</a>
+    		
+    <a  data-wysihtml5-command="undo"
+    	class="format-option undo" 
+    	title="{{get_text "undo" group="EditorCommands"}}">undo</a>
+    	
+    <a  data-wysihtml5-command="redo"
+    	class="format-option redo" 
+    	title="{{get_text "redo" group="EditorCommands"}}">redo</a>
+
+	<a  data-wysihtml5-command="removeFormat" 
+		class="format-option removeFormat" 
+		title="{{get_text "removeFormat" group="EditorCommands"}}">removeFormat</a>
+    	
+    <div data-wysihtml5-dialog="createLink" 
+    	 class="format-dialog createLink" 
+    	 style="display: none;"
+    	 id="Wysihtml5.Toolbar.{{id}}">
+    	<div class="arrow"></div>
+		<div class="format-dialog-area">
+			<button type="button" 
+					class="simple-close"
+					data-rel-closable-section="Wysihtml5.Toolbar.{{id}}">close</button>
+			<form>
+				<fieldset>
+	    			<label for="html-url">URL:</label>
+		      		<input data-wysihtml5-dialog-field="href" value="http://" class="formfield" title="html-url" name="html-url">
+		    	</fieldset>
+		     	<div class="menu">
+			     	<a  data-wysihtml5-dialog-action="save" 
+			      	 	class="format-dialog-action confirm">YES</a>&nbsp;
+				    <a  data-wysihtml5-dialog-action="cancel"
+				        class="format-dialog-action reject">NO</a>
+			    </div>
+			</form>
+		</div>
+    </div>
+</div>

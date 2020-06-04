@@ -1,0 +1,149 @@
+
+{{=[[ ]]=}}
+<!-- 			<text:p text:style-name="_ICT_P59" /> -->
+			<table:table table:name="_ICT_Table8" table:style-name="_ICT_Table8">
+				<table:table-column table:style-name="_ICT_Table8.A" />
+				<table:table-column table:style-name="_ICT_Table8.B" />
+				<table:table-column table:style-name="_ICT_Table8.C" />
+				<table:table-column table:style-name="_ICT_Table8.D" />
+				<table:table-column table:style-name="_ICT_Table8.E" />
+				<table:table-column table:style-name="_ICT_Table8.F" />
+				<table:table-column table:style-name="_ICT_Table8.G" />
+				<table:table-column table:style-name="_ICT_Table8.H" />
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:table-cell table:style-name="_ICT_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_ICT_P24" />
+					</table:table-cell>
+
+					<table:table-cell table:style-name="_ICT_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_ICT_P29">[[#resources]][[& LanguageShort_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_ICT_P29">[[#resources]][[& LanguageShort_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.H1" office:value-type="string">
+					
+						<text:p text:style-name="_ICT_P29">[[#resources]][[& LanguageShort_C1]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:table-cell table:style-name="_ICT_Table8.B2" office:value-type="string">
+						<text:p text:style-name="_ICT_P17">
+							<draw:frame draw:style-name="_ICT_fr4" draw:name="_ICT_graphics4" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="0">
+								<draw:image xlink:href="Pictures/ict_information_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:Information:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">[[#resources]][[& LearnerInfo:Skills:Computer:ProficiencyLevel:Information]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.C2" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Information_A]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.E2" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Information_B]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.H2" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Information_C]][[/resources]]</text:p>
+					</table:table-cell>
+				
+				</table:table-row>
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:covered-table-cell />
+					<table:table-cell table:style-name="_ICT_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_ICT_P15">
+							<draw:frame draw:style-name="_ICT_fr4" draw:name="_ICT_graphics15" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="1">
+								<draw:image xlink:href="Pictures/ict_communication_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+									<svg:title>[[& Accessibility:Communication:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_ICT_P18">[[#resources]][[& LearnerInfo:Skills:Computer:ProficiencyLevel:Communication]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.C3" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Communication_A]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.E3" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Communication_B]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.H3" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Communication_C]][[/resources]]</text:p>
+					</table:table-cell>
+				
+				</table:table-row>
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:table-cell table:style-name="_ICT_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_ICT_P15">
+							<draw:frame draw:style-name="_ICT_fr5" draw:name="_ICT_graphics16" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="2">
+								<draw:image xlink:href="Pictures/ict_content_creation_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:ContentCreation:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_ICT_P18">[[#resources]][[& LearnerInfo:Skills:Computer:ProficiencyLevel:ContentCreation]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.C4" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ContentCreation_A]][[/resources]]</text:p>
+					</table:table-cell>
+				
+					<table:table-cell table:style-name="_ICT_Table8.E4" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ContentCreation_B]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.H4" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ContentCreation_C]][[/resources]]</text:p>
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content" />
+					</table:table-cell>
+					
+				</table:table-row>
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:covered-table-cell />
+					<table:table-cell table:style-name="_ICT_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_ICT_P15">
+							<draw:frame draw:style-name="_ICT_fr5" draw:name="_ICT_graphics17" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="3">
+								<draw:image xlink:href="Pictures/ict_safety_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:Safety:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_ICT_P18">[[#resources]][[& LearnerInfo:Skills:Computer:ProficiencyLevel:Safety]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.C5" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Safety_A]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.E5" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Safety_B]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.H5" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& Safety_C]][[/resources]]</text:p>
+					</table:table-cell>
+					
+				</table:table-row>
+				<table:table-row table:style-name="_ICT_Table8.1">
+					<table:table-cell table:style-name="_ICT_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_ICT_P15">
+							<draw:frame draw:style-name="_ICT_fr5" draw:name="_ICT_graphics18" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="4">
+								<draw:image xlink:href="Pictures/ict_problem_solving_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:ProblemSolving:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">[[#resources]][[& LearnerInfo:Skills:Computer:ProficiencyLevel:ProblemSolving]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_ICT_Table8.C6" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ProblemSolving_A]][[/resources]]</text:p>
+					</table:table-cell>
+			
+					<table:table-cell table:style-name="_ICT_Table8.E6" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ProblemSolving_B]][[/resources]]</text:p>
+					</table:table-cell>
+					
+					<table:table-cell table:style-name="_ICT_Table8.H6" office:value-type="string">
+						<text:p text:style-name="_5f_ICT_5f_Grid_5f_content">[[#resources]][[& ProblemSolving_C]][[/resources]]</text:p>
+					</table:table-cell>
+				
+				</table:table-row>
+			</table:table>
+			
+			<text:p text:style-name="_ICT_P40">[[#resources]][[& Document:Elp:CEF:Council]][[/resources]]</text:p>

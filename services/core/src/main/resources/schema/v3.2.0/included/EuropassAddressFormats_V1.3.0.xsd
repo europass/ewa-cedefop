@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://europass.cedefop.europa.eu/Europass" 
+    targetNamespace="http://europass.cedefop.europa.eu/Europass">
+    
+    <!--
+        /*
+        * Copyright European Union 2002-2010
+        *
+        *
+        * Licensed under the EUPL, Version 1.1 or – as soon they 
+        * will be approved by the European Commission - subsequent  
+        * versions of the EUPL (the "Licence"); 
+        * You may not use this work except in compliance with the 
+        * Licence. 
+        * You may obtain a copy of the Licence at: 
+        *
+        * http://ec.europa.eu/idabc/eupl.html
+        *
+        *  
+        * Unless required by applicable law or agreed to in 
+        * writing, software distributed under the Licence is 
+        * distributed on an "AS IS" basis, 
+        * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+        * express or implied. 
+        * See the Licence for the specific language governing 
+        * permissions and limitations under the Licence. 
+        *
+        */
+    -->
+    <xsd:simpleType name="AddressFieldFormatPattern">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a pattern to be followed when formatting the address.
+                s: street name and number
+                p: country postal code prefix
+                z: postal code
+                m: municipality
+                c: country
+                IMPORTANT: \n denotes a new line.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="s&#xa;z m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Default Address Format</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s,m z c">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, m, z c">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s z m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s z m c">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s p-z m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s p-z m c">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format Variation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, z m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, z m, c">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as Ireland</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, m, p-z (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as Latvia</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, p-z m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as Croatia</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, m z (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as Malta</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, z-m (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as Switzerland</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="s, m, z (c)">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">Address Format for various countries, such as United Kingdom</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

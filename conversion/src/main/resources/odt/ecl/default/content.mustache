@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-content
+        xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+        xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+        xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+        xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+        xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
+        xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"
+        xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"
+        xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
+        xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"
+        xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"
+        xmlns:math="http://www.w3.org/1998/Math/MathML"
+        xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"
+        xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"
+        xmlns:ooo="http://openoffice.org/2004/office"
+        xmlns:ooow="http://openoffice.org/2004/writer"
+        xmlns:oooc="http://openoffice.org/2004/calc"
+        xmlns:dom="http://www.w3.org/2001/xml-events"
+        xmlns:xforms="http://www.w3.org/2002/xforms"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:rpt="http://openoffice.org/2005/report"
+        xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+        xmlns:tableooo="http://openoffice.org/2009/table"
+        xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" office:version="1.2">
+    <office:scripts/>
+    <office:font-face-decls/>
+    <office:automatic-styles>
+        <style:style style:name="PB_CL"
+                     style:family="paragraph"
+                     style:parent-style-name="Standard"
+                     style:master-page-name="_5f_CL_5f_PageStyle">
+            <style:text-properties fo:font-size="1pt"
+                                   style:font-size-asian="1pt"
+                                   style:font-size-complex="1pt"/>
+        </style:style>
+    </office:automatic-styles>
+
+    <office:body>
+
+        <office:text text:use-soft-page-breaks="true">
+
+            <text:p text:style-name="PB_CL"></text:p>
+
+
+
+            <text:section text:style-name="_CL_Section" text:name="CL_Personal_Information">
+                {{#LearnerInfo.Identification}}
+                    {{#personName}}
+                        <text:section text:style-name="_CL_Section_PersonName" text:name="CL_Personal_Information_Name">
+                            <text:p text:style-name="_CL_Name">{{{odt}}}</text:p>
+                        </text:section>
+                    {{/personName}}
+                    {{#contactInfo.address}}
+                        <text:section text:style-name="_CL_Section_Personal_Information_Address" text:name="CL_Personal_Information_Address">
+                            <text:p text:style-name="_CL_Address">
+                                <text:span>
+                                    <draw:frame
+                                            draw:style-name="_CL_frame_style"
+                                            draw:name="contact-frame"
+                                            text:anchor-type="as-char"
+                                            svg:width="3.51mm"
+                                            svg:height="3.6mm"
+                                            draw:z-index="0">
+                                        <draw:image xlink:href="Pictures/icon-location.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                        <svg:title>Location icon</svg:title>
+                                    </draw:frame>
+                                </text:span>
+                                <text:span>{{{contact.odt}}}</text:span>
+                            </text:p>
+                        </text:section>
+                    {{/contactInfo.address}}
+                {{/LearnerInfo.Identification}}
+                {{#CoverLetter.printContacts}}
+                    <text:section text:style-name="_CL_Section_Personal_Information_Contact" text:name="CL_Personal_Information_Contact">
+                        <text:p text:style-name="_CL__Personal_Information_Contact">
+                            {{#CoverLetter.ReducedTelephoneList}}
+                                <text:span>
+                                    <draw:frame
+                                            draw:style-name="_CL_frame_style"
+                                            draw:name="contact-frame"
+                                            text:anchor-type="as-char"
+                                            svg:width="3.51mm"
+                                            svg:height="3.6mm"
+                                            draw:z-index="0">
+                                        {{#use.code}}
+                                            <draw:image xlink:href="Pictures/icon-{{.}}.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                        {{/use.code}}
+                                        {{^use.code}}
+                                            <draw:image xlink:href="Pictures/icon-telephone.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                        {{/use.code}}
+                                        <svg:title>Telephone icon</svg:title>
+                                    </draw:frame>
+                                </text:span>
+                                <text:span text:style-name="_CL_Phone">{{contact}}</text:span>
+                                <text:s text:c="3"/>
+                            {{/CoverLetter.ReducedTelephoneList}}
+
+                            {{#CoverLetter.ContactEmail}}
+                                <text:span>
+                                    <draw:frame
+                                            draw:style-name="_CL_frame_style"
+                                            draw:name="contact-frame"
+                                            text:anchor-type="as-char"
+                                            svg:width="3.51mm"
+                                            svg:height="3.6mm"
+                                            draw:z-index="0">
+                                        <draw:image xlink:href="Pictures/icon-envelope.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                        <svg:title>Email icon</svg:title>
+                                    </draw:frame>
+                                </text:span>
+                                <text:span text:style-name="_CL_Email">{{CoverLetter.ContactEmail.contact}}</text:span>
+                                <text:s text:c="3"/>
+                            {{/CoverLetter.ContactEmail}}
+
+                            {{#CoverLetter.ReducedInstantMessagingList}}
+                                <text:span>
+                                    <draw:frame
+                                            draw:style-name="_CL_frame_style"
+                                            draw:name="contact-frame"
+                                            text:anchor-type="as-char"
+                                            svg:width="3.51mm"
+                                            svg:height="3.6mm"
+                                            draw:z-index="0">
+                                        <draw:image xlink:href="Pictures/icon-im.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                        <svg:title>Instant messaging icon</svg:title>
+                                    </draw:frame>
+                                </text:span>
+                                {{#CoverLetter.ReducedInstantMessagingListWithPipe}}
+                                    {{#use}}
+                                        <text:span text:style-name="_CL_Instant_Message">{{label}}</text:span>
+                                    {{/use}}
+                                    <text:span>{{contact}}</text:span>
+                                {{/CoverLetter.ReducedInstantMessagingListWithPipe}}
+                            {{/CoverLetter.ReducedInstantMessagingList}}
+                        </text:p>
+                    </text:section>
+                {{/CoverLetter.printContacts}}
+                <text:p text:style-name="_CL__Horizontal_Line">
+                    <text:span>
+                        <draw:frame
+                                draw:style-name="_CL__Horizontal_Line"
+                                draw:name="horizontal-line"
+                                text:anchor-type="as-char"
+                                svg:width="183mm" svg:height="0.4mm"
+                                draw:z-index="1">
+                            <draw:image xlink:href="Pictures/icon-horizontal-line.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+                        </draw:frame>
+                    </text:span>
+                </text:p>
+
+            </text:section>
+
+            {{#CoverLetter}}
+
+
+
+
+                {{#addressee}}
+                    <text:section text:style-name="_CL_Section_Addressee" text:name="CL_Addressee">
+                        <text:p text:style-name="_CL_Addressee_Left">
+
+
+                            {{#isPersonNameFirst}}
+
+                                {{#personName}}
+                                    <text:span>{{{nameTxt}}}</text:span>
+                                {{/personName}}
+                                {{#position}}
+                                    <text:span><text:line-break/>{{label}}</text:span>
+                                {{/position}}
+                                {{#organisation}}
+                                    {{{organisationTxt}}}
+                                {{/organisation}}
+                            {{/isPersonNameFirst}}
+
+                            {{^isPersonNameFirst}}
+
+                                {{#organisation}}
+                                    {{#name}}
+                                        <text:span>{{{organisationName}}}<text:line-break/></text:span>
+                                    {{/name}}
+                                {{/organisation}}
+                                {{#personName}}
+                                    <text:span>{{{nameTxt}}}</text:span>
+                                {{/personName}}
+                                {{#position}}
+                                    <text:span><text:line-break/>{{label}}</text:span>
+                                {{/position}}
+                                {{#organisation}}
+                                    {{{organisationContactInfo}}}
+                                {{/organisation}}
+                            {{/isPersonNameFirst}}
+
+                        </text:p>
+                    </text:section>
+                {{/addressee}}
+
+
+
+
+                {{#letter}}
+                    {{#localisation}}
+
+                        <text:section text:style-name="_CL_Section_Date_Place" text:name="CL_Localization">
+
+                            <text:p text:style-name="_CL_Date_Place_Left">
+                                {{localisationTxt}}
+                            </text:p>
+                        </text:section>
+                    {{/localisation}}
+                {{/letter}}
+
+
+                {{#letter}}
+                    {{#subjectLine}}
+                        <text:section text:style-name="_CL_Section_Subject_Line" text:name="CL_Subject_Line">
+                            <text:p text:style-name="_CL_Subject_Line_NoMargin">{{{subjectLineWithBold}}}</text:p>
+                        </text:section>
+                    {{/subjectLine}}
+                {{/letter}}
+
+
+
+
+
+
+
+
+
+
+
+                {{#letter}}
+
+
+                    {{#openingSalutation}}
+                        <text:section text:style-name="_CL_Section_Opening_Salutation" text:name="CL_Opening_Salutation">
+                            {{#CoverLetter.isCoverLetterJustified}}
+                            <text:p text:style-name="_CL_Opening_Salutation_Justified">
+                            {{/CoverLetter.isCoverLetterJustified}}
+                            {{^CoverLetter.isCoverLetterJustified}}
+                            <text:p text:style-name="_CL_Opening_Salutation">
+                            {{/CoverLetter.isCoverLetterJustified}}
+                            {{openingSalutationTxt}}
+                        </text:p>
+                        </text:section>
+                    {{/openingSalutation}}
+
+                    {{#body}}
+                        <text:section text:style-name="_CL_Section_MainBody" text:name="CL_MainBody">
+
+                            {{#opening}}
+                                <text:section text:style-name="_CL_Section" text:name="CL_MainBody_Opening">
+                                    {{{openingTxt}}}
+                                </text:section>
+                            {{/opening}}
+                            {{#mainBody}}
+                                <text:section text:style-name="_CL_Section" text:name="CL_MainBody_Middle">
+                                    {{{mainBodyTxt}}}
+                                </text:section>
+                            {{/mainBody}}
+                            {{#closing}}
+                                <text:section text:style-name="_CL_Section" text:name="CL_MainBody_Closing">
+                                    {{{closingTxt}}}
+                                </text:section>
+                            {{/closing}}
+
+                        </text:section>
+                    {{/body}}
+
+
+                    {{#closingSalutation}}
+                        <text:section text:style-name="_CL_Section_Closing_Salutation" text:name="CL_Closing_Salutation">
+                            <text:section text:style-name="_CL_Section_Personal_Salutation" text:name="CL_Closing_Salutation_Salutation">
+                                {{#LearnerInfo.Identification}}
+                                    {{#signatureEmpty}}
+                                        {{#CoverLetter.isCoverLetterJustified}}
+                                        <text:p text:style-name="_CL_Closing_Salutation_Without_Signature_Justified_NoMargin">
+                                        {{/CoverLetter.isCoverLetterJustified}}
+                                        {{^CoverLetter.isCoverLetterJustified}}
+                                        <text:p text:style-name="_CL_Closing_Salutation_Without_Signature_NoMargin">
+                                        {{/CoverLetter.isCoverLetterJustified}}
+                                    {{/signatureEmpty}}
+                                    {{^signatureEmpty}}
+                                        {{#CoverLetter.isCoverLetterJustified}}
+                                        <text:p text:style-name="_CL_Closing_Salutation_With_Signature_Justified">
+                                        {{/CoverLetter.isCoverLetterJustified}}
+                                        {{^CoverLetter.isCoverLetterJustified}}
+                                        <text:p text:style-name="_CL_Closing_Salutation_With_Signature">
+                                        {{/CoverLetter.isCoverLetterJustified}}
+                                    {{/signatureEmpty}}
+                                {{/LearnerInfo.Identification}}
+                                {{^LearnerInfo.Identification}}
+                                    {{#CoverLetter.isCoverLetterJustified}}
+                                    <text:p text:style-name="_CL_Closing_Salutation_Without_Signature_Justified">
+                                    {{/CoverLetter.isCoverLetterJustified}}
+                                    {{^CoverLetter.isCoverLetterJustified}}
+                                    <text:p text:style-name="_CL_Closing_Salutation_Without_Signature">
+                                    {{/CoverLetter.isCoverLetterJustified}}
+                                {{/LearnerInfo.Identification}}
+                                {{closingSalutationTxt}}
+                            </text:p>
+                            </text:section>
+                        </text:section>
+                    {{/closingSalutation}}
+
+                {{/letter}}
+            {{/CoverLetter}}
+
+            {{#LearnerInfo.Identification}}
+                {{^signatureEmpty}}
+                    {{#signatureDimensions}}
+                        <text:section text:style-name="_CL_Section_Personal_Signature" text:name="CL_Closing_Salutation_Signature">
+                            <text:p text:style-name="_CL_Personal_Signature">
+                                <draw:frame
+                                        draw:style-name="_CL_frame_style"
+                                        draw:name="contact-frame"
+                                        text:anchor-type="as-char"
+                                        svg:width="{{width}}cm"
+                                        svg:height="{{height}}cm"
+                                        draw:z-index="0">
+                                    <draw:image xlink:href="Pictures/signature" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                </draw:frame>
+                                <svg:title>Personal photo</svg:title>
+                            </text:p>
+                        </text:section>
+                    {{/signatureDimensions}}
+                {{/signatureEmpty}}
+                {{#personName}}
+                    {{#CoverLetter.letter.closingSalutationEmpty}}
+                    <text:p text:style-name="_CL_Personal_Name_No_Closing">
+                    {{/CoverLetter.letter.closingSalutationEmpty}}
+                    {{^CoverLetter.letter.closingSalutationEmpty}}
+                    <text:p text:style-name="_CL_Personal_Name">
+                    {{/CoverLetter.letter.closingSalutationEmpty}}
+                    {{{odt}}}</text:p>
+                {{/personName}}
+            {{/LearnerInfo.Identification}}
+
+            {{#CoverLetter}}
+                {{#Documentation}}
+                    {{^consideredEmpty}}
+                        <text:section text:style-name="_CL_Section_Attachments" text:name="CL_Enclosed_Documentation">
+                            {{#CoverLetter.isCoverLetterJustified}}
+                            <text:p text:style-name="_CL_Attachments_Justified">
+                            {{/CoverLetter.isCoverLetterJustified}}
+                            {{^CoverLetter.isCoverLetterJustified}}
+                            <text:p text:style-name="_CL_Attachments">
+                            {{/CoverLetter.isCoverLetterJustified}}
+                            <text:span>
+                                <draw:frame
+                                        draw:style-name="_CL_frame_style"
+                                        draw:name="contact-frame"
+                                        text:anchor-type="as-char"
+                                        svg:width="3.51mm"
+                                        svg:height="3.6mm"
+                                        draw:z-index="0">
+                                    <draw:image xlink:href="Pictures/icon-enclosed.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+                                    <svg:title></svg:title>
+                                </draw:frame>
+                            </text:span>
+                            <text:span>
+                                {{#heading.label}}
+                                    {{heading.label}}
+                                {{/heading.label}}
+                                {{^heading.label}}
+                                    Enclosed:
+                                {{/heading.label}}
+                            </text:span>
+                            <text:span text:style-name="_CL_Attachments_List">{{coverLetterCommaList}}</text:span>
+                        </text:p>
+                        </text:section>
+                    {{/consideredEmpty}}
+                {{/Documentation}}
+            {{/CoverLetter}}
+
+
+        </office:text>
+    </office:body>
+</office:document-content>

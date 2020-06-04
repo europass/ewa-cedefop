@@ -1,0 +1,46 @@
+{{=[[ ]]=}}
+{{#emptyObjects "3" 0=SkillsPassport.CoverLetter.Documentation.Heading 1=SkillsPassport.CoverLetter.Documentation.InterDocument 2=SkillsPassport.CoverLetter.Documentation.ExtraDocument}}
+{{else}}
+<span style="display:none" class="data-title">
+[[#resources]][[& EditorHelp_Modify:CoverLetter:Enclosed]][[/resources]]
+</span>
+{{/emptyObjects}}
+<dt class="label">
+	<a class="tip spot">
+		<span class="data-title" style="display:none;">[[#resources]][[& EditorHelp_SkillsPassport:ECL:CoverLetter:Enclosed]][[/resources]]</span>	
+	?</a></dt>
+<dd>
+
+	{{#if SkillsPassport.CoverLetter.Documentation}}
+	<div class="documentation value">
+		<span>
+			{{#SkillsPassport.CoverLetter.Documentation.Heading.Label}}
+				{{.}}
+			{{/SkillsPassport.CoverLetter.Documentation.Heading.Label}}
+			{{^SkillsPassport.CoverLetter.Documentation.Heading.Label}}
+				[[#resources]][[& EditorPlaceholder_CoverLetter:Enclosed]][[/resources]]
+			{{/SkillsPassport.CoverLetter.Documentation.Heading.Label}}
+		</span>
+		{{#with SkillsPassport.CoverLetter.Documentation}}
+			{{#commalist InterDocument [] labelKey="ref"}}
+				{{#comma_split . }}
+					{{get_text "CoverLetter.Enclose.Document.{{subsection}}" .}}
+				{{/comma_split}}
+			{{/commalist}}
+			{{#if InterDocument}}
+				{{#if ExtraDocument}}, {{/if}}
+			{{/if}}
+			{{#commalist ExtraDocument [] }}
+				{{.}}
+			{{/commalist}}
+		{{/with}}
+	</div>
+	{{else}}
+	<span class="default-value">[[#resources]][[& EditorPlaceholder_CoverLetter:Enclosed]][[/resources]]</span>
+	<div class="empty add">
+		<span class="empty add">[[#resources]][[& GuiLabel_Buttons:Add:ECL:Enclosed:Content]][[/resources]]</span>
+	</div>
+    {{/if}}
+    
+    
+</dd>	

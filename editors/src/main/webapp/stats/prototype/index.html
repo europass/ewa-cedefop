@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Europass Statistics Query Form</title>
+        <link href="stats_form.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="stats_form.js"></script>
+    </head>
+    <body>
+        <div id="docs-editor-container">
+            <div id="docs-editor">
+                <div id="schema-editor">
+
+                    <div class="ss-form-editor" id="form-content-editor">
+                        <div class="ss-page-tab-container">
+                            <div class="ss-page-tab">
+                                <span class="ss-page-tab-text"
+                                      id="ss-form-editor-first-page-tab-text">Form Page</span>
+                            </div>
+
+                            <div class="ss-page-tab-triangle"></div>
+                        </div>
+
+                        <div id="ss-form-title">
+                            <div class="ss-title-container hovering-textarea-container">
+                                <span class="ss-title" id="form-title">Europass Statistics Form</span>
+                            </div>
+                        </div>
+
+                        <div id="widget-container">
+                            <div class="ss-form-page">
+                                <div
+                                    class="ss-formwidget-container ss-formwidget-container-editor">
+
+                                    <div class="ss-formwidget-div">
+                                        <table
+                                            class="stats-dataParams ss-widget-nodrag stats-inline-block">
+                                            <tbody>
+
+                                                <tr>
+                                                    <th class="ss-header"><label
+                                                            class="ss-formwidget-fieldlabel" for=":5l.fw_htf">Data
+                                                            Format</label></th>
+
+                                                    <td><select
+                                                            class="stats-inline-block"	data-attr="dataFmt">
+                                                            <option value="csv">CSV</option>
+                                                            <option value="json">JSON</option>
+                                                        </select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="ss-header"><label
+                                                            class="ss-formwidget-fieldlabel" for=":5l.fw_tf">Data
+                                                            Type</label></th>
+
+                                                    <td><select
+                                                            class="stats-inline-block" data-attr="dataType" disabled>
+                                                            <option value="generated">Generated Documents</option>
+                                                            <option value="visits">Visits</option>
+                                                            <option value="downloads">Downloads</option>
+                                                        </select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th class="ss-header"><span
+                                                            class="ss-formwidget-fieldlabel"> <label
+                                                                for=":5l.fw_tdd"></label></span></th>
+
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <br>
+
+                                        <div
+                                            class="ss-other-options-header stats-zippy-header stats-zippy-collapsed"
+                                            id=":5k.oo_ooh" tabindex="0">
+                                            <span>Query Parameters</span>
+
+                                            <div class="stats-inline-block ss-other-options-header-summary"
+                                                 id=":5k.oo_hst"></div>
+
+                                        </div>
+
+                                        <div class="magic-list parameter-list" data-section="parameters">
+
+                                            <div class="magic-list-item parameter" data-type="parameter">
+                                                <div class="ss-header stats-inline-block">
+
+                                                    <select class="stats-inline-block" data-attr="paramName">
+                                                        <option value="" disabled selected>Select an option</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="valContainer">
+
+                                                    <div class="paramValue">
+                                                    </div>
+
+                                                    <div class="operation">
+                                                    </div>
+
+                                                    <div class="extra">
+                                                    </div>
+                                                </div>
+
+                                                <div class="help">
+                                                </div>
+
+                                                <label class="ss-add-other removeParameter"><a
+                                                        href="javascript:%20void(0)">Remove</a></label>
+
+                                                <label class="ss-add-other reset"><a
+                                                        href="javascript:%20void(0)">Reset</a></label>
+
+                                                <label class="ss-add-other addParameter"><a
+                                                        href="javascript:%20void(0)">Add</a></label>
+
+                                            </div>
+
+                                            <div class="ss-header">
+                                                <select class="ss-ghost-input ss-header stats-inline-block"  disabled>
+                                                    <option value="" disabled selected>Select an option</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div	
+                                            class="ss-other-options-header stats-zippy-header stats-zippy-collapsed"
+                                            id=":5k.oo_ooh" tabindex="0">
+                                            <span>Special Parameters</span>
+
+                                            <div
+                                                class="stats-inline-block ss-other-options-header-summary"
+                                                id=":5k.oo_hst"></div>
+                                        </div>
+
+                                        <div class="special-parameter-list" data-section="special">
+
+                                            <div class="magic-list-item parameter" data-type="special-parameter">
+                                                <div class="ss-header stats-inline-block">
+
+                                                    <select class="stats-inline-block" data-attr="specialParamName">
+                                                        <option value="" disabled selected>Select an option</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="valContainer">
+
+                                                    <div class="paramValue">
+                                                    </div>
+
+                                                    <div class="operation">
+                                                    </div>
+
+                                                    <div class="extra">
+                                                    </div>
+                                                </div>
+
+                                                <div class="help">
+                                                </div>
+
+                                                <label class="ss-add-other removeParameter"><a
+                                                        href="javascript:%20void(0)">Remove</a></label>
+
+                                                <label class="ss-add-other reset"><a
+                                                        href="javascript:%20void(0)">Reset</a></label>
+
+                                                <label class="ss-add-other addParameter"><a
+                                                        href="javascript:%20void(0)">Add</a></label>
+
+                                            </div>
+
+                                            <div class="ss-header">
+                                                <select class="ss-ghost-input ss-header stats-inline-block"  disabled>
+                                                    <option value="" disabled selected>Select an option</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div
+                                            class="ss-other-options-header stats-zippy-header stats-zippy-collapsed"
+                                            id=":5k.oo_ooh" tabindex="0">
+                                            <span>Shortcuts</span>
+
+                                            <div
+                                                class="stats-inline-block ss-other-options-header-summary"
+                                                id=":5k.oo_hst"></div>
+                                        </div>
+
+                                        <div class="shortcut-list" data-section="shortcuts">
+
+                                            <div class="magic-list-item shortcut" data-type="shortcut">
+                                                <div class="ss-header stats-inline-block">
+
+                                                    <select class="stats-inline-block" data-attr="shortcutName">
+                                                        <option value="" disabled selected>Select an option</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="valContainer">
+
+                                                    <div class="paramValue">
+                                                    </div>
+
+                                                    <div class="operation">
+                                                    </div>
+
+                                                    <div class="extra">
+                                                    </div>
+                                                </div>
+
+                                                <label class="ss-add-other removeParameter"><a
+                                                        href="javascript:%20void(0)">Remove</a></label>
+
+                                                <label class="ss-add-other reset"><a
+                                                        href="javascript:%20void(0)">Reset</a></label>
+
+                                                <label class="ss-add-other addParameter"><a
+                                                        href="javascript:%20void(0)">Add</a></label>
+
+                                            </div>
+
+                                            <div class="ss-header">
+                                                <select class="ss-ghost-input ss-header stats-inline-block"  disabled>
+                                                    <option value="" disabled selected>Select an option</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ss-widget-nodrag stats-inline-block">
+                                            <div class="stats-inline-block ss-header">
+                                                <div class="stats-inline-block jfk-button jfk-button-action"
+                                                     id="ss-send-form-button" style="-webkit-user-select: none;"
+                                                     tabindex="0">Preview Data</div>
+
+                                                <div class="stats-inline-block download jfk-button jfk-button-action "
+                                                     style="-webkit-user-select: none;" tabindex="0">Download
+                                                </div>
+                                                <a class=" downloadAnchor" href=""></a>
+                                            </div>
+                                        </div>
+
+                                        <iframe id="downloadFrame" style="display:none"></iframe>
+
+                                        <div class="ss-data-validation-error ss-header validation-message"
+                                             style="-webkit-user-select: none; display:none">
+                                            <p>There were errors during parameter validation:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-panel">
+                            <div class="ss-page-tab-container">
+
+                                <div class="confirmation-settings" id="results-container"
+                                     style="display: none">
+                                    <div class="page-divide"></div>
+
+                                    <div class="confirmation-options">
+
+                                    </div>
+                                    <div class="ss-page-tab">
+                                        <span class="ss-page-tab-text">Results Tab</span>
+                                    </div>
+
+                                    <div class="ss-page-tab-triangle"></div>
+
+                                    <div
+                                        class="confirmation-message-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

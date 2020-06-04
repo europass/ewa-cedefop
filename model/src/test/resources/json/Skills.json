@@ -1,0 +1,116 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "LearnerInfo": {
+            "Skills": {
+                "Linguistic": {
+                    "MotherTongue": [
+                        {
+                            "Description": {
+                                "Code": "el",
+                                "Label": "Greek"
+                            }
+                        },
+                        {
+                            "Description": {
+                                "Code": "es",
+                                "Label": "Spanish"
+                            }
+                        }
+                    ],
+                    "ForeignLanguage": [
+                        {
+                            "Description": {
+                                "Code": "en",
+                                "Label": "English"
+                            },
+                            "ProficiencyLevel": {
+                                "Listening": "C1",
+                                "Reading": "C2",
+                                "SpokenInteraction": "B2",
+                                "SpokenProduction": "B2",
+                                "Writing": "B1"
+                            },		
+                            "Experience": [{
+                                    "Period": {
+                                        "From": {
+                                            "Year": 2000,
+                                            "Month": 6,
+                                            "Day": 10
+                                        },
+                                        "To": {
+                                            "Year": 2001,
+                                            "Month": 8,
+                                            "Day": 15
+                                        },
+                                        "Current": false
+                                    },
+                                    "Description": "Summer English courses that help me to improve my spoken interaction level",
+                                    "Area": {
+                                        "Code": "option1",
+                                        "Label": "area option1"
+                                    }
+                                }],
+                            "Certificate": [
+                                {
+                                    "Title": "Cambridge Certificate of Proficiency in English"
+                                },
+                                {
+                                    "Title": "Michigan Certificate of Proficiency in English"
+                                }
+                            ]
+                        },
+                        {
+                            "Description": {
+                                "Code": "it",
+                                "Label": "Italian"
+                            },
+                            "ProficiencyLevel": {
+                                "Listening": "B1",
+                                "Reading": "B2",
+                                "SpokenInteraction": "B1",
+                                "SpokenProduction": "A2",
+                                "Writing": "A1"
+                            },
+                            "Certificate": [
+                                {
+                                    "Title": "Certificate of Adequacy in Italian"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "Communication": {
+                    "Description": "Communication skills: <ul><li>bla</li><li>blah</li></ul>"
+                },
+                "Organisational": {
+                    "Description": "Organisational skills: <ul><li>bla</li><li>blah</li></ul>"
+                },
+                "JobRelated": {
+                    "Description": "Job-Related skills: <ul><li>bla</li><li>blah</li></ul>"
+                },
+                "Computer": {
+                    "Description": "- competent with most Microsoft Office programmes<br/>- experience with HTML",
+                    "ProficiencyLevel": {
+                        "Information": "A",
+                        "Communication": "B",
+                        "ContentCreation": "C",
+                        "Safety": "A",
+                        "ProblemSolving": "B"
+                    },
+                    "Certificate": [
+                        {
+                            "Title": "ACDL"
+                        },
+                        {
+                            "Title": "Java certifications"
+                        }
+                    ]
+                },
+                "Driving": {
+                    "Description": ["A", "B1"]
+                }
+            }
+        }
+    }
+}

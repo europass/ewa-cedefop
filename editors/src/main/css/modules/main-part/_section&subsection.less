@@ -1,0 +1,469 @@
+
+
+@button-small-radius: 4px;
+@section-button-avg-radius: 4px;
+
+
+/********* SECTIONS / SUBSECTIONS ************/
+@compose-section-margin: 0.4rem 0 -0.1rem;
+@compose-section-padding: 40px 0 17px;
+
+
+@language-heading-padding:  0 2.3rem 0 0;
+
+.compose-section-bg{
+  background: none repeat scroll 0 0 transparent;
+  border: 1px solid transparent;
+  border-radius: @section-button-avg-radius;
+  margin: @compose-section-margin;
+  padding: @compose-section-padding;
+}
+
+.compose-section{
+  .compose-section-bg;
+}
+.section ,
+.subsection  {
+  position: relative;
+}
+
+.section,
+.subsection,
+ol.compose-list > li.list-item{
+  .compose-section;
+}
+
+
+.cv .section ol.compose-list li.compose-list,.esp .compose,
+.section,
+.subsection,
+ol.compose-list > li.list-item {
+  margin: 0;
+  padding: 55px 0 60px;
+  position: relative;
+}
+
+.cv .section ol.compose-list li.compose-list.empty,
+.esp .compose.empty,
+.section.empty,
+.subsection.empty,
+ol.compose-list > li.list-item.empty {
+    padding: 20px 0 20px;
+}
+
+
+.section ,
+.subsection  {
+  position: relative;
+}
+
+.section:not(.foreign-languages-details) {
+  .sortable{
+    .value span{
+      line-height:1.4;
+    }
+  }
+}
+
+
+
+@media screen and(max-width:@phone-width-limit){
+  .section.section.section:not(button){
+    border-bottom:3px solid @blue-lightest;
+  }
+}
+
+.section.subsection-container.personalskills {
+  padding-top: 31px;
+  padding-bottom: 0;
+}
+
+.section,
+.subsection,
+ol.compose-list > li.list-item{
+  margin:0;
+}
+
+
+
+
+
+.section.item .value.Description.Label{
+  p{
+    line-height:1.4;
+  }
+}
+
+
+
+.list-item,
+.subsection,
+.section,
+dl.foreign-language-details{
+  position:relative;
+  &:before{
+    height:100%;
+    width:100%;
+    left:-100%;
+  }
+}
+
+
+/*********  HEADINGS         ************/
+.cv .section > .label,
+.cv .section .subsection > .label {
+  .cv-section-label-layout;
+  color: @mid-blue;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  line-height: @section-value-line-height;
+  display: inline-block;
+  font-size:@cv-headings-font-size;
+  position: relative;
+}
+
+.cv-section-label-layout {
+  width: @cv-headings-width;
+  margin-right: @inline-block-space;
+  padding: 0 @cv-section-label-right-padding 0 0;
+}
+
+
+.cv .section a,
+.cl .section a{
+  color: black ;
+}
+.cv .section .Email a,
+.cl .section .Email a{
+  text-decoration: none;
+}
+.cv .section a:visited,
+.cl .section a:visited{
+  color: black;
+}
+
+
+
+
+.cv .section > .label,
+.cv .section > .value,
+.cv .subsection > .label,
+.cv .subsection > .value,
+.cv ol.compose-list > li.compose-list > dd.value,
+.cv .section > dd.line{
+  display: inline-block;
+  @media screen and(max-width:@phone-width-limit){
+    display:block;
+  }
+}
+
+.cv .section > .value,
+.cv .subsection.skills > .value{
+  width: @cv-section-content-width;
+  vertical-align:top;
+  line-height:1.4;
+  @media screen and(max-width:@phone-width-limit){
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+
+.cv .section > dd.line:after {
+  background: none repeat scroll 0 0 #1093CB;
+  bottom: 0;
+  content: "";
+  height: 0.7rem;
+  position: absolute;
+  right: 0;
+  width: 0.8rem;
+}
+
+.cv .section > dd.line{
+  border-bottom: 2px solid @borderbottom-blue;
+  width: 65%;
+  height: 10px;
+  position: relative;
+  @media screen and(max-width:@phone-width-limit){
+    display:none!important;
+  }
+}
+
+.cv table.languages {
+  @media screen and(max-width:@phone-width-limit) {
+    tr.compose-list td.label .language-title {
+      padding-top: 2em;
+    }
+    tr.language.compose-list > td.menu-placeholder menu.manage {
+      top: -2.8rem;
+    }
+  }
+}
+
+
+/***************************
+*HOVER ON SECTIONS AND SUBSECTIONS
+****************************/
+.section.item,
+.section.item.tap-hover,
+.elp table.list-actions > tbody > tr.item.tap-hover ,
+.subsection.item,
+.subsection.item.tap-hover,
+.section .compose-list > li.list-item,
+.section .compose-list > li.list-item.tap-hover,
+ol.compose-list > li.compose-list,
+ol.compose-list > li.compose-list.tap-hover,
+ol.compose-list.tap-hover > li.compose-list,
+.tap-hover.list-item.opens-modal-form,
+.tap-hover{
+  border:1px solid transparent;
+}
+.subsection.item {
+  @media screen and(max-width:@tablet-width-limit){
+    padding-bottom: 3em;
+  }
+}
+
+.section.item:hover,
+.section.item.tap-hover,
+.elp table.list-actions > tbody > tr.item.tap-hover ,
+.subsection.item:hover,
+.subsection.item.tap-hover,
+.section .compose-list > li.list-item:hover,
+.section .compose-list > li.list-item.tap-hover,
+ol.compose-list > li.compose-list:hover,
+ol.compose-list > li.compose-list.tap-hover,
+ol.compose-list.tap-hover > li.compose-list,
+.tap-hover.list-item.opens-modal-form,
+.tap-hover,
+.foreign-language-skills.empty:hover{
+  background-color:@blue-lightling;
+  border:1px dashed @blue-normal;
+  cursor: pointer;
+}
+
+@media screen and (min-width:@tablet-width-limit){
+  .section.item:hover,
+  .section.item.tap-hover,
+  .elp table.list-actions > tbody > tr.item.tap-hover ,
+  .subsection.item:hover,
+  .subsection.item.tap-hover,
+  .section .compose-list > li.list-item:hover,
+  .section .compose-list > li.list-item.tap-hover,
+  ol.compose-list > li.compose-list:hover,
+  ol.compose-list > li.compose-list.tap-hover,
+  ol.compose-list.tap-hover > li.compose-list,
+  .tap-hover.list-item.opens-modal-form,
+  .tap-hover,
+  .foreign-language-skills.empty:hover{
+    .empty.add{
+      &:before{
+        color:@blue-darkling;
+      }
+      span{
+        color:@blue-darkling;
+      }
+    }
+  }
+}
+
+
+
+.section.empty.item:hover,
+.section.empty.item.tap-hover,
+.subsection.empty.item:hover,
+.subsection.empty.item.tap-hover,
+table.list-actions td.empty:hover,
+table.list-actions td.empty.tap-hover,
+.opens-modal-form-lang-empty.empty:hover,
+.opens-modal-form-lang-empty.empty.tap-hover
+{
+  background-color:@blue-lightling;
+  border:1px dashed @blue-normal;
+  cursor: pointer;
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+@media only screen and ( max-width: @tablet-width-limit ) {
+  .cv .section ol.compose-list li.compose-list {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
+@media screen and(max-width:@phone-width-limit) {
+  .section,
+  .subsection{
+    background-color: white;
+    border: none !important;
+    margin-bottom: 3px;
+  }
+  .cv .section ol.compose-list li.compose-list, .esp .compose, .section, .subsection, ol.compose-list > li.list-item{
+    padding: 25px 10px 25px;
+  }
+  .cv.cv{
+    .section,.subsection{
+      > .value{
+        display: inline;
+        font-size: 13px;
+      }
+    }
+  }
+  .cv .section ol.compose-list li.compose-list.empty{
+    position: static;
+  }
+  .cv .section ol.compose-list li.compose-list{
+    position: relative;
+    padding-top: 3em;
+    margin-bottom: 0.8em;
+  }
+  .cv .section > .label,
+  .cv .section .subsection > .label {
+    width: 78%;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .cv .section.empty > .label,
+  .cv .section .subsection.empty > .label {
+    text-align: left;
+  }
+  .section .value.Description.Label{
+    padding-top:10px;
+  }
+  .cv .section{
+    .empty.add{
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translatey(-50%);
+    }
+  }
+  .cv button.section.section.compose-list.empty.empty.empty{
+    text-align: right;
+    padding-right: 15px!important;
+  }
+  .section.compose-list{
+    background:transparent;
+  }
+  .cv.cv.compose {
+    .empty-add-button, div.empty.add span, .img-placeholder.img-placeholder.img-placeholder + span {
+      display: none;
+    }
+    .tap-hover {
+      .empty-add-button, div.empty.add span, .img-placeholder.img-placeholder.img-placeholder + span {
+        display: inline;
+      }
+    }
+    .section > .label {
+      margin-right: 0;
+    }
+    .subsection-container {
+      padding: 25px 10px 25px !important;
+      margin-bottom: 3px !important;
+      margin-top: 0 !important;
+    }
+    .section.work-education ol.sortable.compose-list li.compose-list.empty button {
+      padding: 0;
+    }
+    button.section.empty.compose-list.compose-list.compose-list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      width: 100%;
+      transform: none;
+    }
+  }
+  .compose-list > li.list-item{
+    background:transparent;
+  }
+  /****PERSONAL SKILLS*********/
+  .section.subsection-container.personalskills {
+    > dt{
+      /*      width:auto!important;
+            border-bottom:2px solid  @blue-darkling;*/
+    }
+    .MotherTongue .MotherTongue, .value > .Driving{
+      padding-right:100px;
+    }
+    dd.line.line.line{
+      display:inline-block;
+      width:35%;
+      &:after{
+        display:none!important;
+      }
+    }
+    .subsection{
+      .label{
+        font-size:14px;
+      }
+      .empty.add{
+        &:before{
+          font-size:15px;
+        }
+        span{
+          font-size:14px;
+        }
+      }
+      .value{
+        padding-right:0
+      }
+    }
+  }
+  .tap-hover .empty-add-button span, .compose .tap-hover div.empty.add span, .tap-hover .empty-add-button:before, .compose .tap-hover div.empty.add:before{
+    color:@blue-darkling;
+  }
+  .subsection.compose-list.tap-hover .img-placeholder:before,.subsection.compose-list.tap-hover .img-placeholder.img-placeholder.img-placeholder.img-placeholder + span{
+    color:@blue-darkling;
+  }
+  .cv .section.subsection-container button.opens-modal-form.add, button.opens-modal-form.add{
+    padding-left:0;
+  }
+  .cv   .personalskills.section .empty.add{
+    right:5px;
+  }
+  .subsection.empty.item:hover{
+    background-color:transparent;
+  }
+  .subsection.empty.item.tap-hover{
+    background-color:@blue-lightling;
+  }
+  li.compose-list.empty.subsection-container button.opens-modal-form.add:not(.empty) span.img-placeholder,
+  .cv .work-education.subsection-container button.opens-modal-form.add:not(.empty) span.img-placeholder,
+  .compose-list.additional.empty button.opens-modal-form.add:not(.empty) span.img-placeholder,
+  .cv .languages .compose-list.nodrag.table-footer button.opens-modal-form.add:not(.empty) span.img-placeholder{
+    font-size:21px;
+  }
+  .cv.cv.compose .section.work-education ol.sortable.compose-list li.compose-list.empty.subsection-container button,.cv .work-education.subsection-container .compose-list.empty button.opens-modal-form.add:not(.empty),.compose-list.additional.empty button.opens-modal-form.add:not(.empty){
+    text-align: center;
+  }
+  .cv.cv.compose .compose-list.empty.subsection-container .img-placeholder.img-placeholder.img-placeholder + span,
+  .cv .work-education.subsection-container button.opens-modal-form.add:not(.empty) span.img-placeholder + span,
+  .compose-list.additional.empty button.opens-modal-form.add:not(.empty) span.img-placeholder + span,
+  .cv .languages .compose-list.nodrag.table-footer button.opens-modal-form.add:not(.empty) span.img-placeholder + span{
+    display:inline-block;
+  }
+  .cv .section.subsection-container button.opens-modal-form.add span:not(.img-placeholder),
+  button.opens-modal-form.add span:not(.img-placeholder),
+  .cv .work-education.subsection-container  button.opens-modal-form.add span:not(.img-placeholder),
+  .compose-list.additional.empty button.opens-modal-form.add span:not(.img-placeholder),
+  .cv .languages .compose-list.nodrag.table-footer button.opens-modal-form.add span:not(.img-placeholder){
+    line-height:21px;
+  }
+  .cv span.description{
+    margin-top:-6px;
+  }
+  .cv .section.tap-hover .empty.add,.cv .subsection.tap-hover .empty.add{
+    background-color:@blue-lightling;
+  }
+}

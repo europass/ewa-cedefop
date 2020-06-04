@@ -1,0 +1,65 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "LearnerInfo": {
+            "Identification": {
+                "ContactInfo": {
+                    "Address": {
+                        "Contact": {
+                            "AddressLine": "Konitsis 11B",
+                            "Municipality": "Marousi",
+                            "PostalCode": "15125",
+                            "Country": {
+                                "Code": "EL",
+                                "Label": "Hellas"
+                            }
+                        }
+                    }
+                    ,
+                    "Telephone": [
+                        {
+                            "Use": {
+                                "Code": "work",
+                                "Label": "Work"
+                            },
+                            "Contact": "2108029409"
+                        },
+                        {
+                            "Use": {
+                                "Code": "mobile",
+                                "Label": "Mobile"
+                            },
+                            "Contact": "6945000100"
+                        }
+                    ]
+                    ,
+                    "Email": [
+                        {
+                            "Contact": "alexia.antoniou@provider.com"
+                        }
+                    ]
+                    ,
+                    "Website": [
+                        {
+                            "Contact": "www.mytestweb.gr"
+                        },
+                        {
+                            "Contact": "www.mytestweb2.gr"
+                        }
+                    ]
+                    ,
+                    "InstantMessaging": [
+                        {
+                            "Use": "msn",
+                            "Contact": "mymsn"
+                        },
+                        {
+                            "Use": "twitter",
+                            "Contact": "mytwitter.gr"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

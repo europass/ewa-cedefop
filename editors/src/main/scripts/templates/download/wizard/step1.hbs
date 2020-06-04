@@ -1,0 +1,34 @@
+<header>
+<legend>{{get_text "export.wizard.step1.desc" group="GuiLabel"}}</legend>
+</header>
+
+<div class="note" style="display:none">
+	<div class="warning">
+		<span class="icon"></span>
+		<div class="text">
+			<span class="warning">{{get_text "text.important" group="GuiLabel"}}</span
+			>{{get_text "warning.empty.contents" group="Notification"}}
+		</div>
+	</div>
+</div>
+
+
+{{#each docs}}	
+	<fieldset class="export-checkbox">
+		<input  type="checkbox"
+				id="Export_Option_Doc_{{name}}"
+				data-help-key="export.wizard.help.step1.document.option"
+				data-help-position="left"
+				class="css-checkbox formfield help
+					{{#if empty}}disabled{{else}}enabled{{/if}}
+					{{#if incompatible}}incompatible{{else}}compatible{{/if}}"
+				name="{{name}}"				
+				{{#unless empty}}{{#unless incompatible}}checked="checked"{{/unless}}{{/unless}}
+				{{#if empty}}disabled{{/if}}>
+		<label  for="Export_Option_Doc_{{name}}" 
+				class="css-label checkbox-label formfield-label
+					{{#if empty}}disabled{{else}}enabled{{/if}}
+					{{#if incompatible}}incompatible{{else}}compatible{{/if}}"> {{title}} </label>
+	</fieldset>
+
+{{/each}}

@@ -1,0 +1,1074 @@
+@blue-black: #2F4A67;
+
+#PostToJobPortalsForm {
+  color: @grey-dark-text-two;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  .job-portals-info {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 790px;
+    z-index: 1002;
+    font-size: 1 rem;
+    text-align: left;
+    .job-portals-side {
+      display: block;
+    }
+    button.close.close-job-portals-btn {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      left: -30px;
+      z-index: 600;
+    }
+    .ui-main-area {
+      .box-sizing;
+      overflow-y: visible;
+      overflow-x: hidden;
+      height: 100%;
+      width: 790px;
+    }
+    #share-for-review,
+    #manage-share-drawer {
+      width: 630px;
+      height: inherit;
+      margin: 40px 80px;
+      #notification-copy,
+      #notification-revoke {
+        .notifications-wrapper-mixin;
+        section.success {
+          z-index: 700;
+          top: -30px;
+          width: 19.375rem;
+          left: auto !important;
+          right: 414px !important;
+        }
+      }
+      header {
+        padding-top: 0px;
+        &.manage-hdr {
+          margin-bottom: 3rem;
+        }
+        .top-share-btns {
+          display: inline-block;
+          .toggle-share-btn {
+            height: 50px;
+            margin-right: -4px;
+            width: auto;
+            > span.txt {
+              display: inline-block;
+              top: -5px;
+              position: inherit;
+              text-transform: uppercase;
+            }
+            &.blue-pressed {
+              -webkit-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+              -moz-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+              box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+              text-shadow: none;
+            }
+          }
+        }
+      }
+      .manage-share-tile {
+        height: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        border-bottom: 2px @light-grey solid;
+        margin-left: -1rem;
+        color: @bright-blue;
+        &:last-child {
+          margin-bottom: 5rem;
+        }
+        .manage-share-link {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          height: 100%;
+          width: 550px;
+          display: inline-block;
+          .icon {
+            background-repeat: no-repeat;
+            background-image: url("@{img-base-url}sprites/locations_fileformats_upload.png@{img-suffix-url}${project.version}");
+            background-color: transparent;
+            opacity: 0.5;
+            width: 38px;
+            float: left;
+            height: 100%;
+            content: "";
+          }
+          #icon-dropbox {
+            background-position: 0px -295px;
+          }
+          #icon-googledrive {
+            background-position: 0px -175px;
+          }
+          #icon-onedrive {
+            background-position: 0px -415px;
+          }
+          .txt {
+            margin-left: 1rem;
+            vertical-align: middle;
+            vertical-align: bottom;
+            line-height: 2rem;
+          }
+        }
+        .manage-share-revoke {
+          display: inline-block;
+          float: right;
+          border: none;
+          background: none;
+          line-height: 2rem;
+          font-weight: bold;
+          color: @bright-blue;
+          padding: 0;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+        .manage-action.link-delete {
+          display: none;
+          position: relative;
+          z-index: 2;
+          right: 4rem;
+          width: 18rem;
+          bottom: 9.5rem;
+          left: 22rem;
+          .arrow {
+            background: @very-light-grey;
+            position: relative;
+            padding: 0rem;
+            border-radius: 4px;
+            margin-right: -6px;
+            border: 1px solid @very-light-grey;
+            .message-inner {
+              &:before {
+                border-color: transparent;
+                border-style: solid;
+                content: '';
+                height: 0;
+                width: 0;
+                position: absolute;
+                border-top: 5px solid @very-light-grey;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-width: 10px;
+                border-left: 10px solid transparent;
+                top: 101%;
+                right: 3%;
+              }
+              menu {
+                text-align: right;
+                button {
+                  .button;
+                  width: auto;
+                  padding: 0.5rem 1rem;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+          * {
+            font-size: 0.85rem;
+            font-weight: normal;
+            text-shadow: none;
+            color: @very-dark-grey;
+            padding: 0.8rem;
+          }
+        }
+      }
+      .share-note {
+        >span.share-content {
+          background: url("@{img-base-url}notifications/msg-warning-indicator.png@{img-suffix-url}${project.version}") no-repeat left 1px transparent;
+          margin-top: 3rem;
+          padding-left: 40px;
+          width: 37rem;
+        ;
+          display: inline-block;
+          >span.share-txt {
+            text-align: justify;
+            font-size: 15px;
+            line-height: 1.3rem;
+          }
+        }
+      }
+      fieldset {
+        min-width: inherit;
+        .placeholding.share-option {
+          display: inline-block;
+          .formfield.share-cloud-link {
+            padding-left: 42px;
+            font-size: 14px;
+            color: #AFB4B8;
+            width: 560px;
+            display: inline-block;
+            text-overflow: ellipsis;
+            &:focus {
+              background-color: #F5F5F5 !important;
+              box-shadow: 0 1px 0 #b5c9d4 inset, 0 1px 2px #b5c9d4 inset, 0 -1px 0 #d5e1e8 inset !important;
+            }
+          }
+          .button.copy-link-action {
+            border-radius: 3px;
+            height: 55px;
+            margin-left: 5px;
+            top: -10px;
+            width: 60px;
+            > span {
+              background: url("@{img-base-url}copy_link_icon.png@{img-suffix-url}${project.version}") no-repeat 0px 0px;
+              display: block;
+              width: 35px;
+              height: 38px;
+              margin-left: -8px;
+              margin-top: -11px;
+            }
+          }
+          @media screen and (min-width: @desktop-width-limit) and (-webkit-min-device-pixel-ratio:0) {
+            ::i-block-chrome,
+            .button.copy-link-action {
+              top: -9px !important;
+              padding-top: 9px !important;
+              > span {
+                margin-top: 0 !important;
+              }
+            }
+          }
+          #share-googledrive {
+            background: url("@{img-base-url}share-googledrive-icon.png@{img-suffix-url}${project.version}") no-repeat 10px 14px #F5F5F5;
+          }
+          #share-dropbox {
+            background: url("@{img-base-url}share-dropbox-icon.png@{img-suffix-url}${project.version}") no-repeat 10px 14px #F5F5F5;
+          }
+          #share-onedrive {
+            background: url("@{img-base-url}share-onedrive-icon.png@{img-suffix-url}${project.version}") no-repeat 10px 19px #F5F5F5;
+          }
+          ::-moz-selection {
+            background: #ffff9e;
+            color: @very-dark-grey;
+          }
+          ::selection {
+            background: #ffff9e;
+            color: @very-dark-grey;
+          }
+        }
+      }
+      .editor {
+        #share-comment-textarea {
+          box-sizing: border-box;
+          height: 200px;
+          padding: 0.75rem 1.25rem;
+          resize: none;
+          width: 100%;
+          height: 110px;
+          color: @very-dark-grey;
+          font-size: 1.3rem !important;
+        }
+      }
+      .button.cancel {
+        float: left;
+        height: 4rem;
+        width: auto;
+        min-width: 12rem;
+        text-transform: uppercase;
+      }
+      .button.send {
+        float: right;
+        height: 4rem;
+        width: auto;
+        min-width: 16rem;
+        margin-bottom: 5rem;
+        > span {
+          .button-with-span-image-bg(url("@{img-base-url}sprites/contact_email_icon.png@{img-suffix-url}${project.version}"),
+                  0,
+                  center);
+          display: inline-block;
+          line-height: 23px;
+          padding-left: 40px;
+        }
+      }
+    }
+    .mid-divider {
+      width: 2px;
+      height: 635px;
+      border-right: 1px solid @medium-light-grey;
+      margin-left: 392px;
+      margin-top: 75px;
+      position: relative;
+    }
+    .ui-job-portals-area.drawer{
+      margin-top: 3rem;
+      padding: 0 2rem;
+    }
+    .ui-job-portal-logo-area {
+      position: static;
+      vertical-align: top;
+      height: inherit;
+      box-sizing: border-box;
+      padding: 0;
+      cursor:pointer;
+      &:hover .icon{
+        box-shadow:none;
+        transform:scale(1.05);
+      }
+    }
+    
+    .ui-job-portals-area.drawer {
+      border: none;
+      h2 {
+        color: @quite-dark-grey;
+        font-size: 2rem;
+        text-align: center;
+        + p {
+          color: @grey-dark-text-two;
+          text-align: center;
+          margin: 2rem;
+        }
+      }
+
+      .ui-job-portal-area {
+        .feedback-area {
+          margin-top: 3rem;
+          section.notification.error {
+            background-color: @very-light-grey;
+            background-image: url("@{img-base-url}notifications/msg-error-indicator.png@{img-suffix-url}${project.version}");
+            background-position: 2% center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            background-position: 2% center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            margin-top: 30px auto 0 auto;
+            padding: 2% 6% 2% 8%;
+            position: relative;
+            padding: 2% 6% 2% 8%;
+            position: relative;
+            width: 75%;
+            .message-area {
+              font-size: 0.9rem;
+              line-height: 1.2rem;
+              > p {
+                color: @warning-msg-text-clr !important;
+              }
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: @tablet-width-limit) {
+        .on-error {
+          max-width: 750px;
+          margin: auto;
+        }
+      }
+      .on-error,
+      .on-success {
+        text-align: center;
+      }
+      .on-success {
+        .success-icon {
+          background: url("@{img-base-url}notifications/msg-success-indicator-large.png@{img-suffix-url}${project.version}") no-repeat scroll center transparent;
+          display: block;
+          width: 108px;
+          height: 108px;
+          position: relative;
+          left: 50%;
+          margin-left: -54px;
+          margin-top: 2rem;
+        }
+        .text {
+          color: @quite-dark-grey;
+          font-size: 2rem;
+          font-weight: 300;
+          margin: 65px 120px 25px;
+        }
+        .button {
+          margin-top: 2rem;
+        }
+      }
+      .on-error{
+        .feedback-area {
+          margin-top: 3rem;
+          section.notification.error {
+            background-color: @very-light-grey;
+            background-image: url("@{img-base-url}notifications/msg-error-indicator.png@{img-suffix-url}${project.version}");
+            background-position: 2% center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            background-position: 2% center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            margin-top: 30px auto 0 auto;
+            padding: 2% 6% 2% 8%;
+            position: relative;
+            padding: 2% 6% 2% 8%;
+            position: relative;
+            width: 75%;
+            .message-area {
+              font-size: 0.9rem;
+              line-height: 1.2rem;
+              > p {
+                color: @warning-msg-text-clr !important;
+              }
+            }
+          }
+        }
+        .text {
+          color: @quite-dark-grey;
+          font-size: 2rem;
+          font-weight: 300;
+          margin: 65px 120px 25px;
+        }
+        .button {
+          margin-top: 2rem;
+        }
+      }
+    }
+    .ui-job-portal-logo-area {
+        .icon {
+            position: relative;
+            z-index: 0;
+            border: 1px solid @light-grey;
+            border-radius: @button-small-radius;
+            background: #fff;
+            transition:box-shadow 0.3s ease-in, transform 0.3s ease-in;
+            display: block;
+            margin: 1rem auto 0;
+            height: 70px;
+            background-size: 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+            width:90%;
+            &:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            &#xing{
+                background-image:url("../images/xing-logo.png");
+                background-size: 67%
+            }
+            &#monster{
+                background-image:url("../images/Monster-Logo2.png");
+            }
+            &#eures{
+                background-image:url("../images/eures_logo_new.png");
+            }
+            &#cvlibrary{
+                background-image:url("../images/cvl-new-logo-blue-rgb.png");
+                background-size: 55%;
+            }
+            &#anpal{
+                background-image:url("../images/anpal.jpg");
+                background-size: 95%;
+            }
+            &#indeed{
+                background-image:url("../images/indeed-logo.png");
+                background-size: 55%;
+            }
+            img{
+                display:none;
+            }
+        }
+        &.active {
+            .icon {
+                border: 2px solid @blue-black;
+            }
+        }
+    }
+    .ui-job-portal-area.default{
+      .emailNote, .sizeNoteNoPost, .sizeNotePostNoAttachments {
+        font-style: italic;
+      }
+      &:not(.active) > button {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        font-size: 0;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        box-shadow: none;
+        &:before, &:after{
+          display: none;
+        }
+      }
+      .note.job-portal {
+        padding: 2rem;
+        line-height: 1.2rem;
+        font-size: 0.9em;
+        border: 2px solid @blue-black;
+        border-radius: @button-small-radius;
+        @media screen and(max-height:900px) {}
+        @media screen and(max-height:600px) {}
+        .button.submit {
+          width: auto;
+        }
+        ul, li {
+          list-style: disc inside none;
+        }
+        .text{
+          margin-bottom: 2rem;
+        }
+        p{
+          margin-bottom: 1rem;
+        }
+        p.monster-warning{
+          font-style: italic;
+        }
+        p.monster-warning span{
+          color: orange;
+        }
+        fieldset.environmentInfo {
+          margin-top: 20px;
+        }
+        input[type=checkbox].css-checkbox + label.css-label,
+        input[type=radio].css-checkbox + label.css-label {
+          width: auto;
+          line-height: 1;
+          font-size: inherit;
+          margin-bottom: 0;
+          border: none;
+          background: none;
+          padding: 0px 0px 0px 40px;
+          &:before {
+            left: 0;
+          }
+          &:after {
+            left: 7px; 
+          }
+        }
+        .select {
+          border:1px solid #e3e3e3;
+          border-radius:3px;
+          overflow: hidden;
+          width: 200px;
+          height: 40px;
+          position: relative;
+          display: block;
+          margin-bottom: 40px;
+        }
+        select{
+          width:auto;
+          background: rgba(196, 81, 0, 0.07) url("@{img-base-url}sprites/dropdown_arrow.png@{img-suffix-url}${project.version}") no-repeat 95% center;
+          color: @very-dark-grey;
+          outline: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-radius: 3px;
+          border: 1px solid rgba(196, 81, 0, 0.44);
+          box-sizing: border-box;
+          font-size: 1rem;
+          padding: 16px 50px 16px 16px;
+          height: 3.425rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor:pointer;
+          margin-bottom:20px;
+        }
+        #ui-monster-terms, 
+        #ui-anpal-terms {
+          label{
+            border: none!important;
+            height: auto;
+          }
+        }
+        select::-ms-expand{
+          display:none;
+        }
+        .select:after {
+          padding: 12px 8px;
+          position: absolute; right: 10px; top: 0;
+          z-index: 1;
+          text-align: center;
+          width: 10%;
+          height: 100%;
+          pointer-events: none;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    #share-cloud {
+      background-color: @white;
+      display: block;
+      height: 100%;
+      width: 380px;
+      min-width: 380px;
+      max-width: 380px;
+      width: 380px;
+      margin-top: 2.62rem;
+      margin-left: 254px;
+      padding-left: 42px;
+      .note.cloud {
+        margin-top: 107px;
+        .icon {
+          background: url("@{img-base-url}envelope.png@{img-suffix-url}${project.version}") no-repeat scroll center transparent;
+          display: block;
+          width: 95px;
+          height: 80px;
+          position: relative;
+          left: 50%;
+          margin-left: -80px;
+          margin-bottom: 55px;
+        }
+        .text {
+          margin-bottom: 3rem;
+          text-align: left;
+          width: 272px;
+          height: 6.6rem;
+          line-height: 1.4rem;
+        }
+      }
+      .btn-share-cloud {
+        width: 272px;
+        height: 72px;
+        &:last-child {
+          margin-bottom: 5rem;
+        }
+        .title {
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-bottom: 5px;
+        }
+      }
+      #btn-share-googledrive,
+      #btn-cloud-sign-googledrive {
+        &.green {
+          .share-icon {
+            background-position: 0px -115px;
+          }
+        }
+        /* Specific Rule for IE 10 and above -the first button was appearing wrongly aligned */
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+          margin: 1px 1px 5px 8px !important;
+        }
+        margin-top: 1px;
+        .share-icon {
+          background-position: 0px -175px;
+        }
+      }
+      #btn-share-dropbox,
+      #btn-cloud-sign-dropbox {
+        .share-icon {
+          background-position: 0px -295px;
+        }
+        &.green {
+          .share-icon {
+            background-position: 0px -235px;
+          }
+        }
+      }
+      #btn-share-onedrive,
+      #btn-cloud-sign-onedrive {
+        .share-icon {
+          background-position: 0px -412px;
+        }
+        &.green {
+          .share-icon {
+            background-position: 0px -352px;
+          }
+        }
+      }
+      #manage-shares-txt {
+        margin-top: 1.2rem;
+        color: @bright-blue;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        width: 272px;
+        cursor: pointer;
+      }
+    }
+  }
+  #job-portal-success {
+    .note.job-portal {
+      .success-icon {
+        background: url("@{img-base-url}notifications/msg-success-indicator-large.png@{img-suffix-url}${project.version}") no-repeat scroll center transparent;
+        display: block;
+        width: 108px;
+        height: 108px;
+        position: relative;
+        left: 50%;
+        margin-left: -54px;
+        margin-top: 2rem;
+        @media only screen and ( max-width: @tablet-width-limit ) {
+          background-size: 70px;
+        }
+      }
+      .text {
+        color: @grey-dark-text-two;
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 65px 120px 25px;
+        @media only screen and ( max-width: @tablet-width-limit ) {
+          max-width: 350px;
+          margin: auto;
+          margin-top: 25px;
+          margin-bottom: 10px;
+        }
+        p.monster-success-info {
+          font-size: 0.9rem;
+          font-style: italic;
+          font-weight: 100;
+          margin-top: 50px;
+        }
+      }
+    }
+    #btn-ok-to-job-portal {
+      margin-top: 2rem;
+    }
+  }
+  #job-portal-error {
+    .note.job-portal {
+      .feedback-area {
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+        section.notification.error {
+          background-color: @msg-error-bg;
+          background-image: url("@{img-base-url}notifications/msg-error-indicator.png@{img-suffix-url}${project.version}");
+          background-position: 2% center;
+          background-repeat: no-repeat;
+          border-radius: 4px;
+          background-position: 2% center;
+          background-repeat: no-repeat;
+          border-radius: 4px;
+          margin-top: 30px;
+          padding: 15px 70px;
+          position: relative;
+          width: auto;
+          .message-area {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            > p {
+              color: @grey-dark-text-two !important;
+            }
+          }
+        }
+      }
+      .text {
+        color: @quite-dark-grey;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 0px 0px 15px;
+        width: 93%;
+      }
+    }
+    #btn-return-to-eures,
+    #btn-ok-to-job-portal {
+      width: 272px;
+      height: 72px;
+      //margin-left: -136px;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.ui-job-portal-logo-area .icon{
+  transform: none!important;
+  position: relative!important;
+  z-index: 20!important;
+}
+
+.note.job-portal:before,#share-cloud .note:before {
+  display: none;
+}
+
+#PostToJobPortalsForm #job-portal-error .note.job-portal .text {
+  text-align: left;
+}
+
+#PostToJobPortalsForm .job-portals-info .ui-job-portals-area.drawer h2 {
+  text-align: left;
+  & + p {
+    text-align: center;
+  }
+}
+
+.cl-justification.blue-pressed{
+  background: #128EC4;
+  box-shadow: none!important;
+}
+
+#PostToJobPortalsForm .job-portals-info .ui-job-portal-logo-area .icon {
+  img{
+    max-height: 50px;
+    margin-top: 2.2rem;
+  }
+}
+
+#PostToJobPortalsForm .job-portals-info #monster-default .note.job-portal .select {
+  height: 60px;
+  border: none;
+  position: relative;
+  #monster-country {
+    position: relative;
+    vertical-align: top;
+    filter: none;
+    background-color: rgba(196, 81, 0, 0.07) !important;
+    border: 1px solid rgba(196, 81, 0, 0.44) !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .75rem 1.25rem;
+    height: 3.425rem;
+    margin: 0;
+    color: #555;
+    display: block;
+    font-size: 1.3rem;
+    width: 100%;
+    border-radius: 3px;
+    &:focus {
+      border: 1px solid rgba(43, 72, 104, 0.96) !important;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-right: 5px solid #c45100;
+    border-bottom: 5px solid #c45100;
+    transform: rotate(45deg) translatey(-4px);
+    background: transparent;
+    pointer-events: none;
+    display: block;
+    font-size: 0;
+    padding:0;
+    box-sizing:content-box;
+  }
+}
+
+#PostToJobPortalsForm .job-portals-info.job-portal .ui-job-portals-area h2 + p {
+  text-align: left;
+  margin-left:0;
+}
+
+
+
+#PostToJobPortalsForm .job-portals-info #monster-default .note.job-portal .select.select{
+  width:250px;
+  select#monster-country{
+    font-family:'Open Sans', sans-serif !important;
+    font-size:16px;
+    background-image:none;
+  }
+}
+
+.monster-submit-controls,
+.anpal-submit-controls {
+  margin-top: 20px;
+}
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  #PostToJobPortalsForm .job-portals-info .ui-job-portals-area.drawer {
+    margin-top: 1rem;
+    h2{
+      font-size: 1.5rem;
+    }
+  }
+  #PostToJobPortalsForm .job-portals-info .ui-job-portal-logo-area .icon,
+  #PostToJobPortalsForm .job-portals-info .job-portal-number-4 #anpal-default .icon {
+    height: 60px;
+  }
+  #PostToJobPortalsForm .job-portals-info .ui-eures-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-xing-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-monster-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-cvLibrary-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-cloud-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-anpal-area.drawer,
+  #PostToJobPortalsForm .job-portals-info .ui-indeed-area.drawer {
+    margin-top:0;
+  }
+  #PostToJobPortalsForm .job-portals-info #eures-default .note.job-portal,
+  #PostToJobPortalsForm .job-portals-info #xing-default .note.job-portal,
+  #PostToJobPortalsForm .job-portals-info #monster-default .note.job-portal,
+  #PostToJobPortalsForm .job-portals-info #cvLibrary-default .note.job-portal,
+  #PostToJobPortalsForm .job-portals-info #indeed-default .note.job-portal {
+    padding: 1.5rem 1rem;
+  }
+  #PostToJobPortalsForm .job-portals-info #share-cloud {
+    margin-left: 0;
+  }
+  #PostToJobPortalsForm .job-portals-info .job-portals-side {
+    height: 0!important;
+  }
+  #btn-cancel-share {
+    position:fixed;
+    left: 8px;
+    top: 15px;
+    margin: 0;
+    //background-image: url("@{img-base-url}/sprites/close_small.png@{img-suffix-url}${project.version}");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    text-indent: 0;
+    line-height:32px;
+    display:inline-block;
+      &:before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        content: "×";
+        font-size: 40px;
+        color: rgb(18, 146, 203);
+        line-height: 0.7;
+    }
+  }
+  #PostToJobPortalsForm .job-portals-info .ui-job-portal-logo-area .icon {
+    background-position:50%;
+  }
+  #PostToJobPortalsForm .job-portals-info #share-cloud .note.cloud {
+    margin-top:20px;
+  }
+  #PostToJobPortalsForm .job-portals-info #share-cloud {
+    min-width:0;
+    width:auto;
+  }
+  #PostToJobPortalsForm .job-portals-info #share-cloud .btn-share-cloud {
+    height:50px;
+  }
+  #PostToJobPortalsForm .job-portals-info .job-portals-side .button.cancel {
+    margin-top:0;
+  }
+  #PostToJobPortalsForm .job-portals-info .job-portal-number-4 .ui-job-portal-logo-area .icon {
+    background-position:center;
+  }
+}
+
+#PostToJobPortals {
+  text-align: center;
+}
+#PostToJobPortals:before {
+  font-family: "europass-application" !important;
+  content: "\e924";
+  color: #c55200;
+  font-size: 65px;
+  display: inline-block;
+  margin: 3vw 0;
+}
+
+
+.ui-anpal-area{
+  #ui-anpal-terms {
+    > .text:first-child {
+      margin-bottom: 1rem;
+    }
+    > .text:nth-child(2) {
+      color: @warning-msg-text-clr;
+      input{
+        .input-field-box-fx;
+        .box-sizing;
+        .input-outer-layout;
+        color: @input-text-clr;
+        font-size: 1rem;
+        border-radius:3px;
+        margin-right:10px;
+        display:inline
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: @font-gray-light;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color:  @font-gray-light;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: @font-gray-light;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color:  @font-gray-light;
+        }
+        &:focus{
+          background-color:#EEF0F2!important;
+          outline:none;
+          box-shadow:none;
+          border:1px solid rgba(43,72,104,0.96);
+        }
+      }
+    }
+  }
+
+
+  #fiscalCode {
+    width: 208px;
+    color: black;
+    height:30px;
+    padding-left:10px;
+    font-size: 1rem;
+  }
+  .css-label.formfield-label{
+    height:auto!important;
+  }
+}
+
+
+//--------------------------------------------------------------------------------
+//New style
+
+
+//@desktop-width-limit: 1121px;
+//@tablet-width-limit : 1120px;
+//@phone-width-limit : 640px;
+
+#PostToJobPortalsForm {
+  word-break: break-word;
+  // Select logo / Buttons
+  .job-share-options .ui-job-portal-logo-area {
+    display: inline-block;
+    width: 21.74%;
+    @media only screen and ( max-width: @tablet-width-limit ) {
+      width: 22.453%;
+    }
+    @media only screen and ( max-width: @phone-width-limit ) {
+      width: 21.741%;
+    }
+    @media only screen and (max-width: 470px) {
+      width: 46.741%;
+    }
+    @media only screen and ( min-width: @desktop-width-limit ) {
+      width: 22.55%;
+    }
+    margin-right: 2%;
+    margin-bottom: 2%;
+    font-size: 0;
+    outline: none;
+    .icon {
+      padding: 0;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+  }
+
+  //Info content / block
+  .job-share-content {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+    @media only screen and ( max-width: @tablet-width-limit ) {
+      margin-bottom: 21%;
+    }
+  }
+  
+}
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/EuropassSchema_V3.0.xsd" locale="en">
+    <LearnerInfo>
+        <EducationList>
+            <Education>
+                <Period>
+                    <From year="2000"/>
+                    <To year="2005"></To>
+                </Period>
+            </Education>
+        </EducationList>
+    </LearnerInfo>
+</SkillsPassport>

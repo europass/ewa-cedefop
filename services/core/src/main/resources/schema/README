@@ -1,0 +1,5 @@
+When Changing the Europass XML Schema Version
+
+Modify the URLs in:
+* config.properties for the API (ewa.xsd.v3.0 and europass.xml.schema.location)
+* europass-webapps-services/src/main/resources/xslt/europass-cv-v2.0-to-v3.0.xsl

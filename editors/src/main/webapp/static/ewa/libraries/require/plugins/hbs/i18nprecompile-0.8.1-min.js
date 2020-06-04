@@ -1,0 +1,3 @@
+//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+define(["handlebars","underscore"],function(c,a){function b(d,f,e){e=e||{};f=f||{};if(d&&d.type==="program"&&d.statements){a(d.statements).forEach(function(k,j){var h="<!-- i18n error -->";if(k.type==="mustache"&&k.id&&k.id.original==="$"){if(k.params.length&&k.params[0].string){var g=k.params[0].string;h=f[g]||(e.originalKeyFallback?g:h)}d.statements[j]=new c.AST.ContentNode(h)}else{if(k.program){k.program=b(k.program,f,e)}}});if(d.inverse){b(d.inverse,f,e)}}return d}return function(h,g,f){f=f||{};var e,d;e=c.parse(h);if(g!==false){e=b(e,g,f)}d=new c.Compiler().compile(e,f);return new c.JavaScriptCompiler().compile(d,f)}});
+//>>excludeEnd('excludeAfterBuild')

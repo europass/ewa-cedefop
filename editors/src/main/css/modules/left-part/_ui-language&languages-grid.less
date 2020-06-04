@@ -1,0 +1,342 @@
+/****************
+DROPDOWN UI
+*****************/
+
+#top-ui-languages {
+  padding: 0 25px;
+  * {
+    color: @gold;
+  }
+  .current-language {
+    display: inline-block;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    // height: 3 em;
+    &:hover {
+      cursor: pointer;
+    }
+    * {
+      font-weight: 400;
+    }
+    .label{
+      font-size:13px;
+      &:after{
+        content:"";
+        width:7px;
+        height:7px;
+        border-right:1px solid @gold;
+        border-bottom:1px solid @gold;
+        transform:rotate(-45deg) translatey(-3px);
+        margin-left:10px;
+        display:inline-block;
+      }
+    }
+    .code {
+      font-size:13px;
+      font-weight:bold;
+      display: inline;
+      width: 18px;
+      height: 16px;
+      padding-right:2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  //Tablet
+  @media only screen and (max-width: @tablet-width-limit ) {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    background: transparent;
+    padding-right: 25px;
+    padding-left: 0px;
+    transform:translatey(-50%);
+    .current-language {
+      background: none;
+      padding: 0px;
+      .label {
+        display: none;
+      }
+      .code {
+        position: relative;
+        color: @white;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-right: 40px;
+        &:after {
+          content: @expansion-sign-collapse;
+          position: absolute;
+          top: 2px;
+          right: 8px;
+          font-size: 1.5rem;
+          color: @aside-left-text-blue;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: @tablet-width-limit ){
+  #top-ui-languages.cloud-login-not-available{
+    position:static;
+    transform:none;
+    margin:20px 20px 0 20px;
+    padding:10px;
+    border:1px solid #425c78
+  }
+
+}
+
+
+/******************************************************
+UI LANGUAGES GRID
+*******************************************************/
+#LanguagesGrid {
+  .available-languages {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 630px;
+    z-index: 50;
+    font-size: 1em;
+    text-align: left;
+    .ui-languages-area {
+      height: 90%;
+      width: 90%;
+      overflow-x: hidden;
+      /*overflow-y: auto;*/
+    }
+    .heading {
+      /* EWA-1829*/
+      font-size: 2rem;
+      color: @quite-dark-grey;
+      display: inline-block;
+      margin: 40px 80px;
+    }
+    ul {
+      margin: 0px 80px 40px 80px;
+      li {
+        display: inline-block;
+        width: 49%;
+        border-right: 1px dashed transparent;
+        cursor: pointer;
+        &:hover {
+          * {
+            color: @almost-black;
+            font-weight: bold;
+          }
+        }
+        .locale {
+          width: 90%;
+          height: 100%;
+          display: inline-block;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          z-index: 1000;
+          &:hover {
+            cursor: pointer;
+          }
+          .code {
+            &:before {
+              content: @parenthesis-left;
+              position: relative;
+              right: -3px;
+            }
+            &:after {
+              content: @parenthesis-right;
+              position: relative;
+              left: -3px;
+            }
+          }
+        }
+      }
+      li.left {
+        border-color: @light-grey;
+        .locale {
+          padding-right: 10%;
+        }
+      }
+      li.right {
+        .locale {
+          padding-left: 10%;
+        }
+      }
+      li.selected {
+        &:hover {
+          * {
+            color: @light-blue;
+          }
+        }
+        * {
+          color: @light-blue;
+          font-weight: 600;
+        }
+      }
+    }
+    button.close {
+      .close-button-mixin;
+      position: absolute;
+      top: 15px;
+      right: -30px;
+    }
+    menu {
+      margin: 0px 80px 40px 80px;
+      button.cancel {
+        display: none;
+      }
+    }
+  }
+}
+
+
+#LanguagesGrid .available-languages ul li .locale span{
+  font-size:15px!important;
+}
+
+/* Specific Rule for table widths for Chrome & Safari */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #LanguagesGrid .available-languages ul li .locale:hover {
+    color: @almost-black;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit ) {
+  #LanguagesGrid {
+    z-index: 1002;
+
+    .available-languages {
+      width: 100% !important;
+
+      .ui-languages-area.drawer {
+        width: 100% !important;
+      }
+    }
+    .close {
+      display: none !important;
+    }
+    .cancel {
+      display: block !important;
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@tablet-width-limit){
+  #top-ui-languages{
+    z-index:10;
+    padding-right:30px;
+    .current-language{
+      width:30px;
+      .code:after{
+        right:-23px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:@phone-width-limit){
+  #top-ui-languages{
+    padding-top:0!important;
+  }
+}
+
+
+
+
+@media screen and(max-width:@phone-width-limit) {
+  [id*="top-ui-cloud-"] a{
+    margin-top:0;
+  }
+  #top-ui-languages{
+    position:static;
+    margin:20px 25px 0;
+  }
+  #top-ui-languages .current-language .code:after{
+    right:-20px;
+  }
+  #LanguagesGrid {
+    box-sizing: border-box;
+    .available-languages{
+      padding:1rem;
+      menu {
+        margin: 10px;
+        position: fixed;
+        bottom: 0;
+      }
+      ul{
+        margin:10px;
+        li{
+          width:100%;
+          &.right .locale{
+            padding-left:0;
+          }
+        }
+      }
+      .heading{
+        margin:0;
+        font-size:1.5rem;
+        display:block;
+      }
+    }
+  }
+}
+
+#cloud-login-feature-tooltip{
+  z-index: 10;
+}
+
+
+
+@media screen and(max-width:@tablet-width-limit){
+  #top-ui-languages{
+    z-index:10;
+    padding-right:30px;
+    padding-top:15px;
+    .current-language{
+      width:30px;
+      .code:after{
+        right:-23px;
+      }
+    }
+  }
+}
+
+
+@media screen and(max-width:@tablet-width-limit){
+  #top-ui-cloud-sign-in-section{
+    width:70%;
+    .current-cloud-sign-in{
+      margin:20px 10px;
+      .cloud-sign-in-icon{
+        background-position:100%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:@phone-width-limit) {
+  #LanguagesGrid .available-languages ul{
+    display:flex;
+    flex-direction:column;
+    .right{
+      order:1;
+    }
+  }
+  #top-ui-cloud-sign-in-section{
+    width:100%;
+    .current-cloud-sign-in{
+      margin:0 10px;
+    }
+  }
+}
+

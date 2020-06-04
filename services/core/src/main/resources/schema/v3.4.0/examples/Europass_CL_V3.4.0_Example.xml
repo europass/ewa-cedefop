@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass http://europass.cedefop.europa.eu/xml/v3.4.0/EuropassSchema.xsd" locale="en">
+	<DocumentInfo>
+		<DocumentType>ECL</DocumentType>
+		<CreationDate>2013-12-04T00:00:00.000Z</CreationDate>
+		<LastUpdateDate>2015-05-25T14:56:55.692Z</LastUpdateDate>
+		<XSDVersion>V3.4</XSDVersion>
+		<Generator>EWA</Generator>
+		<Comment>This is an example CL XML according to XSD v3.4.0</Comment>
+		<EuropassLogo>true</EuropassLogo>
+	</DocumentInfo>
+	<PrintingPreferences>
+		<Document type="ECL">
+			<Field name="LearnerInfo.Identification.PersonName" show="false" order="FirstName Surname"/>
+			<Field name="CoverLetter.Addressee.PersonName" show="true" order="Title FirstName Surname"/>
+			<Field name="CoverLetter.Letter.Localisation.Date" show="false" format="text/long"/>
+			<Field name="CoverLetter.Letter.Localisation" show="false" order="Place Date"/>
+			<Field name="CoverLetter.Justification" show="false" justify="true"/>
+			<Field name="CoverLetter" show="false" order="Addressee Letter.Localisation Letter.SubjectLine Letter.OpeningSalutation Letter.Body Letter.ClosingSalutation"/>
+		</Document>
+	</PrintingPreferences>
+	<LearnerInfo>
+		<Identification>
+			<PersonName>
+				<FirstName>Jim</FirstName>
+				<Surname>Burnett</Surname>
+			</PersonName>
+			<ContactInfo>
+				<Address>
+					<Contact>
+						<AddressLine>12 Strawberry Hills</AddressLine>
+						<AddressLine2>10 Garrard Gardens</AddressLine2>
+						<PostalCode>B26 3QJ</PostalCode>
+						<Municipality>Birmingham</Municipality>
+						<Country>
+							<Code>UK</Code>
+							<Label>United Kingdom</Label>
+						</Country>
+					</Contact>
+				</Address>
+				<Email>
+					<Contact>jim.bernett@provider.com</Contact>
+				</Email>
+				<TelephoneList>
+					<Telephone>
+						<Contact>+44 123456789</Contact>
+						<Use>
+							<Code>mobile</Code>
+							<Label>Mobile</Label>
+						</Use>
+					</Telephone>
+					<Telephone>
+						<Contact>+44 987654321</Contact>
+						<Use>
+							<Code>home</Code>
+							<Label>Home</Label>
+						</Use>
+					</Telephone>
+				</TelephoneList>
+				<InstantMessagingList>
+					<InstantMessaging>
+						<Contact>jim.bernett</Contact>
+						<Use>
+							<Code>gtalk</Code>
+							<Label>Google Talk</Label>
+						</Use>
+					</InstantMessaging>
+				</InstantMessagingList>
+			</ContactInfo>
+		</Identification>
+	</LearnerInfo>
+	<AttachmentList/>
+	<CoverLetter>
+		<Addressee>
+			<PersonName>
+				<Title>
+					<Code>dr</Code>
+					<Label>Dr.</Label>
+				</Title>
+				<FirstName>John</FirstName>
+				<Surname>Stuart</Surname>
+			</PersonName>
+			<Position>
+				<Code>12332</Code>
+				<Label>Human resource manager</Label>
+			</Position>
+			<Organisation>
+				<Name>Clipper emergency center</Name>
+				<ContactInfo>
+					<Address>
+						<Contact>
+							<AddressLine>Wall street 42</AddressLine>
+							<PostalCode>SW1P 3AT</PostalCode>
+							<Municipality>London</Municipality>
+							<Country>
+								<Code>UK</Code>
+								<Label>United Kingdom</Label>
+							</Country>
+						</Contact>
+					</Address>
+				</ContactInfo>
+			</Organisation>
+		</Addressee>
+		<Letter>
+			<Localisation>
+				<Date year="2013" month="--10" day="---15"/>
+				<Place>
+					<Municipality>Birmingham</Municipality>
+				</Place>
+			</Localisation>
+			<SubjectLine>Ref. IT support officer/2013/01/AD</SubjectLine>
+			<OpeningSalutation>
+				<Salutation>
+					<Code>opening-salut-2</Code>
+					<Label>Dear Mr.</Label>
+				</Salutation>
+				<PersonName>
+					<Surname>Stuart</Surname>
+				</PersonName>
+			</OpeningSalutation>
+			<Body>
+				<Opening>&lt;br />                    &lt;p>I would like to express my interest on the position of IT Support Officer which was advertised in today’s Journal. For the past four years I have worked in IT with Brown’s. As the company is moving to another part of the country, I will be made redundant in two weeks’ time.&lt;/p>&lt;br />                </Opening>
+<MainBody>&lt;br />                    &lt;p>I am confident that the experience acquired in my present job, which involves various IT duties in person and by phone, will prove valuable. I also:&lt;/p>&lt;br />                    &lt;ul>&lt;li>deal with IT queries&lt;/li>&lt;li>handle incoming calls&lt;/li>&lt;li>handle incoming and outgoing post&lt;/li>&lt;li>order printer consumables.&lt;/li>&lt;/ul>&lt;br />                    &lt;p>Before this job I was a trainee with Brightson’s (Solicitors) in North Street, Invertown and completed RSA I and II in Business Administration and have various Microsoft package experience. I have always enjoyed working with people and think my previous experience will allow me to work as part of the team and to be an effective representative of your company.&lt;/p>&lt;br />                </MainBody>
+<Closing>&lt;br />                    &lt;p>I am available for interview at any time and could start work immediately. You can ask for references from my present and previous employers.&lt;/p>&lt;br />                    &lt;p>Please find enclosed a copy of my CV for more information.&lt;/p>&lt;br />                </Closing>
+</Body>
+<ClosingSalutation>
+	<Code>closing-salut-2</Code>
+	<Label>Yours faithfully</Label>
+</ClosingSalutation>
+</Letter>
+<Documentation>
+	<Heading>
+		<Code>heading_1</Code>
+		<Label>Enclosed:</Label>
+	</Heading>
+	<InterDocument>
+		<ReferencedDocument ref="ECV"/>
+		<ReferencedDocument ref="ESP"/>
+		<ReferencedDocument ref="ELP"/>
+	</InterDocument>
+	<IntraDocument>
+		<ReferenceTo idref="ATT_1"/>
+		<ReferenceTo idref="ATT_2"/>
+	</IntraDocument>
+	<ExtraDocument>
+		<ReferencedResource href="http://myblog.com/list-of-citations">
+			<Description>List of Citations</Description>
+		</ReferencedResource>
+		<ReferencedResource href="http://myvideocv.com/jim.burnett">
+			<Description>Video CV</Description>
+		</ReferencedResource>
+	</ExtraDocument>
+</Documentation>
+</CoverLetter>
+</SkillsPassport>

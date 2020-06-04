@@ -1,0 +1,30 @@
+<fieldset class="Attachment upload-area add-new"> 
+		<!-- id="fileupload" TODO check -->
+		<div class="existing-file-details"></div>
+		
+		<div class="uploaded-files"></div>
+			
+		<div class="browse-file-area">
+			<menu class="Attachment choose-file">
+				<span class="button blue upload">
+					
+					<div class="progress-bar uploading" name="{{name}}" data-rel-file-index="{{file_index}}" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" role="progressbar">
+						 
+					</div>
+					<div class="text-uploading">{{get_text "text.uploading" group="GuiLabel"}}</div>
+					
+	
+					<input title="file" type="file" name="file" size="1" multiple="multiple">
+				</span>
+			</menu>
+			
+		</div>
+		
+		<button type="button" class="button cancel">{{get_text "Buttons.Cancel" group="GuiLabel"}}</button>
+
+		<div id="dragdrop-feedback" >
+			<div id="dragdrop-notifications"  class="upload feedback-area">
+			</div>
+		</div>
+		
+	</fieldset>

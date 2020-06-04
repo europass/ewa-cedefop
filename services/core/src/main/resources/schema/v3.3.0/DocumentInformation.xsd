@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="CommonTypes.xsd"/>
+	
+	<xsd:complexType name="DocumentInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains information about the date the XML was issued/ produced, the xsd version with which the xml file is compatible, and optional comments.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DocumentType" type="DocumentTypeType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The Europass Document described by an instance of this schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Bundle" type="DocumentListType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Defines the accepted Document elements that are included within a generated Document bundle. 
+						E.g. to indicate that a CV+ESP must include a Cover Letter, this element needs to include a "Document" element with value "ECL".
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CreationDate" type="xsd:dateTime" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The date this document was first created.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LastUpdateDate" type="xsd:dateTime" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The date this document was last updated.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="XSDVersion" type="CurrentVersionNumberType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The Major.Minor version of the XML Schema with which this document is compatible. 
+						Even when the Patch version of the XML Schema changes, the specific XML document should continue to validate even against the updated version.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Generator" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Reveals how this document was created. For example through the online Europass editors, or through the Europass web services, etc.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Comment" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Any comment related to this document.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Copyright" type="xsd:string" fixed="© European Communities | http://europass.cedefop.europa.eu" minOccurs="0"/>
+			<xsd:element name="EuropassLogo" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Defines whether the document generation will display the Europass Logo. This is a true/false value
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="CurrentVersionNumberType">
+		<xsd:restriction base="VersionNumberType">
+			<xsd:pattern value="V3.3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="VersionNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The xsd version is comprised of the letter V and two digits separated by '.' E.g. V2.0 or V2.5.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="V[0-9]\.[0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

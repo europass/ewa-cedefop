@@ -1,0 +1,1261 @@
+<style:style style:name="_ICT_Table5" style:family="table"
+			style:master-page-name="_5f_ICT_5f_1stPage">
+			<style:table-properties style:width="180mm"
+				fo:margin-left="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm"
+				style:page-number="auto" table:align="left" fo:keep-with-next="auto"
+				style:may-break-between-rows="false" table:border-model="separating" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="89.8mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="90.21mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.1" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="13mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="bottom" fo:background-color="transparent"
+				fo:padding="0mm" fo:border="none" style:writing-mode="lr-tb">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.2" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="4.99mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding="0mm" fo:border="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.3" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="1.99mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="bottom" fo:background-color="transparent"
+				fo:padding="0.49mm" fo:border-left="none" fo:border-right="none"
+				fo:border-top="1pt solid #1093cb" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.4" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="7.51mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding="0mm" fo:border="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.B4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding="0mm" fo:border-left="1pt solid #1093cb" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.5" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="10.02mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="center" fo:background-color="transparent"
+				fo:padding-left="0.6mm" fo:padding-right="0.6mm" fo:padding-top="0mm"
+				fo:padding-bottom="0mm" fo:border="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.B5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="center" fo:background-color="transparent"
+				fo:padding-left="0.6mm" fo:padding-right="0.6mm" fo:padding-top="0mm"
+				fo:padding-bottom="0mm" fo:border-left="1pt solid #1093cb"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.6" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="3mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table5.A6" style:family="table-cell">
+			<style:table-cell-properties
+				fo:background-color="transparent" fo:padding="0mm" fo:border="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.B6" style:family="table-cell">
+			<style:table-cell-properties
+				fo:background-color="transparent" fo:padding="0mm" fo:border-left="1pt solid #1093cb"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="none">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table5.A7" style:family="table-cell">
+			<style:table-cell-properties
+				fo:background-color="transparent" fo:padding="0.49mm"
+				fo:border-left="none" fo:border-right="none" fo:border-top="none"
+				fo:border-bottom="1pt solid #1093cb">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table7" style:family="table">
+			<style:table-properties style:width="180mm"
+				fo:margin-left="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm"
+				table:align="left" fo:keep-with-next="auto"
+				style:may-break-between-rows="true" table:border-model="collapsing" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="35.91mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="27.98mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.C" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="7.99mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.D" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="35.98mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.E" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="19.97mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.F" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="16.02mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.G" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="13.99mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.H" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="22.17mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.1" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="9mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="#f3f3f4"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table7.2" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.5mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.3" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="7.5mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.D3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.G3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.4" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="5.01mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.B4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.D4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.E4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.G4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A5.placeholder" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.B5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.B5.placeholder" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.D5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.D5.placeholder" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.E5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.E5.placeholder" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.G5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.G5.placeholder" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A6" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.7" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="8.01mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.C7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.F7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.H7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.8" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="6mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A8" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.C8" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.F8" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.H8" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A9" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.C9" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.F9" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.H9" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A10" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.11" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.01mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table7.A11" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table7.F11" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table7.12" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="0.11mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2" style:family="table">
+			<style:table-properties style:width="180mm"
+				fo:margin-left="0mm" fo:margin-top="0mm" fo:margin-bottom="0mm"
+				table:align="left" fo:keep-with-next="auto"
+				style:may-break-between-rows="true" table:border-model="collapsing" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="35.91mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="35.97mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.C" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="35.98mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.D" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="19.97mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.E" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="16.02mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.F" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="36.16mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.1" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="9mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A1" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:background-color="#f3f3f4"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table2.2" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.5mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.3" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="7.5mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.C3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.F3" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.4" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="5.01mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.B4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.C4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.D4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.F4" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.B5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.C5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.D5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.F5" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="" fo:padding-left="3mm" fo:padding-right="3mm"
+				fo:padding-top="1.99mm" fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A6" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding-left="3mm"
+				fo:padding-right="3mm" fo:padding-top="1.99mm" fo:padding-bottom="1.99mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.7" style:family="table-row">
+			<style:table-row-properties
+				style:row-height="8.01mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table2.A7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table2.E7" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:background-color="transparent"
+				fo:padding-left="3mm" fo:padding-right="3mm" fo:padding-top="1.99mm"
+				fo:padding-bottom="1.99mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="1pt solid #bcbdc0" fo:border-top="none"
+				fo:border-bottom="1pt solid #bcbdc0">
+				<style:background-image />
+			</style:table-cell-properties>
+		</style:style>
+		<style:style style:name="_ICT_Table2.8" style:family="table-row">
+			<style:table-row-properties
+				style:min-row-height="0.11mm" fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table8" style:family="table"
+			style:master-page-name="_5f_ICT_5f_Self-assesment_5f_grid_5f_Page">
+			<style:table-properties style:width="571mm"
+				fo:margin-left="0mm" style:page-number="auto" fo:break-before="auto"
+				fo:break-after="auto" table:align="left" fo:keep-with-next="always"
+				style:may-break-between-rows="false" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.A" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="20mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.B" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H" style:family="table-column">
+			<style:table-column-properties
+				style:column-width="40mm" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.1" style:family="table-row">
+			<style:table-row-properties
+				fo:keep-together="always" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.A1" style:family="table-cell">
+			<style:table-cell-properties fo:padding="0.71mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H1" style:family="table-cell">
+			<style:table-cell-properties fo:padding="0.71mm"
+				fo:border="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.A2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding="0.71mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.B2" style:family="table-cell">
+			<style:table-cell-properties
+				style:vertical-align="middle" fo:padding="0.71mm" fo:border-left="1pt solid #bcbdc0"
+				fo:border-right="none" fo:border-top="1pt solid #bcbdc0"
+				fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="1pt solid #bcbdc0" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H2" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H3" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H4" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H5" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.C6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.D6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.E6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.F6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.G6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="none"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>
+		<style:style style:name="_ICT_Table8.H6" style:family="table-cell">
+			<style:table-cell-properties fo:padding="1.5mm"
+				fo:border-left="1pt solid #bcbdc0" fo:border-right="1pt solid #bcbdc0"
+				fo:border-top="none" fo:border-bottom="1pt solid #bcbdc0" />
+		</style:style>		
+<style:style style:name="_ICT_P1" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_1stPage_5f_Header_5f_ICT">
+			<style:text-properties officeooo:rsid="003ae8a3" />
+		</style:style>
+		<style:style style:name="_ICT_P2" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Common_5f_footer_5f_text">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+		</style:style>
+		<style:style style:name="_ICT_P3" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Experience">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="00f6b21f" />
+		</style:style>
+		<style:style style:name="_ICT_P4" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Experience">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="00f6b21f"
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P5" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Experience">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="00f8fa7f"
+				officeooo:paragraph-rsid="00f8fa7f" />
+		</style:style>
+		<style:style style:name="_ICT_P6" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Experience">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0mm" fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="00f8fa7f"
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P7" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Common_5f_footer_5f_copyright">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0053e09d" />
+		</style:style>
+		<style:style style:name="_ICT_P8" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Common_5f_footer_5f_copyright">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0053e09d"
+				officeooo:paragraph-rsid="01780bcf" />
+		</style:style>
+		<style:style style:name="_ICT_P9" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Common_5f_Pages_5f_page_5f_number">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01405ad0" />
+		</style:style>
+		<style:style style:name="_ICT_P10" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Common_5f_Pages_5f_Header">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties style:font-name="Arial1"
+				fo:font-size="14pt" style:font-size-asian="10.5pt" />
+		</style:style>
+		<style:style style:name="_ICT_P11" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Self-assesment_5f_grid_5f_footer">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0044568a"
+				officeooo:paragraph-rsid="0164d68f" />
+		</style:style>
+		<style:style style:name="_ICT_P12" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Self-assesment_5f_page_5f_number">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="0164d68f" />
+		</style:style>
+		<style:style style:name="_ICT_P13" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Summary_5f_Languages">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="00600f43" />
+		</style:style>
+		<style:style style:name="_ICT_P14" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Summary_5f_Languages">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="00600f43"
+				officeooo:paragraph-rsid="01a1121e" />
+		</style:style>
+		<style:style style:name="_ICT_P15" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0072e58f" />
+		</style:style>
+		<style:style style:name="_ICT_P16" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="0072e58f"
+				officeooo:paragraph-rsid="015f0efa" />
+		</style:style>
+		<style:style style:name="_ICT_P17" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="015e6892" />
+		</style:style>
+		<style:style style:name="_ICT_P18" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Grid_5f_icon_5f_label">
+			<style:paragraph-properties fo:margin-top="0mm"
+				fo:margin-bottom="0mm" style:contextual-spacing="false" />
+			<style:text-properties officeooo:rsid="01e65190"
+				officeooo:paragraph-rsid="01e65190" />
+		</style:style>
+		<style:style style:name="_ICT_P19" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:text-properties
+				officeooo:paragraph-rsid="01780bcf" />
+		</style:style>
+		<style:style style:name="_ICT_P20" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Self-assesment_5f_grid_5f_Title">
+			<style:text-properties officeooo:rsid="0163d6d7"
+				officeooo:paragraph-rsid="0163d6d7" />
+		</style:style>
+		<style:style style:name="_ICT_P21" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Table_5f_Titles">
+			<style:paragraph-properties
+				style:register-true="false" />
+		</style:style>
+		<style:style style:name="_ICT_P22" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Table_5f_Titles">
+			<style:paragraph-properties
+				style:register-true="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P23" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Table_5f_Titles">
+			<style:paragraph-properties
+				style:register-true="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P24" style:family="paragraph"
+			style:parent-style-name="Table_20_Contents">
+			<style:paragraph-properties fo:text-align="start"
+				style:justify-single-word="false" />
+		</style:style>
+		<style:style style:name="_ICT_P25" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="005fbccc"
+				officeooo:paragraph-rsid="006155e2" />
+		</style:style>
+		<style:style style:name="_ICT_P26" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:text-properties fo:text-transform="uppercase" 
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P27" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="01e5bc26"
+				officeooo:paragraph-rsid="01e5bc26" />
+		</style:style>
+		<style:style style:name="_ICT_P28" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P29" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level_5f_label">
+			<style:text-properties officeooo:rsid="00711b36" />
+		</style:style>
+		<style:style style:name="_ICT_P30" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P31" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="01e601fd" />
+		</style:style>
+		<style:style style:name="_ICT_P32" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P33" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level">
+			<style:text-properties officeooo:rsid="00711b36" />
+		</style:style>
+		<style:style style:name="_ICT_P34" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level">
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P35" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_level">
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P36" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="00f6b21f"
+				officeooo:paragraph-rsid="00f6b21f" />
+		</style:style>
+		<style:style style:name="_ICT_P37" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="00f6b21f"
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P38" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="00f8fa7f"
+				officeooo:paragraph-rsid="00f8fa7f" />
+		</style:style>
+		<style:style style:name="_ICT_P39" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:text-properties officeooo:rsid="00f8fa7f"
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P40" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Grid_5f_CEF">
+			<style:text-properties fo:font-size="7pt"
+				style:font-size-asian="7pt" style:font-size-complex="7pt" />
+		</style:style>
+		<style:style style:name="_ICT_P41" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Summary_5f_Name">
+			<style:text-properties
+				officeooo:paragraph-rsid="019db731" />
+		</style:style>
+		<style:style style:name="_ICT_P42" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P43" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="01e96afc"
+				officeooo:paragraph-rsid="01e96afc" />
+		</style:style>
+		<style:style style:name="_ICT_P44" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:line-height="100%"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+		</style:style>
+		<style:style style:name="_ICT_P45" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:line-height="100%"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P46" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:line-height="100%"
+				fo:text-indent="0mm" style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="01a3a28d"
+				officeooo:paragraph-rsid="01a3a28d" />
+		</style:style>
+		<style:style style:name="_ICT_P47" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_left_5f_alinged">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P48" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_left_5f_alinged">
+			<style:paragraph-properties
+				fo:margin-left="-0.11mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties officeooo:rsid="01e96afc"
+				officeooo:paragraph-rsid="01e96afc" />
+		</style:style>
+		<style:style style:name="_ICT_P49" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_left_5f_alinged">
+			<style:paragraph-properties
+				fo:margin-left="-0.12mm" fo:margin-right="0.11mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+		</style:style>
+		<style:style style:name="_ICT_P50" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_left_5f_alinged">
+			<style:paragraph-properties
+				fo:margin-left="-0.12mm" fo:margin-right="0.11mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P51" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="-0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+		</style:style>
+		<style:style style:name="_ICT_P52" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_titles_5f_center_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="-0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P53" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_left_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="00ec3c73" />
+		</style:style>
+		<style:style style:name="_ICT_P54" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_content_5f_left_5f_aligned">
+			<style:paragraph-properties
+				fo:margin-left="0mm" fo:margin-right="0.12mm" fo:text-indent="0mm"
+				style:auto-text-indent="false" />
+			<style:text-properties
+				officeooo:paragraph-rsid="01de45f1" />
+		</style:style>
+		<style:style style:name="_ICT_P55" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_icon_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="01dc5830" />
+		</style:style>
+		<style:style style:name="_ICT_P56" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_icon_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="01e5bc26" />
+		</style:style>
+		<style:style style:name="_ICT_P57" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_icon_5f_label">
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P58" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_table_5f_above_5f_below">
+			<style:text-properties
+				officeooo:paragraph-rsid="01eb7392" />
+		</style:style>
+		<style:style style:name="_ICT_P59" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_table_5f_above_5f_below">
+			<style:text-properties
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_P60" style:family="paragraph"
+			style:parent-style-name="_5f_ICT_5f_Table_5f_Language">
+			<style:text-properties officeooo:rsid="01ed6430"
+				officeooo:paragraph-rsid="01ed6430" />
+		</style:style>
+		<style:style style:name="_ICT_T1" style:family="text">
+			<style:text-properties officeooo:rsid="0053e09d" />
+		</style:style>
+		<style:style style:name="_ICT_T2" style:family="text">
+			<style:text-properties officeooo:rsid="002c86a9" />
+		</style:style>
+		<style:style style:name="_ICT_T3" style:family="text">
+			<style:text-properties officeooo:rsid="0044568a" />
+		</style:style>
+		<style:style style:name="_ICT_T4" style:family="text">
+			<style:text-properties officeooo:rsid="016aa36b" />
+		</style:style>
+		<style:style style:name="_ICT_T5" style:family="text">
+			<style:text-properties officeooo:rsid="019c60bd" />
+		</style:style>
+		<style:style style:name="_ICT_T6" style:family="text">
+			<style:text-properties style:font-name="Calibri"
+				fo:font-size="11pt" />
+		</style:style>
+		<style:style style:name="_ICT_fr1" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties style:wrap="parallel"
+				style:number-wrapped-paragraphs="1" style:wrap-contour="false"
+				style:vertical-pos="from-top" style:vertical-rel="paragraph"
+				style:horizontal-pos="from-left" style:horizontal-rel="paragraph"
+				style:shadow="none" style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)"
+				draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%"
+				draw:blue="0%" draw:gamma="100%" draw:color-inversion="false"
+				draw:image-opacity="100%" draw:color-mode="standard" />
+		</style:style>
+		<style:style style:name="_ICT_fr2" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties fo:margin-left="0mm"
+				fo:margin-right="0mm" style:wrap="none" style:vertical-pos="middle"
+				style:vertical-rel="text" style:horizontal-pos="center"
+				style:horizontal-rel="paragraph" style:mirror="none"
+				fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%"
+				draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%"
+				draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%"
+				draw:color-mode="standard" />
+		</style:style>
+		<style:style style:name="_ICT_fr3" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties fo:margin-top="0mm"
+				fo:margin-bottom="1.01mm" style:vertical-pos="middle"
+				style:vertical-rel="text" style:horizontal-pos="center"
+				style:horizontal-rel="paragraph" style:mirror="none"
+				fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%"
+				draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%"
+				draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%"
+				draw:color-mode="standard" />
+		</style:style>
+		<style:style style:name="_ICT_fr4" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties fo:margin-top="0mm"
+				fo:margin-bottom="3mm" style:wrap="none" style:vertical-pos="top"
+				style:vertical-rel="baseline" style:horizontal-pos="center"
+				style:horizontal-rel="paragraph" style:mirror="none"
+				fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:luminance="0%"
+				draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%"
+				draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%"
+				draw:color-mode="standard" />
+		</style:style>
+		<style:style style:name="_ICT_fr5" style:family="graphic"
+			style:parent-style-name="Graphics">
+			<style:graphic-properties fo:margin-top="0mm"
+				fo:margin-bottom="3mm" style:vertical-pos="top" style:vertical-rel="baseline"
+				style:horizontal-pos="center" style:horizontal-rel="paragraph"
+				style:mirror="none" fo:clip="rect(0mm, 0mm, 0mm, 0mm)"
+				draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%"
+				draw:blue="0%" draw:gamma="100%" draw:color-inversion="false"
+				draw:image-opacity="100%" draw:color-mode="standard" />
+		</style:style>

@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.europa.cedefop.europass.webapps</groupId>
+        <artifactId>europass-webapps-services</artifactId>
+        <version>5.0.84</version>
+    </parent>
+    <artifactId>europass-webapps-services-statistics</artifactId>
+    <packaging>war</packaging>
+    <name>Europass Webapps Services Statistics API endpoint</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <file>${basedir}/dependencies/json-stat-java-1.0.0.jar</file>
+                    <generatePom>false</generatePom>
+                    <pomFile>${basedir}/dependencies/pom.xml</pomFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install-json-stat</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-statistics</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>europass-webapps-services-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Guice -->
+        <!-- 		<dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+        </dependency>
+        <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-servlet</artifactId>
+        </dependency>
+        <dependency>
+                <groupId>com.sun.jersey.contribs</groupId>
+                <artifactId>jersey-guice</artifactId>
+        </dependency>
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+        </dependency> -->
+        <!--  Jackson -->
+        <!-- 		<dependency>
+                               <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                               <artifactId>jackson-jaxrs-json-provider</artifactId>
+                       </dependency>
+                       <dependency>
+                               <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                               <artifactId>jackson-jaxrs-xml-provider</artifactId>
+                       </dependency>
+        -->
+        <!-- json stat -->
+        <dependency>
+            <groupId>net.hamnaberg.json</groupId>
+            <artifactId>json-stat-java</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,33 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "LearnerInfo": {
+            "Identification": {
+                "Demographics": {
+                    "Birthdate": {
+                        "Year": 1984,
+                        "Month": 2,
+                        "Day": 10
+                    },
+                    "Nationality": [
+                        {
+                            "Code": "EL",
+                            "Label": "Hellenic"
+                        },
+                        {
+                            "Code": "UK",
+                            "Label": "British"
+                        },
+                        {
+                            "Label": "Citizen of the world"
+                        }
+                    ],
+                    "Gender": {
+                        "Code": "F",
+                        "Label": "Female"
+                    }
+                }
+            }
+        }
+    }
+}

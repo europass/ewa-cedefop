@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	<xsd:complexType name="AttachmentListType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				List any digital document (PDF, JPEG or PNG format) that an individual has attached to her Europass document to support/evidence of her personal data, learning achievements, work experiences, skills, competences, diplomas, etc. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Attachment" type="AttachmentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="AttachmentType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Extends the FileDataType by defining a Description sub-element and a required id attribute. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="FileDataType">
+				<xsd:sequence>
+					<xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="id" type="xsd:ID" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!-- Attachments and Photo -->
+	<xsd:complexType name="MetadataListType">
+		<xsd:sequence>
+			<xsd:element name="Metadata" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Offers extra information about this document.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="key" type="xsd:string" use="required"/>
+					<xsd:attribute name="value" type="xsd:string" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="FileDataType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Defines the original file-name.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MimeType" type="MimeTypeEnumeration">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Defines the file type of the document and must follow the MimeTypeEnumeration data type.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Data" type="xsd:base64Binary">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Includes the raw base-64 encoded bytes of the document.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MetadataList" type="MetadataListType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Lists Metadata elements, each offering some extra information about this document.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PhotoDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains the base-64 encoded bytes of a JPEG or PNG image file that represents the personal photo of an individual.
+				Restricts the FileDataType by excluding the Name sub-element and specifying that the MimeType accepts values from the ImageMimeTypeEnumeration.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="FileDataType">
+				<xsd:sequence>
+					<xsd:element name="MimeType" type="ImageMimeTypeEnumeration"/>
+					<xsd:element name="Data" type="xsd:base64Binary"/>
+					<xsd:element name="MetadataList" type="MetadataListType" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SignatureDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains the base-64 encoded bytes of a JPEG or PNG image file that represents the signature an individual.
+				Restricts the FileDataType by excluding the Name sub-element and specifying that the MimeType accepts values from the ImageMimeTypeEnumeration.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PhotoDataType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="MimeTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Restricts the string by defining an enumeration of allowed file mime types.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="image/jpeg"/>
+			<xsd:enumeration value="image/pjpeg"/>
+			<xsd:enumeration value="image/png"/>
+			<xsd:enumeration value="image/x-png"/>
+			<xsd:enumeration value="application/pdf"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ImageMimeTypeEnumeration">
+		<xsd:restriction base="MimeTypeEnumeration">
+			<xsd:enumeration value="image/jpeg"/>
+			<xsd:enumeration value="image/pjpeg"/>
+			<xsd:enumeration value="image/png"/>
+			<xsd:enumeration value="image/x-png"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+</xsd:schema>

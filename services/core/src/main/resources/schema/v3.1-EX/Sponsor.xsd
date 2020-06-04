@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2015
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	
+	<xsd:include schemaLocation="./Organisation.xsd"></xsd:include>
+	
+	<xsd:complexType name="SponsorType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Details on the organisational and financial (if any) background of an experience. E.g. programme under which the experience took place, the Organiser details.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Programme" type="LabelType" minOccurs="0"/>
+			<xsd:element name="Project" type="LabelType" minOccurs="0"/>
+			<xsd:element name="Organiser" type="OrganisationType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="LearningExperienceSponsorType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Details on the organisational background of a learning experience.
+				Specifies that the Programme may be one of the EU supported programmes.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="SponsorType">
+				<xsd:sequence>
+					<xsd:element name="Programme" type="EUProgrammeLabelType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EUProgrammeLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType">
+				<xsd:sequence>
+					<xsd:element name="Code" type="EUProgrammeEnumeration" minOccurs="0"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<xsd:simpleType name="EUProgrammeEnumeration">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ERA">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Erasmus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LEO">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Leonardo Da Vinci</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="COM">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Comenius</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GRU">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Grundtvig</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KA1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">KA1 Policy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KA2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">KA2 Languages</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KA3">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">KA3 ICT</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="KA4">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">KA4 Valorisation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JEA">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Jean Monnet</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LLP">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Other Community programme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NNN">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Other non-Community programme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OGS">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Operating Grants SP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="OGO">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Operating Grants OTH</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NBP">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">National Bilateral Programme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+
+	
+</xsd:schema>

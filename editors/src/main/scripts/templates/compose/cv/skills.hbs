@@ -1,0 +1,124 @@
+
+<dt class="label section-heading">
+    <button type="button" name="enablePageBreak"
+        class="enablePageBreak sectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains Preferences.LearnerInfo.pageBreaks compare="Skills"}}break-page{{/if_contains}}"
+        data-section="Skills"
+        data-tip.position="top-left">Page Break
+        <span class="data-title" style="display:none;">
+            {{#if_contains Preferences.LearnerInfo.pageBreaks compare="Skills"}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains}}
+            {{#if_absent Preferences.LearnerInfo.pageBreaks compare="Skills"}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent}}
+        </span>
+    </button>
+    <span class="title">{{get_text "LearnerInfo.Skills"  group="DocumentLabel"}}</span>
+</dt>
+<dd class="line"></dd>
+
+<dd>
+	
+	<dl id="Compose:LearnerInfo.Skills.Linguistic.MotherTongue" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="MotherTongueFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Linguistic.MotherTongue"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue"
+		data-rel-index="">			
+		<!-- MotherTongue Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+		
+	
+	<dl id="Compose:LearnerInfo.Skills.Linguistic.ForeignLanguage" 
+		class="subsection skills foreign-language-skills opens-modal-form-lang-empty">
+		<!-- ForeignLanguage Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+	
+	<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsCommunication"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills.Communication" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="GenericSkillsFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Communication"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Communication"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Communication"
+		data-rel-subsection="Communication"
+		data-rel-index="">
+        <!-- Communication Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+    </dl>
+	
+	<hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsOrganisational"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills.Organisational" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="GenericSkillsFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Organisational"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Organisational"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Organisational"
+		data-rel-subsection="Organisational"
+		data-rel-index="">
+		<!-- Organisational Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+	
+	
+    <hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsJobRelated"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills.JobRelated" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="GenericSkillsFormView"
+		data-rel-form="Form:LearnerInfo.Skills.JobRelated"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.JobRelated"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.JobRelated"
+		data-rel-subsection="JobRelated"
+		data-rel-index="">
+		<!-- JobRelated Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>	
+	
+
+        <hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsComputer"}}class="break-page"{{/if_contains}}>
+        <dl id="Compose:LearnerInfo.Skills.Computer" 
+		class="subsection item skills opens-modal-form ict"
+		data-rel-doc="cv"
+		data-rel-clazz="ComputerSkillsFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Computer"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Computer"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Computer"
+		data-rel-subsection = "Computer"
+		data-rel-index="">
+		<!-- Computer Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+<!-- 	<dl id="Compose:LearnerInfo.Skills.Computer"  -->
+<!-- 		class="subsection item skills computer-skills opens-modal-form"> -->
+		<!-- Computer Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+<!-- 	</dl> -->
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Other}}
+	{{else}}
+        <hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsOther"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills.Other" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="GenericSkillsFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Other"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Other"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Other"
+		data-rel-subsection="Other"
+		data-rel-index="">
+		<!-- Other Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+	{{/isEmptyObject}}
+	
+	{{#isEmptyObject SkillsPassport.LearnerInfo.Skills.Driving}}
+	{{else}}
+        <hr {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsDriving"}}class="break-page"{{/if_contains}}>
+	<dl id="Compose:LearnerInfo.Skills.Driving" 
+		class="subsection item skills opens-modal-form"
+		data-rel-doc="cv"
+		data-rel-clazz="DrivingFormView"
+		data-rel-form="Form:LearnerInfo.Skills.Driving"
+		data-rel-section="SkillsPassport.LearnerInfo.Skills.Driving"
+		data-rel-help-section="Help.SkillsPassport.LearnerInfo.Skills.Driving"
+		data-rel-subsection="Driving"
+		data-rel-index="">
+		<!-- Driving Skills Compose View (with attached Handlebars view) get rendered here upon initialization of SkillsComposeView-->
+	</dl>
+	{{/isEmptyObject}}
+</dd>

@@ -1,0 +1,278 @@
+
+/***************************************************************/
+
+/***************************************************
+ ************* DRIVING LICENCE *********************/
+
+
+
+ul.drivingLicense{
+  .css-label.css-label.css-label.css-label{
+    box-sizing:border-box;
+    width:45px!important;
+    margin-left: 30px;
+    text-indent: 20px;
+    padding-left: 43px;
+    background-color: #ECF0F4!important;
+    border: 1px solid rgba(43, 72, 104, 0.3);
+    &:after{
+      top:75%!important;
+      font-size:22px;
+      left:24px;
+    }
+  }
+}
+
+form#Form\:LearnerInfo\.Skills\.Driving {
+  label:first-child {
+    margin-bottom: 25px;
+  }
+
+}
+
+ul.drivingLicense {
+  margin: 0px -62px 20px 0px;
+}
+
+ul.drivingLicense li {
+  margin: -4px 4% 10px 0px;
+  display:inline-block;
+  width: @driving-li-width-percentage;
+  height: @driving-li-height;
+  border-radius:@button-avg-radius;
+  border:1px solid transparent;
+  vertical-align: middle;
+  position: relative;
+  padding-right: 0;
+}
+ul.drivingLicense li.empty:hover{
+  background: none;
+}
+
+
+ul.drivingLicense li:hover,
+ul.drivingLicense li.tap-hover {
+  background-color:@cv-form-driving-bg-color-hover;
+}
+ul.drivingLicense li:hover label,
+ul.drivingLicense li.tap-hover label{
+  color:@text-dark-grey;
+}
+ul.drivingLicense li.selected{
+  background-color:@cv-form-driving-bg-color-selected;
+  border:1px solid @cv-form-driving-border-color-selected;
+}
+ul.drivingLicense li.selected label{
+  color:#000;
+}
+ul.drivingLicense li .icon{
+  background-repeat:no-repeat;
+  background-color: transparent;
+  background-image: url("@{img-base-url}driving_spritesheet.png@{img-suffix-url}${project.version}") ;
+  font-size: 0px;
+  color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -60px;
+  width: 92px;
+  height: 60px;
+}
+
+
+.driving-license-list-mixin{
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("@{img-base-url}sprites/driving-license-icons.png@{img-suffix-url}${project.version}");
+  display: inline-block;
+  color: @almost-black;
+  text-indent: 35px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  padding: 5px 0 7px;
+  width: 11rem;
+  height: 12px;
+}
+div.driving-license-list{
+  margin-left: -3rem;
+  ol {
+    display: inline;
+    margin: 2px 3px 4px 5px;
+    text-align: left;
+    li{
+      .driving-license-list-mixin;
+
+      &.load{
+
+        background-position: -3px 2px
+
+      }
+
+      &.persons {
+
+        background-position: 0px -37px;
+
+      }
+
+      &.limit {
+
+        background-position: 0px -77px;
+
+      }
+
+      &.capacity {
+
+        background-position: 0px -117px;
+
+      }
+      &.speed {
+
+        background-position: 0px -157px;
+
+      }
+      &.kw {
+
+        background-position: -2px -197px;
+
+      }
+      &.mass {
+
+        background-position: 0px -237px;
+
+      }
+      &.length{
+
+        background-position: 0px -277px;
+
+      }
+
+      &.age {
+
+        background-position: 0px -317px;
+
+      }
+
+      &:hover {
+
+        background-color: @white;
+      }
+
+    }
+
+  }
+
+}
+
+ul.drivingLicense li.empty .icon{
+  background: transparent ;
+}
+
+
+.driving-license-state ( @y: 0px ){
+  &:hover, &.tap-hover {
+    .icon { background-position: ( @driving-x-space - (2 * @driving-between-states) )  ( @driving-y-space - @y );}
+  }
+  &.selected,
+  &.selected:hover,
+  &.selected.tap-hover{
+    .icon { background-position: ( @driving-x-space - @driving-between-states ) ( @driving-y-space - @y ); }
+  }
+  .icon { background-position: @driving-x-space  ( @driving-y-space - @y ); }
+}
+
+li.driving-license-A   {	.driving-license-state( 0px ); }
+li.driving-license-A1  { .driving-license-state(  @driving-between-licenses ); }
+li.driving-license-A2  { .driving-license-state(  2 * @driving-between-licenses ); }
+li.driving-license-AM  { .driving-license-state(  3 * @driving-between-licenses ); }
+li.driving-license-B   { .driving-license-state(  4 * @driving-between-licenses ); }
+li.driving-license-B1  { .driving-license-state(  5 * @driving-between-licenses ); }
+li.driving-license-BE  { .driving-license-state(  6 * @driving-between-licenses ); }
+li.driving-license-C1  { .driving-license-state(  7 * @driving-between-licenses ); }
+li.driving-license-C   { .driving-license-state(  8 * @driving-between-licenses ); }
+li.driving-license-C1E { .driving-license-state(  9 * @driving-between-licenses ); }
+li.driving-license-CE  { .driving-license-state(  10 * @driving-between-licenses ); }
+li.driving-license-D1  { .driving-license-state(  11 * @driving-between-licenses ); }
+li.driving-license-D1E { .driving-license-state(  12 * @driving-between-licenses ); }
+li.driving-license-D   { .driving-license-state(  13 * @driving-between-licenses ); }
+li.driving-license-DE  { .driving-license-state(  14 * @driving-between-licenses ); }
+
+@driving-li-large-width: @driving-li-width + ( @driving-li-width / 2 ) - 8px ;
+ul.drivingLicense{
+  li.driving-license-C1,
+  li.driving-license-C1E,
+  li.driving-license-C,
+  li.driving-license-CE,
+  li.driving-license-D1,
+  li.driving-license-D1E,
+  li.driving-license-D,
+  li.driving-license-DE{
+    width: @driving-li-width-percentage;
+    padding-right: 0%;
+    margin-right: 4%;
+
+    .icon {
+      width: @driving-li-large-width - @driving-input-width - @driving-label-width;
+    }
+
+  }
+
+  li.driving-license-DE {
+    .icon {
+      margin-left: -79px;
+    }
+  }
+
+  li.driving-license-BE {
+    margin-right: 7%;
+  }
+
+}
+
+.credits-icons{
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+.credits-icons,
+.credits-icons *{
+  font-size: 12px;
+}
+menu.Driving {
+  display: inline-block;
+  width: 49%;
+}
+
+input[type=checkbox].driving-licence.css-checkbox + label.css-label{
+  display: block;
+  margin: 70px auto 0;
+}
+
+/********** END OF DRIVING LICENCE **********/
+@media screen and(max-width:@phone-width-limit) {
+  ul.drivingLicense .css-label.css-label.css-label.css-label{
+    margin-left:0;
+    &:after{
+      left:-7px;
+    }
+  }
+  ul.drivingLicense li{
+    width:40%;
+  }
+  ul.drivingLicense li.driving-license-C1, ul.drivingLicense li.driving-license-C1E, ul.drivingLicense li.driving-license-C, ul.drivingLicense li.driving-license-CE, ul.drivingLicense li.driving-license-D1, ul.drivingLicense li.driving-license-D1E, ul.drivingLicense li.driving-license-D, ul.drivingLicense li.driving-license-DE{
+    width:40%;
+  }
+  ul.drivingLicense li.driving-license-BE{
+    margin-right:15px;
+  }
+  ul.drivingLicense li .icon{
+    left:35px;
+  }
+  .driving-license-AM .tooltip{
+    top:-120px!important;
+  }
+  menu.Driving{
+    width:100%;
+  }
+}
+
+

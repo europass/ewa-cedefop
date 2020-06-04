@@ -1,0 +1,67 @@
+{{=[[ ]]=}}
+{{#with SkillsPassport}}
+<fieldset>
+	<header>
+		<legend>
+			[[#resources]][[& GuiLabel_CoverLetter:Letter:ClosingSalutation:Header]][[/resources]]
+		</legend>
+		<div class="clear"></div>
+	</header>
+	
+[[#preferences]]
+[[#CoverLetter:Letter:ClosingSalutation]]
+[[#show]]
+	<fieldset class="ClosingSalutation">
+		<div class="composite select" name="CoverLetter.Letter.ClosingSalutation">
+			<label for="Title">
+				[[#resources]][[& GuiLabel_CoverLetter:Letter:ClosingSalutation]][[/resources]]
+			</label>
+			<input type="text"  
+					class="formfield help typeahead with-placeholder"
+					title="{{get_text "CoverLetter.Letter.ClosingSalutation.Label" group="AccessibilityLabel"}}"
+					name="CoverLetter.Letter.ClosingSalutation.Label"
+					data-help-key="CoverLetter.Letter.ClosingSalutation.Label"
+					data-bind-name="group"
+					data-bind-group="CoverLetter.Letter.ClosingSalutation"
+					rel="CoverLetter.Letter.ClosingSalutation"
+					placeholder="[[#resources]][[& EditorPlaceholder_CoverLetter:Letter:ClosingSalutation:Label]][[/resources]]"
+					value="{{CoverLetter.Letter.ClosingSalutation.Label}}">
+<!-- 				<span name="CoverLetter.Letter.ClosingSalutation.Label" class="help placeholder" style="display:none;">
+					[[#resources]][[& EditorPlaceholder_CoverLetter:Letter:ClosingSalutation:Label]][[/resources]]
+				</span> -->
+			<input type="hidden"
+					class="ClosingSalutation"
+					name="CoverLetter.Letter.ClosingSalutation.Code"
+					data-help-key="CoverLetter.Letter.ClosingSalutation.Code"
+					data-bind-name="group"
+					data-bind-group="CoverLetter.Letter.ClosingSalutation"
+					rel="CoverLetter.Letter.ClosingSalutation"
+					value="{{CoverLetter.Letter.ClosingSalutation.Code}}">
+		</div>	
+		<div class="editableClosingSalutation" id="editableClosingSalutation">
+			<label for="Title">
+				[[#resources]][[& GuiLabel_CoverLetter:Letter:ClosingSalutation]][[/resources]]
+			</label>
+			<input type="text" id="editableClosingSalutationField"
+					class="formfield help mandatory Salutation with-placeholder"
+					title="{{get_text "CoverLetter.Letter.ClosingSalutation.Salutation.Label" group="AccessibilityLabel"}}"
+					name="CoverLetter.Letter.ClosingSalutation.Label"
+					data-help-key="CoverLetter.Letter.ClosingSalutation.Label"
+					value="{{CoverLetter.Letter.ClosingSalutation.Label}}">
+		</div>
+	</fieldset>
+[[/show]]
+[[/CoverLetter:Letter:ClosingSalutation]]
+[[/preferences]]
+
+	<fieldset class="Signature Upload upload-area upload-button-set" id="fileupload" rel="tooltip">
+		<label for="fileupload">{{get_text "LearnerInfo.Identification.Signature" group="GuiLabel"}}</label>
+		{{> templates/forms/signature}}
+	</fieldset>
+	
+	
+	{{> templates/forms/cl/closingPersonName}}
+	
+
+</fieldset>
+{{/with}}

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillsPassport xmlns="http://europass.cedefop.europa.eu/Europass"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass ./EuropassSchema_V3.0-rc5.xsd" locale="en">
+    <DocumentInfo>
+        <CreationDate>2012-03-01T00:00:00.000+03:00</CreationDate>
+        <LastUpdateDate>2012-03-01T00:00:00.000Z</LastUpdateDate>
+        <XSDVersion>V3.0</XSDVersion>
+        <Generator>Oxygen Testing</Generator>
+        <Comment>This is an example CV XML according to XSD v3.0-rc2</Comment>
+    </DocumentInfo>
+    <PrintingPreferences>
+        <Document type="ECV">
+            <Field name="LearnerInfo" order="Identification Headline WorkExperience Education Skills Achievement ReferenceTo"/>
+            <Field name="LearnerInfo.Identification.PersonName" order="FirstName Surname"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Address" show="true" format="s \n p-z m (c)"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Telephone[0]" show="true"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Telephone[1]" show="false"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Email" show="true"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Website[0]" show="true"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.Website[1]" show="true"/>
+            <Field name="LearnerInfo.Identification.ContactInfo.InstantMessaging[0]" show="true"/>
+            <Field name="LearnerInfo.Identification.Demographics.Birthdate" show="false" format="text/long"/>
+            <Field name="LearnerInfo.Identification.Demographics.Gender" show="false"/>
+            <Field name="LearnerInfo.Identification.Demographics.Nationality[0]" show="true"/>
+            <Field name="LearnerInfo.Identification.Demographics.Nationality[1]" show="false"/>
+            <Field name="LearnerInfo.Identification.Demographics.Nationality[2]" show="false"/>
+            <Field name="LearnerInfo.Identification.Demographics.Nationality[2]" show="true"/>
+            <Field name="LearnerInfo.WorkExperience[0]" show="true"/>
+            <Field name="LearnerInfo.WorkExperience[0].ReferenceTo[0]" show="false"/>
+            <Field name="LearnerInfo.WorkExperience[0].Activities" show="true"/>
+            <Field name="LearnerInfo.WorkExperience[0].Employer" show="true"/>
+            <Field name="LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website" show="false"/>
+            <Field name="LearnerInfo.WorkExperience[0].Employer.Sector" show="false"/>
+            <Field name="LearnerInfo.Education[0]" show="true"/>
+            <Field name="LearnerInfo.Education[0].ReferenceTo[0]" show="false"/>
+            <Field name="LearnerInfo.Education[0].Activities" show="true"/>
+            <Field name="LearnerInfo.Education[0].Organisation" show="false"/>
+            <Field name="LearnerInfo.Education[0].Level" show="false"/>
+            <Field name="LearnerInfo.Education[0].Field" show="false"/>
+            <Field name="LearnerInfo.Achievement" show="true"/>
+            <Field name="LearnerInfo.ReferenceTo" show="true"/>
+            <Field name="LearnerInfo.ReferenceTo[0]" show="true"/>
+            <Field name="LearnerInfo.ReferenceTo[1]" show="true"/>
+        </Document>
+    </PrintingPreferences>
+    <LearnerInfo>
+        <Identification>
+            <PersonName>
+                <FirstName>Μπάμπης</FirstName>
+                <Surname>Σουγιάς</Surname>
+            </PersonName>
+            <ContactInfo>
+                <Address>
+                    <Contact>
+                        <AddressLine>12 Strawberry Hille</AddressLine>
+                        <PostalCode>12345</PostalCode>
+						<Municipality>London</Municipality>
+                        <Country>
+                            <Code>UK</Code>
+                            <Label>United Kingdom</Label>
+                        </Country>
+                    </Contact>
+                </Address>
+                <Email>
+                    <Contact>chuck@chucknorrisfacts.com</Contact>
+                </Email>
+                <TelephoneList>
+                    <Telephone>
+                        <Contact>+44 123456789</Contact>
+                        <Use>
+                            <Code>mobile</Code>
+                            <Label>Mobile Number</Label>
+                        </Use>
+                    </Telephone>
+                    <Telephone>
+                        <Contact>+44 987654321</Contact>
+                        <Use>
+                            <Code>work</Code>
+                            <Label>Workplace</Label>
+                        </Use>
+                    </Telephone>
+                    
+                </TelephoneList>
+                <WebsiteList>
+                    <Website>
+                        <Contact>http://chucknorrisfacts.com</Contact>
+                        <Use>
+                            <Code>blog</Code>
+                            <Label>Blog</Label>
+                        </Use>
+                    </Website>
+                    <Website>
+                        <Contact>http://kookoobaddi.com</Contact>
+                        <Use>
+                            <Label>Extra New Service You Don't Know Of</Label>
+                        </Use>
+                    </Website>
+                </WebsiteList>
+                <InstantMessagingList>
+                    <InstantMessaging>
+                        <Contact>chuck.norris</Contact>
+                        <Use>
+                            <Code>gtalk</Code>
+                            <Label>Google Talk</Label>
+                        </Use>
+                    </InstantMessaging>
+                </InstantMessagingList>
+            </ContactInfo>
+            <Demographics>
+                <Birthdate year="1940" month="--03" day="---10"/>
+                <Gender>
+					<Code>M</Code>
+                    <Label>Male</Label>
+				</Gender>
+                <NationalityList>
+                    <Nationality>
+                        <Code>US</Code>
+                        <Label>American</Label>
+                    </Nationality>
+                    <Nationality>
+                        <Code>AU</Code>
+                        <Label>Australian</Label>
+                    </Nationality>
+                    <Nationality>
+                        <Label>Citizen of the world</Label>
+                    </Nationality>
+                </NationalityList>
+            </Demographics>
+            <Photo>
+                <MimeType>image/jpeg</MimeType>
+                <Data><!-- Photo bytes go here --></Data>
+            </Photo>
+        </Identification>        
+        <Headline>
+        	<Type><Code>job_applied_for</Code><Label>Job Applied For</Label></Type>
+        	<Description><Label>Chuck Norris law enforcement</Label></Description>
+        </Headline>
+        <WorkExperienceList>
+            <WorkExperience>
+                <Period>
+                    <From year="2001"/>
+                    <!--To is missing and Current is true, thus the experience is current-->
+                    <Current>true</Current>
+                </Period>
+                <Documentation>
+                    <ReferenceTo idref="ATT_1"/>
+                </Documentation> 
+                <Position><Label>Martial Arts Instructor</Label></Position>
+                <Activities>&lt;p&gt;Main activities and responsibilities:&lt;/p&gt;
+                    &lt;ul&gt;
+                    &lt;li&gt;Preparing class plans in advance.&lt;/li&gt;
+                    &lt;li&gt;Teaching classes which will normally consist of warm up, skills training, conditioning, sparring, stretching and some lecturing - all in varying amounts on different days.&lt;/li&gt;
+                    &lt;li&gt;Monitoring and noting students&apos; progress, providing feedback for students on an individual and group basis where there is need for improvement/ grounds for reward. &lt;/li&gt;
+                    &lt;li&gt;Keeping up to date on personal skills and training.&lt;/li&gt;
+                    &lt;li&gt;Continuing study of martial arts theory and philosophy. &lt;/li&gt;
+                    &lt;li&gt;Administrative duties.&lt;/li&gt;
+                    &lt;li&gt;Promotional enterprises such as advertising, arranging new classes, demonstrations etc.&lt;/li&gt;
+                    &lt;li&gt;Travelling to other clubs to give special workshops.&lt;/li&gt;
+                    &lt;/ul&gt;</Activities>
+                <Employer>
+                    <Name>School of Ninjutsu</Name>
+                    <ContactInfo>
+                        <Address>
+                            <Contact>
+                                <Country><Code>JP</Code><Label>Japan</Label></Country>
+                            </Contact>
+                        </Address>
+                        <Website>
+                            <Contact>http://mybusiness.com</Contact>
+                            <Use><Code>business</Code></Use>
+                        </Website>
+                    </ContactInfo>
+                    <Sector>
+                        <Code>Q</Code>
+                        <Label>Human health and social work</Label>
+                    </Sector>
+                </Employer>
+            </WorkExperience>
+        </WorkExperienceList>
+        <EducationList>
+            <Education>
+                <Period>
+                    <From year="1995"/>
+                    <Current>true</Current>
+                </Period>
+                <Documentation>
+                    <ReferenceTo idref="ATT_1"/>
+                    <ReferenceTo idref="ATT_2"/>
+                </Documentation> 
+                <Title>Martial Arts</Title>
+                <Activities></Activities>
+                <Organisation>
+                    <Name>The University of Plymouth. Department of Martial Arts</Name>
+                    <ContactInfo>
+                        <Address>
+                            <Contact>
+                                <Country>
+                                    <Code>US</Code>
+                                    <Label>United States</Label>
+                                </Country>
+                            </Contact>
+                        </Address>
+                    </ContactInfo>
+                </Organisation>
+                <Level>
+                    <Code>6</Code>
+                    <Label>EQF 6</Label>
+                </Level>
+                <Field>
+                    <Code>21</Code>
+                    <Label>Arts</Label>
+                </Field>
+            </Education>
+        </EducationList>
+        <Skills>
+            <Linguistic>
+                <MotherTongueList>
+                    <MotherTongue>
+                        <Description>
+                            <Code>en</Code>
+                            <Label>English</Label>
+                        </Description>
+                    </MotherTongue>
+                    <MotherTongue>
+                        <Description>
+                            <Label>Elvish</Label>
+                        </Description>
+                    </MotherTongue>
+                </MotherTongueList>
+                <ForeignLanguageList>
+                    <ForeignLanguage>
+                        <Description>
+                            <Code>ja</Code>
+                            <Label>Japanese</Label>
+                        </Description>
+                        <ProficiencyLevel>
+                            <Listening>C1</Listening>
+                            <Reading>C1</Reading>
+                            <SpokenInteraction>C1</SpokenInteraction>
+                            <SpokenProduction>C1</SpokenProduction>
+                            <Writing>C1</Writing>
+                        </ProficiencyLevel>
+                        <VerifiedBy>
+                            <Certificate>
+                                <Title>Cambridge Proficiency</Title>
+                            </Certificate>
+                            <Certificate>
+                                <Title>Michigan Proficiency</Title>
+                            </Certificate>
+                        </VerifiedBy>
+                        
+                    </ForeignLanguage>
+                </ForeignLanguageList>
+            </Linguistic>
+            <Communication>
+                <Description>Bla bla multinational environment.</Description>
+            </Communication>
+            <Organisational>
+                <Description>Bla bla Human Relations bla bla.</Description>
+            </Organisational>
+            <JobRelated>
+                <Description>Bla bla Business Processes bla bla.</Description>
+            </JobRelated>
+            <Computer>
+                <Description>Bla bla Microsoft Word bla bla.</Description>
+            </Computer>
+            <Driving>
+                <Description>
+                    <Licence>A</Licence>
+                    <Licence>B</Licence>
+                    <Licence>BE</Licence>
+                </Description>
+            </Driving>
+            <Other>
+                <Description>Bla bla excellent hip hop dancer bla bla.</Description>
+            </Other>
+        </Skills>
+        
+        <AchievementList>
+            <!-- For user-defined achievements, the Type element will be missing, since it will not be one of the predefined. -->
+            <Achievement>
+                <Title>
+                    <Code>projects</Code>
+                    <Label>Projects</Label>
+                </Title>
+                <Description>Bla Bla my projects.</Description>
+            </Achievement>
+            <Achievement>
+                <Title>
+                    <Code>publications</Code>
+                    <Label>Publications</Label>
+                </Title>
+                <Description>Bla Bla my publications.</Description>
+            </Achievement>
+            <Achievement>
+                <Title>
+                    <Label>Theatre Participations</Label>
+                </Title>
+                <Description>Bla Bla my theatres.</Description>
+            </Achievement>
+        </AchievementList>
+        <Documentation>
+            <ReferenceTo idref="ATT_1"/>
+            <ReferenceTo idref="ATT_2"/>
+        </Documentation>
+    </LearnerInfo>
+    <AttachmentList>
+        <Attachement id="ATT_1">
+            <Name>licence.pdf</Name>
+            <MimeType>application/pdf</MimeType>
+            <Data><!-- bytes go here --></Data>
+            <Description>Copy of the licence to instruct martial arts</Description>
+        </Attachement>
+        <Attachement id="ATT_2">
+            <Name>My scanned Diploma copy</Name>
+            <MimeType>image/jpeg</MimeType>
+            <Data><!-- bytes go here --></Data>
+        </Attachement>
+    </AttachmentList>
+</SkillsPassport>

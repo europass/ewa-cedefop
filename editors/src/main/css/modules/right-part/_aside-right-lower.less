@@ -1,0 +1,539 @@
+
+/******************************************
+             ASIDE RIGHT
+*******************************************/
+
+/**helpers
+*******************************************/
+
+
+/*for the right bottom part icons*/
+.icon-essential{
+  position:absolute;
+  top:50%;
+  transform:translatey(-50%);
+  left:25px;
+  font-family:"europass-application"!important;
+  font-size:20px;
+  background:transparent;
+  border:none;
+  font-weight:400;
+  vertical-align: middle;
+  bottom:auto;
+}
+
+
+
+
+
+
+/*ERAZSE CONTENTS
+************************************************************************/
+#europass-contents-reset{
+  @media screen and (max-width:@tablet-width-limit){
+    position:absolute;
+    top:18px;
+    left:550px;
+    display:inline-block;
+    float:left;
+  }
+  @media screen and (max-width:@phone-width-limit){
+    left:210px;
+  }
+  .tooltip .tooltip-arrow{
+    max-width:170px;
+  }
+  button{
+    position:relative;
+    padding:18px 22px;
+    background:none;
+    border:none;
+    color: @very-dark-grey;
+    font-weight:600;
+    font-size:11px;
+    cursor:pointer;
+    @media screen and (min-width:@tablet-width-limit){
+      margin-left:23px;
+      padding:18px 28px;
+    }
+    @media screen and (max-width:@tablet-width-limit){
+      font-size:0;
+    }
+    &:hover{
+      color:@gray-text-darker;
+    }
+    &:before{
+      content:"\e903";
+      font-family:"europass-application"!important;
+      font-size:20px;
+      border:none;
+      left:15px;
+      background:transparent;
+      position:static;
+      font-weight:400;
+      vertical-align: middle;
+      margin-right:3px;
+      @media screen and (min-width:@tablet-width-limit){
+        position:absolute;
+        top:50%;
+        transform:translatey(-50%);
+        left:0;
+      }
+      @media screen and (max-width:@tablet-width-limit){
+        font-size:23px;
+        padding-bottom:7px;
+        display:inline-block;
+      }
+    }
+  }
+}
+
+/*********IMPORT WIZARD**********/
+
+
+#ImportWizard .button.button{
+  margin-bottom:0!important;
+}
+
+
+#ImportWizard {
+  @media screen and (max-width:@tablet-width-limit){
+    display:inline-block;
+    position:absolute;
+    left:150px;
+    top:17px;
+  }
+  @media screen and (max-width:@phone-width-limit){
+    left:70px;
+  }
+  .upload > span:before{
+    display:none;
+  }
+  position: relative;
+  top: 0;
+  margin-bottom:0;
+  .button {
+    padding: 18px 22px;
+    background:none;
+    border:none;
+    width: 100%;
+    margin-top:0;
+    box-shadow: none;
+    text-align: left;
+    border-top:1px solid @gray-bold;
+    border-bottom:1px solid @medium-light-grey;
+    @media screen and (max-width:@tablet-width-limit){
+      border-bottom:none;
+      padding-bottom:14px;
+      border-top:none;
+    }
+    &:after{
+      background:transparent;
+    }
+    &:before{
+      &:extend(.icon-essential);
+      content:"\e905";
+      color:@purple;
+      @media screen and (max-width:@tablet-width-limit){
+        font-size:24px;
+        top:21px;
+        transform:translatey(0);
+      }
+    }
+    span{
+      background:transparent;
+      color:@purple;
+      font-weight:400;
+      font-size:16px;
+      padding-left:40px;
+      @media screen and (max-width:@tablet-width-limit){
+        font-size: 13px;
+        padding-left: 0;
+        padding-top: 20px;
+        margin-left: 0;
+        position: absolute;
+        top: 80%;
+        left:75%;
+        transform:translatex(-50%);
+        white-space: nowrap;
+      }
+      @media screen and (max-width:@phone-width-limit){
+        display:none;
+      }
+    }
+    &:hover{
+      background-color:@blue-lightest;
+      @media screen and (max-width:@tablet-width-limit){
+        background-color:transparent;
+      }
+
+      span{
+        text-shadow: none;
+
+      }
+      &:before{
+        text-shadow:none;
+
+      }
+    }
+  }
+}
+
+
+
+/*EXPORT WIZARD
+***********************************************************************/
+
+aside.right{
+  #ExportWizard{
+    @media screen and (max-width:@tablet-width-limit){
+      display:inline-block;
+    }
+
+    .top-btn-border{
+      display:none!important;
+    }
+    button{
+      text-align: left;
+      padding:18px 22px;
+      position:relative;
+      background:transparent;
+      box-shadow:none!important;
+      border:none;
+      margin:0!important;
+      .txt{
+        font-weight:400;
+        font-size:16px;
+      }
+      &:before{
+        &:extend(.icon-essential);
+        @media screen and (max-width:@tablet-width-limit){
+          left:20px;
+        }
+      }
+      &.quick-download{
+        display:flex;
+        align-items: center;
+        @media screen and (max-width:@tablet-width-limit){
+          position:absolute;
+          left:300px;
+          top:17px;
+        }
+        @media screen and (max-width:@phone-width-limit){
+          left:120px;
+        }
+        &:hover{
+          background:@blue-lightest;
+          @media screen and (max-width:@tablet-width-limit) {
+            background-color: transparent;
+          }
+        }
+        &:before{
+          content: "\e901";
+          color: @green;
+          text-shadow: none;
+          @media screen and (max-width:@tablet-width-limit){
+            font-size: 24px;
+            top: 22px;
+            transform: translatey(0);
+          }
+        }
+        .txt {
+          color: @green;
+          text-shadow: none;
+          position: relative;
+          top: 1px;
+        }
+      }
+      &.share-document{
+        border-top: 1px solid @medium-light-grey;
+        border-bottom: 1px solid @gray-bold;
+        text-align: left;
+        @media screen and (max-width:@tablet-width-limit){
+          position: absolute;
+          left: 450px;
+          top: 17px;
+          img {
+            display: none;
+          }
+        }
+        @media screen and (max-width:@phone-width-limit) {
+          left: 160px;
+        }
+        &:hover{
+          background-color: @blue-lightest;
+        }
+        @media screen and (max-width:@tablet-width-limit) {
+          border-bottom: none;
+          border-top: none;
+          &:hover{
+            background-color: transparent;
+          }
+        }
+        &:before{
+          &:extend(.icon-essential);
+          content: "\e902";
+          color: @orange-dark;
+          text-shadow: none;
+          font-size: 22px;
+          @media screen and (max-width:@tablet-width-limit){
+            font-size: 24px;
+            top: 23px;
+            transform: translatey(0);
+          }
+        }
+        .txt{
+          color: @orange-dark;
+          text-shadow: none;
+        }
+      }
+      &:after{
+        display: none;
+      }
+      .img{
+        background:none;
+      }
+    }
+    .save-file-wrapper {
+      margin: 23px;
+
+      max-width: 180px;
+      @media screen and (max-width:@tablet-width-limit){
+        margin: 0;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+      }
+      &:hover{
+        @media screen and (max-width:@tablet-width-limit){
+          background-color: transparent;
+        }
+      }
+      button{
+        background-color: @blue;
+        border-radius: 5px;
+        &:before{
+          &:extend(.icon-essential);
+          content: "\e900";
+          color: white;
+          @media screen and (max-width:@tablet-width-limit){
+            top: 40%;
+            transform: translatey(0);
+            left: 21px;
+          }
+        }
+      }
+      &:hover{
+        button{
+          background-color: @blue-regular;
+        }
+      }
+      .txt{
+        color: white;
+        @media only screen and ( max-width: @tablet-width-limit ) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and ( max-width: @tablet-width-limit ) {
+  #ExportWizard #quick-download-btn > span > span.txt, #ExportWizard #share-document-btn > span > span.txt{
+    display: block;
+    font-size: 13px;
+    padding-top: 20px;
+    margin-left: 0;
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translatex(-50%);
+    white-space: nowrap;
+  }
+}
+
+@media only screen and ( max-width: @phone-width-limit ) {
+  #ExportWizard #quick-download-btn > span > span.txt, #ExportWizard #share-document-btn > span > span.txt{
+    display: none;
+  }
+}
+
+
+#aside-right-lower {
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    position: fixed;
+    display: flex;
+    bottom: 0px;
+    top: auto;
+    left: 0;
+    right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 94%;
+    height: 100px;
+    .top-outer-line {
+      height: 0.6rem;
+      width: 100%;
+      .top-inner-line {
+        height: 0.6rem;
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  //Export
+  #ExportWizard {
+    .top-btn-border {
+      height: 2px;
+      border-top: 1px solid #e5e5e5;
+      display: block;
+      @media only screen and ( max-width: @tablet-width-limit ) {
+        display: none;
+      }
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+      button.export-wizard {
+        margin-left: 20px;
+      }
+    }
+    @media only screen and ( min-width: @desktop-width-limit ) {
+      bottom: 10px;
+      left: 0;
+      position: static;
+      .button {
+        width: 100%;
+        margin: -5px 0 20px 0;
+      }
+    }
+  }
+
+  #show-right-sidebar-btn {
+    display: none;
+    .extra-fields-for-tablet & {
+      @media only screen and ( max-width: @tablet-width-limit ) {
+        display: block;
+        float: right;
+      }
+    }
+    border: none;
+    margin-top: 27px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    background: url("@{img-base-url}tablet/dots_sprite.png@{img-suffix-url}${project.version}") no-repeat 0px -63px transparent;
+    background-position: 0px -63px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .off-canvas-wrap.noactive-right.move-left #aside-right-lower #show-right-sidebar-btn {
+    margin-top: 27px;
+  }
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  #aside-right-lower {
+    transform: none!important;
+    height: 50px;
+    #show-right-sidebar-btn {
+      background: none;
+      position: fixed;
+      top: 0;
+      right: 10px;
+      margin: 0;
+      background-position: 12px -31px;
+      background-size: 70%;
+    }
+  }
+  .off-canvas-wrap.noactive-right.move-left #aside-right-lower #show-right-sidebar-btn {
+    margin-top: 0;
+  }
+  #europass-contents-reset{
+    top: -3px;
+    right: 10px;
+    left: auto;
+  }
+  aside.right #ExportWizard .save-file-wrapper {
+    top: 0;
+    left: 0;
+    button{
+      background-color:transparent;
+      &:before{
+        color: @blue;
+      }
+    }
+  }
+  #ImportWizard{
+    left: 20%;
+    top: 0;
+  }
+  aside.right #ExportWizard button.share-document {
+    right: 25%;
+    top: -2px;
+    left: auto;
+  }
+  aside.right #ExportWizard button.quick-download {
+    top: 0;
+    left: 50%;
+    transform: translatex(-60%);
+  }
+  #europass-contents-reset button {
+    .tooltip {
+      left: -120px!important;
+      .tooltip-inner {
+        &:before,
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+  #show-right-sidebar-btn {
+    > span {
+      display:inline-block;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background-color:white;
+      position:absolute;
+      top:50%;
+      transform:translatey(-50%);
+      transition:all 0.3s linear;
+    }
+    .sidebar-btn-dot1{
+      left:10px;
+    }
+    .sidebar-btn-dot2{
+      left:22px;
+    }
+    .sidebar-btn-dot3{
+      left:34px;
+    }
+  }
+  .off-canvas-wrap.noactive-right.move-left{
+    #show-right-sidebar-btn{
+      .sidebar-btn-dot2{
+        top:70%;
+      }
+      .sidebar-btn-dot1{
+        left:15px;
+      }
+      .sidebar-btn-dot3{
+        left:29px;
+      }
+    }
+  }
+}
+

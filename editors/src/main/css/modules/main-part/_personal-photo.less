@@ -1,0 +1,406 @@
+
+.Photo.choose-file .upload .title:before{
+  display:none;
+}
+
+.cv > .section .Photo.active > span.upload-prompt{
+  display: none;
+}
+
+.cv > .section .Photo.active.nophoto >span.upload-prompt,
+.cv > .section .Photo.active:hover > span.upload-prompt,
+.cv > .section .Photo.active.tap-hover > span.upload-prompt{
+  display: inline-block;
+}
+
+.cv > .section .Photo {
+  background: none no-repeat scroll 0 0 transparent;
+  border: 2px dashed transparent;
+  margin: 20px 0 0 70px;
+  height: @cv-photo-height;
+  width: @cv-photo-width;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  border-radius: 0px;
+  padding-bottom:30px;
+  @media screen and(max-width:@phone-width-limit){
+    margin:10px 0;
+  }
+}
+/* active means the preference is set to true */
+
+.cv > .section .Photo.active.nophoto {
+  border: 2px dashed @wg-medium-grey;
+  margin: 0 0 0 70px;
+}
+
+
+
+.cv > .section:hover button.photo.delete.delete.delete,
+.cv > .section .tap-hover button.photo.delete.delete.delete{
+  display:inline-block;
+  cursor:pointer;
+}
+
+
+
+
+
+.cv > .section .Photo button.photo.delete{
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 30px;
+  color: transparent;
+  display: none;
+  border: none;
+  bottom:0px;
+  margin-top:4px;
+  top:auto;
+}
+
+
+/********** Set to display true but no photo uploaded yet *********/
+.cv > .section .Photo.active.nophoto {
+  border-color: @wg-medium-grey;
+}
+
+.cv > .section .Photo.active:hover img,
+.cv > .section .Photo.active.tap-hover img{
+  background-color: white;
+}
+.cv > .section .Photo.active:hover > span.upload-prompt,
+.cv > .section .Photo.active.tap-hover > span.upload-prompt {
+  color:@wg-very-very-light-grey;
+  background-image: url("@{img-base-url}upload_arrow_light_grey_11.png@{img-suffix-url}${project.version}") ;
+}
+
+
+.Photo.choose-file .button.upload > span:before{
+  display: block!important;
+}
+
+/******** Common styles for cv photo and signature form *********/
+
+.Photo, .Signature{
+
+  &.upload-area{
+    padding-bottom: 0px;
+    margin-top: 50px;
+  }
+
+  .upload.feedback-area {
+
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin: 0 !important;
+
+    .notification.error {
+      margin: 1rem 0 0 0 !important;
+    }
+  }
+
+  .notification.warning {
+    border-radius: 4px;
+    background-color: @msg-warning-bg;
+    > em{
+      color: @grey-dark-text-two;
+      margin: 5px 0 0 0;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+
+    b {
+      font-weight: bold;
+    }
+  }
+
+  .note {
+
+    padding: 1rem 0 3rem 0;
+
+    > p {
+      color: @grey-dark-text-two;
+    }
+  }
+
+  .browse-file-area{
+    text-align: left;
+  }
+}
+
+
+
+
+.personal .PersonalBasic, .personal .value.Address{
+  padding-top: 0!important;
+}
+
+.personal-details{
+  .value.value.Address::before{
+    color:#1593CB;
+  }
+}
+
+.personal-details .name{
+  margin-bottom:10px;
+}
+
+
+.ContactInfo .Email .Email,.ContactInfo .Website .Website{
+  padding-left:45px;
+}
+
+#document-recipient-email-form input{
+  background-color:rgba(196,81,0,0.07) !important;
+  &:focus{
+    background-color:#eef0f2!important;
+  }
+}
+
+.personal .value.Address{
+  background:transparent!important;
+  position:relative;
+  &:before{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translatey(-50%);
+    font-family: "europass-application" !important;
+    content: "\e91f";
+    font-size: 19px;
+    color: #FA7E25;
+  }
+}
+
+.environmentInfo .css-checkbox + label.css-label{
+  height:auto!important;
+}
+
+.PersonalBasic.personal-details.value {
+  min-height: 110px;
+  z-index: 10;
+}
+.cv .section .personal-details.value{
+  display: inline-block;
+}
+
+.cv-section-pd-span,
+.compose .section .personal-details div.name span{
+  display: inline-block;
+  vertical-align: top;
+  /*     margin-top: 3px; */
+  font-size: 1.5rem;
+}
+
+.compose .section .personal-details div.name span.default-value{
+  color:@wg-light-grey;
+}
+
+/* The person name needs to be moved upwards to be in the same level with the section's heading*/
+.compose  .section .personal-details.value{
+  position: relative;
+}
+.compose > .section > .value.PersonName span {
+  font-size: 17px;
+  font-weight: normal;
+  letter-spacing: 0.05px;
+}
+.cv-section-pn-empty,
+.compose > .section > .value.PersonName span.emptyFirstName,
+.compose > .section > .value.PersonName span.emptySurname {
+  color: @text-lightgrey;
+  font-style: italic;
+  letter-spacing: 0.05px;
+}
+.compose > .section > .value.PersonName span.FirstName,
+.compose > .section > .value.PersonName span.Surname {
+  color: @black-text;
+}
+
+@contact-info-icon-space: 20px;
+
+.cv .section .value > .item {
+  display: inline-block;
+}
+.compose > .section  .value.Address,
+.compose > .section  .value.Email,
+.compose > .section  .value.Telephone,
+.compose > .section  .value.Telephone.default-value,
+.compose > .section  .value.InstantMessaging,
+.compose > .section  .value.Website {
+  padding-top: 10px;
+}
+
+.cv-section-values-bg,
+.compose > .section  .value.Address,
+.compose > .section  .value.Email,
+.compose > .section  .value.Telephone.default-value,
+.compose > .section  .value.InstantMessaging,
+.compose > .section  .value.Website {
+  background-color: transparent;
+  background-position: 0px 11px;
+  background-repeat: no-repeat;
+  padding-left: @contact-info-icon-space;
+}
+
+.cv-section-value-address-bi,
+.compose > .section  .value.Address  {
+  background-image: url("@{img-base-url}icon-location.png@{img-suffix-url}${project.version}") ;
+}
+.cv-section-value-email-bi,
+.compose > .section  .value.Email  {
+  background-image: url("@{img-base-url}icon-envelope.png@{img-suffix-url}${project.version}") ;
+  padding-right: 8px;
+  padding-left: contact-info-icon-space;
+  background-position:0 13px;
+}
+.compose > .section  .value.Website {
+  background-image: url("@{img-base-url}icon-website.png@{img-suffix-url}${project.version}") ;
+  background-position: left center;
+  padding-left: @contact-info-icon-space;
+  padding-top: 10px;
+}
+.compose > .section  .value.Linkedin {
+  background-image: url("@{img-base-url}icon-linkedin.svg@{img-suffix-url}${project.version}") ;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: left center;
+  padding-left: @contact-info-icon-space;
+}
+.compose > .section .value.Website .item {
+  /**text-decoration:underline; */
+}
+
+.cv-section-value-im-bi,
+.compose > .section  .value.InstantMessaging {
+  background-image: url("@{img-base-url}icon-im.png@{img-suffix-url}${project.version}" );
+  padding-left: @contact-info-icon-space;
+  background-position:0 13px;
+}
+
+.cv-section-value-im-use,
+.compose > .section .value.InstantMessaging .Use {
+  color: @cv-personal-info-inner-label-color;
+}
+
+
+.cv-section-value-telephone-item,
+.compose > .section .value.Telephone .item{
+  min-height: 15px;
+  background-color: transparent;
+  background-position: 0px 5px;
+  background-repeat: no-repeat;
+  padding-left: @contact-info-icon-space;
+  padding-right: 8px;
+}
+.cv-section-value-telephone-item-bi,
+.compose > .section .value.Telephone.default-value,
+.compose > .section .value.Telephone .item{
+  background-image: url("@{img-base-url}icon-home.png@{img-suffix-url}${project.version}") ;
+}
+.compose > .section .value.Telephone .item span.Contact{
+  display: inline-block;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.cv-section-value-telephone-item-mobile-bi,
+.compose > .section .value.Telephone .item.mobile {
+  background: url("@{img-base-url}icon-mobile.png@{img-suffix-url}${project.version}")  no-repeat 0px 6px;
+}
+
+.cv-section-value-telephone-item-work-bi,
+.compose > .section .value.Telephone .item.work {
+  background: url("@{img-base-url}icon-work.png@{img-suffix-url}${project.version}")  no-repeat 0px 5px;
+}
+
+.cv .section .PersonalBasic{
+  padding-top: 10px;
+}
+.cv .section .PersonalDetails{
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left:20px;
+}
+.cv .section .PersonalDetails > .Birthdate,
+.cv .section .PersonalDetails > .Birthdate > *,
+.cv .section .PersonalDetails > .Gender,
+.cv .section .PersonalDetails > .Gender > *,
+.cv .section .PersonalDetails > .Nationality,
+.cv .section .PersonalDetails > .Nationality > * {
+  display: inline-block;
+}
+.cv .section .PersonalDetails dl + dl {
+  border-left: 1px solid @cv-personal-info-inner-label-color;
+  padding-left: 5px;
+}
+.Birthdate .label,
+.Gender .label,
+.Nationality .label,
+.inner-content-label {
+  color: @cv-personal-info-inner-label-color;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .personal-details {
+    &.value.personal {
+      > .name {
+        padding-top:10px;
+        padding-left:23px;
+      }
+    }
+    .Gender{
+      display:flex!important;
+      .value{
+        margin-left:10px;
+      }
+    }
+  }
+  .compose .section .personal-details.value{
+    position:static;
+  }
+  .cv .section {
+    .PersonalBasic {
+      padding-left: 20px;
+    }
+    .PersonalDetails.PersonalDetails.PersonalDetails {
+      padding-left: 30px;
+      > *{
+        display:block;
+        padding-left:0;
+        border-left:none;
+      }
+    }
+  }
+/*  .names.switch.tip{
+    display:none!important;
+  }*/
+
+  .Photo.active.active .upload-prompt{
+    right:30px;
+  }
+  .cv > .section .Photo button.photo.delete{
+    width:30px;
+  }
+}
+
+
+.compose>.section .value.Website.Website{
+  padding-top:0;
+}
+
+.websites_container{
+  padding-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  > .value{
+    margin-right:10px;
+  }
+}

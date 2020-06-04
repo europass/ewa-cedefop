@@ -1,0 +1,169 @@
+<a id="accessibility-title-hidden-link" aria-label="This is accessibility editor" tabindex="0"></a>
+<div class="off-canvas-wrap noactive-right noactive-left">
+	<div class="inner-wrap">
+	
+		{{!--<!-- Header Area For Tablets -->--}}
+		<header id="header-logo-moto-small">
+			{{!--<!-- Show Left Navigation Control : For tablets -->--}}
+			<button type="button" 
+					id="show-left-sidebar-btn"
+                    class="show-sidebar-btn"
+					data-effect-direction="right">
+                <span class="sidebar-btn-line1"/>
+                <span class="sidebar-btn-line2"/>
+                <span class="sidebar-btn-line3"/>
+			</button>
+			{{!--<!-- Current Document Title : For tablets -->--}}
+			<div id="CurrentDocumentTitle"
+				 class="title" ></div>
+			{{!--<!-- Logo -->--}}
+			<div class="europass-logo-moto">
+				<div>
+					<span>{{get_text "EWA.Moto" group="GuiLabel"}}</span>
+				</div>
+			</div>
+		</header>
+		
+		{{!--<!-- Aside Navigation For Desktop AND Open-able for Tablets-->--}}
+		<aside class="left" id="aside-left-default">
+			
+			<header id="header-logo-moto">
+				
+				{{!--<!-- Logo -->--}}
+				<div class="europass-logo-moto">
+					<div>
+						<span>{{get_text "EWA.Moto" group="GuiLabel"}}</span>
+					</div>
+				</div>
+				
+				{{!--<!-- Languages -->--}}
+				<section id="top-ui-languages">
+				</section>
+				
+                {{!--<!-- Cloud Login Section-->--}}
+                <section id="top-ui-cloud-sign-in-section">
+                </section>
+
+			</header>
+			
+			{{!--<!-- Document Selection -->--}}
+			<nav class="europass-documents">
+				<ol id="AvailableDocuments" ></ol>
+			</nav>
+			
+			<footer class="global-controls options">
+
+                {{!--<!-- prepare-your-interview -->--}}
+                <section id="prepare-your-interview-section">
+                    <button id="prepare-your-interview-btn"
+                            type = "button"
+                            class = "prepare-your-interview button">
+                        <span class="btn-content">
+                            <span class="txt"><p>{{get_text "prepare.your.interview" group="GuiLabel"}}</p></span>
+                        </span>
+                    </button>
+                </section>
+
+                {{!--<!-- basic-principles TODO RENAME ID !!!-->--}}
+                <section id="basic-principles-section">
+                    <button id="basic-principles-btn"
+                            type = "button"
+                            class = "basic-principles button">
+                        <span class="btn-content">
+                            <span class="txt"><p>{{get_text "basic.principles" group="GuiLabel"}}</p></span>
+                        </span>
+                    </button>
+                </section>
+
+				{{!--<!-- Cookie Consent Block -->--}}
+<!-- 			<section id="local-storage-options"></section> -->
+                <section id="application-settings">
+                  <a class="change-settings tip spot tip-adj tip-addTop-10pixels" data-tip.position="top-left">{{get_text "Visitor.Option.Settings" group="GuiLabel"}}</a>
+					<span class="data-title" style="display:none">{{get_text "Visitor.Option.Settings" group="EditorHelp"}}</span>
+                </section>
+                
+				{{!--<!-- Cookie Consent Block -->--}}
+				<section id="contact-us">
+					<a class="contact-us tip spot tip-adj tip-addTop-10pixels" data-tip.position="top-left">{{get_text "Visitor.Option.Contact" group="GuiLabel"}}</a>
+					<span class="data-title" style="display:none">{{get_text "Visitor.Option.Contact" group="EditorHelp"}}</span>
+				</section>
+			</footer>
+			
+			
+		</aside>
+
+		{{!--<!-- New Epas Modal -->--}}
+		<div id="new-europass-modal">
+			<div id="close-modal"></div>
+			<div class="inner">
+				<div class="epas-bg-image"></div>
+				<h1>{{get_text "new.europass.modal.header" group="GuiLabel"}}</h1>
+				<p>{{get_text "new.europass.modal.text" group="GuiLabel"}}</p>
+				{{!--<!--<button id="new-europass-modal-link">Check!</button>-->--}}
+			</div>
+		</div>
+		
+		{{!--<!-- Main Area -->--}}
+		<section class="effective-content-area" id="main-content-area">
+			
+			<div class="dropzone" id="fileupload"></div>
+			
+			<aside id="notifications-area">						
+				{{!--<!-- Document Download Message handled by /compose/cv/SkillsPassportComposeView, /lp/ComposeView, /esp/ComposeView, /cl/ComposeView
+						  On View.enableFunctionalities: Use the templates/messaging/message template with the suitable context (closable,state,message)
+						  to fill in this section's html and set its visibility.
+						  On View.onClose, clear and hide this section. -->--}}
+                                <section id="new-europass-portal-info" class="feedback-area notification-section" style="display:none;"></section>
+				<section id="document-storing-warning" class="feedback-area notification-section" style="display:none;"></section>
+                                <section id="missing-documents-info" class="feedback-area notification-section" style="display:none;"></section>
+
+				{{!--<!-- Various Notifications Block -->--}}
+				<section id="app-notifications" class="notification-section"></section>
+				
+			</aside>
+			
+			<section id="MainArea:SkillsPassport" class="main-area"></section>
+			
+		</section>
+
+		{{!--<!-- Right Side Area -->--}}
+		<aside class="right" id="aside-right-side-page">
+		<section id="aside-right-upper">
+            <button id="show-close-sidebar-btn" type="button" class="button cancel">Cancel</button>
+			<section id="DocumentControls"></section>
+		</section>
+		
+		<section id="aside-right-lower">
+		    <div class ="top-outer-line"><div class ="top-inner-line"></div></div>
+
+            {{!--<!-- Data reset -->--}}
+            <section id="europass-contents-reset">
+                <button type="button"
+                        id="SkillsPassport_delete_btn"
+                        class="SkillsPassport reset tip spot tip-adj tip-addTop-10pixels"
+                        data-tip.position="top-left"
+                        data-rel-section="SkillsPassport.LearnerInfo"
+                        data-rel-view="SkillsPassport_delete_btn">
+                    {{get_text "SkillsPassport.CV.Reset" group="GuiLabel"}}
+                    <span class="data-title" style="display:none">{{get_text "SkillsPassport.Reset" group="EditorHelp"}}</span>
+                </button>
+            </section>
+
+            <section id="ImportWizard"></section>
+            <section id="ExportWizard"></section>
+		
+			{{!--<!-- Show Left Navigation Control : For tablets -->--}}
+			<button type="button" 
+					id="show-right-sidebar-btn"
+					class="show-sidebar-btn"
+                    data-effect-direction="left">
+                <span class="sidebar-btn-dot1"/>
+                <span class="sidebar-btn-dot2"/>
+                <span class="sidebar-btn-dot3"/>
+			</button>
+			
+		</section>
+		</aside>
+		
+	</div>
+</div>

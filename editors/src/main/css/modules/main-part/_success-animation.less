@@ -1,0 +1,122 @@
+
+/***************************************************
+ ***************************************************
+ SECTION HIGHTLIGHT TRANSITION    NEW ANIMATION   **
+ ***************************************************
+ ***************************************************/
+
+
+
+.list-item.highlight,
+.subsection.highlight,
+.section.highlight,
+dl.foreign-language-details.highlight {
+  position:relative;
+  &:after {
+    background:transparent!important;
+    opacity: 1;
+    height: 2rem;
+    width: 1rem;
+    transform-origin: left top;
+    border-right: 5px solid @green-darker;
+    border-top: 5px solid @green-darker;
+    border-bottom:transparent!important;
+    content: '';
+    left: -43px;
+    top: 50%;
+    position: absolute;
+    animation:checkmark 2.5s ease forwards;
+    transform: scaleX(-1) rotate(135deg);
+  }
+}
+
+.list-item.highlight,
+.subsection.highlight,
+.section.highlight,
+dl.foreign-language-details.highlight {
+  animation:highlight-animation 2.5s ease;
+}
+
+
+
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 1rem;
+    opacity: 1;
+  }
+  40% {
+    height: 2rem;
+    width: 1rem;
+    opacity: 1;
+  }
+  60% {
+    height: 2rem;
+    width: 1rem;
+    opacity: 1;
+  }
+  80% {
+    height: 0;
+    width: 1rem;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes highlight-animation {
+  0% {
+    background-color:white;
+  }
+  40% {
+    background-color:@green-lightest;
+  }
+  60% {
+    background-color:@green-lightest;
+  }
+  100% {
+    background-color:white;
+  }
+}
+
+
+.cl {
+  .list-item.highlight,
+  .subsection.highlight,
+  .section.highlight,
+  dl.foreign-language-details.highlight {
+    &:after {
+      left: -40px !important;
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .list-item.highlight,
+  .subsection.highlight,
+  .section.highlight,
+  dl.foreign-language-details.highlight{
+    &:after{
+      display:none;
+    }
+  }
+}
+
+.scnd-animation-start,.scnd-animation-end,.frst-animation-end,.frst-animation-start{
+  hr{
+    display:none!important;
+  }
+}

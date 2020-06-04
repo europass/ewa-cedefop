@@ -1,0 +1,32 @@
+{{=[[ ]]=}}
+{{#attachmentsInfo.showable}}
+
+{{#Documentation}}
+{{#nonEmpty}}
+<text:p text:style-name="P14">
+	<text:bookmark-start text:name="ESP-Attachment-{{attachment.id}}"/><text:span>{{{attachment.descriptionXml}}}</text:span><text:bookmark-end text:name="ESP-Attachment-{{attachment.id}}"/>
+	
+	<draw:a xlink:type="simple" xlink:href="#{{attachment.relatedSection}}">
+		<draw:frame draw:style-name="fr4" draw:name="graphics19" text:anchor-type="as-char" svg:width="0.4cm" svg:height="0.4cm" draw:z-index="16">
+			<draw:image xlink:href="Pictures/document-link.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+			<svg:title>[[#resources]][[& Accessibility:DocumentLink:Icon]][[/resources]]</svg:title>
+		</draw:frame>
+	</draw:a>
+</text:p>
+{{#attachmentsInfo.includeInline}}
+	{{{attachment.odt}}}
+{{/attachmentsInfo.includeInline}}
+
+{{^attachmentsInfo.includeInline}}
+	{{#attachment.odtNoPages}}
+	{{^isLast}}
+		<text:p text:style-name="P14"></text:p>
+	{{/isLast}}
+	{{/attachment.odtNoPages}}
+{{/attachmentsInfo.includeInline}}
+
+{{/nonEmpty}}
+{{/Documentation}}
+
+
+{{/attachmentsInfo.showable}}

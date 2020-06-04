@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:europass="http://europass.cedefop.europa.eu/Europass" 
+    xmlns="http://europass.cedefop.europa.eu/Experience" 
+    targetNamespace="http://europass.cedefop.europa.eu/Experience"
+    elementFormDefault="qualified">
+    <!--
+    /*
+     * Copyright European Union 2002-2015
+     *
+     *
+     * Licensed under the EUPL, Version 1.1 or – as soon they 
+     * will be approved by the European Commission - subsequent  
+     * versions of the EUPL (the "Licence"); 
+     * You may not use this work except in compliance with the 
+     * Licence. 
+     * You may obtain a copy of the Licence at: 
+     *
+     * http://ec.europa.eu/idabc/eupl.html
+     *
+     *  
+     * Unless required by applicable law or agreed to in 
+     * writing, software distributed under the Licence is 
+     * distributed on an "AS IS" basis, 
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+     * express or implied. 
+     * See the Licence for the specific language governing 
+     * permissions and limitations under the Licence. 
+     *
+     */ 
+    -->
+    <xsd:import namespace="http://europass.cedefop.europa.eu/Europass" schemaLocation="./EuropassSchema.xsd"/>
+    
+    <xsd:element name="GroupOfExperience" type="GroupOfExperienceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+                Defines a schema for an Experience Project. A project is actually a list of Experience Documents.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="GroupOfExperienceType">
+        <xsd:sequence>
+            <xsd:element name="DocumentInfo" type="GroupOfExperienceDocumentInfoType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        Contains metadata information about the specific document.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ExperienceList" type="ExperienceListType">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        A list of Experience Documents.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID">
+            <xsd:annotation>
+                <xsd:documentation>This attribute identifies the Experience Project</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ExperienceListType">
+        <xsd:sequence>
+            <xsd:element ref="europass:SkillsPassport" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="GroupOfExperienceDocumentInfoType">
+        <xsd:sequence>
+            <xsd:element name="CreationDate" type="xsd:dateTime" minOccurs="1" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        The date this document was first created.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="LastUpdateDate" type="xsd:dateTime" minOccurs="1" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en">
+                        The date this document was last updated.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>
+

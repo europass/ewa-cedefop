@@ -1,0 +1,12 @@
+<text:p text:style-name="_CL__Horizontal_Line">
+	<text:span>
+       	<draw:frame 
+       		draw:style-name="_CL__Horizontal_Line" 
+       		draw:name="horizontal-line"
+       		text:anchor-type="as-char" 
+       		svg:width="183mm" svg:height="0.4mm"
+       		draw:z-index="1">
+           	<draw:image xlink:href="Pictures/icon-horizontal-line.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+           </draw:frame>
+	</text:span>
+</text:p>

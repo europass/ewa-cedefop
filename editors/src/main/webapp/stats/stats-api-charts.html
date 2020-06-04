@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="jquery.csv-0.71.js"></script>
+        <script src="stats-api-charts.js"></script>
+        <script type="text/javascript">
+
+            google.charts.load('current', {'packages': ['corechart']});
+
+            $(document).ready(function () {
+
+                $("#chart_div").html("loading...");
+                $("#x_axis_manipulation").attr("style", "display:none");
+
+                var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;document-type;date";
+                //		var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;date;document-type;language=el";
+                //		var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;date;document-type;gender;nationality";
+                //		var getURL = "https://europassdev1.instore.gr/stats/to/csv/generated;date;document-type=ECV;gender;language";
+                //		var getURL = "https://europassdev1.instore.gr/stats/to/csv/generated;date;document-type=ECV;mlanguage";
+
+                var chartsObject = charts.init(getURL, 'chart_div', 'x_field');
+
+                $("#x_field").change(function (el) {
+
+                    if ($(this).val() != "") {
+                        var chartData = chartsObject.transformData($(this).val());
+                        google.charts.setOnLoadCallback(chartsObject.drawData(chartData));
+                    }
+
+                });
+
+            });
+
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <!--Div that will hold the pie chart-->
+        <div id="chart_div"></div>
+        <div id="x_axis_manipulation">
+            <label>Select X axis dimension:</label>
+            <select id="x_field"></select>
+        </div>
+    </body>
+</html>

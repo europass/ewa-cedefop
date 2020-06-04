@@ -1,0 +1,50 @@
+{{#with SkillsPassport}}
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.Driving" group="DocumentLabel"}}</legend>
+	</header>
+	
+	<fieldset class="LearnerInfo.Skills.Driving Driving" >
+		<label for="Driving">
+			{{get_text "LearnerInfo.Skills.Driving.Categories" group="GuiLabel"}}
+		</label>
+
+		<div class="Driving" id="Control:LearnerInfo.Skills.Driving">
+			<ul class="drivingLicense">
+			{{#loop_driving LearnerInfo.Skills.Driving.Description}}
+			<li class="tip spot driving-license-{{loopValue}} {{#if_eq checked compare="checked"}}selected{{/if_eq}} tip-closerTop"
+			{{#if_eq loopValue compare="A"}}data-tip.position="top-right"{{/if_eq}}
+			{{#if_eq loopValue compare="CE"}}data-tip.position="top-right"{{/if_eq}}
+			{{#if_eq loopValue compare="DE"}}data-tip.position="top-right"{{/if_eq}}
+			{{#if_eq loopValue compare="AM"}}data-tip.position="top-left"{{/if_eq}}>
+				<span class="data-title" style="display:none">
+			       <div class="driving-license-list">
+				      <ol>{{helpContent.html}}</ol>
+				   </div>
+				</span>
+				<input  type="checkbox" 
+						class="driving-licence parent-selectable clickable-area-input css-checkbox"
+						title
+						name="LearnerInfo.Skills.Driving.Description"
+						value="{{loopValue}}"
+						{{#if_eq checked compare="checked"}}checked="checked"{{/if_eq}}"
+						id="DrivingLicense-{{loopId}}"/>
+				<label for="DrivingLicense-{{loopId}}" class="{{loopValue}} css-label checkbox-label">
+					{{loopValue}} <div class="icon"></div>
+				</label>
+				
+			</li>
+			{{#if emptyCell}}<li class="empty"></li>{{/if}}
+			{{/loop_driving}}
+			</ul>
+		</div>
+	</fieldset>
+	
+	<div class="credits-icons description">
+	{{get_text "driving.licenses.icons.credits" group="GuiLabel"}}
+	</div>
+	
+</fieldset>
+{{/with}}
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

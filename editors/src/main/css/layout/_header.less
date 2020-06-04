@@ -1,0 +1,240 @@
+
+/*    HEADER LOGO / MOTO / CURRENT DOCUMENT      */
+#header-logo-moto{
+  @media only screen and ( min-width: @desktop-width-limit ){
+    background-color:@blue-light;
+  }
+  position:relative;
+
+  padding-bottom:30px;
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    margin-bottom:30px;
+    padding-bottom:0;
+  }
+}
+
+.europass-logo-moto {
+  padding-top:30px;
+  div {
+    width: 201px;
+    height: 57px;
+    margin: 0 auto 25px 8%;
+    max-width: 90%;
+    background: url("@{img-base-url}europass_logo-milestone-150M.png@{img-suffix-url}${project.version}") no-repeat center center transparent;
+    position: relative;
+  }
+  /*changed due to different logo must return to previous version (top and bottom) once logo is off*/
+  span {
+    color: @white;
+    display: inline-block;
+    left: 0;//was32%;
+    font-size: 0.72rem;
+    text-align: right;
+    right: 0;
+    width: 68%;
+    bottom: -10px;//was 40
+    position: absolute;
+    white-space: nowrap;
+  }
+  @media only screen and ( max-width: 1200px) and ( min-width: @desktop-width-limit ) {
+    span {
+      width: 50%;
+    }
+  }
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    float: right;
+    width: 222px;
+    margin-right: 3%;
+  }
+}
+
+
+
+//Header for Tablets - Hidden in Desktop version
+@header-tablet-height: 110px;
+@header-open-left-sidebar-btn-width: 54px;
+@header-open-left-sidebar-btn-h-margin: 4%;
+#header-logo-moto-small {
+  background: @dark-blue;
+  position: fixed;
+  left: 0;
+  top: 0;
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    display: none;
+  }
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    height: @header-tablet-height;
+    width: 100%;
+    section.success {
+      /*top: 0-@header-tablet-height;*/
+      top: 3rem;
+      left: @header-open-left-sidebar-btn-width;
+      margin-left: 2*@header-open-left-sidebar-btn-h-margin;
+      border: none;
+      background-color: @dark-blue;
+      background: url("@{img-base-url}tablet/white_check.png@{img-suffix-url}${project.version}") no-repeat scroll 62px center transparent;
+      padding: 0px;
+      height: @header-tablet-height;
+      width: 60%;
+      z-index: 9999;
+      button {
+        display: none;
+      }
+      .message-area {
+        padding: 45px 20px 30px 105px;
+        font-size: 1.3rem;
+        color: @white;
+        z-index: 9999;
+        * {
+          font-size: 1.3rem;
+          color: @white;
+        }
+      }
+    }
+  }
+  button {
+    float: left;
+    border: none;
+    width: @header-open-left-sidebar-btn-width;
+    height: 46px;
+    background: url("@{img-base-url}tablet/open-nav.png@{img-suffix-url}${project.version}") no-repeat center center transparent;
+    margin: 32px @header-open-left-sidebar-btn-h-margin;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .title {
+    color: @white;
+    font-size: 26px;
+    font-weight: 300;
+    margin: 42px 0;
+    @media only screen and ( min-width: @desktop-width-limit ) {
+      display: none;
+    }
+    @media only screen and ( max-width: @tablet-width-limit ) {
+      float: left;
+    }
+  }
+}
+
+
+
+//Header For Desktops
+#header-logo-moto {
+  .europass-logo-moto {
+    @media only screen and ( max-width: @tablet-width-limit ) {
+      display: none;
+    }
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .off-canvas-wrap.noactive-left.move-right #header-logo-moto-small{
+    transform:none!important;
+    -webkit-transform:none!important;
+  }
+  #header-logo-moto-small{
+    height:50px;
+    .title{
+      margin:16px 0;
+      font-size:16px;
+      font-weight:600;
+    }
+    button{
+      margin:7px 5px;
+      height:36px;
+      width:44px;
+    }
+  }
+  .europass-logo-moto{
+    width:60px;
+    padding-top:0;
+    margin-right:60px;
+    div{
+      width:auto;
+      margin:8px;
+      height:32px;
+
+      background: url("@{img-base-url}europass-logo-small.svg@{img-suffix-url}${project.version}") no-repeat center center transparent;
+      background-position:100%;
+      background-size:contain;
+      span{
+        display:none;
+      }
+    }
+  }
+  #header-logo-moto-small button{
+    transition: background 1ms 0.2s;
+    background-color:transparent;
+    position:relative;
+    background-image:none;
+    > span {
+      left: 5px;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: white;
+    }
+    .sidebar-btn-line1 {
+      top: 8px;
+      transition-duration: 0.2s, 0.2s;
+      transition-delay: 0.2s, 1ms;
+      transition-property: top, transform;
+    }
+    .sidebar-btn-line2 {
+      top: 18px;
+      transition: background 1ms 0.2s;
+    }
+    .sidebar-btn-line3 {
+      top: 28px;
+      transition-duration: 0.2s, 0.2s;
+      transition-delay: 0.2s, 1ms;
+      transition-property: top, transform;
+    }
+  }
+  .move-right {
+    #header-logo-moto-small button {
+      .sidebar-btn-line2{
+        background: none;
+      }
+      .sidebar-btn-line1{
+        top: 18px;
+        transform: rotate(45deg);
+        transition-delay: 1ms, 0.4s;
+      }
+      .sidebar-btn-line3 {
+        top: 18px;
+        transform: rotate(-45deg);
+        transition-delay: 1ms, 0.4s;
+      }
+    }
+  }
+  #header-logo-moto{
+    margin-bottom:20px;
+  }
+}
+
+
+@media screen and(max-width:@phone-width-limit) {
+  header#header-logo-moto {
+     margin-bottom:10px;
+  }
+}
+
+@media screen and(max-width:@tablet-width-limit){
+  #header-logo-moto-small{
+    .transition-overlay{
+      display:none!important;
+      + #show-left-sidebar-btn{
+        opacity:0.2;
+        pointer-events:none;
+      }
+    }
+  }
+}
+
+

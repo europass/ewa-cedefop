@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Europass Statistics API User Service</title>
+        <link href="stats_form.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="stats_form.js"></script>
+        <script src="jquery.csv-0.71.js"></script>
+        <script src="stats-api-charts.js"></script>
+        <script type="text/javascript">
+
+            function validateParameterRequirements() {
+
+                var validCombination = false;
+
+                var parametersList = $("#query_params [data-section='parameters'] .parameter");
+
+                parametersList.each(function () {
+
+                    var parameter = $(this).find("select[data-attr='paramName']");
+
+                    // If one parameter is passed, this MUST be the document type (we check agaainst 2 because we have the last not set et parameter div)
+                    if (parametersList.length == 2) {
+                        if (parameter.find("option[selected]").val() == "document-type")
+                            validCombination = true;
+                    }
+                    // If more than one parameter is passed, one of them MUST be the date or the document-type
+                    else if (parametersList.length > 2) {
+                        if (parameter.find("option[selected]").val() == "date")
+                            validCombination = true;
+                        if (parameter.find("option[selected]").val() == "document-type")
+                            validCombination = true;
+                    }
+                });
+
+                return validCombination;
+
+            }
+
+
+            google.charts.load('current', {'packages': ['corechart']});
+
+            $(document).ready(function () {
+
+                var chartsObject = undefined;
+                var queryMsgSpan = $("#query_params span.error");
+                var parametersErrorMsg = "You should at least select document-type, or date and another parameter";
+                //		$("#x_axis_manipulation").attr("style","display:none");
+
+                //		var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;document-type;date";
+                //	var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;date;document-type;language=el";
+                //	var getURL = "http://europassdev1.instore.gr/stats/to/csv/generated;date;document-type;gender;nationality";
+                //		var getURL = "https://europassdev1.instore.gr/stats/to/csv/generated;date;document-type=ECV;gender;language";
+                //	var getURL = "https://europassdev1.instore.gr/stats/to/csv/generated;date;document-type=ECV;mlanguage";
+
+                var bookmarkedQueries = getBookmarkedQueries("bookmarks");
+                if (bookmarkedQueries === null || bookmarkedQueries === undefined)
+                    bookmarkedQueries = [];
+
+                updateBookmarkedList(bookmarkedQueries);
+
+                $("select[data-attr='dataFmt']").change(function (event) {
+
+                    if ($(this).val() == "csv") {
+                        $("button#make_chart").attr("disabled", false);
+                    } else if ($(this).val() == "json") {
+                        $("button#make_chart").attr("disabled", true);
+                    }
+
+                });
+
+                $("#x_field").change(function (event) {
+
+                    if ($(this).val() != "" && chartsObject != undefined) {
+
+                        $("body").trigger("statistics:plot:loading:show");
+
+                        var chartData = chartsObject.transformData($(this).val());
+                        google.charts.setOnLoadCallback(chartsObject.drawData(chartData));
+
+                        $("body").trigger("statistics:plot:loading:hide");
+                    }
+
+                });
+
+                $("#make_chart_preview_data").click(function (event) {
+
+                    queryMsgSpan.html("");
+                    if (!validateParameterRequirements()) {
+                        queryMsgSpan.html(parametersErrorMsg);
+                        return;
+                    }
+
+                    stats.init("triggerLoad");
+                    var results = stats.getStatsFromAPI("#results");
+
+                    if (chartsObject != undefined)
+                        charts.destroy();
+                    chartsObject = charts.init(results, '#chart_div', '#x_field');
+
+
+                });
+
+                $("#make_chart_preview_data_bookmark").click(function (event) {
+
+                    /* 			queryMsgSpan.html("");
+                     if(!validateParameterRequirements()){
+                     queryMsgSpan.html(parametersErrorMsg);
+                     return;
+                     } */
+
+                    var url = $("select[data-attr='bookmarks']").val();
+
+                    stats.init("triggerLoad");
+                    var results = stats.getStatsFromAPI("#results", url);
+                    //console.log(results);
+
+                    if (chartsObject != undefined)
+                        charts.destroy();
+                    chartsObject = charts.init(results, '#chart_div', '#x_field');
+
+                });
+
+                $("#bookmark_query").click(function (event) {
+
+                    queryMsgSpan.html("");
+                    if (!validateParameterRequirements()) {
+                        queryMsgSpan.html(parametersErrorMsg);
+                        return;
+                    }
+
+                    stats.init();
+                    //replace ; with ? as it is a sensitive char for cookie setting and push value
+                    bookmarkedQueries.push(stats.getURL().replace(/;/g, "?"));
+
+                    storeBookmarkedQuery("bookmarks", bookmarkedQueries);
+                    updateBookmarkedList(getBookmarkedQueries("bookmarks"));
+                });
+
+                $("#download_data").click(function (event) {
+
+                    queryMsgSpan.html("");
+                    if (!validateParameterRequirements()) {
+                        queryMsgSpan.html(parametersErrorMsg);
+                        return;
+                    }
+
+                    stats.init();
+                    /* stats.update(); */
+                    stats.getStatsFromAPI("#results");
+
+                });
+
+                // custom events
+
+                $("body").on("statistics:loading:show", function (event) {
+                    $("#chart.loading").attr("style", "display:block");
+                    $("#preview.loading").attr("style", "display:block");
+                });
+
+                $("body").on("statistics:loading:hide", function (event) {
+                    $("#chart.loading").attr("style", "display:none");
+                    $("#preview.loading").attr("style", "display:none");
+                });
+                /* 
+                 $("body").on("statistics:preview:loading:show", function(event){
+                 $("#preview.loading").attr("style","display:block");
+                 });
+                 
+                 $("body").on("statistics:preview:loading:hide", function(event){
+                 $("#preview.loading").attr("style","display:none");
+                 }); */
+            });
+
+        </script>
+    </head>
+    <body>
+
+        <div id="container" style="width:1280px;min-height:900px">
+            <div id="header" style="width:auto">
+                <div>
+                    <h1>Europass Statistics API</h1>
+                </div>
+                <div>
+                    <fieldset id="bookmarks">
+                        <label>Bookmarked Queries</label>
+                        <select class="stats-inline-block" data-attr="bookmarks">
+                        </select><br/>
+                        <button id="make_chart_preview_data_bookmark" disabled>Plot Data / Preview Data</button>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div id="mid-content">
+                <div id="left-subcontent"style="width:400px;min-height:500px;float:left">
+                    <div id="actions-menu"style="width:auto;height:50px">
+                        <!-- 				<button id="make_chart">Plot Data</button>&nbsp;<button id="preview_data">Preview Data</button>&nbsp;<button id="download_data" class="download">Download</button> -->
+                        <button id="bookmark_query">Bookmark Query</button>
+                        <button id="make_chart_preview_data">Plot Data / Preview Data</button>
+                    </div>
+                    <fieldset id="download-options">
+                        <label>Data Format</label>
+                        <select class="stats-inline-block" data-attr="dataFmt">
+                            <option value="csv">CSV</option>
+                            <option value="json">JSON</option>
+                        </select><br/>
+                        <button id="download_data" class="download">Download</button>
+                    </fieldset>
+                    <!-- 			<fieldset id="prefetch">
+                                                    <label>Data Type</label>
+                                                    <select class="stats-inline-block" data-attr="dataType" disabled>
+                                                            <option value="generated">Generated Documents</option>
+                                                            <option value="visits">Visits</option>
+                                                            <option value="downloads">Downloads</option>
+                                                    </select>
+                                            </fieldset> -->
+                    <fieldset id="query_params">
+
+                        <label>Data Type</label>
+                        <select class="stats-inline-block" data-attr="dataType" disabled>
+                            <option value="generated">Generated Documents</option>
+                            <option value="visits">Visits</option>
+                            <option value="downloads">Downloads</option>
+                        </select>
+
+                        <fieldset>
+                            <label>X Axis</label>
+                            <div class="x-axis" data-section="parameters">
+                                <div class="parameter" data-type="parameter">
+                                    <div class="ss-header stats-inline-block">
+
+                                        <select class="stats-inline-block" data-attr="paramName">
+                                            <option value="" disabled selected>Select an option</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="valContainer">
+
+                                        <div class="paramValue"></div>
+
+                                        <div class="operation"></div>
+
+                                        <div class="extra"></div>
+                                    </div>
+
+                                    <div class="help"></div>
+
+                                    <label class="ss-add-other x-axis-removeParameter" style="display:none">
+                                        <a href="javascript:%20void(0)">Remove</a>
+                                    </label>
+                                    <label class="ss-add-other x-axis-reset" style="display:none">
+                                        <a href="javascript:%20void(0)">Reset</a>
+                                    </label>
+                                    <label class="ss-add-other x-axis-addParameter">
+                                        <a ref="javascript:%20void(0)">Add</a>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <label>Filters</label>
+                        <div class="parameter-list" data-section="parameters">
+
+
+                            <div class="parameter" data-type="parameter">
+                                <div class="ss-header stats-inline-block">
+
+                                    <select class="stats-inline-block" data-attr="paramName">
+                                        <option value="" disabled selected>Select an option</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="valContainer">
+
+                                    <div class="paramValue"></div>
+
+                                    <div class="operation"></div>
+
+                                    <div class="extra"></div>
+                                </div>
+
+                                <div class="help"></div>
+
+                                <label class="ss-add-other removeParameter" style="display:none">
+                                    <a href="javascript:%20void(0)">Remove</a>
+                                </label>
+                                <label class="ss-add-other reset" style="display:none">
+                                    <a href="javascript:%20void(0)">Reset</a>
+                                </label>
+                                <label class="ss-add-other addParameter">
+                                    <a ref="javascript:%20void(0)">Add</a>
+                                </label>
+
+                            </div>
+                        </div>
+                        <span class="error" style="color:red;font-weight:bold;margin-top:15px"></span>
+
+                    </fieldset>
+
+
+                </div>
+                <div id="right-subcontent" style="width:845px;float:right">
+                    <div id="chart" class="loading">
+
+                        <!-- 			<span class="loading-txt">Loading Data...</span> -->
+                        <div class="sk-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+
+                    </div>
+                    <div id="chart_canvas" style="width:auto;min-height:50px">
+                        Plot Area
+                        <div id="chart_div"></div>
+                        <div id="x_axis_select" style="display:none">
+                            <div>
+                                <label>Select X axis dimension:</label>
+                                <select id="x_field"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="preview" class="loading">
+
+                        <!-- 			<span>Loading Data...</span> -->
+
+                        <div class="sk-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+
+                    </div>
+                    <div id="results" style="width:auto;min-height:50px;max-height: 500px;overflow-y: auto;">
+                        Results
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class=" downloadAnchor" href=""></a>
+    </body>
+</html>

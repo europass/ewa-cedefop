@@ -1,0 +1,20 @@
+{{#if LearnerInfo.Identification.Signature}}
+<div class="signature-wysiwyg fit">
+	<em class="crop-guidelines">
+		{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}
+	</em>
+	<div class="signature-preview-area">
+		<img 
+			 {{#get_obj_metadata SkillsPassport.ECL.LearnerInfo.Identification.Signature key="cropping"}}
+			 	{{#if cropping}}
+			 		{{#with cropping}}
+			  		style="width:{{width}}px;height:{{height}}px;margin-left:-{{x}}px;margin-top:-{{y}}px;" 
+			  		{{/with}}
+			  	{{/if}}
+			 {{/get_obj_metadata}}
+			 
+			 src="{{LearnerInfo.Identification.Signature.TempURI}}" 
+			 alt="{{get_text "SkillsPassport.ECL.LearnerInfo.Identification.Signature.Crop.Guidelines.WYSIWYG" group="EditorHelp"}}"/>
+	</div>
+</div> 
+{{/if}}

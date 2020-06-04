@@ -1,0 +1,85 @@
+{
+    "SkillsPassport": {
+        "Locale": "en",
+        "LearnerInfo": {
+            "Education": [
+                {
+                    "Period": {
+                        "From": {
+                            "Year": 2008,
+                            "Month": 5
+                        },
+                        "Current": true
+                    },
+                    "Title": "Computer Science",
+                    "Activities": "<ul><li>Programming</li><li>Data structures</li></ul>",
+                    "Organisation": {
+                        "Name": "University of Aegean",
+                        "ContactInfo": {
+                            "Address": {
+                                "Contact": {
+                                    "Country": {
+                                        "Code": "EL",
+                                        "Label": "Hellas"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Field": {
+                        "Code": "5",
+                        "Label": "Engineering"
+                    },
+                    "ReferenceTo": [
+                        {
+                            "idref": "ATT_1"
+                        },
+                        {
+                            "idref": "ATT_2"
+                        },
+                        {
+                            "idref": "ATT_3"
+                        }
+                    ]
+                },
+                {
+                    "Period": {
+                        "From": {
+                            "Year": 2005,
+                            "Month": 12,
+                            "Day": 1
+                        },
+                        "To": {
+                            "Year": 2008,
+                            "Month": 4
+                        }
+                    },
+                    "Title": "Business and Economics",
+                    "Activities": "<b>Principal Activities</b><ul><li>Micro-economics</li><li>Macro-economics</li></ul>",
+                    "Organisation": {
+                        "Name": "University of Plymouth",
+                        "ContactInfo": {
+                            "Address": {
+                                "Contact": {
+                                    "Country": {
+                                        "Code": "UK",
+                                        "Label": "United Kingdom"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Level": {
+                        "Code": "5",
+                        "Label": "ISCED 5"
+                    },
+                    "ReferenceTo": [
+                        {
+                            "idref": "ATT_2"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

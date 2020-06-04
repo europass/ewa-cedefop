@@ -1,0 +1,46 @@
+<dt class="label"></dt>
+{{#if SkillsPassport.CoverLetter.Letter.Body}}
+	{{#call_partial . path="Body"  view ="CL:Main" section="CoverLetter.Letter."}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+{{/if}}
+<dd class="value rich-content" {{#if Preferences.CoverLetter.Justification.justify}}style="text-align: justify !important;"{{/if}}><!-- style="text-align: justify !important;"-->
+	
+	{{#isEmptyObject  SkillsPassport.CoverLetter.Letter.Body}}          
+	<span class="default-value">{{get_text "CoverLetter.Letter.Body"}}</span>
+    <div class="empty add PersonalInfo">
+		<span class="empty add">{{get_text "Buttons.Add.ECL.Mainbody.Content" group="GuiLabel"}}</span>
+	</div>
+	{{else}}
+	
+	<div class="value mainbody CoverLetter.Letter.Body">
+        {{#if SkillsPassport.CoverLetter.Letter.Body.Opening }}
+           {{#with SkillsPassport.CoverLetter.Letter.Body}}
+        	<div class="description-body main-opening">{{nestHtmlLists Opening}}</div>
+           {{/with}}
+        {{else}}
+        	<div class="description-body main-opening">
+        		<span class="default-value">{{get_text "CoverLetter.Letter.Body.Opening"}}</span>
+        	</div>
+        {{/if}}
+        {{#if SkillsPassport.CoverLetter.Letter.Body.MainBody }}
+          {{#with SkillsPassport.CoverLetter.Letter.Body}}
+        	<div class="description-body main-body">{{nestHtmlLists MainBody}}</div>
+          {{/with}}
+        {{else}}
+        	<div class="description-body main-body" style="padding-top:25px">
+        		<span class="default-value">{{get_text "CoverLetter.Letter.Body.MainBody"}}</span>
+        	</div>
+        {{/if}}
+     	{{#if SkillsPassport.CoverLetter.Letter.Body.Closing }}
+     	  {{#with SkillsPassport.CoverLetter.Letter.Body}}
+        	<div class="description-body main-closing">{{nestHtmlLists Closing}}</div>
+          {{/with}}
+        {{else}}
+        	<div class="description-body main-closing" style="padding-top:25px">
+          		<span class="default-value">{{get_text "CoverLetter.Letter.Body.Closing"}}</span>
+          	</div>
+        {{/if}}
+	</div>
+	{{/isEmptyObject}}
+</dd>	

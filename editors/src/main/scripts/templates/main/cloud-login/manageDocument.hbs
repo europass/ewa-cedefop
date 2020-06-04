@@ -1,0 +1,96 @@
+{{#each_with_index links}}
+    <div class="manage-document-tile" >
+		
+        <div class="manage-document-container clearfix">
+			<div class="manage-document-radio">	
+					<input class="radio-cloud-documents image-radio"
+                           data-source-url="{{source}}"
+                           data-document-id="{{id}}"
+                           data-filename="{{filename}}"
+                           data-locale="{{locale}}"
+                           data-last-modified="{{lastUpdate}}"
+                           type="radio" name="cloudDocument" value="">
+            </div>
+			<div class="manage-document-link">
+				<span class="cloud-document-filename">{{name}}</span>
+                <button class="btn-cloud-rename image-edit" title="{{get_text "Rename.Attachment" group="EditorHelp"}}"></button>
+				<div class="document-metadata">
+					<span class="lastModifiedDate">{{date}}, </span>
+					<span class="cvLocale">{{locale}} </span>
+					<span class="filetypes">{{filetypes}}</span>
+				</div>
+			</div>
+			<div class="manage-document-actions">
+                {{#shared}}
+                <button class="btn-cloud-share image-share" title="{{get_text "cloudLogin.drawer.connected.document.share" group="GuiLabel"}}" disabled></button>&nbsp;
+                {{/shared}}
+                {{^shared}}
+                    <button class="btn-cloud-share image-share" title="{{get_text "cloudLogin.drawer.connected.document.share" group="GuiLabel"}}"></button>&nbsp;
+                {{/shared}}
+                <button class="btn-cloud-copy image-duplicate" title="{{get_text "cloudLogin.drawer.connected.document.duplicate" group="EditorHelp"}}"></button>&nbsp;
+                <button class="btn-cloud-delete image-delete" title="{{get_text "Delete.Attachment" group="EditorHelp"}}"></button>
+			</div>
+        </div>
+
+        <div class="manage-action link-share"
+             style="display:none">
+            <div class="arrow">
+                <div class="message-inner">
+                    <span>{{get_text "cloudLogin.drawer.connected.document.share" group="GuiLabel"}}</span>
+                    <div class="share-explanatory-text">{{get_text "cloudLogin.drawer.connected.document.share.explanatory.text" group="GuiLabel"}}</div>
+                    <fieldset class="share-cloud-recipient-email">
+                        <div class>
+                            <span>{{get_text "cloudLogin.drawer.connected.document.share.email.to.title" group="GuiLabel"}}</span>
+                            <input class="share-cloud-recipient-email-input formfield with-placeholder Email"
+                                   type="email" placeholder="{{get_text "ContactInfo.Email" group="EditorPlaceholder"}}">
+                        </div>
+                    </fieldset>
+                    <fieldset class="share-cloud-message">
+                        <label for="feedback-msg-textaera">{{get_text "cloudLogin.drawer.connected.document.share.email.comments.title" group="GuiLabel"}}</label>
+                        <div><textarea class="share-cloud-message-textarea" cols="20"></textarea></div>
+                    </fieldset>
+                    <section class="share-cloud-notification-area feedback-area"></section>
+                    <menu label="Manage">
+                        <button type="button" class="reject-share-action button blue mdl-btn">{{get_text "Buttons.Cancel" group="GuiLabel"}}</button>
+                        <button type="button" class="confirm-share-action button blue mdl-btn">{{get_text "share.document" group="GuiLabel"}}</button>
+                    </menu>
+                </div>
+            </div>
+        </div>
+
+        {{#shared}}
+        <div class="post-share-action">
+        {{/shared}}
+        {{^shared}}
+        <div class="post-share-action" style="display:none">
+        {{/shared}}
+            <div class="arrow">
+                <div class="message-inner post-share-recipient-email-message-inner">
+                    <span class="post-share-recipient-email" data-clonedocumentid="{{clonedocumentid}}"
+                                                             data-permissionID="{{permissionId}}">{{sharedEmailWithText}}</span>
+                    <button class="stop-sharing-document button">{{get_text "cloudLogin.drawer.connected.document.share.post.message.stop.title" group="GuiLabel"}}</button>
+               </div>
+            </div>
+        </div>
+
+        <div class="manage-action link-delete"
+             style="display:none">
+            <div class="arrow">
+                <div class="message-inner">
+                    {{get_text "cloudLogin.drawer.connected.document.delete.confirm" group="GuiLabel"}}
+                    <menu label="Manage">
+                        <button type="button"
+                                class="reject-delete-action button blue mdl-btn">
+                            {{get_text "cloudLogin.drawer.connected.document.delete.no" group="GuiLabel"}}
+                        </button>
+                        <button type="button"
+                                class="confirm-delete-action button blue mdl-btn">
+                            {{get_text "cloudLogin.drawer.connected.document.delete.yes" group="GuiLabel"}}
+                        </button>
+                    </menu>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{{/each_with_index}}

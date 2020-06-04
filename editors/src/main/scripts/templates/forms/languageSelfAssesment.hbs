@@ -1,0 +1,194 @@
+
+<fieldset class="ProficiencyLevel Understanding">
+	<label for="Understanding">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Understanding" group="DocumentLabel"}}</label>
+	
+	<fieldset class="Listening">
+		<div class="level select" name="Listening">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Listening"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/understanding/listening" group="DocumentLabel"}}"
+						class="formfield hidden_select cefr-level Listening noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel ProficiencyLevel.Listening "LanguageListeningLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Listening"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/understanding/listening" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex cefr-level Listening noHelp with-placeholder"
+						data-help-key="" 
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel ProficiencyLevel.Listening "LanguageListeningLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="Reading">
+		<div class="level select" name="Reading">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Reading"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/understanding/reading" group="DocumentLabel"}}" 
+						data-help-key=""
+						class="formfield hidden_select cefr-level Reading noHelp with-placeholder"
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="EditorPlaceholder"}}
+					</option>					
+					{{#loopForMapWithShortKeyLabel ProficiencyLevel.Reading "LanguageReadingLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Reading"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/understanding/reading" group="DocumentLabel"}}" 
+						data-help-key=""
+						class="formfield custom_select custom_select_complex cefr-level Reading noHelp with-placeholder"
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading" group="EditorPlaceholder"}}
+					</li>	
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel ProficiencyLevel.Reading "LanguageReadingLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+
+<fieldset class="ProficiencyLevel Speaking">
+	<label for="Speaking">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Speaking" group="DocumentLabel"}}</label>
+	
+	<fieldset class="SpokenInteraction">
+		<div class="level select" name="SpokenInteraction">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.SpokenInteraction"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/speaking/spoken-interaction" group="DocumentLabel"}}"
+						data-help-key=""
+						class="formfield hidden_select cefr-level SpokenInteraction noHelp with-placeholder"
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel ProficiencyLevel.SpokenInteraction "LanguageSpokenInteractionLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.SpokenInteraction"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/speaking/spoken-interaction" group="DocumentLabel"}}"
+						data-help-key=""
+						class="formfield custom_select custom_select_complex cefr-level SpokenInteraction noHelp with-placeholder"
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenInteraction" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel ProficiencyLevel.SpokenInteraction "LanguageSpokenInteractionLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="SpokenProduction">
+		<div class="level select" name="SpokenProduction">
+			<div class="custom_select_wrapper">
+				<select	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.SpokenProduction"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/speaking/spoken-production" group="DocumentLabel"}}"
+						class="formfield hidden_select cefr-level SpokenProduction noHelp with-placeholder"
+						data-help-key=""
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="EditorPlaceholder"}}
+					</option>
+					{{#loopForMapWithShortKeyLabel ProficiencyLevel.SpokenProduction "LanguageSpokenProductionLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+						<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+					{{/loopForMapWithShortKeyLabel}}
+				</select>
+				<ul	title
+						name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.SpokenProduction"
+						data-name="{{get_text "/ewa/lp/foreign-languages/self-assessment/speaking/spoken-production" group="DocumentLabel"}}"
+						class="formfield custom_select custom_select_complex cefr-level SpokenProduction noHelp with-placeholder"
+						data-help-key=""
+						rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+					<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+						{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.SpokenProduction" group="EditorPlaceholder"}}
+					</li>
+					<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+					<ul>
+						{{#loopForMapWithShortKeyLabel ProficiencyLevel.SpokenProduction "LanguageSpokenProductionLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+							<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+						{{/loopForMapWithShortKeyLabel}}
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</fieldset>
+</fieldset>
+
+
+<fieldset class="ProficiencyLevel Writing">
+	<label for="Writing">{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="DocumentLabel"}}</label>
+	<div class="level select" name="Writing">
+		<div class="custom_select_wrapper">
+			<select	title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Writing"
+					data-name="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing.elp" group="DocumentLabel"}}"
+					class="formfield hidden_select cefr-level Writing noHelp with-placeholder"
+					data-help-key=""
+					data-defaultvalue="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}"
+					data-format-selection-key="LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing.elp"
+					rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+				<option value="" {{#unless Code}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}
+				</option>
+				{{#loopForMapWithShortKeyLabel ProficiencyLevel.Writing "LanguageWritingLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+					<option value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</option>
+				{{/loopForMapWithShortKeyLabel}}
+			</select>
+			<ul	title
+					name="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}].ProficiencyLevel.Writing"
+					data-name="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing.elp" group="DocumentLabel"}}"
+					class="formfield custom_select custom_select_complex cefr-level Writing noHelp with-placeholder"
+					data-help-key=""
+					data-defaultvalue="{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}"
+					data-format-selection-key="LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing.elp"
+					rel="LearnerInfo.Skills.Linguistic.ForeignLanguage[{{list_index}}]">
+				<li class="init" data-value="" {{#unless Code}}selected="selected"{{/unless}}>
+					{{get_text "LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Writing" group="EditorPlaceholder"}}
+				</li>
+				<span class="fancySelect arrow"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+				<ul>
+					{{#loopForMapWithShortKeyLabel ProficiencyLevel.Writing "LanguageWritingLevelMap" "LanguageShortLevelMap" emptyOption=false showCode=true}}
+						<li data-value="{{Code}}" {{#equals Selected true}}selected="selected"{{/equals}}>{{Label}}</li>
+					{{/loopForMapWithShortKeyLabel}}
+				</ul>
+            </ul>
+			</select>
+		</div>
+	</div>
+</fieldset>
+

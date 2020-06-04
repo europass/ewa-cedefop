@@ -1,0 +1,30 @@
+{{#with SkillsPassport}}
+
+<fieldset>
+	<header>
+		<legend>{{get_text "LearnerInfo.Skills.{{subsection}}" ../subsection group="GuiLabel"}}</legend>
+	</header>
+	
+	{{#with_generic_skill LearnerInfo.Skills ../subsection}}
+	
+		<fieldset name="LearnerInfo.Skills.{{../../subsection}}" class="editor">
+			<textarea
+				cols="10"
+				id="LearnerInfo.Skills.{{../../subsection}}-textarea"
+				class="rich-editor single formfield noHelp with-placeholder"
+				title
+				name="LearnerInfo.Skills.{{../../subsection}}.Description"
+				placeholder="{{{get_text "LearnerInfo.Skills.{{subsection}}.Description" ../../subsection group="EditorPlaceholder"}}}"
+				data-help-key=""
+				>{{{Description}}}</textarea>
+			<span name="LearnerInfo.Skills.{{../../subsection}}.Description"  class="help placeholder" style="display:none;">
+				{{{get_text "LearnerInfo.Skills.{{subsection}}.Description" ../../subsection group="EditorPlaceholder"}}}
+			</span>	
+
+		</fieldset>
+	{{/with_generic_skill}}
+</fieldset>
+
+{{/with}}
+{{!--<!--  Attachments Linked To this Section  -->--}}
+{{> templates/attachment/linkedattachment}}

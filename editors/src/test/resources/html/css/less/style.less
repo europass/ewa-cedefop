@@ -1,0 +1,709 @@
+//Color variables//
+
+@dark-blue: #2c4969;
+@light-blue: #1093cb;
+@white:#fff;
+@gray-text:#737373;
+@light-gray-text:#8c8c8c;
+@bright-orange:#fa7d23;
+
+// Editor colors //
+
+@editor-dark-blue: #2a7ab9;
+
+//Custom scrollbars for webkit//
+
+
+//Paths
+@img-url: "http://www.kalaitzoglou.gr/europass/html/img";
+
+//Resets
+
+body {margin:0;overflow-y:hidden;/*-webkit-font-smoothing: antialiased;*/}
+ul,li {list-style: none;padding:0;margin:0;}
+a{text-decoration: none;}
+
+
+//General
+
+* {font-family: 'Open Sans', sans-serif;}
+.show-for-small {display:none;}
+.hidden {display:none;}
+
+//For Mixins
+
+.button {
+    border-radius: 2px;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 0 1px 0;
+    font-size: 15px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: @gray-text;
+    text-shadow: 0 1px 1px #fff;
+    font-weight: 700;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 52, 88, 0.4);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 18px 22px;
+    width: 100%;
+    text-align: center;
+    border:none;
+    background-image: -moz-linear-gradient(top, #fbfbfb 0%, #dddddd 100%);
+    background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #dddddd 100%);
+    background-image: linear-gradient(to bottom, #fbfbfb 0%, #dddddd 100%);
+    //background-size: 100% 130%;
+    //background-position: 0 100%;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #a1a1a1;
+    cursor:pointer;
+
+    &:before, &:after {display: block;content: '';position: absolute;top: 0;bottom: 0;width: 1px;background-color: #62e4d6;background-image: -moz-linear-gradient(top, #dbdbdb 0%, #a1a1a1 100%);background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #a1a1a1 100%);background-image: linear-gradient(to bottom, #dbdbdb 0%, #a1a1a1 100%);}
+    &:after {right:0;}
+    &:before {left:0;}
+    /*&:active {margin:1px 0;}*/
+    &:hover {background-size: 100% 130%;}
+}
+
+.green {
+    .button;
+    color:@white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    background-image: -moz-linear-gradient(top, #acd355 0%, #6c9e02 100%);
+    background-image: -webkit-linear-gradient(top, #acd355 0%, #6c9e02 100%);
+    background-image: linear-gradient(to bottom, #acd355 0%, #6c9e02 100%);
+    border-top: 1px solid #90b345;
+    border-bottom: 1px solid #355f01;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 1px 1px #bbe75d;
+
+    &:before, &:after {display: block;content: '';position: absolute;top: 0;bottom: 0;width: 1px;background-color: #90b345;background-image: -moz-linear-gradient(top, #90b345 0%, #355f01 100%);background-image: -webkit-linear-gradient(top, #90b345 0%, #355f01 100%);background-image: linear-gradient(to bottom, #90b345 0%, #355f01 100%);}
+
+}
+
+.blue {
+    .button;
+    color:@white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    background-image: -moz-linear-gradient(top, #1198d1 0%, #106f98 100%);
+    background-image: -webkit-linear-gradient(top, #1198d1 0%, #106f98 100%);
+    background-image: linear-gradient(to bottom, #1198d1 0%, #106f98 100%);
+    border-top: 1px solid #3e6d81;
+    border-bottom: 1px solid #31454d;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 1px 1px #14b7fd;
+
+    &:before, &:after {display: block;content: '';position: absolute;top: 0;bottom: 0;width: 1px;background-color: #043e66;background-image: -moz-linear-gradient(top, #043e66 0%, #04263a 100%);background-image: -webkit-linear-gradient(top, #043e66 0%, #04263a 100%);background-image: linear-gradient(to bottom, #043e66 0%, #04263a 100%);}
+
+}
+
+
+//Left Sidebar
+
+aside.left {
+    width:20%;
+    background:@dark-blue;
+    height:100%;
+    position: fixed;
+    left:0;
+    top:0;
+}
+
+aside.left .title {
+    color:@white;
+    font-size:26px;
+    font-weight:300;
+    margin:37px 3%;
+}
+
+aside.left .logo {
+    width:201px;
+    height:57px;
+    margin:25px auto 25px 8%;
+    max-width:90%
+}
+
+aside.left .logo img {
+    width:100%;
+}
+
+aside.left nav ul li {
+    position:relative;
+}
+
+
+aside.left nav ul li.selected a, aside.left nav ul li.selected a:hover {
+    background:@white;
+    color:@light-blue;
+    font-weight: 700;
+}
+
+aside.left nav ul li.selected:after {
+    content:'';
+    width:4px;
+    height:100%;
+    background:@bright-orange;
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+aside.left nav ul li a {
+    color:@white;
+    display:block;
+    padding:18px 8%;
+}
+
+aside.left nav ul li a:hover {
+    color:@white;
+    background:#263f5b;
+}
+
+aside.left nav.tablet-menu {
+    float: left;
+    height: 110px;
+    width: 54px;
+    margin: 0 0 0 4%;
+}
+
+aside.left nav.tablet-menu a {
+    background: url('@{img-url}/nav_small_icon.png') no-repeat scroll 0 0 transparent;
+    height: 46px;
+    width: 54px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+}
+
+aside.left .options {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width:84%;
+    padding:30px 8% 10px 8%;
+    font-size: 14px;
+    border-top:1px solid #435d7a;
+    box-shadow: 0 -1px 0 #263f5b;
+}
+
+aside.left .options li {
+    padding:5px 0;
+}
+
+aside.left .options li.switch > span {
+    display:inline-block;
+    color:#7a8ca1;
+    vertical-align: top;
+    height:24px;
+    margin:0 10px 0 0;
+}
+
+aside.left .options li a {
+    display:block;
+    color:@white;
+    padding:10px 0 10px 30px;
+}
+
+aside.left .options li.erase a {
+    background: url('@{img-url}/erase_opinion.png') no-repeat scroll 0 6px transparent;
+}
+
+aside.left .options li.erase a:hover {
+    background: url('@{img-url}/erase_opinion.png') no-repeat scroll 0 -70px transparent;
+}
+
+aside.left .options li.opinion a {
+    background: url('@{img-url}/erase_opinion.png') no-repeat scroll 0 -151px transparent;
+}
+
+aside.left .options li.opinion a:hover {
+    background: url('@{img-url}/erase_opinion.png') no-repeat scroll 0 -241px transparent;
+}
+
+//Left Sidebar Switch
+
+.onoffswitch {
+    position: relative; width: 70px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    display:inline-block;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 24px; padding: 0; line-height: 24px;
+    font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #243C57; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #243C57; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 12px; margin: 6px;
+    background: #A1A1A1;
+    border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 42px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+    background-color: #7AB300;
+}
+
+//Editor
+
+
+div.editor {
+    width:55%;
+    background:@white;
+    position: fixed;
+    height:100%;
+    overflow-y: scroll;
+    left:20%;
+    top:0;
+    padding:0 4%;
+}
+
+div.editor .content {
+    width:100%;
+    margin:0 auto;
+    padding:40px 0;
+    font-size:1rem;
+}
+
+div.editor .content aside {
+    color:@editor-dark-blue;
+    display:inline-block;
+    width:30%;
+    padding:0 5% 0 0;
+    margin-right:-0.4rem;
+    vertical-align: top;
+    position: relative;
+    text-align: right;
+}
+
+div.editor .content main {
+    display:inline-block;
+    width:65%;
+}
+
+div.editor .content section {
+    border-radius:4px;
+}
+
+div.editor .content > section {
+    margin:0 0 30px 0;
+    border:1px solid transparent;
+    padding:2%;
+}
+
+//Empty sections
+
+div.editor .content > section.empty {
+}
+
+div.editor .content > section.empty:hover {
+    background:#f3f3f3;
+    border:1px solid transparent;
+}
+
+div.editor .content section.heading  {
+    margin:1.5rem 0;
+    border:none;
+    padding:0;
+    position:relative;
+}
+
+div.editor .content section.heading > section  {
+    margin:30px 0;
+    border:1px solid transparent;
+    padding:2%;
+}
+
+div.editor .content > section:hover, div.editor .content section.heading > section:hover {
+    background:#ffe9d5;
+    border:1px solid #fa7d23;
+}
+
+div.editor .content section.heading:hover {
+    background:transparent;
+    border:none;
+}
+
+
+div.editor .content section.heading main.line {
+    border-bottom: 2px solid #1093cb;
+    height: 10px;
+    position: relative;
+}
+
+div.editor .content section.heading main.line:after {
+    content: '';
+    width: 0.8rem;
+    height: 0.7rem;
+    background: #1093cb;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+
+// Work experience - Education Switch
+
+div.editor .content section.heading.work_experience .switch  {
+    width: 17px;
+    height:28px;
+    background: url('@{img-url}/switch.png') no-repeat top left transparent;
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    margin-top:0.75rem;
+    margin-left:-8px;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    box-shadow: 0 0 0 5px #fff;
+    outline:0;
+}
+
+div.editor .content section.heading.work_experience .switch:hover  {
+    background: url('@{img-url}/switch.png') no-repeat -17px 0 transparent;
+}
+
+div.editor .content section.heading.work_experience:before  {
+    content: "";
+    width: 1px;
+    background: #ccc;
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+    bottom: -2.5rem;
+}
+
+div.editor .content section.heading.work_experience > aside:before  {
+    content:"";
+    height:1px;
+    width:1.5rem;
+    background:#ccc;
+    position:absolute;
+    left:-1.5rem;
+    top:0.5rem;
+}
+
+
+div.editor .content section.heading.education_training > aside:before  {
+    content:"";
+    height:1px;
+    width:1.5rem;
+    background:#ccc;
+    position:absolute;
+    left:-1.5rem;
+    bottom:0.7rem;
+}
+
+
+//Right sidebar
+
+aside.right {
+    width:17%;
+    background:#fff;
+    height:100%;
+    position: fixed;
+    right:0;
+    top:0;
+}
+
+aside.right .padder{
+    padding:10%;
+}
+
+aside.right .extra_fields span {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    color: #000;
+    opacity: 0.4;
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+aside.right .extra_fields ul {
+    margin:20px 0 0 0;
+}
+
+aside.right .extra_fields li a {
+    padding: 10px 0 10px 35px;
+    display: block;
+    color:@gray-text;
+    font-weight:400;
+}
+
+aside.right .extra_fields li a:hover {
+    color:@light-blue;
+}
+
+aside.right .extra_fields li.photo a {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 10px transparent;
+}
+
+aside.right .extra_fields li.photo a:hover {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -52px transparent;
+}
+
+aside.right .extra_fields li.other a {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -117px transparent;
+}
+
+aside.right .extra_fields li.other a:hover {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -180px transparent;
+}
+
+aside.right .extra_fields li.driving a {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -244px transparent;
+}
+
+aside.right .extra_fields li.driving a:hover {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -308px transparent;
+}
+
+aside.right .extra_fields li.additional a {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -367px transparent;
+}
+
+aside.right .extra_fields li.additional a:hover {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -426px transparent;
+}
+
+aside.right .extra_fields li.attachments a {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -487px transparent;
+}
+
+aside.right .extra_fields li.attachments a:hover {
+    background: url('@{img-url}/extra_fields.png') no-repeat 0 -545px transparent;
+}
+
+
+aside.right .buttons {
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    padding: 0 10%;
+    left: 0;
+}
+aside.right button {
+    .button;
+    margin:0 0 20px 0;
+}
+
+aside.right button.green {
+    .green;
+    margin:0 0 20px 0;
+}
+
+aside.right button.blue {
+    .blue;
+    margin:0 0 20px 0;
+}
+
+
+
+//Drawer - modal styles
+
+.overlay {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+
+}
+
+.overlay:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em;
+    vertical-align: middle;
+}
+
+.modal {
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: fixed;
+    right:0;
+    top:0;
+    text-align: left;
+    width: 1015px;
+    height:100%;
+}
+
+.modal .main {
+    width: 630px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding: 30px 70px;
+}
+
+.modal .side {
+    width:165px;
+    height:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    padding:40px;
+}
+
+.modal section {
+    margin:0 0 50px 0;
+}
+
+.modal .title {
+    font-size:36px;
+    font-weight:300;
+    color:@gray-text;
+    margin:0 0 40px 0;
+}
+
+.modal button.close {
+    background: url('@{img-url}/close_modal.png') no-repeat center center fff;
+    border: medium none;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 60px;
+    left: -30px;
+    position: absolute;
+    top: 20px;
+    width: 60px;
+    text-indent:-9999px;
+    z-index:10001;
+}
+
+.modal label {
+    text-transform: uppercase;
+    color:@gray-text;
+    font-weight: 600;
+    font-size:17px;
+}
+
+.modal input {
+    background: none repeat scroll 0 0 #E9F0F3;
+    border: 1px solid #B3C7D3;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05) inset;
+    display: block;
+    padding: 20px;
+    width: 610px;
+    margin:20px 0 30px 0;
+
+}
+
+.modal .buttons {
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+}
+
+.modal .buttons button.save, .modal .buttons button.cancel {
+    .button;
+    width:170px;
+    margin:20px 0 0 0;
+}
+
+.modal .buttons button.save {
+    .green;
+    width:170px;
+}
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for up to a width of 1279px */
+
+@media only screen and (max-width: 1279px) {
+
+    .show-for-large {display:none !important;}
+    .show-for-small {display:block;}
+
+    aside.left {height:110px; width:100%;}
+    aside.left .title {float:left;}
+    aside.left .logo {float:right; margin:28px 4% 25px 4%;}
+    aside.left nav.desktop-menu{display:none;}
+    div.editor {position:fixed; top:110px; left:0; width:92%; height:80%; padding:20px 4%;}
+    aside.right {position:fixed; bottom:0px; top:auto; left:0; right:auto; width:100%; height:100px;}
+    aside.right .padder {padding: 20px;}
+    aside.right .import {display:none;}
+    aside.right .extra_fields {display:none;}
+    aside.right .buttons {float:right;width:auto; position: initial; padding:0;}
+    aside.right .buttons button{display:inline-block;width:auto;margin:0 0 0 20px;}
+
+    // Canvas styling (for tablet menu)
+
+    .off-canvas-wrap, .inner-wrap {position: relative;width: 100%;height:100%;}
+    .off-canvas-wrap {overflow: hidden;}
+    .inner-wrap:before, .inner-wrap:after {content: " ";display: table;}
+    .inner-wrap:after {clear: both;}
+    .move-right > .inner-wrap {-webkit-transform: translate3d(84%, 0, 0);-moz-transform: translate3d(84%, 0, 0);-ms-transform: translate3d(84%, 0, 0);-o-transform: translate3d(84%, 0, 0);transform: translate3d(84%, 0, 0);}
+    .inner-wrap {-webkit-transition: -webkit-transform 500ms ease;-moz-transition: -moz-transform 500ms ease;-ms-transition: -ms-transform 500ms ease;-o-transition: -o-transform 500ms ease;transition: transform 500ms ease;}
+    .left-off-canvas-menu, .right-off-canvas-menu {background: @dark-blue;color: #fff;bottom: 0;height: 100%;overflow-y: hidden;position: absolute;top: 0;width: 84%;z-index: 1001;}
+    .left-off-canvas-menu {-webkit-transform: translate3d(-100%, 0, 0);-moz-transform: translate3d(-100%, 0, 0);-ms-transform: translate3d(-100%, 0, 0);-o-transform: translate3d(-100%, 0, 0);transform: translate3d(-100%, 0, 0);}
+    .left-off-canvas-menu ul.title {background: none repeat scroll 0 0 @dark-blue;color: #FFFFFF;font-size: 36px;font-weight: 300;padding: 20px;}
+    .left-off-canvas-menu ul.item li > a {border-bottom: 1px solid #253e5a;color: #fff;display: block;font-size: 26px;line-height: 40px;padding: 32px 20px 34px;}
+
+    //Modal drawer styling
+
+    .modal {width:100%;}
+    .modal .close {display:none;}
+    .modal .main {width:80%; padding:10%;}
+    .modal .side {position: fixed;bottom: 0;width: 100%;background: @white;height: 80px;top: auto;padding: 0;}
+    .modal .side .help {display:none;}
+    .modal .side .buttons {position:initial; bottom:auto; left:auto; float:right;}
+
+    //Responsive editor
+
+    div.editor .content {font-size: 1.3rem;padding: 30px 0 120px 0;}
+    div.editor .content section.heading main.line:after {width: 1rem;	height: 0.9rem;}
+
+}
+
+/* #Desktop
+================================================== */
+
+/* Note: Design for a width of 1280px to infinity! */
+
+@media only screen and (min-width: 1280px) {
+    aside.left .title {display:none;}
+}

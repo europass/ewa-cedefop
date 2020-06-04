@@ -1,0 +1,32 @@
+{
+  "apiStandardProfileRequest": {
+    "headers": {
+      "_total": 1,
+      "values": [{
+        "name": "x-li-auth-token",
+        "value": "name:O91G"
+      }]
+    },
+    "url": "http://api.linkedin.com/v1/people/UB2kruYmAL"
+  },
+  "id": "UB2kruYmAL",
+  "firstName": "Educations",
+  "educations": {
+    "_total": 2,
+    "values": [
+      {
+        "schoolName": "University College Dublin",
+        "degree": "MSc Innovation & Technology Management",
+        "fieldOfStudy": "Product Management, Project Management, New Business Development, Portfolio Managment, Supply Chain",
+        "startDate": {"year": 2007}
+      },
+      {
+        "schoolName": "Dublin City University",
+        "degree": "BEng",
+        "fieldOfStudy": "Telecommunications Engineering",
+        "startDate": {"year": 1995},
+        "endDate": {"year": 2000}
+      }
+    ]
+  }
+}

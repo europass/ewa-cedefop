@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="CommonTypes.xsd"/>
+	
+	<!-- Documentation -->
+	<xsd:complexType name="GenericDocumentationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a list of references to material attached to this XML instance or outside the scope of it, and which enrich or support the learner’s information.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Heading" type="DocumentationHeadingLabelType" minOccurs="0" maxOccurs="1" />
+ 			<xsd:element name="InterDocument" type="InterDocumentDocumentationType" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="IntraDocument" type="IntraDocumentDocumentationType" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ExtraDocument" type="ExtraDocumentDocumentationType" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Enclosed Reference to an existing element with ID -->
+	
+	<xsd:complexType name="DocumentationHeadingLabelType">
+		<xsd:complexContent>
+			<xsd:restriction base="LabelType" >
+				<xsd:sequence>
+					<xsd:element name="Code" minOccurs="0" maxOccurs="1" type="DocumentationHeadingLabelTypesEnumaration"/>
+					<xsd:element name="Label" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="DocumentationHeadingLabelTypesEnumaration">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="heading_[1-9]{1}"></xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Internal Reference to an existing element with ID -->
+	
+	<xsd:complexType name="IntraDocumentDocumentationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a list of references to material attached to this XML instance and which enrich or support the learner’s information.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ReferenceTo" minOccurs="0" maxOccurs="unbounded" type="InternalReferenceType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="InternalReferenceType">
+		<xsd:attribute name="idref" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	
+	<!-- External Reference to a resource by name and optionally with URI -->
+	<xsd:complexType name="ExtraDocumentDocumentationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a list of references to material outside this XML instance which enrich or support the learner’s information.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ReferencedResource" minOccurs="0" maxOccurs="unbounded" type="ExternalReferenceType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ExternalReferenceType">
+		<xsd:sequence>
+			<xsd:element name="Description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+		<xsd:attribute name="href" type="xsd:anyURI" use="optional"/>
+	</xsd:complexType>
+	
+	<!-- Reference to a Europass Document -->
+	<xsd:complexType name="InterDocumentDocumentationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains a list of references to other Europass Document.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ReferencedDocument" minOccurs="0" maxOccurs="unbounded" type="EuropassDocumentReferenceType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EuropassDocumentReferenceType">
+		<xsd:attribute name="ref" type="DocumentTypeType" />
+	</xsd:complexType>
+	
+
+</xsd:schema>

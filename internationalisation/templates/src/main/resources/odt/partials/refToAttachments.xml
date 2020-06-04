@@ -1,0 +1,4 @@
+{{=[[ ]]=}}
+{{#referenceToListWithIndex}}
+	{{#nonEmpty}}
+	<text:span text:style-name="T15"><text:bookmark-ref text:reference-format="text" text:ref-name="ESP-Attachment-{{attachment.id}}"/>{{^isLast}}, {{/isLast}}</text:span>{{/nonEmpty}}{{/referenceToListWithIndex}}

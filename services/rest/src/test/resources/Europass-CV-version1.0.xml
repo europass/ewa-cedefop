@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://europass.cedefop.europa.eu/xml/cv_it_IT.xsl" type="text/xsl"?>
+<europass:learnerinfo xmlns:europass="http://europass.cedefop.europa.eu/Europass/V1.0" 
+											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+											xsi:schemaLocation="http://europass.cedefop.europa.eu/Europass/V1.0 http://europass.cedefop.europa.eu/xml/EuropassSchema_V1.0.xsd"
+											locale="it_IT">
+	
+		<docinfo>
+		<issuedate>2007-01-26T15:32:49+02:00</issuedate>
+		<xsdversion>V1.0</xsdversion>
+		<comment>Automatically generated Europass CV</comment>
+	</docinfo>	
+	<prefs>
+	
+		
+		<field name="step1.lastName" before="step1.firstName" />
+	
+	
+	
+	<field name="step1.address" keep="true" />
+	
+	
+	<field name="step1.mobile" keep="true" />
+	
+	
+	<field name="step1.fax" keep="true" />
+	
+	
+	<field name="step1.email" keep="true" />
+	
+	
+	<field name="step1.nationality" keep="true" />
+	
+	
+	<field name="step1.birthDate" keep="true" format="/numeric/long" />
+	
+	
+	<field name="step1.gender" keep="true" />
+	
+	
+	<field name="step1.application" keep="true" />
+	
+	
+	<field name="step3List" keep="true" before="step4List"/>
+	
+		<field name="step3List[0].period" format="" />
+		
+		
+		<field name="step3List[0].position" keep="true" />
+		
+		
+		<field name="step3List[0].activities" keep="true" />
+		
+		
+		<field name="step3List[0].employer" keep="true" />
+		
+		
+		<field name="step3List[0].sector" keep="true" />
+	
+		<field name="step3List[1].period" format="" />
+		
+		
+		<field name="step3List[1].position" keep="true" />
+		
+		
+		<field name="step3List[1].activities" keep="true" />
+		
+		
+		<field name="step3List[1].employer" keep="true" />
+		
+		
+		<field name="step3List[1].sector" keep="true" />
+	
+		<field name="step3List[2].period" format="/numeric/long" />
+		
+		
+		<field name="step3List[2].position" keep="true" />
+		
+		
+		<field name="step3List[2].activities" keep="true" />
+		
+		
+		<field name="step3List[2].employer" keep="true" />
+		
+		
+		<field name="step3List[2].sector" keep="true" />
+	
+		<field name="step3List[3].period" format="/numeric/long" />
+		
+		
+		<field name="step3List[3].position" keep="true" />
+		
+		
+		<field name="step3List[3].activities" keep="true" />
+		
+		
+		<field name="step3List[3].employer" keep="true" />
+		
+		
+		<field name="step3List[3].sector" keep="true" />
+	
+		<field name="step3List[4].period" format="/numeric/long" />
+		
+		
+		<field name="step3List[4].position" keep="true" />
+		
+		
+		<field name="step3List[4].activities" keep="true" />
+		
+		
+		<field name="step3List[4].employer" keep="true" />
+		
+		
+		<field name="step3List[4].sector" keep="true" />
+	
+	
+	
+	<field name="step4List" keep="true" />
+	
+		<field name="step4List[0].period" format="/numeric/long" />
+		
+		
+		<field name="step4List[0].title" keep="true" />
+		
+		
+		<field name="step4List[0].skills" keep="true" />
+		
+		
+		<field name="step4List[0].organisation" keep="true" />
+		
+		
+		<field name="step4List[0].level" keep="true" />
+	
+		<field name="step4List[1].period" format="" />
+		
+		
+		<field name="step4List[1].title" keep="true" />
+		
+		
+		<field name="step4List[1].skills" keep="true" />
+		
+		
+		<field name="step4List[1].organisation" keep="true" />
+		
+		
+		<field name="step4List[1].level" keep="true" />
+	
+	
+	
+	<field name="step5.motherLanguages" keep="true" />
+	
+	
+	<field name="step5.foreignLanguageList" keep="true" />
+	
+		
+		
+		<field name="step5.foreignLanguageList[0]" keep="true" />
+	
+		
+		
+		<field name="step5.foreignLanguageList[1]" keep="true" />
+	
+		
+		
+		<field name="step5.foreignLanguageList[2]" keep="true" />
+	
+	
+	
+	<field name="step6.socialSkills" keep="false" />
+	
+	
+	<field name="step6.organisationalSkills" keep="false" />
+	
+	
+	<field name="step6.technicalSkills" keep="false" />
+	
+	
+	<field name="step6.computerSkills" keep="false" />	
+	
+	
+	<field name="step6.artisticSkills" keep="false" />	
+	
+	
+	<field name="step6.otherSkills" keep="false" />	
+	
+	
+	<field name="step6.drivingLicences" keep="false" />	
+	
+	
+	<field name="step7.additionalInfo" keep="false" />	
+	
+	
+	<field name="step7.annexes" keep="false" />	
+	
+	
+	<field name="grid" keep="true" />	
+</prefs>
+	<identification>
+		<firstname>Sonia</firstname>
+		<lastname>Σουγιάς</lastname>
+		<contactinfo>			
+			<address>Via Luigi Illica, 27, I-55048, Torre del lago Puccini, frazione di Viareggio</address>
+			<telephone>0584 34 17 09</telephone>
+			<fax>0584 53 72 1</fax>
+			<mobile>335 53 53 705</mobile>
+			<email>soniamazzoni@alice.it</email>
+		</contactinfo>
+		<demographics>
+			<birthdate>1977-06-04</birthdate>
+			<gender>F</gender>
+			<nationality>Italiana</nationality>
+		</demographics>
+		
+	</identification>
+	<application>Gestore e amministratore relazioni con l&#039;estero</application>
+	
+	
+		<workexperiencelist>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>2005</year>
+							
+							
+								<month>--11</month>
+							
+							
+								<day>---04</day>
+							
+						</from>
+						<to>
+							
+								<year>2005</year>
+							
+							
+								<month>--11</month>
+							
+							
+								<day>---27</day>
+							
+						</to>
+					</period>
+					<position>Musicista</position>
+					<activities>Intrattenimento artistico e musicale</activities>
+					<employer>COSTA CROCIERE S.p.a., c/o SELECTION S.r.l., Via Fieschi 20/3, I 16121 Genova, Tel. 010 54 35 00- 010 58 19 78, Fax. 010 56 28 34, E-mail info@selectionie.com</employer>
+					<sector>Agenzia di spettacolo</sector>
+				</workexperience>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>2005</year>
+							
+							
+								<month>--03</month>
+							
+							
+								<day>---23</day>
+							
+						</from>
+						<to>
+							
+								<year>2005</year>
+							
+							
+								<month>--10</month>
+							
+							
+								<day>---17</day>
+							
+						</to>
+					</period>
+					<position>Musicista</position>
+					<activities>Intrattenimento artistico e musicale</activities>
+					<employer>COSTA CROCIERE S.p.a., c/o SELECTION S.r.l., Via Fieschi 20/3, I 16121 Genova, Tel. 010 54 35 00- 010 58 19 78, Fax. 010 56 28 34, E-mail info@selectionie.com</employer>
+					<sector>Agenzia di spettacolo</sector>
+				</workexperience>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>2006</year>
+							
+							
+								<month>--02</month>
+							
+							
+								<day>---08</day>
+							
+						</from>
+						<to>
+							
+								<year>2006</year>
+							
+							
+								<month>--03</month>
+							
+							
+								<day>---17</day>
+							
+						</to>
+					</period>
+					<position>Musicista</position>
+					<activities>Intrattenimento artistico e musicale</activities>
+					<employer>COSTA CROCIERE S.p.a., c/o SELECTION S.r.l., Via Fieschi 20/3, I 16121 Genova, Tel. 010 54 35 00- 010 58 19 78, Fax. 010 56 28 34, E-mail info@selectionie.com</employer>
+					<sector>Agenzia di spettacolo</sector>
+				</workexperience>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>2006</year>
+							
+							
+								<month>--05</month>
+							
+							
+								<day>---02</day>
+							
+						</from>
+						<to>
+							
+								<year>2006</year>
+							
+							
+								<month>--11</month>
+							
+							
+								<day>---17</day>
+							
+						</to>
+					</period>
+					<position>Musicista</position>
+					<activities>Intrattenimento artistico e musicale</activities>
+					<employer>COSTA CROCIERE S.p.a., c/o SELECTION S.r.l., Via Fieschi 20/3, I 16121 Genova, Tel. 010 54 35 00- 010 58 19 78, Fax. 010 56 28 34, E-mail info@selectionie.com</employer>
+					<sector>Agenzia di spettacolo</sector>
+				</workexperience>
+			
+				<workexperience>
+					<period>
+						<from>
+							
+								<year>1998</year>
+							
+							
+								<month>--06</month>
+							
+							
+								<day>---16</day>
+							
+						</from>
+						<to>
+							
+								<year>2003</year>
+							
+							
+								<month>--05</month>
+							
+							
+								<day>---20</day>
+							
+						</to>
+					</period>
+					<position>Impiegata</position>
+					<activities>Relazioni con i fornitori, gestione amministrazione, gestione magazzino, vendita al dettaglio</activities>
+					<employer>RITMO di Mazzoni Renzo, Via Monte Sagro, I-55049 Viareggio, Tel. 0584 963873</employer>
+					<sector>Vendita all&#039;ingrosso ed al dettaglio</sector>
+				</workexperience>
+			
+		</workexperiencelist>
+	
+	
+	
+		<educationlist>
+			
+				<education>
+					<period>
+						<from>
+							
+								<year>1996</year>
+							
+							
+								<month>--10</month>
+							
+							
+						</from>
+						<to>
+							
+								<year>2004</year>
+							
+							
+								<month>--07</month>
+							
+							
+								<day>---05</day>
+							
+						</to>
+					</period>
+					<title>Laurea in Scienze Politiche indirizzo Politico Internazionale</title>
+					<skills>Italiano, Storia moderna, Storia delle relazioni internazionali, Diritto internazionale, Lingua inglese, Lingua francese</skills>
+					<organisation>Università degli Studi di Pisa, Facoltà di Scienze Politiche
+Via Serafini 3
+I-56100 Pisa
+Tel. 050 22 12 431
+Fax 050 22 12 430</organisation>
+					<level>Corso di laurea quadriennale vecchio ordinamento</level>
+				</education>
+			
+				<education>
+					<period>
+						<from>
+							
+								<year>1991</year>
+							
+							
+								<month>--09</month>
+							
+							
+						</from>
+						<to>
+							
+								<year>1996</year>
+							
+							
+								<month>--07</month>
+							
+							
+						</to>
+					</period>
+					<title>Diploma magistrale linguistico</title>
+					<skills>Italiano, Storia, Filosofia, Latino, Lingua francese, Lingua inglese, Lingua tedesca</skills>
+					<organisation>Istituto Magistrale Linguistico Sperimentale Statale Galileo Chini
+Via V.Emanuele, 2
+Lido di Camaiore
+Tel.0584 61 92 97
+     0584 61 98 41</organisation>
+					<level>Diploma di scuola secondaria superiore</level>
+				</education>
+			
+		</educationlist>
+	
+	
+	<languagelist>
+		<language type="mother">
+			<name>Italiano</name>
+		</language>
+		
+		
+			<language type="foreign">
+				<name>Inglese</name>
+				<level>
+					<listening>b1</listening>
+					<reading></reading>
+					<spokeninteraction>b1</spokeninteraction>
+					<spokenproduction>b1</spokenproduction>
+					<writing>b1</writing>
+				</level>
+			</language>
+		
+			<language type="foreign">
+				<name>Francese</name>
+				<level>
+					<listening>c1</listening>
+					<reading>c1</reading>
+					<spokeninteraction>c1</spokeninteraction>
+					<spokenproduction>c1</spokenproduction>
+					<writing>c1</writing>
+				</level>
+			</language>
+		
+			<language type="foreign">
+				<name>Tedesco</name>
+				<level>
+					<listening>a2</listening>
+					<reading>a2</reading>
+					<spokeninteraction>a2</spokeninteraction>
+					<spokenproduction>a2</spokenproduction>
+					<writing>a2</writing>
+				</level>
+			</language>
+		
+	</languagelist>
+	
+	<skilllist>
+		<skill type="social"></skill>
+		<skill type="organisational"></skill>
+		<skill type="technical"></skill>
+		<skill type="computer"></skill>
+		<skill type="artistic"></skill>
+		<skill type="other"></skill>
+		<skill type="driving"></skill>
+	</skilllist>
+	
+	<misclist>
+		<misc type="additional"></misc>
+		<misc type="annexes"></misc>
+	</misclist>
+
+	
+	
+	
+</europass:learnerinfo>

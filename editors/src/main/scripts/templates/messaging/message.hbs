@@ -1,0 +1,8 @@
+<section class="notification {{state}}">
+	{{#if_eq closable compare="yes"}}
+	<button type="button" class="notification message close"></button>
+	{{/if_eq}}
+	<div class="message-area" data-rel-key="{{messageKey}}">
+		{{{message}}}
+	</div>	
+</section>

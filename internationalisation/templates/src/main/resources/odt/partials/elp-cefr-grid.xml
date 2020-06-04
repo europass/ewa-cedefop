@@ -1,0 +1,208 @@
+{{#showCEFRGrid}}
+<!-- 			<text:p text:style-name="_LP_P59" /> -->
+			<table:table table:name="_LP_Table8" table:style-name="_LP_Table8">
+				<table:table-column table:style-name="_LP_Table8.A" />
+				<table:table-column table:style-name="_LP_Table8.B" />
+				<table:table-column table:style-name="_LP_Table8.C" />
+				<table:table-column table:style-name="_LP_Table8.D" />
+				<table:table-column table:style-name="_LP_Table8.E" />
+				<table:table-column table:style-name="_LP_Table8.F" />
+				<table:table-column table:style-name="_LP_Table8.G" />
+				<table:table-column table:style-name="_LP_Table8.H" />
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P24" />
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P24" />
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">A1</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">A2</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">B1</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">B2</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">C1</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_C1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H1" office:value-type="string">
+						<text:p text:style-name="_LP_P33">C2</text:p>
+						<text:p text:style-name="_LP_P29">[[#resources]][[& LanguageShort_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:table-cell table:style-name="_LP_Table8.A2" table:number-rows-spanned="2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_vertical_5f_titles"><text:span text:style-name="_LP_T6">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Understanding:elp]][[/resources]]</text:span></text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.B2" office:value-type="string">
+						<text:p text:style-name="_LP_P17">
+							<draw:frame draw:style-name="_LP_fr4" draw:name="_LP_graphics4" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="0">
+								<draw:image xlink:href="Pictures/elp_listening_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:Listening:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_icon_5f_label">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Listening]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.C2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.D2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.E2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.F2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.G2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_C1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Listening_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:covered-table-cell />
+					<table:table-cell table:style-name="_LP_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_LP_P15">
+							<draw:frame draw:style-name="_LP_fr4" draw:name="_LP_graphics15" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="1">
+								<draw:image xlink:href="Pictures/elp_reading_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+									<svg:title>[[& Accessibility:Reading:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_LP_P18">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Reading]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.C3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.D3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.E3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.F3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.G3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_C1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H3" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Reading_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:table-cell table:style-name="_LP_Table8.A2" table:number-rows-spanned="2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_vertical_5f_titles">
+							<text:span text:style-name="_LP_T6">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Speaking:elp]][[/resources]]</text:span>
+						</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_LP_P15">
+							<draw:frame draw:style-name="_LP_fr5" draw:name="_LP_graphics16" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="2">
+								<draw:image xlink:href="Pictures/elp_spoken_interaction_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:SpokenInteraction:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_LP_P18">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:SpokenInteraction]][[/resources]]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.C4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.D4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.E4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.F4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.G4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_C1]][[/resources]]</text:p>
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content" />
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H4" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenInteraction_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:covered-table-cell />
+					<table:table-cell table:style-name="_LP_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_LP_P16">
+							<draw:frame draw:style-name="_LP_fr5" draw:name="_LP_graphics17" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="3">
+								<draw:image xlink:href="Pictures/elp_spoken_production_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:SpokenProduction:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_LP_P18">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:SpokenProduction]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.C5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.D5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.E5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.F5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.G5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_C1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H5" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& SpokenProduction_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+				<table:table-row table:style-name="_LP_Table8.1">
+					<table:table-cell table:style-name="_LP_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_vertical_5f_titles">
+							<text:span text:style-name="_LP_T6">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Writing:elp]][[/resources]]</text:span>
+						</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.A2" office:value-type="string">
+						<text:p text:style-name="_LP_P15">
+							<draw:frame draw:style-name="_LP_fr5" draw:name="_LP_graphics18" text:anchor-type="as-char" svg:width="6.01mm" svg:height="4.99mm" draw:z-index="4">
+								<draw:image xlink:href="Pictures/elp_writing_logo.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+								<svg:title>[[& Accessibility:Writing:Picture]]</svg:title>
+							</draw:frame>
+						</text:p>
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_icon_5f_label">[[#resources]][[& LearnerInfo:Skills:Linguistic:ForeignLanguage:ProficiencyLevel:Writing:elp]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.C6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_A1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.D6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_A2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.E6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_B1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.F6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_B2]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.G6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_C1]][[/resources]]</text:p>
+					</table:table-cell>
+					<table:table-cell table:style-name="_LP_Table8.H6" office:value-type="string">
+						<text:p text:style-name="_5f_ELP_5f_Grid_5f_content">[[#resources]][[& Writing_C2]][[/resources]]</text:p>
+					</table:table-cell>
+				</table:table-row>
+			</table:table>
+			
+			<text:p text:style-name="_LP_P40">[[#resources]][[& Document:Elp:CEF:Council]][[/resources]]</text:p>
+			{{/showCEFRGrid}}

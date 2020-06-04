@@ -1,0 +1,335 @@
+{
+    "SkillsPassport": {
+        "Locale": "el",
+        "DocumentInfo": {
+            "DocumentType": "ECV",
+            "CreationDate": "2012-12-17T11:15:01.819Z",
+            "LastUpdateDate": "2013-03-14T10:54:08.322Z",
+            "XSDVersion": "V3.0",
+            "Generator": "EWA",
+            "Comment": "Europass CV"
+        },
+        "PrintingPreferences": {
+            "ECV": [
+                {
+                    "name": "LearnerInfo",
+                    "show": true,
+                    "order": "Identification Headline WorkExperience Education Skills Achievement ReferenceTo"
+                },
+                {
+                    "name": "LearnerInfo.Identification",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.PersonName",
+                    "show": true,
+                    "order": "FirstName Surname"
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Address",
+                    "show": true,
+                    "format": "s p-z m (c)"
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Email",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Telephone",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Telephone[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Website",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.Website[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.ContactInfo.InstantMessaging[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Birthdate",
+                    "show": false,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Gender",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Nationality",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.Demographics.Nationality[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Identification.Photo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Headline",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Position",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Address",
+                    "show": false,
+                    "format": "s p-z m (c)"
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer.ContactInfo.Website",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.WorkExperience[0].Employer.Sector",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Period",
+                    "show": true,
+                    "format": "text/short"
+                },
+                {
+                    "name": "LearnerInfo.Education[0].ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[0].ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Title",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Activities",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Organisation",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Organisation.ContactInfo.Address",
+                    "show": false,
+                    "format": "s p-z m (c)"
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Level",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Education[0].Field",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.MotherTongue",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.MotherTongue[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0]",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Linguistic.ForeignLanguage[0].Certificate[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Communication",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Communication.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Communication.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Organisational",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Organisational.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Organisational.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.JobRelated",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.JobRelated.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.JobRelated.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Computer",
+                    "show": true
+                },
+                {
+                    "name": "LearnerInfo.Skills.Computer.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Computer.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Driving",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Driving.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Driving.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Other",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Other.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Skills.Other.ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Achievement",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Achievement[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Achievement[0].ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.Achievement[0].ReferenceTo[0]",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.ReferenceTo",
+                    "show": false
+                },
+                {
+                    "name": "LearnerInfo.ReferenceTo[0]",
+                    "show": false
+                }
+            ]
+        },
+        "LearnerInfo": {
+            "Identification": {
+                "PersonName": {
+                    "FirstName": "Λουκία",
+                    "Surname": "Παπαδάκη"
+                },
+                "Photo": {
+                    "MimeType": "image/pjpeg",
+                    "Data": "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",
+                    "Metadata": [
+                        {
+                            "Key": "dimension",
+                            "Value": "122x141"
+                        },
+                        {
+                            "Key": "number-of-pages",
+                            "Value": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

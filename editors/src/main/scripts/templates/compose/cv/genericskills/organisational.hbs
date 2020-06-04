@@ -1,0 +1,43 @@
+
+<dt class="label">
+        <button type="button" name="enablePageBreak" 
+            class="enablePageBreak sectionBreak tip spot tip-removeLeft--10pixels tip-closerTop {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsOrganisational"}}break-page{{/if_contains}}" 
+            data-section="SkillsOrganisational"
+            data-tip.position="top-left">Page Break
+            <span class="data-title" style="display:none;">
+                {{#if_contains Preferences.LearnerInfo.pageBreaks compare="SkillsOrganisational"}}{{get_text "Remove.Page.Break" group="EditorHelp"}}{{/if_contains}}
+                {{#if_absent Preferences.LearnerInfo.pageBreaks compare="SkillsOrganisational"}}{{get_text "Insert.Page.Break" group="EditorHelp"}}{{/if_absent}}
+            </span>
+         </button>
+	<span class="title">{{get_text "LearnerInfo.Skills.Organisational" group="DocumentLabel"}}</span>
+</dt>
+
+<dd class="value rich-content">
+	{{#isSectionWithAttachmentsEmpty SkillsPassport.LearnerInfo.Skills.Organisational}}
+		
+	 <div class="empty add"><span>{{get_text "Buttons.Add.Content" group="GuiLabel"}}</span></div>
+	 
+	{{else}}
+	<div class="description">{{nestHtmlLists SkillsPassport.LearnerInfo.Skills.Organisational.Description}}</div>
+	
+	
+	{{#if SkillsPassport.LearnerInfo.Skills.Organisational.ReferenceTo}}
+		<div class="attachment">
+			<span class="attachment inner-content-label">{{get_text "LearnerInfo.Skills.Organisational.ReferenceTo" group="DocumentLabel"}}</span>
+			{{#each_with_index SkillsPassport.LearnerInfo.Skills.Organisational.ReferenceTo}}
+				{{#with_attachment ../../SkillsPassport.Attachment idref}}
+				<span class="linked-attachment" name="{{Name}}">
+					{{#if_gt ../index compare="0"}}, {{/if_gt}}
+					{{#crop_text Description}}{{.}}{{/crop_text}}
+				</span>{{/with_attachment }}
+			{{/each_with_index}}
+		</div>
+	{{/if}} 
+		
+	{{#call_partial SkillsPassport.LearnerInfo.Skills.Organisational path="LearnerInfo.Skills.Organisational" subsection="Organisational" withAttachments="true"}}
+		{{> templates/menu/itemmenu}}
+	{{/call_partial}}
+
+	{{/isSectionWithAttachmentsEmpty}}
+	
+</dd>

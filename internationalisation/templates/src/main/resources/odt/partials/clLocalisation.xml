@@ -1,0 +1,31 @@
+{{=[[ ]]=}}
+{{#letter}}
+{{#localisation}}
+
+<text:section text:style-name="_CL_Section_Date_Place" text:name="CL_Localization">
+
+	[[#preferences]]
+	[[#CoverLetter:Letter:Localisation]]
+	[[#hasPosition]]
+		[[#isLeftAligned]]
+			<text:p text:style-name="_CL_Date_Place_Left[[#localizationNoMarginStyle]]_NoMargin[[/localizationNoMarginStyle]]">
+		[[/isLeftAligned]]
+		[[#isRightAligned]]
+			<text:p text:style-name="_CL_Date_Place_Right[[#localizationNoMarginStyle]]_NoMargin[[/localizationNoMarginStyle]]">
+		[[/isRightAligned]]
+		[[#isMiddleAligned]]
+			<text:p text:style-name="_CL_Date_Place_Center[[#localizationNoMarginStyle]]_NoMargin[[/localizationNoMarginStyle]]">
+		[[/isMiddleAligned]]
+	[[/hasPosition]]
+	[[^hasPosition]]
+		<text:p text:style-name="_CL_Date_Place[[#localizationNoMarginStyle]]_NoMargin[[/localizationNoMarginStyle]]">
+	[[/hasPosition]]
+	[[/CoverLetter:Letter:Localisation]]
+	[[#CoverLetter:Letter:Localisation:Date]]
+	{{localisationTxt}}
+	[[/CoverLetter:Letter:Localisation:Date]]
+	[[/preferences]]
+	</text:p>
+</text:section>
+{{/localisation}}
+{{/letter}}

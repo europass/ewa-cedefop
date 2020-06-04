@@ -1,0 +1,308 @@
+#aside-right-upper {
+  @media only screen and ( min-width: @desktop-width-limit ) {
+    display: inline-block;
+    width: 100%;
+  }
+  @media only screen and ( max-width: @tablet-width-limit ) {
+    position: fixed;
+    top: 0;
+    right: -40%;
+    width: 40%;
+    height: 100%;
+  }
+  //Document Controls
+  #DocumentControls {
+    padding: 0 10%;
+    width: 80%;
+    .heading {
+      color: @black;
+      opacity: 0.4;
+      font-size: 0.9rem;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 20px;
+    }
+    button {
+      color: @very-dark-grey;
+      font-size: 1rem;
+      font-weight: 400;
+      text-overflow: ellipsis;
+      display: block;
+      padding: 10px 0 0 35px;
+      margin: 5px 0;
+      text-align: left;
+      outline: 0;
+      border: none;
+      line-height: 1.4rem;
+      text-align: left;
+      .normal-bg( @y ) {
+        background: url("@{img-base-url}sprites/cv_extra_sections.png@{img-suffix-url}${project.version}") no-repeat 0px @y transparent;
+      }
+      .hover-bg( @y ) {
+        background: url("@{img-base-url}sprites/cv_extra_sections.png@{img-suffix-url}${project.version}") no-repeat 0px @y transparent;
+      }
+      &.photo {
+        .normal-bg( 10px);
+        &:hover {
+          .hover-bg( -52px);
+        }
+      }
+      &.other-skills {
+        .normal-bg( -117px);
+        &:hover {
+          .hover-bg( -180px);
+        }
+      }
+      &.driving-skills {
+        .normal-bg( -244px);
+        &:hover {
+          .hover-bg( -308px);
+        }
+      }
+      &.achievements {
+        position:relative;
+        .normal-bg( -367px);
+        background:transparent!important;
+        &:before{
+          content:"+";
+          position:absolute;
+          top:10px;
+          left:0;
+          font-size:40px;
+          font-weight:bold;
+          color:#969696;
+        }
+
+        &:hover {
+          color:#1193CB;
+        }
+      }
+
+      &.personal-data-treatment-achievements {
+        position:relative;
+        background: url("@{img-base-url}sprites/cv_extra_data_privacy.svg@{img-suffix-url}${project.version}") no-repeat 0px transparent;
+        color: @orange-dark;
+        &:before{
+          // TODO ADD NEW ICON INTO PNC INSTEAD OF PREVIOUS SVG???
+          // content:
+          position:absolute;
+          top:10px;
+          left:0;
+          font-size:40px;
+          font-weight:bold;
+          color:#969696;
+        }
+
+        &:hover {
+          color:#1193CB;
+        }
+      }
+
+      &.attachments {
+        .normal-bg( -490px);
+        &:hover {
+          .hover-bg( -548px);
+        }
+      }
+      &.cefr {
+        background: url("@{img-base-url}sprites/cefrgrid.png@{img-suffix-url}${project.version}") no-repeat -14px -468px transparent;
+        &:hover {
+          background-position: -14px -528px;
+        }
+      }
+      &.not-aligned,
+      &.aligned {
+        .normal-bg( -426px);
+        color: @light-blue;
+        &:hover {
+          .hover-bg( -367px);
+          color: @very-dark-grey;
+        }
+        &.disabled {
+          .normal-bg( -367px);
+          color: @very-dark-grey;
+          &:hover {
+            .hover-bg( -426px);
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        color: @light-blue;
+      }
+    }
+  }
+  //Import
+  #ImportWizard {
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5% 0 15% 20%;
+    position: absolute;
+    width: 70%;
+  }
+  #DocumentControls {
+    .ecv-controls {
+      margin-top: 2rem;
+    }
+  }
+}
+
+#aside-right-upper #DocumentControls {
+  padding: 0 10%;
+  width: 80%;
+  .ecl-controls {
+    .heading {
+      color: @black;
+      display: block;
+      font-size: 0.9rem !important;
+      font-weight: 800 !important;
+      margin-bottom: 20px;
+      opacity: 0.4;
+      margin-top: 2rem;
+    }
+    .alignment-btns {
+      width: 80px;
+      display: inline-block;
+      margin-top: 5px;
+      .button {
+        width: 40px;
+        height: 40px;
+        border-bottom: 1px solid @medium-grey;
+        > span.img {
+          background-image:url("@{img-base-url}sprites/cl_align_spritesheet.png@{img-suffix-url}${project.version}");
+          background-repeat: no-repeat;
+          background-color: transparent;
+          display: block;
+          margin-left: -25px;
+          margin-top: -16px;
+          width: 22px;
+          height: 22px;
+          position: absolute;
+        }
+        &.justify {
+          float: right;
+          > span.img {
+            background-position: 0px -240px;
+          }
+          &:hover {
+            > span.img {
+              background-position: 0px -300px;
+            }
+          }
+          &.blue-pressed {
+            -webkit-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            -moz-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            text-shadow: none;
+            width: 40px;
+            height: 40px;
+            border-bottom: none;
+            > span.img {
+              background-position: 0px -180px;
+            }
+          }
+        }
+        &.unjustify {
+          float: left;
+          > span.img {
+            background-position: 0px -60px;
+          }
+          &:hover {
+            > span.img {
+              background-position: 0px -120px;
+            }
+          }
+          &.blue-pressed {
+            -webkit-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            -moz-box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            box-shadow: 0px 1px 6px 1px @dark-blue inset, 0px 0px 1px 1px @menu-medium-blue inset;
+            text-shadow: none;
+            width: 40px;
+            height: 40px;
+            border-bottom: none;
+            > span.img {
+              background-position: 0px 0px;
+            }
+          }
+        }
+      }
+    }
+    .enable-person-name-section {
+      width: 80px;
+      display: inline-block;
+      margin-top: 5px;
+      .button {
+        width: 40px;
+        height: 40px;
+        border-bottom: 1px solid @medium-grey;
+        &.enable-name{
+          background-color: @menu-medium-blue;
+        }
+      }
+    }
+  }
+}
+
+#aside-right-upper #show-close-sidebar-btn{
+  display:none;
+}
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  #aside-right-upper{
+    left:0;
+    right:0;
+    height:50vh;
+    top:auto;
+    bottom:-50vh;
+    width:100%;
+    transform:translate(0);
+    padding-bottom:40px;
+    #show-close-sidebar-btn{
+      position:fixed;
+      left:7px;
+      top:25px;
+      margin:0;
+      background-image: none;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      width: 15px;
+      height: 15px;
+      text-indent: 0;
+      opacity: 1;
+      line-height:32px;
+      display:inline-block;
+      padding:18px;
+      font-size:0;
+      &:before{
+        position:absolute;
+        top:0;
+        left:0;
+        content:"×";
+        font-size:40px;
+        color:@blue-darkling;
+        line-height:0.7;
+      }
+    }
+  }
+  .off-canvas-wrap.noactive-right.noactive-left #aside-right-upper{
+    transform:translate(0);
+  }
+  .off-canvas-wrap.noactive-right.move-left #aside-right-upper{
+    transform:translate(0,-100%);
+
+  }
+
+  .off-canvas-wrap.noactive-right.move-left #header-logo-moto-small, .off-canvas-wrap.noactive-right.move-left #main-content-area, .off-canvas-wrap.noactive-right.move-left #aside-right-lower{
+    transform:none;
+  }
+  #aside-right-upper #DocumentControls {
+    padding:0 40px;
+  }
+}
+

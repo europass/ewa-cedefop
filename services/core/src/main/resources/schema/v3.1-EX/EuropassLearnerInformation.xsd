@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2010
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="./Identification.xsd"/>
+	<xsd:include schemaLocation="./Headline.xsd"/>
+	<xsd:include schemaLocation="./LearningExperience.xsd"/>
+	<xsd:include schemaLocation="./EmploymentExperience.xsd"/>
+	<xsd:include schemaLocation="./EducationalExperience.xsd"/>
+	<xsd:include schemaLocation="./Skill.xsd"/>
+	<xsd:include schemaLocation="./LinguisticSkill.xsd"/>
+	<xsd:include schemaLocation="./DrivingSkill.xsd"/>
+	<xsd:include schemaLocation="./Achievement.xsd"/>
+	<xsd:include schemaLocation="./CommonTypes.xsd"/>
+	
+	<xsd:complexType name="LearnerInfoType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Defines a sequence of elements that fully describe a Europass XML document.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			
+			<!-- Personal Information -->
+			<xsd:element name="Identification" type="IdentificationType" minOccurs="1" maxOccurs="1"/>
+			
+			<!-- Headline -->
+			<xsd:element name="Headline" type="HeadlineType" minOccurs="0" maxOccurs="1"/>
+			
+			<!-- Learning Experiences -->
+			<xsd:element name="LearningExperienceList" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Documents the knowledge, skills and competences acquired through a learning experience that took place over a period of time. 
+						The related experiences/skills are acquired in both formal and informal settings, 
+						(e.g. formal skills that were acquired during education, and informal skills and experiences that were acquired on the job, while volunteering, etc.).
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Experience" type="LearningExperienceType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			
+			<!-- Employment Experiences -->
+			<xsd:element name="WorkExperienceList" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains an list of work experiences. The order of those experiences is defined by the related printing preferences.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="WorkExperience" type="WorkExperienceType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<!-- Educational Experiences -->
+			<xsd:element name="EducationList" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains an list of learning achievements or a training periods (formal or not). The order of those experiences is defined by the related printing preferences.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Education" type="EducationalExperienceType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<!-- Skills -->
+			<xsd:element name="Skills" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains a sequence of skills and competences that the learner has acquired during any formal or informal experience.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Linguistic" type="LinguisticSkillType" minOccurs="0"/>
+						<xsd:element name="Communication" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Organisational" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="JobRelated" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Computer" type="GenericSkillType" minOccurs="0"/>
+						<xsd:element name="Driving" type="DrivingSkillType" minOccurs="0"/>
+						<xsd:element name="Other" type="GenericSkillType" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<!-- Achievements -->
+			<xsd:element name="AchievementList" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains a list of additional information about the various achievements of an individual, such as participation to conferences, workshops, memberships to organisations, list of publications, etc.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Achievement" type="AchievementType" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>	
+			</xsd:element>
+			
+			<!-- References to Attachments -->
+			<xsd:element name="Documentation" type="DocumentationType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Contains a list of references to material attached to this XML instance and which enriched or supports the learner’s information.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	
+	
+	
+	
+</xsd:schema>

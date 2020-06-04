@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://europass.cedefop.europa.eu/Europass" 
+	targetNamespace="http://europass.cedefop.europa.eu/Europass"
+	elementFormDefault="qualified">
+	
+	<!--
+	   /*
+		* Copyright European Union 2002-2014
+		*
+		*
+		* Licensed under the EUPL, Version 1.1 or – as soon they 
+		* will be approved by the European Commission - subsequent  
+		* versions of the EUPL (the "Licence"); 
+		* You may not use this work except in compliance with the 
+		* Licence. 
+		* You may obtain a copy of the Licence at: 
+		*
+		* http://ec.europa.eu/idabc/eupl.html
+		*
+		*  
+		* Unless required by applicable law or agreed to in 
+		* writing, software distributed under the Licence is 
+		* distributed on an "AS IS" basis, 
+		* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+		* express or implied. 
+		* See the Licence for the specific language governing 
+		* permissions and limitations under the Licence. 
+		*
+		*/
+	-->
+	<xsd:include schemaLocation="PersonName.xsd"/>
+	<xsd:include schemaLocation="ContactInformation.xsd"/>
+	<xsd:include schemaLocation="Demographics.xsd"/>
+	<xsd:include schemaLocation="DigitalContent.xsd"/>
+	
+	<!--  PERSONAL INFORMATION -->
+	<xsd:complexType name="IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Contains the personal information of the individual, which includes at least the name, and optionally contact information, demographics, photo and signature.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PersonName" type="PersonNameType" minOccurs="0"/>
+			<xsd:element name="ContactInfo" type="ContactInfoType" minOccurs="0"/>
+			<xsd:element name="Demographics" type="DemographicsType" minOccurs="0"/>
+			<xsd:element name="Photo" type="PhotoDataType" minOccurs="0"/>
+			<xsd:element name="Signature" type="SignatureDataType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

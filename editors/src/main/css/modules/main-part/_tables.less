@@ -1,0 +1,357 @@
+
+.subsection.foreign-language-skills{
+  margin-bottom: -2px;
+}
+
+.cv .section dt.label span.title,
+.foreign-language-skills span.title{
+  color:@middle-blue;
+  line-height:1.4;
+}
+
+.elp .foreign-languages-skills,
+.cv dl.subsection.foreign-language-skills.empty {
+
+  &:hover,&.tap-hover{
+    > dd.value > .opens-modal-form.empty.add{
+      background-position: 0 -21px !important;
+      transition: none;
+      span {
+        color: @middle-blue;
+      }
+    }
+  }
+
+  dd.value > button.opens-modal-form.add,
+  button.opens-modal-form.add{
+    border: none;
+    margin: 0;
+    background-position: 0 0 !important;
+    padding: 0;
+    transition: none;
+    span {
+      color: @clickToAdd-orange;
+    }
+  }
+}
+
+
+.cv .subsection-container .foreign-language-skills table.languages{
+  border-collapse: separate;
+  padding: @compose-section-padding;
+}
+
+
+table.languages tr.language.compose-list > td.menu-placeholder menu.manage{
+  padding: 0px;
+  position: relative;
+  top: -1.2rem;
+  left: -4rem;
+  button{
+    height: 1.6rem;
+    position: absolute;
+    margin: 0;
+    &.edit{
+      padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+      right: 0;
+      top: -2px;
+      width: auto /*2.2rem*/;
+      border-radius: 0 !important;
+    }
+    &.attach{
+      top: -2px;
+      border-radius: 0 !important;
+    }
+    &.delete{
+      border-radius: 0 4px 0 0 !important;
+      left: 1.8rem;
+      top: -2px !important;
+      padding-right:1rem;
+    }
+  }
+}
+
+table.languages th.sub-heading,
+table.languages th .label {
+  color:@middle-blue;
+
+  text-align: right;
+
+  width: @cv-subheadings-width;
+  padding-right: @inline-block-space;
+}
+
+
+
+table.languages > thead > tr{
+  color:@middle-blue;
+  .Listening,
+  .Reading,
+  .SpokenInteraction,
+  .SpokenProduction,
+  .Writing{
+    width: 13%;
+  }
+}
+
+table.languages > thead > tr:first-child {
+  text-transform:uppercase;
+}
+
+table.languages> thead > tr > th span.title {
+  text-transform:none;
+}
+
+table.languages th.menu-placeholder {
+  border-color: transparent;
+  padding: 0;
+}
+
+table.languages th {
+  border:1px solid @foreign-lang-border-color;
+  padding:5px 3px 4px 3px;
+}
+
+table.languages th.no-display {
+  display:none;
+}
+
+
+table.languages th.no-border {
+  border: 1px solid transparent;
+  padding: @language-heading-padding;
+  width: @cv-subheadings-width + @cv-section-label-right-padding;
+  /*border-right: 1px;*/
+}
+
+
+table.languages tr.language td {
+  text-align: center;
+}
+table.languages tr.proficiency td.Title {
+  text-align: center;
+  background:#f3f3f3;
+}
+
+
+.self-evaluation > td{
+  width: 20%;
+}
+
+table.languages tbody tr.certificates td{
+  background:@wg-very-light-grey;
+  border-radius:none;
+}
+
+table.languages > tbody > tr > td > ul > li {
+  background-color:#E7E7E8;
+  border-top:1px solid #CFD0D2;
+  border-bottom:1px solid #C2C3C6;
+  line-height: 30px;
+}
+
+table.languages tr.compose-list td.label .language-title {
+  position: relative;
+  color:@black-text;
+  text-align: right;
+}
+
+table.languages tr.language.compose-list > td{
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px 0 1px 0;
+  padding:10px;
+  &:first-child{
+    border-width: 1px 0 1px 1px;
+  }
+  &:last-child{
+    border-width: 1px 1px 1px 0;
+  }
+}
+
+/*table.languages tr.language.compose-list td:first-child{
+  border-width: 1px 0 1px 1px;
+  border-radius: @section-button-avg-radius 0 0 @section-button-avg-radius;
+  padding: @language-heading-padding;
+}*/
+/*table.languages tr.language.compose-list td:last-child{
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 @section-button-avg-radius @section-button-avg-radius 0;
+}*/
+
+table.languages tr.language.compose-list{
+  &:hover,
+  &.tap-hover{
+    > td{
+      border-color:@blue-normal;
+      border-style:dashed;
+      border-width: 1px 0 1px 0;
+      background-color:@blue-lightling;
+      cursor: pointer;
+      &:first-child{
+        border-width: 1px 0 1px 1px;
+      }
+      &:last-child{
+        border-width: 1px 1px 1px 0;
+      }
+      .empty.add{
+        &:before{
+          color:@blue-darkling;
+        }
+        span{
+          color:@blue-darkling;
+        }
+      }
+    }
+  }
+}
+
+table.languages tr.language.compose-list table tr.self-evaluation td,
+table.languages tr.language.compose-list table tr.certificates td,
+table.languages tr.language.compose-list table tr.documentation td {
+  border-bottom: 1px solid @foreign-lang-border-color;
+  padding: 6px 0;
+  border-radius: 0;
+}
+table.languages tr.language.compose-list table tr.documentation:last-child td{
+  border-bottom-color: transparent;
+}
+
+table caption{
+  display: none;
+}
+
+/************** language table specific menu and sortable placeholder****************/
+
+/*table.languages tr.compose-list .sortable_placeholder{
+	top: -3px;
+
+}*/
+
+.cv.compose table.languages tr.compose-list {
+  button.sort-move-up,
+  button.sort-move-down,
+  button.sort-move-top {
+    top: -10px;
+  }
+}
+
+
+
+
+table.languages tr.language.compose-list>td.menu-placeholder menu.manage button{
+  background-color:@blue-lightling;
+}
+
+/********************
+tfoot add item
+*********************/
+
+table.languages > tfoot > tr > td{
+  background: none repeat scroll 0 0 transparent;
+  border: 1px solid transparent;
+  border-radius: @section-button-avg-radius;
+  margin: @compose-section-margin;
+  /*  padding: @compose-section-padding;*/
+  button.opens-modal-form{
+    .empty-section-add-button-span-mixin(@middle-blue, -21px);
+    &:hover{
+      .empty-section-add-button-span-mixin(@middle-blue, -21px);
+    }
+  }
+}
+
+tfoot tr.compose-list{
+  td{
+    padding:25px;
+    .img-placeholder{
+      &:before{
+        margin-right:8px;
+      }
+    }
+  }
+  &:hover,
+  &.tap-hover{
+    > td{
+      background-color:@blue-lightling;
+      border:1px dashed @blue-normal;
+      cursor: pointer;
+      .img-placeholder{
+        &:before{
+          color:@blue-darkling!important;
+        }
+      }
+      button span{
+        color:@blue-darkling!important;
+      }
+    }
+  }
+}
+
+
+.foreign-language-details > menu.section.manage{
+  bottom:auto;
+}
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  .foreign-language-skills{
+    overflow:auto;
+  }
+  table th{
+    font-size:14px;
+  }
+  table td{
+    font-size:12px;
+  }
+  table.ict-skills th.no-border{
+    width:100px;
+  }
+  .cv .section.section.section td button.opens-modal-form.add{
+    padding-left:10px;
+  }
+  table.languages > thead > tr > th span.title,table.ict-skills > thead > tr > th span.title{
+    font-size:13px;
+  }
+  .computer-skills{
+    overflow:auto;
+    .ict-skills{
+      min-width:600px;
+    }
+  }
+  .foreign-languages-details{
+    max-width:100%;
+    overflow:auto;
+    .language-list{
+      min-width:900px;
+    }
+  }
+  .foreign-language-skills.tap-hover .Skills{
+    background-color:@blue-lightling;
+    &:before{
+      color:@blue-darkling!important;
+    }
+    .img-placeholder{
+      + span{
+        color:@blue-darkling;
+      }
+    }
+  }
+  .foreign-language-skills.tap-hover button.Skills{
+    background:transparent;
+  }
+  .foreign-language-skills button.Skills{
+    background:transparent;
+  }
+
+  .cv .subsection-container .foreign-language-skills table.languages{
+    padding:10px 0;
+  }
+ /* table.languages tr.compose-list button.sort-move-down, li.compose-list button.sort-move-down{
+    display:none!important;
+  }*/
+}

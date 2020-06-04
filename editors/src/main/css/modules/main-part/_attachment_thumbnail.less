@@ -1,0 +1,360 @@
+.esp{
+
+  .thumbnail_container {
+
+    padding:0;
+
+    ol.compose-list>li.compose-list{
+      .attachment_thumb_props !important;
+    }
+
+    .attachment_thumbnail{
+
+      position: relative;
+
+      .sortable_placeholder {
+        position: absolute;
+        top: 90%;
+      }
+
+      .attachment_thumb_props!important;
+
+      vertical-align: top;
+
+      menu.section.manage{
+
+        position:absolute;
+
+        top: -1px;
+        /* 				left: 100px;				 */
+
+        &.view {
+          > a.view {
+            background:none!important;
+            display:inline-block;
+            right: 2rem;
+            top:11px!important;
+            position:absolute!important;
+            width:auto;
+            height:auto;
+            text-decoration:none;
+            &:before{
+              content: "\e92e";
+              font-family: "europass-application" !important;
+              color: #c55200;
+              font-size: 18px;
+
+            }
+            &:hover,&.tap-hover{
+              &:before{
+                color:@blue-darkling;
+              }
+            }
+          }
+        }
+        &.delete{
+          button.delete{
+            position: absolute;
+            margin:0;
+            border-top-right-radius: 0 !important;
+            overflow:visible !important;
+            right: 2px;
+            top: 10px;
+            padding:0;
+          }
+        }
+
+        button.edit{
+          position: absolute;
+          right: 3.4rem;
+          top:10px;
+        }
+
+      }
+
+      &:hover,&.tap-hover{
+
+        .thumb, .mini-logo{
+          display:none;
+        }
+
+        .title{
+          top:50px;
+          font-size:16px;
+          color: @very-dark-grey;
+          font-weight:800;
+
+          a{
+            color: @wg-orange;
+          }
+        }
+
+        &:not(.tap-hover).sortable_placeholder {
+          display:inline-block;
+        }
+        /*Prevent drag and drop icon from being displayed in tablets  */
+        .tap-hover .sortable_placeholder {
+          display:none;
+        }
+      }
+      > button.section{
+        color: @wg-orange;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 0 10px;
+        margin: 0;
+        width: 249px;
+        height: 100%;
+        /* background:url("@{img-base-url}legacy/plus_orange.png@{img-suffix-url}${project.version}")  no-repeat 7px 100px; */
+        border: none;
+        position:relative;
+        &:hover{
+          background-color:@blue-lightling;
+          margin-left:1px;
+          width:249px;
+          span{
+            color:@blue-darkling;
+          }
+        }
+        .img-placeholder{
+          display: inline-block;
+          position: absolute;
+        }
+
+        span:last-child{
+          padding-left: 30px !important;
+        }
+      }
+
+      .mini-logo{
+        width:62px;
+        height:21px;
+        background: url("@{img-base-url}europass_mini.gif@{img-suffix-url}${project.version}") no-repeat;
+      }
+
+      .title{
+        width: @esp-a4-item-width - 20px;
+        height:40px;
+        font-size:14px;
+        overflow:hidden;
+        text-align:center;
+        padding:0 10px 0 10px;
+        position:relative;
+        color: @very-dark-grey;
+      }
+
+      .thumb{
+        width: @esp-a4-item-width;
+        max-height:@esp-thumbnail-max-height;
+        overflow:hidden;
+        text-align:center;
+
+        img{
+          max-width: @esp-thumbnail-preview-width;
+          height: auto;
+        }
+      }
+
+      menu.section.manage{
+
+        /*  				&.view button.view {
+                            position:relative;
+                            background: url("@{img-base-url}magnifier.png@{img-suffix-url}${project.version}")  no-repeat 6px 4px;
+                            top:10px;
+                            display:inline-block;
+                            width:28px;
+                            height:28px;
+
+                            &:hover{
+                                background-image: url("@{img-base-url}magnifier_hover.png@{img-suffix-url}${project.version}") ;
+                                top:10px;
+                            }
+                        }
+
+                        &.delete div.delete {
+                            position:relative;
+                            background: url("@{img-base-url}legacy/trash.png@{img-suffix-url}${project.version}")  no-repeat 6px 4px;
+                            width: 20px;
+                            height: 22px;
+                            border:0;
+                            top: 10px;
+                        }
+         */			}
+    }
+  }
+}
+/* Specific Rule for table widths for Chrome & Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  table.self-assessment{
+    width: 100.05% !important;
+  }
+  table.linguistic-certificates{
+    width: 104% !important;
+    margin-left: -3.9%!important;
+  }
+  table.linguistic-experiences {
+    width: 104.1% !important;
+    margin-left: -4%!important;
+
+  }
+
+  .elp .foreign-languages-details table.list-actions tr.menu-placeholder:hover .dnd .sortable_placeholder {
+    top: -1px;
+
+  }
+
+  table.self-assessment td.menu-placeholder > menu.manage {
+    right: 0;
+    button.edit{
+      left: -108px !important;
+    }
+  }
+
+  /* Specific Rule for ESP attachment thumbnails for Chrome & Safari */
+
+
+  .esp .thumbnail_container .attachment_thumbnail menu.section.manage.view > a.view {
+    top: 0px;
+  }
+}
+
+.esp .thumbnail_container .attachment_thumbnail menu.section.manage.delete button.delete.delete{
+  position: absolute;
+  margin: 0;
+  border-top-right-radius: 0 !important;
+  overflow: visible !important;
+  top: 10px!important;
+  right:5px;
+  padding:0;
+}
+
+/* Specific Rule for ESP attachment thumbnails in Opera */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  .esp .thumbnail_container .attachment_thumbnail menu.section.manage.delete button.delete{
+    padding-bottom: 0px;
+    position: absolute;
+    margin: 0;
+    border-top-right-radius: 0 !important;
+    overflow: visible !important;
+    top: 0px;
+  }
+}
+
+/* Specific Rule for ESP attachment thumbnails in IE */
+* .esp .thumbnail_container .attachment_thumbnail menu.section.manage.delete button.delete{
+  padding-bottom: 0px;
+  position: absolute;
+  margin: 0;
+  border-top-right-radius: 0 !important;
+  overflow: visible !important;
+  /*       right: -76px; */
+  top: 0px;
+}
+
+*.esp .thumbnail_container .attachment_thumbnail menu.section.manage.view > a.view {
+  top: 0px;
+  /* 	right: -40px;  */
+}
+
+/* Specific Rule for ESP attachment thumbnails in Firefox */
+@-moz-document url-prefix() {
+  .esp .thumbnail_container .attachment_thumbnail menu.section.manage.delete button.delete{
+    position: absolute;
+    margin: 0;
+    border-top-right-radius: 0 !important;
+    overflow: visible !important;
+    top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .esp .thumbnail_container .attachment_thumbnail menu.section.manage.view > a.view {
+    top: 0px;
+  }
+
+
+  .esp .thumbnail_container .attachment_thumbnail menu.section.manage > .edit, menu.subsection.manage > .edit{
+    /* 		right: 6px; */
+    /* 		position: absolute; */
+    /* 		right: 4.4rem; */
+  }
+
+  .cv.compose menu.section.manage > .edit, menu.subsection.manage > .edit {
+    right: 0px;
+  }
+}
+
+
+.attachment_thumbnail .opens-modal-form.add.empty {
+  .img-placeholder{
+    &:before{
+      line-height: 20px;
+      content: "\e90b";
+      font-family: "europass-application" !important;
+      color: #c55200;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  &:hover {
+    .img-placeholder {
+      &:before {
+        color: @blue
+      }
+    }
+  }
+}
+
+
+
+.esp .thumbnail_container ol.compose-list > li.compose-list{
+  box-sizing:border-box;
+}
+
+
+.esp .thumbnail_container .attachment_thumbnail .thumb.pdf-default-attachment-icon{
+  height:200px;
+  width:100%;
+  background-image: url("@{img-base-url}pdf_default_thumb_44340.png@{img-suffix-url}${project.version}");
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
+
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit) {
+  .existing-files .attachment-info>.attachment{
+    width:75%;
+  }
+  .esp  .thumbnail_container{
+    text-align: center;
+    .attachment_thumbnail.compose-list.compose-list.compose-list{
+      margin-right:0!important;
+    }
+  }
+  .esp .thumbnail_container .attachment_thumbnail{
+    margin:0 auto!important;
+    display:block!important;
+    width: 250px !important;
+    height: 353.57px !important;
+    > button.section{
+      width:250px;
+    }
+  }
+  .esp .thumbnail_container .attachment_thumbnail>button.section:hover{
+    width:auto;
+  }
+  .thumbnail_container{
+    .sortable.compose-list.ui-sortable{
+      text-align: center;
+      .ui-sortable-handle{
+        display:none;
+      }
+    }
+  }
+}

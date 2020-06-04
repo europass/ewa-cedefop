@@ -1,0 +1,28 @@
+<!-- Share for Review view -->
+<div id="ShareReviewForm" class="overlay">
+    <div class="shareReview-info" style="display:none">
+        <button class="close share-review-finish" style="display:none">Close</button>
+        <div class="ui-settings-area drawer" style="display:none">
+            <span class="heading">{{get_text "share.document.finish.and.send.back.main" group="GuiLabel"}}</span>
+            <div>
+                <form id="FormSendReviewBack" class="main modalform isForm">
+                    <fieldset class="share-reviewed-cloud-recipient-email">
+                        <div class>
+                            <span>{{get_text "cloudLogin.drawer.connected.document.share.email.to.title" group="GuiLabel"}}</span>
+                            <input type="text" readonly="readonly" id="share-reviewed-recipient-email"
+                                   class="share-reviewed-recipient-email-input formfield with-placeholder Email">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="feedback-msg-textaera">{{get_text "share.cloud.label.comments.textarea" group="GuiLabel"}}</label>
+                        <div><textarea id="share-reviewed-message-textarea" class="share-reviewed-cloud-message-textarea" cols="20"></textarea></div>
+                    </fieldset>
+                    <section class="share-reviewed-notification-area feedback-area"></section>
+                </form>
+            </div>
+            <button type="button" id="btn-share-post-back" class="button green mdl-btn">
+                <span>{{get_text "share.document.finish.and.send.back.modal.confirm" group="GuiLabel"}}</span>
+            </button>
+        </div>
+    </div>
+</div>

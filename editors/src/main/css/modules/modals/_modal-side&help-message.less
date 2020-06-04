@@ -1,0 +1,327 @@
+@media only screen and ( min-width: @desktop-width-limit ) {
+  .modal {
+    .side menu {
+      bottom: 100px;
+      left: 40px;
+      position: absolute;
+    }
+    /*ebat added this so that the modal animation renders its children properly, EWA-1315*/
+    .main {
+      max-width: @modal-form-main-width;
+    }
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit) {
+  .modal .side {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    height: 5.6rem !important; /* 90px */
+
+    background: @white !important;
+    padding: 0 !important;
+    box-shadow: 0 -2px 4px 0 #c2c2c2;
+    z-index: 1000;
+  }
+
+  .modal .side .help {
+    display: none !important;
+  }
+
+  .modal .side .buttons {
+    .form-help-switch-area {
+      position: absolute;
+      bottom: 5px;
+      left: 1%;
+    }
+    /* Save button should appear on right side and cancel button on left side */
+    .form-controls {
+      .button.save {
+        float: right;
+        margin-left: 2rem;
+      }
+      .button.cancel {
+        float: left;
+        margin-left: 2rem;
+      }
+      display: inline-block;
+      float: right;
+      margin-right: 4%;
+    }
+  }
+}
+
+.modal .side {
+  .modal-font-family;
+  height: 100%;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 240px; /*was 165px; vpol changed for ewa-1234 + ewa-1142 Help text area in drawers is too small */
+}
+
+.modal .side .help-message {
+  > b {
+    background: #FEF2E9;
+    display: block;
+    padding: 20px;
+    color: #FCA46D;
+    margin-top: 20px;
+  }
+  > b + p {
+    padding: 0 20px 20px;
+    background: #FEF2E9;
+  }
+}
+
+.modal {
+
+  .help-message {
+    color: @grey-dark-text-two;
+    line-height: 22px; /*was 1.45rem vpol changed for ewa-1234 + ewa-1142 Help text area in drawers is too small */
+    font-size: 15px; /*vpol added for ewa-1234 + ewa-1142 Help text area in drawers is too small*/
+    max-height:600px;
+    overflow:auto;
+  }
+
+  .help-message p {
+    padding-bottom: 6px;
+    font-size: 15px;
+
+  }
+
+  .help-message ol, .help-message ul, .help-message li {
+    list-style: square inside none;
+    padding-bottom: 6px;
+    font-size: 15px;
+    p {
+      display: inline;
+    }
+  }
+  .side{
+    @media only screen and ( min-width: @desktop-width-limit ) {
+      .help-container{
+        display:block;
+      }
+      //Help Switch On/Off is hidden in Desktops
+      .form-help-switch-area{
+        display:none;
+      }
+    }
+    @media only screen and (max-width: @tablet-width-limit ) {
+      //Side help is hidden in tablets
+      .help-container{
+        display:none;
+      }
+      // Help Switch On/Off
+      .form-help-switch-area{
+        display: inline-block;
+      }
+      .onoff-switch-mixin;
+      .onoffswitch {
+        width: 66px;
+        height: 35px;
+        left: 40px;
+        bottom: 20px;
+      }
+      .onoffswitch-gradient-bg(@startColor, @endColor) {
+        background-image: -moz-linear-gradient(top, @startColor   0%, @endColor 100%);
+        background-image: -webkit-linear-gradient(top, @startColor   0%, @endColor 100%);
+        background-image: -o-linear-gradient(top, @startColor   0%, @endColor 100%);
+        background-image: linear-gradient(to bottom, @startColor   0%, @endColor 100%);
+      }
+
+      .onoff-switch-bg-mixin {
+        .onoffswitch-gradient-bg(@medium-light-grey, @white);
+        background-repeat: repeat;
+        background-position: 0;
+        border-radius: 40px;
+        border-style: solid;
+        border-color: #D6D6D6;
+        border-top-width: 2px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 2px;
+      }
+      .switch-on-label-mixin {
+        .onoffswitch-gradient-bg(@blue-darkling, @blue-darkest);
+        border: thin solid @blue-darkling;
+        box-shadow: 1px 1px #D5D5D5;
+        background-position: 0;
+        background-color: none;
+      }
+      .switch-off-label-mixin {
+        .onoffswitch-gradient-bg(@very-light-grey,@medium-grey);
+        border: thin solid @medium-grey;
+        box-shadow: 1px 1px #D5D5D5;
+        background-position: 0;
+        background-color: none;
+
+      }
+
+      /*Right screen switch inner gradient color*/
+      .onoffswitch label {
+        .onoff-switch-bg-mixin;
+      }
+
+      .onoffswitch label i {
+        top: 5px;
+        width: 23px;
+        height: 23px;
+        left: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        .switch-off-label-mixin;
+      }
+
+      .onoffswitch label i:before {
+        content: "?";
+        top: 0px;
+        right: -90%;
+        color: #B3B3B3;
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        /*text-shadow: 0 1px 0 #bcb8ae, 0 -1px 0 #97958e;*/
+      }
+      .onoffswitch input:checked ~ label { /* Background */
+        .onoff-switch-bg-mixin;
+      }
+
+      .onoffswitch input:checked ~ label i { /* Toggle */
+        right: 2px;
+        .switch-on-label-mixin;
+      }
+      .onoffswitch input:checked ~ label i:before { /* On/off*/
+        content: "?";
+        right: 152%;
+        color: @blue-darkling;
+      }
+    }
+  }
+}
+
+.help-msg-group-mixin {
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 0px;
+  height:70px;
+  font-size: 0px;
+}
+
+@media only screen and (min-width: @desktop-width-limit) {
+  .modal .form-help > .form-help-wrapper > .help-message > .help-message.group> h6 {
+    .help-msg-group-mixin;
+    background:url("@{img-base-url}mouse_icon.png@{img-suffix-url}${project.version}")  no-repeat center center #E7F5FD;
+  }
+}
+
+@media only screen and (max-width: @tablet-width-limit) {
+  .modal .form-help > .form-help-wrapper > .help-message > .help-message.group> h6 {
+    .help-msg-group-mixin;
+    width: 9rem;
+    height: 7rem;
+    position: absolute;
+    top: 1.7rem;
+    position: absolute;
+    background:url("@{img-base-url}assistant_menu.png@{img-suffix-url}${project.version}")  no-repeat center center #E7F5FD;
+  }
+}
+
+/******************************************************************
+RESPONSIVE
+******************************************************************/
+
+@media screen and(max-width:@phone-width-limit){
+  .modal .side {
+    height: 50px !important;
+    .onoffswitch {
+      left: 10px;
+      bottom: 4px;
+      label {
+        margin: 0;
+        top: 0;
+      }
+    }
+    .buttons .form-controls .button.save{
+      margin:8px 0 0;
+
+    }
+  }
+  .form-help-switch-area {
+    position: static;
+  }
+  .modal .side .buttons .form-controls .button.cancel,.modal .fixed-tooltip-close{
+    position:fixed;
+    left:7px;
+    top:13px;
+    margin:0;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    text-indent: 0;
+    opacity: 1;
+    line-height:32px;
+    display:inline-block;
+    padding:18px;
+    font-size:0;
+    &:before{
+      position:absolute;
+      top:0;
+      left:0;
+      content:"×";
+      font-size:40px;
+      color:@blue-darkling;
+      line-height:0.7;
+    }
+    &.help-check.on {
+      display:none;
+    }
+  }
+  .modal .fixed-tooltip-close{
+    position:absolute;
+  }
+  .modal .main .form-help{
+    position:fixed;
+    height:100vh;
+    width:75vw;
+    background:white;
+    right:0;
+    z-index:1000;
+    padding:20px 20px 20px 30px;
+    top:0;
+    box-sizing:border-box;
+    &:before{
+      content:"";
+      background-color:rgba(0,0,0,0.6);
+      height:100vh;
+      width:25vw;
+      position:fixed;
+      left:0;
+      top:0;
+    }
+    .btn-toggle-txt.more{
+      display:none;
+    }
+  }
+
+  .modal header legend.top-help{
+    margin-top:0;
+  }
+  .form-help-switch-area + .form-controls{
+    .button.cancel{
+      display:none;
+    }
+  }
+  .fixed-form-tooltip .fixed-tooltip-close{
+    display:none;
+  }
+}

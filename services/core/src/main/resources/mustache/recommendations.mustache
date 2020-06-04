@@ -1,0 +1,25 @@
+{{#item}}
+
+{{#recommender}}
+<p>
+	<strong>{{formatRecommenderName}}</strong>
+{{/recommender}}
+{{#recommendationType}}
+	{{^recommender}}
+	<p>
+	{{/recommender}}
+	{{#recommender}} | {{/recommender}}
+	<em>{{formatRecommenderType}}</em>
+	{{^recommender}}
+	</p>
+	{{/recommender}}
+{{/recommendationType}}
+{{#recommender}}
+	</p>
+{{/recommender}}
+
+{{#recommendationText}}
+	<p>{{{formatRecommenderText}}}</p>
+{{/recommendationText}}
+
+{{/item}}
