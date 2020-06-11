@@ -3,10 +3,10 @@
     <parent>
         <groupId>eu.europa.cedefop.europass.webapps</groupId>
         <artifactId>europass-webapps-services</artifactId>
-        <version>5.0.84</version>
+        <version>5.0.85</version>
     </parent>	
     <artifactId>rest</artifactId>
-    <version>5.0.84</version>
+    <version>5.0.85</version>
     <packaging>war</packaging>
     <name>Europass Webapps Services REST endpoint</name>
 
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>europass-webapps-services-core</artifactId>
-            <version>5.0.84</version>
+            <version>5.0.85</version>
         </dependency>
     </dependencies>
 </project>

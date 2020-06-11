@@ -3,7 +3,7 @@
     <parent>
         <artifactId>europass-webapps</artifactId>
         <groupId>eu.europa.cedefop.europass.webapps</groupId>
-        <version>5.0.84</version>
+        <version>5.0.85</version>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>europass-webapps-conversion</artifactId>

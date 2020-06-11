@@ -3,7 +3,7 @@
     <parent>
         <groupId>eu.europa.cedefop.europass.webapps</groupId>
         <artifactId>europass-webapps</artifactId>
-        <version>5.0.84</version>
+        <version>5.0.85</version>
     </parent>
     <artifactId>europass-webapps-statistics</artifactId>
     <packaging>jar</packaging>

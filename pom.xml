@@ -4,7 +4,7 @@
     <groupId>eu.europa.cedefop.europass.webapps</groupId>
     <artifactId>europass-webapps</artifactId>
     <packaging>pom</packaging>
-    <version>5.0.84</version>
+    <version>5.0.85</version>
     <name>Europass Webapps Parent Project</name>
 
     <profiles>
