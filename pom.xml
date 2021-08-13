@@ -508,7 +508,7 @@
         <requirejs.plugin.version>2.0.4</requirejs.plugin.version><!-- was 1.0.4 -->
         <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
 
-        <itext.bouncycastle.version>1.59</itext.bouncycastle.version>
+        <itext.bouncycastle.version>1.67</itext.bouncycastle.version>
 
         <!-- 		<org.springframework.social-linkedin-version>1.0.0.RC4.ewa201405.rc5</org.springframework.social-linkedin-version> -->
         <org.springframework.social-linkedin-version>1.0.1.RELEASE</org.springframework.social-linkedin-version>
